@@ -23,7 +23,6 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     } = props;
 
     const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
-
     const { realm, locale, auth, url, message, isAppInitiatedAction, authenticationSession, scripts } = kcContext;
 
     useEffect(() => {
@@ -32,11 +31,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     useEffect(() => {
         const { currentLanguageTag } = locale ?? {};
-
-        if (currentLanguageTag === undefined) {
-            return;
-        }
-
+        if (!currentLanguageTag) return;
         const html = document.querySelector("html");
         assert(html !== null);
         html.lang = currentLanguageTag;
@@ -44,7 +39,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { areAllStyleSheetsLoaded } = useInsertLinkTags({
         componentOrHookName: "Template",
-        hrefs: !doUseDefaultCss ? [] : [`${url.resourcesPath}/css/login.css`]
+        hrefs: doUseDefaultCss ? [`${url.resourcesPath}/css/login.css`] : []
     });
 
     const { insertScriptTags } = useInsertScriptTags({
@@ -54,41 +49,26 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 type: "module",
                 src: `${url.resourcesPath}/js/menu-button-links.js`
             },
-            ...(authenticationSession === undefined
-                ? []
-                : [
+            ...(authenticationSession
+                ? [
                       {
                           type: "module",
-                          textContent: [
-                              `import { checkCookiesAndSetTimer } from "${url.resourcesPath}/js/authChecker.js";`,
-                              ``,
-                              `checkCookiesAndSetTimer(`,
-                              `  "${authenticationSession.authSessionId}",`,
-                              `  "${authenticationSession.tabId}",`,
-                              `  "${url.ssoLoginInOtherTabsUrl}"`,
-                              `);`
-                          ].join("\n")
-                      } as const
-                  ]),
-            ...scripts.map(
-                script =>
-                    ({
-                        type: "text/javascript",
-                        src: script
-                    }) as const
-            )
+                          textContent: `
+                              import { checkCookiesAndSetTimer } from "${url.resourcesPath}/js/authChecker.js";
+                              checkCookiesAndSetTimer("${authenticationSession.authSessionId}", "${authenticationSession.tabId}", "${url.ssoLoginInOtherTabsUrl}");
+                          `
+                      }
+                  ]
+                : []),
+            ...scripts.map(script => ({ type: "text/javascript", src: script }))
         ]
     });
 
     useEffect(() => {
-        if (areAllStyleSheetsLoaded) {
-            insertScriptTags();
-        }
+        if (areAllStyleSheetsLoaded) insertScriptTags();
     }, [areAllStyleSheetsLoaded]);
 
-    if (!areAllStyleSheetsLoaded) {
-        return null;
-    }
+    if (!areAllStyleSheetsLoaded) return null;
 
     return (
         <Box>
@@ -98,114 +78,51 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
             <Box>
                 <header>
-                    {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
+                    {realm.internationalizationEnabled && locale?.supported.length > 1 && (
                         <Box id="kc-locale">
-                            <Box id="kc-locale-wrapper">
-                                <Box id="kc-locale-dropdown">
-                                    <button
-                                        tabIndex={1}
-                                        id="kc-current-locale-link"
-                                        aria-label={msgStr("languages")}
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                        aria-controls="language-switch1"
-                                    >
-                                        {labelBySupportedLanguageTag[currentLanguageTag]}
-                                    </button>
-                                    <ul
-                                        role="menu"
-                                        tabIndex={-1}
-                                        aria-labelledby="kc-current-locale-link"
-                                        aria-activedescendant=""
-                                        id="language-switch1"
-                                    >
-                                        {locale.supported.map(({ languageTag }, i) => (
-                                            <li key={languageTag} role="none">
-                                                <a role="menuitem" id={`language-${i + 1}`} href={getChangeLocaleUrl(languageTag)}>
-                                                    {labelBySupportedLanguageTag[languageTag]}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Box>
-                            </Box>
+                            <button id="kc-current-locale-link">{labelBySupportedLanguageTag[currentLanguageTag]}</button>
+                            <ul id="language-switch1">
+                                {locale.supported.map(({ languageTag }, i) => (
+                                    <li key={languageTag}>
+                                        <a href={getChangeLocaleUrl(languageTag)}>{labelBySupportedLanguageTag[languageTag]}</a>
+                                    </li>
+                                ))}
+                            </ul>
                         </Box>
                     )}
-                    {(() => {
-                        const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
-                            <h1 id="kc-page-title">{headerNode}</h1>
-                        ) : (
-                            <Box id="kc-username">
-                                <label id="kc-attempted-username">{auth.attemptedUsername}</label>
-                                <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
-                                    <Box>
-                                        <i></i>
-                                        <span>{msg("restartLoginTooltip")}</span>
-                                    </Box>
-                                </a>
-                            </Box>
-                        );
-
-                        if (displayRequiredFields) {
-                            return (
-                                <Box>
-                                    <Box>
-                                        <span>
-                                            <span>*</span>
-                                            {msg("requiredFields")}
-                                        </span>
-                                    </Box>
-                                    <Box>{node}</Box>
-                                </Box>
-                            );
-                        }
-
-                        return node;
-                    })()}
+                    {auth?.showUsername && !auth.showResetCredentials ? (
+                        <Box id="kc-username">
+                            <label>{auth.attemptedUsername}</label>
+                            <a id="reset-login" href={url.loginRestartFlowUrl}>
+                                <span>{msg("restartLoginTooltip")}</span>
+                            </a>
+                        </Box>
+                    ) : (
+                        <Typography variant="h1" id="kc-page-title">
+                            {headerNode}
+                        </Typography>
+                    )}
                 </header>
+
                 <Box id="kc-content">
-                    <Box id="kc-content-wrapper">
-                        {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
-                        {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
-                            <Box>
-                                <Box>
-                                    {message.type === "success" && <span></span>}
-                                    {message.type === "warning" && <span></span>}
-                                    {message.type === "error" && <span></span>}
-                                    {message.type === "info" && <span></span>}
-                                </Box>
-                                <span
-                                    dangerouslySetInnerHTML={{
-                                        __html: message.summary
-                                    }}
-                                />
-                            </Box>
-                        )}
-                        {children}
-                        {auth !== undefined && auth.showTryAnotherWayLink && (
-                            <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
-                                <Box>
-                                    <input type="hidden" name="tryAnotherWay" value="on" />
-                                    <a
-                                        href="#"
-                                        id="try-another-way"
-                                        onClick={() => {
-                                            document.forms["kc-select-try-another-way-form" as never].submit();
-                                            return false;
-                                        }}
-                                    >
-                                        {msg("doTryAnotherWay")}
-                                    </a>
-                                </Box>
-                            </form>
-                        )}
-                        {socialProvidersNode}
-                        {displayInfo && (
-                            <Box id="kc-info">
-                                <Box id="kc-info-wrapper">{infoNode}</Box>
-                            </Box>
-                        )}
-                    </Box>
+                    {displayMessage && message && (message.type !== "warning" || !isAppInitiatedAction) && (
+                        <Box>
+                            <span dangerouslySetInnerHTML={{ __html: message.summary }} />
+                        </Box>
+                    )}
+
+                    {children}
+
+                    {auth?.showTryAnotherWayLink && (
+                        <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
+                            <input type="hidden" name="tryAnotherWay" value="on" />
+                            <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
+                        </form>
+                    )}
+
+                    {socialProvidersNode}
+
+                    {displayInfo && infoNode && <Box id="kc-info">{infoNode}</Box>}
                 </Box>
             </Box>
         </Box>
