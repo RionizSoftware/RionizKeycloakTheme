@@ -8,7 +8,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
-    const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+    const { kcContext, i18n, doUseDefaultCss, Template } = props;
     const { social, realm, url, usernameHidden, login, auth, registrationDisabled, messagesPerField } = kcContext;
     const { msg, msgStr } = i18n;
     const [, setIsLoginButtonDisabled] = useState(false);
@@ -18,7 +18,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
-            classes={classes}
             displayMessage={!messagesPerField.existsError("username", "password")}
             headerNode={msg("loginAccountTitle")}
             displayInfo={realm.password && realm.registrationAllowed && !registrationDisabled}
@@ -126,7 +125,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 )}
                             </Box>
 
-                            <Box id="kc-form-options" sx={{ display: "flex", justifyContent: "space-between" }}>
+                            <Box id="kc-form-options" sx={{ display: "flex", justifyContent: "space-between", margin: "5px 0px 25px 0px" }}>
                                 {realm.rememberMe && !usernameHidden && (
                                     <Box>
                                         <label>
@@ -152,7 +151,14 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
 
                             <Box id="kc-form-buttons">
                                 <input type="hidden" name="credentialId" value={auth.selectedCredential} />
-                                <Button sx={{ width: "100%" }} tabIndex={7} name="login" id="kc-login" type="submit" variant="contained">
+                                <Button
+                                    sx={{ width: "100%", fontSize: 18 }}
+                                    tabIndex={7}
+                                    name="login"
+                                    id="kc-login"
+                                    type="submit"
+                                    variant="contained"
+                                >
                                     {msgStr("doLogIn")}
                                 </Button>
                             </Box>
@@ -175,14 +181,20 @@ function PasswordWrapper({ i18n, passwordInputId, children }: { i18n: I18n; pass
     }, [isPasswordRevealed]);
 
     return (
-        <Box>
+        <Box display="flex" alignItems="center" position="relative">
+            {/* Wrap children in a Box to control padding and positioning */}
             {children}
             <IconButton
                 onClick={toggleIsPasswordRevealed}
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
+                sx={{
+                    position: "absolute",
+                    right: 1, // Adjust as needed
+                    zIndex: 1 // Ensure it's above the input
+                }}
             >
-                {isPasswordRevealed ? <VisibilityOff /> : <Visibility />}
+                {isPasswordRevealed ? <VisibilityOff sx={{ fontSize: 25 }} /> : <Visibility sx={{ fontSize: 25 }} />}
             </IconButton>
         </Box>
     );

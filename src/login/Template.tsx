@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { assert } from "keycloakify/tools/assert";
 import type { TemplateProps } from "keycloakify/login/TemplateProps";
 import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import { Box, Button, Card, CardContent, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Menu, MenuItem, Typography } from "@mui/material";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -24,6 +24,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
 
     const { realm, locale, auth, url, message, isAppInitiatedAction, authenticationSession, scripts } = kcContext;
+    const [languageMenuAnchor, setLanguageMenuAnchor] = useState<EventTarget & HTMLButtonElement>();
 
     useEffect(() => {
         document.title = documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
@@ -43,7 +44,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { areAllStyleSheetsLoaded } = useInsertLinkTags({
         componentOrHookName: "Template",
-        hrefs: !doUseDefaultCss ? [] : [`${url.resourcesPath}/css/login.css`]
+        hrefs: !doUseDefaultCss ? [] : []
     });
 
     const { insertScriptTags } = useInsertScriptTags({
@@ -90,42 +91,58 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
-            <Card elevation={3} sx={{ maxWidth: 500, padding: 3 }}>
+        <Box display="flex" justifyContent="center" alignItems="center" marginTop={5}>
+            <Card elevation={3} sx={{ padding: 1, minWidth: 380 }}>
                 <CardContent>
-                    <Typography variant={"h4"} id="kc-header-wrapper" align="center">
+                    <Typography variant={"h6"} id="kc-header-wrapper" align="center">
                         {msg("loginTitleHtml", realm.displayNameHtml)}
                     </Typography>
+                    <Box sx={{ margin: "20px 0" }}>
+                        <Box display="flex" flexDirection="row" justifyContent="space-between">
+                            <Box>
+                                {auth?.showUsername && !auth.showResetCredentials ? (
+                                    <Box id="kc-username" textAlign="center">
+                                        <label>{auth.attemptedUsername}</label>
+                                        <a id="reset-login" href={url.loginRestartFlowUrl}>
+                                            <span>{msg("restartLoginTooltip")}</span>
+                                        </a>
+                                    </Box>
+                                ) : (
+                                    <Typography variant="h6" id="kc-page-title" align="center">
+                                        {headerNode}
+                                    </Typography>
+                                )}
+                            </Box>
+                            <Box>
+                                {realm.internationalizationEnabled && locale?.supported && locale?.supported.length > 1 && (
+                                    <Box id="kc-locale" display="flex" justifyContent="center">
+                                        <Button id="kc-current-locale-link" onClick={event => setLanguageMenuAnchor(event.currentTarget)}>
+                                            {labelBySupportedLanguageTag[currentLanguageTag]}
+                                        </Button>
+                                        <Menu
+                                            id="language-switch1"
+                                            anchorEl={languageMenuAnchor}
+                                            open={Boolean(languageMenuAnchor)}
+                                            onClose={() => setLanguageMenuAnchor(undefined)}
+                                        >
+                                            {locale?.supported.map(({ languageTag }) => (
+                                                <MenuItem
+                                                    key={languageTag}
+                                                    onClick={() => {
+                                                        window.location.href = getChangeLocaleUrl(languageTag);
+                                                        setLanguageMenuAnchor(undefined);
+                                                    }}
+                                                >
+                                                    {labelBySupportedLanguageTag[languageTag]}
+                                                </MenuItem>
+                                            ))}
+                                        </Menu>
+                                    </Box>
+                                )}
+                            </Box>
+                        </Box>
 
-                    <Box>
-                        <header>
-                            {realm.internationalizationEnabled && locale?.supported && locale?.supported.length > 1 && (
-                                <Box id="kc-locale" display="flex" justifyContent="center">
-                                    <Button id="kc-current-locale-link">{labelBySupportedLanguageTag[currentLanguageTag]}</Button>
-                                    <ul id="language-switch1">
-                                        {locale?.supported.map(({ languageTag }) => (
-                                            <li key={languageTag}>
-                                                <a href={getChangeLocaleUrl(languageTag)}>{labelBySupportedLanguageTag[languageTag]}</a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Box>
-                            )}
-                            {auth?.showUsername && !auth.showResetCredentials ? (
-                                <Box id="kc-username" textAlign="center">
-                                    <label>{auth.attemptedUsername}</label>
-                                    <a id="reset-login" href={url.loginRestartFlowUrl}>
-                                        <span>{msg("restartLoginTooltip")}</span>
-                                    </a>
-                                </Box>
-                            ) : (
-                                <Typography variant="h6" id="kc-page-title" align="center">
-                                    {headerNode}
-                                </Typography>
-                            )}
-                        </header>
-
-                        <Box id="kc-content" textAlign="center">
+                        <Box id="kc-content" textAlign="center" sx={{ marginTop: 2 }}>
                             {displayMessage && message && (message.type !== "warning" || !isAppInitiatedAction) && (
                                 <Box>
                                     <span dangerouslySetInnerHTML={{ __html: message.summary }} />
@@ -133,17 +150,18 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             )}
 
                             {children}
+                            <Box sx={{ marginTop: 2 }}>
+                                {auth?.showTryAnotherWayLink && (
+                                    <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
+                                        <input type="hidden" name="tryAnotherWay" value="on" />
+                                        <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
+                                    </form>
+                                )}
 
-                            {auth?.showTryAnotherWayLink && (
-                                <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
-                                    <input type="hidden" name="tryAnotherWay" value="on" />
-                                    <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
-                                </form>
-                            )}
+                                {socialProvidersNode}
 
-                            {socialProvidersNode}
-
-                            {displayInfo && infoNode && <Box id="kc-info">{infoNode}</Box>}
+                                {displayInfo && infoNode && <Box id="kc-info">{infoNode}</Box>}
+                            </Box>
                         </Box>
                     </Box>
                 </CardContent>
