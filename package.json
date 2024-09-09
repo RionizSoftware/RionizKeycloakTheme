@@ -10,8 +10,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "build-keycloak-theme": "npm run build && keycloakify build",
-        "storybook": "storybook dev -p 6006",
+        "build-keycloak-theme": "yarn build && keycloakify build",
+        "storybook": "storybook dev -p 4444",
         "format": "prettier . --write"
     },
     "license": "MIT",
