@@ -5,7 +5,7 @@ import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -90,60 +90,64 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <Box>
-            <Typography variant={"h1"} id="kc-header-wrapper">
-                {msg("loginTitleHtml", realm.displayNameHtml)}
-            </Typography>
+        <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+            <Card elevation={3} sx={{ maxWidth: 500, padding: 3 }}>
+                <CardContent>
+                    <Typography variant={"h4"} id="kc-header-wrapper" align="center">
+                        {msg("loginTitleHtml", realm.displayNameHtml)}
+                    </Typography>
 
-            <Box>
-                <header>
-                    {realm.internationalizationEnabled && locale?.supported && locale?.supported.length > 1 && (
-                        <Box id="kc-locale">
-                            <button id="kc-current-locale-link">{labelBySupportedLanguageTag[currentLanguageTag]}</button>
-                            <ul id="language-switch1">
-                                {locale?.supported.map(({ languageTag }) => (
-                                    <li key={languageTag}>
-                                        <a href={getChangeLocaleUrl(languageTag)}>{labelBySupportedLanguageTag[languageTag]}</a>
-                                    </li>
-                                ))}
-                            </ul>
+                    <Box>
+                        <header>
+                            {realm.internationalizationEnabled && locale?.supported && locale?.supported.length > 1 && (
+                                <Box id="kc-locale" display="flex" justifyContent="center">
+                                    <Button id="kc-current-locale-link">{labelBySupportedLanguageTag[currentLanguageTag]}</Button>
+                                    <ul id="language-switch1">
+                                        {locale?.supported.map(({ languageTag }) => (
+                                            <li key={languageTag}>
+                                                <a href={getChangeLocaleUrl(languageTag)}>{labelBySupportedLanguageTag[languageTag]}</a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </Box>
+                            )}
+                            {auth?.showUsername && !auth.showResetCredentials ? (
+                                <Box id="kc-username" textAlign="center">
+                                    <label>{auth.attemptedUsername}</label>
+                                    <a id="reset-login" href={url.loginRestartFlowUrl}>
+                                        <span>{msg("restartLoginTooltip")}</span>
+                                    </a>
+                                </Box>
+                            ) : (
+                                <Typography variant="h6" id="kc-page-title" align="center">
+                                    {headerNode}
+                                </Typography>
+                            )}
+                        </header>
+
+                        <Box id="kc-content" textAlign="center">
+                            {displayMessage && message && (message.type !== "warning" || !isAppInitiatedAction) && (
+                                <Box>
+                                    <span dangerouslySetInnerHTML={{ __html: message.summary }} />
+                                </Box>
+                            )}
+
+                            {children}
+
+                            {auth?.showTryAnotherWayLink && (
+                                <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
+                                    <input type="hidden" name="tryAnotherWay" value="on" />
+                                    <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
+                                </form>
+                            )}
+
+                            {socialProvidersNode}
+
+                            {displayInfo && infoNode && <Box id="kc-info">{infoNode}</Box>}
                         </Box>
-                    )}
-                    {auth?.showUsername && !auth.showResetCredentials ? (
-                        <Box id="kc-username">
-                            <label>{auth.attemptedUsername}</label>
-                            <a id="reset-login" href={url.loginRestartFlowUrl}>
-                                <span>{msg("restartLoginTooltip")}</span>
-                            </a>
-                        </Box>
-                    ) : (
-                        <Typography variant="h1" id="kc-page-title">
-                            {headerNode}
-                        </Typography>
-                    )}
-                </header>
-
-                <Box id="kc-content">
-                    {displayMessage && message && (message.type !== "warning" || !isAppInitiatedAction) && (
-                        <Box>
-                            <span dangerouslySetInnerHTML={{ __html: message.summary }} />
-                        </Box>
-                    )}
-
-                    {children}
-
-                    {auth?.showTryAnotherWayLink && (
-                        <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
-                            <input type="hidden" name="tryAnotherWay" value="on" />
-                            <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
-                        </form>
-                    )}
-
-                    {socialProvidersNode}
-
-                    {displayInfo && infoNode && <Box id="kc-info">{infoNode}</Box>}
-                </Box>
-            </Box>
+                    </Box>
+                </CardContent>
+            </Card>
         </Box>
     );
 }
