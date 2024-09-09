@@ -3,7 +3,9 @@ import { assert } from "keycloakify/tools/assert";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import { Box, Button } from "@mui/material";
+import { Box, Button, TextField, Typography, IconButton } from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -23,12 +25,12 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
             infoNode={
                 <Box id="kc-registration-container">
                     <Box id="kc-registration">
-                        <span>
+                        <Typography variant="body2">
                             {msg("noAccount")}{" "}
                             <a tabIndex={8} href={url.registrationUrl}>
                                 {msg("doRegister")}
                             </a>
-                        </span>
+                        </Typography>
                     </Box>
                 </Box>
             }
@@ -36,10 +38,10 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 realm.password &&
                 social &&
                 social.providers &&
-                social.providers.length > 0 && (
+                social.providers?.length > 0 && (
                     <Box id="kc-social-providers">
                         <hr />
-                        <h2>{msg("identity-provider-login-label")}</h2>
+                        <Typography variant="h6">{msg("identity-provider-login-label")}</Typography>
                         <ul>
                             {social.providers.map(p => (
                                 <li key={p.alias}>
@@ -68,25 +70,27 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                         >
                             {!usernameHidden && (
                                 <Box>
-                                    <label htmlFor="username">
-                                        {!realm.loginWithEmailAllowed
-                                            ? msg("username")
-                                            : !realm.registrationEmailAsUsername
-                                              ? msg("usernameOrEmail")
-                                              : msg("email")}
-                                    </label>
-                                    <input
-                                        tabIndex={2}
+                                    <TextField
                                         id="username"
                                         name="username"
+                                        label={
+                                            !realm.loginWithEmailAllowed
+                                                ? msg("username")
+                                                : !realm.registrationEmailAsUsername
+                                                  ? msg("usernameOrEmail")
+                                                  : msg("email")
+                                        }
                                         defaultValue={login.username ?? ""}
                                         type="text"
                                         autoFocus
                                         autoComplete="username"
-                                        aria-invalid={messagesPerField.existsError("username", "password")}
+                                        error={messagesPerField.existsError("username", "password")}
+                                        fullWidth
+                                        margin="normal"
                                     />
                                     {messagesPerField.existsError("username", "password") && (
-                                        <span
+                                        <Typography
+                                            color="error"
                                             id="input-error"
                                             aria-live="polite"
                                             dangerouslySetInnerHTML={{
@@ -98,19 +102,21 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                             )}
 
                             <Box>
-                                <label htmlFor="password">{msg("password")}</label>
                                 <PasswordWrapper i18n={i18n} passwordInputId="password">
-                                    <input
-                                        tabIndex={3}
+                                    <TextField
                                         id="password"
                                         name="password"
+                                        label={msg("password")}
                                         type="password"
                                         autoComplete="current-password"
-                                        aria-invalid={messagesPerField.existsError("username", "password")}
+                                        error={messagesPerField.existsError("username", "password")}
+                                        fullWidth
+                                        margin="normal"
                                     />
                                 </PasswordWrapper>
                                 {usernameHidden && messagesPerField.existsError("username", "password") && (
-                                    <span
+                                    <Typography
+                                        color="error"
                                         id="input-error"
                                         aria-live="polite"
                                         dangerouslySetInnerHTML={{
@@ -120,7 +126,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 )}
                             </Box>
 
-                            <Box id="kc-form-options">
+                            <Box id="kc-form-options" sx={{ display: "flex", justifyContent: "space-between" }}>
                                 {realm.rememberMe && !usernameHidden && (
                                     <Box>
                                         <label>
@@ -136,11 +142,11 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     </Box>
                                 )}
                                 {realm.resetPasswordAllowed && (
-                                    <span>
+                                    <Typography>
                                         <a tabIndex={6} href={url.loginResetCredentialsUrl}>
                                             {msg("doForgotPassword")}
                                         </a>
-                                    </span>
+                                    </Typography>
                                 )}
                             </Box>
 
@@ -171,14 +177,13 @@ function PasswordWrapper({ i18n, passwordInputId, children }: { i18n: I18n; pass
     return (
         <Box>
             {children}
-            <button
-                type="button"
+            <IconButton
+                onClick={toggleIsPasswordRevealed}
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
-                onClick={toggleIsPasswordRevealed}
             >
-                <i aria-hidden />
-            </button>
+                {isPasswordRevealed ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
         </Box>
     );
 }
