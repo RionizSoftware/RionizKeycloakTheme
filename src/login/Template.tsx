@@ -11,7 +11,6 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
         displayMessage = true,
-        displayRequiredFields = false,
         headerNode,
         socialProvidersNode = null,
         infoNode = null,
@@ -23,6 +22,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     } = props;
 
     const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
+
     const { realm, locale, auth, url, message, isAppInitiatedAction, authenticationSession, scripts } = kcContext;
 
     useEffect(() => {
@@ -31,7 +31,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     useEffect(() => {
         const { currentLanguageTag } = locale ?? {};
-        if (!currentLanguageTag) return;
+
+        if (currentLanguageTag === undefined) {
+            return;
+        }
+
         const html = document.querySelector("html");
         assert(html !== null);
         html.lang = currentLanguageTag;
@@ -39,7 +43,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { areAllStyleSheetsLoaded } = useInsertLinkTags({
         componentOrHookName: "Template",
-        hrefs: doUseDefaultCss ? [`${url.resourcesPath}/css/login.css`] : []
+        hrefs: !doUseDefaultCss ? [] : [`${url.resourcesPath}/css/login.css`]
     });
 
     const { insertScriptTags } = useInsertScriptTags({
@@ -49,26 +53,41 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 type: "module",
                 src: `${url.resourcesPath}/js/menu-button-links.js`
             },
-            ...(authenticationSession
-                ? [
+            ...(authenticationSession === undefined
+                ? []
+                : [
                       {
                           type: "module",
-                          textContent: `
-                              import { checkCookiesAndSetTimer } from "${url.resourcesPath}/js/authChecker.js";
-                              checkCookiesAndSetTimer("${authenticationSession.authSessionId}", "${authenticationSession.tabId}", "${url.ssoLoginInOtherTabsUrl}");
-                          `
-                      }
-                  ]
-                : []),
-            ...scripts.map(script => ({ type: "text/javascript", src: script }))
+                          textContent: [
+                              `import { checkCookiesAndSetTimer } from "${url.resourcesPath}/js/authChecker.js";`,
+                              ``,
+                              `checkCookiesAndSetTimer(`,
+                              `  "${authenticationSession.authSessionId}",`,
+                              `  "${authenticationSession.tabId}",`,
+                              `  "${url.ssoLoginInOtherTabsUrl}"`,
+                              `);`
+                          ].join("\n")
+                      } as const
+                  ]),
+            ...scripts.map(
+                script =>
+                    ({
+                        type: "text/javascript",
+                        src: script
+                    }) as const
+            )
         ]
     });
 
     useEffect(() => {
-        if (areAllStyleSheetsLoaded) insertScriptTags();
+        if (areAllStyleSheetsLoaded) {
+            insertScriptTags();
+        }
     }, [areAllStyleSheetsLoaded]);
 
-    if (!areAllStyleSheetsLoaded) return null;
+    if (!areAllStyleSheetsLoaded) {
+        return null;
+    }
 
     return (
         <Box>
@@ -78,11 +97,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
             <Box>
                 <header>
-                    {realm.internationalizationEnabled && locale?.supported.length > 1 && (
+                    {realm.internationalizationEnabled && locale?.supported && locale?.supported.length > 1 && (
                         <Box id="kc-locale">
                             <button id="kc-current-locale-link">{labelBySupportedLanguageTag[currentLanguageTag]}</button>
                             <ul id="language-switch1">
-                                {locale.supported.map(({ languageTag }, i) => (
+                                {locale?.supported.map(({ languageTag }) => (
                                     <li key={languageTag}>
                                         <a href={getChangeLocaleUrl(languageTag)}>{labelBySupportedLanguageTag[languageTag]}</a>
                                     </li>
