@@ -7,11 +7,8 @@ import { Box, Button } from "@mui/material";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
-
     const { social, realm, url, usernameHidden, login, auth, registrationDisabled, messagesPerField } = kcContext;
-
     const { msg, msgStr } = i18n;
-
     const [, setIsLoginButtonDisabled] = useState(false);
 
     return (
@@ -36,24 +33,25 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 </Box>
             }
             socialProvidersNode={
-                <>
-                    {realm.password && social.providers !== undefined && social.providers.length !== 0 && (
-                        <Box id="kc-social-providers">
-                            <hr />
-                            <h2>{msg("identity-provider-login-label")}</h2>
-                            <ul>
-                                {social.providers.map((...[p, ,]) => (
-                                    <li key={p.alias}>
-                                        <a id={`social-${p.alias}`} type="button" href={p.loginUrl}>
-                                            {p.iconClasses && <i aria-hidden="true"></i>}
-                                            <span dangerouslySetInnerHTML={{ __html: p.displayName }}></span>
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </Box>
-                    )}
-                </>
+                realm.password &&
+                social &&
+                social.providers &&
+                social.providers.length > 0 && (
+                    <Box id="kc-social-providers">
+                        <hr />
+                        <h2>{msg("identity-provider-login-label")}</h2>
+                        <ul>
+                            {social.providers.map(p => (
+                                <li key={p.alias}>
+                                    <a id={`social-${p.alias}`} href={p.loginUrl}>
+                                        {p.iconClasses && <i aria-hidden="true"></i>}
+                                        <span dangerouslySetInnerHTML={{ __html: p.displayName }}></span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </Box>
+                )
             }
         >
             <Box id="kc-form">
@@ -122,36 +120,32 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 )}
                             </Box>
 
-                            <Box>
-                                <Box id="kc-form-options">
-                                    {realm.rememberMe && !usernameHidden && (
-                                        <Box>
-                                            <label>
-                                                <input
-                                                    tabIndex={5}
-                                                    id="rememberMe"
-                                                    name="rememberMe"
-                                                    type="checkbox"
-                                                    defaultChecked={!!login.rememberMe}
-                                                />{" "}
-                                                {msg("rememberMe")}
-                                            </label>
-                                        </Box>
-                                    )}
-                                </Box>
-                                <Box>
-                                    {realm.resetPasswordAllowed && (
-                                        <span>
-                                            <a tabIndex={6} href={url.loginResetCredentialsUrl}>
-                                                {msg("doForgotPassword")}
-                                            </a>
-                                        </span>
-                                    )}
-                                </Box>
+                            <Box id="kc-form-options">
+                                {realm.rememberMe && !usernameHidden && (
+                                    <Box>
+                                        <label>
+                                            <input
+                                                tabIndex={5}
+                                                id="rememberMe"
+                                                name="rememberMe"
+                                                type="checkbox"
+                                                defaultChecked={!!login.rememberMe}
+                                            />{" "}
+                                            {msg("rememberMe")}
+                                        </label>
+                                    </Box>
+                                )}
+                                {realm.resetPasswordAllowed && (
+                                    <span>
+                                        <a tabIndex={6} href={url.loginResetCredentialsUrl}>
+                                            {msg("doForgotPassword")}
+                                        </a>
+                                    </span>
+                                )}
                             </Box>
 
                             <Box id="kc-form-buttons">
-                                <input type="hidden" id="id-hidden-input" name="credentialId" value={auth.selectedCredential} />
+                                <input type="hidden" name="credentialId" value={auth.selectedCredential} />
                                 <Button sx={{ width: "100%" }} tabIndex={7} name="login" id="kc-login" type="submit" variant="contained">
                                     {msgStr("doLogIn")}
                                 </Button>
@@ -164,18 +158,13 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
     );
 }
 
-function PasswordWrapper(props: { i18n: I18n; passwordInputId: string; children: JSX.Element }) {
-    const { i18n, passwordInputId, children } = props;
-
+function PasswordWrapper({ i18n, passwordInputId, children }: { i18n: I18n; passwordInputId: string; children: JSX.Element }) {
     const { msgStr } = i18n;
-
-    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer((isPasswordRevealed: boolean) => !isPasswordRevealed, false);
+    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer(isPasswordRevealed => !isPasswordRevealed, false);
 
     useEffect(() => {
         const passwordInputElement = document.getElementById(passwordInputId);
-
         assert(passwordInputElement instanceof HTMLInputElement);
-
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
 
