@@ -134,3 +134,4 @@ jspm_packages
 /dist_keycloak
 /build
 /storybook-static
+.env
