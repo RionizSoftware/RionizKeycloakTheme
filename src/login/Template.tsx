@@ -7,6 +7,7 @@ import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
+import { Box, Typography } from "@mui/material";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -48,15 +49,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { areAllStyleSheetsLoaded } = useInsertLinkTags({
         componentOrHookName: "Template",
-        hrefs: !doUseDefaultCss
-            ? []
-            : [
-                  `${url.resourcesCommonPath}/node_modules/@patternfly/patternfly/patternfly.min.css`,
-                  `${url.resourcesCommonPath}/node_modules/patternfly/dist/css/patternfly.min.css`,
-                  `${url.resourcesCommonPath}/node_modules/patternfly/dist/css/patternfly-additions.min.css`,
-                  `${url.resourcesCommonPath}/lib/pficon/pficon.css`,
-                  `${url.resourcesPath}/css/login.css`
-              ]
+        hrefs: !doUseDefaultCss ? [] : [`${url.resourcesPath}/css/login.css`]
     });
 
     const { insertScriptTags } = useInsertScriptTags({
@@ -103,17 +96,17 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <div>
-            <div id="kc-header">
-                <div id="kc-header-wrapper">{msg("loginTitleHtml", realm.displayNameHtml)}</div>
-            </div>
+        <Box>
+            <Typography variant={"h1"} id="kc-header-wrapper">
+                {msg("loginTitleHtml", realm.displayNameHtml)}
+            </Typography>
 
-            <div>
+            <Box>
                 <header>
                     {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
-                        <div id="kc-locale">
-                            <div id="kc-locale-wrapper">
-                                <div id="kc-locale-dropdown" className={clsx("menu-button-links", kcClsx("kcLocaleDropDownClass"))}>
+                        <Box id="kc-locale">
+                            <Box id="kc-locale-wrapper">
+                                <Box id="kc-locale-dropdown" className={clsx("menu-button-links", kcClsx("kcLocaleDropDownClass"))}>
                                     <button
                                         tabIndex={1}
                                         id="kc-current-locale-link"
@@ -139,70 +132,70 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                             </li>
                                         ))}
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
+                                </Box>
+                            </Box>
+                        </Box>
                     )}
                     {(() => {
                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
                             <h1 id="kc-page-title">{headerNode}</h1>
                         ) : (
-                            <div id="kc-username">
+                            <Box id="kc-username">
                                 <label id="kc-attempted-username">{auth.attemptedUsername}</label>
                                 <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
-                                    <div className="kc-login-tooltip">
+                                    <Box className="kc-login-tooltip">
                                         <i></i>
                                         <span className="kc-tooltip-text">{msg("restartLoginTooltip")}</span>
-                                    </div>
+                                    </Box>
                                 </a>
-                            </div>
+                            </Box>
                         );
 
                         if (displayRequiredFields) {
                             return (
-                                <div>
-                                    <div className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
+                                <Box>
+                                    <Box className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
                                         <span className="subtitle">
                                             <span className="required">*</span>
                                             {msg("requiredFields")}
                                         </span>
-                                    </div>
-                                    <div className="col-md-10">{node}</div>
-                                </div>
+                                    </Box>
+                                    <Box className="col-md-10">{node}</Box>
+                                </Box>
                             );
                         }
 
                         return node;
                     })()}
                 </header>
-                <div id="kc-content">
-                    <div id="kc-content-wrapper">
+                <Box id="kc-content">
+                    <Box id="kc-content-wrapper">
                         {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                         {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
-                            <div
+                            <Box
                                 className={clsx(
                                     `alert-${message.type}`,
                                     kcClsx("kcAlertClass"),
                                     `pf-m-${message?.type === "error" ? "danger" : message.type}`
                                 )}
                             >
-                                <div className="pf-c-alert__icon">
+                                <Box className="pf-c-alert__icon">
                                     {message.type === "success" && <span></span>}
                                     {message.type === "warning" && <span></span>}
                                     {message.type === "error" && <span></span>}
                                     {message.type === "info" && <span></span>}
-                                </div>
+                                </Box>
                                 <span
                                     dangerouslySetInnerHTML={{
                                         __html: message.summary
                                     }}
                                 />
-                            </div>
+                            </Box>
                         )}
                         {children}
                         {auth !== undefined && auth.showTryAnotherWayLink && (
                             <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
-                                <div>
+                                <Box>
                                     <input type="hidden" name="tryAnotherWay" value="on" />
                                     <a
                                         href="#"
@@ -214,18 +207,18 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     >
                                         {msg("doTryAnotherWay")}
                                     </a>
-                                </div>
+                                </Box>
                             </form>
                         )}
                         {socialProvidersNode}
                         {displayInfo && (
-                            <div id="kc-info">
-                                <div id="kc-info-wrapper">{infoNode}</div>
-                            </div>
+                            <Box id="kc-info">
+                                <Box id="kc-info-wrapper">{infoNode}</Box>
+                            </Box>
                         )}
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     );
 }
