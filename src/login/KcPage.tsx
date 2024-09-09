@@ -50,4 +50,6 @@ export default function KcPage(props: { kcContext: KcContext }) {
     );
 }
 
-const classes = {} satisfies { [key in ClassKey]?: string };
+const classes = { kcHtmlClass: "", kcBodyClass: "" } satisfies {
+    [key in ClassKey]?: string;
+};
