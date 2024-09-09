@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { assert } from "keycloakify/tools/assert";
-import { clsx } from "keycloakify/tools/clsx";
 import type { TemplateProps } from "keycloakify/login/TemplateProps";
-import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
 import type { I18n } from "./i18n";
@@ -21,11 +19,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         kcContext,
         i18n,
         doUseDefaultCss,
-        classes,
         children
     } = props;
-
-    const { kcClsx } = getKcClsx({ doUseDefaultCss, classes });
 
     const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
 
@@ -106,7 +101,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
                         <Box id="kc-locale">
                             <Box id="kc-locale-wrapper">
-                                <Box id="kc-locale-dropdown" className={clsx("menu-button-links", kcClsx("kcLocaleDropDownClass"))}>
+                                <Box id="kc-locale-dropdown">
                                     <button
                                         tabIndex={1}
                                         id="kc-current-locale-link"
@@ -143,9 +138,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             <Box id="kc-username">
                                 <label id="kc-attempted-username">{auth.attemptedUsername}</label>
                                 <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
-                                    <Box className="kc-login-tooltip">
+                                    <Box>
                                         <i></i>
-                                        <span className="kc-tooltip-text">{msg("restartLoginTooltip")}</span>
+                                        <span>{msg("restartLoginTooltip")}</span>
                                     </Box>
                                 </a>
                             </Box>
@@ -154,13 +149,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         if (displayRequiredFields) {
                             return (
                                 <Box>
-                                    <Box className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
-                                        <span className="subtitle">
-                                            <span className="required">*</span>
+                                    <Box>
+                                        <span>
+                                            <span>*</span>
                                             {msg("requiredFields")}
                                         </span>
                                     </Box>
-                                    <Box className="col-md-10">{node}</Box>
+                                    <Box>{node}</Box>
                                 </Box>
                             );
                         }
@@ -172,14 +167,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     <Box id="kc-content-wrapper">
                         {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                         {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
-                            <Box
-                                className={clsx(
-                                    `alert-${message.type}`,
-                                    kcClsx("kcAlertClass"),
-                                    `pf-m-${message?.type === "error" ? "danger" : message.type}`
-                                )}
-                            >
-                                <Box className="pf-c-alert__icon">
+                            <Box>
+                                <Box>
                                     {message.type === "success" && <span></span>}
                                     {message.type === "warning" && <span></span>}
                                     {message.type === "error" && <span></span>}
