@@ -154,7 +154,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 {auth?.showTryAnotherWayLink && (
                                     <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
                                         <input type="hidden" name="tryAnotherWay" value="on" />
-                                        <a onClick={() => document.forms["kc-select-try-another-way-form"].submit()}>{msg("doTryAnotherWay")}</a>
+                                        <a onClick={() => document.forms.namedItem("kc-select-try-another-way-form")?.submit()}>
+                                            {msg("doTryAnotherWay")}
+                                        </a>
                                     </form>
                                 )}
 
