@@ -19,11 +19,11 @@
     "dependencies": {
         "@emotion/react": "11.13.3",
         "@emotion/styled": "11.13.0",
-        "@mui/icons-material": "6.0.2",
-        "@mui/material": "6.0.2",
+        "@mui/icons-material": "6.1.0",
+        "@mui/material": "6.1.0",
         "dotenv": "16.4.5",
         "dotenv-flow": "4.1.0",
-        "keycloakify": "10.0.6",
+        "keycloakify": "10.1.0",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "stylis": "4.3.4",
@@ -46,5 +46,6 @@
         "storybook": "^8.1.10",
         "typescript": "^5.2.2",
         "vite": "^5.0.8"
-    }
+    },
+    "packageManager": "yarn@4.4.1"
 }
