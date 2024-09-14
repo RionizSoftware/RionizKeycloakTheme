@@ -55,8 +55,6 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                 />
 
                 <Box>
-                    <Box />
-
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
                     <input

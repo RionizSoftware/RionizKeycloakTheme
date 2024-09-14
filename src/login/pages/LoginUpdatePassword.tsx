@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -32,10 +33,10 @@ export default function LoginUpdatePassword(
             headerNode={msg("updatePasswordTitle")}
         >
             <form id="kc-passwd-update-form" action={url.loginAction} method="post">
-                <div>
+                <Box>
                     <label htmlFor="password-new">{msg("passwordNew")}</label>
 
-                    <div>
+                    <Box>
                         <PasswordWrapper
                             kcClsx={kcClsx}
                             i18n={i18n}
@@ -63,13 +64,13 @@ export default function LoginUpdatePassword(
                                 }}
                             />
                         )}
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div>
+                <Box>
                     <label htmlFor="password-confirm">{msg("passwordConfirm")}</label>
 
-                    <div>
+                    <Box>
                         <PasswordWrapper
                             kcClsx={kcClsx}
                             i18n={i18n}
@@ -97,9 +98,9 @@ export default function LoginUpdatePassword(
                                 }}
                             />
                         )}
-                    </div>
-                </div>
-                <div>
+                    </Box>
+                </Box>
+                <Box>
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
                     <input type="submit" value={msgStr("doSubmit")} />
@@ -108,7 +109,7 @@ export default function LoginUpdatePassword(
                             {msg("doCancel")}
                         </button>
                     )}
-                </div>
+                </Box>
             </form>
         </Template>
     );
@@ -117,7 +118,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <div id="kc-form-options">
+        <Box id="kc-form-options">
             <label>
                 <input
                     type="checkbox"
@@ -128,7 +129,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
                 />
                 {msg("logoutOtherSessions")}
             </label>
-        </div>
+        </Box>
     );
 }
 function PasswordWrapper(props: {
@@ -149,7 +150,7 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <div>
+        <Box>
             {children}
             <button
                 type="button"
@@ -159,6 +160,6 @@ function PasswordWrapper(props: {
             >
                 <i aria-hidden />
             </button>
-        </div>
+        </Box>
     );
 }

@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -38,7 +39,7 @@ export default function Info(
                 />
             }
         >
-            <div id="kc-info-message">
+            <Box id="kc-info-message">
                 <p
                     dangerouslySetInnerHTML={{
                         __html: (() => {
@@ -82,7 +83,7 @@ export default function Info(
                         );
                     }
                 })()}
-            </div>
+            </Box>
         </Template>
     );
 }

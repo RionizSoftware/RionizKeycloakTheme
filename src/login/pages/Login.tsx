@@ -5,6 +5,7 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Box } from "@mui/material";
 export default function Login(
     props: PageProps<
         Extract<
@@ -45,19 +46,19 @@ export default function Login(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <div id="kc-registration-container">
+                <Box id="kc-registration-container">
                     {msg("noAccount")}{" "}
                     <a tabIndex={8} href={url.registrationUrl}>
                         {msg("doRegister")}
                     </a>
-                </div>
+                </Box>
             }
             socialProvidersNode={
                 <>
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <div id="kc-social-providers">
+                            <Box id="kc-social-providers">
                                 <hr />
                                 <h2>{msg("identity-provider-login-label")}</h2>
                                 <ul>
@@ -80,12 +81,12 @@ export default function Login(
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </Box>
                         )}
                 </>
             }
         >
-            <div id="kc-form">
+            <Box id="kc-form">
                 {realm.password && (
                     <form
                         id="kc-form-login"
@@ -97,7 +98,7 @@ export default function Login(
                         method="post"
                     >
                         {!usernameHidden && (
-                            <div>
+                            <Box>
                                 <label htmlFor="username">
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
@@ -130,10 +131,10 @@ export default function Login(
                                         }}
                                     />
                                 )}
-                            </div>
+                            </Box>
                         )}
 
-                        <div>
+                        <Box>
                             <label htmlFor="password">{msg("password")}</label>
                             <PasswordWrapper
                                 kcClsx={kcClsx}
@@ -165,11 +166,11 @@ export default function Login(
                                         }}
                                     />
                                 )}
-                        </div>
+                        </Box>
 
-                        <div>
+                        <Box>
                             {realm.rememberMe && !usernameHidden && (
-                                <div>
+                                <Box>
                                     <label>
                                         <input
                                             tabIndex={5}
@@ -180,7 +181,7 @@ export default function Login(
                                         />{" "}
                                         {msg("rememberMe")}
                                     </label>
-                                </div>
+                                </Box>
                             )}
 
                             {realm.resetPasswordAllowed && (
@@ -190,9 +191,9 @@ export default function Login(
                                     </a>
                                 </span>
                             )}
-                        </div>
+                        </Box>
 
-                        <div id="kc-form-buttons">
+                        <Box id="kc-form-buttons">
                             <input
                                 type="hidden"
                                 id="id-hidden-input"
@@ -207,10 +208,10 @@ export default function Login(
                                 type="submit"
                                 value={msgStr("doLogIn")}
                             />
-                        </div>
+                        </Box>
                     </form>
                 )}
-            </div>
+            </Box>
         </Template>
     );
 }
@@ -232,7 +233,7 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <div>
+        <Box>
             {children}
             <button
                 type="button"
@@ -242,6 +243,6 @@ function PasswordWrapper(props: {
             >
                 <i aria-hidden />
             </button>
-        </div>
+        </Box>
     );
 }

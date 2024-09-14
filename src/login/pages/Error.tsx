@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -24,7 +25,7 @@ export default function Error(
             displayMessage={false}
             headerNode={msg("errorTitle")}
         >
-            <div id="kc-error-message">
+            <Box id="kc-error-message">
                 <p dangerouslySetInnerHTML={{ __html: message.summary }} />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
                     <p>
@@ -33,7 +34,7 @@ export default function Error(
                         </a>
                     </p>
                 )}
-            </div>
+            </Box>
         </Template>
     );
 }

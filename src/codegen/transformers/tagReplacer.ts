@@ -66,7 +66,7 @@ function createImportDeclaration(identifier: string, importLocation: string) {
     );
 }
 
-export const elementReplacerTransformer = (
+export const tagReplacerTransformer = (
     elementToReplace: string,
     replacement: string
 ): TransformerFunctions => {

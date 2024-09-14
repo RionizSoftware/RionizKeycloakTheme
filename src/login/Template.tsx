@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { clsx } from "keycloakify/tools/clsx";
@@ -49,13 +50,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
     return (
-        <div>
+        <Box>
             {msg("loginTitleHtml", realm.displayNameHtml)}
 
             <header>
                 {realm.internationalizationEnabled &&
                     (assert(locale !== undefined), locale.supported.length > 1) && (
-                        <div id="kc-locale">
+                        <Box id="kc-locale">
                             <button
                                 tabIndex={1}
                                 id="kc-current-locale-link"
@@ -85,7 +86,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </Box>
                     )}
                 {(() => {
                     const node = !(
@@ -95,7 +96,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     ) ? (
                         <h1 id="kc-page-title">{headerNode}</h1>
                     ) : (
-                        <div id="kc-username">
+                        <Box id="kc-username">
                             <label id="kc-attempted-username">
                                 {auth.attemptedUsername}
                             </label>
@@ -104,30 +105,30 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 href={url.loginRestartFlowUrl}
                                 aria-label={msgStr("restartLoginTooltip")}
                             >
-                                <div>
+                                <Box>
                                     <i></i>
                                     <span>{msg("restartLoginTooltip")}</span>
-                                </div>
+                                </Box>
                             </a>
-                        </div>
+                        </Box>
                     );
                     if (displayRequiredFields) {
                         return (
-                            <div>
+                            <Box>
                                 *{msg("requiredFields")}
                                 {node}
-                            </div>
+                            </Box>
                         );
                     }
                     return node;
                 })()}
             </header>
-            <div id="kc-content">
+            <Box id="kc-content">
                 {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                 {displayMessage &&
                     message !== undefined &&
                     (message.type !== "warning" || !isAppInitiatedAction) && (
-                        <div>
+                        <Box>
                             {message.type === "success" && <span></span>}
                             {message.type === "warning" && <span></span>}
                             {message.type === "error" && <span></span>}
@@ -138,7 +139,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     __html: message.summary
                                 }}
                             />
-                        </div>
+                        </Box>
                     )}
                 {children}
                 {auth !== undefined && auth.showTryAnotherWayLink && (
@@ -147,7 +148,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         action={url.loginAction}
                         method="post"
                     >
-                        <div>
+                        <Box>
                             <input type="hidden" name="tryAnotherWay" value="on" />
                             <a
                                 href="#"
@@ -161,12 +162,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             >
                                 {msg("doTryAnotherWay")}
                             </a>
-                        </div>
+                        </Box>
                     </form>
                 )}
                 {socialProvidersNode}
-                {displayInfo && <div id="kc-info">{infoNode}</div>}
-            </div>
-        </div>
+                {displayInfo && <Box id="kc-info">{infoNode}</Box>}
+            </Box>
+        </Box>
     );
 }

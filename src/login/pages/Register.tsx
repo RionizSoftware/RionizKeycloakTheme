@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useState } from "react";
 import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -78,21 +79,21 @@ export default function Register(props: RegisterProps) {
                 )}
                 {recaptchaRequired &&
                     (recaptchaVisible || recaptchaAction === undefined) && (
-                        <div>
-                            <div
+                        <Box>
+                            <Box
                                 data-size="compact"
                                 data-sitekey={recaptchaSiteKey}
                                 data-action={recaptchaAction}
-                            ></div>
-                        </div>
+                            ></Box>
+                        </Box>
                     )}
-                <div>
+                <Box>
                     <a href={url.loginUrl}>{msg("backToLogin")}</a>
 
                     {recaptchaRequired &&
                     !recaptchaVisible &&
                     recaptchaAction !== undefined ? (
-                        <div id="kc-form-buttons">
+                        <Box id="kc-form-buttons">
                             <button
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
@@ -107,9 +108,9 @@ export default function Register(props: RegisterProps) {
                             >
                                 {msg("doRegister")}
                             </button>
-                        </div>
+                        </Box>
                     ) : (
-                        <div id="kc-form-buttons">
+                        <Box id="kc-form-buttons">
                             <input
                                 disabled={
                                     !isFormSubmittable ||
@@ -118,9 +119,9 @@ export default function Register(props: RegisterProps) {
                                 type="submit"
                                 value={msgStr("doRegister")}
                             />
-                        </div>
+                        </Box>
                     )}
-                </div>
+                </Box>
             </form>
         </Template>
     );
@@ -142,11 +143,11 @@ function TermsAcceptance(props: {
     const { msg } = i18n;
     return (
         <>
-            <div>
+            <Box>
                 {msg("termsTitle")}
                 {msg("termsText")}
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <input
                     type="checkbox"
                     id="termsAccepted"
@@ -158,7 +159,7 @@ function TermsAcceptance(props: {
                 <label htmlFor="termsAccepted">{msg("acceptTerms")}</label>
 
                 {messagesPerField.existsError("termsAccepted") && (
-                    <div>
+                    <Box>
                         <span
                             id="input-error-terms-accepted"
                             aria-live="polite"
@@ -166,9 +167,9 @@ function TermsAcceptance(props: {
                                 __html: messagesPerField.get("termsAccepted")
                             }}
                         />
-                    </div>
+                    </Box>
                 )}
-            </div>
+            </Box>
         </>
     );
 }

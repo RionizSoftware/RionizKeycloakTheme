@@ -14,8 +14,27 @@ const isDivOrSpanWithNoClass = (element: ts.JsxElement): boolean => {
     }
     return false;
 };
+const isDivOrSpanWithNoClassSelfClosing = (
+    element: ts.JsxSelfClosingElement
+): boolean => {
+    const { tagName, attributes } = element;
+    if (ts.isIdentifier(tagName) && (tagName.text === "div" || tagName.text === "span")) {
+        const hasOnlyId =
+            attributes.properties.length == 0 ||
+            (attributes.properties.length === 1 &&
+                ts.isJsxAttribute(attributes.properties[0]) &&
+                attributes.properties[0].name.getText() === "id");
+        return hasOnlyId;
+    }
+    return false;
+};
 export const divOptimizerTransformer: TransformerFunctions = {
-    handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => element,
+    handleSelfClosingElement: (
+        element: ts.JsxSelfClosingElement
+    ): ts.Node | undefined => {
+        if (isDivOrSpanWithNoClassSelfClosing(element)) return undefined;
+        return element;
+    },
     handleJsxElement: (element: ts.JsxElement): ts.Node => {
         if (element.children.length == 0) {
             return element;
@@ -42,7 +61,6 @@ export const divOptimizerTransformer: TransformerFunctions = {
             optimizedChildren.push(...element.children);
         }
 
-        for (let i = 0; i < element.children.length; i += 1) {}
         const updatedElement = ts.factory.updateJsxElement(
             element,
             element.openingElement,

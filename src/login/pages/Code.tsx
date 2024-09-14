@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
@@ -30,7 +31,7 @@ export default function Code(
                 code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)
             }
         >
-            <div id="kc-code">
+            <Box id="kc-code">
                 {code.success ? (
                     <>
                         <p>{msg("copyCodeInstruction")}</p>
@@ -39,7 +40,7 @@ export default function Code(
                 ) : (
                     <p id="error">{code.error}</p>
                 )}
-            </div>
+            </Box>
         </Template>
     );
 }
