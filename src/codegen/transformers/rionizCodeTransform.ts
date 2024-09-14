@@ -7,7 +7,11 @@ export const rionizTransformer =
     <T extends ts.Node>(context: ts.TransformationContext) =>
     (rootNode: T) => {
         const visit = (sourceFile: ts.Node): ts.Node => {
-            sourceFile = AddImport(sourceFile, "Box", "@mui/material");
+            sourceFile = AddImport(
+                sourceFile,
+                ["Box", "Button", "Link", "TextField", "FormLabel"],
+                "@mui/material"
+            );
             return ts.visitEachChild(sourceFile, node => convertNode(node), context);
         };
 

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -34,7 +34,7 @@ export default function LoginUpdatePassword(
         >
             <form id="kc-passwd-update-form" action={url.loginAction} method="post">
                 <Box>
-                    <label htmlFor="password-new">{msg("passwordNew")}</label>
+                    <FormLabel htmlFor="password-new">{msg("passwordNew")}</FormLabel>
 
                     <Box>
                         <PasswordWrapper
@@ -42,7 +42,7 @@ export default function LoginUpdatePassword(
                             i18n={i18n}
                             passwordInputId="password-new"
                         >
-                            <input
+                            <TextField
                                 type="password"
                                 id="password-new"
                                 name="password-new"
@@ -68,7 +68,9 @@ export default function LoginUpdatePassword(
                 </Box>
 
                 <Box>
-                    <label htmlFor="password-confirm">{msg("passwordConfirm")}</label>
+                    <FormLabel htmlFor="password-confirm">
+                        {msg("passwordConfirm")}
+                    </FormLabel>
 
                     <Box>
                         <PasswordWrapper
@@ -76,7 +78,7 @@ export default function LoginUpdatePassword(
                             i18n={i18n}
                             passwordInputId="password-confirm"
                         >
-                            <input
+                            <TextField
                                 type="password"
                                 id="password-confirm"
                                 name="password-confirm"
@@ -103,11 +105,11 @@ export default function LoginUpdatePassword(
                 <Box>
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
-                    <input type="submit" value={msgStr("doSubmit")} />
+                    <TextField type="submit" value={msgStr("doSubmit")} />
                     {isAppInitiatedAction && (
-                        <button type="submit" name="cancel-aia" value="true">
+                        <Button type="submit" name="cancel-aia" value="true">
                             {msg("doCancel")}
-                        </button>
+                        </Button>
                     )}
                 </Box>
             </form>
@@ -119,8 +121,8 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { msg } = i18n;
     return (
         <Box id="kc-form-options">
-            <label>
-                <input
+            <FormLabel>
+                <TextField
                     type="checkbox"
                     id="logout-sessions"
                     name="logout-sessions"
@@ -128,7 +130,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
                     defaultChecked={true}
                 />
                 {msg("logoutOtherSessions")}
-            </label>
+            </FormLabel>
         </Box>
     );
 }
@@ -152,14 +154,14 @@ function PasswordWrapper(props: {
     return (
         <Box>
             {children}
-            <button
+            <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
             >
                 <i aria-hidden />
-            </button>
+            </Button>
         </Box>
     );
 }

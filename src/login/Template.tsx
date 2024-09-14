@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { useEffect } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { clsx } from "keycloakify/tools/clsx";
@@ -57,7 +57,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 {realm.internationalizationEnabled &&
                     (assert(locale !== undefined), locale.supported.length > 1) && (
                         <Box id="kc-locale">
-                            <button
+                            <Button
                                 tabIndex={1}
                                 id="kc-current-locale-link"
                                 aria-label={msgStr("languages")}
@@ -66,7 +66,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 aria-controls="language-switch1"
                             >
                                 {labelBySupportedLanguageTag[currentLanguageTag]}
-                            </button>
+                            </Button>
                             <ul
                                 role="menu"
                                 tabIndex={-1}
@@ -76,13 +76,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             >
                                 {locale.supported.map(({ languageTag }, i) => (
                                     <li key={languageTag} role="none">
-                                        <a
+                                        <Link
                                             role="menuitem"
                                             id={`language-${i + 1}`}
                                             href={getChangeLocaleUrl(languageTag)}
                                         >
                                             {labelBySupportedLanguageTag[languageTag]}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -100,7 +100,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             <label id="kc-attempted-username">
                                 {auth.attemptedUsername}
                             </label>
-                            <a
+                            <Link
                                 id="reset-login"
                                 href={url.loginRestartFlowUrl}
                                 aria-label={msgStr("restartLoginTooltip")}
@@ -109,7 +109,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     <i></i>
                                     <span>{msg("restartLoginTooltip")}</span>
                                 </Box>
-                            </a>
+                            </Link>
                         </Box>
                     );
                     if (displayRequiredFields) {
@@ -149,8 +149,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         method="post"
                     >
                         <Box>
-                            <input type="hidden" name="tryAnotherWay" value="on" />
-                            <a
+                            <TextField type="hidden" name="tryAnotherWay" value="on" />
+                            <Link
                                 href="#"
                                 id="try-another-way"
                                 onClick={() => {
@@ -161,7 +161,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 }}
                             >
                                 {msg("doTryAnotherWay")}
-                            </a>
+                            </Link>
                         </Box>
                     </form>
                 )}

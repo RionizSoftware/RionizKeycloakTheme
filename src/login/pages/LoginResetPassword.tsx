@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
@@ -47,7 +47,7 @@ export default function LoginResetPassword(
                     </label>
 
                     <Box>
-                        <input
+                        <TextField
                             type="text"
                             id="username"
                             name="username"
@@ -67,10 +67,10 @@ export default function LoginResetPassword(
                     </Box>
                 </Box>
                 <Box>
-                    <a href={url.loginUrl}>{msg("backToLogin")}</a>
+                    <Link href={url.loginUrl}>{msg("backToLogin")}</Link>
 
                     <Box id="kc-form-buttons">
-                        <input type="submit" value={msgStr("doSubmit")} />
+                        <TextField type="submit" value={msgStr("doSubmit")} />
                     </Box>
                 </Box>
             </form>

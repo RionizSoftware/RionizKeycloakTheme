@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -29,9 +29,9 @@ export default function Error(
                 <p dangerouslySetInnerHTML={{ __html: message.summary }} />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
                     <p>
-                        <a id="backToApplication" href={client.baseUrl}>
+                        <Link id="backToApplication" href={client.baseUrl}>
                             {msg("backToApplication")}
-                        </a>
+                        </Link>
                     </p>
                 )}
             </Box>

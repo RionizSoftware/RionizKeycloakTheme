@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { useState } from "react";
 import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -88,13 +88,13 @@ export default function Register(props: RegisterProps) {
                         </Box>
                     )}
                 <Box>
-                    <a href={url.loginUrl}>{msg("backToLogin")}</a>
+                    <Link href={url.loginUrl}>{msg("backToLogin")}</Link>
 
                     {recaptchaRequired &&
                     !recaptchaVisible &&
                     recaptchaAction !== undefined ? (
                         <Box id="kc-form-buttons">
-                            <button
+                            <Button
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
                                     (
@@ -107,11 +107,11 @@ export default function Register(props: RegisterProps) {
                                 type="submit"
                             >
                                 {msg("doRegister")}
-                            </button>
+                            </Button>
                         </Box>
                     ) : (
                         <Box id="kc-form-buttons">
-                            <input
+                            <TextField
                                 disabled={
                                     !isFormSubmittable ||
                                     (termsAcceptanceRequired && !areTermsAccepted)
@@ -148,7 +148,7 @@ function TermsAcceptance(props: {
                 {msg("termsText")}
             </Box>
             <Box>
-                <input
+                <TextField
                     type="checkbox"
                     id="termsAccepted"
                     name="termsAccepted"

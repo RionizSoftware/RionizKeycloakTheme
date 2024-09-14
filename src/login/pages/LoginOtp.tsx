@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { Fragment } from "react";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
@@ -36,7 +36,7 @@ export default function LoginOtp(
                     <Box>
                         {otpLogin.userOtpCredentials.map((otpCredential, index) => (
                             <Fragment key={index}>
-                                <input
+                                <TextField
                                     id={`kc-otp-credential-${index}`}
                                     type="radio"
                                     name="selectedCredentialId"
@@ -64,7 +64,7 @@ export default function LoginOtp(
                     <label htmlFor="otp">{msg("loginOtpOneTime")}</label>
 
                     <Box>
-                        <input
+                        <TextField
                             id="otp"
                             name="otp"
                             autoComplete="off"
@@ -85,7 +85,7 @@ export default function LoginOtp(
                 </Box>
 
                 <Box>
-                    <input
+                    <TextField
                         name="login"
                         id="kc-login"
                         type="submit"

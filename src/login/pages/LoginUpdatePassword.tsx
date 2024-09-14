@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -42,7 +42,7 @@ export default function LoginUpdatePassword(
                             i18n={i18n}
                             passwordInputId="password-new"
                         >
-                            <input
+                            <TextField
                                 type="password"
                                 id="password-new"
                                 name="password-new"
@@ -76,7 +76,7 @@ export default function LoginUpdatePassword(
                             i18n={i18n}
                             passwordInputId="password-confirm"
                         >
-                            <input
+                            <TextField
                                 type="password"
                                 id="password-confirm"
                                 name="password-confirm"
@@ -103,11 +103,11 @@ export default function LoginUpdatePassword(
                 <Box>
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
-                    <input type="submit" value={msgStr("doSubmit")} />
+                    <TextField type="submit" value={msgStr("doSubmit")} />
                     {isAppInitiatedAction && (
-                        <button type="submit" name="cancel-aia" value="true">
+                        <Button type="submit" name="cancel-aia" value="true">
                             {msg("doCancel")}
-                        </button>
+                        </Button>
                     )}
                 </Box>
             </form>
@@ -120,7 +120,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     return (
         <Box id="kc-form-options">
             <label>
-                <input
+                <TextField
                     type="checkbox"
                     id="logout-sessions"
                     name="logout-sessions"
@@ -152,14 +152,14 @@ function PasswordWrapper(props: {
     return (
         <Box>
             {children}
-            <button
+            <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
             >
                 <i aria-hidden />
-            </button>
+            </Button>
         </Box>
     );
 }

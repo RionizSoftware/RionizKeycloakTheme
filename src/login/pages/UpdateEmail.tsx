@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { useState } from "react";
 import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -55,19 +55,17 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                 />
 
                 <Box>
-                    <Box />
-
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
-                    <input
+                    <TextField
                         disabled={!isFormSubmittable}
                         type="submit"
                         value={msgStr("doSubmit")}
                     />
                     {isAppInitiatedAction && (
-                        <button type="submit" name="cancel-aia" value="true">
+                        <Button type="submit" name="cancel-aia" value="true">
                             {msg("doCancel")}
-                        </button>
+                        </Button>
                     )}
                 </Box>
             </form>
@@ -80,7 +78,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     return (
         <Box id="kc-form-options">
             <label>
-                <input
+                <TextField
                     type="checkbox"
                     id="logout-sessions"
                     name="logout-sessions"

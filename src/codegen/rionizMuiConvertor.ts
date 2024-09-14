@@ -73,6 +73,34 @@ const transformTemplateToMaterialUiFormat = async (
                 ) as TransformerFactory<SourceFile>,
                 1
             );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("button", "Button")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("a", "Link")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("input", "TextField")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("label", "FormLabel")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
             fs.writeFileSync(path.resolve(outputLocation, file), content);
             //break;
         }

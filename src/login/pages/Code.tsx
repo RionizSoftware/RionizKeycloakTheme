@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField } from "@mui/material";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
@@ -35,7 +35,7 @@ export default function Code(
                 {code.success ? (
                     <>
                         <p>{msg("copyCodeInstruction")}</p>
-                        <input id="code" defaultValue={code.code} />
+                        <TextField id="code" defaultValue={code.code} />
                     </>
                 ) : (
                     <p id="error">{code.error}</p>

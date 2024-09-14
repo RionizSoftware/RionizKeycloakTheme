@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -64,21 +64,25 @@ export default function Info(
                     if (pageRedirectUri) {
                         return (
                             <p>
-                                <a href={pageRedirectUri}>{msg("backToApplication")}</a>
+                                <Link href={pageRedirectUri}>
+                                    {msg("backToApplication")}
+                                </Link>
                             </p>
                         );
                     }
                     if (actionUri) {
                         return (
                             <p>
-                                <a href={actionUri}>{msg("proceedWithAction")}</a>
+                                <Link href={actionUri}>{msg("proceedWithAction")}</Link>
                             </p>
                         );
                     }
                     if (client.baseUrl) {
                         return (
                             <p>
-                                <a href={client.baseUrl}>{msg("backToApplication")}</a>
+                                <Link href={client.baseUrl}>
+                                    {msg("backToApplication")}
+                                </Link>
                             </p>
                         );
                     }

@@ -1,3 +1,4 @@
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { useState, useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { clsx } from "keycloakify/tools/clsx";
@@ -5,7 +6,6 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import { Box } from "@mui/material";
 export default function Login(
     props: PageProps<
         Extract<
@@ -22,16 +22,7 @@ export default function Login(
         doUseDefaultCss,
         classes
     });
-    const {
-        social,
-        realm,
-        url,
-        usernameHidden,
-        login,
-        auth,
-        registrationDisabled,
-        messagesPerField
-    } = kcContext;
+    const { social, realm, url, usernameHidden, login, auth, registrationDisabled, messagesPerField } = kcContext;
     const { msg, msgStr } = i18n;
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
     return (
@@ -42,47 +33,37 @@ export default function Login(
             classes={classes}
             displayMessage={!messagesPerField.existsError("username", "password")}
             headerNode={msg("loginAccountTitle")}
-            displayInfo={
-                realm.password && realm.registrationAllowed && !registrationDisabled
-            }
+            displayInfo={realm.password && realm.registrationAllowed && !registrationDisabled}
             infoNode={
                 <Box id="kc-registration-container">
                     {msg("noAccount")}{" "}
-                    <a tabIndex={8} href={url.registrationUrl}>
+                    <Link tabIndex={8} href={url.registrationUrl}>
                         {msg("doRegister")}
-                    </a>
+                    </Link>
                 </Box>
             }
             socialProvidersNode={
                 <>
-                    {realm.password &&
-                        social?.providers !== undefined &&
-                        social.providers.length !== 0 && (
-                            <Box id="kc-social-providers">
-                                <hr />
-                                <h2>{msg("identity-provider-login-label")}</h2>
-                                <ul>
-                                    {social.providers.map((...[p, , providers]) => (
-                                        <li key={p.alias}>
-                                            <a
-                                                id={`social-${p.alias}`}
-                                                type="button"
-                                                href={p.loginUrl}
-                                            >
-                                                {p.iconClasses && (
-                                                    <i aria-hidden="true"></i>
-                                                )}
-                                                <span
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: p.displayName
-                                                    }}
-                                                ></span>
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Box>
-                        )}
+                    {realm.password && social?.providers !== undefined && social.providers.length !== 0 && (
+                        <Box id="kc-social-providers">
+                            <hr />
+                            <h2>{msg("identity-provider-login-label")}</h2>
+                            <ul>
+                                {social.providers.map((...[p, , providers]) => (
+                                    <li key={p.alias}>
+                                        <Link id={`social-${p.alias}`} type="button" href={p.loginUrl}>
+                                            {p.iconClasses && <i aria-hidden="true"></i>}
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: p.displayName
+                                                }}
+                                            ></span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Box>
+                    )}
                 </>
             }
         >
@@ -99,14 +80,14 @@ export default function Login(
                     >
                         {!usernameHidden && (
                             <Box>
-                                <label htmlFor="username">
+                                <FormLabel htmlFor="username">
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
                                         : !realm.registrationEmailAsUsername
                                           ? msg("usernameOrEmail")
                                           : msg("email")}
-                                </label>
-                                <input
+                                </FormLabel>
+                                <TextField
                                     tabIndex={2}
                                     id="username"
                                     name="username"
@@ -114,20 +95,14 @@ export default function Login(
                                     type="text"
                                     autoFocus
                                     autoComplete="username"
-                                    aria-invalid={messagesPerField.existsError(
-                                        "username",
-                                        "password"
-                                    )}
+                                    aria-invalid={messagesPerField.existsError("username", "password")}
                                 />
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
                                         id="input-error"
                                         aria-live="polite"
                                         dangerouslySetInnerHTML={{
-                                            __html: messagesPerField.getFirstError(
-                                                "username",
-                                                "password"
-                                            )
+                                            __html: messagesPerField.getFirstError("username", "password")
                                         }}
                                     />
                                 )}
@@ -135,44 +110,33 @@ export default function Login(
                         )}
 
                         <Box>
-                            <label htmlFor="password">{msg("password")}</label>
-                            <PasswordWrapper
-                                kcClsx={kcClsx}
-                                i18n={i18n}
-                                passwordInputId="password"
-                            >
-                                <input
+                            <FormLabel htmlFor="password">{msg("password")}</FormLabel>
+                            <PasswordWrapper kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
+                                <TextField
                                     tabIndex={3}
                                     id="password"
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
-                                    aria-invalid={messagesPerField.existsError(
-                                        "username",
-                                        "password"
-                                    )}
+                                    aria-invalid={messagesPerField.existsError("username", "password")}
                                 />
                             </PasswordWrapper>
-                            {usernameHidden &&
-                                messagesPerField.existsError("username", "password") && (
-                                    <span
-                                        id="input-error"
-                                        aria-live="polite"
-                                        dangerouslySetInnerHTML={{
-                                            __html: messagesPerField.getFirstError(
-                                                "username",
-                                                "password"
-                                            )
-                                        }}
-                                    />
-                                )}
+                            {usernameHidden && messagesPerField.existsError("username", "password") && (
+                                <span
+                                    id="input-error"
+                                    aria-live="polite"
+                                    dangerouslySetInnerHTML={{
+                                        __html: messagesPerField.getFirstError("username", "password")
+                                    }}
+                                />
+                            )}
                         </Box>
 
                         <Box>
                             {realm.rememberMe && !usernameHidden && (
                                 <Box>
-                                    <label>
-                                        <input
+                                    <FormLabel>
+                                        <TextField
                                             tabIndex={5}
                                             id="rememberMe"
                                             name="rememberMe"
@@ -180,27 +144,22 @@ export default function Login(
                                             defaultChecked={!!login.rememberMe}
                                         />{" "}
                                         {msg("rememberMe")}
-                                    </label>
+                                    </FormLabel>
                                 </Box>
                             )}
 
                             {realm.resetPasswordAllowed && (
                                 <span>
-                                    <a tabIndex={6} href={url.loginResetCredentialsUrl}>
+                                    <Link tabIndex={6} href={url.loginResetCredentialsUrl}>
                                         {msg("doForgotPassword")}
-                                    </a>
+                                    </Link>
                                 </span>
                             )}
                         </Box>
 
                         <Box id="kc-form-buttons">
-                            <input
-                                type="hidden"
-                                id="id-hidden-input"
-                                name="credentialId"
-                                value={auth.selectedCredential}
-                            />
-                            <input
+                            <TextField type="hidden" id="id-hidden-input" name="credentialId" value={auth.selectedCredential} />
+                            <TextField
                                 tabIndex={7}
                                 disabled={isLoginButtonDisabled}
                                 name="login"
@@ -215,18 +174,10 @@ export default function Login(
         </Template>
     );
 }
-function PasswordWrapper(props: {
-    kcClsx: KcClsx;
-    i18n: I18n;
-    passwordInputId: string;
-    children: JSX.Element;
-}) {
+function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
     const { kcClsx, i18n, passwordInputId, children } = props;
     const { msgStr } = i18n;
-    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer(
-        (isPasswordRevealed: boolean) => !isPasswordRevealed,
-        false
-    );
+    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer((isPasswordRevealed: boolean) => !isPasswordRevealed, false);
     useEffect(() => {
         const passwordInputElement = document.getElementById(passwordInputId);
         assert(passwordInputElement instanceof HTMLInputElement);
@@ -235,14 +186,14 @@ function PasswordWrapper(props: {
     return (
         <Box>
             {children}
-            <button
+            <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
             >
                 <i aria-hidden />
-            </button>
+            </Button>
         </Box>
     );
 }
