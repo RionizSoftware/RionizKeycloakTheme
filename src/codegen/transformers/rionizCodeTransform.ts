@@ -1,17 +1,20 @@
 import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
+import { AddImport } from "./tagReplacer.ts";
 
 export const rionizTransformer =
     (transformerFunctions: TransformerFunctions) =>
     <T extends ts.Node>(context: ts.TransformationContext) =>
     (rootNode: T) => {
-        // Helper function to handle visiting each node
-        const visit = (sourceFile: ts.Node): ts.Node =>
-            ts.visitEachChild(sourceFile, node => convertNode(node), context);
+        const visit = (sourceFile: ts.Node): ts.Node => {
+            sourceFile = AddImport(sourceFile, "Box", "@mui/material");
+            return ts.visitEachChild(sourceFile, node => convertNode(node), context);
+        };
 
         // Helper function to handle node conversion
-        const convertNode = (node: ts.Node): ts.Node =>
-            ts.visitEachChild(node, visitChild, context);
+        const convertNode = (node: ts.Node): ts.Node => {
+            return ts.visitEachChild(node, visitChild, context);
+        };
 
         // Helper function to handle child nodes
         const visitChild = (child: ts.Node): ts.Node | undefined => {

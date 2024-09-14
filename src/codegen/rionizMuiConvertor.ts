@@ -5,7 +5,7 @@ import prettier from "prettier";
 import { rionizTransformer } from "./transformers/rionizCodeTransform.ts";
 import { styleRemoverTransformer } from "./transformers/styleRemover.ts";
 import { divOptimizerTransformer } from "./transformers/divOptimizer.ts";
-import { elementReplacerTransformer } from "./transformers/elementReplacer.ts";
+import { elementReplacerTransformer } from "./transformers/tagReplacer.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
@@ -69,7 +69,7 @@ const transformTemplateToMaterialUiFormat = async (
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    elementReplacerTransformer
+                    elementReplacerTransformer("div", "Box")
                 ) as TransformerFactory<SourceFile>,
                 1
             );

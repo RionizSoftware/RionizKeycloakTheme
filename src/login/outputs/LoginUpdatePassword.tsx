@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
