@@ -36,7 +36,7 @@ export default function LoginResetPassword(
             headerNode={msg("emailForgotTitle")}
         >
             <form id="kc-reset-password-form" action={url.loginAction} method="post">
-                <div>
+                <Box>
                     <label htmlFor="username">
                         {!realm.loginWithEmailAllowed
                             ? msg("username")
@@ -45,7 +45,7 @@ export default function LoginResetPassword(
                               : msg("email")}
                     </label>
 
-                    <div>
+                    <Box>
                         <input
                             type="text"
                             id="username"
@@ -63,15 +63,15 @@ export default function LoginResetPassword(
                                 }}
                             />
                         )}
-                    </div>
-                </div>
-                <div>
+                    </Box>
+                </Box>
+                <Box>
                     <a href={url.loginUrl}>{msg("backToLogin")}</a>
 
-                    <div id="kc-form-buttons">
+                    <Box id="kc-form-buttons">
                         <input type="submit" value={msgStr("doSubmit")} />
-                    </div>
-                </div>
+                    </Box>
+                </Box>
             </form>
         </Template>
     );

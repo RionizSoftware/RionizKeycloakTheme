@@ -5,6 +5,7 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Box } from "@mui/material";
 export default function Login(
     props: PageProps<
         Extract<
@@ -45,23 +46,19 @@ export default function Login(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <div id="kc-registration-container">
-                    <div id="kc-registration">
-                        <span>
-                            {msg("noAccount")}{" "}
-                            <a tabIndex={8} href={url.registrationUrl}>
-                                {msg("doRegister")}
-                            </a>
-                        </span>
-                    </div>
-                </div>
+                <Box id="kc-registration-container">
+                    {msg("noAccount")}{" "}
+                    <a tabIndex={8} href={url.registrationUrl}>
+                        {msg("doRegister")}
+                    </a>
+                </Box>
             }
             socialProvidersNode={
                 <>
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <div id="kc-social-providers">
+                            <Box id="kc-social-providers">
                                 <hr />
                                 <h2>{msg("identity-provider-login-label")}</h2>
                                 <ul>
@@ -84,151 +81,137 @@ export default function Login(
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </Box>
                         )}
                 </>
             }
         >
-            <div id="kc-form">
-                <div id="kc-form-wrapper">
-                    {realm.password && (
-                        <form
-                            id="kc-form-login"
-                            onSubmit={() => {
-                                setIsLoginButtonDisabled(true);
-                                return true;
-                            }}
-                            action={url.loginAction}
-                            method="post"
-                        >
-                            {!usernameHidden && (
-                                <div>
-                                    <label htmlFor="username">
-                                        {!realm.loginWithEmailAllowed
-                                            ? msg("username")
-                                            : !realm.registrationEmailAsUsername
-                                              ? msg("usernameOrEmail")
-                                              : msg("email")}
-                                    </label>
-                                    <input
-                                        tabIndex={2}
-                                        id="username"
-                                        name="username"
-                                        defaultValue={login.username ?? ""}
-                                        type="text"
-                                        autoFocus
-                                        autoComplete="username"
-                                        aria-invalid={messagesPerField.existsError(
-                                            "username",
-                                            "password"
-                                        )}
-                                    />
-                                    {messagesPerField.existsError(
+            <Box id="kc-form">
+                {realm.password && (
+                    <form
+                        id="kc-form-login"
+                        onSubmit={() => {
+                            setIsLoginButtonDisabled(true);
+                            return true;
+                        }}
+                        action={url.loginAction}
+                        method="post"
+                    >
+                        {!usernameHidden && (
+                            <Box>
+                                <label htmlFor="username">
+                                    {!realm.loginWithEmailAllowed
+                                        ? msg("username")
+                                        : !realm.registrationEmailAsUsername
+                                          ? msg("usernameOrEmail")
+                                          : msg("email")}
+                                </label>
+                                <input
+                                    tabIndex={2}
+                                    id="username"
+                                    name="username"
+                                    defaultValue={login.username ?? ""}
+                                    type="text"
+                                    autoFocus
+                                    autoComplete="username"
+                                    aria-invalid={messagesPerField.existsError(
                                         "username",
                                         "password"
-                                    ) && (
-                                        <span
-                                            id="input-error"
-                                            aria-live="polite"
-                                            dangerouslySetInnerHTML={{
-                                                __html: messagesPerField.getFirstError(
-                                                    "username",
-                                                    "password"
-                                                )
-                                            }}
-                                        />
                                     )}
-                                </div>
+                                />
+                                {messagesPerField.existsError("username", "password") && (
+                                    <span
+                                        id="input-error"
+                                        aria-live="polite"
+                                        dangerouslySetInnerHTML={{
+                                            __html: messagesPerField.getFirstError(
+                                                "username",
+                                                "password"
+                                            )
+                                        }}
+                                    />
+                                )}
+                            </Box>
+                        )}
+
+                        <Box>
+                            <label htmlFor="password">{msg("password")}</label>
+                            <PasswordWrapper
+                                kcClsx={kcClsx}
+                                i18n={i18n}
+                                passwordInputId="password"
+                            >
+                                <input
+                                    tabIndex={3}
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    autoComplete="current-password"
+                                    aria-invalid={messagesPerField.existsError(
+                                        "username",
+                                        "password"
+                                    )}
+                                />
+                            </PasswordWrapper>
+                            {usernameHidden &&
+                                messagesPerField.existsError("username", "password") && (
+                                    <span
+                                        id="input-error"
+                                        aria-live="polite"
+                                        dangerouslySetInnerHTML={{
+                                            __html: messagesPerField.getFirstError(
+                                                "username",
+                                                "password"
+                                            )
+                                        }}
+                                    />
+                                )}
+                        </Box>
+
+                        <Box>
+                            {realm.rememberMe && !usernameHidden && (
+                                <Box>
+                                    <label>
+                                        <input
+                                            tabIndex={5}
+                                            id="rememberMe"
+                                            name="rememberMe"
+                                            type="checkbox"
+                                            defaultChecked={!!login.rememberMe}
+                                        />{" "}
+                                        {msg("rememberMe")}
+                                    </label>
+                                </Box>
                             )}
 
-                            <div>
-                                <label htmlFor="password">{msg("password")}</label>
-                                <PasswordWrapper
-                                    kcClsx={kcClsx}
-                                    i18n={i18n}
-                                    passwordInputId="password"
-                                >
-                                    <input
-                                        tabIndex={3}
-                                        id="password"
-                                        name="password"
-                                        type="password"
-                                        autoComplete="current-password"
-                                        aria-invalid={messagesPerField.existsError(
-                                            "username",
-                                            "password"
-                                        )}
-                                    />
-                                </PasswordWrapper>
-                                {usernameHidden &&
-                                    messagesPerField.existsError(
-                                        "username",
-                                        "password"
-                                    ) && (
-                                        <span
-                                            id="input-error"
-                                            aria-live="polite"
-                                            dangerouslySetInnerHTML={{
-                                                __html: messagesPerField.getFirstError(
-                                                    "username",
-                                                    "password"
-                                                )
-                                            }}
-                                        />
-                                    )}
-                            </div>
+                            {realm.resetPasswordAllowed && (
+                                <span>
+                                    <a tabIndex={6} href={url.loginResetCredentialsUrl}>
+                                        {msg("doForgotPassword")}
+                                    </a>
+                                </span>
+                            )}
+                        </Box>
 
-                            <div>
-                                <div id="kc-form-options">
-                                    {realm.rememberMe && !usernameHidden && (
-                                        <div>
-                                            <label>
-                                                <input
-                                                    tabIndex={5}
-                                                    id="rememberMe"
-                                                    name="rememberMe"
-                                                    type="checkbox"
-                                                    defaultChecked={!!login.rememberMe}
-                                                />{" "}
-                                                {msg("rememberMe")}
-                                            </label>
-                                        </div>
-                                    )}
-                                </div>
-                                <div>
-                                    {realm.resetPasswordAllowed && (
-                                        <span>
-                                            <a
-                                                tabIndex={6}
-                                                href={url.loginResetCredentialsUrl}
-                                            >
-                                                {msg("doForgotPassword")}
-                                            </a>
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div id="kc-form-buttons">
-                                <input
-                                    type="hidden"
-                                    id="id-hidden-input"
-                                    name="credentialId"
-                                    value={auth.selectedCredential}
-                                />
-                                <input
-                                    tabIndex={7}
-                                    disabled={isLoginButtonDisabled}
-                                    name="login"
-                                    id="kc-login"
-                                    type="submit"
-                                    value={msgStr("doLogIn")}
-                                />
-                            </div>
-                        </form>
-                    )}
-                </div>
-            </div>
+                        <Box id="kc-form-buttons">
+                            <input
+                                type="hidden"
+                                id="id-hidden-input"
+                                name="credentialId"
+                                value={auth.selectedCredential}
+                            />
+                            <input
+                                tabIndex={7}
+                                disabled={isLoginButtonDisabled}
+                                name="login"
+                                id="kc-login"
+                                type="submit"
+                                value={msgStr("doLogIn")}
+                            />
+                        </Box>
+                    </form>
+                )}
+            </Box>
         </Template>
     );
 }
@@ -250,7 +233,7 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <div>
+        <Box>
             {children}
             <button
                 type="button"
@@ -260,6 +243,6 @@ function PasswordWrapper(props: {
             >
                 <i aria-hidden />
             </button>
-        </div>
+        </Box>
     );
 }

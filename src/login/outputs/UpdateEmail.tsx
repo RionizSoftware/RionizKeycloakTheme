@@ -53,8 +53,8 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
 
-                <div>
-                    <div />
+                <Box>
+                    <Box />
 
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
@@ -68,7 +68,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                             {msg("doCancel")}
                         </button>
                     )}
-                </div>
+                </Box>
             </form>
         </Template>
     );
@@ -77,7 +77,7 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <div id="kc-form-options">
+        <Box id="kc-form-options">
             <label>
                 <input
                     type="checkbox"
@@ -88,6 +88,6 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
                 />
                 {msg("logoutOtherSessions")}
             </label>
-        </div>
+        </Box>
     );
 }

@@ -24,7 +24,7 @@ export default function Error(
             displayMessage={false}
             headerNode={msg("errorTitle")}
         >
-            <div id="kc-error-message">
+            <Box id="kc-error-message">
                 <p dangerouslySetInnerHTML={{ __html: message.summary }} />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
                     <p>
@@ -33,7 +33,7 @@ export default function Error(
                         </a>
                     </p>
                 )}
-            </div>
+            </Box>
         </Template>
     );
 }

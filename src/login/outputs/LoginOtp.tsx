@@ -32,7 +32,7 @@ export default function LoginOtp(
         >
             <form id="kc-otp-login-form" action={url.loginAction} method="post">
                 {otpLogin.userOtpCredentials.length > 1 && (
-                    <div>
+                    <Box>
                         {otpLogin.userOtpCredentials.map((otpCredential, index) => (
                             <Fragment key={index}>
                                 <input
@@ -56,13 +56,13 @@ export default function LoginOtp(
                                 </label>
                             </Fragment>
                         ))}
-                    </div>
+                    </Box>
                 )}
 
-                <div>
+                <Box>
                     <label htmlFor="otp">{msg("loginOtpOneTime")}</label>
 
-                    <div>
+                    <Box>
                         <input
                             id="otp"
                             name="otp"
@@ -80,17 +80,17 @@ export default function LoginOtp(
                                 }}
                             />
                         )}
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div>
+                <Box>
                     <input
                         name="login"
                         id="kc-login"
                         type="submit"
                         value={msgStr("doLogIn")}
                     />
-                </div>
+                </Box>
             </form>
         </Template>
     );

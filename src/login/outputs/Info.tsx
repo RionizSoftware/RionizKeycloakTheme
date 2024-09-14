@@ -38,7 +38,7 @@ export default function Info(
                 />
             }
         >
-            <div id="kc-info-message">
+            <Box id="kc-info-message">
                 <p
                     dangerouslySetInnerHTML={{
                         __html: (() => {
@@ -82,7 +82,7 @@ export default function Info(
                         );
                     }
                 })()}
-            </div>
+            </Box>
         </Template>
     );
 }

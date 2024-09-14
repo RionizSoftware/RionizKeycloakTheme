@@ -1,28 +1,14 @@
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-export default function Info(
-    props: PageProps<
-        Extract<
-            KcContext,
-            {
-                pageId: "info.ftl";
-            }
-        >,
-        I18n
-    >
-) {
+
+export default function Info(props: PageProps<Extract<KcContext, { pageId: "info.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+
     const { advancedMsgStr, msg } = i18n;
-    const {
-        messageHeader,
-        message,
-        requiredActions,
-        skipLink,
-        pageRedirectUri,
-        actionUri,
-        client
-    } = kcContext;
+
+    const { messageHeader, message, requiredActions, skipLink, pageRedirectUri, actionUri, client } = kcContext;
+
     return (
         <Template
             kcContext={kcContext}
@@ -40,18 +26,19 @@ export default function Info(
         >
             <div id="kc-info-message">
                 <p
+                    className="instruction"
                     dangerouslySetInnerHTML={{
                         __html: (() => {
                             let html = message.summary;
+
                             if (requiredActions) {
                                 html += "<b>";
-                                html += requiredActions
-                                    .map(requiredAction =>
-                                        advancedMsgStr(`requiredAction.${requiredAction}`)
-                                    )
-                                    .join(", ");
+
+                                html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(", ");
+
                                 html += "</b>";
                             }
+
                             return html;
                         })()
                     }}
@@ -60,6 +47,7 @@ export default function Info(
                     if (skipLink) {
                         return null;
                     }
+
                     if (pageRedirectUri) {
                         return (
                             <p>
@@ -74,6 +62,7 @@ export default function Info(
                             </p>
                         );
                     }
+
                     if (client.baseUrl) {
                         return (
                             <p>

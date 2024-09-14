@@ -1,4 +1,3 @@
-// Function to handle self-closing JSX elements
 import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
 
