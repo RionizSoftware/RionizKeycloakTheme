@@ -6,6 +6,7 @@ import { rionizTransformer } from "./transformers/rionizCodeTransform.ts";
 import { styleRemoverTransformer } from "./transformers/styleRemover.ts";
 import { divOptimizerTransformer } from "./transformers/divOptimizer.ts";
 import { tagReplacerTransformer } from "./transformers/tagReplacer.ts";
+import { sxAdderTransformer } from "./transformers/sxAdder.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
@@ -206,6 +207,14 @@ const runPrettier = async (content: string): Promise<string> => {
                             value: "h1"
                         }
                     ]),
+                    imports
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    sxAdderTransformer(imports),
                     imports
                 ) as TransformerFactory<SourceFile>,
                 1

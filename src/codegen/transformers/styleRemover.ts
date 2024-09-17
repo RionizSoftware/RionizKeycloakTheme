@@ -1,20 +1,14 @@
 import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
+import { removeAttribute } from "./utility.ts";
 
 // Function to remove `className` attribute from attributes list
-const removeClassNameAttribute = (
-    attributes: ts.NodeArray<ts.JsxAttribute | ts.JsxSpreadAttribute>
-): ts.JsxAttribute[] =>
-    attributes.filter(attr => {
-        if (ts.isJsxAttribute(attr)) {
-            return attr.name.getText() !== "className";
-        }
-        return true;
-    }) as ts.JsxAttribute[];
-
 export const styleRemoverTransformer: TransformerFunctions = {
     handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
-        const updatedAttributes = removeClassNameAttribute(element.attributes.properties);
+        const updatedAttributes = removeAttribute(
+            element.attributes.properties,
+            "className"
+        );
         const newElement = ts.factory.updateJsxSelfClosingElement(
             element,
             element.tagName,
@@ -24,8 +18,9 @@ export const styleRemoverTransformer: TransformerFunctions = {
         return newElement;
     },
     handleJsxElement: (element: ts.JsxElement): ts.Node => {
-        const updatedAttributes = removeClassNameAttribute(
-            element.openingElement.attributes.properties
+        const updatedAttributes = removeAttribute(
+            element.openingElement.attributes.properties,
+            "className"
         );
         const newOpeningElement = ts.factory.updateJsxOpeningElement(
             element.openingElement,

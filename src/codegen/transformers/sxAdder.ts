@@ -1,126 +1,59 @@
-import ts from "typescript";
+import ts, { SyntaxKind } from "typescript";
 import { TransformerFunctions } from "./types.ts";
+import {
+    createStringAttributeForTag,
+    createSxForTag,
+    removeAttribute
+} from "./utility.ts";
 
-export const AddImport = (
-    sourceFile: ts.Node,
-    identifiers: string[],
-    importLocation: string
-) => {
-    let hasImport = false;
-    if (ts.isSourceFile(sourceFile)) {
-        // Check existing imports and set the flag if `Box` import is found
-        const updatedStatements = sourceFile.statements.map(statement => {
-            if (
-                ts.isImportDeclaration(statement) &&
-                ts.isStringLiteral(statement.moduleSpecifier)
-            ) {
-                if (statement.moduleSpecifier.text === importLocation) {
-                    hasImport = true;
-                    // if (
-                    //     statement.importClause &&
-                    //     statement.importClause.namedBindings &&
-                    //     ts.isNamedImports(statement.importClause.namedBindings)
-                    // ) {
-                    //     if (
-                    //         statement.importClause.namedBindings.elements.some(
-                    //             element => {
-                    //                 return element.name.text === identifier;
-                    //             }
-                    //         )
-                    //     ) {
-                    //         hasImport = true;
-                    //     }
-                    // }
-                }
-            }
-            return statement;
-        });
+export const sxAdderTransformer = (materialTagsInUse: string[]): TransformerFunctions => {
+    const tagsCount: Map<string, number> = new Map<string, number>();
 
-        // Prepend the Box import at the beginning if it's missing
-        if (!hasImport) {
-            const lastImportIndex = sourceFile.statements.findIndex(
-                stmt => !ts.isImportDeclaration(stmt)
-            );
-            const imports = createImportDeclaration(identifiers, "@mui/material");
-            //Add new import after other imports
-            sourceFile = ts.factory.updateSourceFile(sourceFile, [
-                ...updatedStatements.slice(0, lastImportIndex),
-                imports,
-                ...updatedStatements.slice(lastImportIndex)
-            ]);
-        }
-    }
-    return sourceFile;
-};
-
-function createImportDeclaration(identifiers: string[], importLocation: string) {
-    return ts.factory.createImportDeclaration(
-        undefined, // decorators (none in this case)
-        ts.factory.createImportClause(
-            false, // not a type-only import
-            undefined, // no default import
-            ts.factory.createNamedImports(
-                identifiers.map(identifier =>
-                    ts.factory.createImportSpecifier(
-                        false, // not a type-only import
-                        undefined, // no alias
-                        ts.factory.createIdentifier(identifier) // named import
-                    )
-                )
-            )
-        ),
-        ts.factory.createStringLiteral(importLocation) // module specifier
-    );
-}
-
-export const tagReplacerTransformer = (
-    elementToReplace: string,
-    replacement: string
-): TransformerFunctions => {
+    const isMaterialUiTag = (tag: string) => {
+        return materialTagsInUse.includes(tag);
+    };
     return {
-        // Handle self-closing JSX elements (though <div> typically isn't self-closing)
+        // Handle self-closing JSX elements
         handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
-            if (element.tagName.getText() === elementToReplace) {
-                const updatedElement = ts.factory.updateJsxSelfClosingElement(
-                    element,
-                    ts.factory.createIdentifier(replacement),
-                    element.typeArguments,
-                    element.attributes
-                );
-                return updatedElement;
-            }
             return element;
         },
 
         // Handle regular JSX elements like <div>...</div>
         handleJsxElement: (element: ts.JsxElement): ts.Node => {
-            const openingElement = element.openingElement.tagName.getText();
+            const openingElementTag = element.openingElement.tagName.getText();
+            const tagCount = tagsCount.get(openingElementTag) || 0;
+            const tagId = `${openingElementTag}_${tagCount + 1}`;
+            tagsCount.set(openingElementTag, tagCount + 1);
+            let sxAttribute: ts.JsxAttribute | undefined;
+            let idAttribute: ts.JsxAttribute | undefined;
+            const attributes = element.openingElement.attributes.properties;
+            if (isMaterialUiTag(openingElementTag)) {
+                //assign a new id to element
 
-            if (openingElement === elementToReplace) {
-                // Create new opening and closing tags with Box
+                idAttribute = createStringAttributeForTag("id", tagId);
+                sxAttribute = createSxForTag(tagId);
+            }
+            if (sxAttribute && idAttribute) {
                 const newOpeningElement = ts.factory.updateJsxOpeningElement(
                     element.openingElement,
-                    ts.factory.createIdentifier(replacement),
+                    element.openingElement.tagName,
                     element.openingElement.typeArguments,
-                    element.openingElement.attributes
+                    ts.factory.createJsxAttributes([
+                        ...removeAttribute(attributes, "id"),
+                        idAttribute,
+                        sxAttribute
+                    ])
                 );
 
-                const newClosingElement = ts.factory.updateJsxClosingElement(
-                    element.closingElement,
-                    ts.factory.createIdentifier(replacement)
-                );
-
-                // Return a new JSX element with <Box> instead of <div>
                 const updatedElement = ts.factory.updateJsxElement(
                     element,
                     newOpeningElement,
                     element.children,
-                    newClosingElement
+                    element.closingElement
                 );
 
                 return updatedElement;
             }
-
             return element;
         }
     };

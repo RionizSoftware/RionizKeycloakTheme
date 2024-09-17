@@ -7,4 +7,6 @@ yarn storybook
 yarn rionizMuiConvertor
 
 
-add style to all possible components ( the one in mui )
+// Add sx and id to self closing
+// write styles file
+// Add import

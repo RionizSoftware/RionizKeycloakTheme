@@ -1,5 +1,6 @@
 import ts, { SyntaxKind } from "typescript";
 import { TransformerFunctions } from "./types.ts";
+import { createStringAttributeForTag } from "./utility.ts";
 
 export const AddImport = (
     sourceFile: ts.Node,
@@ -82,12 +83,7 @@ export const tagReplacerTransformer = (
         const attributes: ts.JsxAttribute[] = [];
         if (!extraAttribute) return [];
         for (const attribute of extraAttribute) {
-            attributes.push(
-                ts.factory.createJsxAttribute(
-                    ts.factory.createIdentifier(attribute.name),
-                    ts.factory.createStringLiteral(attribute.value)
-                )
-            );
+            attributes.push(createStringAttributeForTag(attribute.name, attribute.value));
         }
         return attributes;
     };
