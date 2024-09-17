@@ -1,4 +1,4 @@
-import ts from "typescript";
+import ts, { SyntaxKind } from "typescript";
 import { TransformerFunctions } from "./types.ts";
 
 export const AddImport = (
@@ -75,17 +75,36 @@ function createImportDeclaration(identifiers: string[], importLocation: string) 
 
 export const tagReplacerTransformer = (
     elementToReplace: string,
-    replacement: string
+    replacement: string,
+    extraAttribute?: { name: string; value: string }[] | undefined
 ): TransformerFunctions => {
+    const createAttributes = (): ts.JsxAttribute[] => {
+        const attributes: ts.JsxAttribute[] = [];
+        if (!extraAttribute) return [];
+        for (const attribute of extraAttribute) {
+            attributes.push(
+                ts.factory.createJsxAttribute(
+                    ts.factory.createIdentifier(attribute.name),
+                    ts.factory.createStringLiteral(attribute.value)
+                )
+            );
+        }
+        return attributes;
+    };
     return {
-        // Handle self-closing JSX elements (though <div> typically isn't self-closing)
+        // Handle self-closing JSX elements
         handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
             if (element.tagName.getText() === elementToReplace) {
                 const updatedElement = ts.factory.updateJsxSelfClosingElement(
                     element,
                     ts.factory.createIdentifier(replacement),
                     element.typeArguments,
-                    element.attributes
+                    extraAttribute
+                        ? ts.factory.createJsxAttributes([
+                              ...element.attributes.properties,
+                              ...createAttributes()
+                          ])
+                        : element.attributes
                 );
                 return updatedElement;
             }
@@ -102,7 +121,12 @@ export const tagReplacerTransformer = (
                     element.openingElement,
                     ts.factory.createIdentifier(replacement),
                     element.openingElement.typeArguments,
-                    element.openingElement.attributes
+                    extraAttribute
+                        ? ts.factory.createJsxAttributes([
+                              ...element.openingElement.attributes.properties,
+                              ...createAttributes()
+                          ])
+                        : element.openingElement.attributes
                 );
 
                 const newClosingElement = ts.factory.updateJsxClosingElement(

@@ -127,6 +127,64 @@ const runPrettier = async (content: string): Promise<string> => {
                 ) as TransformerFactory<SourceFile>,
                 1
             );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("ul", "List")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("li", "ListItem")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("form", "Box", [
+                        {
+                            name: "component",
+                            value: "form"
+                        }
+                    ])
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("h2", "Typography", [
+                        {
+                            name: "variant",
+                            value: "h2"
+                        },
+                        {
+                            name: "component",
+                            value: "h2"
+                        }
+                    ])
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("h1", "Typography", [
+                        {
+                            name: "variant",
+                            value: "h1"
+                        },
+                        {
+                            name: "component",
+                            value: "h1"
+                        }
+                    ])
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
             content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);
             //break;
