@@ -38,11 +38,16 @@ export const AddImport = (
 
         // Prepend the Box import at the beginning if it's missing
         if (!hasImport) {
-            const imports = createImportDeclaration(identifiers, "@mui/material");
-            sourceFile = ts.factory.updateSourceFile(
-                sourceFile,
-                [imports, ...updatedStatements] // Prepend the Box import
+            const lastImportIndex = sourceFile.statements.findIndex(
+                stmt => !ts.isImportDeclaration(stmt)
             );
+            const imports = createImportDeclaration(identifiers, "@mui/material");
+            //Add new import after other imports
+            sourceFile = ts.factory.updateSourceFile(sourceFile, [
+                ...updatedStatements.slice(0, lastImportIndex),
+                imports,
+                ...updatedStatements.slice(lastImportIndex)
+            ]);
         }
     }
     return sourceFile;

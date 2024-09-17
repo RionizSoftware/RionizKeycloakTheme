@@ -28,7 +28,12 @@ const transformTemplateToMaterialUiFormat = async (
         content = printer.printFile(transformedSourceFile);
     }
 
-    const prettifiedCode = await prettier.format(content, {
+    return content;
+};
+//Remove unused variable and imports
+const runPrettier = async (content: string): Promise<string> => {
+    // Run Prettier for formatting
+    return await prettier.format(content, {
         parser: "typescript",
         printWidth: 90,
         tabWidth: 4,
@@ -39,8 +44,8 @@ const transformTemplateToMaterialUiFormat = async (
         bracketSpacing: true,
         arrowParens: "avoid"
     });
-    return prettifiedCode;
 };
+
 (async (): Promise<void> => {
     const pagesLocation = path.resolve(process.cwd(), "./transformerInputs");
     const outputLocation = path.resolve(process.cwd(), "./src/login/outputs");
@@ -101,6 +106,7 @@ const transformTemplateToMaterialUiFormat = async (
                 ) as TransformerFactory<SourceFile>,
                 1
             );
+            content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);
             //break;
         }

@@ -1,7 +1,7 @@
-import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 export default function Error(
     props: PageProps<
         Extract<

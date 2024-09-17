@@ -1,4 +1,3 @@
-import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { useEffect } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { clsx } from "keycloakify/tools/clsx";
@@ -8,6 +7,7 @@ import { useSetClassName } from "keycloakify/tools/useSetClassName";
 import { useStylesAndScripts } from "keycloakify/login/Template.useStylesAndScripts";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
@@ -52,6 +52,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     return (
         <Box>
             {msg("loginTitleHtml", realm.displayNameHtml)}
+
             <header>
                 {realm.internationalizationEnabled &&
                     (assert(locale !== undefined), locale.supported.length > 1) && (

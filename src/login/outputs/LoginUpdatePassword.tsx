@@ -1,10 +1,11 @@
-import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 export default function LoginUpdatePassword(
     props: PageProps<
         Extract<

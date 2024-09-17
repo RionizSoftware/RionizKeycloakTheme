@@ -1,4 +1,3 @@
-import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { useState } from "react";
 import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
@@ -6,6 +5,7 @@ import type { UserProfileFormFieldsProps } from "keycloakify/login/UserProfileFo
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 type UpdateEmailProps = PageProps<
     Extract<
         KcContext,

@@ -13,15 +13,31 @@ type RegisterProps = PageProps<Extract<KcContext, { pageId: "register.ftl" }>, I
 };
 
 export default function Register(props: RegisterProps) {
-    const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
+    const {
+        kcContext,
+        i18n,
+        doUseDefaultCss,
+        Template,
+        classes,
+        UserProfileFormFields,
+        doMakeUserConfirmPassword
+    } = props;
 
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
         classes
     });
 
-    const { messageHeader, url, messagesPerField, recaptchaRequired, recaptchaVisible, recaptchaSiteKey, recaptchaAction, termsAcceptanceRequired } =
-        kcContext;
+    const {
+        messageHeader,
+        url,
+        messagesPerField,
+        recaptchaRequired,
+        recaptchaVisible,
+        recaptchaSiteKey,
+        recaptchaAction,
+        termsAcceptanceRequired
+    } = kcContext;
 
     const { msg, msgStr, advancedMsg } = i18n;
 
@@ -34,11 +50,20 @@ export default function Register(props: RegisterProps) {
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
-            headerNode={messageHeader !== undefined ? advancedMsg(messageHeader) : msg("registerTitle")}
+            headerNode={
+                messageHeader !== undefined
+                    ? advancedMsg(messageHeader)
+                    : msg("registerTitle")
+            }
             displayMessage={messagesPerField.exists("global")}
             displayRequiredFields
         >
-            <form id="kc-register-form" className={kcClsx("kcFormClass")} action={url.registrationAction} method="post">
+            <form
+                id="kc-register-form"
+                className={kcClsx("kcFormClass")}
+                action={url.registrationAction}
+                method="post"
+            >
                 <UserProfileFormFields
                     kcContext={kcContext}
                     i18n={i18n}
@@ -55,13 +80,19 @@ export default function Register(props: RegisterProps) {
                         onAreTermsAcceptedValueChange={setAreTermsAccepted}
                     />
                 )}
-                {recaptchaRequired && (recaptchaVisible || recaptchaAction === undefined) && (
-                    <div className="form-group">
-                        <div className={kcClsx("kcInputWrapperClass")}>
-                            <div className="g-recaptcha" data-size="compact" data-sitekey={recaptchaSiteKey} data-action={recaptchaAction}></div>
+                {recaptchaRequired &&
+                    (recaptchaVisible || recaptchaAction === undefined) && (
+                        <div className="form-group">
+                            <div className={kcClsx("kcInputWrapperClass")}>
+                                <div
+                                    className="g-recaptcha"
+                                    data-size="compact"
+                                    data-sitekey={recaptchaSiteKey}
+                                    data-action={recaptchaAction}
+                                ></div>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
                 <div className={kcClsx("kcFormGroupClass")}>
                     <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
                         <div className={kcClsx("kcFormOptionsWrapperClass")}>
@@ -71,16 +102,30 @@ export default function Register(props: RegisterProps) {
                         </div>
                     </div>
 
-                    {recaptchaRequired && !recaptchaVisible && recaptchaAction !== undefined ? (
-                        <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
+                    {recaptchaRequired &&
+                    !recaptchaVisible &&
+                    recaptchaAction !== undefined ? (
+                        <div
+                            id="kc-form-buttons"
+                            className={kcClsx("kcFormButtonsClass")}
+                        >
                             <button
                                 className={clsx(
-                                    kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass"),
+                                    kcClsx(
+                                        "kcButtonClass",
+                                        "kcButtonPrimaryClass",
+                                        "kcButtonBlockClass",
+                                        "kcButtonLargeClass"
+                                    ),
                                     "g-recaptcha"
                                 )}
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
-                                    (document.getElementById("kc-register-form") as HTMLFormElement).submit();
+                                    (
+                                        document.getElementById(
+                                            "kc-register-form"
+                                        ) as HTMLFormElement
+                                    ).submit();
                                 }}
                                 data-action={recaptchaAction}
                                 type="submit"
@@ -89,10 +134,21 @@ export default function Register(props: RegisterProps) {
                             </button>
                         </div>
                     ) : (
-                        <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
+                        <div
+                            id="kc-form-buttons"
+                            className={kcClsx("kcFormButtonsClass")}
+                        >
                             <input
-                                disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
-                                className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
+                                disabled={
+                                    !isFormSubmittable ||
+                                    (termsAcceptanceRequired && !areTermsAccepted)
+                                }
+                                className={kcClsx(
+                                    "kcButtonClass",
+                                    "kcButtonPrimaryClass",
+                                    "kcButtonBlockClass",
+                                    "kcButtonLargeClass"
+                                )}
                                 type="submit"
                                 value={msgStr("doRegister")}
                             />
@@ -111,7 +167,13 @@ function TermsAcceptance(props: {
     areTermsAccepted: boolean;
     onAreTermsAcceptedValueChange: (areTermsAccepted: boolean) => void;
 }) {
-    const { i18n, kcClsx, messagesPerField, areTermsAccepted, onAreTermsAcceptedValueChange } = props;
+    const {
+        i18n,
+        kcClsx,
+        messagesPerField,
+        areTermsAccepted,
+        onAreTermsAcceptedValueChange
+    } = props;
 
     const { msg } = i18n;
 

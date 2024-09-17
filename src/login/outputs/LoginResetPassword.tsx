@@ -1,8 +1,8 @@
-import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Box, Button, Link, TextField, FormLabel } from "@mui/material";
 export default function LoginResetPassword(
     props: PageProps<
         Extract<
