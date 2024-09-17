@@ -135,4 +135,4 @@ jspm_packages
 /build
 /storybook-static
 .env
-./src/login/outputs
+/src/login/outputs
