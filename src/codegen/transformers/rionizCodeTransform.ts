@@ -3,24 +3,11 @@ import { TransformerFunctions } from "./types.ts";
 import { AddImport } from "./tagReplacer.ts";
 
 export const rionizTransformer =
-    (transformerFunctions: TransformerFunctions) =>
+    (transformerFunctions: TransformerFunctions, muiImports: string[]) =>
     <T extends ts.Node>(context: ts.TransformationContext) =>
     (rootNode: T) => {
         const visit = (sourceFile: ts.Node): ts.Node => {
-            sourceFile = AddImport(
-                sourceFile,
-                [
-                    "Box",
-                    "Button",
-                    "Link",
-                    "TextField",
-                    "FormLabel",
-                    "Typography",
-                    "List",
-                    "ListItem"
-                ],
-                "@mui/material"
-            );
+            sourceFile = AddImport(sourceFile, muiImports, "@mui/material");
             return ts.visitEachChild(sourceFile, node => convertNode(node), context);
         };
 

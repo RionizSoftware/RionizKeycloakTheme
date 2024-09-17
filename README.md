@@ -7,7 +7,4 @@ yarn storybook
 yarn rionizMuiConvertor
 
 
-Pull request for type error to keycloak
-Replace dangerously set inner html with typography and open an issue
-Try to change main file and add imports using npx keycloakify eject-page
-Add "ALL" flag to eject-page or list of args
+add style to all possible components ( the one in mui )
