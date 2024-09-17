@@ -106,6 +106,27 @@ const runPrettier = async (content: string): Promise<string> => {
                 ) as TransformerFactory<SourceFile>,
                 1
             );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("p", "Typography")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("Fragment", "Box")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    tagReplacerTransformer("Fragment", "Box")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
             content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);
             //break;

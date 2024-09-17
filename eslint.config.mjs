@@ -14,7 +14,8 @@ export default [
             "react-hooks/exhaustive-deps": "off",
             "@typescript-eslint/no-redeclare": "off",
             "no-labels": "off",
-            "react/react-in-jsx-scope":"off"
+            "react/react-in-jsx-scope":"off",
+            "@typescript-eslint/no-unused-vars":"off"
         }
     }
 ];

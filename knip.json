@@ -1,7 +1,0 @@
-{
-  "entry": [
-    "{index,main,cli}.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-    "src/{index,main,cli}.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"
-  ],
-  "project": ["src/login/outputs/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"]
-}
