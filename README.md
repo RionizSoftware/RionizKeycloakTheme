@@ -1,7 +1,7 @@
 <p align="center">
     <i>🚀 <a href="https://keycloakify.dev">Keycloakify</a> v10 starter 🚀</i>
     <br/>
-    <br/>
+    <br/>[package.json](..%2FRionizKeycloakTheme%20-%20Copy%2Fpackage.json)
 </p>
 
 This starter is based on Vite. There is also [a Webpack based starter](https://github.com/keycloakify/keycloakify-starter-webpack).

@@ -1,0 +1,20 @@
+export const styles ={
+    "Box_1": {},
+    "Link_1": {},
+    "Box_2": {},
+    "Typography_1": {},
+    "List_1": {},
+    "ListItem_1": {},
+    "Link_2": {},
+    "Box_3": {},
+    "Box_4": {},
+    "Box_5": {},
+    "FormLabel_1": {},
+    "TextField_1": {},
+    "Box_6": {},
+    "Box_7": {},
+    "FormLabel_2": {},
+    "TextField_2": {},
+    "Box_8": {},
+    "TextField_3": {}
+}

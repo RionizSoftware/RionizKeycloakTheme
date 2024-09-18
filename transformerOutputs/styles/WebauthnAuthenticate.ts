@@ -1,0 +1,22 @@
+export const styles ={
+    "Box_1": {},
+    "Link_1": {},
+    "Box_2": {},
+    "Box_3": {},
+    "TextField_1": {},
+    "TextField_2": {},
+    "TextField_3": {},
+    "TextField_4": {},
+    "TextField_5": {},
+    "TextField_6": {},
+    "Box_4": {},
+    "Box_5": {},
+    "TextField_7": {},
+    "Typography_1": {},
+    "Box_6": {},
+    "Box_7": {},
+    "Box_8": {},
+    "Box_9": {},
+    "Box_10": {},
+    "TextField_8": {}
+}

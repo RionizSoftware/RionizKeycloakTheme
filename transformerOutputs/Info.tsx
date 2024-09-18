@@ -1,0 +1,115 @@
+import type { PageProps } from "keycloakify/login/pages/PageProps";
+import type { KcContext } from "../KcContext";
+import type { I18n } from "../i18n";
+import {
+    Box,
+    Button,
+    Link,
+    TextField,
+    FormLabel,
+    Typography,
+    List,
+    ListItem
+} from "@mui/material";
+import { styles } from "./styles/Info.ts";
+export default function Info(
+    props: PageProps<
+        Extract<
+            KcContext,
+            {
+                pageId: "info.ftl";
+            }
+        >,
+        I18n
+    >
+) {
+    const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+    const { advancedMsgStr, msg } = i18n;
+    const {
+        messageHeader,
+        message,
+        requiredActions,
+        skipLink,
+        pageRedirectUri,
+        actionUri,
+        client
+    } = kcContext;
+    return (
+        <Template
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={false}
+            headerNode={
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: messageHeader ?? message.summary
+                    }}
+                />
+            }
+        >
+            <Box id="Box_1" sx={styles.Box_1}>
+                <Typography
+                    dangerouslySetInnerHTML={{
+                        __html: (() => {
+                            let html = message.summary;
+                            if (requiredActions) {
+                                html += "<b>";
+                                html += requiredActions
+                                    .map(requiredAction =>
+                                        advancedMsgStr(`requiredAction.${requiredAction}`)
+                                    )
+                                    .join(", ");
+                                html += "</b>";
+                            }
+                            return html;
+                        })()
+                    }}
+                    id="Typography_1"
+                    sx={styles.Typography_1}
+                />
+                {(() => {
+                    if (skipLink) {
+                        return null;
+                    }
+                    if (pageRedirectUri) {
+                        return (
+                            <Typography id="Typography_2" sx={styles.Typography_2}>
+                                <Link
+                                    href={pageRedirectUri}
+                                    id="Link_1"
+                                    sx={styles.Link_1}
+                                >
+                                    {msg("backToApplication")}
+                                </Link>
+                            </Typography>
+                        );
+                    }
+                    if (actionUri) {
+                        return (
+                            <Typography id="Typography_3" sx={styles.Typography_3}>
+                                <Link href={actionUri} id="Link_2" sx={styles.Link_2}>
+                                    {msg("proceedWithAction")}
+                                </Link>
+                            </Typography>
+                        );
+                    }
+                    if (client.baseUrl) {
+                        return (
+                            <Typography id="Typography_4" sx={styles.Typography_4}>
+                                <Link
+                                    href={client.baseUrl}
+                                    id="Link_3"
+                                    sx={styles.Link_3}
+                                >
+                                    {msg("backToApplication")}
+                                </Link>
+                            </Typography>
+                        );
+                    }
+                })()}
+            </Box>
+        </Template>
+    );
+}
