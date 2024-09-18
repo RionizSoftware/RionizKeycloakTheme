@@ -41,7 +41,7 @@ export const addImports = (
             const lastImportIndex = sourceFile.statements.findIndex(
                 stmt => !ts.isImportDeclaration(stmt)
             );
-            const imports = createImportDeclaration(identifiers, "@mui/material");
+            const imports = createImportDeclaration(identifiers, importLocation);
             //Add new import after other imports
             sourceFile = ts.factory.updateSourceFile(sourceFile, [
                 ...updatedStatements.slice(0, lastImportIndex),
@@ -73,7 +73,7 @@ function createImportDeclaration(identifiers: string[], importLocation: string) 
     );
 }
 
-export const AddImportTransformer = (
+export const MuiAddImportTransformer = (
     imports: string[],
     importLocation: string
 ): TransformerFunctions => {

@@ -7,7 +7,7 @@ import { styleRemoverTransformer } from "./transformers/styleRemover.ts";
 import { divOptimizerTransformer } from "./transformers/divOptimizer.ts";
 import { tagReplacerTransformer } from "./transformers/tagReplacer.ts";
 import { sxAdderTransformer } from "./transformers/sxAdder.ts";
-import { AddImportTransformer } from "./transformers/importAdder.ts";
+import { MuiAddImportTransformer } from "./transformers/muImportAdder.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
@@ -48,10 +48,29 @@ const runPrettier = async (content: string): Promise<string> => {
     });
 };
 
+const makeStyleFile = (content: string, outputLocation: string) => {
+    // Regular expression to find all sx={...} matches.
+    const regex = /sx=\{styles\.([a-zA-Z0-9_]+)\}/g;
+
+    let match;
+    const styles: { [key: string]: {} } = {};
+
+    // Iterate over all matches and build the styles object.
+    while ((match = regex.exec(content)) !== null) {
+        const key = match[1]; // Get the captured group (e.g., Box_3, Box_4)
+        styles[key] = {}; // Initialize an empty object for each matched style
+    }
+
+    const styleContent = `export const styles =${JSON.stringify(styles, null, 4)}`;
+    fs.writeFileSync(outputLocation, styleContent);
+};
+
 (async (): Promise<void> => {
     const pagesLocation = path.resolve(process.cwd(), "./transformerInputs");
     const outputLocation = path.resolve(process.cwd(), "./transformerOutputs");
+    const stylesLocation = path.resolve(outputLocation, "./styles");
     if (!fs.existsSync(outputLocation)) fs.mkdirSync(outputLocation);
+    if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation);
     try {
         const files = fs.readdirSync(pagesLocation);
         for (const file of files) {
@@ -197,10 +216,23 @@ const runPrettier = async (content: string): Promise<string> => {
                 "List",
                 "ListItem"
             ];
+            //Add all MUI imports
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    AddImportTransformer(imports, "@mui/material")
+                    MuiAddImportTransformer(imports, "@mui/material")
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+
+            //Add import { styles } from "./styles/Login.ts";
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    MuiAddImportTransformer(
+                        ["styles"],
+                        `./styles/${file.replace("tsx", "ts")}`
+                    )
                 ) as TransformerFactory<SourceFile>,
                 1
             );
@@ -213,7 +245,13 @@ const runPrettier = async (content: string): Promise<string> => {
             );
             content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);
-            //break;
+
+            //e.g make ./styles/Login.ts
+            makeStyleFile(
+                content,
+                path.resolve(stylesLocation, "./", file.replace("tsx", "ts"))
+            );
+            fs.writeFileSync(path.resolve(outputLocation, file), content);
         }
     } catch (err) {
         console.error("Error reading files:", err);
