@@ -1,4 +1,4 @@
-import ts, { SyntaxKind } from "typescript";
+import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
 import {
     createStringAttributeForTag,
@@ -12,49 +12,65 @@ export const sxAdderTransformer = (materialTagsInUse: string[]): TransformerFunc
     const isMaterialUiTag = (tag: string) => {
         return materialTagsInUse.includes(tag);
     };
+
+    const addSxAndId = (
+        element: ts.JsxElement | ts.JsxSelfClosingElement
+    ): ts.JsxAttributes => {
+        const tag = ts.isJsxElement(element)
+            ? element.openingElement.tagName.getText()
+            : element.tagName.getText();
+
+        const tagCount = tagsCount.get(tag) || 0;
+        const tagId = `${tag}_${tagCount + 1}`;
+        tagsCount.set(tag, tagCount + 1);
+        let sxAttribute: ts.JsxAttribute | undefined;
+        let idAttribute: ts.JsxAttribute | undefined;
+        const attributes = ts.isJsxElement(element)
+            ? element.openingElement.attributes
+            : element.attributes;
+
+        const properties = attributes.properties;
+        if (isMaterialUiTag(tag)) {
+            //assign a new id to element
+            idAttribute = createStringAttributeForTag("id", tagId);
+            sxAttribute = createSxForTag(tagId);
+        }
+        return sxAttribute && idAttribute
+            ? ts.factory.createJsxAttributes([
+                  ...removeAttribute(properties, "id"),
+                  idAttribute,
+                  sxAttribute
+              ])
+            : attributes;
+    };
     return {
         // Handle self-closing JSX elements
         handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
-            return element;
+            const attributes = addSxAndId(element);
+            return ts.factory.updateJsxSelfClosingElement(
+                element,
+                element.tagName,
+                element.typeArguments,
+                attributes
+            );
         },
 
         // Handle regular JSX elements like <div>...</div>
         handleJsxElement: (element: ts.JsxElement): ts.Node => {
-            const openingElementTag = element.openingElement.tagName.getText();
-            const tagCount = tagsCount.get(openingElementTag) || 0;
-            const tagId = `${openingElementTag}_${tagCount + 1}`;
-            tagsCount.set(openingElementTag, tagCount + 1);
-            let sxAttribute: ts.JsxAttribute | undefined;
-            let idAttribute: ts.JsxAttribute | undefined;
-            const attributes = element.openingElement.attributes.properties;
-            if (isMaterialUiTag(openingElementTag)) {
-                //assign a new id to element
+            const attributes = addSxAndId(element);
+            const newOpeningElement = ts.factory.updateJsxOpeningElement(
+                element.openingElement,
+                element.openingElement.tagName,
+                element.openingElement.typeArguments,
+                attributes
+            );
 
-                idAttribute = createStringAttributeForTag("id", tagId);
-                sxAttribute = createSxForTag(tagId);
-            }
-            if (sxAttribute && idAttribute) {
-                const newOpeningElement = ts.factory.updateJsxOpeningElement(
-                    element.openingElement,
-                    element.openingElement.tagName,
-                    element.openingElement.typeArguments,
-                    ts.factory.createJsxAttributes([
-                        ...removeAttribute(attributes, "id"),
-                        idAttribute,
-                        sxAttribute
-                    ])
-                );
-
-                const updatedElement = ts.factory.updateJsxElement(
-                    element,
-                    newOpeningElement,
-                    element.children,
-                    element.closingElement
-                );
-
-                return updatedElement;
-            }
-            return element;
+            return ts.factory.updateJsxElement(
+                element,
+                newOpeningElement,
+                element.children,
+                element.closingElement
+            );
         }
     };
 };

@@ -1,6 +1,7 @@
 import ts from "typescript";
 
 export type TransformerFunctions = {
-    handleSelfClosingElement: (element: ts.JsxSelfClosingElement) => ts.Node | undefined;
-    handleJsxElement: (element: ts.JsxElement) => ts.Node;
+    addImports?: (sourceFile: ts.Node) => ts.Node;
+    handleSelfClosingElement?: (element: ts.JsxSelfClosingElement) => ts.Node | undefined;
+    handleJsxElement?: (element: ts.JsxElement) => ts.Node;
 };

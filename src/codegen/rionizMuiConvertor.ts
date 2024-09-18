@@ -2,11 +2,12 @@ import * as path from "node:path";
 import * as fs from "node:fs";
 import ts, { SourceFile, TransformerFactory } from "typescript";
 import prettier from "prettier";
-import { rionizTransformer } from "./transformers/rionizCodeTransform.ts";
+import { rionizTransformer } from "./rionizCodeTransform.ts";
 import { styleRemoverTransformer } from "./transformers/styleRemover.ts";
 import { divOptimizerTransformer } from "./transformers/divOptimizer.ts";
 import { tagReplacerTransformer } from "./transformers/tagReplacer.ts";
 import { sxAdderTransformer } from "./transformers/sxAdder.ts";
+import { AddImportTransformer } from "./transformers/importAdder.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
@@ -57,21 +58,10 @@ const runPrettier = async (content: string): Promise<string> => {
             const filePath = path.join(pagesLocation, file);
             let content = fs.readFileSync(filePath, "utf-8");
 
-            const imports = [
-                "Box",
-                "Button",
-                "Link",
-                "TextField",
-                "FormLabel",
-                "Typography",
-                "List",
-                "ListItem"
-            ];
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    styleRemoverTransformer,
-                    imports
+                    styleRemoverTransformer
                 ) as TransformerFactory<SourceFile>
             );
             //remove empty consecutive div and tags and just keep 1
@@ -79,88 +69,77 @@ const runPrettier = async (content: string): Promise<string> => {
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    divOptimizerTransformer,
-                    imports
+                    divOptimizerTransformer
                 ) as TransformerFactory<SourceFile>,
                 8
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("div", "Box"),
-                    imports
+                    tagReplacerTransformer("div", "Box")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("button", "Button"),
-                    imports
+                    tagReplacerTransformer("button", "Button")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("a", "Link"),
-                    imports
+                    tagReplacerTransformer("a", "Link")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("input", "TextField"),
-                    imports
+                    tagReplacerTransformer("input", "TextField")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("label", "FormLabel"),
-                    imports
+                    tagReplacerTransformer("label", "FormLabel")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("p", "Typography"),
-                    imports
+                    tagReplacerTransformer("p", "Typography")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("Fragment", "Box"),
-                    imports
+                    tagReplacerTransformer("Fragment", "Box")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("Fragment", "Box"),
-                    imports
+                    tagReplacerTransformer("Fragment", "Box")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("ul", "List"),
-                    imports
+                    tagReplacerTransformer("ul", "List")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    tagReplacerTransformer("li", "ListItem"),
-                    imports
+                    tagReplacerTransformer("li", "ListItem")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
@@ -172,8 +151,7 @@ const runPrettier = async (content: string): Promise<string> => {
                             name: "component",
                             value: "form"
                         }
-                    ]),
-                    imports
+                    ])
                 ) as TransformerFactory<SourceFile>,
                 1
             );
@@ -189,8 +167,7 @@ const runPrettier = async (content: string): Promise<string> => {
                             name: "component",
                             value: "h2"
                         }
-                    ]),
-                    imports
+                    ])
                 ) as TransformerFactory<SourceFile>,
                 1
             );
@@ -206,16 +183,31 @@ const runPrettier = async (content: string): Promise<string> => {
                             name: "component",
                             value: "h1"
                         }
-                    ]),
-                    imports
+                    ])
+                ) as TransformerFactory<SourceFile>,
+                1
+            );
+            const imports = [
+                "Box",
+                "Button",
+                "Link",
+                "TextField",
+                "FormLabel",
+                "Typography",
+                "List",
+                "ListItem"
+            ];
+            content = await transformTemplateToMaterialUiFormat(
+                content,
+                rionizTransformer(
+                    AddImportTransformer(imports, "@mui/material")
                 ) as TransformerFactory<SourceFile>,
                 1
             );
             content = await transformTemplateToMaterialUiFormat(
                 content,
                 rionizTransformer(
-                    sxAdderTransformer(imports),
-                    imports
+                    sxAdderTransformer(imports)
                 ) as TransformerFactory<SourceFile>,
                 1
             );
