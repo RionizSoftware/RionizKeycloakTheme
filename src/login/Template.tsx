@@ -7,17 +7,7 @@ import { useSetClassName } from "keycloakify/tools/useSetClassName";
 import { useStylesAndScripts } from "keycloakify/login/Template.useStylesAndScripts";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem
-} from "@mui/material";
-import { styles } from "./pages/styles/Template.ts";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem } from "@mui/material";
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
@@ -35,17 +25,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         children
     } = props;
     const { kcClsx } = getKcClsx({ doUseDefaultCss, classes });
-    const {
-        msg,
-        msgStr,
-        getChangeLocaleUrl,
-        labelBySupportedLanguageTag,
-        currentLanguageTag
-    } = i18n;
+    const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
     const { realm, locale, auth, url, message, isAppInitiatedAction } = kcContext;
     useEffect(() => {
-        document.title =
-            documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
+        document.title = documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
     }, []);
     useSetClassName({
         qualifiedName: "html",
@@ -60,78 +43,43 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
     return (
-        <Box id="Box_1" sx={styles.Box_1}>
+        <Box>
             {msg("loginTitleHtml", realm.displayNameHtml)}
 
             <header>
-                {realm.internationalizationEnabled &&
-                    (assert(locale !== undefined), locale.supported.length > 1) && (
-                        <Box id="Box_2" sx={styles.Box_2}>
-                            <Button
-                                tabIndex={1}
-                                aria-label={msgStr("languages")}
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                aria-controls="language-switch1"
-                                id="Button_1"
-                                sx={styles.Button_1}
-                            >
-                                {labelBySupportedLanguageTag[currentLanguageTag]}
-                            </Button>
-                            <List
-                                role="menu"
-                                tabIndex={-1}
-                                aria-labelledby="kc-current-locale-link"
-                                aria-activedescendant=""
-                                id="List_1"
-                                sx={styles.List_1}
-                            >
-                                {locale.supported.map(({ languageTag }, i) => (
-                                    <ListItem
-                                        key={languageTag}
-                                        role="none"
-                                        id="ListItem_1"
-                                        sx={styles.ListItem_1}
-                                    >
-                                        <Link
-                                            role="menuitem"
-                                            href={getChangeLocaleUrl(languageTag)}
-                                            id="Link_1"
-                                            sx={styles.Link_1}
-                                        >
-                                            {labelBySupportedLanguageTag[languageTag]}
-                                        </Link>
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </Box>
-                    )}
-                {(() => {
-                    const node = !(
-                        auth !== undefined &&
-                        auth.showUsername &&
-                        !auth.showResetCredentials
-                    ) ? (
-                        <Typography
-                            variant="h1"
-                            component="h1"
-                            id="Typography_1"
-                            sx={styles.Typography_1}
+                {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
+                    <Box id="kc-locale">
+                        <Button
+                            tabIndex={1}
+                            id="kc-current-locale-link"
+                            aria-label={msgStr("languages")}
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="language-switch1"
                         >
+                            {labelBySupportedLanguageTag[currentLanguageTag]}
+                        </Button>
+                        <List role="menu" tabIndex={-1} aria-labelledby="kc-current-locale-link" aria-activedescendant="" id="language-switch1">
+                            {locale.supported.map(({ languageTag }, i) => (
+                                <ListItem key={languageTag} role="none">
+                                    <Link role="menuitem" id={`language-${i + 1}`} href={getChangeLocaleUrl(languageTag)}>
+                                        {labelBySupportedLanguageTag[languageTag]}
+                                    </Link>
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Box>
+                )}
+                {(() => {
+                    const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
+                        <Typography id="kc-page-title" variant="h1" component="h1">
                             {headerNode}
                         </Typography>
                     ) : (
-                        <Box id="Box_3" sx={styles.Box_3}>
-                            <FormLabel id="FormLabel_1" sx={styles.FormLabel_1}>
-                                {auth.attemptedUsername}
-                            </FormLabel>
-                            <Link
-                                href={url.loginRestartFlowUrl}
-                                aria-label={msgStr("restartLoginTooltip")}
-                                id="Link_2"
-                                sx={styles.Link_2}
-                            >
-                                <Box id="Box_4" sx={styles.Box_4}>
+                        <Box id="kc-username">
+                            <FormLabel id="kc-attempted-username">{auth.attemptedUsername}</FormLabel>
+                            <Link id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
+                                <Box>
                                     <i></i>
                                     <span>{msg("restartLoginTooltip")}</span>
                                 </Box>
@@ -140,7 +88,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     );
                     if (displayRequiredFields) {
                         return (
-                            <Box id="Box_5" sx={styles.Box_5}>
+                            <Box>
                                 *{msg("requiredFields")}
                                 {node}
                             </Box>
@@ -149,51 +97,34 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     return node;
                 })()}
             </header>
-            <Box id="Box_6" sx={styles.Box_6}>
+            <Box id="kc-content">
                 {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
-                {displayMessage &&
-                    message !== undefined &&
-                    (message.type !== "warning" || !isAppInitiatedAction) && (
-                        <Box id="Box_7" sx={styles.Box_7}>
-                            {message.type === "success" && <span></span>}
-                            {message.type === "warning" && <span></span>}
-                            {message.type === "error" && <span></span>}
-                            {message.type === "info" && <span></span>}
+                {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
+                    <Box>
+                        {message.type === "success" && <span></span>}
+                        {message.type === "warning" && <span></span>}
+                        {message.type === "error" && <span></span>}
+                        {message.type === "info" && <span></span>}
 
-                            <span
-                                dangerouslySetInnerHTML={{
-                                    __html: message.summary
-                                }}
-                            />
-                        </Box>
-                    )}
+                        <span
+                            dangerouslySetInnerHTML={{
+                                __html: message.summary
+                            }}
+                        />
+                    </Box>
+                )}
                 {children}
                 {auth !== undefined && auth.showTryAnotherWayLink && (
-                    <Box
-                        action={url.loginAction}
-                        method="post"
-                        component="form"
-                        id="Box_8"
-                        sx={styles.Box_8}
-                    >
-                        <Box id="Box_9" sx={styles.Box_9}>
-                            <TextField
-                                type="hidden"
-                                name="tryAnotherWay"
-                                value="on"
-                                id="TextField_1"
-                                sx={styles.TextField_1}
-                            />
+                    <Box id="kc-select-try-another-way-form" action={url.loginAction} method="post" component="form">
+                        <Box>
+                            <TextField type="hidden" name="tryAnotherWay" value="on" />
                             <Link
                                 href="#"
+                                id="try-another-way"
                                 onClick={() => {
-                                    document.forms[
-                                        "kc-select-try-another-way-form" as never
-                                    ].submit();
+                                    document.forms["kc-select-try-another-way-form" as never].submit();
                                     return false;
                                 }}
-                                id="Link_3"
-                                sx={styles.Link_3}
                             >
                                 {msg("doTryAnotherWay")}
                             </Link>
@@ -201,11 +132,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     </Box>
                 )}
                 {socialProvidersNode}
-                {displayInfo && (
-                    <Box id="Box_10" sx={styles.Box_10}>
-                        {infoNode}
-                    </Box>
-                )}
+                {displayInfo && <Box id="kc-info">{infoNode}</Box>}
             </Box>
         </Box>
     );
