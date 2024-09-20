@@ -59,8 +59,8 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="UpdateEmail_Box_1"
+                sx={styles.UpdateEmail_Box_1}
             >
                 <UserProfileFormFields
                     kcContext={kcContext}
@@ -70,23 +70,23 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
 
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box id="UpdateEmail_Box_2" sx={styles.UpdateEmail_Box_2}>
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
                     <TextField
                         disabled={!isFormSubmittable}
                         type="submit"
                         value={msgStr("doSubmit")}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="UpdateEmail_TextField_1"
+                        sx={styles.UpdateEmail_TextField_1}
                     />
                     {isAppInitiatedAction && (
                         <Button
                             type="submit"
                             name="cancel-aia"
                             value="true"
-                            id="Button_1"
-                            sx={styles.Button_1}
+                            id="UpdateEmail_Button_1"
+                            sx={styles.UpdateEmail_Button_1}
                         >
                             {msg("doCancel")}
                         </Button>
@@ -100,15 +100,15 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="Box_3" sx={styles.Box_3}>
-            <FormLabel id="FormLabel_1" sx={styles.FormLabel_1}>
+        <Box id="UpdateEmail_Box_3" sx={styles.UpdateEmail_Box_3}>
+            <FormLabel id="UpdateEmail_FormLabel_1" sx={styles.UpdateEmail_FormLabel_1}>
                 <TextField
                     type="checkbox"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
-                    id="TextField_2"
-                    sx={styles.TextField_2}
+                    id="UpdateEmail_TextField_2"
+                    sx={styles.UpdateEmail_TextField_2}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>

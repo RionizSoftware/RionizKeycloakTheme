@@ -45,13 +45,17 @@ export default function LoginOtp(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginOtp_Box_1"
+                sx={styles.LoginOtp_Box_1}
             >
                 {otpLogin.userOtpCredentials.length > 1 && (
-                    <Box id="Box_2" sx={styles.Box_2}>
+                    <Box id="LoginOtp_Box_2" sx={styles.LoginOtp_Box_2}>
                         {otpLogin.userOtpCredentials.map((otpCredential, index) => (
-                            <Box key={index} id="Box_3" sx={styles.Box_3}>
+                            <Box
+                                key={index}
+                                id="LoginOtp_Box_3"
+                                sx={styles.LoginOtp_Box_3}
+                            >
                                 <TextField
                                     type="radio"
                                     name="selectedCredentialId"
@@ -59,14 +63,14 @@ export default function LoginOtp(
                                     defaultChecked={
                                         otpCredential.id === otpLogin.selectedCredentialId
                                     }
-                                    id="TextField_1"
-                                    sx={styles.TextField_1}
+                                    id="LoginOtp_TextField_1"
+                                    sx={styles.LoginOtp_TextField_1}
                                 />
                                 <FormLabel
                                     htmlFor={`kc-otp-credential-${index}`}
                                     tabIndex={index}
-                                    id="FormLabel_1"
-                                    sx={styles.FormLabel_1}
+                                    id="LoginOtp_FormLabel_1"
+                                    sx={styles.LoginOtp_FormLabel_1}
                                 >
                                     <span>
                                         <i aria-hidden="true"></i>
@@ -79,20 +83,24 @@ export default function LoginOtp(
                     </Box>
                 )}
 
-                <Box id="Box_4" sx={styles.Box_4}>
-                    <FormLabel htmlFor="otp" id="FormLabel_2" sx={styles.FormLabel_2}>
+                <Box id="LoginOtp_Box_4" sx={styles.LoginOtp_Box_4}>
+                    <FormLabel
+                        htmlFor="otp"
+                        id="LoginOtp_FormLabel_2"
+                        sx={styles.LoginOtp_FormLabel_2}
+                    >
                         {msg("loginOtpOneTime")}
                     </FormLabel>
 
-                    <Box id="Box_5" sx={styles.Box_5}>
+                    <Box id="LoginOtp_Box_5" sx={styles.LoginOtp_Box_5}>
                         <TextField
                             name="otp"
                             autoComplete="off"
                             type="text"
                             autoFocus
                             aria-invalid={messagesPerField.existsError("totp")}
-                            id="TextField_2"
-                            sx={styles.TextField_2}
+                            id="LoginOtp_TextField_2"
+                            sx={styles.LoginOtp_TextField_2}
                         />
                         {messagesPerField.existsError("totp") && (
                             <span
@@ -106,13 +114,13 @@ export default function LoginOtp(
                     </Box>
                 </Box>
 
-                <Box id="Box_6" sx={styles.Box_6}>
+                <Box id="LoginOtp_Box_6" sx={styles.LoginOtp_Box_6}>
                     <TextField
                         name="login"
                         type="submit"
                         value={msgStr("doLogIn")}
-                        id="TextField_3"
-                        sx={styles.TextField_3}
+                        id="LoginOtp_TextField_3"
+                        sx={styles.LoginOtp_TextField_3}
                     />
                 </Box>
             </Box>

@@ -39,39 +39,49 @@ export default function LogoutConfirm(
             classes={classes}
             headerNode={msg("logoutConfirmTitle")}
         >
-            <Box id="Box_1" sx={styles.Box_1}>
-                <Typography id="Typography_1" sx={styles.Typography_1}>
+            <Box id="LogoutConfirm_Box_1" sx={styles.LogoutConfirm_Box_1}>
+                <Typography
+                    id="LogoutConfirm_Typography_1"
+                    sx={styles.LogoutConfirm_Typography_1}
+                >
                     {msg("logoutConfirmHeader")}
                 </Typography>
                 <Box
                     action={url.logoutConfirmAction}
                     method="POST"
                     component="form"
-                    id="Box_2"
-                    sx={styles.Box_2}
+                    id="LogoutConfirm_Box_2"
+                    sx={styles.LogoutConfirm_Box_2}
                 >
                     <TextField
                         type="hidden"
                         name="session_code"
                         value={logoutConfirm.code}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="LogoutConfirm_TextField_1"
+                        sx={styles.LogoutConfirm_TextField_1}
                     />
-                    <Box id="Box_3" sx={styles.Box_3}>
+                    <Box id="LogoutConfirm_Box_3" sx={styles.LogoutConfirm_Box_3}>
                         <TextField
                             tabIndex={4}
                             name="confirmLogout"
                             type="submit"
                             value={msgStr("doLogout")}
-                            id="TextField_2"
-                            sx={styles.TextField_2}
+                            id="LogoutConfirm_TextField_2"
+                            sx={styles.LogoutConfirm_TextField_2}
                         />
                     </Box>
                 </Box>
-                <Box id="Box_4" sx={styles.Box_4}>
+                <Box id="LogoutConfirm_Box_4" sx={styles.LogoutConfirm_Box_4}>
                     {!logoutConfirm.skipLink && client.baseUrl && (
-                        <Typography id="Typography_2" sx={styles.Typography_2}>
-                            <Link href={client.baseUrl} id="Link_1" sx={styles.Link_1}>
+                        <Typography
+                            id="LogoutConfirm_Typography_2"
+                            sx={styles.LogoutConfirm_Typography_2}
+                        >
+                            <Link
+                                href={client.baseUrl}
+                                id="LogoutConfirm_Link_1"
+                                sx={styles.LogoutConfirm_Link_1}
+                            >
                                 {msg("backToApplication")}
                             </Link>
                         </Typography>

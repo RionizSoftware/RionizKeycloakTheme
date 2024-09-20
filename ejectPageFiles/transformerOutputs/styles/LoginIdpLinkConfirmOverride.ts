@@ -1,5 +1,5 @@
 export const styles ={
-    "Box_1": {},
-    "Link_1": {},
-    "Button_1": {}
+    "LoginIdpLinkConfirmOverride_Box_1": {},
+    "LoginIdpLinkConfirmOverride_Link_1": {},
+    "LoginIdpLinkConfirmOverride_Button_1": {}
 }

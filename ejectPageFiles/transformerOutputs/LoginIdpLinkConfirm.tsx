@@ -43,16 +43,16 @@ export default function LoginIdpLinkConfirm(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginIdpLinkConfirm_Box_1"
+                sx={styles.LoginIdpLinkConfirm_Box_1}
             >
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box id="LoginIdpLinkConfirm_Box_2" sx={styles.LoginIdpLinkConfirm_Box_2}>
                     <Button
                         type="submit"
                         name="submitAction"
                         value="updateProfile"
-                        id="Button_1"
-                        sx={styles.Button_1}
+                        id="LoginIdpLinkConfirm_Button_1"
+                        sx={styles.LoginIdpLinkConfirm_Button_1}
                     >
                         {msg("confirmLinkIdpReviewProfile")}
                     </Button>
@@ -60,8 +60,8 @@ export default function LoginIdpLinkConfirm(
                         type="submit"
                         name="submitAction"
                         value="linkAccount"
-                        id="Button_2"
-                        sx={styles.Button_2}
+                        id="LoginIdpLinkConfirm_Button_2"
+                        sx={styles.LoginIdpLinkConfirm_Button_2}
                     >
                         {msg("confirmLinkIdpContinue", idpAlias)}
                     </Button>

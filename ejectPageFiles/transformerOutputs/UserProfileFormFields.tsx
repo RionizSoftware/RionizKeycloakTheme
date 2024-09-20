@@ -51,7 +51,11 @@ export default function UserProfileFormFields(
         <>
             {formFieldStates.map(({ attribute, displayableErrors, valueOrValues }) => {
                 return (
-                    <Box key={attribute.name} id="Box_1" sx={styles.Box_1}>
+                    <Box
+                        key={attribute.name}
+                        id="UserProfileFormFields_Box_1"
+                        sx={styles.UserProfileFormFields_Box_1}
+                    >
                         <GroupLabel
                             attribute={attribute}
                             groupNameRef={groupNameRef}
@@ -76,23 +80,33 @@ export default function UserProfileFormFields(
                                         ? "none"
                                         : undefined
                             }}
-                            id="Box_2"
-                            sx={styles.Box_2}
+                            id="UserProfileFormFields_Box_2"
+                            sx={styles.UserProfileFormFields_Box_2}
                         >
-                            <Box id="Box_3" sx={styles.Box_3}>
+                            <Box
+                                id="UserProfileFormFields_Box_3"
+                                sx={styles.UserProfileFormFields_Box_3}
+                            >
                                 <FormLabel
                                     htmlFor={attribute.name}
-                                    id="FormLabel_1"
-                                    sx={styles.FormLabel_1}
+                                    id="UserProfileFormFields_FormLabel_1"
+                                    sx={styles.UserProfileFormFields_FormLabel_1}
                                 >
                                     {advancedMsg(attribute.displayName ?? "")}
                                 </FormLabel>
                                 {attribute.required && <> *</>}
                             </Box>
-                            <Box id="Box_4" sx={styles.Box_4}>
+                            <Box
+                                id="UserProfileFormFields_Box_4"
+                                sx={styles.UserProfileFormFields_Box_4}
+                            >
                                 {attribute.annotations.inputHelperTextBefore !==
                                     undefined && (
-                                    <Box aria-live="polite" id="Box_5" sx={styles.Box_5}>
+                                    <Box
+                                        aria-live="polite"
+                                        id="UserProfileFormFields_Box_5"
+                                        sx={styles.UserProfileFormFields_Box_5}
+                                    >
                                         {advancedMsg(
                                             attribute.annotations.inputHelperTextBefore
                                         )}
@@ -114,7 +128,11 @@ export default function UserProfileFormFields(
                                 />
                                 {attribute.annotations.inputHelperTextAfter !==
                                     undefined && (
-                                    <Box aria-live="polite" id="Box_6" sx={styles.Box_6}>
+                                    <Box
+                                        aria-live="polite"
+                                        id="UserProfileFormFields_Box_6"
+                                        sx={styles.UserProfileFormFields_Box_6}
+                                    >
                                         {advancedMsg(
                                             attribute.annotations.inputHelperTextAfter
                                         )}
@@ -161,8 +179,8 @@ function GroupLabel(props: {
                             ([key, value]) => [`data-${key}`, value]
                         )
                     )}
-                    id="Box_7"
-                    sx={styles.Box_7}
+                    id="UserProfileFormFields_Box_7"
+                    sx={styles.UserProfileFormFields_Box_7}
                 >
                     {(() => {
                         const groupDisplayHeader = attribute.group.displayHeader ?? "";
@@ -171,8 +189,14 @@ function GroupLabel(props: {
                                 ? advancedMsg(groupDisplayHeader)
                                 : attribute.group.name;
                         return (
-                            <Box id="Box_8" sx={styles.Box_8}>
-                                <FormLabel id="FormLabel_2" sx={styles.FormLabel_2}>
+                            <Box
+                                id="UserProfileFormFields_Box_8"
+                                sx={styles.UserProfileFormFields_Box_8}
+                            >
+                                <FormLabel
+                                    id="UserProfileFormFields_FormLabel_2"
+                                    sx={styles.UserProfileFormFields_FormLabel_2}
+                                >
                                     {groupHeaderText}
                                 </FormLabel>
                             </Box>
@@ -186,8 +210,14 @@ function GroupLabel(props: {
                                 groupDisplayDescription
                             );
                             return (
-                                <Box id="Box_9" sx={styles.Box_9}>
-                                    <FormLabel id="FormLabel_3" sx={styles.FormLabel_3}>
+                                <Box
+                                    id="UserProfileFormFields_Box_9"
+                                    sx={styles.UserProfileFormFields_Box_9}
+                                >
+                                    <FormLabel
+                                        id="UserProfileFormFields_FormLabel_3"
+                                        sx={styles.UserProfileFormFields_FormLabel_3}
+                                    >
                                         {groupDescriptionText}
                                     </FormLabel>
                                 </Box>
@@ -222,7 +252,11 @@ function FieldErrors(props: {
             {displayableErrors
                 .filter(error => error.fieldIndex === fieldIndex)
                 .map(({ errorMessage }, i, arr) => (
-                    <Box key={i} id="Box_10" sx={styles.Box_10}>
+                    <Box
+                        key={i}
+                        id="UserProfileFormFields_Box_10"
+                        sx={styles.UserProfileFormFields_Box_10}
+                    >
                         {errorMessage}
                         {arr.length - 1 !== i && <br />}
                     </Box>
@@ -293,15 +327,15 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="Box_11" sx={styles.Box_11}>
+        <Box id="UserProfileFormFields_Box_11" sx={styles.UserProfileFormFields_Box_11}>
             {children}
             <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
-                id="Button_1"
-                sx={styles.Button_1}
+                id="UserProfileFormFields_Button_1"
+                sx={styles.UserProfileFormFields_Button_1}
             >
                 <i aria-hidden />
             </Button>
@@ -402,8 +436,8 @@ function InputTag(
                         fieldIndex: fieldIndex
                     })
                 }
-                id="TextField_1"
-                sx={styles.TextField_1}
+                id="UserProfileFormFields_TextField_1"
+                sx={styles.UserProfileFormFields_TextField_1}
             />
             {(() => {
                 if (fieldIndex === undefined) {
@@ -467,8 +501,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                                 valueOrValues: values.filter((_, i) => i !== fieldIndex)
                             })
                         }
-                        id="Button_2"
-                        sx={styles.Button_2}
+                        id="UserProfileFormFields_Button_2"
+                        sx={styles.UserProfileFormFields_Button_2}
                     >
                         {msg("remove")}
                     </Button>
@@ -485,8 +519,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                             valueOrValues: [...values, ""]
                         })
                     }
-                    id="Button_3"
-                    sx={styles.Button_3}
+                    id="UserProfileFormFields_Button_3"
+                    sx={styles.UserProfileFormFields_Button_3}
                 >
                     {msg("addValue")}
                 </Button>
@@ -546,7 +580,11 @@ function InputTagSelects(props: InputFieldByTypeProps) {
     return (
         <>
             {options.map(option => (
-                <Box key={option} id="Box_12" sx={styles.Box_12}>
+                <Box
+                    key={option}
+                    id="UserProfileFormFields_Box_12"
+                    sx={styles.UserProfileFormFields_Box_12}
+                >
                     <TextField
                         type={inputType}
                         name={attribute.name}
@@ -587,13 +625,13 @@ function InputTagSelects(props: InputFieldByTypeProps) {
                                 fieldIndex: undefined
                             })
                         }
-                        id="TextField_2"
-                        sx={styles.TextField_2}
+                        id="UserProfileFormFields_TextField_2"
+                        sx={styles.UserProfileFormFields_TextField_2}
                     />
                     <FormLabel
                         htmlFor={`${attribute.name}-${option}`}
-                        id="FormLabel_4"
-                        sx={styles.FormLabel_4}
+                        id="UserProfileFormFields_FormLabel_4"
+                        sx={styles.UserProfileFormFields_FormLabel_4}
                     >
                         {advancedMsg(option)}
                     </FormLabel>

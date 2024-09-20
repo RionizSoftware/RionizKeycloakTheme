@@ -1,5 +1,1 @@
-There are lots of asserts in the code 
-
-3 duplicate passwordWrapper
-
-Make a new npm package or push to main repository ?
+We need a comprehensive transform log so that we can fix things automatically

@@ -1,9 +1,9 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "TextField_1": {},
-    "Button_1": {},
-    "Box_3": {},
-    "FormLabel_1": {},
-    "TextField_2": {}
+    "UpdateEmail_Box_1": {},
+    "UpdateEmail_Box_2": {},
+    "UpdateEmail_TextField_1": {},
+    "UpdateEmail_Button_1": {},
+    "UpdateEmail_Box_3": {},
+    "UpdateEmail_FormLabel_1": {},
+    "UpdateEmail_TextField_2": {}
 }

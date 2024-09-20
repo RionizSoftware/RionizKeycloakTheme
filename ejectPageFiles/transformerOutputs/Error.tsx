@@ -35,15 +35,19 @@ export default function Error(
             displayMessage={false}
             headerNode={msg("errorTitle")}
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="Error_Box_1" sx={styles.Error_Box_1}>
                 <Typography
                     dangerouslySetInnerHTML={{ __html: message.summary }}
-                    id="Typography_1"
-                    sx={styles.Typography_1}
+                    id="Error_Typography_1"
+                    sx={styles.Error_Typography_1}
                 />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
-                    <Typography id="Typography_2" sx={styles.Typography_2}>
-                        <Link href={client.baseUrl} id="Link_1" sx={styles.Link_1}>
+                    <Typography id="Error_Typography_2" sx={styles.Error_Typography_2}>
+                        <Link
+                            href={client.baseUrl}
+                            id="Error_Link_1"
+                            sx={styles.Error_Link_1}
+                        >
                             {msg("backToApplication")}
                         </Link>
                     </Typography>

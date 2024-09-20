@@ -60,21 +60,21 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
     return (
-        <Box id="Box_1" sx={styles.Box_1}>
+        <Box id="Template_Box_1" sx={styles.Template_Box_1}>
             {msg("loginTitleHtml", realm.displayNameHtml)}
 
             <header>
                 {realm.internationalizationEnabled &&
                     (assert(locale !== undefined), locale.supported.length > 1) && (
-                        <Box id="Box_2" sx={styles.Box_2}>
+                        <Box id="Template_Box_2" sx={styles.Template_Box_2}>
                             <Button
                                 tabIndex={1}
                                 aria-label={msgStr("languages")}
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 aria-controls="language-switch1"
-                                id="Button_1"
-                                sx={styles.Button_1}
+                                id="Template_Button_1"
+                                sx={styles.Template_Button_1}
                             >
                                 {labelBySupportedLanguageTag[currentLanguageTag]}
                             </Button>
@@ -83,21 +83,21 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 tabIndex={-1}
                                 aria-labelledby="kc-current-locale-link"
                                 aria-activedescendant=""
-                                id="List_1"
-                                sx={styles.List_1}
+                                id="Template_List_1"
+                                sx={styles.Template_List_1}
                             >
                                 {locale.supported.map(({ languageTag }, i) => (
                                     <ListItem
                                         key={languageTag}
                                         role="none"
-                                        id="ListItem_1"
-                                        sx={styles.ListItem_1}
+                                        id="Template_ListItem_1"
+                                        sx={styles.Template_ListItem_1}
                                     >
                                         <Link
                                             role="menuitem"
                                             href={getChangeLocaleUrl(languageTag)}
-                                            id="Link_1"
-                                            sx={styles.Link_1}
+                                            id="Template_Link_1"
+                                            sx={styles.Template_Link_1}
                                         >
                                             {labelBySupportedLanguageTag[languageTag]}
                                         </Link>
@@ -115,23 +115,26 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         <Typography
                             variant="h1"
                             component="h1"
-                            id="Typography_1"
-                            sx={styles.Typography_1}
+                            id="Template_Typography_1"
+                            sx={styles.Template_Typography_1}
                         >
                             {headerNode}
                         </Typography>
                     ) : (
-                        <Box id="Box_3" sx={styles.Box_3}>
-                            <FormLabel id="FormLabel_1" sx={styles.FormLabel_1}>
+                        <Box id="Template_Box_3" sx={styles.Template_Box_3}>
+                            <FormLabel
+                                id="Template_FormLabel_1"
+                                sx={styles.Template_FormLabel_1}
+                            >
                                 {auth.attemptedUsername}
                             </FormLabel>
                             <Link
                                 href={url.loginRestartFlowUrl}
                                 aria-label={msgStr("restartLoginTooltip")}
-                                id="Link_2"
-                                sx={styles.Link_2}
+                                id="Template_Link_2"
+                                sx={styles.Template_Link_2}
                             >
-                                <Box id="Box_4" sx={styles.Box_4}>
+                                <Box id="Template_Box_4" sx={styles.Template_Box_4}>
                                     <i></i>
                                     <span>{msg("restartLoginTooltip")}</span>
                                 </Box>
@@ -140,7 +143,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     );
                     if (displayRequiredFields) {
                         return (
-                            <Box id="Box_5" sx={styles.Box_5}>
+                            <Box id="Template_Box_5" sx={styles.Template_Box_5}>
                                 *{msg("requiredFields")}
                                 {node}
                             </Box>
@@ -149,12 +152,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     return node;
                 })()}
             </header>
-            <Box id="Box_6" sx={styles.Box_6}>
+            <Box id="Template_Box_6" sx={styles.Template_Box_6}>
                 {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                 {displayMessage &&
                     message !== undefined &&
                     (message.type !== "warning" || !isAppInitiatedAction) && (
-                        <Box id="Box_7" sx={styles.Box_7}>
+                        <Box id="Template_Box_7" sx={styles.Template_Box_7}>
                             {message.type === "success" && <span></span>}
                             {message.type === "warning" && <span></span>}
                             {message.type === "error" && <span></span>}
@@ -173,16 +176,16 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         action={url.loginAction}
                         method="post"
                         component="form"
-                        id="Box_8"
-                        sx={styles.Box_8}
+                        id="Template_Box_8"
+                        sx={styles.Template_Box_8}
                     >
-                        <Box id="Box_9" sx={styles.Box_9}>
+                        <Box id="Template_Box_9" sx={styles.Template_Box_9}>
                             <TextField
                                 type="hidden"
                                 name="tryAnotherWay"
                                 value="on"
-                                id="TextField_1"
-                                sx={styles.TextField_1}
+                                id="Template_TextField_1"
+                                sx={styles.Template_TextField_1}
                             />
                             <Link
                                 href="#"
@@ -192,8 +195,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     ].submit();
                                     return false;
                                 }}
-                                id="Link_3"
-                                sx={styles.Link_3}
+                                id="Template_Link_3"
+                                sx={styles.Template_Link_3}
                             >
                                 {msg("doTryAnotherWay")}
                             </Link>
@@ -202,7 +205,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 )}
                 {socialProvidersNode}
                 {displayInfo && (
-                    <Box id="Box_10" sx={styles.Box_10}>
+                    <Box id="Template_Box_10" sx={styles.Template_Box_10}>
                         {infoNode}
                     </Box>
                 )}

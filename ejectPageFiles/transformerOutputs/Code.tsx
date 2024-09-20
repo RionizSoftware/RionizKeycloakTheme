@@ -41,20 +41,20 @@ export default function Code(
                 code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)
             }
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="Code_Box_1" sx={styles.Code_Box_1}>
                 {code.success ? (
                     <>
-                        <Typography id="Typography_1" sx={styles.Typography_1}>
+                        <Typography id="Code_Typography_1" sx={styles.Code_Typography_1}>
                             {msg("copyCodeInstruction")}
                         </Typography>
                         <TextField
                             defaultValue={code.code}
-                            id="TextField_1"
-                            sx={styles.TextField_1}
+                            id="Code_TextField_1"
+                            sx={styles.Code_TextField_1}
                         />
                     </>
                 ) : (
-                    <Typography id="Typography_2" sx={styles.Typography_2}>
+                    <Typography id="Code_Typography_2" sx={styles.Code_Typography_2}>
                         {code.error}
                     </Typography>
                 )}

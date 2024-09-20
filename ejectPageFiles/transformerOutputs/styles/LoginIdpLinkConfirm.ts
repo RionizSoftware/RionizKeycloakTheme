@@ -1,6 +1,6 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "Button_1": {},
-    "Button_2": {}
+    "LoginIdpLinkConfirm_Box_1": {},
+    "LoginIdpLinkConfirm_Box_2": {},
+    "LoginIdpLinkConfirm_Button_1": {},
+    "LoginIdpLinkConfirm_Button_2": {}
 }

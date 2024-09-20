@@ -51,13 +51,16 @@ export default function WebauthnAuthenticate(
             classes={classes}
             displayInfo={realm.registrationAllowed && !registrationDisabled}
             infoNode={
-                <Box id="Box_1" sx={styles.Box_1}>
+                <Box
+                    id="WebauthnAuthenticate_Box_1"
+                    sx={styles.WebauthnAuthenticate_Box_1}
+                >
                     {msg("noAccount")}{" "}
                     <Link
                         tabIndex={6}
                         href={url.registrationUrl}
-                        id="Link_1"
-                        sx={styles.Link_1}
+                        id="WebauthnAuthenticate_Link_1"
+                        sx={styles.WebauthnAuthenticate_Link_1}
                     >
                         {msg("doRegister")}
                     </Link>
@@ -65,62 +68,69 @@ export default function WebauthnAuthenticate(
             }
             headerNode={msg("webauthn-login-title")}
         >
-            <Box id="Box_2" sx={styles.Box_2}>
+            <Box id="WebauthnAuthenticate_Box_2" sx={styles.WebauthnAuthenticate_Box_2}>
                 <Box
                     action={url.loginAction}
                     method="post"
                     component="form"
-                    id="Box_3"
-                    sx={styles.Box_3}
+                    id="WebauthnAuthenticate_Box_3"
+                    sx={styles.WebauthnAuthenticate_Box_3}
                 >
                     <TextField
                         type="hidden"
                         name="clientDataJSON"
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="WebauthnAuthenticate_TextField_1"
+                        sx={styles.WebauthnAuthenticate_TextField_1}
                     />
                     <TextField
                         type="hidden"
                         name="authenticatorData"
-                        id="TextField_2"
-                        sx={styles.TextField_2}
+                        id="WebauthnAuthenticate_TextField_2"
+                        sx={styles.WebauthnAuthenticate_TextField_2}
                     />
                     <TextField
                         type="hidden"
                         name="signature"
-                        id="TextField_3"
-                        sx={styles.TextField_3}
+                        id="WebauthnAuthenticate_TextField_3"
+                        sx={styles.WebauthnAuthenticate_TextField_3}
                     />
                     <TextField
                         type="hidden"
                         name="credentialId"
-                        id="TextField_4"
-                        sx={styles.TextField_4}
+                        id="WebauthnAuthenticate_TextField_4"
+                        sx={styles.WebauthnAuthenticate_TextField_4}
                     />
                     <TextField
                         type="hidden"
                         name="userHandle"
-                        id="TextField_5"
-                        sx={styles.TextField_5}
+                        id="WebauthnAuthenticate_TextField_5"
+                        sx={styles.WebauthnAuthenticate_TextField_5}
                     />
                     <TextField
                         type="hidden"
                         name="error"
-                        id="TextField_6"
-                        sx={styles.TextField_6}
+                        id="WebauthnAuthenticate_TextField_6"
+                        sx={styles.WebauthnAuthenticate_TextField_6}
                     />
                 </Box>
-                <Box id="Box_4" sx={styles.Box_4}>
+                <Box
+                    id="WebauthnAuthenticate_Box_4"
+                    sx={styles.WebauthnAuthenticate_Box_4}
+                >
                     {authenticators && (
                         <>
-                            <Box component="form" id="Box_5" sx={styles.Box_5}>
+                            <Box
+                                component="form"
+                                id="WebauthnAuthenticate_Box_5"
+                                sx={styles.WebauthnAuthenticate_Box_5}
+                            >
                                 {authenticators.authenticators.map(authenticator => (
                                     <TextField
                                         type="hidden"
                                         name="authn_use_chk"
                                         value={authenticator.credentialId}
-                                        id="TextField_7"
-                                        sx={styles.TextField_7}
+                                        id="WebauthnAuthenticate_TextField_7"
+                                        sx={styles.WebauthnAuthenticate_TextField_7}
                                     />
                                 ))}
                             </Box>
@@ -129,28 +139,47 @@ export default function WebauthnAuthenticate(
                                 <>
                                     {authenticators.authenticators.length > 1 && (
                                         <Typography
-                                            id="Typography_1"
-                                            sx={styles.Typography_1}
+                                            id="WebauthnAuthenticate_Typography_1"
+                                            sx={styles.WebauthnAuthenticate_Typography_1}
                                         >
                                             {msg("webauthn-available-authenticators")}
                                         </Typography>
                                     )}
-                                    <Box id="Box_6" sx={styles.Box_6}>
+                                    <Box
+                                        id="WebauthnAuthenticate_Box_6"
+                                        sx={styles.WebauthnAuthenticate_Box_6}
+                                    >
                                         {authenticators.authenticators.map(
                                             (authenticator, i) => (
-                                                <Box key={i} id="Box_7" sx={styles.Box_7}>
-                                                    <Box id="Box_8" sx={styles.Box_8}>
+                                                <Box
+                                                    key={i}
+                                                    id="WebauthnAuthenticate_Box_7"
+                                                    sx={styles.WebauthnAuthenticate_Box_7}
+                                                >
+                                                    <Box
+                                                        id="WebauthnAuthenticate_Box_8"
+                                                        sx={
+                                                            styles.WebauthnAuthenticate_Box_8
+                                                        }
+                                                    >
                                                         <i />
                                                     </Box>
-                                                    <Box id="Box_9" sx={styles.Box_9}>
+                                                    <Box
+                                                        id="WebauthnAuthenticate_Box_9"
+                                                        sx={
+                                                            styles.WebauthnAuthenticate_Box_9
+                                                        }
+                                                    >
                                                         {advancedMsg(authenticator.label)}
 
                                                         {authenticator.transports
                                                             .displayNameProperties
                                                             ?.length && (
                                                             <Box
-                                                                id="Box_10"
-                                                                sx={styles.Box_10}
+                                                                id="WebauthnAuthenticate_Box_10"
+                                                                sx={
+                                                                    styles.WebauthnAuthenticate_Box_10
+                                                                }
                                                             >
                                                                 {authenticator.transports.displayNameProperties
                                                                     .map(
@@ -175,9 +204,9 @@ export default function WebauthnAuthenticate(
                                                                                 key={
                                                                                     displayNameProperty
                                                                                 }
-                                                                                id="Box_11"
+                                                                                id="WebauthnAuthenticate_Box_11"
                                                                                 sx={
-                                                                                    styles.Box_11
+                                                                                    styles.WebauthnAuthenticate_Box_11
                                                                                 }
                                                                             >
                                                                                 {advancedMsg(
@@ -211,8 +240,8 @@ export default function WebauthnAuthenticate(
                         type="button"
                         autoFocus
                         value={msgStr("webauthn-doAuthenticate")}
-                        id="TextField_8"
-                        sx={styles.TextField_8}
+                        id="WebauthnAuthenticate_TextField_8"
+                        sx={styles.WebauthnAuthenticate_TextField_8}
                     />
                 </Box>
             </Box>

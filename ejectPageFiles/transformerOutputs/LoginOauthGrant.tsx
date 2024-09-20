@@ -41,7 +41,10 @@ export default function LoginOauthGrant(
             headerNode={
                 <>
                     {client.attributes.logoUri && <img src={client.attributes.logoUri} />}
-                    <Typography id="Typography_1" sx={styles.Typography_1}>
+                    <Typography
+                        id="LoginOauthGrant_Typography_1"
+                        sx={styles.LoginOauthGrant_Typography_1}
+                    >
                         {client.name
                             ? msg("oauthGrantTitle", advancedMsgStr(client.name))
                             : msg("oauthGrantTitle", client.clientId)}
@@ -49,14 +52,14 @@ export default function LoginOauthGrant(
                 </>
             }
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="LoginOauthGrant_Box_1" sx={styles.LoginOauthGrant_Box_1}>
                 <h3>{msg("oauthGrantRequest")}</h3>
-                <List id="List_1" sx={styles.List_1}>
+                <List id="LoginOauthGrant_List_1" sx={styles.LoginOauthGrant_List_1}>
                     {oauth.clientScopesRequested.map(clientScope => (
                         <ListItem
                             key={clientScope.consentScreenText}
-                            id="ListItem_1"
-                            sx={styles.ListItem_1}
+                            id="LoginOauthGrant_ListItem_1"
+                            sx={styles.LoginOauthGrant_ListItem_1}
                         >
                             <span>
                                 {advancedMsg(clientScope.consentScreenText)}
@@ -85,8 +88,8 @@ export default function LoginOauthGrant(
                                     <Link
                                         href={client.attributes.tosUri}
                                         target="_blank"
-                                        id="Link_1"
-                                        sx={styles.Link_1}
+                                        id="LoginOauthGrant_Link_1"
+                                        sx={styles.LoginOauthGrant_Link_1}
                                     >
                                         {msg("oauthGrantTos")}
                                     </Link>
@@ -98,8 +101,8 @@ export default function LoginOauthGrant(
                                     <Link
                                         href={client.attributes.policyUri}
                                         target="_blank"
-                                        id="Link_2"
-                                        sx={styles.Link_2}
+                                        id="LoginOauthGrant_Link_2"
+                                        sx={styles.LoginOauthGrant_Link_2}
                                     >
                                         {msg("oauthGrantPolicy")}
                                     </Link>
@@ -112,34 +115,34 @@ export default function LoginOauthGrant(
                     action={url.oauthAction}
                     method="POST"
                     component="form"
-                    id="Box_2"
-                    sx={styles.Box_2}
+                    id="LoginOauthGrant_Box_2"
+                    sx={styles.LoginOauthGrant_Box_2}
                 >
                     <TextField
                         type="hidden"
                         name="code"
                         value={oauth.code}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="LoginOauthGrant_TextField_1"
+                        sx={styles.LoginOauthGrant_TextField_1}
                     />
-                    <Box id="Box_3" sx={styles.Box_3}>
+                    <Box id="LoginOauthGrant_Box_3" sx={styles.LoginOauthGrant_Box_3}>
                         <TextField
                             name="accept"
                             type="submit"
                             value={msgStr("doYes")}
-                            id="TextField_2"
-                            sx={styles.TextField_2}
+                            id="LoginOauthGrant_TextField_2"
+                            sx={styles.LoginOauthGrant_TextField_2}
                         />
                         <TextField
                             name="cancel"
                             type="submit"
                             value={msgStr("doNo")}
-                            id="TextField_3"
-                            sx={styles.TextField_3}
+                            id="LoginOauthGrant_TextField_3"
+                            sx={styles.LoginOauthGrant_TextField_3}
                         />
                     </Box>
                 </Box>
-                <Box id="Box_4" sx={styles.Box_4}></Box>
+                <Box id="LoginOauthGrant_Box_4" sx={styles.LoginOauthGrant_Box_4}></Box>
             </Box>
         </Template>
     );

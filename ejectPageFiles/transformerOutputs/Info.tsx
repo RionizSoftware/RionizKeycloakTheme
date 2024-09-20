@@ -49,7 +49,7 @@ export default function Info(
                 />
             }
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="Info_Box_1" sx={styles.Info_Box_1}>
                 <Typography
                     dangerouslySetInnerHTML={{
                         __html: (() => {
@@ -66,8 +66,8 @@ export default function Info(
                             return html;
                         })()
                     }}
-                    id="Typography_1"
-                    sx={styles.Typography_1}
+                    id="Info_Typography_1"
+                    sx={styles.Info_Typography_1}
                 />
                 {(() => {
                     if (skipLink) {
@@ -75,11 +75,14 @@ export default function Info(
                     }
                     if (pageRedirectUri) {
                         return (
-                            <Typography id="Typography_2" sx={styles.Typography_2}>
+                            <Typography
+                                id="Info_Typography_2"
+                                sx={styles.Info_Typography_2}
+                            >
                                 <Link
                                     href={pageRedirectUri}
-                                    id="Link_1"
-                                    sx={styles.Link_1}
+                                    id="Info_Link_1"
+                                    sx={styles.Info_Link_1}
                                 >
                                     {msg("backToApplication")}
                                 </Link>
@@ -88,8 +91,15 @@ export default function Info(
                     }
                     if (actionUri) {
                         return (
-                            <Typography id="Typography_3" sx={styles.Typography_3}>
-                                <Link href={actionUri} id="Link_2" sx={styles.Link_2}>
+                            <Typography
+                                id="Info_Typography_3"
+                                sx={styles.Info_Typography_3}
+                            >
+                                <Link
+                                    href={actionUri}
+                                    id="Info_Link_2"
+                                    sx={styles.Info_Link_2}
+                                >
                                     {msg("proceedWithAction")}
                                 </Link>
                             </Typography>
@@ -97,11 +107,14 @@ export default function Info(
                     }
                     if (client.baseUrl) {
                         return (
-                            <Typography id="Typography_4" sx={styles.Typography_4}>
+                            <Typography
+                                id="Info_Typography_4"
+                                sx={styles.Info_Typography_4}
+                            >
                                 <Link
                                     href={client.baseUrl}
-                                    id="Link_3"
-                                    sx={styles.Link_3}
+                                    id="Info_Link_3"
+                                    sx={styles.Info_Link_3}
                                 >
                                     {msg("backToApplication")}
                                 </Link>

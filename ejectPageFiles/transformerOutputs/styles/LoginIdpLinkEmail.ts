@@ -1,7 +1,7 @@
 export const styles ={
-    "Typography_1": {},
-    "Typography_2": {},
-    "Link_1": {},
-    "Typography_3": {},
-    "Link_2": {}
+    "LoginIdpLinkEmail_Typography_1": {},
+    "LoginIdpLinkEmail_Typography_2": {},
+    "LoginIdpLinkEmail_Link_1": {},
+    "LoginIdpLinkEmail_Typography_3": {},
+    "LoginIdpLinkEmail_Link_2": {}
 }

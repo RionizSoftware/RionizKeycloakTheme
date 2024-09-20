@@ -1,8 +1,8 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "Button_1": {},
-    "Box_3": {},
-    "Box_4": {},
-    "Box_5": {}
+    "SelectAuthenticator_Box_1": {},
+    "SelectAuthenticator_Box_2": {},
+    "SelectAuthenticator_Button_1": {},
+    "SelectAuthenticator_Box_3": {},
+    "SelectAuthenticator_Box_4": {},
+    "SelectAuthenticator_Box_5": {}
 }

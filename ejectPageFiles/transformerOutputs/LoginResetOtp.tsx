@@ -45,16 +45,23 @@ export default function LoginResetOtp(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginResetOtp_Box_1"
+                sx={styles.LoginResetOtp_Box_1}
             >
-                <Box id="Box_2" sx={styles.Box_2}>
-                    <Typography id="Typography_1" sx={styles.Typography_1}>
+                <Box id="LoginResetOtp_Box_2" sx={styles.LoginResetOtp_Box_2}>
+                    <Typography
+                        id="LoginResetOtp_Typography_1"
+                        sx={styles.LoginResetOtp_Typography_1}
+                    >
                         {msg("otp-reset-description")}
                     </Typography>
                     {configuredOtpCredentials.userOtpCredentials.map(
                         (otpCredential, index) => (
-                            <Box key={otpCredential.id} id="Box_3" sx={styles.Box_3}>
+                            <Box
+                                key={otpCredential.id}
+                                id="LoginResetOtp_Box_3"
+                                sx={styles.LoginResetOtp_Box_3}
+                            >
                                 <TextField
                                     type="radio"
                                     name="selectedCredentialId"
@@ -63,14 +70,14 @@ export default function LoginResetOtp(
                                         otpCredential.id ===
                                         configuredOtpCredentials.selectedCredentialId
                                     }
-                                    id="TextField_1"
-                                    sx={styles.TextField_1}
+                                    id="LoginResetOtp_TextField_1"
+                                    sx={styles.LoginResetOtp_TextField_1}
                                 />
                                 <FormLabel
                                     htmlFor={`kc-otp-credential-${index}`}
                                     tabIndex={index}
-                                    id="FormLabel_1"
-                                    sx={styles.FormLabel_1}
+                                    id="LoginResetOtp_FormLabel_1"
+                                    sx={styles.LoginResetOtp_FormLabel_1}
                                 >
                                     <span>
                                         <i aria-hidden="true"></i>
@@ -81,12 +88,12 @@ export default function LoginResetOtp(
                             </Box>
                         )
                     )}
-                    <Box id="Box_4" sx={styles.Box_4}>
+                    <Box id="LoginResetOtp_Box_4" sx={styles.LoginResetOtp_Box_4}>
                         <TextField
                             type="submit"
                             value={msgStr("doSubmit")}
-                            id="TextField_2"
-                            sx={styles.TextField_2}
+                            id="LoginResetOtp_TextField_2"
+                            sx={styles.LoginResetOtp_TextField_2}
                         />
                     </Box>
                 </Box>

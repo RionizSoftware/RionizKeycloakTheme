@@ -1,5 +1,5 @@
 export const styles ={
-    "Typography_1": {},
-    "Link_1": {},
-    "Link_2": {}
+    "LoginPageExpired_Typography_1": {},
+    "LoginPageExpired_Link_1": {},
+    "LoginPageExpired_Link_2": {}
 }

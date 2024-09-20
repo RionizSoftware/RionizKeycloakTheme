@@ -34,14 +34,25 @@ export default function LoginPageExpired(
             classes={classes}
             headerNode={msg("pageExpiredTitle")}
         >
-            <Typography id="Typography_1" sx={styles.Typography_1}>
+            <Typography
+                id="LoginPageExpired_Typography_1"
+                sx={styles.LoginPageExpired_Typography_1}
+            >
                 {msg("pageExpiredMsg1")}
-                <Link href={url.loginRestartFlowUrl} id="Link_1" sx={styles.Link_1}>
+                <Link
+                    href={url.loginRestartFlowUrl}
+                    id="LoginPageExpired_Link_1"
+                    sx={styles.LoginPageExpired_Link_1}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 .<br />
                 {msg("pageExpiredMsg2")}{" "}
-                <Link href={url.loginAction} id="Link_2" sx={styles.Link_2}>
+                <Link
+                    href={url.loginAction}
+                    id="LoginPageExpired_Link_2"
+                    sx={styles.LoginPageExpired_Link_2}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 .

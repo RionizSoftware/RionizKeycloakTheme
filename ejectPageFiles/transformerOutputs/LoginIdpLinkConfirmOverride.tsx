@@ -43,11 +43,15 @@ export default function LoginIdpLinkConfirmOverride(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginIdpLinkConfirmOverride_Box_1"
+                sx={styles.LoginIdpLinkConfirmOverride_Box_1}
             >
                 {msg("pageExpiredMsg1")}{" "}
-                <Link href={url.loginRestartFlowUrl} id="Link_1" sx={styles.Link_1}>
+                <Link
+                    href={url.loginRestartFlowUrl}
+                    id="LoginIdpLinkConfirmOverride_Link_1"
+                    sx={styles.LoginIdpLinkConfirmOverride_Link_1}
+                >
                     {msg("doClickHere")}
                 </Link>
                 <br />
@@ -56,8 +60,8 @@ export default function LoginIdpLinkConfirmOverride(
                     type="submit"
                     name="submitAction"
                     value="confirmOverride"
-                    id="Button_1"
-                    sx={styles.Button_1}
+                    id="LoginIdpLinkConfirmOverride_Button_1"
+                    sx={styles.LoginIdpLinkConfirmOverride_Button_1}
                 >
                     {msg("confirmOverrideIdpContinue", idpDisplayName)}
                 </Button>

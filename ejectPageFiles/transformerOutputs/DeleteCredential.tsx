@@ -40,29 +40,29 @@ export default function DeleteCredential(
             displayMessage={false}
             headerNode={msg("deleteCredentialTitle", credentialLabel)}
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="DeleteCredential_Box_1" sx={styles.DeleteCredential_Box_1}>
                 {msg("deleteCredentialMessage", credentialLabel)}
             </Box>
             <Box
                 action={url.loginAction}
                 method="POST"
                 component="form"
-                id="Box_2"
-                sx={styles.Box_2}
+                id="DeleteCredential_Box_2"
+                sx={styles.DeleteCredential_Box_2}
             >
                 <TextField
                     name="accept"
                     type="submit"
                     value={msgStr("doConfirmDelete")}
-                    id="TextField_1"
-                    sx={styles.TextField_1}
+                    id="DeleteCredential_TextField_1"
+                    sx={styles.DeleteCredential_TextField_1}
                 />
                 <TextField
                     name="cancel-aia"
                     value={msgStr("doCancel")}
                     type="submit"
-                    id="TextField_2"
-                    sx={styles.TextField_2}
+                    id="DeleteCredential_TextField_2"
+                    sx={styles.DeleteCredential_TextField_2}
                 />
             </Box>
         </Template>

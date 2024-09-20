@@ -44,7 +44,7 @@ export default function LoginPassword(
             headerNode={msg("doLogIn")}
             displayMessage={!messagesPerField.existsError("password")}
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="LoginPassword_Box_1" sx={styles.LoginPassword_Box_1}>
                 <Box
                     onSubmit={() => {
                         setIsLoginButtonDisabled(true);
@@ -53,15 +53,15 @@ export default function LoginPassword(
                     action={url.loginAction}
                     method="post"
                     component="form"
-                    id="Box_2"
-                    sx={styles.Box_2}
+                    id="LoginPassword_Box_2"
+                    sx={styles.LoginPassword_Box_2}
                 >
-                    <Box id="Box_3" sx={styles.Box_3}>
+                    <Box id="LoginPassword_Box_3" sx={styles.LoginPassword_Box_3}>
                         <hr />
                         <FormLabel
                             htmlFor="password"
-                            id="FormLabel_1"
-                            sx={styles.FormLabel_1}
+                            id="LoginPassword_FormLabel_1"
+                            sx={styles.LoginPassword_FormLabel_1}
                         >
                             {msg("password")}
                         </FormLabel>
@@ -81,8 +81,8 @@ export default function LoginPassword(
                                     "username",
                                     "password"
                                 )}
-                                id="TextField_1"
-                                sx={styles.TextField_1}
+                                id="LoginPassword_TextField_1"
+                                sx={styles.LoginPassword_TextField_1}
                             />
                         </PasswordWrapper>
 
@@ -96,29 +96,29 @@ export default function LoginPassword(
                             />
                         )}
                     </Box>
-                    <Box id="Box_4" sx={styles.Box_4}>
+                    <Box id="LoginPassword_Box_4" sx={styles.LoginPassword_Box_4}>
                         {realm.resetPasswordAllowed && (
                             <span>
                                 <Link
                                     tabIndex={5}
                                     href={url.loginResetCredentialsUrl}
-                                    id="Link_1"
-                                    sx={styles.Link_1}
+                                    id="LoginPassword_Link_1"
+                                    sx={styles.LoginPassword_Link_1}
                                 >
                                     {msg("doForgotPassword")}
                                 </Link>
                             </span>
                         )}
                     </Box>
-                    <Box id="Box_5" sx={styles.Box_5}>
+                    <Box id="LoginPassword_Box_5" sx={styles.LoginPassword_Box_5}>
                         <TextField
                             tabIndex={4}
                             name="login"
                             type="submit"
                             value={msgStr("doLogIn")}
                             disabled={isLoginButtonDisabled}
-                            id="TextField_2"
-                            sx={styles.TextField_2}
+                            id="LoginPassword_TextField_2"
+                            sx={styles.LoginPassword_TextField_2}
                         />
                     </Box>
                 </Box>
@@ -144,15 +144,15 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="Box_6" sx={styles.Box_6}>
+        <Box id="LoginPassword_Box_6" sx={styles.LoginPassword_Box_6}>
             {children}
             <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
-                id="Button_1"
-                sx={styles.Button_1}
+                id="LoginPassword_Button_1"
+                sx={styles.LoginPassword_Button_1}
             >
                 <i aria-hidden />
             </Button>

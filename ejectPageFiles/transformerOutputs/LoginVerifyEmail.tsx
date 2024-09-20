@@ -35,10 +35,17 @@ export default function LoginVerifyEmail(
             displayInfo
             headerNode={msg("emailVerifyTitle")}
             infoNode={
-                <Typography id="Typography_1" sx={styles.Typography_1}>
+                <Typography
+                    id="LoginVerifyEmail_Typography_1"
+                    sx={styles.LoginVerifyEmail_Typography_1}
+                >
                     {msg("emailVerifyInstruction2")}
                     <br />
-                    <Link href={url.loginAction} id="Link_1" sx={styles.Link_1}>
+                    <Link
+                        href={url.loginAction}
+                        id="LoginVerifyEmail_Link_1"
+                        sx={styles.LoginVerifyEmail_Link_1}
+                    >
                         {msg("doClickHere")}
                     </Link>
                     &nbsp;
@@ -46,7 +53,10 @@ export default function LoginVerifyEmail(
                 </Typography>
             }
         >
-            <Typography id="Typography_2" sx={styles.Typography_2}>
+            <Typography
+                id="LoginVerifyEmail_Typography_2"
+                sx={styles.LoginVerifyEmail_Typography_2}
+            >
                 {msg("emailVerifyInstruction1", user?.email ?? "")}
             </Typography>
         </Template>

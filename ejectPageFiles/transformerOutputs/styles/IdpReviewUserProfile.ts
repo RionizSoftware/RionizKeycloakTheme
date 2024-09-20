@@ -1,5 +1,5 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "TextField_1": {}
+    "IdpReviewUserProfile_Box_1": {},
+    "IdpReviewUserProfile_Box_2": {},
+    "IdpReviewUserProfile_TextField_1": {}
 }

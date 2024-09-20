@@ -1,6 +1,6 @@
 export const styles ={
-    "Box_1": {},
-    "Typography_1": {},
-    "TextField_1": {},
-    "Typography_2": {}
+    "Code_Box_1": {},
+    "Code_Typography_1": {},
+    "Code_TextField_1": {},
+    "Code_Typography_2": {}
 }

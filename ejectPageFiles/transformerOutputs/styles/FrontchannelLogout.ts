@@ -1,6 +1,6 @@
 export const styles ={
-    "Typography_1": {},
-    "List_1": {},
-    "ListItem_1": {},
-    "Link_1": {}
+    "FrontchannelLogout_Typography_1": {},
+    "FrontchannelLogout_List_1": {},
+    "FrontchannelLogout_ListItem_1": {},
+    "FrontchannelLogout_Link_1": {}
 }

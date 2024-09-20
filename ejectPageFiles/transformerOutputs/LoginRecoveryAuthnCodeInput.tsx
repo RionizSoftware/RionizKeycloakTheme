@@ -44,14 +44,17 @@ export default function LoginRecoveryAuthnCodeInput(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginRecoveryAuthnCodeInput_Box_1"
+                sx={styles.LoginRecoveryAuthnCodeInput_Box_1}
             >
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box
+                    id="LoginRecoveryAuthnCodeInput_Box_2"
+                    sx={styles.LoginRecoveryAuthnCodeInput_Box_2}
+                >
                     <FormLabel
                         htmlFor="recoveryCodeInput"
-                        id="FormLabel_1"
-                        sx={styles.FormLabel_1}
+                        id="LoginRecoveryAuthnCodeInput_FormLabel_1"
+                        sx={styles.LoginRecoveryAuthnCodeInput_FormLabel_1}
                     >
                         {msg(
                             "auth-recovery-code-prompt",
@@ -59,7 +62,10 @@ export default function LoginRecoveryAuthnCodeInput(
                         )}
                     </FormLabel>
 
-                    <Box id="Box_3" sx={styles.Box_3}>
+                    <Box
+                        id="LoginRecoveryAuthnCodeInput_Box_3"
+                        sx={styles.LoginRecoveryAuthnCodeInput_Box_3}
+                    >
                         <TextField
                             tabIndex={1}
                             name="recoveryCodeInput"
@@ -69,8 +75,8 @@ export default function LoginRecoveryAuthnCodeInput(
                             autoComplete="off"
                             type="text"
                             autoFocus
-                            id="TextField_1"
-                            sx={styles.TextField_1}
+                            id="LoginRecoveryAuthnCodeInput_TextField_1"
+                            sx={styles.LoginRecoveryAuthnCodeInput_TextField_1}
                         />
                         {messagesPerField.existsError("recoveryCodeInput") && (
                             <span
@@ -84,13 +90,16 @@ export default function LoginRecoveryAuthnCodeInput(
                     </Box>
                 </Box>
 
-                <Box id="Box_4" sx={styles.Box_4}>
+                <Box
+                    id="LoginRecoveryAuthnCodeInput_Box_4"
+                    sx={styles.LoginRecoveryAuthnCodeInput_Box_4}
+                >
                     <TextField
                         name="login"
                         type="submit"
                         value={msgStr("doLogIn")}
-                        id="TextField_2"
-                        sx={styles.TextField_2}
+                        id="LoginRecoveryAuthnCodeInput_TextField_2"
+                        sx={styles.LoginRecoveryAuthnCodeInput_TextField_2}
                     />
                 </Box>
             </Box>

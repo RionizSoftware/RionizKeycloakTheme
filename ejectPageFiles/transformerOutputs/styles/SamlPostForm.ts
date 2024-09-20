@@ -1,9 +1,9 @@
 export const styles ={
-    "Typography_1": {},
-    "Box_1": {},
-    "TextField_1": {},
-    "TextField_2": {},
-    "TextField_3": {},
-    "Typography_2": {},
-    "TextField_4": {}
+    "SamlPostForm_Typography_1": {},
+    "SamlPostForm_Box_1": {},
+    "SamlPostForm_TextField_1": {},
+    "SamlPostForm_TextField_2": {},
+    "SamlPostForm_TextField_3": {},
+    "SamlPostForm_Typography_2": {},
+    "SamlPostForm_TextField_4": {}
 }

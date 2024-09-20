@@ -47,7 +47,10 @@ export default function SamlPostForm(
             classes={classes}
             headerNode={msg("saml.post-form.title")}
         >
-            <Typography id="Typography_1" sx={styles.Typography_1}>
+            <Typography
+                id="SamlPostForm_Typography_1"
+                sx={styles.SamlPostForm_Typography_1}
+            >
                 {msg("saml.post-form.message")}
             </Typography>
             <Box
@@ -56,16 +59,16 @@ export default function SamlPostForm(
                 action={samlPost.url}
                 ref={setHtmlFormElement}
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="SamlPostForm_Box_1"
+                sx={styles.SamlPostForm_Box_1}
             >
                 {samlPost.SAMLRequest && (
                     <TextField
                         type="hidden"
                         name="SAMLRequest"
                         value={samlPost.SAMLRequest}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="SamlPostForm_TextField_1"
+                        sx={styles.SamlPostForm_TextField_1}
                     />
                 )}
                 {samlPost.SAMLResponse && (
@@ -73,8 +76,8 @@ export default function SamlPostForm(
                         type="hidden"
                         name="SAMLResponse"
                         value={samlPost.SAMLResponse}
-                        id="TextField_2"
-                        sx={styles.TextField_2}
+                        id="SamlPostForm_TextField_2"
+                        sx={styles.SamlPostForm_TextField_2}
                     />
                 )}
                 {samlPost.relayState && (
@@ -82,19 +85,22 @@ export default function SamlPostForm(
                         type="hidden"
                         name="RelayState"
                         value={samlPost.relayState}
-                        id="TextField_3"
-                        sx={styles.TextField_3}
+                        id="SamlPostForm_TextField_3"
+                        sx={styles.SamlPostForm_TextField_3}
                     />
                 )}
                 <noscript>
-                    <Typography id="Typography_2" sx={styles.Typography_2}>
+                    <Typography
+                        id="SamlPostForm_Typography_2"
+                        sx={styles.SamlPostForm_Typography_2}
+                    >
                         {msg("saml.post-form.js-disabled")}
                     </Typography>
                     <TextField
                         type="submit"
                         value={msgStr("doContinue")}
-                        id="TextField_4"
-                        sx={styles.TextField_4}
+                        id="SamlPostForm_TextField_4"
+                        sx={styles.SamlPostForm_TextField_4}
                     />
                 </noscript>
             </Box>

@@ -1,6 +1,6 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "TextField_1": {},
-    "TextField_2": {}
+    "DeleteCredential_Box_1": {},
+    "DeleteCredential_Box_2": {},
+    "DeleteCredential_TextField_1": {},
+    "DeleteCredential_TextField_2": {}
 }

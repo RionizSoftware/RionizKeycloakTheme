@@ -1,11 +1,11 @@
 export const styles ={
-    "Box_1": {},
-    "Typography_1": {},
-    "Box_2": {},
-    "TextField_1": {},
-    "Box_3": {},
-    "TextField_2": {},
-    "Box_4": {},
-    "Typography_2": {},
-    "Link_1": {}
+    "LogoutConfirm_Box_1": {},
+    "LogoutConfirm_Typography_1": {},
+    "LogoutConfirm_Box_2": {},
+    "LogoutConfirm_TextField_1": {},
+    "LogoutConfirm_Box_3": {},
+    "LogoutConfirm_TextField_2": {},
+    "LogoutConfirm_Box_4": {},
+    "LogoutConfirm_Typography_2": {},
+    "LogoutConfirm_Link_1": {}
 }

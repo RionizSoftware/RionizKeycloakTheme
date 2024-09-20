@@ -11,24 +11,21 @@ import { MuiAddImportTransformer } from "./transformers/muImportAdder.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
-    transformerInput: TransformerFactory<SourceFile>,
-    reIterateCount: number = 1
+    transformerInputs: TransformerFactory<SourceFile>[]
 ): Promise<string> => {
     // let content = ``;
 
-    for (let i = 0; i < reIterateCount; i += 1) {
-        const sourceFile = ts.createSourceFile(
-            "temp.tsx",
-            content,
-            ts.ScriptTarget.ESNext,
-            true,
-            ts.ScriptKind.TSX
-        );
-        const result = ts.transform(sourceFile, [transformerInput]);
-        const printer = ts.createPrinter();
-        const transformedSourceFile = result.transformed[0] as ts.SourceFile;
-        content = printer.printFile(transformedSourceFile);
-    }
+    const sourceFile = ts.createSourceFile(
+        "temp.tsx",
+        content,
+        ts.ScriptTarget.ESNext,
+        true,
+        ts.ScriptKind.TSX
+    );
+    const result = ts.transform(sourceFile, transformerInputs);
+    const printer = ts.createPrinter();
+    const transformedSourceFile = result.transformed[0] as ts.SourceFile;
+    content = printer.printFile(transformedSourceFile);
 
     return content;
 };
@@ -53,7 +50,7 @@ const makeStyleFile = (content: string, outputLocation: string) => {
     const regex = /sx=\{styles\.([a-zA-Z0-9_]+)\}/g;
 
     let match;
-    const styles: { [key: string]: {} } = {};
+    const styles: { [key: string]: object } = {};
 
     // Iterate over all matches and build the styles object.
     while ((match = regex.exec(content)) !== null) {
@@ -80,138 +77,103 @@ const makeStyleFile = (content: string, outputLocation: string) => {
     try {
         const files = fs.readdirSync(pagesLocation);
         for (const file of files) {
+            const fileNameWithNoExtension = file.split(".")[0];
             const filePath = path.join(pagesLocation, file);
             let content = fs.readFileSync(filePath, "utf-8");
 
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    styleRemoverTransformer
-                ) as TransformerFactory<SourceFile>
-            );
-            //remove empty consecutive div and tags and just keep 1
-            //Do this 8 times means that it can handle upto 8 of this empty consecutive tags (one at each time)
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    divOptimizerTransformer
-                ) as TransformerFactory<SourceFile>,
-                8
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("div", "Box")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("button", "Button")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("a", "Link")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("input", "TextField")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("label", "FormLabel")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("p", "Typography")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("Fragment", "Box")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("Fragment", "Box")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("ul", "List")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("li", "ListItem")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("form", "Box", [
-                        {
-                            name: "component",
-                            value: "form"
-                        }
-                    ])
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("h2", "Typography", [
-                        {
-                            name: "variant",
-                            value: "h2"
-                        },
-                        {
-                            name: "component",
-                            value: "h2"
-                        }
-                    ])
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    tagReplacerTransformer("h1", "Typography", [
-                        {
-                            name: "variant",
-                            value: "h1"
-                        },
-                        {
-                            name: "component",
-                            value: "h1"
-                        }
-                    ])
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
+            const styleRemover = rionizTransformer(
+                styleRemoverTransformer
+            ) as TransformerFactory<SourceFile>;
+            const divOptimizer = rionizTransformer(
+                divOptimizerTransformer
+            ) as TransformerFactory<SourceFile>;
+            const tagReplacer = rionizTransformer(
+                tagReplacerTransformer([
+                    {
+                        elementToReplace: "div",
+                        replacement: "Box",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "button",
+                        replacement: "Button",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "a",
+                        replacement: "Link",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "input",
+                        replacement: "TextField",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "label",
+                        replacement: "FormLabel",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "p",
+                        replacement: "Typography",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "Fragment",
+                        replacement: "Box",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "ul",
+                        replacement: "List",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "li",
+                        replacement: "ListItem",
+                        extraAttribute: undefined
+                    },
+                    {
+                        elementToReplace: "form",
+                        replacement: "Box",
+                        extraAttribute: [
+                            {
+                                name: "component",
+                                value: "form"
+                            }
+                        ]
+                    },
+                    {
+                        elementToReplace: "h2",
+                        replacement: "Typography",
+                        extraAttribute: [
+                            {
+                                name: "variant",
+                                value: "h2"
+                            },
+                            {
+                                name: "component",
+                                value: "h2"
+                            }
+                        ]
+                    },
+                    {
+                        elementToReplace: "h1",
+                        replacement: "Typography",
+                        extraAttribute: [
+                            {
+                                name: "variant",
+                                value: "h1"
+                            },
+                            {
+                                name: "component",
+                                value: "h1"
+                            }
+                        ]
+                    }
+                ])
+            ) as TransformerFactory<SourceFile>;
             const imports = [
                 "Box",
                 "Button",
@@ -222,40 +184,40 @@ const makeStyleFile = (content: string, outputLocation: string) => {
                 "List",
                 "ListItem"
             ];
-            //Add all MUI imports
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    MuiAddImportTransformer(imports, "@mui/material")
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
+            const muiImportAdder = rionizTransformer(
+                MuiAddImportTransformer(imports, "@mui/material")
+            ) as TransformerFactory<SourceFile>;
+            const styleImportAdder = rionizTransformer(
+                MuiAddImportTransformer(
+                    ["styles"],
+                    `./styles/${fileNameWithNoExtension}.ts`
+                )
+            ) as TransformerFactory<SourceFile>;
+            const sxAdder = rionizTransformer(
+                sxAdderTransformer(fileNameWithNoExtension, imports)
+            ) as TransformerFactory<SourceFile>;
+            content = await transformTemplateToMaterialUiFormat(content, [
+                styleRemover,
+                //remove empty consecutive div and tags , do it 3 times so that upto 3 div can be removed
+                //It can be better in future
+                divOptimizer,
+                divOptimizer,
+                divOptimizer,
+                divOptimizer,
+                tagReplacer,
+                muiImportAdder,
+                styleImportAdder
+            ]);
+            //For some unknown reason we need to run it separately to work
+            content = await transformTemplateToMaterialUiFormat(content, [sxAdder]);
 
-            //Add import { styles } from "./styles/Login.ts";
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    MuiAddImportTransformer(
-                        ["styles"],
-                        `./styles/${file.replace("tsx", "ts")}`
-                    )
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
-            content = await transformTemplateToMaterialUiFormat(
-                content,
-                rionizTransformer(
-                    sxAdderTransformer(imports)
-                ) as TransformerFactory<SourceFile>,
-                1
-            );
             content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);
 
             //e.g make ./styles/Login.ts
             makeStyleFile(
                 content,
-                path.resolve(stylesLocation, "./", file.replace("tsx", "ts"))
+                path.resolve(stylesLocation, "./", `${fileNameWithNoExtension}.ts`)
             );
             fs.writeFileSync(path.resolve(outputLocation, file), content);
         }

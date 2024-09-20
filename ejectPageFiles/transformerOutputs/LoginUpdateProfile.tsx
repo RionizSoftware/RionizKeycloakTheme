@@ -59,8 +59,8 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginUpdateProfile_Box_1"
+                sx={styles.LoginUpdateProfile_Box_1}
             >
                 <UserProfileFormFields
                     kcContext={kcContext}
@@ -69,13 +69,13 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                     onIsFormSubmittableValueChange={setIsFormSubmittable}
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box id="LoginUpdateProfile_Box_2" sx={styles.LoginUpdateProfile_Box_2}>
                     <TextField
                         disabled={!isFormSubmittable}
                         type="submit"
                         value={msgStr("doSubmit")}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="LoginUpdateProfile_TextField_1"
+                        sx={styles.LoginUpdateProfile_TextField_1}
                     />
                     {isAppInitiatedAction && (
                         <Button
@@ -83,8 +83,8 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                             name="cancel-aia"
                             value="true"
                             formNoValidate
-                            id="Button_1"
-                            sx={styles.Button_1}
+                            id="LoginUpdateProfile_Button_1"
+                            sx={styles.LoginUpdateProfile_Button_1}
                         >
                             {msg("doCancel")}
                         </Button>

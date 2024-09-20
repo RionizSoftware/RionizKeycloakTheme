@@ -6,7 +6,10 @@ import {
     removeAttribute
 } from "./utility.ts";
 
-export const sxAdderTransformer = (materialTagsInUse: string[]): TransformerFunctions => {
+export const sxAdderTransformer = (
+    fileName: string,
+    materialTagsInUse: string[]
+): TransformerFunctions => {
     const tagsCount: Map<string, number> = new Map<string, number>();
 
     const isMaterialUiTag = (tag: string) => {
@@ -21,7 +24,7 @@ export const sxAdderTransformer = (materialTagsInUse: string[]): TransformerFunc
             : element.tagName.getText();
 
         const tagCount = tagsCount.get(tag) || 0;
-        const tagId = `${tag}_${tagCount + 1}`;
+        const tagId = `${fileName}_${tag}_${tagCount + 1}`;
         tagsCount.set(tag, tagCount + 1);
         let sxAttribute: ts.JsxAttribute | undefined;
         let idAttribute: ts.JsxAttribute | undefined;

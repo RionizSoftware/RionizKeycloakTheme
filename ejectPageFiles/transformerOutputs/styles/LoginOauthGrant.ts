@@ -1,14 +1,14 @@
 export const styles ={
-    "Typography_1": {},
-    "Box_1": {},
-    "List_1": {},
-    "ListItem_1": {},
-    "Link_1": {},
-    "Link_2": {},
-    "Box_2": {},
-    "TextField_1": {},
-    "Box_3": {},
-    "TextField_2": {},
-    "TextField_3": {},
-    "Box_4": {}
+    "LoginOauthGrant_Typography_1": {},
+    "LoginOauthGrant_Box_1": {},
+    "LoginOauthGrant_List_1": {},
+    "LoginOauthGrant_ListItem_1": {},
+    "LoginOauthGrant_Link_1": {},
+    "LoginOauthGrant_Link_2": {},
+    "LoginOauthGrant_Box_2": {},
+    "LoginOauthGrant_TextField_1": {},
+    "LoginOauthGrant_Box_3": {},
+    "LoginOauthGrant_TextField_2": {},
+    "LoginOauthGrant_TextField_3": {},
+    "LoginOauthGrant_Box_4": {}
 }

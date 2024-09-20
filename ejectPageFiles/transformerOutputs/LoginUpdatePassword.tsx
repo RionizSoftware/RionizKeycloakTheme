@@ -46,19 +46,22 @@ export default function LoginUpdatePassword(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="LoginUpdatePassword_Box_1"
+                sx={styles.LoginUpdatePassword_Box_1}
             >
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box id="LoginUpdatePassword_Box_2" sx={styles.LoginUpdatePassword_Box_2}>
                     <FormLabel
                         htmlFor="password-new"
-                        id="FormLabel_1"
-                        sx={styles.FormLabel_1}
+                        id="LoginUpdatePassword_FormLabel_1"
+                        sx={styles.LoginUpdatePassword_FormLabel_1}
                     >
                         {msg("passwordNew")}
                     </FormLabel>
 
-                    <Box id="Box_3" sx={styles.Box_3}>
+                    <Box
+                        id="LoginUpdatePassword_Box_3"
+                        sx={styles.LoginUpdatePassword_Box_3}
+                    >
                         <PasswordWrapper
                             kcClsx={kcClsx}
                             i18n={i18n}
@@ -73,8 +76,8 @@ export default function LoginUpdatePassword(
                                     "password",
                                     "password-confirm"
                                 )}
-                                id="TextField_1"
-                                sx={styles.TextField_1}
+                                id="LoginUpdatePassword_TextField_1"
+                                sx={styles.LoginUpdatePassword_TextField_1}
                             />
                         </PasswordWrapper>
 
@@ -90,16 +93,19 @@ export default function LoginUpdatePassword(
                     </Box>
                 </Box>
 
-                <Box id="Box_4" sx={styles.Box_4}>
+                <Box id="LoginUpdatePassword_Box_4" sx={styles.LoginUpdatePassword_Box_4}>
                     <FormLabel
                         htmlFor="password-confirm"
-                        id="FormLabel_2"
-                        sx={styles.FormLabel_2}
+                        id="LoginUpdatePassword_FormLabel_2"
+                        sx={styles.LoginUpdatePassword_FormLabel_2}
                     >
                         {msg("passwordConfirm")}
                     </FormLabel>
 
-                    <Box id="Box_5" sx={styles.Box_5}>
+                    <Box
+                        id="LoginUpdatePassword_Box_5"
+                        sx={styles.LoginUpdatePassword_Box_5}
+                    >
                         <PasswordWrapper
                             kcClsx={kcClsx}
                             i18n={i18n}
@@ -114,8 +120,8 @@ export default function LoginUpdatePassword(
                                     "password",
                                     "password-confirm"
                                 )}
-                                id="TextField_2"
-                                sx={styles.TextField_2}
+                                id="LoginUpdatePassword_TextField_2"
+                                sx={styles.LoginUpdatePassword_TextField_2}
                             />
                         </PasswordWrapper>
 
@@ -130,22 +136,22 @@ export default function LoginUpdatePassword(
                         )}
                     </Box>
                 </Box>
-                <Box id="Box_6" sx={styles.Box_6}>
+                <Box id="LoginUpdatePassword_Box_6" sx={styles.LoginUpdatePassword_Box_6}>
                     <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
 
                     <TextField
                         type="submit"
                         value={msgStr("doSubmit")}
-                        id="TextField_3"
-                        sx={styles.TextField_3}
+                        id="LoginUpdatePassword_TextField_3"
+                        sx={styles.LoginUpdatePassword_TextField_3}
                     />
                     {isAppInitiatedAction && (
                         <Button
                             type="submit"
                             name="cancel-aia"
                             value="true"
-                            id="Button_1"
-                            sx={styles.Button_1}
+                            id="LoginUpdatePassword_Button_1"
+                            sx={styles.LoginUpdatePassword_Button_1}
                         >
                             {msg("doCancel")}
                         </Button>
@@ -159,15 +165,18 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="Box_7" sx={styles.Box_7}>
-            <FormLabel id="FormLabel_3" sx={styles.FormLabel_3}>
+        <Box id="LoginUpdatePassword_Box_7" sx={styles.LoginUpdatePassword_Box_7}>
+            <FormLabel
+                id="LoginUpdatePassword_FormLabel_3"
+                sx={styles.LoginUpdatePassword_FormLabel_3}
+            >
                 <TextField
                     type="checkbox"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
-                    id="TextField_4"
-                    sx={styles.TextField_4}
+                    id="LoginUpdatePassword_TextField_4"
+                    sx={styles.LoginUpdatePassword_TextField_4}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>
@@ -192,15 +201,15 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="Box_8" sx={styles.Box_8}>
+        <Box id="LoginUpdatePassword_Box_8" sx={styles.LoginUpdatePassword_Box_8}>
             {children}
             <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
-                id="Button_2"
-                sx={styles.Button_2}
+                id="LoginUpdatePassword_Button_2"
+                sx={styles.LoginUpdatePassword_Button_2}
             >
                 <i aria-hidden />
             </Button>

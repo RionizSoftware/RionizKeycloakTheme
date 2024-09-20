@@ -40,29 +40,29 @@ export default function Terms(
             displayMessage={false}
             headerNode={msg("termsTitle")}
         >
-            <Box id="Box_1" sx={styles.Box_1}>
+            <Box id="Terms_Box_1" sx={styles.Terms_Box_1}>
                 {msg("termsText")}
             </Box>
             <Box
                 action={url.loginAction}
                 method="POST"
                 component="form"
-                id="Box_2"
-                sx={styles.Box_2}
+                id="Terms_Box_2"
+                sx={styles.Terms_Box_2}
             >
                 <TextField
                     name="accept"
                     type="submit"
                     value={msgStr("doAccept")}
-                    id="TextField_1"
-                    sx={styles.TextField_1}
+                    id="Terms_TextField_1"
+                    sx={styles.Terms_TextField_1}
                 />
                 <TextField
                     name="cancel"
                     type="submit"
                     value={msgStr("doDecline")}
-                    id="TextField_2"
-                    sx={styles.TextField_2}
+                    id="Terms_TextField_2"
+                    sx={styles.Terms_TextField_2}
                 />
             </Box>
         </Template>

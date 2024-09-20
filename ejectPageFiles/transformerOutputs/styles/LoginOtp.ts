@@ -1,13 +1,13 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "Box_3": {},
-    "TextField_1": {},
-    "FormLabel_1": {},
-    "Box_4": {},
-    "FormLabel_2": {},
-    "Box_5": {},
-    "TextField_2": {},
-    "Box_6": {},
-    "TextField_3": {}
+    "LoginOtp_Box_1": {},
+    "LoginOtp_Box_2": {},
+    "LoginOtp_Box_3": {},
+    "LoginOtp_TextField_1": {},
+    "LoginOtp_FormLabel_1": {},
+    "LoginOtp_Box_4": {},
+    "LoginOtp_FormLabel_2": {},
+    "LoginOtp_Box_5": {},
+    "LoginOtp_TextField_2": {},
+    "LoginOtp_Box_6": {},
+    "LoginOtp_TextField_3": {}
 }

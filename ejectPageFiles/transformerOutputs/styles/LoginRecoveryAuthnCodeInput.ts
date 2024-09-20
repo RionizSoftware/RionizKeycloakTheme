@@ -1,9 +1,9 @@
 export const styles ={
-    "Box_1": {},
-    "Box_2": {},
-    "FormLabel_1": {},
-    "Box_3": {},
-    "TextField_1": {},
-    "Box_4": {},
-    "TextField_2": {}
+    "LoginRecoveryAuthnCodeInput_Box_1": {},
+    "LoginRecoveryAuthnCodeInput_Box_2": {},
+    "LoginRecoveryAuthnCodeInput_FormLabel_1": {},
+    "LoginRecoveryAuthnCodeInput_Box_3": {},
+    "LoginRecoveryAuthnCodeInput_TextField_1": {},
+    "LoginRecoveryAuthnCodeInput_Box_4": {},
+    "LoginRecoveryAuthnCodeInput_TextField_2": {}
 }

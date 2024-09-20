@@ -34,7 +34,10 @@ export default function LoginIdpLinkEmail(
             classes={classes}
             headerNode={msg("emailLinkIdpTitle", idpAlias)}
         >
-            <Typography id="Typography_1" sx={styles.Typography_1}>
+            <Typography
+                id="LoginIdpLinkEmail_Typography_1"
+                sx={styles.LoginIdpLinkEmail_Typography_1}
+            >
                 {msg(
                     "emailLinkIdp1",
                     idpAlias,
@@ -42,16 +45,30 @@ export default function LoginIdpLinkEmail(
                     realm.displayName
                 )}
             </Typography>
-            <Typography id="Typography_2" sx={styles.Typography_2}>
+            <Typography
+                id="LoginIdpLinkEmail_Typography_2"
+                sx={styles.LoginIdpLinkEmail_Typography_2}
+            >
                 {msg("emailLinkIdp2")}{" "}
-                <Link href={url.loginAction} id="Link_1" sx={styles.Link_1}>
+                <Link
+                    href={url.loginAction}
+                    id="LoginIdpLinkEmail_Link_1"
+                    sx={styles.LoginIdpLinkEmail_Link_1}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 {msg("emailLinkIdp3")}
             </Typography>
-            <Typography id="Typography_3" sx={styles.Typography_3}>
+            <Typography
+                id="LoginIdpLinkEmail_Typography_3"
+                sx={styles.LoginIdpLinkEmail_Typography_3}
+            >
                 {msg("emailLinkIdp4")}{" "}
-                <Link href={url.loginAction} id="Link_2" sx={styles.Link_2}>
+                <Link
+                    href={url.loginAction}
+                    id="LoginIdpLinkEmail_Link_2"
+                    sx={styles.LoginIdpLinkEmail_Link_2}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 {msg("emailLinkIdp5")}

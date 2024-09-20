@@ -59,8 +59,8 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="IdpReviewUserProfile_Box_1"
+                sx={styles.IdpReviewUserProfile_Box_1}
             >
                 <UserProfileFormFields
                     kcContext={kcContext}
@@ -69,13 +69,16 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                     kcClsx={kcClsx}
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
-                <Box id="Box_2" sx={styles.Box_2}>
+                <Box
+                    id="IdpReviewUserProfile_Box_2"
+                    sx={styles.IdpReviewUserProfile_Box_2}
+                >
                     <TextField
                         type="submit"
                         value={msgStr("doSubmit")}
                         disabled={!isFomSubmittable}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="IdpReviewUserProfile_TextField_1"
+                        sx={styles.IdpReviewUserProfile_TextField_1}
                     />
                 </Box>
             </Box>

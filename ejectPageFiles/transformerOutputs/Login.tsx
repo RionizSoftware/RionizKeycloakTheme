@@ -56,13 +56,13 @@ export default function Login(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <Box id="Box_1" sx={styles.Box_1}>
+                <Box id="Login_Box_1" sx={styles.Login_Box_1}>
                     {msg("noAccount")}{" "}
                     <Link
                         tabIndex={8}
                         href={url.registrationUrl}
-                        id="Link_1"
-                        sx={styles.Link_1}
+                        id="Login_Link_1"
+                        sx={styles.Login_Link_1}
                     >
                         {msg("doRegister")}
                     </Link>
@@ -73,28 +73,28 @@ export default function Login(
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <Box id="Box_2" sx={styles.Box_2}>
+                            <Box id="Login_Box_2" sx={styles.Login_Box_2}>
                                 <hr />
                                 <Typography
                                     variant="h2"
                                     component="h2"
-                                    id="Typography_1"
-                                    sx={styles.Typography_1}
+                                    id="Login_Typography_1"
+                                    sx={styles.Login_Typography_1}
                                 >
                                     {msg("identity-provider-login-label")}
                                 </Typography>
-                                <List id="List_1" sx={styles.List_1}>
+                                <List id="Login_List_1" sx={styles.Login_List_1}>
                                     {social.providers.map((...[p, , providers]) => (
                                         <ListItem
                                             key={p.alias}
-                                            id="ListItem_1"
-                                            sx={styles.ListItem_1}
+                                            id="Login_ListItem_1"
+                                            sx={styles.Login_ListItem_1}
                                         >
                                             <Link
                                                 type="button"
                                                 href={p.loginUrl}
-                                                id="Link_2"
-                                                sx={styles.Link_2}
+                                                id="Login_Link_2"
+                                                sx={styles.Login_Link_2}
                                             >
                                                 {p.iconClasses && (
                                                     <i aria-hidden="true"></i>
@@ -113,7 +113,7 @@ export default function Login(
                 </>
             }
         >
-            <Box id="Box_3" sx={styles.Box_3}>
+            <Box id="Login_Box_3" sx={styles.Login_Box_3}>
                 {realm.password && (
                     <Box
                         onSubmit={() => {
@@ -123,15 +123,15 @@ export default function Login(
                         action={url.loginAction}
                         method="post"
                         component="form"
-                        id="Box_4"
-                        sx={styles.Box_4}
+                        id="Login_Box_4"
+                        sx={styles.Login_Box_4}
                     >
                         {!usernameHidden && (
-                            <Box id="Box_5" sx={styles.Box_5}>
+                            <Box id="Login_Box_5" sx={styles.Login_Box_5}>
                                 <FormLabel
                                     htmlFor="username"
-                                    id="FormLabel_1"
-                                    sx={styles.FormLabel_1}
+                                    id="Login_FormLabel_1"
+                                    sx={styles.Login_FormLabel_1}
                                 >
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
@@ -150,8 +150,8 @@ export default function Login(
                                         "username",
                                         "password"
                                     )}
-                                    id="TextField_1"
-                                    sx={styles.TextField_1}
+                                    id="Login_TextField_1"
+                                    sx={styles.Login_TextField_1}
                                 />
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
@@ -168,11 +168,11 @@ export default function Login(
                             </Box>
                         )}
 
-                        <Box id="Box_6" sx={styles.Box_6}>
+                        <Box id="Login_Box_6" sx={styles.Login_Box_6}>
                             <FormLabel
                                 htmlFor="password"
-                                id="FormLabel_2"
-                                sx={styles.FormLabel_2}
+                                id="Login_FormLabel_2"
+                                sx={styles.Login_FormLabel_2}
                             >
                                 {msg("password")}
                             </FormLabel>
@@ -190,8 +190,8 @@ export default function Login(
                                         "username",
                                         "password"
                                     )}
-                                    id="TextField_2"
-                                    sx={styles.TextField_2}
+                                    id="Login_TextField_2"
+                                    sx={styles.Login_TextField_2}
                                 />
                             </PasswordWrapper>
                             {usernameHidden &&
@@ -209,17 +209,20 @@ export default function Login(
                                 )}
                         </Box>
 
-                        <Box id="Box_7" sx={styles.Box_7}>
+                        <Box id="Login_Box_7" sx={styles.Login_Box_7}>
                             {realm.rememberMe && !usernameHidden && (
-                                <Box id="Box_8" sx={styles.Box_8}>
-                                    <FormLabel id="FormLabel_3" sx={styles.FormLabel_3}>
+                                <Box id="Login_Box_8" sx={styles.Login_Box_8}>
+                                    <FormLabel
+                                        id="Login_FormLabel_3"
+                                        sx={styles.Login_FormLabel_3}
+                                    >
                                         <TextField
                                             tabIndex={5}
                                             name="rememberMe"
                                             type="checkbox"
                                             defaultChecked={!!login.rememberMe}
-                                            id="TextField_3"
-                                            sx={styles.TextField_3}
+                                            id="Login_TextField_3"
+                                            sx={styles.Login_TextField_3}
                                         />{" "}
                                         {msg("rememberMe")}
                                     </FormLabel>
@@ -231,8 +234,8 @@ export default function Login(
                                     <Link
                                         tabIndex={6}
                                         href={url.loginResetCredentialsUrl}
-                                        id="Link_3"
-                                        sx={styles.Link_3}
+                                        id="Login_Link_3"
+                                        sx={styles.Login_Link_3}
                                     >
                                         {msg("doForgotPassword")}
                                     </Link>
@@ -240,13 +243,13 @@ export default function Login(
                             )}
                         </Box>
 
-                        <Box id="Box_9" sx={styles.Box_9}>
+                        <Box id="Login_Box_9" sx={styles.Login_Box_9}>
                             <TextField
                                 type="hidden"
                                 name="credentialId"
                                 value={auth.selectedCredential}
-                                id="TextField_4"
-                                sx={styles.TextField_4}
+                                id="Login_TextField_4"
+                                sx={styles.Login_TextField_4}
                             />
                             <TextField
                                 tabIndex={7}
@@ -254,8 +257,8 @@ export default function Login(
                                 name="login"
                                 type="submit"
                                 value={msgStr("doLogIn")}
-                                id="TextField_5"
-                                sx={styles.TextField_5}
+                                id="Login_TextField_5"
+                                sx={styles.Login_TextField_5}
                             />
                         </Box>
                     </Box>
@@ -282,15 +285,15 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="Box_10" sx={styles.Box_10}>
+        <Box id="Login_Box_10" sx={styles.Login_Box_10}>
             {children}
             <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
-                id="Button_1"
-                sx={styles.Button_1}
+                id="Login_Button_1"
+                sx={styles.Login_Button_1}
             >
                 <i aria-hidden />
             </Button>

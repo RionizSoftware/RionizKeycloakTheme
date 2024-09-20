@@ -43,18 +43,21 @@ export default function DeleteAccountConfirm(
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="Box_1"
-                sx={styles.Box_1}
+                id="DeleteAccountConfirm_Box_1"
+                sx={styles.DeleteAccountConfirm_Box_1}
             >
                 <Box
                     style={{ marginTop: "0", marginBottom: "30px" }}
-                    id="Box_2"
-                    sx={styles.Box_2}
+                    id="DeleteAccountConfirm_Box_2"
+                    sx={styles.DeleteAccountConfirm_Box_2}
                 >
                     <span></span>
                     {msg("irreversibleAction")}
                 </Box>
-                <Typography id="Typography_1" sx={styles.Typography_1}>
+                <Typography
+                    id="DeleteAccountConfirm_Typography_1"
+                    sx={styles.DeleteAccountConfirm_Typography_1}
+                >
                     {msg("deletingImplies")}
                 </Typography>
                 <List
@@ -63,25 +66,37 @@ export default function DeleteAccountConfirm(
                         listStyle: "disc",
                         listStylePosition: "inside"
                     }}
-                    id="List_1"
-                    sx={styles.List_1}
+                    id="DeleteAccountConfirm_List_1"
+                    sx={styles.DeleteAccountConfirm_List_1}
                 >
-                    <ListItem id="ListItem_1" sx={styles.ListItem_1}>
+                    <ListItem
+                        id="DeleteAccountConfirm_ListItem_1"
+                        sx={styles.DeleteAccountConfirm_ListItem_1}
+                    >
                         {msg("loggingOutImmediately")}
                     </ListItem>
-                    <ListItem id="ListItem_2" sx={styles.ListItem_2}>
+                    <ListItem
+                        id="DeleteAccountConfirm_ListItem_2"
+                        sx={styles.DeleteAccountConfirm_ListItem_2}
+                    >
                         {msg("errasingData")}
                     </ListItem>
                 </List>
-                <Typography id="Typography_2" sx={styles.Typography_2}>
+                <Typography
+                    id="DeleteAccountConfirm_Typography_2"
+                    sx={styles.DeleteAccountConfirm_Typography_2}
+                >
                     {msg("finalDeletionConfirmation")}
                 </Typography>
-                <Box id="Box_3" sx={styles.Box_3}>
+                <Box
+                    id="DeleteAccountConfirm_Box_3"
+                    sx={styles.DeleteAccountConfirm_Box_3}
+                >
                     <TextField
                         type="submit"
                         value={msgStr("doConfirmDelete")}
-                        id="TextField_1"
-                        sx={styles.TextField_1}
+                        id="DeleteAccountConfirm_TextField_1"
+                        sx={styles.DeleteAccountConfirm_TextField_1}
                     />
                     {triggered_from_aia && (
                         <Button
@@ -89,8 +104,8 @@ export default function DeleteAccountConfirm(
                             type="submit"
                             name="cancel-aia"
                             value="true"
-                            id="Button_1"
-                            sx={styles.Button_1}
+                            id="DeleteAccountConfirm_Button_1"
+                            sx={styles.DeleteAccountConfirm_Button_1}
                         >
                             {msgStr("doCancel")}
                         </Button>
