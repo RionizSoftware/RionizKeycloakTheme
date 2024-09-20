@@ -1,16 +1,16 @@
 {
-    "name": "keycloakify-starter",
-    "version": "10.0.5",
-    "description": "Starter for Keycloakify 10",
+    "name": "rioniz-theme-generator",
+    "version": "1",
+    "description": "",
     "repository": {
         "type": "git",
-        "url": "git://github.com/codegouvfr/keycloakify-starter.git"
+        "url": "git://github.com/RionizSoftware/keycloakify-starter.git"
     },
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "build-keycloak-theme": "npm run build && keycloakify build",
+        "build-keycloak-theme": "npx run build && keycloakify build",
         "storybook": "storybook dev -p 6006",
         "format": "prettier . --write",
         "rionizMuiConvertor": "tsx src/codegen/rionizMuiConvertor.ts"
@@ -34,8 +34,7 @@
         "recast": "^0.23.9",
         "stylis": "4.3.4",
         "stylis-plugin-rtl": "2.1.1",
-        "typescript": "^5.6.2",
-        "vite": "5.4.4"
+        "typescript": "5.6.2"
     },
     "devDependencies": {
         "storybook": "^8.1.10",
@@ -52,6 +51,6 @@
         "eslint-plugin-storybook": "^0.8.0",
         "prettier": "3.3.1",
         "tsx": "4.19.1",
-        "vite": "^5.0.8"
+        "vite": "5.4.6"
     }
 }

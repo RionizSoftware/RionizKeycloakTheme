@@ -5,7 +5,6 @@ import {
     createSxForTag,
     removeAttribute
 } from "./utility.ts";
-import { addImports } from "./muImportAdder.ts";
 
 export const sxAdderTransformer = (materialTagsInUse: string[]): TransformerFunctions => {
     const tagsCount: Map<string, number> = new Map<string, number>();

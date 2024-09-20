@@ -66,8 +66,14 @@ const makeStyleFile = (content: string, outputLocation: string) => {
 };
 
 (async (): Promise<void> => {
-    const pagesLocation = path.resolve(process.cwd(), "./transformerInputs");
-    const outputLocation = path.resolve(process.cwd(), "./transformerOutputs");
+    const pagesLocation = path.resolve(
+        process.cwd(),
+        "./ejectPageFiles/transformerInputs"
+    );
+    const outputLocation = path.resolve(
+        process.cwd(),
+        "./ejectPageFiles/transformerOutputs"
+    );
     const stylesLocation = path.resolve(outputLocation, "./styles");
     if (!fs.existsSync(outputLocation)) fs.mkdirSync(outputLocation);
     if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation);

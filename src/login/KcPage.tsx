@@ -3,11 +3,13 @@ import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
-import Template from "./Template.tsx";
-import UserProfileFormFields from "./UserProfileFormFields.tsx";
 import { RionizRoot } from "../rioniz/RionizRoot.tsx";
-const Login = lazy(() => import("./pages/Login"));
+import Template from "./Template";
+const UserProfileFormFields = lazy(
+    () => import("keycloakify/login/UserProfileFormFields")
+);
 
+const Login = lazy(() => import("./pages/Login"));
 const doMakeUserConfirmPassword = true;
 export default function KcPage(props: { kcContext: KcContext }) {
     const { kcContext } = props;
@@ -25,7 +27,6 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                     doUseDefaultCss={true}
                                 />
                             );
-
                         default:
                             return (
                                 <DefaultPage

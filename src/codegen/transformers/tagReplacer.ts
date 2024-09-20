@@ -1,4 +1,4 @@
-import ts, { SyntaxKind } from "typescript";
+import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
 import { createStringAttributeForTag } from "./utility.ts";
 export const tagReplacerTransformer = (

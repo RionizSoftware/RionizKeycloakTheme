@@ -11,9 +11,29 @@ import type { UserProfileFormFieldsProps } from "keycloakify/login/UserProfileFo
 import type { Attribute } from "keycloakify/login/KcContext";
 import type { KcContext } from "./KcContext";
 import type { I18n } from "./i18n";
-import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem } from "@mui/material";
-export default function UserProfileFormFields(props: UserProfileFormFieldsProps<KcContext, I18n>) {
-    const { kcContext, i18n, kcClsx, onIsFormSubmittableValueChange, doMakeUserConfirmPassword, BeforeField, AfterField } = props;
+import {
+    Box,
+    Button,
+    Link,
+    TextField,
+    FormLabel,
+    Typography,
+    List,
+    ListItem
+} from "@mui/material";
+import { styles } from "./styles/UserProfileFormFields.ts";
+export default function UserProfileFormFields(
+    props: UserProfileFormFieldsProps<KcContext, I18n>
+) {
+    const {
+        kcContext,
+        i18n,
+        kcClsx,
+        onIsFormSubmittableValueChange,
+        doMakeUserConfirmPassword,
+        BeforeField,
+        AfterField
+    } = props;
     const { advancedMsg } = i18n;
     const {
         formState: { formFieldStates, isFormSubmittable },
@@ -31,8 +51,13 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
         <>
             {formFieldStates.map(({ attribute, displayableErrors, valueOrValues }) => {
                 return (
-                    <Box key={attribute.name}>
-                        <GroupLabel attribute={attribute} groupNameRef={groupNameRef} i18n={i18n} kcClsx={kcClsx} />
+                    <Box key={attribute.name} id="Box_1" sx={styles.Box_1}>
+                        <GroupLabel
+                            attribute={attribute}
+                            groupNameRef={groupNameRef}
+                            i18n={i18n}
+                            kcClsx={kcClsx}
+                        />
                         {BeforeField !== undefined && (
                             <BeforeField
                                 attribute={attribute}
@@ -45,17 +70,32 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
                         )}
                         <Box
                             style={{
-                                display: attribute.name === "password-confirm" && !doMakeUserConfirmPassword ? "none" : undefined
+                                display:
+                                    attribute.name === "password-confirm" &&
+                                    !doMakeUserConfirmPassword
+                                        ? "none"
+                                        : undefined
                             }}
+                            id="Box_2"
+                            sx={styles.Box_2}
                         >
-                            <Box>
-                                <FormLabel htmlFor={attribute.name}>{advancedMsg(attribute.displayName ?? "")}</FormLabel>
+                            <Box id="Box_3" sx={styles.Box_3}>
+                                <FormLabel
+                                    htmlFor={attribute.name}
+                                    id="FormLabel_1"
+                                    sx={styles.FormLabel_1}
+                                >
+                                    {advancedMsg(attribute.displayName ?? "")}
+                                </FormLabel>
                                 {attribute.required && <> *</>}
                             </Box>
-                            <Box>
-                                {attribute.annotations.inputHelperTextBefore !== undefined && (
-                                    <Box id={`form-help-text-before-${attribute.name}`} aria-live="polite">
-                                        {advancedMsg(attribute.annotations.inputHelperTextBefore)}
+                            <Box id="Box_4" sx={styles.Box_4}>
+                                {attribute.annotations.inputHelperTextBefore !==
+                                    undefined && (
+                                    <Box aria-live="polite" id="Box_5" sx={styles.Box_5}>
+                                        {advancedMsg(
+                                            attribute.annotations.inputHelperTextBefore
+                                        )}
                                     </Box>
                                 )}
                                 <InputFieldByType
@@ -66,10 +106,18 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
                                     kcClsx={kcClsx}
                                     i18n={i18n}
                                 />
-                                <FieldErrors attribute={attribute} displayableErrors={displayableErrors} kcClsx={kcClsx} fieldIndex={undefined} />
-                                {attribute.annotations.inputHelperTextAfter !== undefined && (
-                                    <Box id={`form-help-text-after-${attribute.name}`} aria-live="polite">
-                                        {advancedMsg(attribute.annotations.inputHelperTextAfter)}
+                                <FieldErrors
+                                    attribute={attribute}
+                                    displayableErrors={displayableErrors}
+                                    kcClsx={kcClsx}
+                                    fieldIndex={undefined}
+                                />
+                                {attribute.annotations.inputHelperTextAfter !==
+                                    undefined && (
+                                    <Box aria-live="polite" id="Box_6" sx={styles.Box_6}>
+                                        {advancedMsg(
+                                            attribute.annotations.inputHelperTextAfter
+                                        )}
                                     </Box>
                                 )}
 
@@ -107,23 +155,41 @@ function GroupLabel(props: {
         if (groupNameRef.current !== "") {
             assert(attribute.group !== undefined);
             return (
-                <Box {...Object.fromEntries(Object.entries(attribute.group.html5DataAnnotations).map(([key, value]) => [`data-${key}`, value]))}>
+                <Box
+                    {...Object.fromEntries(
+                        Object.entries(attribute.group.html5DataAnnotations).map(
+                            ([key, value]) => [`data-${key}`, value]
+                        )
+                    )}
+                    id="Box_7"
+                    sx={styles.Box_7}
+                >
                     {(() => {
                         const groupDisplayHeader = attribute.group.displayHeader ?? "";
-                        const groupHeaderText = groupDisplayHeader !== "" ? advancedMsg(groupDisplayHeader) : attribute.group.name;
+                        const groupHeaderText =
+                            groupDisplayHeader !== ""
+                                ? advancedMsg(groupDisplayHeader)
+                                : attribute.group.name;
                         return (
-                            <Box>
-                                <FormLabel id={`header-${attribute.group.name}`}>{groupHeaderText}</FormLabel>
+                            <Box id="Box_8" sx={styles.Box_8}>
+                                <FormLabel id="FormLabel_2" sx={styles.FormLabel_2}>
+                                    {groupHeaderText}
+                                </FormLabel>
                             </Box>
                         );
                     })()}
                     {(() => {
-                        const groupDisplayDescription = attribute.group.displayDescription ?? "";
+                        const groupDisplayDescription =
+                            attribute.group.displayDescription ?? "";
                         if (groupDisplayDescription !== "") {
-                            const groupDescriptionText = advancedMsg(groupDisplayDescription);
+                            const groupDescriptionText = advancedMsg(
+                                groupDisplayDescription
+                            );
                             return (
-                                <Box>
-                                    <FormLabel id={`description-${attribute.group.name}`}>{groupDescriptionText}</FormLabel>
+                                <Box id="Box_9" sx={styles.Box_9}>
+                                    <FormLabel id="FormLabel_3" sx={styles.FormLabel_3}>
+                                        {groupDescriptionText}
+                                    </FormLabel>
                                 </Box>
                             );
                         }
@@ -135,18 +201,28 @@ function GroupLabel(props: {
     }
     return null;
 }
-function FieldErrors(props: { attribute: Attribute; displayableErrors: FormFieldError[]; fieldIndex: number | undefined; kcClsx: KcClsx }) {
+function FieldErrors(props: {
+    attribute: Attribute;
+    displayableErrors: FormFieldError[];
+    fieldIndex: number | undefined;
+    kcClsx: KcClsx;
+}) {
     const { attribute, fieldIndex, kcClsx } = props;
-    const displayableErrors = props.displayableErrors.filter(error => error.fieldIndex === fieldIndex);
+    const displayableErrors = props.displayableErrors.filter(
+        error => error.fieldIndex === fieldIndex
+    );
     if (displayableErrors.length === 0) {
         return null;
     }
     return (
-        <span id={`input-error-${attribute.name}${fieldIndex === undefined ? "" : `-${fieldIndex}`}`} aria-live="polite">
+        <span
+            id={`input-error-${attribute.name}${fieldIndex === undefined ? "" : `-${fieldIndex}`}`}
+            aria-live="polite"
+        >
             {displayableErrors
                 .filter(error => error.fieldIndex === fieldIndex)
                 .map(({ errorMessage }, i, arr) => (
-                    <Box key={i}>
+                    <Box key={i} id="Box_10" sx={styles.Box_10}>
                         {errorMessage}
                         {arr.length - 1 !== i && <br />}
                     </Box>
@@ -186,7 +262,11 @@ function InputFieldByType(props: InputFieldByTypeProps) {
             const inputNode = <InputTag {...props} fieldIndex={undefined} />;
             if (attribute.name === "password" || attribute.name === "password-confirm") {
                 return (
-                    <PasswordWrapper kcClsx={props.kcClsx} i18n={props.i18n} passwordInputId={attribute.name}>
+                    <PasswordWrapper
+                        kcClsx={props.kcClsx}
+                        i18n={props.i18n}
+                        passwordInputId={attribute.name}
+                    >
                         {inputNode}
                     </PasswordWrapper>
                 );
@@ -195,23 +275,33 @@ function InputFieldByType(props: InputFieldByTypeProps) {
         }
     }
 }
-function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
+function PasswordWrapper(props: {
+    kcClsx: KcClsx;
+    i18n: I18n;
+    passwordInputId: string;
+    children: JSX.Element;
+}) {
     const { kcClsx, i18n, passwordInputId, children } = props;
     const { msgStr } = i18n;
-    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer((isPasswordRevealed: boolean) => !isPasswordRevealed, false);
+    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer(
+        (isPasswordRevealed: boolean) => !isPasswordRevealed,
+        false
+    );
     useEffect(() => {
         const passwordInputElement = document.getElementById(passwordInputId);
         assert(passwordInputElement instanceof HTMLInputElement);
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box>
+        <Box id="Box_11" sx={styles.Box_11}>
             {children}
             <Button
                 type="button"
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
+                id="Button_1"
+                sx={styles.Button_1}
             >
                 <i aria-hidden />
             </Button>
@@ -223,7 +313,15 @@ function InputTag(
         fieldIndex: number | undefined;
     }
 ) {
-    const { attribute, fieldIndex, kcClsx, dispatchFormAction, valueOrValues, i18n, displayableErrors } = props;
+    const {
+        attribute,
+        fieldIndex,
+        kcClsx,
+        dispatchFormAction,
+        valueOrValues,
+        i18n,
+        displayableErrors
+    } = props;
     const { advancedMsgStr } = i18n;
     return (
         <>
@@ -235,7 +333,6 @@ function InputTag(
                     }
                     return inputType ?? "text";
                 })()}
-                id={attribute.name}
                 name={attribute.name}
                 value={(() => {
                     if (fieldIndex !== undefined) {
@@ -245,24 +342,41 @@ function InputTag(
                     assert(typeof valueOrValues === "string");
                     return valueOrValues;
                 })()}
-                aria-invalid={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}
+                aria-invalid={
+                    displayableErrors.find(error => error.fieldIndex === fieldIndex) !==
+                    undefined
+                }
                 disabled={attribute.readOnly}
                 autoComplete={attribute.autocomplete}
                 placeholder={
-                    attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)
+                    attribute.annotations.inputTypePlaceholder === undefined
+                        ? undefined
+                        : advancedMsgStr(attribute.annotations.inputTypePlaceholder)
                 }
                 pattern={attribute.annotations.inputTypePattern}
-                size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}
+                size={
+                    attribute.annotations.inputTypeSize === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeSize}`)
+                }
                 maxLength={
-                    attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
+                    attribute.annotations.inputTypeMaxlength === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
                 }
                 minLength={
-                    attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)
+                    attribute.annotations.inputTypeMinlength === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeMinlength}`)
                 }
                 max={attribute.annotations.inputTypeMax}
                 min={attribute.annotations.inputTypeMin}
                 step={attribute.annotations.inputTypeStep}
-                {...Object.fromEntries(Object.entries(attribute.html5DataAnnotations ?? {}).map(([key, value]) => [`data-${key}`, value]))}
+                {...Object.fromEntries(
+                    Object.entries(attribute.html5DataAnnotations ?? {}).map(
+                        ([key, value]) => [`data-${key}`, value]
+                    )
+                )}
                 onChange={event =>
                     dispatchFormAction({
                         action: "update",
@@ -288,6 +402,8 @@ function InputTag(
                         fieldIndex: fieldIndex
                     })
                 }
+                id="TextField_1"
+                sx={styles.TextField_1}
             />
             {(() => {
                 if (fieldIndex === undefined) {
@@ -297,7 +413,12 @@ function InputTag(
                 const values = valueOrValues;
                 return (
                     <>
-                        <FieldErrors attribute={attribute} kcClsx={kcClsx} displayableErrors={displayableErrors} fieldIndex={fieldIndex} />
+                        <FieldErrors
+                            attribute={attribute}
+                            kcClsx={kcClsx}
+                            displayableErrors={displayableErrors}
+                            fieldIndex={fieldIndex}
+                        />
                         <AddRemoveButtonsMultiValuedAttribute
                             attribute={attribute}
                             values={values}
@@ -338,7 +459,6 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
             {hasRemove && (
                 <>
                     <Button
-                        id={`kc-remove${idPostfix}`}
                         type="button"
                         onClick={() =>
                             dispatchFormAction({
@@ -347,6 +467,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                                 valueOrValues: values.filter((_, i) => i !== fieldIndex)
                             })
                         }
+                        id="Button_2"
+                        sx={styles.Button_2}
                     >
                         {msg("remove")}
                     </Button>
@@ -355,7 +477,6 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
             )}
             {hasAdd && (
                 <Button
-                    id={`kc-add${idPostfix}`}
                     type="button"
                     onClick={() =>
                         dispatchFormAction({
@@ -364,6 +485,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                             valueOrValues: [...values, ""]
                         })
                     }
+                    id="Button_3"
+                    sx={styles.Button_3}
                 >
                     {msg("addValue")}
                 </Button>
@@ -376,7 +499,9 @@ function InputTagSelects(props: InputFieldByTypeProps) {
     const { advancedMsg } = props.i18n;
     const { classDiv, classInput, classLabel, inputType } = (() => {
         const { inputType } = attribute.annotations;
-        assert(inputType === "select-radiobuttons" || inputType === "multiselect-checkboxes");
+        assert(
+            inputType === "select-radiobuttons" || inputType === "multiselect-checkboxes"
+        );
         switch (inputType) {
             case "select-radiobuttons":
                 return {
@@ -421,15 +546,18 @@ function InputTagSelects(props: InputFieldByTypeProps) {
     return (
         <>
             {options.map(option => (
-                <Box key={option}>
+                <Box key={option} id="Box_12" sx={styles.Box_12}>
                     <TextField
                         type={inputType}
-                        id={`${attribute.name}-${option}`}
                         name={attribute.name}
                         value={option}
                         aria-invalid={props.displayableErrors.length !== 0}
                         disabled={attribute.readOnly}
-                        checked={valueOrValues instanceof Array ? valueOrValues.includes(option) : valueOrValues === option}
+                        checked={
+                            valueOrValues instanceof Array
+                                ? valueOrValues.includes(option)
+                                : valueOrValues === option
+                        }
                         onChange={event =>
                             dispatchFormAction({
                                 action: "update",
@@ -441,7 +569,10 @@ function InputTagSelects(props: InputFieldByTypeProps) {
                                         if (isChecked) {
                                             newValues.push(option);
                                         } else {
-                                            newValues.splice(newValues.indexOf(option), 1);
+                                            newValues.splice(
+                                                newValues.indexOf(option),
+                                                1
+                                            );
                                         }
                                         return newValues;
                                     }
@@ -456,15 +587,24 @@ function InputTagSelects(props: InputFieldByTypeProps) {
                                 fieldIndex: undefined
                             })
                         }
+                        id="TextField_2"
+                        sx={styles.TextField_2}
                     />
-                    <FormLabel htmlFor={`${attribute.name}-${option}`}>{advancedMsg(option)}</FormLabel>
+                    <FormLabel
+                        htmlFor={`${attribute.name}-${option}`}
+                        id="FormLabel_4"
+                        sx={styles.FormLabel_4}
+                    >
+                        {advancedMsg(option)}
+                    </FormLabel>
                 </Box>
             ))}
         </>
     );
 }
 function TextareaTag(props: InputFieldByTypeProps) {
-    const { attribute, dispatchFormAction, kcClsx, displayableErrors, valueOrValues } = props;
+    const { attribute, dispatchFormAction, kcClsx, displayableErrors, valueOrValues } =
+        props;
     assert(typeof valueOrValues === "string");
     const value = valueOrValues;
     return (
@@ -473,9 +613,21 @@ function TextareaTag(props: InputFieldByTypeProps) {
             name={attribute.name}
             aria-invalid={displayableErrors.length !== 0}
             disabled={attribute.readOnly}
-            cols={attribute.annotations.inputTypeCols === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeCols}`)}
-            rows={attribute.annotations.inputTypeRows === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeRows}`)}
-            maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}
+            cols={
+                attribute.annotations.inputTypeCols === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeCols}`)
+            }
+            rows={
+                attribute.annotations.inputTypeRows === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeRows}`)
+            }
+            maxLength={
+                attribute.annotations.inputTypeMaxlength === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
+            }
             value={value}
             onChange={event =>
                 dispatchFormAction({
@@ -495,7 +647,14 @@ function TextareaTag(props: InputFieldByTypeProps) {
     );
 }
 function SelectTag(props: InputFieldByTypeProps) {
-    const { attribute, dispatchFormAction, kcClsx, displayableErrors, i18n, valueOrValues } = props;
+    const {
+        attribute,
+        dispatchFormAction,
+        kcClsx,
+        displayableErrors,
+        i18n,
+        valueOrValues
+    } = props;
     const { advancedMsgStr } = i18n;
     const isMultiple = attribute.annotations.inputType === "multiselect";
     return (
@@ -505,7 +664,11 @@ function SelectTag(props: InputFieldByTypeProps) {
             aria-invalid={displayableErrors.length !== 0}
             disabled={attribute.readOnly}
             multiple={isMultiple}
-            size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}
+            size={
+                attribute.annotations.inputTypeSize === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeSize}`)
+            }
             value={valueOrValues}
             onChange={event =>
                 dispatchFormAction({
@@ -513,7 +676,9 @@ function SelectTag(props: InputFieldByTypeProps) {
                     name: attribute.name,
                     valueOrValues: (() => {
                         if (isMultiple) {
-                            return Array.from(event.target.selectedOptions).map(option => option.value);
+                            return Array.from(event.target.selectedOptions).map(
+                                option => option.value
+                            );
                         }
                         return event.target.value;
                     })()
@@ -559,10 +724,17 @@ function SelectTag(props: InputFieldByTypeProps) {
                         {(() => {
                             if (attribute.annotations.inputOptionLabels !== undefined) {
                                 const { inputOptionLabels } = attribute.annotations;
-                                return advancedMsgStr(inputOptionLabels[option] ?? option);
+                                return advancedMsgStr(
+                                    inputOptionLabels[option] ?? option
+                                );
                             }
-                            if (attribute.annotations.inputOptionLabelsI18nPrefix !== undefined) {
-                                return advancedMsgStr(`${attribute.annotations.inputOptionLabelsI18nPrefix}.${option}`);
+                            if (
+                                attribute.annotations.inputOptionLabelsI18nPrefix !==
+                                undefined
+                            ) {
+                                return advancedMsgStr(
+                                    `${attribute.annotations.inputOptionLabelsI18nPrefix}.${option}`
+                                );
                             }
                             return option;
                         })()}
