@@ -1,0 +1,1165 @@
+[
+  {
+    "tags": [
+      "UserProfileFormFields_Fragment_1",
+      "UserProfileFormFields_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Fragment",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_Fragment_1\""
+        }
+      },
+      {
+        "tag": "Fragment",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_Fragment_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_GroupLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "GroupLabel",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_GroupLabel_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_BeforeField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "BeforeField",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_BeforeField_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_1",
+      "UserProfileFormFields_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_label_1",
+      "UserProfileFormFields_FormLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_1\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_1\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_3",
+      "UserProfileFormFields_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_4",
+      "UserProfileFormFields_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_4\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_InputFieldByType_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "InputFieldByType",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_InputFieldByType_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_FieldErrors_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "FieldErrors",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_FieldErrors_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_5",
+      "UserProfileFormFields_Box_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_5\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_5\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_AfterField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "AfterField",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_AfterField_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_6",
+      "UserProfileFormFields_Box_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_6\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_6\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_7",
+      "UserProfileFormFields_Box_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_7\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_7\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_label_2",
+      "UserProfileFormFields_FormLabel_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_2\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_2\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_8",
+      "UserProfileFormFields_Box_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "15",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_8\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_8\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_label_3",
+      "UserProfileFormFields_FormLabel_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "16",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_3\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_3\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "17",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_Fragment_2",
+      "UserProfileFormFields_Box_9"
+    ],
+    "historyStates": [
+      {
+        "tag": "Fragment",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_Fragment_2\""
+        }
+      },
+      {
+        "tag": "Fragment",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_Fragment_2\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_br_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "br",
+        "currentIndex": "19",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_br_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_TextareaTag_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "TextareaTag",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_TextareaTag_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_SelectTag_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "SelectTag",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_SelectTag_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_InputTagSelects_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "InputTagSelects",
+        "currentIndex": "22",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_InputTagSelects_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_InputTag_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "InputTag",
+        "currentIndex": "23",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_InputTag_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_InputTag_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "InputTag",
+        "currentIndex": "24",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_InputTag_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_PasswordWrapper_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "PasswordWrapper",
+        "currentIndex": "25",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_PasswordWrapper_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_9",
+      "UserProfileFormFields_Box_10"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "26",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_9\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_9\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_button_1",
+      "UserProfileFormFields_Button_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "27",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_1\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_1\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_i_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "28",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_i_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_input_1",
+      "UserProfileFormFields_TextField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "29",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_input_1\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_input_1\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_FieldErrors_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "FieldErrors",
+        "currentIndex": "30",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_FieldErrors_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "AddRemoveButtonsMultiValuedAttribute",
+        "currentIndex": "31",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_button_2",
+      "UserProfileFormFields_Button_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "32",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_2\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_2\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_button_3",
+      "UserProfileFormFields_Button_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "33",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_3\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_3\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Button_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Button_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_div_10",
+      "UserProfileFormFields_Box_11"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "34",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_10\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_10\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_input_2",
+      "UserProfileFormFields_TextField_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "35",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_input_2\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_input_2\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_label_4",
+      "UserProfileFormFields_FormLabel_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "36",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_4\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_label_4\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "UserProfileFormFields_FormLabel_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_textarea_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "textarea",
+        "currentIndex": "37",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_textarea_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_select_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "select",
+        "currentIndex": "38",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_select_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_option_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "option",
+        "currentIndex": "39",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_option_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "UserProfileFormFields_option_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "option",
+        "currentIndex": "40",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"UserProfileFormFields_option_2\""
+        }
+      }
+    ]
+  }
+]
