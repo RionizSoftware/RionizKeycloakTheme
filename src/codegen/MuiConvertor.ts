@@ -200,11 +200,10 @@ const makeStyleFile = (content: string, outputLocation: string) => {
             ) as TransformerFactory<SourceFile>;
 
             content = await transformTemplateToMaterialUiFormat(content, [addIdToAll]);
-            TransformerHistory.Initialize(
+            TransformerHistory.initialize(
                 content,
                 path.resolve(historyLocation, `${fileNameWithNoExtension}.json`)
             );
-            TransformerHistory.WriteHistory();
 
             content = await transformTemplateToMaterialUiFormat(content, [
                 styleRemover,
@@ -231,6 +230,7 @@ const makeStyleFile = (content: string, outputLocation: string) => {
                 path.resolve(stylesLocation, "./", `${fileNameWithNoExtension}.ts`)
             );
             fs.writeFileSync(path.resolve(outputLocation, file), content);
+            TransformerHistory.writeHistory();
         }
     } catch (err) {
         console.error("Error reading files:", err);

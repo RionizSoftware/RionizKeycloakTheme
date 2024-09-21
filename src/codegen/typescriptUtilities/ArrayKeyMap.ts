@@ -39,6 +39,7 @@ export class ArrayKeyMap<T> implements Iterable<[Set<string>, T]> {
         const keyArray = this.elementToKeyArrayMap.get(previousKey);
         if (!keyArray) throw new Error("Previous key not found !");
         keyArray.add(newKey);
+        this.elementToKeyArrayMap.set(newKey, keyArray);
     }
 
     /**

@@ -6,24 +6,21 @@ import { createStringAttributeForTag, getAttributeValue } from "./utility.ts";
 export const addIdToAllTransformer = (fileName: string): TransformerFunctions => {
     const tagsCount: Map<string, number> = new Map<string, number>();
 
-    const addId = (
-        element: ts.JsxElement | ts.JsxSelfClosingElement
-    ): ts.JsxAttributes => {
-        const tag = ts.isJsxElement(element)
-                ? element.openingElement.tagName.getText()
-                : element.tagName.getText(),
+    const addId = (node: ts.JsxElement | ts.JsxSelfClosingElement): ts.JsxAttributes => {
+        const tag = ts.isJsxElement(node)
+                ? node.openingElement.tagName.getText()
+                : node.tagName.getText(),
             tagCount = tagsCount.get(tag) || 0,
             tagId = `${fileName}_${tag}_${tagCount + 1}`;
 
         tagsCount.set(tag, tagCount + 1);
 
         let idAttribute: ts.JsxAttribute | undefined;
-        const attributes = ts.isJsxElement(element)
-            ? element.openingElement.attributes
-            : element.attributes;
+        const attributes = ts.isJsxElement(node)
+            ? node.openingElement.attributes
+            : node.attributes;
 
-        const properties = attributes.properties;
-        const id = getAttributeValue(properties, "id");
+        const id = getAttributeValue(node, "id");
         if (!id) {
             //assign a new id to element
             idAttribute = createStringAttributeForTag("id", tagId);
@@ -32,12 +29,12 @@ export const addIdToAllTransformer = (fileName: string): TransformerFunctions =>
     };
     return {
         // Handle self-closing JSX elements
-        handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
-            const attributes = addId(element);
+        handleSelfClosingElement: (node: ts.JsxSelfClosingElement): ts.Node => {
+            const attributes = addId(node);
             return ts.factory.updateJsxSelfClosingElement(
-                element,
-                element.tagName,
-                element.typeArguments,
+                node,
+                node.tagName,
+                node.typeArguments,
                 attributes
             );
         },

@@ -22,40 +22,85 @@ export const createSxForTag = (value: string) => {
 };
 
 export const removeAttribute = (
-    attributes: ts.NodeArray<ts.JsxAttribute | ts.JsxSpreadAttribute>,
+    node: ts.JsxElement | ts.JsxSelfClosingElement,
     attributeName: string
-): ts.JsxAttribute[] =>
-    attributes.filter(attr => {
+): ts.JsxAttribute[] => {
+    const attributeProperties = ts.isJsxElement(node)
+        ? node.openingElement.attributes.properties
+        : node.attributes.properties;
+
+    return attributeProperties.filter(attr => {
         if (ts.isJsxAttribute(attr)) {
             return attr.name.getText() !== attributeName;
         }
         return true;
     }) as ts.JsxAttribute[];
+};
+
+export const getTagName = (node: ts.JsxElement | ts.JsxSelfClosingElement) => {
+    return ts.isJsxElement(node)
+        ? node.openingElement.tagName.getText()
+        : node.tagName.getText();
+};
 
 export const getAttributeValue = (
-    attributes: ts.NodeArray<ts.JsxAttribute | ts.JsxSpreadAttribute>,
+    node: ts.JsxElement | ts.JsxSelfClosingElement,
     attributeName: string
 ): string | null => {
-    const founded = attributes.filter(attr => {
+    const attributeProperties = ts.isJsxElement(node)
+        ? node.openingElement.attributes.properties
+        : node.attributes.properties;
+
+    const founded = attributeProperties.filter(attr => {
         if (ts.isJsxAttribute(attr)) {
             return attr.name.getText() === attributeName;
         }
         return false;
     });
-    return founded && founded.length > 0 ? founded[0].getText() : null;
+    let value = null;
+    if (founded && founded.length > 0) {
+        const regexString = `${attributeName}="([^"]*)"`;
+        const regex = new RegExp(regexString);
+        const matches = founded[0].getText().match(regex);
+        if (matches && matches.length > 1) {
+            value = matches[1];
+        }
+    }
+    return value;
 };
 export const getAllAttribute = (
-    attributes: ts.NodeArray<ts.JsxAttribute | ts.JsxSpreadAttribute>
+    node: ts.JsxElement | ts.JsxSelfClosingElement
 ): Record<string, string> => {
-    const attributesStringArray: { name: string; value: string }[] = attributes.map(
-        attr => {
+    const attributeProperties = ts.isJsxElement(node)
+        ? node.openingElement.attributes.properties
+        : node.attributes.properties;
+    const attributesStringArray: { name: string; value: string }[] =
+        attributeProperties.map(attr => {
             if (ts.isJsxAttribute(attr)) {
-                return { name: attr.name.getText(), value: attr.getText() };
+                try {
+                    return { name: attr.name.getText(), value: attr.getText() };
+                } catch (e) {
+                    //fallback method
+                    if (ts.isIdentifier(attr.name)) {
+                        if (attr.initializer && ts.isStringLiteral(attr.initializer)) {
+                            return {
+                                name: attr.name.escapedText as string,
+                                value: attr.initializer.text
+                            };
+                        }
+                        if (attr.initializer && ts.isJsxExpression(attr.initializer)) {
+                            return {
+                                name: attr.name.escapedText as string,
+                                value: "SX_STYLE_NOT_FETCHED"
+                            };
+                        }
+                    }
+                }
+                return { name: "", value: "" };
             } else {
                 return { name: "", value: "" };
             }
-        }
-    );
+        });
     return attributesStringArray.reduce(
         (acc, item) => {
             acc[item.name] = item.value;

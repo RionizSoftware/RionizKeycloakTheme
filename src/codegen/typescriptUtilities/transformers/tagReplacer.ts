@@ -1,6 +1,7 @@
 import ts from "typescript";
-import { TransformerFunctions } from "./types.ts";
-import { createStringAttributeForTag } from "./utility.ts";
+import { HistoryOperationType, TransformerFunctions } from "./types.ts";
+import { createStringAttributeForTag, getAttributeValue } from "./utility.ts";
+import { TransformerHistory } from "../TransformerHistory.ts";
 
 export type TagReplacerExtraAttributeInput =
     | { name: string; value: string }[]
@@ -25,34 +26,42 @@ export const tagReplacerTransformer = (
     };
     return {
         // Handle self-closing JSX elements
-        handleSelfClosingElement: (element: ts.JsxSelfClosingElement): ts.Node => {
-            const tagName = element.tagName.getText();
+        handleSelfClosingElement: (node: ts.JsxSelfClosingElement): ts.Node => {
+            const tagName = node.tagName.getText();
             for (const {
                 elementToReplace,
                 replacement,
                 extraAttribute
             } of replacements) {
                 if (tagName === elementToReplace) {
-                    return ts.factory.updateJsxSelfClosingElement(
-                        element,
+                    const newNode = ts.factory.updateJsxSelfClosingElement(
+                        node,
                         ts.factory.createIdentifier(replacement),
-                        element.typeArguments,
+                        node.typeArguments,
                         extraAttribute
                             ? ts.factory.createJsxAttributes([
-                                  ...element.attributes.properties,
+                                  ...node.attributes.properties,
                                   ...createAttributes(extraAttribute)
                               ])
-                            : element.attributes
+                            : node.attributes
                     );
+                    TransformerHistory.addHistoryState(
+                        HistoryOperationType.TagReplaced,
+                        getAttributeValue(node, "id"),
+                        tagName,
+                        node,
+                        newNode
+                    );
+                    return newNode;
                 }
             }
-            return element;
+            return node;
         },
 
         // Handle regular JSX elements like <div>...</div>
-        handleJsxElement: (element: ts.JsxElement): ts.Node => {
-            const openingElement = element.openingElement;
-            const closingElement = element.closingElement;
+        handleJsxElement: (node: ts.JsxElement): ts.Node => {
+            const openingElement = node.openingElement;
+            const closingElement = node.closingElement;
             const openingElementTag = openingElement.tagName.getText();
             for (const {
                 elementToReplace,
@@ -64,7 +73,7 @@ export const tagReplacerTransformer = (
                     const newOpeningElement = ts.factory.updateJsxOpeningElement(
                         openingElement,
                         ts.factory.createIdentifier(replacement),
-                        element.openingElement.typeArguments,
+                        node.openingElement.typeArguments,
                         extraAttribute
                             ? ts.factory.createJsxAttributes([
                                   ...openingElement.attributes.properties,
@@ -78,15 +87,23 @@ export const tagReplacerTransformer = (
                         ts.factory.createIdentifier(replacement)
                     );
 
-                    return ts.factory.updateJsxElement(
-                        element,
+                    const newNode = ts.factory.updateJsxElement(
+                        node,
                         newOpeningElement,
-                        element.children,
+                        node.children,
                         newClosingElement
                     );
+                    TransformerHistory.addHistoryState(
+                        HistoryOperationType.TagReplaced,
+                        getAttributeValue(node, "id"),
+                        openingElementTag,
+                        node,
+                        newNode
+                    );
+                    return newNode;
                 }
             }
-            return element;
+            return node;
         }
     };
 };

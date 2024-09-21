@@ -1,54 +1,58 @@
 import ts, { isJsxElement } from "typescript";
-import { TransformerFunctions } from "./types.ts";
+import { HistoryOperationType, TransformerFunctions } from "./types.ts";
+import { TransformerHistory } from "../TransformerHistory.ts";
+import { getAttributeValue, getTagName } from "./utility.ts";
 
 // Helper function to check if a div has only an id attribute
-const isDivOrSpanWithNoClass = (element: ts.JsxElement): boolean => {
-    const { tagName, attributes } = element.openingElement;
-    if (ts.isIdentifier(tagName) && (tagName.text === "div" || tagName.text === "span")) {
-        const hasOnlyId =
-            attributes.properties.length == 0 ||
-            (attributes.properties.length === 1 &&
-                ts.isJsxAttribute(attributes.properties[0]) &&
-                attributes.properties[0].name.getText() === "id");
-        return hasOnlyId;
-    }
-    return false;
-};
-const isDivOrSpanWithNoClassSelfClosing = (
-    element: ts.JsxSelfClosingElement
+const isDivOrSpanWithNoClass = (
+    element: ts.JsxElement | ts.JsxSelfClosingElement
 ): boolean => {
-    const { tagName, attributes } = element;
+    const { tagName, attributes } = ts.isJsxElement(element)
+        ? element.openingElement
+        : element;
     if (ts.isIdentifier(tagName) && (tagName.text === "div" || tagName.text === "span")) {
-        const hasOnlyId =
+        return (
             attributes.properties.length == 0 ||
             (attributes.properties.length === 1 &&
                 ts.isJsxAttribute(attributes.properties[0]) &&
-                attributes.properties[0].name.getText() === "id");
-        return hasOnlyId;
+                attributes.properties[0].name.getText() === "id")
+        );
     }
     return false;
 };
 export const divOptimizerTransformer: TransformerFunctions = {
-    handleSelfClosingElement: (
-        element: ts.JsxSelfClosingElement
-    ): ts.Node | undefined => {
-        if (isDivOrSpanWithNoClassSelfClosing(element)) return undefined;
-        return element;
+    handleSelfClosingElement: (node: ts.JsxSelfClosingElement): ts.Node | undefined => {
+        if (isDivOrSpanWithNoClass(node)) {
+            TransformerHistory.addHistoryState(
+                HistoryOperationType.OptimizedAndRemoved,
+                getAttributeValue(node, "id"),
+                getTagName(node),
+                node
+            );
+            return undefined;
+        }
+        return node;
     },
-    handleJsxElement: (element: ts.JsxElement): ts.Node => {
-        if (element.children.length == 0) {
-            return element;
+    handleJsxElement: (node: ts.JsxElement): ts.Node => {
+        if (node.children.length == 0) {
+            return node;
         }
         const optimizedChildren: ts.JsxChild[] = [];
 
-        if (isDivOrSpanWithNoClass(element)) {
+        if (isDivOrSpanWithNoClass(node)) {
             let shouldKeepSearching = true;
-            for (const child of element.children) {
+            for (const child of node.children) {
                 if (shouldKeepSearching && isJsxElement(child)) {
                     if (isDivOrSpanWithNoClass(child)) {
                         //Removing the tag
                         // add children of this child instead of the element itself
                         optimizedChildren.push(...child.children);
+                        TransformerHistory.addHistoryState(
+                            HistoryOperationType.OptimizedAndRemoved,
+                            getAttributeValue(node, "id"),
+                            getTagName(node),
+                            child
+                        );
                     } else {
                         optimizedChildren.push(child);
                     }
@@ -58,15 +62,14 @@ export const divOptimizerTransformer: TransformerFunctions = {
                 }
             }
         } else {
-            optimizedChildren.push(...element.children);
+            optimizedChildren.push(...node.children);
         }
 
-        const updatedElement = ts.factory.updateJsxElement(
-            element,
-            element.openingElement,
+        return ts.factory.updateJsxElement(
+            node,
+            node.openingElement,
             optimizedChildren,
-            element.closingElement
+            node.closingElement
         );
-        return updatedElement;
     }
 };

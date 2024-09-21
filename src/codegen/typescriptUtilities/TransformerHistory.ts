@@ -11,7 +11,8 @@ import { rionizTsTraverser } from "./RionizTsTraverser.ts";
 import {
     createTsSourceFile,
     getAllAttribute,
-    getAttributeValue
+    getAttributeValue,
+    getTagName
 } from "./transformers/utility.ts";
 
 export class TransformerHistory {
@@ -19,51 +20,59 @@ export class TransformerHistory {
         new ArrayKeyMap<HistoryData>();
 
     private static createHistoryState(
+        operation: HistoryOperationType,
+        tag: string,
         node: ts.JsxSelfClosingElement | ts.JsxElement,
-        index: number
+        index?: number | undefined
     ) {
-        const isJSxElement = ts.isJsxElement(node);
         const historyState: HistoryState = {
-            tag: isJSxElement
-                ? node.openingElement.tagName.getText()
-                : node.tagName.getText(),
-            currentIndex: index,
-            operation: HistoryOperationType.Loaded,
-            props: getAllAttribute(
-                isJSxElement
-                    ? node.openingElement.attributes.properties
-                    : node.attributes.properties
-            )
+            tag: tag,
+            currentIndex: index !== undefined ? `${index}` : "NOT_CHANGED",
+            operation: operation,
+            props: getAllAttribute(node)
         };
 
         return historyState;
     }
 
     private static outputPath: string | undefined;
-    public static Initialize(content: string, outputPath: string) {
+
+    public static initialize(content: string, outputPath: string) {
+        TransformerHistory.reset();
         TransformerHistory.outputPath = outputPath;
         const sourceFile = createTsSourceFile(content);
 
         let index = 0;
         const historyInitializerTransform: TraverserFunctions = {
             handleSelfClosingElement: (node: ts.JsxSelfClosingElement) => {
-                const id = getAttributeValue(node.attributes.properties, "id");
+                const id = getAttributeValue(node, "id");
                 if (!id)
                     throw new Error("History can not work unless all element have id");
                 TransformerHistory.historyDatas.add(id, {
-                    historyStates: [TransformerHistory.createHistoryState(node, index)]
+                    historyStates: [
+                        TransformerHistory.createHistoryState(
+                            HistoryOperationType.Loaded,
+                            getTagName(node),
+                            node,
+                            index
+                        )
+                    ]
                 });
                 index += 1;
             },
             handleJsxElement: (node: ts.JsxElement) => {
-                const id = getAttributeValue(
-                    node.openingElement.attributes.properties,
-                    "id"
-                );
+                const id = getAttributeValue(node, "id");
                 if (!id)
                     throw new Error("History can not work unless all element have id");
                 TransformerHistory.historyDatas.add(id, {
-                    historyStates: [TransformerHistory.createHistoryState(node, index)]
+                    historyStates: [
+                        TransformerHistory.createHistoryState(
+                            HistoryOperationType.Loaded,
+                            getTagName(node),
+                            node,
+                            index
+                        )
+                    ]
                 });
                 index += 1;
             }
@@ -71,11 +80,45 @@ export class TransformerHistory {
         rionizTsTraverser(sourceFile, historyInitializerTransform);
         //Traverse through file using a transformer and add all initialized states using ArrayKeyMap
     }
-    public static Reset() {
+
+    public static addHistoryState(
+        operationType: HistoryOperationType,
+        id: string | null,
+        tag: string,
+        nodeBeforeChange: ts.JsxSelfClosingElement | ts.JsxElement,
+        newNode?: ts.JsxSelfClosingElement | ts.JsxElement | undefined,
+        index?: number | undefined
+    ) {
+        if (id === null)
+            throw new Error("History can not work unless all element have id");
+
+        if (operationType === HistoryOperationType.IdChanged) {
+            if (!newNode) throw new Error("New node can not be undefined");
+
+            const prevId = getAttributeValue(nodeBeforeChange, "id");
+            if (!prevId)
+                throw new Error("History can not work unless all element have id");
+            this.historyDatas.addKey(prevId, id);
+        }
+        const data = this.historyDatas.get(id);
+        if (!data) throw new Error("History data not found");
+        if (operationType === HistoryOperationType.OptimizedAndRemoved) {
+            data.historyStates.push(
+                this.createHistoryState(operationType, tag, nodeBeforeChange, index)
+            );
+        } else {
+            if (!newNode) throw new Error("New node can not be undefined");
+
+            data.historyStates.push(
+                this.createHistoryState(operationType, tag, newNode, index)
+            );
+        }
+    }
+    public static reset() {
         TransformerHistory.historyDatas.clear();
     }
 
-    public static WriteHistory() {
+    public static writeHistory() {
         if (!TransformerHistory.outputPath) throw new Error("Please initialize first");
         const content = [];
         for (const [tags, data] of TransformerHistory.historyDatas) {
