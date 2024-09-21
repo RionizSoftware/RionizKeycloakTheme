@@ -1,0 +1,519 @@
+[
+  {
+    "tags": [
+      "LogoutConfirm_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_Template_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-logout-confirm",
+      "LogoutConfirm_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-logout-confirm\"",
+          "className": "className=\"content-area\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-logout-confirm\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-logout-confirm\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_p_1",
+      "LogoutConfirm_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_p_1\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_p_1\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_form_1",
+      "LogoutConfirm_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_form_1\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_form_1\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "component": "component=\"form\"",
+          "id": "LogoutConfirm_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "component": "component=\"form\"",
+          "id": "LogoutConfirm_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_input_1",
+      "LogoutConfirm_TextField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_input_1\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_input_1\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_div_2",
+      "LogoutConfirm_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LogoutConfirm_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_div_2\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-options"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_div_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_div_4\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-buttons",
+      "LogoutConfirm_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-buttons\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-buttons\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LogoutConfirm_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LogoutConfirm_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-logout",
+      "LogoutConfirm_TextField_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"confirmLogout\"",
+          "id": "id=\"kc-logout\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogout\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"confirmLogout\"",
+          "id": "id=\"kc-logout\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogout\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"confirmLogout\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogout\")}",
+          "id": "LogoutConfirm_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"confirmLogout\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogout\")}",
+          "id": "LogoutConfirm_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-info-message",
+      "LogoutConfirm_Box_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-info-message\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-info-message\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_p_2",
+      "LogoutConfirm_Typography_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_p_2\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_p_2\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LogoutConfirm_a_1",
+      "LogoutConfirm_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LogoutConfirm_a_1\""
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_a_1\""
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

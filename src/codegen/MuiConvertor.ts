@@ -59,20 +59,44 @@ const makeStyleFile = (content: string, outputLocation: string) => {
     fs.writeFileSync(outputLocation, styleContent);
 };
 
+const getVersionFromTerminal = (): string => {
+    // Get all command-line arguments, excluding the first two
+    const args = process.argv.slice(2);
+
+    // Find the --version argument
+    const versionIndex = args.indexOf("--version");
+
+    if (versionIndex !== -1 && args[versionIndex + 1]) {
+        return args[versionIndex + 1];
+    } else {
+        throw new Error("Version not provided");
+    }
+};
 (async (): Promise<void> => {
-    const pagesLocation = path.resolve(
+    const version = getVersionFromTerminal();
+    const inputsLocation = path.resolve(
         process.cwd(),
-        "./ejectPageFiles/transformerInputs"
+        "./ejectPageFiles/inputs",
+        `./v${version}`
     );
+    const pagesLocation = path.resolve(inputsLocation, "./pages");
     const outputLocation = path.resolve(
         process.cwd(),
-        "./ejectPageFiles/transformerOutputs"
+        "./ejectPageFiles/outputs",
+        `./v${version}`
     );
-    const stylesLocation = path.resolve(outputLocation, "./styles");
-    const historyLocation = path.resolve(outputLocation, "./history");
-    if (!fs.existsSync(outputLocation)) fs.mkdirSync(outputLocation);
-    if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation);
-    if (!fs.existsSync(historyLocation)) fs.mkdirSync(historyLocation);
+    const pagesOutputLocation = path.resolve(outputLocation, "./transformerOutputs");
+    const stylesLocation = path.resolve(pagesOutputLocation, "./styles");
+    const historyLocation = path.resolve(pagesOutputLocation, "./history");
+    if (!fs.existsSync(pagesOutputLocation))
+        fs.mkdirSync(pagesOutputLocation, { recursive: true });
+    if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation, { recursive: true });
+    if (!fs.existsSync(historyLocation))
+        fs.mkdirSync(historyLocation, { recursive: true });
+    fs.copyFileSync(
+        path.resolve(inputsLocation, "./KcPage.tsx"),
+        path.resolve(outputLocation, "./KcPage.tsx")
+    );
     try {
         const files = fs.readdirSync(pagesLocation);
         for (const file of files) {
@@ -222,14 +246,14 @@ const makeStyleFile = (content: string, outputLocation: string) => {
             content = await transformTemplateToMaterialUiFormat(content, [sxAdder]);
 
             content = await runPrettier(content);
-            fs.writeFileSync(path.resolve(outputLocation, file), content);
+            fs.writeFileSync(path.resolve(pagesOutputLocation, file), content);
 
             //e.g make ./styles/Login.ts
             makeStyleFile(
                 content,
                 path.resolve(stylesLocation, "./", `${fileNameWithNoExtension}.ts`)
             );
-            fs.writeFileSync(path.resolve(outputLocation, file), content);
+            fs.writeFileSync(path.resolve(pagesOutputLocation, file), content);
             TransformerHistory.writeHistory();
         }
     } catch (err) {
