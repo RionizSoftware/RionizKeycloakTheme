@@ -1,7 +1,7 @@
 import ts from "typescript";
 import { TransformerFunctions } from "./transformers/types.ts";
 
-export const rionizTransformer =
+export const rionizTsTransformer =
     (transformerFunctions: TransformerFunctions) =>
     <T extends ts.Node>(context: ts.TransformationContext) =>
     (rootNode: T) => {

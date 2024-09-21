@@ -13,7 +13,7 @@
         "build-keycloak-theme": "npx run build && keycloakify build",
         "storybook": "storybook dev -p 6006",
         "format": "prettier . --write",
-        "rionizMuiConvertor": "tsx src/codegen/rionizMuiConvertor.ts"
+        "rionizMuiConvertor": "tsx src/codegen/MuiConvertor.ts"
     },
     "license": "MIT",
     "keywords": [],

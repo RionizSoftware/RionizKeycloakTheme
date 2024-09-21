@@ -2,12 +2,15 @@ import * as path from "node:path";
 import * as fs from "node:fs";
 import ts, { SourceFile, TransformerFactory } from "typescript";
 import prettier from "prettier";
-import { rionizTransformer } from "./rionizCodeTransform.ts";
-import { styleRemoverTransformer } from "./transformers/styleRemover.ts";
-import { divOptimizerTransformer } from "./transformers/divOptimizer.ts";
-import { tagReplacerTransformer } from "./transformers/tagReplacer.ts";
-import { sxAdderTransformer } from "./transformers/sxAdder.ts";
-import { MuiAddImportTransformer } from "./transformers/muImportAdder.ts";
+import { rionizTsTransformer } from "./typescriptUtilities/RionizTsTransformer.ts";
+import { styleRemoverTransformer } from "./typescriptUtilities/transformers/styleRemover.ts";
+import { divOptimizerTransformer } from "./typescriptUtilities/transformers/divOptimizer.ts";
+import { tagReplacerTransformer } from "./typescriptUtilities/transformers/tagReplacer.ts";
+import { sxAdderTransformer } from "./typescriptUtilities/transformers/sxAdder.ts";
+import { MuiAddImportTransformer } from "./typescriptUtilities/transformers/muImportAdder.ts";
+import { createTsSourceFile } from "./typescriptUtilities/transformers/utility.ts";
+import { addIdToAllTransformer } from "./typescriptUtilities/transformers/addIdToAll.ts";
+import { TransformerHistory } from "./typescriptUtilities/TransformerHistory.ts";
 
 const transformTemplateToMaterialUiFormat = async (
     content: string,
@@ -15,13 +18,7 @@ const transformTemplateToMaterialUiFormat = async (
 ): Promise<string> => {
     // let content = ``;
 
-    const sourceFile = ts.createSourceFile(
-        "temp.tsx",
-        content,
-        ts.ScriptTarget.ESNext,
-        true,
-        ts.ScriptKind.TSX
-    );
+    const sourceFile = createTsSourceFile(content);
     const result = ts.transform(sourceFile, transformerInputs);
     const printer = ts.createPrinter();
     const transformedSourceFile = result.transformed[0] as ts.SourceFile;
@@ -72,8 +69,10 @@ const makeStyleFile = (content: string, outputLocation: string) => {
         "./ejectPageFiles/transformerOutputs"
     );
     const stylesLocation = path.resolve(outputLocation, "./styles");
+    const historyLocation = path.resolve(outputLocation, "./history");
     if (!fs.existsSync(outputLocation)) fs.mkdirSync(outputLocation);
     if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation);
+    if (!fs.existsSync(historyLocation)) fs.mkdirSync(historyLocation);
     try {
         const files = fs.readdirSync(pagesLocation);
         for (const file of files) {
@@ -81,13 +80,16 @@ const makeStyleFile = (content: string, outputLocation: string) => {
             const filePath = path.join(pagesLocation, file);
             let content = fs.readFileSync(filePath, "utf-8");
 
-            const styleRemover = rionizTransformer(
+            const addIdToAll = rionizTsTransformer(
+                addIdToAllTransformer(fileNameWithNoExtension)
+            ) as TransformerFactory<SourceFile>;
+            const styleRemover = rionizTsTransformer(
                 styleRemoverTransformer
             ) as TransformerFactory<SourceFile>;
-            const divOptimizer = rionizTransformer(
+            const divOptimizer = rionizTsTransformer(
                 divOptimizerTransformer
             ) as TransformerFactory<SourceFile>;
-            const tagReplacer = rionizTransformer(
+            const tagReplacer = rionizTsTransformer(
                 tagReplacerTransformer([
                     {
                         elementToReplace: "div",
@@ -184,22 +186,31 @@ const makeStyleFile = (content: string, outputLocation: string) => {
                 "List",
                 "ListItem"
             ];
-            const muiImportAdder = rionizTransformer(
+            const muiImportAdder = rionizTsTransformer(
                 MuiAddImportTransformer(imports, "@mui/material")
             ) as TransformerFactory<SourceFile>;
-            const styleImportAdder = rionizTransformer(
+            const styleImportAdder = rionizTsTransformer(
                 MuiAddImportTransformer(
                     ["styles"],
                     `./styles/${fileNameWithNoExtension}.ts`
                 )
             ) as TransformerFactory<SourceFile>;
-            const sxAdder = rionizTransformer(
+            const sxAdder = rionizTsTransformer(
                 sxAdderTransformer(fileNameWithNoExtension, imports)
             ) as TransformerFactory<SourceFile>;
+
+            content = await transformTemplateToMaterialUiFormat(content, [addIdToAll]);
+            TransformerHistory.Initialize(
+                content,
+                path.resolve(historyLocation, `${fileNameWithNoExtension}.json`)
+            );
+            TransformerHistory.WriteHistory();
+
             content = await transformTemplateToMaterialUiFormat(content, [
                 styleRemover,
-                //remove empty consecutive div and tags , do it 3 times so that upto 3 div can be removed
+                //remove empty consecutive div and tags , do it 5 times so that upto 3 div can be removed
                 //It can be better in future
+                divOptimizer,
                 divOptimizer,
                 divOptimizer,
                 divOptimizer,
