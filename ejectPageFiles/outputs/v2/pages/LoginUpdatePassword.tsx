@@ -43,17 +43,25 @@ export default function LoginUpdatePassword(
             headerNode={msg("updatePasswordTitle")}
         >
             <Box
-                id="kc-passwd-update-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginUpdatePassword_Box_1"
+                sx={styles.LoginUpdatePassword_Box_1}
             >
-                <Box id="LoginUpdatePassword_div_1">
-                    <FormLabel id="LoginUpdatePassword_label_1" htmlFor="password-new">
+                <Box id="LoginUpdatePassword_Box_2" sx={styles.LoginUpdatePassword_Box_2}>
+                    <FormLabel
+                        htmlFor="password-new"
+                        id="LoginUpdatePassword_FormLabel_1"
+                        sx={styles.LoginUpdatePassword_FormLabel_1}
+                    >
                         {msg("passwordNew")}
                     </FormLabel>
 
-                    <Box id="LoginUpdatePassword_div_3">
+                    <Box
+                        id="LoginUpdatePassword_Box_3"
+                        sx={styles.LoginUpdatePassword_Box_3}
+                    >
                         <PasswordWrapper
                             id="LoginUpdatePassword_PasswordWrapper_1"
                             kcClsx={kcClsx}
@@ -62,7 +70,6 @@ export default function LoginUpdatePassword(
                         >
                             <TextField
                                 type="password"
-                                id="password-new"
                                 name="password-new"
                                 autoFocus
                                 autoComplete="new-password"
@@ -70,6 +77,8 @@ export default function LoginUpdatePassword(
                                     "password",
                                     "password-confirm"
                                 )}
+                                id="LoginUpdatePassword_TextField_1"
+                                sx={styles.LoginUpdatePassword_TextField_1}
                             />
                         </PasswordWrapper>
 
@@ -85,15 +94,19 @@ export default function LoginUpdatePassword(
                     </Box>
                 </Box>
 
-                <Box id="LoginUpdatePassword_div_4">
+                <Box id="LoginUpdatePassword_Box_4" sx={styles.LoginUpdatePassword_Box_4}>
                     <FormLabel
-                        id="LoginUpdatePassword_label_2"
                         htmlFor="password-confirm"
+                        id="LoginUpdatePassword_FormLabel_2"
+                        sx={styles.LoginUpdatePassword_FormLabel_2}
                     >
                         {msg("passwordConfirm")}
                     </FormLabel>
 
-                    <Box id="LoginUpdatePassword_div_6">
+                    <Box
+                        id="LoginUpdatePassword_Box_5"
+                        sx={styles.LoginUpdatePassword_Box_5}
+                    >
                         <PasswordWrapper
                             id="LoginUpdatePassword_PasswordWrapper_2"
                             kcClsx={kcClsx}
@@ -102,7 +115,6 @@ export default function LoginUpdatePassword(
                         >
                             <TextField
                                 type="password"
-                                id="password-confirm"
                                 name="password-confirm"
                                 autoFocus
                                 autoComplete="new-password"
@@ -110,6 +122,8 @@ export default function LoginUpdatePassword(
                                     "password",
                                     "password-confirm"
                                 )}
+                                id="LoginUpdatePassword_TextField_2"
+                                sx={styles.LoginUpdatePassword_TextField_2}
                             />
                         </PasswordWrapper>
 
@@ -124,7 +138,7 @@ export default function LoginUpdatePassword(
                         )}
                     </Box>
                 </Box>
-                <Box id="LoginUpdatePassword_div_7">
+                <Box id="LoginUpdatePassword_Box_6" sx={styles.LoginUpdatePassword_Box_6}>
                     <LogoutOtherSessions
                         id="LoginUpdatePassword_LogoutOtherSessions_1"
                         kcClsx={kcClsx}
@@ -132,16 +146,18 @@ export default function LoginUpdatePassword(
                     />
 
                     <TextField
-                        id="LoginUpdatePassword_input_3"
                         type="submit"
                         value={msgStr("doSubmit")}
+                        id="LoginUpdatePassword_TextField_3"
+                        sx={styles.LoginUpdatePassword_TextField_3}
                     />
                     {isAppInitiatedAction && (
                         <Button
-                            id="LoginUpdatePassword_button_1"
                             type="submit"
                             name="cancel-aia"
                             value="true"
+                            id="LoginUpdatePassword_Button_1"
+                            sx={styles.LoginUpdatePassword_Button_1}
                         >
                             {msg("doCancel")}
                         </Button>
@@ -155,14 +171,18 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="kc-form-options">
-            <FormLabel id="LoginUpdatePassword_label_3">
+        <Box id="LoginUpdatePassword_Box_7" sx={styles.LoginUpdatePassword_Box_7}>
+            <FormLabel
+                id="LoginUpdatePassword_FormLabel_3"
+                sx={styles.LoginUpdatePassword_FormLabel_3}
+            >
                 <TextField
                     type="checkbox"
-                    id="logout-sessions"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
+                    id="LoginUpdatePassword_TextField_4"
+                    sx={styles.LoginUpdatePassword_TextField_4}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>

@@ -13,9 +13,8 @@ export const styles ={
     "LoginUsername_TextField_1": {},
     "LoginUsername_Box_6": {},
     "LoginUsername_Box_7": {},
-    "LoginUsername_Box_8": {},
     "LoginUsername_FormLabel_2": {},
     "LoginUsername_TextField_2": {},
-    "LoginUsername_Box_9": {},
+    "LoginUsername_Box_8": {},
     "LoginUsername_TextField_3": {}
 }

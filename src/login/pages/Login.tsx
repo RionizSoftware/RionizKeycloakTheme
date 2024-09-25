@@ -47,34 +47,18 @@ export default function Login(
             socialProvidersNode={
                 <>
                     {realm.password && social?.providers !== undefined && social.providers.length !== 0 && (
-                        <Box className={kcClsx("kcFormSocialAccountSectionClass")} id="Login_Box_2" sx={styles.Login_Box_2}>
+                        <Box id="Login_Box_2" sx={styles.Login_Box_2}>
                             <hr id="Login_hr_1" />
                             <Typography variant="h2" component="h2" id="Login_Typography_1" sx={styles.Login_Typography_1}>
                                 {msg("identity-provider-login-label")}
                             </Typography>
-                            <List
-                                className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}
-                                id="Login_List_1"
-                                sx={styles.Login_List_1}
-                            >
+                            <List id="Login_List_1" sx={styles.Login_List_1}>
                                 {social.providers.map((...[p, , providers]) => (
                                     <ListItem key={p.alias} id="Login_ListItem_1" sx={styles.Login_ListItem_1}>
-                                        <Link
-                                            className={kcClsx(
-                                                "kcFormSocialAccountListButtonClass",
-                                                providers.length > 3 && "kcFormSocialAccountGridItem"
-                                            )}
-                                            type="button"
-                                            href={p.loginUrl}
-                                            id="Login_Link_2"
-                                            sx={styles.Login_Link_2}
-                                        >
-                                            {p.iconClasses && (
-                                                <i id="Login_i_1" className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>
-                                            )}
+                                        <Link type="button" href={p.loginUrl} id="Login_Link_2" sx={styles.Login_Link_2}>
+                                            {p.iconClasses && <i id="Login_i_1" aria-hidden="true"></i>}
                                             <span
                                                 id="Login_span_2"
-                                                className={clsx(kcClsx("kcFormSocialAccountNameClass"), p.iconClasses && "kc-social-icon-text")}
                                                 dangerouslySetInnerHTML={{
                                                     __html: p.displayName
                                                 }}
@@ -102,8 +86,8 @@ export default function Login(
                         sx={styles.Login_Box_4}
                     >
                         {!usernameHidden && (
-                            <Box className={kcClsx("kcFormGroupClass")} id="Login_Box_5" sx={styles.Login_Box_5}>
-                                <FormLabel htmlFor="username" className={kcClsx("kcLabelClass")} id="Login_FormLabel_1" sx={styles.Login_FormLabel_1}>
+                            <Box id="Login_Box_5" sx={styles.Login_Box_5}>
+                                <FormLabel htmlFor="username" id="Login_FormLabel_1" sx={styles.Login_FormLabel_1}>
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
                                         : !realm.registrationEmailAsUsername
@@ -112,7 +96,6 @@ export default function Login(
                                 </FormLabel>
                                 <TextField
                                     tabIndex={2}
-                                    className={kcClsx("kcInputClass")}
                                     name="username"
                                     defaultValue={login.username ?? ""}
                                     type="text"
@@ -125,7 +108,6 @@ export default function Login(
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
                                         id="input-error"
-                                        className={kcClsx("kcInputErrorMessageClass")}
                                         aria-live="polite"
                                         dangerouslySetInnerHTML={{
                                             __html: messagesPerField.getFirstError("username", "password")
@@ -135,14 +117,13 @@ export default function Login(
                             </Box>
                         )}
 
-                        <Box className={kcClsx("kcFormGroupClass")} id="Login_Box_6" sx={styles.Login_Box_6}>
-                            <FormLabel htmlFor="password" className={kcClsx("kcLabelClass")} id="Login_FormLabel_2" sx={styles.Login_FormLabel_2}>
+                        <Box id="Login_Box_6" sx={styles.Login_Box_6}>
+                            <FormLabel htmlFor="password" id="Login_FormLabel_2" sx={styles.Login_FormLabel_2}>
                                 {msg("password")}
                             </FormLabel>
                             <PasswordWrapper id="Login_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="Login_TextField_2">
                                 <TextField
                                     tabIndex={3}
-                                    className={kcClsx("kcInputClass")}
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
@@ -154,7 +135,6 @@ export default function Login(
                             {usernameHidden && messagesPerField.existsError("username", "password") && (
                                 <span
                                     id="input-error"
-                                    className={kcClsx("kcInputErrorMessageClass")}
                                     aria-live="polite"
                                     dangerouslySetInnerHTML={{
                                         __html: messagesPerField.getFirstError("username", "password")
@@ -163,36 +143,33 @@ export default function Login(
                             )}
                         </Box>
 
-                        <Box className={kcClsx("kcFormGroupClass", "kcFormSettingClass")} id="Login_Box_7" sx={styles.Login_Box_7}>
-                            <Box id="Login_Box_8" sx={styles.Login_Box_8}>
-                                {realm.rememberMe && !usernameHidden && (
-                                    <Box id="Login_Box_9" sx={styles.Login_Box_9}>
-                                        <FormLabel id="Login_FormLabel_3" sx={styles.Login_FormLabel_3}>
-                                            <TextField
-                                                tabIndex={5}
-                                                name="rememberMe"
-                                                type="checkbox"
-                                                defaultChecked={!!login.rememberMe}
-                                                id="Login_TextField_3"
-                                                sx={styles.Login_TextField_3}
-                                            />{" "}
-                                            {msg("rememberMe")}
-                                        </FormLabel>
-                                    </Box>
-                                )}
-                            </Box>
-                            <Box className={kcClsx("kcFormOptionsWrapperClass")} id="Login_Box_10" sx={styles.Login_Box_10}>
-                                {realm.resetPasswordAllowed && (
-                                    <span id="Login_span_5">
-                                        <Link tabIndex={6} href={url.loginResetCredentialsUrl} id="Login_Link_3" sx={styles.Login_Link_3}>
-                                            {msg("doForgotPassword")}
-                                        </Link>
-                                    </span>
-                                )}
-                            </Box>
+                        <Box id="Login_Box_7" sx={styles.Login_Box_7}>
+                            {realm.rememberMe && !usernameHidden && (
+                                <Box id="Login_Box_8" sx={styles.Login_Box_8}>
+                                    <FormLabel id="Login_FormLabel_3" sx={styles.Login_FormLabel_3}>
+                                        <TextField
+                                            tabIndex={5}
+                                            name="rememberMe"
+                                            type="checkbox"
+                                            defaultChecked={!!login.rememberMe}
+                                            id="Login_TextField_3"
+                                            sx={styles.Login_TextField_3}
+                                        />{" "}
+                                        {msg("rememberMe")}
+                                    </FormLabel>
+                                </Box>
+                            )}
+
+                            {realm.resetPasswordAllowed && (
+                                <span id="Login_span_5">
+                                    <Link tabIndex={6} href={url.loginResetCredentialsUrl} id="Login_Link_3" sx={styles.Login_Link_3}>
+                                        {msg("doForgotPassword")}
+                                    </Link>
+                                </span>
+                            )}
                         </Box>
 
-                        <Box className={kcClsx("kcFormGroupClass")} id="Login_Box_11" sx={styles.Login_Box_11}>
+                        <Box id="Login_Box_9" sx={styles.Login_Box_9}>
                             <TextField
                                 type="hidden"
                                 name="credentialId"
@@ -203,7 +180,6 @@ export default function Login(
                             <TextField
                                 tabIndex={7}
                                 disabled={isLoginButtonDisabled}
-                                className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
                                 name="login"
                                 type="submit"
                                 value={msgStr("doLogIn")}

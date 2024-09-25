@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-terms-text\""
+      "kc-terms-text\"",
+      "Terms_Box_1"
     ],
     "historyStates": [
       {
@@ -40,12 +41,31 @@
         "props": {
           "id": "id=\"kc-terms-text\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Terms_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Terms_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Terms_form_1\""
+      "Terms_form_1\"",
+      "Terms_Box_2"
     ],
     "historyStates": [
       {
@@ -79,12 +99,37 @@
           "method": "method=\"POST\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"POST\"",
+          "component": "component=\"form\"",
+          "id": "Terms_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"POST\"",
+          "component": "component=\"form\"",
+          "id": "Terms_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-accept\""
+      "kc-accept\"",
+      "Terms_TextField_1"
     ],
     "historyStates": [
       {
@@ -120,12 +165,37 @@
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doAccept\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"accept\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doAccept\")}",
+          "id": "Terms_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"accept\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doAccept\")}",
+          "id": "Terms_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-decline\""
+      "kc-decline\"",
+      "Terms_TextField_2"
     ],
     "historyStates": [
       {
@@ -160,6 +230,30 @@
           "id": "id=\"kc-decline\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doDecline\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doDecline\")}",
+          "id": "Terms_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doDecline\")}",
+          "id": "Terms_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

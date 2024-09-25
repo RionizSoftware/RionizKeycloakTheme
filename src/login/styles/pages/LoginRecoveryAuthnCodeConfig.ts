@@ -19,8 +19,6 @@ export const styles ={
     "LoginRecoveryAuthnCodeConfig_Button_4": {},
     "LoginRecoveryAuthnCodeConfig_TextField_6": {},
     "LoginRecoveryAuthnCodeConfig_Box_7": {},
-    "LoginRecoveryAuthnCodeConfig_Box_8": {},
-    "LoginRecoveryAuthnCodeConfig_Box_9": {},
     "LoginRecoveryAuthnCodeConfig_FormLabel_2": {},
     "LoginRecoveryAuthnCodeConfig_TextField_7": {}
 }

@@ -39,29 +39,40 @@ export default function SelectAuthenticator(
             headerNode={msg("loginChooseAuthenticator")}
         >
             <Box
-                id="kc-select-credential-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="SelectAuthenticator_Box_1"
+                sx={styles.SelectAuthenticator_Box_1}
             >
-                <Box id="SelectAuthenticator_div_1">
+                <Box id="SelectAuthenticator_Box_2" sx={styles.SelectAuthenticator_Box_2}>
                     {auth.authenticationSelections.map((authenticationSelection, i) => (
                         <Button
-                            id="SelectAuthenticator_button_1"
                             key={i}
                             type="submit"
                             name="authenticationExecution"
                             value={authenticationSelection.authExecId}
+                            id="SelectAuthenticator_Button_1"
+                            sx={styles.SelectAuthenticator_Button_1}
                         >
-                            <Box id="SelectAuthenticator_div_2">
+                            <Box
+                                id="SelectAuthenticator_Box_3"
+                                sx={styles.SelectAuthenticator_Box_3}
+                            >
                                 <i id="SelectAuthenticator_i_1" />
                             </Box>
-                            <Box id="SelectAuthenticator_div_3">
+                            <Box
+                                id="SelectAuthenticator_Box_4"
+                                sx={styles.SelectAuthenticator_Box_4}
+                            >
                                 {advancedMsg(authenticationSelection.displayName)}
                                 {advancedMsg(authenticationSelection.helpText)}
                             </Box>
 
-                            <Box id="SelectAuthenticator_div_7">
+                            <Box
+                                id="SelectAuthenticator_Box_5"
+                                sx={styles.SelectAuthenticator_Box_5}
+                            >
                                 <i id="SelectAuthenticator_i_2" />
                             </Box>
                         </Button>

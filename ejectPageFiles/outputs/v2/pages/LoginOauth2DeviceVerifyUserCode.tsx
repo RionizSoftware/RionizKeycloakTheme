@@ -41,35 +41,48 @@ export default function LoginOauth2DeviceVerifyUserCode(
             headerNode={msg("oauth2DeviceVerificationTitle")}
         >
             <Box
-                id="kc-user-verify-device-user-code-form"
                 action={url.oauth2DeviceVerificationAction}
                 method="post"
                 component="form"
+                id="LoginOauth2DeviceVerifyUserCode_Box_1"
+                sx={styles.LoginOauth2DeviceVerifyUserCode_Box_1}
             >
-                <Box id="LoginOauth2DeviceVerifyUserCode_div_1">
+                <Box
+                    id="LoginOauth2DeviceVerifyUserCode_Box_2"
+                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_2}
+                >
                     <FormLabel
-                        id="LoginOauth2DeviceVerifyUserCode_label_1"
                         htmlFor="device-user-code"
+                        id="LoginOauth2DeviceVerifyUserCode_FormLabel_1"
+                        sx={styles.LoginOauth2DeviceVerifyUserCode_FormLabel_1}
                     >
                         {msg("verifyOAuth2DeviceUserCode")}
                     </FormLabel>
 
-                    <Box id="LoginOauth2DeviceVerifyUserCode_div_3">
+                    <Box
+                        id="LoginOauth2DeviceVerifyUserCode_Box_3"
+                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_3}
+                    >
                         <TextField
-                            id="device-user-code"
                             name="device_user_code"
                             autoComplete="off"
                             type="text"
                             autoFocus
+                            id="LoginOauth2DeviceVerifyUserCode_TextField_1"
+                            sx={styles.LoginOauth2DeviceVerifyUserCode_TextField_1}
                         />
                     </Box>
                 </Box>
 
-                <Box id="LoginOauth2DeviceVerifyUserCode_div_4">
+                <Box
+                    id="LoginOauth2DeviceVerifyUserCode_Box_4"
+                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_4}
+                >
                     <TextField
-                        id="LoginOauth2DeviceVerifyUserCode_input_2"
                         type="submit"
                         value={msgStr("doSubmit")}
+                        id="LoginOauth2DeviceVerifyUserCode_TextField_2"
+                        sx={styles.LoginOauth2DeviceVerifyUserCode_TextField_2}
                     />
                 </Box>
             </Box>

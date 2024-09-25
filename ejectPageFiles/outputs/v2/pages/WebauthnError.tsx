@@ -42,17 +42,24 @@ export default function WebauthnError(
             headerNode={msg("webauthn-error-title")}
         >
             <Box
-                id="kc-error-credential-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="WebauthnError_Box_1"
+                sx={styles.WebauthnError_Box_1}
             >
                 <TextField
                     type="hidden"
-                    id="executionValue"
                     name="authenticationExecution"
+                    id="WebauthnError_TextField_1"
+                    sx={styles.WebauthnError_TextField_1}
                 />
-                <TextField type="hidden" id="isSetRetry" name="isSetRetry" />
+                <TextField
+                    type="hidden"
+                    name="isSetRetry"
+                    id="WebauthnError_TextField_2"
+                    sx={styles.WebauthnError_TextField_2}
+                />
             </Box>
             <TextField
                 tabIndex={4}
@@ -66,21 +73,24 @@ export default function WebauthnError(
                 }}
                 type="button"
                 name="try-again"
-                id="kc-try-again"
                 value={msgStr("doTryAgain")}
+                id="WebauthnError_TextField_3"
+                sx={styles.WebauthnError_TextField_3}
             />
             {isAppInitiatedAction && (
                 <Box
                     action={url.loginAction}
-                    id="kc-webauthn-settings-form"
                     method="post"
                     component="form"
+                    id="WebauthnError_Box_2"
+                    sx={styles.WebauthnError_Box_2}
                 >
                     <Button
                         type="submit"
-                        id="cancelWebAuthnAIA"
                         name="cancel-aia"
                         value="true"
+                        id="WebauthnError_Button_1"
+                        sx={styles.WebauthnError_Button_1}
                     >
                         {msgStr("doCancel")}
                     </Button>

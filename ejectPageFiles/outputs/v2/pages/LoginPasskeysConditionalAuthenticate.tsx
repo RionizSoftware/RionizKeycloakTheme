@@ -56,12 +56,16 @@ export default function LoginPasskeysConditionalAuthenticate(
             infoNode={
                 realm.registrationAllowed &&
                 !registrationDisabled && (
-                    <Box id="kc-registration">
+                    <Box
+                        id="LoginPasskeysConditionalAuthenticate_Box_1"
+                        sx={styles.LoginPasskeysConditionalAuthenticate_Box_1}
+                    >
                         ${msg("noAccount")}{" "}
                         <Link
-                            id="LoginPasskeysConditionalAuthenticate_a_1"
                             tabIndex={6}
                             href={url.registrationUrl}
+                            id="LoginPasskeysConditionalAuthenticate_Link_1"
+                            sx={styles.LoginPasskeysConditionalAuthenticate_Link_1}
                         >
                             {msg("doRegister")}
                         </Link>
@@ -69,55 +73,113 @@ export default function LoginPasskeysConditionalAuthenticate(
                 )
             }
         >
-            <Box id="webauth" action={url.loginAction} method="post" component="form">
-                <TextField type="hidden" id="clientDataJSON" name="clientDataJSON" />
+            <Box
+                action={url.loginAction}
+                method="post"
+                component="form"
+                id="LoginPasskeysConditionalAuthenticate_Box_2"
+                sx={styles.LoginPasskeysConditionalAuthenticate_Box_2}
+            >
                 <TextField
                     type="hidden"
-                    id="authenticatorData"
-                    name="authenticatorData"
+                    name="clientDataJSON"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_1"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_1}
                 />
-                <TextField type="hidden" id="signature" name="signature" />
-                <TextField type="hidden" id="credentialId" name="credentialId" />
-                <TextField type="hidden" id="userHandle" name="userHandle" />
-                <TextField type="hidden" id="error" name="error" />
+                <TextField
+                    type="hidden"
+                    name="authenticatorData"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_2"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_2}
+                />
+                <TextField
+                    type="hidden"
+                    name="signature"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_3"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_3}
+                />
+                <TextField
+                    type="hidden"
+                    name="credentialId"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_4"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_4}
+                />
+                <TextField
+                    type="hidden"
+                    name="userHandle"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_5"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_5}
+                />
+                <TextField
+                    type="hidden"
+                    name="error"
+                    id="LoginPasskeysConditionalAuthenticate_TextField_6"
+                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_6}
+                />
             </Box>
 
             <Box
-                id="LoginPasskeysConditionalAuthenticate_div_2"
                 no-bottom-margin="true"
                 style={{ marginBottom: 0 }}
+                id="LoginPasskeysConditionalAuthenticate_Box_3"
+                sx={styles.LoginPasskeysConditionalAuthenticate_Box_3}
             >
                 {authenticators !== undefined &&
                     Object.keys(authenticators).length !== 0 && (
                         <>
-                            <Box id="authn_select" component="form">
+                            <Box
+                                component="form"
+                                id="LoginPasskeysConditionalAuthenticate_Box_4"
+                                sx={styles.LoginPasskeysConditionalAuthenticate_Box_4}
+                            >
                                 {authenticators.authenticators.map((authenticator, i) => (
                                     <TextField
-                                        id="LoginPasskeysConditionalAuthenticate_input_7"
                                         key={i}
                                         type="hidden"
                                         name="authn_use_chk"
                                         readOnly
                                         value={authenticator.credentialId}
+                                        id="LoginPasskeysConditionalAuthenticate_TextField_7"
+                                        sx={
+                                            styles.LoginPasskeysConditionalAuthenticate_TextField_7
+                                        }
                                     />
                                 ))}
                             </Box>
                             {shouldDisplayAuthenticators && (
                                 <>
                                     {authenticators.authenticators.length > 1 && (
-                                        <Typography id="LoginPasskeysConditionalAuthenticate_p_1">
+                                        <Typography
+                                            id="LoginPasskeysConditionalAuthenticate_Typography_1"
+                                            sx={
+                                                styles.LoginPasskeysConditionalAuthenticate_Typography_1
+                                            }
+                                        >
                                             {msg("passkey-available-authenticators")}
                                         </Typography>
                                     )}
-                                    <Box id="LoginPasskeysConditionalAuthenticate_div_3">
+                                    <Box
+                                        id="LoginPasskeysConditionalAuthenticate_Box_5"
+                                        sx={
+                                            styles.LoginPasskeysConditionalAuthenticate_Box_5
+                                        }
+                                    >
                                         {authenticators.authenticators.map(
                                             (authenticator, i) => (
                                                 <Box
                                                     key={i}
-                                                    id={`kc-webauthn-authenticator-item-${i}`}
+                                                    id="LoginPasskeysConditionalAuthenticate_Box_6"
+                                                    sx={
+                                                        styles.LoginPasskeysConditionalAuthenticate_Box_6
+                                                    }
                                                 >
                                                     <i id="LoginPasskeysConditionalAuthenticate_i_1" />
-                                                    <Box id="LoginPasskeysConditionalAuthenticate_div_5">
+                                                    <Box
+                                                        id="LoginPasskeysConditionalAuthenticate_Box_7"
+                                                        sx={
+                                                            styles.LoginPasskeysConditionalAuthenticate_Box_7
+                                                        }
+                                                    >
                                                         {advancedMsg(authenticator.label)}
 
                                                         {authenticator.transports !==
@@ -129,7 +191,10 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                                 .displayNameProperties
                                                                 .length !== 0 && (
                                                                 <Box
-                                                                    id={`kc-webauthn-authenticator-transport-${i}`}
+                                                                    id="LoginPasskeysConditionalAuthenticate_Box_8"
+                                                                    sx={
+                                                                        styles.LoginPasskeysConditionalAuthenticate_Box_8
+                                                                    }
                                                                 >
                                                                     {authenticator.transports.displayNameProperties.map(
                                                                         (
@@ -138,8 +203,11 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                                             arr
                                                                         ) => (
                                                                             <Box
-                                                                                id="LoginPasskeysConditionalAuthenticate_Fragment_1"
                                                                                 key={i}
+                                                                                id="LoginPasskeysConditionalAuthenticate_Box_9"
+                                                                                sx={
+                                                                                    styles.LoginPasskeysConditionalAuthenticate_Box_9
+                                                                                }
                                                                             >
                                                                                 <span
                                                                                     id="LoginPasskeysConditionalAuthenticate_span_2"
@@ -174,10 +242,12 @@ export default function LoginPasskeysConditionalAuthenticate(
                                     </Box>
                                 </>
                             )}
-                            <Box id="kc-form">
+                            <Box
+                                id="LoginPasskeysConditionalAuthenticate_Box_10"
+                                sx={styles.LoginPasskeysConditionalAuthenticate_Box_10}
+                            >
                                 {realm.password && (
                                     <Box
-                                        id="kc-form-passkey"
                                         action={url.loginAction}
                                         method="post"
                                         style={{ display: "none" }}
@@ -189,18 +259,29 @@ export default function LoginPasskeysConditionalAuthenticate(
                                             return true;
                                         }}
                                         component="form"
+                                        id="LoginPasskeysConditionalAuthenticate_Box_11"
+                                        sx={
+                                            styles.LoginPasskeysConditionalAuthenticate_Box_11
+                                        }
                                     >
                                         {!usernameHidden && (
-                                            <Box id="LoginPasskeysConditionalAuthenticate_div_12">
+                                            <Box
+                                                id="LoginPasskeysConditionalAuthenticate_Box_12"
+                                                sx={
+                                                    styles.LoginPasskeysConditionalAuthenticate_Box_12
+                                                }
+                                            >
                                                 <FormLabel
-                                                    id="LoginPasskeysConditionalAuthenticate_label_1"
                                                     htmlFor="username"
+                                                    id="LoginPasskeysConditionalAuthenticate_FormLabel_1"
+                                                    sx={
+                                                        styles.LoginPasskeysConditionalAuthenticate_FormLabel_1
+                                                    }
                                                 >
                                                     {msg("passkey-autofill-select")}
                                                 </FormLabel>
                                                 <TextField
                                                     tabIndex={1}
-                                                    id="username"
                                                     aria-invalid={messagesPerField.existsError(
                                                         "username"
                                                     )}
@@ -210,6 +291,10 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                     type="text"
                                                     autoFocus
                                                     autoComplete="off"
+                                                    id="LoginPasskeysConditionalAuthenticate_TextField_8"
+                                                    sx={
+                                                        styles.LoginPasskeysConditionalAuthenticate_TextField_8
+                                                    }
                                                 />
                                                 {messagesPerField.existsError(
                                                     "username"
@@ -226,14 +311,20 @@ export default function LoginPasskeysConditionalAuthenticate(
                                     </Box>
                                 )}
                                 <Box
-                                    id="kc-form-passkey-button"
                                     style={{ display: "none" }}
+                                    id="LoginPasskeysConditionalAuthenticate_Box_13"
+                                    sx={
+                                        styles.LoginPasskeysConditionalAuthenticate_Box_13
+                                    }
                                 >
                                     <TextField
-                                        id={authButtonId}
                                         type="button"
                                         autoFocus
                                         value={msgStr("passkey-doAuthenticate")}
+                                        id="LoginPasskeysConditionalAuthenticate_TextField_9"
+                                        sx={
+                                            styles.LoginPasskeysConditionalAuthenticate_TextField_9
+                                        }
                                     />
                                 </Box>
                             </Box>

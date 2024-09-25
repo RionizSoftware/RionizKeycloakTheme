@@ -38,7 +38,6 @@ export default function Error(
         >
             <Box id="Error_Box_1" sx={styles.Error_Box_1}>
                 <Typography
-                    className="instruction"
                     dangerouslySetInnerHTML={{ __html: message.summary }}
                     id="Error_Typography_1"
                     sx={styles.Error_Typography_1}

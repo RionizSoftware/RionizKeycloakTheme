@@ -57,15 +57,10 @@ export default function LoginPassword(
                     id="LoginPassword_Box_2"
                     sx={styles.LoginPassword_Box_2}
                 >
-                    <Box
-                        className={clsx(kcClsx("kcFormGroupClass"), "no-bottom-margin")}
-                        id="LoginPassword_Box_3"
-                        sx={styles.LoginPassword_Box_3}
-                    >
+                    <Box id="LoginPassword_Box_3" sx={styles.LoginPassword_Box_3}>
                         <hr id="LoginPassword_hr_1" />
                         <FormLabel
                             htmlFor="password"
-                            className={kcClsx("kcLabelClass")}
                             id="LoginPassword_FormLabel_1"
                             sx={styles.LoginPassword_FormLabel_1}
                         >
@@ -80,7 +75,6 @@ export default function LoginPassword(
                         >
                             <TextField
                                 tabIndex={2}
-                                className={kcClsx("kcInputClass")}
                                 name="password"
                                 type="password"
                                 autoFocus
@@ -97,7 +91,6 @@ export default function LoginPassword(
                         {messagesPerField.existsError("password") && (
                             <span
                                 id="input-error-password"
-                                className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
                                     __html: messagesPerField.get("password")
@@ -105,43 +98,23 @@ export default function LoginPassword(
                             />
                         )}
                     </Box>
-                    <Box
-                        className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}
-                        id="LoginPassword_Box_4"
-                        sx={styles.LoginPassword_Box_4}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginPassword_Box_5"
-                            sx={styles.LoginPassword_Box_5}
-                        >
-                            {realm.resetPasswordAllowed && (
-                                <span id="LoginPassword_span_2">
-                                    <Link
-                                        tabIndex={5}
-                                        href={url.loginResetCredentialsUrl}
-                                        id="LoginPassword_Link_1"
-                                        sx={styles.LoginPassword_Link_1}
-                                    >
-                                        {msg("doForgotPassword")}
-                                    </Link>
-                                </span>
-                            )}
-                        </Box>
+                    <Box id="LoginPassword_Box_4" sx={styles.LoginPassword_Box_4}>
+                        {realm.resetPasswordAllowed && (
+                            <span id="LoginPassword_span_2">
+                                <Link
+                                    tabIndex={5}
+                                    href={url.loginResetCredentialsUrl}
+                                    id="LoginPassword_Link_1"
+                                    sx={styles.LoginPassword_Link_1}
+                                >
+                                    {msg("doForgotPassword")}
+                                </Link>
+                            </span>
+                        )}
                     </Box>
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginPassword_Box_6"
-                        sx={styles.LoginPassword_Box_6}
-                    >
+                    <Box id="LoginPassword_Box_5" sx={styles.LoginPassword_Box_5}>
                         <TextField
                             tabIndex={4}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
                             name="login"
                             type="submit"
                             value={msgStr("doLogIn")}

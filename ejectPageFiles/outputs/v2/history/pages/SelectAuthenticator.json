@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-select-credential-form\""
+      "kc-select-credential-form\"",
+      "SelectAuthenticator_Box_1"
     ],
     "historyStates": [
       {
@@ -56,12 +57,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "SelectAuthenticator_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "SelectAuthenticator_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SelectAuthenticator_div_1\""
+      "SelectAuthenticator_div_1\"",
+      "SelectAuthenticator_Box_2"
     ],
     "historyStates": [
       {
@@ -88,12 +114,31 @@
         "props": {
           "id": "id=\"SelectAuthenticator_div_1\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SelectAuthenticator_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SelectAuthenticator_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SelectAuthenticator_button_1\""
+      "SelectAuthenticator_button_1\"",
+      "SelectAuthenticator_Button_1"
     ],
     "historyStates": [
       {
@@ -132,12 +177,39 @@
           "name": "name=\"authenticationExecution\"",
           "value": "value={authenticationSelection.authExecId}"
         }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={i}",
+          "type": "type=\"submit\"",
+          "name": "name=\"authenticationExecution\"",
+          "value": "value={authenticationSelection.authExecId}",
+          "id": "SelectAuthenticator_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={i}",
+          "type": "type=\"submit\"",
+          "name": "name=\"authenticationExecution\"",
+          "value": "value={authenticationSelection.authExecId}",
+          "id": "SelectAuthenticator_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SelectAuthenticator_div_2\""
+      "SelectAuthenticator_div_2\"",
+      "SelectAuthenticator_Box_3"
     ],
     "historyStates": [
       {
@@ -163,6 +235,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"SelectAuthenticator_div_2\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SelectAuthenticator_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SelectAuthenticator_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -193,7 +283,8 @@
   },
   {
     "tags": [
-      "SelectAuthenticator_div_3\""
+      "SelectAuthenticator_div_3\"",
+      "SelectAuthenticator_Box_4"
     ],
     "historyStates": [
       {
@@ -219,6 +310,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"SelectAuthenticator_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SelectAuthenticator_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SelectAuthenticator_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -321,7 +430,8 @@
   },
   {
     "tags": [
-      "SelectAuthenticator_div_7\""
+      "SelectAuthenticator_div_7\"",
+      "SelectAuthenticator_Box_5"
     ],
     "historyStates": [
       {
@@ -347,6 +457,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"SelectAuthenticator_div_7\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SelectAuthenticator_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SelectAuthenticator_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

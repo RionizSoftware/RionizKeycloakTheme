@@ -53,7 +53,6 @@ export default function Info(
         >
             <Box id="Info_Box_1" sx={styles.Info_Box_1}>
                 <Typography
-                    className="instruction"
                     dangerouslySetInnerHTML={{
                         __html: (() => {
                             let html = message.summary;

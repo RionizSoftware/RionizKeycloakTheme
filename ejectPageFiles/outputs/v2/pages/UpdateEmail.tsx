@@ -57,10 +57,11 @@ export default function UpdateEmail(props: UpdateEmailProps) {
             headerNode={msg("updateEmailTitle")}
         >
             <Box
-                id="kc-update-email-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="UpdateEmail_Box_1"
+                sx={styles.UpdateEmail_Box_1}
             >
                 <UserProfileFormFields
                     id="UpdateEmail_UserProfileFormFields_1"
@@ -71,7 +72,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
 
-                <Box id="UpdateEmail_div_1">
+                <Box id="UpdateEmail_Box_2" sx={styles.UpdateEmail_Box_2}>
                     <LogoutOtherSessions
                         id="UpdateEmail_LogoutOtherSessions_1"
                         kcClsx={kcClsx}
@@ -79,17 +80,19 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                     />
 
                     <TextField
-                        id="UpdateEmail_input_1"
                         disabled={!isFormSubmittable}
                         type="submit"
                         value={msgStr("doSubmit")}
+                        id="UpdateEmail_TextField_1"
+                        sx={styles.UpdateEmail_TextField_1}
                     />
                     {isAppInitiatedAction && (
                         <Button
-                            id="UpdateEmail_button_1"
                             type="submit"
                             name="cancel-aia"
                             value="true"
+                            id="UpdateEmail_Button_1"
+                            sx={styles.UpdateEmail_Button_1}
                         >
                             {msg("doCancel")}
                         </Button>
@@ -103,14 +106,15 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="kc-form-options">
-            <FormLabel id="UpdateEmail_label_1">
+        <Box id="UpdateEmail_Box_3" sx={styles.UpdateEmail_Box_3}>
+            <FormLabel id="UpdateEmail_FormLabel_1" sx={styles.UpdateEmail_FormLabel_1}>
                 <TextField
                     type="checkbox"
-                    id="logout-sessions"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
+                    id="UpdateEmail_TextField_2"
+                    sx={styles.UpdateEmail_TextField_2}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>

@@ -48,13 +48,18 @@ export default function LoginResetPassword(
             headerNode={msg("emailForgotTitle")}
         >
             <Box
-                id="kc-reset-password-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginResetPassword_Box_1"
+                sx={styles.LoginResetPassword_Box_1}
             >
-                <Box id="LoginResetPassword_div_1">
-                    <FormLabel id="LoginResetPassword_label_1" htmlFor="username">
+                <Box id="LoginResetPassword_Box_2" sx={styles.LoginResetPassword_Box_2}>
+                    <FormLabel
+                        htmlFor="username"
+                        id="LoginResetPassword_FormLabel_1"
+                        sx={styles.LoginResetPassword_FormLabel_1}
+                    >
                         {!realm.loginWithEmailAllowed
                             ? msg("username")
                             : !realm.registrationEmailAsUsername
@@ -62,14 +67,18 @@ export default function LoginResetPassword(
                               : msg("email")}
                     </FormLabel>
 
-                    <Box id="LoginResetPassword_div_3">
+                    <Box
+                        id="LoginResetPassword_Box_3"
+                        sx={styles.LoginResetPassword_Box_3}
+                    >
                         <TextField
                             type="text"
-                            id="username"
                             name="username"
                             autoFocus
                             defaultValue={auth.attemptedUsername ?? ""}
                             aria-invalid={messagesPerField.existsError("username")}
+                            id="LoginResetPassword_TextField_1"
+                            sx={styles.LoginResetPassword_TextField_1}
                         />
                         {messagesPerField.existsError("username") && (
                             <span
@@ -82,16 +91,24 @@ export default function LoginResetPassword(
                         )}
                     </Box>
                 </Box>
-                <Box id="LoginResetPassword_div_4">
-                    <Link id="LoginResetPassword_a_1" href={url.loginUrl}>
+                <Box id="LoginResetPassword_Box_4" sx={styles.LoginResetPassword_Box_4}>
+                    <Link
+                        href={url.loginUrl}
+                        id="LoginResetPassword_Link_1"
+                        sx={styles.LoginResetPassword_Link_1}
+                    >
                         {msg("backToLogin")}
                     </Link>
 
-                    <Box id="kc-form-buttons">
+                    <Box
+                        id="LoginResetPassword_Box_5"
+                        sx={styles.LoginResetPassword_Box_5}
+                    >
                         <TextField
-                            id="LoginResetPassword_input_2"
                             type="submit"
                             value={msgStr("doSubmit")}
+                            id="LoginResetPassword_TextField_2"
+                            sx={styles.LoginResetPassword_TextField_2}
                         />
                     </Box>
                 </Box>

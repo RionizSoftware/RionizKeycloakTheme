@@ -23,7 +23,8 @@
   },
   {
     "tags": [
-      "kc-idp-review-profile-form\""
+      "kc-idp-review-profile-form\"",
+      "IdpReviewUserProfile_Box_1"
     ],
     "historyStates": [
       {
@@ -57,6 +58,30 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "IdpReviewUserProfile_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "IdpReviewUserProfile_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
@@ -82,7 +107,8 @@
   },
   {
     "tags": [
-      "IdpReviewUserProfile_div_1\""
+      "IdpReviewUserProfile_div_1\"",
+      "IdpReviewUserProfile_Box_2"
     ],
     "historyStates": [
       {
@@ -108,6 +134,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"IdpReviewUserProfile_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "IdpReviewUserProfile_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "IdpReviewUserProfile_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -210,7 +254,8 @@
   },
   {
     "tags": [
-      "IdpReviewUserProfile_input_1\""
+      "IdpReviewUserProfile_input_1\"",
+      "IdpReviewUserProfile_TextField_1"
     ],
     "historyStates": [
       {
@@ -245,6 +290,30 @@
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doSubmit\")}",
           "disabled": "disabled={!isFomSubmittable}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}",
+          "id": "IdpReviewUserProfile_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}",
+          "id": "IdpReviewUserProfile_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

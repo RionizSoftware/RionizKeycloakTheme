@@ -21,7 +21,8 @@
   },
   {
     "tags": [
-      "kc-x509-login-info\""
+      "kc-x509-login-info\"",
+      "LoginX509Info_Box_1"
     ],
     "historyStates": [
       {
@@ -55,12 +56,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginX509Info_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginX509Info_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_1\""
+      "LoginX509Info_div_1\"",
+      "LoginX509Info_Box_2"
     ],
     "historyStates": [
       {
@@ -86,6 +112,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginX509Info_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -124,7 +168,8 @@
   },
   {
     "tags": [
-      "LoginX509Info_label_1\""
+      "LoginX509Info_label_1\"",
+      "LoginX509Info_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -154,12 +199,33 @@
           "id": "id=\"LoginX509Info_label_1\"",
           "htmlFor": "htmlFor=\"certificate_subjectDN\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"certificate_subjectDN\"",
+          "id": "LoginX509Info_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"certificate_subjectDN\"",
+          "id": "LoginX509Info_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_3\""
+      "LoginX509Info_div_3\"",
+      "LoginX509Info_Box_3"
     ],
     "historyStates": [
       {
@@ -186,12 +252,32 @@
         "props": {
           "id": "id=\"LoginX509Info_div_3\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "certificate_subjectDN\""
+      "certificate_subjectDN\"",
+      "LoginX509Info_FormLabel_2",
+      "LoginX509Info_FormLabel_3"
     ],
     "historyStates": [
       {
@@ -234,12 +320,49 @@
         "props": {
           "id": "id=\"certificate_subjectDN\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_FormLabel_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_FormLabel_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_4\""
+      "LoginX509Info_div_4\"",
+      "LoginX509Info_Box_4"
     ],
     "historyStates": [
       {
@@ -266,12 +389,31 @@
         "props": {
           "id": "id=\"LoginX509Info_div_4\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_5\""
+      "LoginX509Info_div_5\"",
+      "LoginX509Info_Box_5"
     ],
     "historyStates": [
       {
@@ -298,12 +440,31 @@
         "props": {
           "id": "id=\"LoginX509Info_div_5\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_6\""
+      "LoginX509Info_div_6\"",
+      "LoginX509Info_Box_6"
     ],
     "historyStates": [
       {
@@ -330,12 +491,31 @@
         "props": {
           "id": "id=\"LoginX509Info_div_6\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_label_4\""
+      "LoginX509Info_label_4\"",
+      "LoginX509Info_FormLabel_4"
     ],
     "historyStates": [
       {
@@ -365,12 +545,33 @@
           "id": "id=\"LoginX509Info_label_4\"",
           "htmlFor": "htmlFor=\"username\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "id": "LoginX509Info_FormLabel_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "id": "LoginX509Info_FormLabel_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_7\""
+      "LoginX509Info_div_7\"",
+      "LoginX509Info_Box_7"
     ],
     "historyStates": [
       {
@@ -397,12 +598,31 @@
         "props": {
           "id": "id=\"LoginX509Info_div_7\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "username\""
+      "username\"",
+      "LoginX509Info_FormLabel_5"
     ],
     "historyStates": [
       {
@@ -429,12 +649,31 @@
         "props": {
           "id": "id=\"username\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_FormLabel_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_FormLabel_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginX509Info_div_8\""
+      "LoginX509Info_div_8\"",
+      "LoginX509Info_Box_8"
     ],
     "historyStates": [
       {
@@ -460,6 +699,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginX509Info_div_8\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginX509Info_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginX509Info_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -594,7 +851,8 @@
   },
   {
     "tags": [
-      "kc-login\""
+      "kc-login\"",
+      "LoginX509Info_TextField_1"
     ],
     "historyStates": [
       {
@@ -630,12 +888,37 @@
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doContinue\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
+          "id": "LoginX509Info_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
+          "id": "LoginX509Info_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-cancel\""
+      "kc-cancel\"",
+      "LoginX509Info_TextField_2"
     ],
     "historyStates": [
       {
@@ -670,6 +953,30 @@
           "id": "id=\"kc-cancel\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doIgnore\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doIgnore\")}",
+          "id": "LoginX509Info_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doIgnore\")}",
+          "id": "LoginX509Info_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

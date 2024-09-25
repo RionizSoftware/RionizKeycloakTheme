@@ -1,1 +1,21 @@
-export const styles ={}
+export const styles ={
+    "Template_Box_1": {},
+    "Template_Box_2": {},
+    "Template_Button_1": {},
+    "Template_List_1": {},
+    "Template_ListItem_1": {},
+    "Template_Link_1": {},
+    "Template_Typography_1": {},
+    "Template_Box_3": {},
+    "Template_FormLabel_1": {},
+    "Template_Link_2": {},
+    "Template_Box_4": {},
+    "Template_Box_5": {},
+    "Template_Box_6": {},
+    "Template_Box_7": {},
+    "Template_Box_8": {},
+    "Template_Box_9": {},
+    "Template_TextField_1": {},
+    "Template_Link_3": {},
+    "Template_Box_10": {}
+}

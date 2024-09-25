@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-error-message\""
+      "kc-error-message\"",
+      "Error_Box_1"
     ],
     "historyStates": [
       {
@@ -40,12 +41,31 @@
         "props": {
           "id": "id=\"kc-error-message\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Error_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Error_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Error_p_1\""
+      "Error_p_1\"",
+      "Error_Typography_1"
     ],
     "historyStates": [
       {
@@ -75,12 +95,33 @@
           "id": "id=\"Error_p_1\"",
           "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}"
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}",
+          "id": "Error_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}",
+          "id": "Error_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Error_p_2\""
+      "Error_p_2\"",
+      "Error_Typography_2"
     ],
     "historyStates": [
       {
@@ -98,12 +139,31 @@
         "props": {
           "id": "id=\"Error_p_2\""
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Error_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Error_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "backToApplication\""
+      "backToApplication\"",
+      "Error_Link_1"
     ],
     "historyStates": [
       {
@@ -122,6 +182,26 @@
         "props": {
           "id": "id=\"backToApplication\"",
           "href": "href={client.baseUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={client.baseUrl}",
+          "id": "Error_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={client.baseUrl}",
+          "id": "Error_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

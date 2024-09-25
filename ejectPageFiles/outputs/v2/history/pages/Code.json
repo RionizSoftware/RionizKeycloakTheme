@@ -21,7 +21,8 @@
   },
   {
     "tags": [
-      "kc-code\""
+      "kc-code\"",
+      "Code_Box_1"
     ],
     "historyStates": [
       {
@@ -39,12 +40,31 @@
         "props": {
           "id": "id=\"kc-code\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Code_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Code_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Code_p_1\""
+      "Code_p_1\"",
+      "Code_Typography_1"
     ],
     "historyStates": [
       {
@@ -62,12 +82,31 @@
         "props": {
           "id": "id=\"Code_p_1\""
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Code_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Code_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "code\""
+      "code\"",
+      "Code_TextField_1"
     ],
     "historyStates": [
       {
@@ -97,12 +136,33 @@
           "id": "id=\"code\"",
           "defaultValue": "defaultValue={code.code}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "defaultValue": "defaultValue={code.code}",
+          "id": "Code_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "defaultValue": "defaultValue={code.code}",
+          "id": "Code_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "error\""
+      "error\"",
+      "Code_Typography_2"
     ],
     "historyStates": [
       {
@@ -119,6 +179,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"error\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Code_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Code_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

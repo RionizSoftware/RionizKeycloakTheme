@@ -16,12 +16,10 @@ export const styles ={
     "Login_TextField_2": {},
     "Login_Box_7": {},
     "Login_Box_8": {},
-    "Login_Box_9": {},
     "Login_FormLabel_3": {},
     "Login_TextField_3": {},
-    "Login_Box_10": {},
     "Login_Link_3": {},
-    "Login_Box_11": {},
+    "Login_Box_9": {},
     "Login_TextField_4": {},
     "Login_TextField_5": {}
 }

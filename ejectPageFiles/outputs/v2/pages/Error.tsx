@@ -36,14 +36,19 @@ export default function Error(
             displayMessage={false}
             headerNode={msg("errorTitle")}
         >
-            <Box id="kc-error-message">
+            <Box id="Error_Box_1" sx={styles.Error_Box_1}>
                 <Typography
-                    id="Error_p_1"
                     dangerouslySetInnerHTML={{ __html: message.summary }}
+                    id="Error_Typography_1"
+                    sx={styles.Error_Typography_1}
                 />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
-                    <Typography id="Error_p_2">
-                        <Link id="backToApplication" href={client.baseUrl}>
+                    <Typography id="Error_Typography_2" sx={styles.Error_Typography_2}>
+                        <Link
+                            href={client.baseUrl}
+                            id="Error_Link_1"
+                            sx={styles.Error_Link_1}
+                        >
                             {msg("backToApplication")}
                         </Link>
                     </Typography>

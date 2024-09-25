@@ -10,5 +10,5 @@ export const styles ={
     "LoginPasskeysConditionalAuthenticate_TextField_6": {},
     "LoginPasskeysConditionalAuthenticate_Box_3": {},
     "LoginPasskeysConditionalAuthenticate_Box_4": {},
-    "LoginPasskeysConditionalAuthenticate_Box_13": {}
+    "LoginPasskeysConditionalAuthenticate_Box_10": {}
 }

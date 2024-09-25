@@ -57,7 +57,6 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
             headerNode={msg("loginIdpReviewProfileTitle")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
@@ -73,40 +72,16 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
                 <Box
-                    className={kcClsx("kcFormGroupClass")}
                     id="IdpReviewUserProfile_Box_2"
                     sx={styles.IdpReviewUserProfile_Box_2}
                 >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="IdpReviewUserProfile_Box_3"
-                        sx={styles.IdpReviewUserProfile_Box_3}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="IdpReviewUserProfile_Box_4"
-                            sx={styles.IdpReviewUserProfile_Box_4}
-                        />
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="IdpReviewUserProfile_Box_5"
-                        sx={styles.IdpReviewUserProfile_Box_5}
-                    >
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            type="submit"
-                            value={msgStr("doSubmit")}
-                            disabled={!isFomSubmittable}
-                            id="IdpReviewUserProfile_TextField_1"
-                            sx={styles.IdpReviewUserProfile_TextField_1}
-                        />
-                    </Box>
+                    <TextField
+                        type="submit"
+                        value={msgStr("doSubmit")}
+                        disabled={!isFomSubmittable}
+                        id="IdpReviewUserProfile_TextField_1"
+                        sx={styles.IdpReviewUserProfile_TextField_1}
+                    />
                 </Box>
             </Box>
         </Template>

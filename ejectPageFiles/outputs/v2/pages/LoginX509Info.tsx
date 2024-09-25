@@ -41,59 +41,79 @@ export default function LoginX509Info(
             headerNode={msg("doLogIn")}
         >
             <Box
-                id="kc-x509-login-info"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginX509Info_Box_1"
+                sx={styles.LoginX509Info_Box_1}
             >
-                <Box id="LoginX509Info_div_1">
-                    <FormLabel id="LoginX509Info_label_1" htmlFor="certificate_subjectDN">
+                <Box id="LoginX509Info_Box_2" sx={styles.LoginX509Info_Box_2}>
+                    <FormLabel
+                        htmlFor="certificate_subjectDN"
+                        id="LoginX509Info_FormLabel_1"
+                        sx={styles.LoginX509Info_FormLabel_1}
+                    >
                         {msg("clientCertificate")}
                     </FormLabel>
 
                     {x509.formData.subjectDN ? (
-                        <Box id="LoginX509Info_div_3">
-                            <FormLabel id="certificate_subjectDN">
+                        <Box id="LoginX509Info_Box_3" sx={styles.LoginX509Info_Box_3}>
+                            <FormLabel
+                                id="LoginX509Info_FormLabel_2"
+                                sx={styles.LoginX509Info_FormLabel_2}
+                            >
                                 {x509.formData.subjectDN}
                             </FormLabel>
                         </Box>
                     ) : (
-                        <Box id="LoginX509Info_div_4">
-                            <FormLabel id="certificate_subjectDN">
+                        <Box id="LoginX509Info_Box_4" sx={styles.LoginX509Info_Box_4}>
+                            <FormLabel
+                                id="LoginX509Info_FormLabel_3"
+                                sx={styles.LoginX509Info_FormLabel_3}
+                            >
                                 {msg("noCertificate")}
                             </FormLabel>
                         </Box>
                     )}
                 </Box>
-                <Box id="LoginX509Info_div_5">
+                <Box id="LoginX509Info_Box_5" sx={styles.LoginX509Info_Box_5}>
                     {x509.formData.isUserEnabled && (
                         <>
-                            <Box id="LoginX509Info_div_6">
-                                <FormLabel id="LoginX509Info_label_4" htmlFor="username">
+                            <Box id="LoginX509Info_Box_6" sx={styles.LoginX509Info_Box_6}>
+                                <FormLabel
+                                    htmlFor="username"
+                                    id="LoginX509Info_FormLabel_4"
+                                    sx={styles.LoginX509Info_FormLabel_4}
+                                >
                                     {msg("doX509Login")}
                                 </FormLabel>
                             </Box>
-                            <Box id="LoginX509Info_div_7">
-                                <FormLabel id="username">
+                            <Box id="LoginX509Info_Box_7" sx={styles.LoginX509Info_Box_7}>
+                                <FormLabel
+                                    id="LoginX509Info_FormLabel_5"
+                                    sx={styles.LoginX509Info_FormLabel_5}
+                                >
                                     {x509.formData.username}
                                 </FormLabel>
                             </Box>
                         </>
                     )}
                 </Box>
-                <Box id="LoginX509Info_div_8">
+                <Box id="LoginX509Info_Box_8" sx={styles.LoginX509Info_Box_8}>
                     <TextField
                         name="login"
-                        id="kc-login"
                         type="submit"
                         value={msgStr("doContinue")}
+                        id="LoginX509Info_TextField_1"
+                        sx={styles.LoginX509Info_TextField_1}
                     />
                     {x509.formData.isUserEnabled && (
                         <TextField
                             name="cancel"
-                            id="kc-cancel"
                             type="submit"
                             value={msgStr("doIgnore")}
+                            id="LoginX509Info_TextField_2"
+                            sx={styles.LoginX509Info_TextField_2}
                         />
                     )}
                 </Box>

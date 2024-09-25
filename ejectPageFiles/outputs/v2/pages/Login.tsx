@@ -57,9 +57,14 @@ export default function Login(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <Box id="kc-registration-container">
+                <Box id="Login_Box_1" sx={styles.Login_Box_1}>
                     {msg("noAccount")}{" "}
-                    <Link id="Login_a_1" tabIndex={8} href={url.registrationUrl}>
+                    <Link
+                        tabIndex={8}
+                        href={url.registrationUrl}
+                        id="Login_Link_1"
+                        sx={styles.Login_Link_1}
+                    >
                         {msg("doRegister")}
                     </Link>
                 </Box>
@@ -69,18 +74,28 @@ export default function Login(
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <Box id="kc-social-providers">
+                            <Box id="Login_Box_2" sx={styles.Login_Box_2}>
                                 <hr id="Login_hr_1" />
-                                <Typography id="Login_h2_1" variant="h2" component="h2">
+                                <Typography
+                                    variant="h2"
+                                    component="h2"
+                                    id="Login_Typography_1"
+                                    sx={styles.Login_Typography_1}
+                                >
                                     {msg("identity-provider-login-label")}
                                 </Typography>
-                                <List id="Login_ul_1">
+                                <List id="Login_List_1" sx={styles.Login_List_1}>
                                     {social.providers.map((...[p, , providers]) => (
-                                        <ListItem id="Login_li_1" key={p.alias}>
+                                        <ListItem
+                                            key={p.alias}
+                                            id="Login_ListItem_1"
+                                            sx={styles.Login_ListItem_1}
+                                        >
                                             <Link
-                                                id={`social-${p.alias}`}
                                                 type="button"
                                                 href={p.loginUrl}
+                                                id="Login_Link_2"
+                                                sx={styles.Login_Link_2}
                                             >
                                                 {p.iconClasses && (
                                                     <i
@@ -103,10 +118,9 @@ export default function Login(
                 </>
             }
         >
-            <Box id="kc-form">
+            <Box id="Login_Box_3" sx={styles.Login_Box_3}>
                 {realm.password && (
                     <Box
-                        id="kc-form-login"
                         onSubmit={() => {
                             setIsLoginButtonDisabled(true);
                             return true;
@@ -114,10 +128,16 @@ export default function Login(
                         action={url.loginAction}
                         method="post"
                         component="form"
+                        id="Login_Box_4"
+                        sx={styles.Login_Box_4}
                     >
                         {!usernameHidden && (
-                            <Box id="Login_div_6">
-                                <FormLabel id="Login_label_1" htmlFor="username">
+                            <Box id="Login_Box_5" sx={styles.Login_Box_5}>
+                                <FormLabel
+                                    htmlFor="username"
+                                    id="Login_FormLabel_1"
+                                    sx={styles.Login_FormLabel_1}
+                                >
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
                                         : !realm.registrationEmailAsUsername
@@ -126,7 +146,6 @@ export default function Login(
                                 </FormLabel>
                                 <TextField
                                     tabIndex={2}
-                                    id="username"
                                     name="username"
                                     defaultValue={login.username ?? ""}
                                     type="text"
@@ -136,6 +155,8 @@ export default function Login(
                                         "username",
                                         "password"
                                     )}
+                                    id="Login_TextField_1"
+                                    sx={styles.Login_TextField_1}
                                 />
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
@@ -152,8 +173,12 @@ export default function Login(
                             </Box>
                         )}
 
-                        <Box id="Login_div_7">
-                            <FormLabel id="Login_label_2" htmlFor="password">
+                        <Box id="Login_Box_6" sx={styles.Login_Box_6}>
+                            <FormLabel
+                                htmlFor="password"
+                                id="Login_FormLabel_2"
+                                sx={styles.Login_FormLabel_2}
+                            >
                                 {msg("password")}
                             </FormLabel>
                             <PasswordWrapper
@@ -164,7 +189,6 @@ export default function Login(
                             >
                                 <TextField
                                     tabIndex={3}
-                                    id="password"
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
@@ -172,6 +196,8 @@ export default function Login(
                                         "username",
                                         "password"
                                     )}
+                                    id="Login_TextField_2"
+                                    sx={styles.Login_TextField_2}
                                 />
                             </PasswordWrapper>
                             {usernameHidden &&
@@ -189,16 +215,20 @@ export default function Login(
                                 )}
                         </Box>
 
-                        <Box id="Login_div_8">
+                        <Box id="Login_Box_7" sx={styles.Login_Box_7}>
                             {realm.rememberMe && !usernameHidden && (
-                                <Box id="Login_div_10">
-                                    <FormLabel id="Login_label_3">
+                                <Box id="Login_Box_8" sx={styles.Login_Box_8}>
+                                    <FormLabel
+                                        id="Login_FormLabel_3"
+                                        sx={styles.Login_FormLabel_3}
+                                    >
                                         <TextField
                                             tabIndex={5}
-                                            id="rememberMe"
                                             name="rememberMe"
                                             type="checkbox"
                                             defaultChecked={!!login.rememberMe}
+                                            id="Login_TextField_3"
+                                            sx={styles.Login_TextField_3}
                                         />{" "}
                                         {msg("rememberMe")}
                                     </FormLabel>
@@ -208,9 +238,10 @@ export default function Login(
                             {realm.resetPasswordAllowed && (
                                 <span id="Login_span_5">
                                     <Link
-                                        id="Login_a_3"
                                         tabIndex={6}
                                         href={url.loginResetCredentialsUrl}
+                                        id="Login_Link_3"
+                                        sx={styles.Login_Link_3}
                                     >
                                         {msg("doForgotPassword")}
                                     </Link>
@@ -218,20 +249,22 @@ export default function Login(
                             )}
                         </Box>
 
-                        <Box id="kc-form-buttons">
+                        <Box id="Login_Box_9" sx={styles.Login_Box_9}>
                             <TextField
                                 type="hidden"
-                                id="id-hidden-input"
                                 name="credentialId"
                                 value={auth.selectedCredential}
+                                id="Login_TextField_4"
+                                sx={styles.Login_TextField_4}
                             />
                             <TextField
                                 tabIndex={7}
                                 disabled={isLoginButtonDisabled}
                                 name="login"
-                                id="kc-login"
                                 type="submit"
                                 value={msgStr("doLogIn")}
+                                id="Login_TextField_5"
+                                sx={styles.Login_TextField_5}
                             />
                         </Box>
                     </Box>

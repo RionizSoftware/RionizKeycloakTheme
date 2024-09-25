@@ -3,8 +3,8 @@ import type { ClassKey } from "rionizkeycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "rionizkeycloakify/login/DefaultPage";
-import UserProfileFormFields from "./UserProfileFormFields";
 import Template from "./Template";
+import UserProfileFormFields from "./UserProfileFormFields";
 const LoginIdpLinkConfirmOverride = lazy(
     () => import("./pages/LoginIdpLinkConfirmOverride")
 );

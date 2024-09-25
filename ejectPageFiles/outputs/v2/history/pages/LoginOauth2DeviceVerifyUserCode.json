@@ -21,7 +21,8 @@
   },
   {
     "tags": [
-      "kc-user-verify-device-user-code-form\""
+      "kc-user-verify-device-user-code-form\"",
+      "LoginOauth2DeviceVerifyUserCode_Box_1"
     ],
     "historyStates": [
       {
@@ -55,12 +56,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.oauth2DeviceVerificationAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.oauth2DeviceVerificationAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_div_1\""
+      "LoginOauth2DeviceVerifyUserCode_div_1\"",
+      "LoginOauth2DeviceVerifyUserCode_Box_2"
     ],
     "historyStates": [
       {
@@ -86,6 +112,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -124,7 +168,8 @@
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_label_1\""
+      "LoginOauth2DeviceVerifyUserCode_label_1\"",
+      "LoginOauth2DeviceVerifyUserCode_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -154,12 +199,33 @@
           "id": "id=\"LoginOauth2DeviceVerifyUserCode_label_1\"",
           "htmlFor": "htmlFor=\"device-user-code\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "id": "LoginOauth2DeviceVerifyUserCode_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "id": "LoginOauth2DeviceVerifyUserCode_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_div_3\""
+      "LoginOauth2DeviceVerifyUserCode_div_3\"",
+      "LoginOauth2DeviceVerifyUserCode_Box_3"
     ],
     "historyStates": [
       {
@@ -186,12 +252,31 @@
         "props": {
           "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_3\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "device-user-code\""
+      "device-user-code\"",
+      "LoginOauth2DeviceVerifyUserCode_TextField_1"
     ],
     "historyStates": [
       {
@@ -230,12 +315,39 @@
           "type": "type=\"text\"",
           "autoFocus": "autoFocus"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"device_user_code\"",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "id": "LoginOauth2DeviceVerifyUserCode_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"device_user_code\"",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "id": "LoginOauth2DeviceVerifyUserCode_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_div_4\""
+      "LoginOauth2DeviceVerifyUserCode_div_4\"",
+      "LoginOauth2DeviceVerifyUserCode_Box_4"
     ],
     "historyStates": [
       {
@@ -261,6 +373,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_4\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -395,7 +525,8 @@
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_input_2\""
+      "LoginOauth2DeviceVerifyUserCode_input_2\"",
+      "LoginOauth2DeviceVerifyUserCode_TextField_2"
     ],
     "historyStates": [
       {
@@ -427,6 +558,28 @@
           "id": "id=\"LoginOauth2DeviceVerifyUserCode_input_2\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doSubmit\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

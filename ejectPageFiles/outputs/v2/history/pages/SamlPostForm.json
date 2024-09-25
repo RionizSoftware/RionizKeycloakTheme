@@ -21,7 +21,8 @@
   },
   {
     "tags": [
-      "SamlPostForm_p_1\""
+      "SamlPostForm_p_1\"",
+      "SamlPostForm_Typography_1"
     ],
     "historyStates": [
       {
@@ -39,12 +40,31 @@
         "props": {
           "id": "id=\"SamlPostForm_p_1\""
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SamlPostForm_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SamlPostForm_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SamlPostForm_form_1\""
+      "SamlPostForm_form_1\"",
+      "SamlPostForm_Box_1"
     ],
     "historyStates": [
       {
@@ -71,12 +91,41 @@
           "ref": "ref={setHtmlFormElement}",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}",
+          "component": "component=\"form\"",
+          "id": "SamlPostForm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}",
+          "component": "component=\"form\"",
+          "id": "SamlPostForm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SamlPostForm_input_1\""
+      "SamlPostForm_input_1\"",
+      "SamlPostForm_TextField_1"
     ],
     "historyStates": [
       {
@@ -100,12 +149,37 @@
           "name": "name=\"SAMLRequest\"",
           "value": "value={samlPost.SAMLRequest}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}",
+          "id": "SamlPostForm_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}",
+          "id": "SamlPostForm_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SamlPostForm_input_2\""
+      "SamlPostForm_input_2\"",
+      "SamlPostForm_TextField_2"
     ],
     "historyStates": [
       {
@@ -129,12 +203,37 @@
           "name": "name=\"SAMLResponse\"",
           "value": "value={samlPost.SAMLResponse}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}",
+          "id": "SamlPostForm_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}",
+          "id": "SamlPostForm_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SamlPostForm_input_3\""
+      "SamlPostForm_input_3\"",
+      "SamlPostForm_TextField_3"
     ],
     "historyStates": [
       {
@@ -158,6 +257,30 @@
           "name": "name=\"RelayState\"",
           "value": "value={samlPost.relayState}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}",
+          "id": "SamlPostForm_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}",
+          "id": "SamlPostForm_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
@@ -178,7 +301,8 @@
   },
   {
     "tags": [
-      "SamlPostForm_p_2\""
+      "SamlPostForm_p_2\"",
+      "SamlPostForm_Typography_2"
     ],
     "historyStates": [
       {
@@ -196,12 +320,31 @@
         "props": {
           "id": "id=\"SamlPostForm_p_2\""
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "SamlPostForm_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "SamlPostForm_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "SamlPostForm_input_4\""
+      "SamlPostForm_input_4\"",
+      "SamlPostForm_TextField_4"
     ],
     "historyStates": [
       {
@@ -222,6 +365,28 @@
           "id": "id=\"SamlPostForm_input_4\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doContinue\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
+          "id": "SamlPostForm_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
+          "id": "SamlPostForm_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

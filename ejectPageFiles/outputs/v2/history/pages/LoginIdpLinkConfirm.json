@@ -21,7 +21,8 @@
   },
   {
     "tags": [
-      "kc-register-form\""
+      "kc-register-form\"",
+      "LoginIdpLinkConfirm_Box_1"
     ],
     "historyStates": [
       {
@@ -44,12 +45,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginIdpLinkConfirm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginIdpLinkConfirm_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginIdpLinkConfirm_div_1\""
+      "LoginIdpLinkConfirm_div_1\"",
+      "LoginIdpLinkConfirm_Box_2"
     ],
     "historyStates": [
       {
@@ -76,12 +102,31 @@
         "props": {
           "id": "id=\"LoginIdpLinkConfirm_div_1\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginIdpLinkConfirm_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginIdpLinkConfirm_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "updateProfile\""
+      "updateProfile\"",
+      "LoginIdpLinkConfirm_Button_1"
     ],
     "historyStates": [
       {
@@ -117,12 +162,37 @@
           "id": "id=\"updateProfile\"",
           "value": "value=\"updateProfile\""
         }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"submitAction\"",
+          "value": "value=\"updateProfile\"",
+          "id": "LoginIdpLinkConfirm_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"submitAction\"",
+          "value": "value=\"updateProfile\"",
+          "id": "LoginIdpLinkConfirm_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "linkAccount\""
+      "linkAccount\"",
+      "LoginIdpLinkConfirm_Button_2"
     ],
     "historyStates": [
       {
@@ -157,6 +227,30 @@
           "name": "name=\"submitAction\"",
           "id": "id=\"linkAccount\"",
           "value": "value=\"linkAccount\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"submitAction\"",
+          "value": "value=\"linkAccount\"",
+          "id": "LoginIdpLinkConfirm_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"submitAction\"",
+          "value": "value=\"linkAccount\"",
+          "id": "LoginIdpLinkConfirm_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

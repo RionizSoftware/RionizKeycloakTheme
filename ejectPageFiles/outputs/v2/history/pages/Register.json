@@ -23,7 +23,8 @@
   },
   {
     "tags": [
-      "kc-register-form\""
+      "kc-register-form\"",
+      "Register_Box_1"
     ],
     "historyStates": [
       {
@@ -56,6 +57,30 @@
           "action": "action={url.registrationAction}",
           "method": "method=\"post\"",
           "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.registrationAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "Register_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.registrationAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "Register_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -102,7 +127,8 @@
   },
   {
     "tags": [
-      "Register_div_1\""
+      "Register_div_1\"",
+      "Register_Box_2"
     ],
     "historyStates": [
       {
@@ -128,6 +154,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -166,7 +210,8 @@
   },
   {
     "tags": [
-      "Register_div_3\""
+      "Register_div_3\"",
+      "Register_Box_3"
     ],
     "historyStates": [
       {
@@ -202,12 +247,37 @@
           "data-sitekey": "data-sitekey={recaptchaSiteKey}",
           "data-action": "data-action={recaptchaAction}"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "data-size": "data-size=\"compact\"",
+          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
+          "data-action": "data-action={recaptchaAction}",
+          "id": "Register_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "data-size": "data-size=\"compact\"",
+          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
+          "data-action": "data-action={recaptchaAction}",
+          "id": "Register_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_4\""
+      "Register_div_4\"",
+      "Register_Box_4"
     ],
     "historyStates": [
       {
@@ -233,6 +303,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_div_4\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -326,7 +414,8 @@
   },
   {
     "tags": [
-      "Register_a_1\""
+      "Register_a_1\"",
+      "Register_Link_1"
     ],
     "historyStates": [
       {
@@ -346,12 +435,34 @@
           "id": "id=\"Register_a_1\"",
           "href": "href={url.loginUrl}"
         }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={url.loginUrl}",
+          "id": "Register_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={url.loginUrl}",
+          "id": "Register_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons\""
+      "kc-form-buttons\"",
+      "Register_Box_5",
+      "Register_Box_6"
     ],
     "historyStates": [
       {
@@ -394,12 +505,49 @@
         "props": {
           "id": "id=\"kc-form-buttons\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_button_1\""
+      "Register_button_1\"",
+      "Register_Button_1"
     ],
     "historyStates": [
       {
@@ -438,12 +586,39 @@
           "data-action": "data-action={recaptchaAction}",
           "type": "type=\"submit\""
         }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
+          "data-callback": "data-callback={() => {\n                (document.getElementById(\"kc-register-form\") as HTMLFormElement).submit();\n            }}",
+          "data-action": "data-action={recaptchaAction}",
+          "type": "type=\"submit\"",
+          "id": "Register_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
+          "data-callback": "data-callback={() => {\n                (document.getElementById(\"kc-register-form\") as HTMLFormElement).submit();\n            }}",
+          "data-action": "data-action={recaptchaAction}",
+          "type": "type=\"submit\"",
+          "id": "Register_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_input_1\""
+      "Register_input_1\"",
+      "Register_TextField_1"
     ],
     "historyStates": [
       {
@@ -479,12 +654,37 @@
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doRegister\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "disabled": "disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doRegister\")}",
+          "id": "Register_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "disabled": "disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doRegister\")}",
+          "id": "Register_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_9\""
+      "Register_div_9\"",
+      "Register_Box_7"
     ],
     "historyStates": [
       {
@@ -510,6 +710,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_div_9\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -571,7 +789,8 @@
   },
   {
     "tags": [
-      "Register_div_12\""
+      "Register_div_12\"",
+      "Register_Box_8"
     ],
     "historyStates": [
       {
@@ -597,6 +816,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_div_12\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -635,7 +872,8 @@
   },
   {
     "tags": [
-      "termsAccepted\""
+      "termsAccepted\"",
+      "Register_TextField_2"
     ],
     "historyStates": [
       {
@@ -677,12 +915,41 @@
           "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "name": "name=\"termsAccepted\"",
+          "checked": "checked={areTermsAccepted}",
+          "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}",
+          "id": "Register_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "name": "name=\"termsAccepted\"",
+          "checked": "checked={areTermsAccepted}",
+          "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}",
+          "id": "Register_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_label_1\""
+      "Register_label_1\"",
+      "Register_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -712,12 +979,33 @@
           "id": "id=\"Register_label_1\"",
           "htmlFor": "htmlFor=\"termsAccepted\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"termsAccepted\"",
+          "id": "Register_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"termsAccepted\"",
+          "id": "Register_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_14\""
+      "Register_div_14\"",
+      "Register_Box_9"
     ],
     "historyStates": [
       {
@@ -743,6 +1031,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_div_14\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Register_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Register_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

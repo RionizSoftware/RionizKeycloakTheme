@@ -44,26 +44,50 @@ export default function WebauthnRegister(
             classes={classes}
             headerNode={<>{msg("webauthn-registration-title")}</>}
         >
-            <Box id="register" action={url.loginAction} method="post" component="form">
-                <Box id="WebauthnRegister_div_1">
-                    <TextField type="hidden" id="clientDataJSON" name="clientDataJSON" />
+            <Box
+                action={url.loginAction}
+                method="post"
+                component="form"
+                id="WebauthnRegister_Box_1"
+                sx={styles.WebauthnRegister_Box_1}
+            >
+                <Box id="WebauthnRegister_Box_2" sx={styles.WebauthnRegister_Box_2}>
                     <TextField
                         type="hidden"
-                        id="attestationObject"
+                        name="clientDataJSON"
+                        id="WebauthnRegister_TextField_1"
+                        sx={styles.WebauthnRegister_TextField_1}
+                    />
+                    <TextField
+                        type="hidden"
                         name="attestationObject"
+                        id="WebauthnRegister_TextField_2"
+                        sx={styles.WebauthnRegister_TextField_2}
                     />
                     <TextField
                         type="hidden"
-                        id="publicKeyCredentialId"
                         name="publicKeyCredentialId"
+                        id="WebauthnRegister_TextField_3"
+                        sx={styles.WebauthnRegister_TextField_3}
                     />
                     <TextField
                         type="hidden"
-                        id="authenticatorLabel"
                         name="authenticatorLabel"
+                        id="WebauthnRegister_TextField_4"
+                        sx={styles.WebauthnRegister_TextField_4}
                     />
-                    <TextField type="hidden" id="transports" name="transports" />
-                    <TextField type="hidden" id="error" name="error" />
+                    <TextField
+                        type="hidden"
+                        name="transports"
+                        id="WebauthnRegister_TextField_5"
+                        sx={styles.WebauthnRegister_TextField_5}
+                    />
+                    <TextField
+                        type="hidden"
+                        name="error"
+                        id="WebauthnRegister_TextField_6"
+                        sx={styles.WebauthnRegister_TextField_6}
+                    />
                     <LogoutOtherSessions
                         id="WebauthnRegister_LogoutOtherSessions_1"
                         kcClsx={kcClsx}
@@ -73,22 +97,25 @@ export default function WebauthnRegister(
             </Box>
             <TextField
                 type="submit"
-                id={authButtonId}
                 value={msgStr("doRegisterSecurityKey")}
+                id="WebauthnRegister_TextField_7"
+                sx={styles.WebauthnRegister_TextField_7}
             />
 
             {!isSetRetry && isAppInitiatedAction && (
                 <Box
                     action={url.loginAction}
-                    id="kc-webauthn-settings-form"
                     method="post"
                     component="form"
+                    id="WebauthnRegister_Box_3"
+                    sx={styles.WebauthnRegister_Box_3}
                 >
                     <Button
                         type="submit"
-                        id="cancelWebAuthnAIA"
                         name="cancel-aia"
                         value="true"
+                        id="WebauthnRegister_Button_1"
+                        sx={styles.WebauthnRegister_Button_1}
                     >
                         {msg("doCancel")}
                     </Button>
@@ -101,14 +128,18 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="kc-form-options">
-            <FormLabel id="WebauthnRegister_label_1">
+        <Box id="WebauthnRegister_Box_4" sx={styles.WebauthnRegister_Box_4}>
+            <FormLabel
+                id="WebauthnRegister_FormLabel_1"
+                sx={styles.WebauthnRegister_FormLabel_1}
+            >
                 <TextField
                     type="checkbox"
-                    id="logout-sessions"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
+                    id="WebauthnRegister_TextField_8"
+                    sx={styles.WebauthnRegister_TextField_8}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>

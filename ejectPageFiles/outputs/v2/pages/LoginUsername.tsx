@@ -54,9 +54,14 @@ export default function LoginUsername(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <Box id="kc-registration">
+                <Box id="LoginUsername_Box_1" sx={styles.LoginUsername_Box_1}>
                     {msg("noAccount")}
-                    <Link id="LoginUsername_a_1" tabIndex={6} href={url.registrationUrl}>
+                    <Link
+                        tabIndex={6}
+                        href={url.registrationUrl}
+                        id="LoginUsername_Link_1"
+                        sx={styles.LoginUsername_Link_1}
+                    >
                         {msg("doRegister")}
                     </Link>
                 </Box>
@@ -67,22 +72,31 @@ export default function LoginUsername(
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <Box id="kc-social-providers">
+                            <Box id="LoginUsername_Box_2" sx={styles.LoginUsername_Box_2}>
                                 <hr id="LoginUsername_hr_1" />
                                 <Typography
-                                    id="LoginUsername_h2_1"
                                     variant="h2"
                                     component="h2"
+                                    id="LoginUsername_Typography_1"
+                                    sx={styles.LoginUsername_Typography_1}
                                 >
                                     {msg("identity-provider-login-label")}
                                 </Typography>
-                                <List id="LoginUsername_ul_1">
+                                <List
+                                    id="LoginUsername_List_1"
+                                    sx={styles.LoginUsername_List_1}
+                                >
                                     {social.providers.map((...[p, , providers]) => (
-                                        <ListItem id="LoginUsername_li_1" key={p.alias}>
+                                        <ListItem
+                                            key={p.alias}
+                                            id="LoginUsername_ListItem_1"
+                                            sx={styles.LoginUsername_ListItem_1}
+                                        >
                                             <Link
-                                                id={`social-${p.alias}`}
                                                 type="button"
                                                 href={p.loginUrl}
+                                                id="LoginUsername_Link_2"
+                                                sx={styles.LoginUsername_Link_2}
                                             >
                                                 {p.iconClasses && (
                                                     <i
@@ -102,10 +116,9 @@ export default function LoginUsername(
                 </>
             }
         >
-            <Box id="kc-form">
+            <Box id="LoginUsername_Box_3" sx={styles.LoginUsername_Box_3}>
                 {realm.password && (
                     <Box
-                        id="kc-form-login"
                         onSubmit={() => {
                             setIsLoginButtonDisabled(true);
                             return true;
@@ -113,10 +126,16 @@ export default function LoginUsername(
                         action={url.loginAction}
                         method="post"
                         component="form"
+                        id="LoginUsername_Box_4"
+                        sx={styles.LoginUsername_Box_4}
                     >
                         {!usernameHidden && (
-                            <Box id="LoginUsername_div_5">
-                                <FormLabel id="LoginUsername_label_1" htmlFor="username">
+                            <Box id="LoginUsername_Box_5" sx={styles.LoginUsername_Box_5}>
+                                <FormLabel
+                                    htmlFor="username"
+                                    id="LoginUsername_FormLabel_1"
+                                    sx={styles.LoginUsername_FormLabel_1}
+                                >
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
                                         : !realm.registrationEmailAsUsername
@@ -125,7 +144,6 @@ export default function LoginUsername(
                                 </FormLabel>
                                 <TextField
                                     tabIndex={2}
-                                    id="username"
                                     name="username"
                                     defaultValue={login.username ?? ""}
                                     type="text"
@@ -134,6 +152,8 @@ export default function LoginUsername(
                                     aria-invalid={messagesPerField.existsError(
                                         "username"
                                     )}
+                                    id="LoginUsername_TextField_1"
+                                    sx={styles.LoginUsername_TextField_1}
                                 />
                                 {messagesPerField.existsError("username") && (
                                     <span id="input-error" aria-live="polite">
@@ -143,16 +163,23 @@ export default function LoginUsername(
                             </Box>
                         )}
 
-                        <Box id="LoginUsername_div_6">
+                        <Box id="LoginUsername_Box_6" sx={styles.LoginUsername_Box_6}>
                             {realm.rememberMe && !usernameHidden && (
-                                <Box id="LoginUsername_div_8">
-                                    <FormLabel id="LoginUsername_label_2">
+                                <Box
+                                    id="LoginUsername_Box_7"
+                                    sx={styles.LoginUsername_Box_7}
+                                >
+                                    <FormLabel
+                                        id="LoginUsername_FormLabel_2"
+                                        sx={styles.LoginUsername_FormLabel_2}
+                                    >
                                         <TextField
                                             tabIndex={3}
-                                            id="rememberMe"
                                             name="rememberMe"
                                             type="checkbox"
                                             defaultChecked={!!login.rememberMe}
+                                            id="LoginUsername_TextField_2"
+                                            sx={styles.LoginUsername_TextField_2}
                                         />{" "}
                                         {msg("rememberMe")}
                                     </FormLabel>
@@ -160,14 +187,15 @@ export default function LoginUsername(
                             )}
                         </Box>
 
-                        <Box id="kc-form-buttons">
+                        <Box id="LoginUsername_Box_8" sx={styles.LoginUsername_Box_8}>
                             <TextField
                                 tabIndex={4}
                                 disabled={isLoginButtonDisabled}
                                 name="login"
-                                id="kc-login"
                                 type="submit"
                                 value={msgStr("doLogIn")}
+                                id="LoginUsername_TextField_3"
+                                sx={styles.LoginUsername_TextField_3}
                             />
                         </Box>
                     </Box>

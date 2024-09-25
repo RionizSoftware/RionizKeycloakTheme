@@ -52,13 +52,6 @@ export default function Terms(
                 sx={styles.Terms_Box_2}
             >
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonClass",
-                        "kcButtonClass",
-                        "kcButtonPrimaryClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="accept"
                     type="submit"
                     value={msgStr("doAccept")}
@@ -66,11 +59,6 @@ export default function Terms(
                     sx={styles.Terms_TextField_1}
                 />
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="cancel"
                     type="submit"
                     value={msgStr("doDecline")}
@@ -78,7 +66,6 @@ export default function Terms(
                     sx={styles.Terms_TextField_2}
                 />
             </Box>
-            <Box className="clearfix" id="Terms_Box_3" sx={styles.Terms_Box_3} />
         </Template>
     );
 }

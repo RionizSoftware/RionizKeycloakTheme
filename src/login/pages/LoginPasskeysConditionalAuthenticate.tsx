@@ -119,7 +119,6 @@ export default function LoginPasskeysConditionalAuthenticate(
             </Box>
 
             <Box
-                className={kcClsx("kcFormGroupClass")}
                 no-bottom-margin="true"
                 style={{ marginBottom: 0 }}
                 id="LoginPasskeysConditionalAuthenticate_Box_3"
@@ -129,7 +128,6 @@ export default function LoginPasskeysConditionalAuthenticate(
                     Object.keys(authenticators).length !== 0 && (
                         <>
                             <Box
-                                className={kcClsx("kcFormClass")}
                                 component="form"
                                 id="LoginPasskeysConditionalAuthenticate_Box_4"
                                 sx={styles.LoginPasskeysConditionalAuthenticate_Box_4}
@@ -152,9 +150,6 @@ export default function LoginPasskeysConditionalAuthenticate(
                                 <>
                                     {authenticators.authenticators.length > 1 && (
                                         <Typography
-                                            className={kcClsx(
-                                                "kcSelectAuthListItemTitle"
-                                            )}
                                             id="LoginPasskeysConditionalAuthenticate_Typography_1"
                                             sx={
                                                 styles.LoginPasskeysConditionalAuthenticate_Typography_1
@@ -164,7 +159,6 @@ export default function LoginPasskeysConditionalAuthenticate(
                                         </Typography>
                                     )}
                                     <Box
-                                        className={kcClsx("kcFormClass")}
                                         id="LoginPasskeysConditionalAuthenticate_Box_5"
                                         sx={
                                             styles.LoginPasskeysConditionalAuthenticate_Box_5
@@ -174,62 +168,20 @@ export default function LoginPasskeysConditionalAuthenticate(
                                             (authenticator, i) => (
                                                 <Box
                                                     key={i}
-                                                    className={kcClsx(
-                                                        "kcSelectAuthListItemClass"
-                                                    )}
                                                     id="LoginPasskeysConditionalAuthenticate_Box_6"
                                                     sx={
                                                         styles.LoginPasskeysConditionalAuthenticate_Box_6
                                                     }
                                                 >
-                                                    <i
-                                                        id="LoginPasskeysConditionalAuthenticate_i_1"
-                                                        className={clsx(
-                                                            (() => {
-                                                                const className = kcClsx(
-                                                                    authenticator
-                                                                        .transports
-                                                                        .iconClass as any
-                                                                );
-                                                                if (
-                                                                    className ===
-                                                                    authenticator
-                                                                        .transports
-                                                                        .iconClass
-                                                                ) {
-                                                                    return kcClsx(
-                                                                        "kcWebAuthnDefaultIcon"
-                                                                    );
-                                                                }
-                                                                return className;
-                                                            })(),
-                                                            kcClsx(
-                                                                "kcSelectAuthListItemIconPropertyClass"
-                                                            )
-                                                        )}
-                                                    />
+                                                    <i id="LoginPasskeysConditionalAuthenticate_i_1" />
                                                     <Box
-                                                        className={kcClsx(
-                                                            "kcSelectAuthListItemBodyClass"
-                                                        )}
                                                         id="LoginPasskeysConditionalAuthenticate_Box_7"
                                                         sx={
                                                             styles.LoginPasskeysConditionalAuthenticate_Box_7
                                                         }
                                                     >
-                                                        <Box
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemHeadingClass"
-                                                            )}
-                                                            id="LoginPasskeysConditionalAuthenticate_Box_8"
-                                                            sx={
-                                                                styles.LoginPasskeysConditionalAuthenticate_Box_8
-                                                            }
-                                                        >
-                                                            {advancedMsg(
-                                                                authenticator.label
-                                                            )}
-                                                        </Box>
+                                                        {advancedMsg(authenticator.label)}
+
                                                         {authenticator.transports !==
                                                             undefined &&
                                                             authenticator.transports
@@ -239,12 +191,9 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                                 .displayNameProperties
                                                                 .length !== 0 && (
                                                                 <Box
-                                                                    className={kcClsx(
-                                                                        "kcSelectAuthListItemDescriptionClass"
-                                                                    )}
-                                                                    id="LoginPasskeysConditionalAuthenticate_Box_9"
+                                                                    id="LoginPasskeysConditionalAuthenticate_Box_8"
                                                                     sx={
-                                                                        styles.LoginPasskeysConditionalAuthenticate_Box_9
+                                                                        styles.LoginPasskeysConditionalAuthenticate_Box_8
                                                                     }
                                                                 >
                                                                     {authenticator.transports.displayNameProperties.map(
@@ -255,9 +204,9 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                                         ) => (
                                                                             <Box
                                                                                 key={i}
-                                                                                id="LoginPasskeysConditionalAuthenticate_Box_10"
+                                                                                id="LoginPasskeysConditionalAuthenticate_Box_9"
                                                                                 sx={
-                                                                                    styles.LoginPasskeysConditionalAuthenticate_Box_10
+                                                                                    styles.LoginPasskeysConditionalAuthenticate_Box_9
                                                                                 }
                                                                             >
                                                                                 <span
@@ -283,34 +232,10 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                                     )}
                                                                 </Box>
                                                             )}
-                                                        <Box
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemDescriptionClass"
-                                                            )}
-                                                            id="LoginPasskeysConditionalAuthenticate_Box_11"
-                                                            sx={
-                                                                styles.LoginPasskeysConditionalAuthenticate_Box_11
-                                                            }
-                                                        >
-                                                            <span id="LoginPasskeysConditionalAuthenticate_span_4">
-                                                                {msg(
-                                                                    "passkey-createdAt-label"
-                                                                )}
-                                                            </span>
-                                                            <span id="LoginPasskeysConditionalAuthenticate_span_5">
-                                                                {authenticator.createdAt}
-                                                            </span>
-                                                        </Box>
+
+                                                        {msg("passkey-createdAt-label")}
+                                                        {authenticator.createdAt}
                                                     </Box>
-                                                    <Box
-                                                        className={kcClsx(
-                                                            "kcSelectAuthListItemFillClass"
-                                                        )}
-                                                        id="LoginPasskeysConditionalAuthenticate_Box_12"
-                                                        sx={
-                                                            styles.LoginPasskeysConditionalAuthenticate_Box_12
-                                                        }
-                                                    />
                                                 </Box>
                                             )
                                         )}
@@ -318,8 +243,8 @@ export default function LoginPasskeysConditionalAuthenticate(
                                 </>
                             )}
                             <Box
-                                id="LoginPasskeysConditionalAuthenticate_Box_13"
-                                sx={styles.LoginPasskeysConditionalAuthenticate_Box_13}
+                                id="LoginPasskeysConditionalAuthenticate_Box_10"
+                                sx={styles.LoginPasskeysConditionalAuthenticate_Box_10}
                             >
                                 {realm.password && (
                                     <Box
@@ -334,22 +259,20 @@ export default function LoginPasskeysConditionalAuthenticate(
                                             return true;
                                         }}
                                         component="form"
-                                        id="LoginPasskeysConditionalAuthenticate_Box_14"
+                                        id="LoginPasskeysConditionalAuthenticate_Box_11"
                                         sx={
-                                            styles.LoginPasskeysConditionalAuthenticate_Box_14
+                                            styles.LoginPasskeysConditionalAuthenticate_Box_11
                                         }
                                     >
                                         {!usernameHidden && (
                                             <Box
-                                                className={kcClsx("kcFormGroupClass")}
-                                                id="LoginPasskeysConditionalAuthenticate_Box_15"
+                                                id="LoginPasskeysConditionalAuthenticate_Box_12"
                                                 sx={
-                                                    styles.LoginPasskeysConditionalAuthenticate_Box_15
+                                                    styles.LoginPasskeysConditionalAuthenticate_Box_12
                                                 }
                                             >
                                                 <FormLabel
                                                     htmlFor="username"
-                                                    className={kcClsx("kcLabelClass")}
                                                     id="LoginPasskeysConditionalAuthenticate_FormLabel_1"
                                                     sx={
                                                         styles.LoginPasskeysConditionalAuthenticate_FormLabel_1
@@ -362,7 +285,6 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                     aria-invalid={messagesPerField.existsError(
                                                         "username"
                                                     )}
-                                                    className={kcClsx("kcInputClass")}
                                                     name="username"
                                                     defaultValue={login.username ?? ""}
                                                     //autoComplete="username webauthn"
@@ -379,9 +301,6 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                 ) && (
                                                     <span
                                                         id="input-error-username"
-                                                        className={kcClsx(
-                                                            "kcInputErrorMessageClass"
-                                                        )}
                                                         aria-live="polite"
                                                     >
                                                         {messagesPerField.get("username")}
@@ -392,23 +311,16 @@ export default function LoginPasskeysConditionalAuthenticate(
                                     </Box>
                                 )}
                                 <Box
-                                    className={kcClsx("kcFormButtonsClass")}
                                     style={{ display: "none" }}
-                                    id="LoginPasskeysConditionalAuthenticate_Box_16"
+                                    id="LoginPasskeysConditionalAuthenticate_Box_13"
                                     sx={
-                                        styles.LoginPasskeysConditionalAuthenticate_Box_16
+                                        styles.LoginPasskeysConditionalAuthenticate_Box_13
                                     }
                                 >
                                     <TextField
                                         type="button"
                                         autoFocus
                                         value={msgStr("passkey-doAuthenticate")}
-                                        className={kcClsx(
-                                            "kcButtonClass",
-                                            "kcButtonPrimaryClass",
-                                            "kcButtonBlockClass",
-                                            "kcButtonLargeClass"
-                                        )}
                                         id="LoginPasskeysConditionalAuthenticate_TextField_9"
                                         sx={
                                             styles.LoginPasskeysConditionalAuthenticate_TextField_9

@@ -43,28 +43,35 @@ export default function LoginOtp(
             headerNode={msg("doLogIn")}
         >
             <Box
-                id="kc-otp-login-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginOtp_Box_1"
+                sx={styles.LoginOtp_Box_1}
             >
                 {otpLogin.userOtpCredentials.length > 1 && (
-                    <Box id="LoginOtp_div_1">
+                    <Box id="LoginOtp_Box_2" sx={styles.LoginOtp_Box_2}>
                         {otpLogin.userOtpCredentials.map((otpCredential, index) => (
-                            <Box id="LoginOtp_Fragment_1" key={index}>
+                            <Box
+                                key={index}
+                                id="LoginOtp_Box_3"
+                                sx={styles.LoginOtp_Box_3}
+                            >
                                 <TextField
-                                    id={`kc-otp-credential-${index}`}
                                     type="radio"
                                     name="selectedCredentialId"
                                     value={otpCredential.id}
                                     defaultChecked={
                                         otpCredential.id === otpLogin.selectedCredentialId
                                     }
+                                    id="LoginOtp_TextField_1"
+                                    sx={styles.LoginOtp_TextField_1}
                                 />
                                 <FormLabel
-                                    id="LoginOtp_label_1"
                                     htmlFor={`kc-otp-credential-${index}`}
                                     tabIndex={index}
+                                    id="LoginOtp_FormLabel_1"
+                                    sx={styles.LoginOtp_FormLabel_1}
                                 >
                                     <span id="LoginOtp_span_1">
                                         <i id="LoginOtp_i_1" aria-hidden="true"></i>
@@ -79,19 +86,24 @@ export default function LoginOtp(
                     </Box>
                 )}
 
-                <Box id="LoginOtp_div_3">
-                    <FormLabel id="LoginOtp_label_2" htmlFor="otp">
+                <Box id="LoginOtp_Box_4" sx={styles.LoginOtp_Box_4}>
+                    <FormLabel
+                        htmlFor="otp"
+                        id="LoginOtp_FormLabel_2"
+                        sx={styles.LoginOtp_FormLabel_2}
+                    >
                         {msg("loginOtpOneTime")}
                     </FormLabel>
 
-                    <Box id="LoginOtp_div_5">
+                    <Box id="LoginOtp_Box_5" sx={styles.LoginOtp_Box_5}>
                         <TextField
-                            id="otp"
                             name="otp"
                             autoComplete="off"
                             type="text"
                             autoFocus
                             aria-invalid={messagesPerField.existsError("totp")}
+                            id="LoginOtp_TextField_2"
+                            sx={styles.LoginOtp_TextField_2}
                         />
                         {messagesPerField.existsError("totp") && (
                             <span
@@ -105,12 +117,13 @@ export default function LoginOtp(
                     </Box>
                 </Box>
 
-                <Box id="LoginOtp_div_6">
+                <Box id="LoginOtp_Box_6" sx={styles.LoginOtp_Box_6}>
                     <TextField
                         name="login"
-                        id="kc-login"
                         type="submit"
                         value={msgStr("doLogIn")}
+                        id="LoginOtp_TextField_3"
+                        sx={styles.LoginOtp_TextField_3}
                     />
                 </Box>
             </Box>

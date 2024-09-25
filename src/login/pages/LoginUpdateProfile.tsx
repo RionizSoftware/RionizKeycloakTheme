@@ -57,7 +57,6 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
             displayMessage={messagesPerField.exists("global")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
@@ -72,58 +71,26 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                     onIsFormSubmittableValueChange={setIsFormSubmittable}
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginUpdateProfile_Box_2"
-                    sx={styles.LoginUpdateProfile_Box_2}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="LoginUpdateProfile_Box_3"
-                        sx={styles.LoginUpdateProfile_Box_3}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginUpdateProfile_Box_4"
-                            sx={styles.LoginUpdateProfile_Box_4}
-                        />
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginUpdateProfile_Box_5"
-                        sx={styles.LoginUpdateProfile_Box_5}
-                    >
-                        <TextField
-                            disabled={!isFormSubmittable}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                !isAppInitiatedAction && "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+                <Box id="LoginUpdateProfile_Box_2" sx={styles.LoginUpdateProfile_Box_2}>
+                    <TextField
+                        disabled={!isFormSubmittable}
+                        type="submit"
+                        value={msgStr("doSubmit")}
+                        id="LoginUpdateProfile_TextField_1"
+                        sx={styles.LoginUpdateProfile_TextField_1}
+                    />
+                    {isAppInitiatedAction && (
+                        <Button
                             type="submit"
-                            value={msgStr("doSubmit")}
-                            id="LoginUpdateProfile_TextField_1"
-                            sx={styles.LoginUpdateProfile_TextField_1}
-                        />
-                        {isAppInitiatedAction && (
-                            <Button
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                name="cancel-aia"
-                                value="true"
-                                formNoValidate
-                                id="LoginUpdateProfile_Button_1"
-                                sx={styles.LoginUpdateProfile_Button_1}
-                            >
-                                {msg("doCancel")}
-                            </Button>
-                        )}
-                    </Box>
+                            name="cancel-aia"
+                            value="true"
+                            formNoValidate
+                            id="LoginUpdateProfile_Button_1"
+                            sx={styles.LoginUpdateProfile_Button_1}
+                        >
+                            {msg("doCancel")}
+                        </Button>
+                    )}
                 </Box>
             </Box>
         </Template>

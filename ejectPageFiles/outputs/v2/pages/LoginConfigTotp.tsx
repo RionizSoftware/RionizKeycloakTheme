@@ -43,14 +43,27 @@ export default function LoginConfigTotp(
         >
             <>
                 <ol id="kc-totp-settings">
-                    <ListItem id="LoginConfigTotp_li_1">
-                        <Typography id="LoginConfigTotp_p_1">
+                    <ListItem
+                        id="LoginConfigTotp_ListItem_1"
+                        sx={styles.LoginConfigTotp_ListItem_1}
+                    >
+                        <Typography
+                            id="LoginConfigTotp_Typography_1"
+                            sx={styles.LoginConfigTotp_Typography_1}
+                        >
                             {msg("loginTotpStep1")}
                         </Typography>
 
-                        <List id="kc-totp-supported-apps">
+                        <List
+                            id="LoginConfigTotp_List_1"
+                            sx={styles.LoginConfigTotp_List_1}
+                        >
                             {totp.supportedApplications.map(app => (
-                                <ListItem id="LoginConfigTotp_li_2" key={app}>
+                                <ListItem
+                                    key={app}
+                                    id="LoginConfigTotp_ListItem_2"
+                                    sx={styles.LoginConfigTotp_ListItem_2}
+                                >
                                     {advancedMsg(app)}
                                 </ListItem>
                             ))}
@@ -59,45 +72,88 @@ export default function LoginConfigTotp(
 
                     {mode == "manual" ? (
                         <>
-                            <ListItem id="LoginConfigTotp_li_3">
-                                <Typography id="LoginConfigTotp_p_2">
+                            <ListItem
+                                id="LoginConfigTotp_ListItem_3"
+                                sx={styles.LoginConfigTotp_ListItem_3}
+                            >
+                                <Typography
+                                    id="LoginConfigTotp_Typography_2"
+                                    sx={styles.LoginConfigTotp_Typography_2}
+                                >
                                     {msg("loginTotpManualStep2")}
                                 </Typography>
-                                <Typography id="LoginConfigTotp_p_3">
+                                <Typography
+                                    id="LoginConfigTotp_Typography_3"
+                                    sx={styles.LoginConfigTotp_Typography_3}
+                                >
                                     <span id="kc-totp-secret-key">
                                         {totp.totpSecretEncoded}
                                     </span>
                                 </Typography>
-                                <Typography id="LoginConfigTotp_p_4">
-                                    <Link href={totp.qrUrl} id="mode-barcode">
+                                <Typography
+                                    id="LoginConfigTotp_Typography_4"
+                                    sx={styles.LoginConfigTotp_Typography_4}
+                                >
+                                    <Link
+                                        href={totp.qrUrl}
+                                        id="LoginConfigTotp_Link_1"
+                                        sx={styles.LoginConfigTotp_Link_1}
+                                    >
                                         {msg("loginTotpScanBarcode")}
                                     </Link>
                                 </Typography>
                             </ListItem>
-                            <ListItem id="LoginConfigTotp_li_4">
-                                <Typography id="LoginConfigTotp_p_5">
+                            <ListItem
+                                id="LoginConfigTotp_ListItem_4"
+                                sx={styles.LoginConfigTotp_ListItem_4}
+                            >
+                                <Typography
+                                    id="LoginConfigTotp_Typography_5"
+                                    sx={styles.LoginConfigTotp_Typography_5}
+                                >
                                     {msg("loginTotpManualStep3")}
                                 </Typography>
-                                <Typography id="LoginConfigTotp_p_6">
-                                    <List id="LoginConfigTotp_ul_2">
-                                        <ListItem id="kc-totp-type">
+                                <Typography
+                                    id="LoginConfigTotp_Typography_6"
+                                    sx={styles.LoginConfigTotp_Typography_6}
+                                >
+                                    <List
+                                        id="LoginConfigTotp_List_2"
+                                        sx={styles.LoginConfigTotp_List_2}
+                                    >
+                                        <ListItem
+                                            id="LoginConfigTotp_ListItem_5"
+                                            sx={styles.LoginConfigTotp_ListItem_5}
+                                        >
                                             {msg("loginTotpType")}:{" "}
                                             {msg(`loginTotp.${totp.policy.type}`)}
                                         </ListItem>
-                                        <ListItem id="kc-totp-algorithm">
+                                        <ListItem
+                                            id="LoginConfigTotp_ListItem_6"
+                                            sx={styles.LoginConfigTotp_ListItem_6}
+                                        >
                                             {msg("loginTotpAlgorithm")}:{" "}
                                             {totp.policy.getAlgorithmKey()}
                                         </ListItem>
-                                        <ListItem id="kc-totp-digits">
+                                        <ListItem
+                                            id="LoginConfigTotp_ListItem_7"
+                                            sx={styles.LoginConfigTotp_ListItem_7}
+                                        >
                                             {msg("loginTotpDigits")}: {totp.policy.digits}
                                         </ListItem>
                                         {totp.policy.type === "totp" ? (
-                                            <ListItem id="kc-totp-period">
+                                            <ListItem
+                                                id="LoginConfigTotp_ListItem_8"
+                                                sx={styles.LoginConfigTotp_ListItem_8}
+                                            >
                                                 {msg("loginTotpInterval")}:{" "}
                                                 {totp.policy.period}
                                             </ListItem>
                                         ) : (
-                                            <ListItem id="kc-totp-counter">
+                                            <ListItem
+                                                id="LoginConfigTotp_ListItem_9"
+                                                sx={styles.LoginConfigTotp_ListItem_9}
+                                            >
                                                 {msg("loginTotpCounter")}:{" "}
                                                 {totp.policy.initialCounter}
                                             </ListItem>
@@ -107,8 +163,14 @@ export default function LoginConfigTotp(
                             </ListItem>
                         </>
                     ) : (
-                        <ListItem id="LoginConfigTotp_li_10">
-                            <Typography id="LoginConfigTotp_p_7">
+                        <ListItem
+                            id="LoginConfigTotp_ListItem_10"
+                            sx={styles.LoginConfigTotp_ListItem_10}
+                        >
+                            <Typography
+                                id="LoginConfigTotp_Typography_7"
+                                sx={styles.LoginConfigTotp_Typography_7}
+                            >
                                 {msg("loginTotpStep2")}
                             </Typography>
                             <img
@@ -117,18 +179,34 @@ export default function LoginConfigTotp(
                                 alt="Figure: Barcode"
                             />
                             <br id="LoginConfigTotp_br_1" />
-                            <Typography id="LoginConfigTotp_p_8">
-                                <Link href={totp.manualUrl} id="mode-manual">
+                            <Typography
+                                id="LoginConfigTotp_Typography_8"
+                                sx={styles.LoginConfigTotp_Typography_8}
+                            >
+                                <Link
+                                    href={totp.manualUrl}
+                                    id="LoginConfigTotp_Link_2"
+                                    sx={styles.LoginConfigTotp_Link_2}
+                                >
                                     {msg("loginTotpUnableToScan")}
                                 </Link>
                             </Typography>
                         </ListItem>
                     )}
-                    <ListItem id="LoginConfigTotp_li_11">
-                        <Typography id="LoginConfigTotp_p_9">
+                    <ListItem
+                        id="LoginConfigTotp_ListItem_11"
+                        sx={styles.LoginConfigTotp_ListItem_11}
+                    >
+                        <Typography
+                            id="LoginConfigTotp_Typography_9"
+                            sx={styles.LoginConfigTotp_Typography_9}
+                        >
                             {msg("loginTotpStep3")}
                         </Typography>
-                        <Typography id="LoginConfigTotp_p_10">
+                        <Typography
+                            id="LoginConfigTotp_Typography_10"
+                            sx={styles.LoginConfigTotp_Typography_10}
+                        >
                             {msg("loginTotpStep3DeviceName")}
                         </Typography>
                     </ListItem>
@@ -136,22 +214,28 @@ export default function LoginConfigTotp(
 
                 <Box
                     action={url.loginAction}
-                    id="kc-totp-settings-form"
                     method="post"
                     component="form"
+                    id="LoginConfigTotp_Box_1"
+                    sx={styles.LoginConfigTotp_Box_1}
                 >
-                    <Box id="LoginConfigTotp_div_1">
-                        <FormLabel id="LoginConfigTotp_label_1" htmlFor="totp">
+                    <Box id="LoginConfigTotp_Box_2" sx={styles.LoginConfigTotp_Box_2}>
+                        <FormLabel
+                            htmlFor="totp"
+                            id="LoginConfigTotp_FormLabel_1"
+                            sx={styles.LoginConfigTotp_FormLabel_1}
+                        >
                             {msg("authenticatorCode")}
                         </FormLabel>{" "}
                         <span id="LoginConfigTotp_span_2">*</span>
-                        <Box id="LoginConfigTotp_div_3">
+                        <Box id="LoginConfigTotp_Box_3" sx={styles.LoginConfigTotp_Box_3}>
                             <TextField
                                 type="text"
-                                id="totp"
                                 name="totp"
                                 autoComplete="off"
                                 aria-invalid={messagesPerField.existsError("totp")}
+                                id="LoginConfigTotp_TextField_1"
+                                sx={styles.LoginConfigTotp_TextField_1}
                             />
 
                             {messagesPerField.existsError("totp") && (
@@ -166,27 +250,40 @@ export default function LoginConfigTotp(
                         </Box>
                         <TextField
                             type="hidden"
-                            id="totpSecret"
                             name="totpSecret"
                             value={totp.totpSecret}
+                            id="LoginConfigTotp_TextField_2"
+                            sx={styles.LoginConfigTotp_TextField_2}
                         />
-                        {mode && <TextField type="hidden" id="mode" value={mode} />}
+                        {mode && (
+                            <TextField
+                                type="hidden"
+                                value={mode}
+                                id="LoginConfigTotp_TextField_3"
+                                sx={styles.LoginConfigTotp_TextField_3}
+                            />
+                        )}
                     </Box>
 
-                    <Box id="LoginConfigTotp_div_4">
-                        <FormLabel id="LoginConfigTotp_label_2" htmlFor="userLabel">
+                    <Box id="LoginConfigTotp_Box_4" sx={styles.LoginConfigTotp_Box_4}>
+                        <FormLabel
+                            htmlFor="userLabel"
+                            id="LoginConfigTotp_FormLabel_2"
+                            sx={styles.LoginConfigTotp_FormLabel_2}
+                        >
                             {msg("loginTotpDeviceName")}
                         </FormLabel>{" "}
                         {totp.otpCredentials.length >= 1 && (
                             <span id="LoginConfigTotp_span_4">*</span>
                         )}
-                        <Box id="LoginConfigTotp_div_6">
+                        <Box id="LoginConfigTotp_Box_5" sx={styles.LoginConfigTotp_Box_5}>
                             <TextField
                                 type="text"
-                                id="userLabel"
                                 name="userLabel"
                                 autoComplete="off"
                                 aria-invalid={messagesPerField.existsError("userLabel")}
+                                id="LoginConfigTotp_TextField_4"
+                                sx={styles.LoginConfigTotp_TextField_4}
                             />
                             {messagesPerField.existsError("userLabel") && (
                                 <span
@@ -200,7 +297,7 @@ export default function LoginConfigTotp(
                         </Box>
                     </Box>
 
-                    <Box id="LoginConfigTotp_div_7">
+                    <Box id="LoginConfigTotp_Box_6" sx={styles.LoginConfigTotp_Box_6}>
                         <LogoutOtherSessions
                             id="LoginConfigTotp_LogoutOtherSessions_1"
                             kcClsx={kcClsx}
@@ -212,14 +309,16 @@ export default function LoginConfigTotp(
                         <>
                             <TextField
                                 type="submit"
-                                id="saveTOTPBtn"
                                 value={msgStr("doSubmit")}
+                                id="LoginConfigTotp_TextField_5"
+                                sx={styles.LoginConfigTotp_TextField_5}
                             />
                             <Button
                                 type="submit"
-                                id="cancelTOTPBtn"
                                 name="cancel-aia"
                                 value="true"
+                                id="LoginConfigTotp_Button_1"
+                                sx={styles.LoginConfigTotp_Button_1}
                             >
                                 {msg("doCancel")}
                             </Button>
@@ -227,8 +326,9 @@ export default function LoginConfigTotp(
                     ) : (
                         <TextField
                             type="submit"
-                            id="saveTOTPBtn"
                             value={msgStr("doSubmit")}
+                            id="LoginConfigTotp_TextField_6"
+                            sx={styles.LoginConfigTotp_TextField_6}
                         />
                     )}
                 </Box>
@@ -240,14 +340,18 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box id="kc-form-options">
-            <FormLabel id="LoginConfigTotp_label_3">
+        <Box id="LoginConfigTotp_Box_7" sx={styles.LoginConfigTotp_Box_7}>
+            <FormLabel
+                id="LoginConfigTotp_FormLabel_3"
+                sx={styles.LoginConfigTotp_FormLabel_3}
+            >
                 <TextField
                     type="checkbox"
-                    id="logout-sessions"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}
+                    id="LoginConfigTotp_TextField_7"
+                    sx={styles.LoginConfigTotp_TextField_7}
                 />
                 {msg("logoutOtherSessions")}
             </FormLabel>

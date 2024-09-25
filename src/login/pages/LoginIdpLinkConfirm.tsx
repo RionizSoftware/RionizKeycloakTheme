@@ -47,19 +47,9 @@ export default function LoginIdpLinkConfirm(
                 id="LoginIdpLinkConfirm_Box_1"
                 sx={styles.LoginIdpLinkConfirm_Box_1}
             >
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginIdpLinkConfirm_Box_2"
-                    sx={styles.LoginIdpLinkConfirm_Box_2}
-                >
+                <Box id="LoginIdpLinkConfirm_Box_2" sx={styles.LoginIdpLinkConfirm_Box_2}>
                     <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
                         name="submitAction"
                         value="updateProfile"
                         id="LoginIdpLinkConfirm_Button_1"
@@ -69,12 +59,6 @@ export default function LoginIdpLinkConfirm(
                     </Button>
                     <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
                         name="submitAction"
                         value="linkAccount"
                         id="LoginIdpLinkConfirm_Button_2"

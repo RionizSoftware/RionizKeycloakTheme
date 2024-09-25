@@ -42,7 +42,6 @@ export default function LoginRecoveryAuthnCodeInput(
             displayMessage={!messagesPerField.existsError("recoveryCodeInput")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
@@ -50,31 +49,23 @@ export default function LoginRecoveryAuthnCodeInput(
                 sx={styles.LoginRecoveryAuthnCodeInput_Box_1}
             >
                 <Box
-                    className={kcClsx("kcFormGroupClass")}
                     id="LoginRecoveryAuthnCodeInput_Box_2"
                     sx={styles.LoginRecoveryAuthnCodeInput_Box_2}
                 >
+                    <FormLabel
+                        htmlFor="recoveryCodeInput"
+                        id="LoginRecoveryAuthnCodeInput_FormLabel_1"
+                        sx={styles.LoginRecoveryAuthnCodeInput_FormLabel_1}
+                    >
+                        {msg(
+                            "auth-recovery-code-prompt",
+                            `${recoveryAuthnCodesInputBean.codeNumber}`
+                        )}
+                    </FormLabel>
+
                     <Box
-                        className={kcClsx("kcLabelWrapperClass")}
                         id="LoginRecoveryAuthnCodeInput_Box_3"
                         sx={styles.LoginRecoveryAuthnCodeInput_Box_3}
-                    >
-                        <FormLabel
-                            htmlFor="recoveryCodeInput"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginRecoveryAuthnCodeInput_FormLabel_1"
-                            sx={styles.LoginRecoveryAuthnCodeInput_FormLabel_1}
-                        >
-                            {msg(
-                                "auth-recovery-code-prompt",
-                                `${recoveryAuthnCodesInputBean.codeNumber}`
-                            )}
-                        </FormLabel>
-                    </Box>
-                    <Box
-                        className={kcClsx("kcInputWrapperClass")}
-                        id="LoginRecoveryAuthnCodeInput_Box_4"
-                        sx={styles.LoginRecoveryAuthnCodeInput_Box_4}
                     >
                         <TextField
                             tabIndex={1}
@@ -84,7 +75,6 @@ export default function LoginRecoveryAuthnCodeInput(
                             )}
                             autoComplete="off"
                             type="text"
-                            className={kcClsx("kcInputClass")}
                             autoFocus
                             id="LoginRecoveryAuthnCodeInput_TextField_1"
                             sx={styles.LoginRecoveryAuthnCodeInput_TextField_1}
@@ -92,7 +82,6 @@ export default function LoginRecoveryAuthnCodeInput(
                         {messagesPerField.existsError("recoveryCodeInput") && (
                             <span
                                 id="input-error"
-                                className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
                                     __html: messagesPerField.get("recoveryCodeInput")
@@ -103,40 +92,16 @@ export default function LoginRecoveryAuthnCodeInput(
                 </Box>
 
                 <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginRecoveryAuthnCodeInput_Box_5"
-                    sx={styles.LoginRecoveryAuthnCodeInput_Box_5}
+                    id="LoginRecoveryAuthnCodeInput_Box_4"
+                    sx={styles.LoginRecoveryAuthnCodeInput_Box_4}
                 >
-                    <Box
-                        className={kcClsx("kcFormOptionsWrapperClass")}
-                        id="LoginRecoveryAuthnCodeInput_Box_6"
-                        sx={styles.LoginRecoveryAuthnCodeInput_Box_6}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginRecoveryAuthnCodeInput_Box_7"
-                            sx={styles.LoginRecoveryAuthnCodeInput_Box_7}
-                        />
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginRecoveryAuthnCodeInput_Box_8"
-                        sx={styles.LoginRecoveryAuthnCodeInput_Box_8}
-                    >
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="login"
-                            type="submit"
-                            value={msgStr("doLogIn")}
-                            id="LoginRecoveryAuthnCodeInput_TextField_2"
-                            sx={styles.LoginRecoveryAuthnCodeInput_TextField_2}
-                        />
-                    </Box>
+                    <TextField
+                        name="login"
+                        type="submit"
+                        value={msgStr("doLogIn")}
+                        id="LoginRecoveryAuthnCodeInput_TextField_2"
+                        sx={styles.LoginRecoveryAuthnCodeInput_TextField_2}
+                    />
                 </Box>
             </Box>
         </Template>

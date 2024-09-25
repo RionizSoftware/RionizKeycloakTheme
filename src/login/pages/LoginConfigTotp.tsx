@@ -214,42 +214,25 @@ export default function LoginConfigTotp(
 
                 <Box
                     action={url.loginAction}
-                    className={kcClsx("kcFormClass")}
                     method="post"
                     component="form"
                     id="LoginConfigTotp_Box_1"
                     sx={styles.LoginConfigTotp_Box_1}
                 >
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginConfigTotp_Box_2"
-                        sx={styles.LoginConfigTotp_Box_2}
-                    >
-                        <Box
-                            className={kcClsx("kcInputWrapperClass")}
-                            id="LoginConfigTotp_Box_3"
-                            sx={styles.LoginConfigTotp_Box_3}
+                    <Box id="LoginConfigTotp_Box_2" sx={styles.LoginConfigTotp_Box_2}>
+                        <FormLabel
+                            htmlFor="totp"
+                            id="LoginConfigTotp_FormLabel_1"
+                            sx={styles.LoginConfigTotp_FormLabel_1}
                         >
-                            <FormLabel
-                                htmlFor="totp"
-                                className={kcClsx("kcLabelClass")}
-                                id="LoginConfigTotp_FormLabel_1"
-                                sx={styles.LoginConfigTotp_FormLabel_1}
-                            >
-                                {msg("authenticatorCode")}
-                            </FormLabel>{" "}
-                            <span id="LoginConfigTotp_span_2">*</span>
-                        </Box>
-                        <Box
-                            className={kcClsx("kcInputWrapperClass")}
-                            id="LoginConfigTotp_Box_4"
-                            sx={styles.LoginConfigTotp_Box_4}
-                        >
+                            {msg("authenticatorCode")}
+                        </FormLabel>{" "}
+                        <span id="LoginConfigTotp_span_2">*</span>
+                        <Box id="LoginConfigTotp_Box_3" sx={styles.LoginConfigTotp_Box_3}>
                             <TextField
                                 type="text"
                                 name="totp"
                                 autoComplete="off"
-                                className={kcClsx("kcInputClass")}
                                 aria-invalid={messagesPerField.existsError("totp")}
                                 id="LoginConfigTotp_TextField_1"
                                 sx={styles.LoginConfigTotp_TextField_1}
@@ -258,7 +241,6 @@ export default function LoginConfigTotp(
                             {messagesPerField.existsError("totp") && (
                                 <span
                                     id="input-error-otp-code"
-                                    className={kcClsx("kcInputErrorMessageClass")}
                                     aria-live="polite"
                                     dangerouslySetInnerHTML={{
                                         __html: messagesPerField.get("totp")
@@ -283,38 +265,22 @@ export default function LoginConfigTotp(
                         )}
                     </Box>
 
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginConfigTotp_Box_5"
-                        sx={styles.LoginConfigTotp_Box_5}
-                    >
-                        <Box
-                            className={kcClsx("kcInputWrapperClass")}
-                            id="LoginConfigTotp_Box_6"
-                            sx={styles.LoginConfigTotp_Box_6}
+                    <Box id="LoginConfigTotp_Box_4" sx={styles.LoginConfigTotp_Box_4}>
+                        <FormLabel
+                            htmlFor="userLabel"
+                            id="LoginConfigTotp_FormLabel_2"
+                            sx={styles.LoginConfigTotp_FormLabel_2}
                         >
-                            <FormLabel
-                                htmlFor="userLabel"
-                                className={kcClsx("kcLabelClass")}
-                                id="LoginConfigTotp_FormLabel_2"
-                                sx={styles.LoginConfigTotp_FormLabel_2}
-                            >
-                                {msg("loginTotpDeviceName")}
-                            </FormLabel>{" "}
-                            {totp.otpCredentials.length >= 1 && (
-                                <span id="LoginConfigTotp_span_4">*</span>
-                            )}
-                        </Box>
-                        <Box
-                            className={kcClsx("kcInputWrapperClass")}
-                            id="LoginConfigTotp_Box_7"
-                            sx={styles.LoginConfigTotp_Box_7}
-                        >
+                            {msg("loginTotpDeviceName")}
+                        </FormLabel>{" "}
+                        {totp.otpCredentials.length >= 1 && (
+                            <span id="LoginConfigTotp_span_4">*</span>
+                        )}
+                        <Box id="LoginConfigTotp_Box_5" sx={styles.LoginConfigTotp_Box_5}>
                             <TextField
                                 type="text"
                                 name="userLabel"
                                 autoComplete="off"
-                                className={kcClsx("kcInputClass")}
                                 aria-invalid={messagesPerField.existsError("userLabel")}
                                 id="LoginConfigTotp_TextField_4"
                                 sx={styles.LoginConfigTotp_TextField_4}
@@ -322,7 +288,6 @@ export default function LoginConfigTotp(
                             {messagesPerField.existsError("userLabel") && (
                                 <span
                                     id="input-error-otp-label"
-                                    className={kcClsx("kcInputErrorMessageClass")}
                                     aria-live="polite"
                                     dangerouslySetInnerHTML={{
                                         __html: messagesPerField.get("userLabel")
@@ -332,11 +297,7 @@ export default function LoginConfigTotp(
                         </Box>
                     </Box>
 
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginConfigTotp_Box_8"
-                        sx={styles.LoginConfigTotp_Box_8}
-                    >
+                    <Box id="LoginConfigTotp_Box_6" sx={styles.LoginConfigTotp_Box_6}>
                         <LogoutOtherSessions
                             id="LoginConfigTotp_LogoutOtherSessions_1"
                             kcClsx={kcClsx}
@@ -348,23 +309,12 @@ export default function LoginConfigTotp(
                         <>
                             <TextField
                                 type="submit"
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
                                 value={msgStr("doSubmit")}
                                 id="LoginConfigTotp_TextField_5"
                                 sx={styles.LoginConfigTotp_TextField_5}
                             />
                             <Button
                                 type="submit"
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass",
-                                    "kcButtonLargeClass"
-                                )}
                                 name="cancel-aia"
                                 value="true"
                                 id="LoginConfigTotp_Button_1"
@@ -376,11 +326,6 @@ export default function LoginConfigTotp(
                     ) : (
                         <TextField
                             type="submit"
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonLargeClass"
-                            )}
                             value={msgStr("doSubmit")}
                             id="LoginConfigTotp_TextField_6"
                             sx={styles.LoginConfigTotp_TextField_6}
@@ -395,33 +340,21 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box
-            className={kcClsx("kcFormOptionsClass")}
-            id="LoginConfigTotp_Box_9"
-            sx={styles.LoginConfigTotp_Box_9}
-        >
-            <Box
-                className={kcClsx("kcFormOptionsWrapperClass")}
-                id="LoginConfigTotp_Box_10"
-                sx={styles.LoginConfigTotp_Box_10}
+        <Box id="LoginConfigTotp_Box_7" sx={styles.LoginConfigTotp_Box_7}>
+            <FormLabel
+                id="LoginConfigTotp_FormLabel_3"
+                sx={styles.LoginConfigTotp_FormLabel_3}
             >
-                <Box id="LoginConfigTotp_Box_11" sx={styles.LoginConfigTotp_Box_11}>
-                    <FormLabel
-                        id="LoginConfigTotp_FormLabel_3"
-                        sx={styles.LoginConfigTotp_FormLabel_3}
-                    >
-                        <TextField
-                            type="checkbox"
-                            name="logout-sessions"
-                            value="on"
-                            defaultChecked={true}
-                            id="LoginConfigTotp_TextField_7"
-                            sx={styles.LoginConfigTotp_TextField_7}
-                        />
-                        {msg("logoutOtherSessions")}
-                    </FormLabel>
-                </Box>
-            </Box>
+                <TextField
+                    type="checkbox"
+                    name="logout-sessions"
+                    value="on"
+                    defaultChecked={true}
+                    id="LoginConfigTotp_TextField_7"
+                    sx={styles.LoginConfigTotp_TextField_7}
+                />
+                {msg("logoutOtherSessions")}
+            </FormLabel>
         </Box>
     );
 }

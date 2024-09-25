@@ -94,11 +94,6 @@ export default function DeleteAccountConfirm(
                     sx={styles.DeleteAccountConfirm_Box_3}
                 >
                     <TextField
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonPrimaryClass",
-                            "kcButtonLargeClass"
-                        )}
                         type="submit"
                         value={msgStr("doConfirmDelete")}
                         id="DeleteAccountConfirm_TextField_1"
@@ -106,11 +101,6 @@ export default function DeleteAccountConfirm(
                     />
                     {triggered_from_aia && (
                         <Button
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
                             style={{ marginLeft: "calc(100% - 220px)" }}
                             type="submit"
                             name="cancel-aia"

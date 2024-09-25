@@ -52,11 +52,6 @@ export default function DeleteCredential(
                 sx={styles.DeleteCredential_Box_2}
             >
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonPrimaryClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="accept"
                     type="submit"
                     value={msgStr("doConfirmDelete")}
@@ -64,11 +59,6 @@ export default function DeleteCredential(
                     sx={styles.DeleteCredential_TextField_1}
                 />
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="cancel-aia"
                     value={msgStr("doCancel")}
                     type="submit"
@@ -76,11 +66,6 @@ export default function DeleteCredential(
                     sx={styles.DeleteCredential_TextField_2}
                 />
             </Box>
-            <Box
-                className="clearfix"
-                id="DeleteCredential_Box_3"
-                sx={styles.DeleteCredential_Box_3}
-            />
         </Template>
     );
 }

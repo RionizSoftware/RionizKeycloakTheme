@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-recovery-code-login-form\""
+      "kc-recovery-code-login-form\"",
+      "LoginRecoveryAuthnCodeInput_Box_1"
     ],
     "historyStates": [
       {
@@ -56,12 +57,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginRecoveryAuthnCodeInput_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginRecoveryAuthnCodeInput_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_div_1\""
+      "LoginRecoveryAuthnCodeInput_div_1\"",
+      "LoginRecoveryAuthnCodeInput_Box_2"
     ],
     "historyStates": [
       {
@@ -87,6 +113,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeInput_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -125,7 +169,8 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_label_1\""
+      "LoginRecoveryAuthnCodeInput_label_1\"",
+      "LoginRecoveryAuthnCodeInput_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -155,12 +200,33 @@
           "id": "id=\"LoginRecoveryAuthnCodeInput_label_1\"",
           "htmlFor": "htmlFor=\"recoveryCodeInput\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "id": "LoginRecoveryAuthnCodeInput_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "id": "LoginRecoveryAuthnCodeInput_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_div_3\""
+      "LoginRecoveryAuthnCodeInput_div_3\"",
+      "LoginRecoveryAuthnCodeInput_Box_3"
     ],
     "historyStates": [
       {
@@ -187,12 +253,31 @@
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeInput_div_3\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "recoveryCodeInput\""
+      "recoveryCodeInput\"",
+      "LoginRecoveryAuthnCodeInput_TextField_1"
     ],
     "historyStates": [
       {
@@ -237,6 +322,36 @@
           "type": "type=\"text\"",
           "autoFocus": "autoFocus"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "name": "name=\"recoveryCodeInput\"",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"recoveryCodeInput\")}",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "id": "LoginRecoveryAuthnCodeInput_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "name": "name=\"recoveryCodeInput\"",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"recoveryCodeInput\")}",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "id": "LoginRecoveryAuthnCodeInput_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
@@ -270,7 +385,8 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_div_4\""
+      "LoginRecoveryAuthnCodeInput_div_4\"",
+      "LoginRecoveryAuthnCodeInput_Box_4"
     ],
     "historyStates": [
       {
@@ -296,6 +412,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeInput_div_4\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeInput_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -398,7 +532,8 @@
   },
   {
     "tags": [
-      "kc-login\""
+      "kc-login\"",
+      "LoginRecoveryAuthnCodeInput_TextField_2"
     ],
     "historyStates": [
       {
@@ -433,6 +568,30 @@
           "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doLogIn\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogIn\")}",
+          "id": "LoginRecoveryAuthnCodeInput_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogIn\")}",
+          "id": "LoginRecoveryAuthnCodeInput_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

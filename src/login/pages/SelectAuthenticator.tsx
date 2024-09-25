@@ -39,22 +39,16 @@ export default function SelectAuthenticator(
             headerNode={msg("loginChooseAuthenticator")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
                 id="SelectAuthenticator_Box_1"
                 sx={styles.SelectAuthenticator_Box_1}
             >
-                <Box
-                    className={kcClsx("kcSelectAuthListClass")}
-                    id="SelectAuthenticator_Box_2"
-                    sx={styles.SelectAuthenticator_Box_2}
-                >
+                <Box id="SelectAuthenticator_Box_2" sx={styles.SelectAuthenticator_Box_2}>
                     {auth.authenticationSelections.map((authenticationSelection, i) => (
                         <Button
                             key={i}
-                            className={kcClsx("kcSelectAuthListItemClass")}
                             type="submit"
                             name="authenticationExecution"
                             value={authenticationSelection.authExecId}
@@ -62,56 +56,24 @@ export default function SelectAuthenticator(
                             sx={styles.SelectAuthenticator_Button_1}
                         >
                             <Box
-                                className={kcClsx("kcSelectAuthListItemIconClass")}
                                 id="SelectAuthenticator_Box_3"
                                 sx={styles.SelectAuthenticator_Box_3}
                             >
-                                <i
-                                    id="SelectAuthenticator_i_1"
-                                    className={kcClsx(
-                                        "kcSelectAuthListItemIconPropertyClass",
-                                        authenticationSelection.iconCssClass
-                                    )}
-                                />
+                                <i id="SelectAuthenticator_i_1" />
                             </Box>
                             <Box
-                                className={kcClsx("kcSelectAuthListItemBodyClass")}
                                 id="SelectAuthenticator_Box_4"
                                 sx={styles.SelectAuthenticator_Box_4}
                             >
-                                <Box
-                                    className={kcClsx("kcSelectAuthListItemHeadingClass")}
-                                    id="SelectAuthenticator_Box_5"
-                                    sx={styles.SelectAuthenticator_Box_5}
-                                >
-                                    {advancedMsg(authenticationSelection.displayName)}
-                                </Box>
-                                <Box
-                                    className={kcClsx(
-                                        "kcSelectAuthListItemDescriptionClass"
-                                    )}
-                                    id="SelectAuthenticator_Box_6"
-                                    sx={styles.SelectAuthenticator_Box_6}
-                                >
-                                    {advancedMsg(authenticationSelection.helpText)}
-                                </Box>
+                                {advancedMsg(authenticationSelection.displayName)}
+                                {advancedMsg(authenticationSelection.helpText)}
                             </Box>
+
                             <Box
-                                className={kcClsx("kcSelectAuthListItemFillClass")}
-                                id="SelectAuthenticator_Box_7"
-                                sx={styles.SelectAuthenticator_Box_7}
-                            />
-                            <Box
-                                className={kcClsx("kcSelectAuthListItemArrowClass")}
-                                id="SelectAuthenticator_Box_8"
-                                sx={styles.SelectAuthenticator_Box_8}
+                                id="SelectAuthenticator_Box_5"
+                                sx={styles.SelectAuthenticator_Box_5}
                             >
-                                <i
-                                    id="SelectAuthenticator_i_2"
-                                    className={kcClsx(
-                                        "kcSelectAuthListItemArrowIconClass"
-                                    )}
-                                />
+                                <i id="SelectAuthenticator_i_2" />
                             </Box>
                         </Button>
                     ))}

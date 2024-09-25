@@ -41,25 +41,28 @@ export default function LoginIdpLinkConfirm(
             headerNode={msg("confirmLinkIdpTitle")}
         >
             <Box
-                id="kc-register-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginIdpLinkConfirm_Box_1"
+                sx={styles.LoginIdpLinkConfirm_Box_1}
             >
-                <Box id="LoginIdpLinkConfirm_div_1">
+                <Box id="LoginIdpLinkConfirm_Box_2" sx={styles.LoginIdpLinkConfirm_Box_2}>
                     <Button
                         type="submit"
                         name="submitAction"
-                        id="updateProfile"
                         value="updateProfile"
+                        id="LoginIdpLinkConfirm_Button_1"
+                        sx={styles.LoginIdpLinkConfirm_Button_1}
                     >
                         {msg("confirmLinkIdpReviewProfile")}
                     </Button>
                     <Button
                         type="submit"
                         name="submitAction"
-                        id="linkAccount"
                         value="linkAccount"
+                        id="LoginIdpLinkConfirm_Button_2"
+                        sx={styles.LoginIdpLinkConfirm_Button_2}
                     >
                         {msg("confirmLinkIdpContinue", idpAlias)}
                     </Button>

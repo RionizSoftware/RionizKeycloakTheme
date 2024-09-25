@@ -23,7 +23,8 @@
   },
   {
     "tags": [
-      "kc-update-profile-form\""
+      "kc-update-profile-form\"",
+      "LoginUpdateProfile_Box_1"
     ],
     "historyStates": [
       {
@@ -57,6 +58,30 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginUpdateProfile_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginUpdateProfile_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
@@ -82,7 +107,8 @@
   },
   {
     "tags": [
-      "LoginUpdateProfile_div_1\""
+      "LoginUpdateProfile_div_1\"",
+      "LoginUpdateProfile_Box_2"
     ],
     "historyStates": [
       {
@@ -108,6 +134,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginUpdateProfile_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginUpdateProfile_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginUpdateProfile_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -210,7 +254,8 @@
   },
   {
     "tags": [
-      "LoginUpdateProfile_input_1\""
+      "LoginUpdateProfile_input_1\"",
+      "LoginUpdateProfile_TextField_1"
     ],
     "historyStates": [
       {
@@ -246,12 +291,37 @@
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doSubmit\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "disabled": "disabled={!isFormSubmittable}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "id": "LoginUpdateProfile_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "disabled": "disabled={!isFormSubmittable}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "id": "LoginUpdateProfile_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginUpdateProfile_button_1\""
+      "LoginUpdateProfile_button_1\"",
+      "LoginUpdateProfile_Button_1"
     ],
     "historyStates": [
       {
@@ -289,6 +359,32 @@
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\"",
           "formNoValidate": "formNoValidate"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "formNoValidate": "formNoValidate",
+          "id": "LoginUpdateProfile_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "formNoValidate": "formNoValidate",
+          "id": "LoginUpdateProfile_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-error-credential-form\""
+      "kc-error-credential-form\"",
+      "WebauthnError_Box_1"
     ],
     "historyStates": [
       {
@@ -56,12 +57,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnError_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnError_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "executionValue\""
+      "executionValue\"",
+      "WebauthnError_TextField_1"
     ],
     "historyStates": [
       {
@@ -83,12 +109,35 @@
           "id": "id=\"executionValue\"",
           "name": "name=\"authenticationExecution\""
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticationExecution\"",
+          "id": "WebauthnError_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticationExecution\"",
+          "id": "WebauthnError_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "isSetRetry\""
+      "isSetRetry\"",
+      "WebauthnError_TextField_2"
     ],
     "historyStates": [
       {
@@ -110,12 +159,35 @@
           "id": "id=\"isSetRetry\"",
           "name": "name=\"isSetRetry\""
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"isSetRetry\"",
+          "id": "WebauthnError_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"isSetRetry\"",
+          "id": "WebauthnError_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-try-again\""
+      "kc-try-again\"",
+      "WebauthnError_TextField_3"
     ],
     "historyStates": [
       {
@@ -157,12 +229,41 @@
           "id": "id=\"kc-try-again\"",
           "value": "value={msgStr(\"doTryAgain\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "onClick": "onClick={() => {\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"isSetRetry\").value = \"retry\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"executionValue\").value = \"${execution}\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"kc-error-credential-form\").submit();\n        }}",
+          "type": "type=\"button\"",
+          "name": "name=\"try-again\"",
+          "value": "value={msgStr(\"doTryAgain\")}",
+          "id": "WebauthnError_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={4}",
+          "onClick": "onClick={() => {\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"isSetRetry\").value = \"retry\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"executionValue\").value = \"${execution}\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"kc-error-credential-form\").submit();\n        }}",
+          "type": "type=\"button\"",
+          "name": "name=\"try-again\"",
+          "value": "value={msgStr(\"doTryAgain\")}",
+          "id": "WebauthnError_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-webauthn-settings-form\""
+      "kc-webauthn-settings-form\"",
+      "WebauthnError_Box_2"
     ],
     "historyStates": [
       {
@@ -196,12 +297,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnError_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnError_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "cancelWebAuthnAIA\""
+      "cancelWebAuthnAIA\"",
+      "WebauthnError_Button_1"
     ],
     "historyStates": [
       {
@@ -236,6 +362,30 @@
           "id": "id=\"cancelWebAuthnAIA\"",
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "WebauthnError_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "WebauthnError_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

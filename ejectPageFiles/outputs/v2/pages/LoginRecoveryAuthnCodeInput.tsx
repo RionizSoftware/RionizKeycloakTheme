@@ -42,15 +42,20 @@ export default function LoginRecoveryAuthnCodeInput(
             displayMessage={!messagesPerField.existsError("recoveryCodeInput")}
         >
             <Box
-                id="kc-recovery-code-login-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
+                id="LoginRecoveryAuthnCodeInput_Box_1"
+                sx={styles.LoginRecoveryAuthnCodeInput_Box_1}
             >
-                <Box id="LoginRecoveryAuthnCodeInput_div_1">
+                <Box
+                    id="LoginRecoveryAuthnCodeInput_Box_2"
+                    sx={styles.LoginRecoveryAuthnCodeInput_Box_2}
+                >
                     <FormLabel
-                        id="LoginRecoveryAuthnCodeInput_label_1"
                         htmlFor="recoveryCodeInput"
+                        id="LoginRecoveryAuthnCodeInput_FormLabel_1"
+                        sx={styles.LoginRecoveryAuthnCodeInput_FormLabel_1}
                     >
                         {msg(
                             "auth-recovery-code-prompt",
@@ -58,10 +63,12 @@ export default function LoginRecoveryAuthnCodeInput(
                         )}
                     </FormLabel>
 
-                    <Box id="LoginRecoveryAuthnCodeInput_div_3">
+                    <Box
+                        id="LoginRecoveryAuthnCodeInput_Box_3"
+                        sx={styles.LoginRecoveryAuthnCodeInput_Box_3}
+                    >
                         <TextField
                             tabIndex={1}
-                            id="recoveryCodeInput"
                             name="recoveryCodeInput"
                             aria-invalid={messagesPerField.existsError(
                                 "recoveryCodeInput"
@@ -69,6 +76,8 @@ export default function LoginRecoveryAuthnCodeInput(
                             autoComplete="off"
                             type="text"
                             autoFocus
+                            id="LoginRecoveryAuthnCodeInput_TextField_1"
+                            sx={styles.LoginRecoveryAuthnCodeInput_TextField_1}
                         />
                         {messagesPerField.existsError("recoveryCodeInput") && (
                             <span
@@ -82,12 +91,16 @@ export default function LoginRecoveryAuthnCodeInput(
                     </Box>
                 </Box>
 
-                <Box id="LoginRecoveryAuthnCodeInput_div_4">
+                <Box
+                    id="LoginRecoveryAuthnCodeInput_Box_4"
+                    sx={styles.LoginRecoveryAuthnCodeInput_Box_4}
+                >
                     <TextField
                         name="login"
-                        id="kc-login"
                         type="submit"
                         value={msgStr("doLogIn")}
+                        id="LoginRecoveryAuthnCodeInput_TextField_2"
+                        sx={styles.LoginRecoveryAuthnCodeInput_TextField_2}
                     />
                 </Box>
             </Box>

@@ -15,6 +15,5 @@ export const styles ={
     "WebauthnAuthenticate_Typography_1": {},
     "WebauthnAuthenticate_Box_6": {},
     "WebauthnAuthenticate_Box_7": {},
-    "WebauthnAuthenticate_Box_15": {},
     "WebauthnAuthenticate_TextField_8": {}
 }

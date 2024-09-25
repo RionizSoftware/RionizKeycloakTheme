@@ -257,8 +257,7 @@ const recursivelyConvertAll = async (
                 muiImportAdder,
                 styleImportAdder
             ]);
-            //For some unknown reason we need to run it separately to work
-            // content = await transformTemplateToMaterialUiFormat(content, [sxAdder]);
+            content = await transformTemplateToMaterialUiFormat(content, [sxAdder]);
 
             content = await runPrettier(content);
             fs.writeFileSync(path.resolve(outputLocation, file), content);

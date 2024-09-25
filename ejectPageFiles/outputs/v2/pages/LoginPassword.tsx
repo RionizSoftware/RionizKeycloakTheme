@@ -45,9 +45,8 @@ export default function LoginPassword(
             headerNode={msg("doLogIn")}
             displayMessage={!messagesPerField.existsError("password")}
         >
-            <Box id="kc-form">
+            <Box id="LoginPassword_Box_1" sx={styles.LoginPassword_Box_1}>
                 <Box
-                    id="kc-form-login"
                     onSubmit={() => {
                         setIsLoginButtonDisabled(true);
                         return true;
@@ -55,10 +54,16 @@ export default function LoginPassword(
                     action={url.loginAction}
                     method="post"
                     component="form"
+                    id="LoginPassword_Box_2"
+                    sx={styles.LoginPassword_Box_2}
                 >
-                    <Box id="LoginPassword_div_3">
+                    <Box id="LoginPassword_Box_3" sx={styles.LoginPassword_Box_3}>
                         <hr id="LoginPassword_hr_1" />
-                        <FormLabel id="LoginPassword_label_1" htmlFor="password">
+                        <FormLabel
+                            htmlFor="password"
+                            id="LoginPassword_FormLabel_1"
+                            sx={styles.LoginPassword_FormLabel_1}
+                        >
                             {msg("password")}
                         </FormLabel>
 
@@ -70,7 +75,6 @@ export default function LoginPassword(
                         >
                             <TextField
                                 tabIndex={2}
-                                id="password"
                                 name="password"
                                 type="password"
                                 autoFocus
@@ -79,6 +83,8 @@ export default function LoginPassword(
                                     "username",
                                     "password"
                                 )}
+                                id="LoginPassword_TextField_1"
+                                sx={styles.LoginPassword_TextField_1}
                             />
                         </PasswordWrapper>
 
@@ -92,27 +98,29 @@ export default function LoginPassword(
                             />
                         )}
                     </Box>
-                    <Box id="LoginPassword_div_4">
+                    <Box id="LoginPassword_Box_4" sx={styles.LoginPassword_Box_4}>
                         {realm.resetPasswordAllowed && (
                             <span id="LoginPassword_span_2">
                                 <Link
-                                    id="LoginPassword_a_1"
                                     tabIndex={5}
                                     href={url.loginResetCredentialsUrl}
+                                    id="LoginPassword_Link_1"
+                                    sx={styles.LoginPassword_Link_1}
                                 >
                                     {msg("doForgotPassword")}
                                 </Link>
                             </span>
                         )}
                     </Box>
-                    <Box id="kc-form-buttons">
+                    <Box id="LoginPassword_Box_5" sx={styles.LoginPassword_Box_5}>
                         <TextField
                             tabIndex={4}
                             name="login"
-                            id="kc-login"
                             type="submit"
                             value={msgStr("doLogIn")}
                             disabled={isLoginButtonDisabled}
+                            id="LoginPassword_TextField_2"
+                            sx={styles.LoginPassword_TextField_2}
                         />
                     </Box>
                 </Box>

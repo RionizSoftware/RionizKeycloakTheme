@@ -22,7 +22,8 @@
   },
   {
     "tags": [
-      "kc-otp-login-form\""
+      "kc-otp-login-form\"",
+      "LoginOtp_Box_1"
     ],
     "historyStates": [
       {
@@ -56,12 +57,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginOtp_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginOtp_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_1\""
+      "LoginOtp_div_1\"",
+      "LoginOtp_Box_2"
     ],
     "historyStates": [
       {
@@ -87,6 +113,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOtp_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOtp_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOtp_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -125,7 +169,8 @@
   },
   {
     "tags": [
-      "LoginOtp_Fragment_1\""
+      "LoginOtp_Fragment_1\"",
+      "LoginOtp_Box_3"
     ],
     "historyStates": [
       {
@@ -145,12 +190,33 @@
           "id": "id=\"LoginOtp_Fragment_1\"",
           "key": "key={index}"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={index}",
+          "id": "LoginOtp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={index}",
+          "id": "LoginOtp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "{`kc-otp-credential-${index}`}"
+      "{`kc-otp-credential-${index}`}",
+      "LoginOtp_TextField_1"
     ],
     "historyStates": [
       {
@@ -189,12 +255,39 @@
           "value": "value={otpCredential.id}",
           "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"radio\"",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}",
+          "id": "LoginOtp_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"radio\"",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}",
+          "id": "LoginOtp_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_label_1\""
+      "LoginOtp_label_1\"",
+      "LoginOtp_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -226,6 +319,28 @@
           "id": "id=\"LoginOtp_label_1\"",
           "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
           "tabIndex": "tabIndex={index}"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}",
+          "id": "LoginOtp_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}",
+          "id": "LoginOtp_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -338,7 +453,8 @@
   },
   {
     "tags": [
-      "LoginOtp_div_3\""
+      "LoginOtp_div_3\"",
+      "LoginOtp_Box_4"
     ],
     "historyStates": [
       {
@@ -364,6 +480,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOtp_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOtp_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOtp_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -402,7 +536,8 @@
   },
   {
     "tags": [
-      "LoginOtp_label_2\""
+      "LoginOtp_label_2\"",
+      "LoginOtp_FormLabel_2"
     ],
     "historyStates": [
       {
@@ -432,12 +567,33 @@
           "id": "id=\"LoginOtp_label_2\"",
           "htmlFor": "htmlFor=\"otp\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"otp\"",
+          "id": "LoginOtp_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"otp\"",
+          "id": "LoginOtp_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_5\""
+      "LoginOtp_div_5\"",
+      "LoginOtp_Box_5"
     ],
     "historyStates": [
       {
@@ -464,12 +620,31 @@
         "props": {
           "id": "id=\"LoginOtp_div_5\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOtp_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOtp_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "otp\""
+      "otp\"",
+      "LoginOtp_TextField_2"
     ],
     "historyStates": [
       {
@@ -511,6 +686,34 @@
           "autoFocus": "autoFocus",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}"
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"otp\"",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}",
+          "id": "LoginOtp_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"otp\"",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}",
+          "id": "LoginOtp_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
@@ -544,7 +747,8 @@
   },
   {
     "tags": [
-      "LoginOtp_div_6\""
+      "LoginOtp_div_6\"",
+      "LoginOtp_Box_6"
     ],
     "historyStates": [
       {
@@ -570,6 +774,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOtp_div_6\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOtp_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOtp_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -672,7 +894,8 @@
   },
   {
     "tags": [
-      "kc-login\""
+      "kc-login\"",
+      "LoginOtp_TextField_3"
     ],
     "historyStates": [
       {
@@ -707,6 +930,30 @@
           "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doLogIn\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogIn\")}",
+          "id": "LoginOtp_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doLogIn\")}",
+          "id": "LoginOtp_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

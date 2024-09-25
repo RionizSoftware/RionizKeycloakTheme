@@ -44,7 +44,10 @@ export default function LoginOauthGrant(
                     {client.attributes.logoUri && (
                         <img id="LoginOauthGrant_img_1" src={client.attributes.logoUri} />
                     )}
-                    <Typography id="LoginOauthGrant_p_1">
+                    <Typography
+                        id="LoginOauthGrant_Typography_1"
+                        sx={styles.LoginOauthGrant_Typography_1}
+                    >
                         {client.name
                             ? msg("oauthGrantTitle", advancedMsgStr(client.name))
                             : msg("oauthGrantTitle", client.clientId)}
@@ -52,13 +55,14 @@ export default function LoginOauthGrant(
                 </>
             }
         >
-            <Box id="kc-oauth">
+            <Box id="LoginOauthGrant_Box_1" sx={styles.LoginOauthGrant_Box_1}>
                 <h3 id="LoginOauthGrant_h3_1">{msg("oauthGrantRequest")}</h3>
-                <List id="LoginOauthGrant_ul_1">
+                <List id="LoginOauthGrant_List_1" sx={styles.LoginOauthGrant_List_1}>
                     {oauth.clientScopesRequested.map(clientScope => (
                         <ListItem
-                            id="LoginOauthGrant_li_1"
                             key={clientScope.consentScreenText}
+                            id="LoginOauthGrant_ListItem_1"
+                            sx={styles.LoginOauthGrant_ListItem_1}
                         >
                             <span id="LoginOauthGrant_span_1">
                                 {advancedMsg(clientScope.consentScreenText)}
@@ -88,9 +92,10 @@ export default function LoginOauthGrant(
                                 <>
                                     {msg("oauthGrantReview")}
                                     <Link
-                                        id="LoginOauthGrant_a_1"
                                         href={client.attributes.tosUri}
                                         target="_blank"
+                                        id="LoginOauthGrant_Link_1"
+                                        sx={styles.LoginOauthGrant_Link_1}
                                     >
                                         {msg("oauthGrantTos")}
                                     </Link>
@@ -100,9 +105,10 @@ export default function LoginOauthGrant(
                                 <>
                                     {msg("oauthGrantReview")}
                                     <Link
-                                        id="LoginOauthGrant_a_2"
                                         href={client.attributes.policyUri}
                                         target="_blank"
+                                        id="LoginOauthGrant_Link_2"
+                                        sx={styles.LoginOauthGrant_Link_2}
                                     >
                                         {msg("oauthGrantPolicy")}
                                     </Link>
@@ -112,33 +118,37 @@ export default function LoginOauthGrant(
                     ))}
 
                 <Box
-                    id="LoginOauthGrant_form_1"
                     action={url.oauthAction}
                     method="POST"
                     component="form"
+                    id="LoginOauthGrant_Box_2"
+                    sx={styles.LoginOauthGrant_Box_2}
                 >
                     <TextField
-                        id="LoginOauthGrant_input_1"
                         type="hidden"
                         name="code"
                         value={oauth.code}
+                        id="LoginOauthGrant_TextField_1"
+                        sx={styles.LoginOauthGrant_TextField_1}
                     />
-                    <Box id="LoginOauthGrant_div_2">
+                    <Box id="LoginOauthGrant_Box_3" sx={styles.LoginOauthGrant_Box_3}>
                         <TextField
                             name="accept"
-                            id="kc-login"
                             type="submit"
                             value={msgStr("doYes")}
+                            id="LoginOauthGrant_TextField_2"
+                            sx={styles.LoginOauthGrant_TextField_2}
                         />
                         <TextField
                             name="cancel"
-                            id="kc-cancel"
                             type="submit"
                             value={msgStr("doNo")}
+                            id="LoginOauthGrant_TextField_3"
+                            sx={styles.LoginOauthGrant_TextField_3}
                         />
                     </Box>
                 </Box>
-                <Box id="LoginOauthGrant_div_7"></Box>
+                <Box id="LoginOauthGrant_Box_4" sx={styles.LoginOauthGrant_Box_4}></Box>
             </Box>
         </Template>
     );

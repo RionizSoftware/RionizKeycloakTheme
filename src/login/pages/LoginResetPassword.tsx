@@ -48,45 +48,32 @@ export default function LoginResetPassword(
             headerNode={msg("emailForgotTitle")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
                 id="LoginResetPassword_Box_1"
                 sx={styles.LoginResetPassword_Box_1}
             >
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginResetPassword_Box_2"
-                    sx={styles.LoginResetPassword_Box_2}
-                >
+                <Box id="LoginResetPassword_Box_2" sx={styles.LoginResetPassword_Box_2}>
+                    <FormLabel
+                        htmlFor="username"
+                        id="LoginResetPassword_FormLabel_1"
+                        sx={styles.LoginResetPassword_FormLabel_1}
+                    >
+                        {!realm.loginWithEmailAllowed
+                            ? msg("username")
+                            : !realm.registrationEmailAsUsername
+                              ? msg("usernameOrEmail")
+                              : msg("email")}
+                    </FormLabel>
+
                     <Box
-                        className={kcClsx("kcLabelWrapperClass")}
                         id="LoginResetPassword_Box_3"
                         sx={styles.LoginResetPassword_Box_3}
-                    >
-                        <FormLabel
-                            htmlFor="username"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginResetPassword_FormLabel_1"
-                            sx={styles.LoginResetPassword_FormLabel_1}
-                        >
-                            {!realm.loginWithEmailAllowed
-                                ? msg("username")
-                                : !realm.registrationEmailAsUsername
-                                  ? msg("usernameOrEmail")
-                                  : msg("email")}
-                        </FormLabel>
-                    </Box>
-                    <Box
-                        className={kcClsx("kcInputWrapperClass")}
-                        id="LoginResetPassword_Box_4"
-                        sx={styles.LoginResetPassword_Box_4}
                     >
                         <TextField
                             type="text"
                             name="username"
-                            className={kcClsx("kcInputClass")}
                             autoFocus
                             defaultValue={auth.attemptedUsername ?? ""}
                             aria-invalid={messagesPerField.existsError("username")}
@@ -96,7 +83,6 @@ export default function LoginResetPassword(
                         {messagesPerField.existsError("username") && (
                             <span
                                 id="input-error-username"
-                                className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
                                     __html: messagesPerField.get("username")
@@ -105,45 +91,20 @@ export default function LoginResetPassword(
                         )}
                     </Box>
                 </Box>
-                <Box
-                    className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}
-                    id="LoginResetPassword_Box_5"
-                    sx={styles.LoginResetPassword_Box_5}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="LoginResetPassword_Box_6"
-                        sx={styles.LoginResetPassword_Box_6}
+                <Box id="LoginResetPassword_Box_4" sx={styles.LoginResetPassword_Box_4}>
+                    <Link
+                        href={url.loginUrl}
+                        id="LoginResetPassword_Link_1"
+                        sx={styles.LoginResetPassword_Link_1}
                     >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginResetPassword_Box_7"
-                            sx={styles.LoginResetPassword_Box_7}
-                        >
-                            <span id="LoginResetPassword_span_2">
-                                <Link
-                                    href={url.loginUrl}
-                                    id="LoginResetPassword_Link_1"
-                                    sx={styles.LoginResetPassword_Link_1}
-                                >
-                                    {msg("backToLogin")}
-                                </Link>
-                            </span>
-                        </Box>
-                    </Box>
+                        {msg("backToLogin")}
+                    </Link>
 
                     <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginResetPassword_Box_8"
-                        sx={styles.LoginResetPassword_Box_8}
+                        id="LoginResetPassword_Box_5"
+                        sx={styles.LoginResetPassword_Box_5}
                     >
                         <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
                             type="submit"
                             value={msgStr("doSubmit")}
                             id="LoginResetPassword_TextField_2"

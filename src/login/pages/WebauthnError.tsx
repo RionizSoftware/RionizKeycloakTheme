@@ -42,7 +42,6 @@ export default function WebauthnError(
             headerNode={msg("webauthn-error-title")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
                 action={url.loginAction}
                 method="post"
                 component="form"
@@ -73,12 +72,6 @@ export default function WebauthnError(
                     document.getElementById("kc-error-credential-form").submit();
                 }}
                 type="button"
-                className={kcClsx(
-                    "kcButtonClass",
-                    "kcButtonPrimaryClass",
-                    "kcButtonBlockClass",
-                    "kcButtonLargeClass"
-                )}
                 name="try-again"
                 value={msgStr("doTryAgain")}
                 id="WebauthnError_TextField_3"
@@ -87,7 +80,6 @@ export default function WebauthnError(
             {isAppInitiatedAction && (
                 <Box
                     action={url.loginAction}
-                    className={kcClsx("kcFormClass")}
                     method="post"
                     component="form"
                     id="WebauthnError_Box_2"
@@ -95,12 +87,6 @@ export default function WebauthnError(
                 >
                     <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
                         name="cancel-aia"
                         value="true"
                         id="WebauthnError_Button_1"

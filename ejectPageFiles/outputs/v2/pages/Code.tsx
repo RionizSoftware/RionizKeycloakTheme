@@ -42,16 +42,22 @@ export default function Code(
                 code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)
             }
         >
-            <Box id="kc-code">
+            <Box id="Code_Box_1" sx={styles.Code_Box_1}>
                 {code.success ? (
                     <>
-                        <Typography id="Code_p_1">
+                        <Typography id="Code_Typography_1" sx={styles.Code_Typography_1}>
                             {msg("copyCodeInstruction")}
                         </Typography>
-                        <TextField id="code" defaultValue={code.code} />
+                        <TextField
+                            defaultValue={code.code}
+                            id="Code_TextField_1"
+                            sx={styles.Code_TextField_1}
+                        />
                     </>
                 ) : (
-                    <Typography id="error">{code.error}</Typography>
+                    <Typography id="Code_Typography_2" sx={styles.Code_Typography_2}>
+                        {code.error}
+                    </Typography>
                 )}
             </Box>
         </Template>

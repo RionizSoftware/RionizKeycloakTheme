@@ -75,7 +75,6 @@ export default function UserProfileFormFields(
                             />
                         )}
                         <Box
-                            className={kcClsx("kcFormGroupClass")}
                             style={{
                                 display:
                                     attribute.name === "password-confirm" &&
@@ -87,13 +86,11 @@ export default function UserProfileFormFields(
                             sx={styles.UserProfileFormFields_Box_2}
                         >
                             <Box
-                                className={kcClsx("kcLabelWrapperClass")}
                                 id="UserProfileFormFields_Box_3"
                                 sx={styles.UserProfileFormFields_Box_3}
                             >
                                 <FormLabel
                                     htmlFor={attribute.name}
-                                    className={kcClsx("kcLabelClass")}
                                     id="UserProfileFormFields_FormLabel_1"
                                     sx={styles.UserProfileFormFields_FormLabel_1}
                                 >
@@ -102,14 +99,12 @@ export default function UserProfileFormFields(
                                 {attribute.required && <> *</>}
                             </Box>
                             <Box
-                                className={kcClsx("kcInputWrapperClass")}
                                 id="UserProfileFormFields_Box_4"
                                 sx={styles.UserProfileFormFields_Box_4}
                             >
                                 {attribute.annotations.inputHelperTextBefore !==
                                     undefined && (
                                     <Box
-                                        className={kcClsx("kcInputHelperTextBeforeClass")}
                                         aria-live="polite"
                                         id="UserProfileFormFields_Box_5"
                                         sx={styles.UserProfileFormFields_Box_5}
@@ -138,7 +133,6 @@ export default function UserProfileFormFields(
                                 {attribute.annotations.inputHelperTextAfter !==
                                     undefined && (
                                     <Box
-                                        className={kcClsx("kcInputHelperTextAfterClass")}
                                         aria-live="polite"
                                         id="UserProfileFormFields_Box_6"
                                         sx={styles.UserProfileFormFields_Box_6}
@@ -185,7 +179,6 @@ function GroupLabel(props: {
             assert(attribute.group !== undefined);
             return (
                 <Box
-                    className={kcClsx("kcFormGroupClass")}
                     {...Object.fromEntries(
                         Object.entries(attribute.group.html5DataAnnotations).map(
                             ([key, value]) => [`data-${key}`, value]
@@ -202,12 +195,10 @@ function GroupLabel(props: {
                                 : attribute.group.name;
                         return (
                             <Box
-                                className={kcClsx("kcContentWrapperClass")}
                                 id="UserProfileFormFields_Box_8"
                                 sx={styles.UserProfileFormFields_Box_8}
                             >
                                 <FormLabel
-                                    className={kcClsx("kcFormGroupHeader")}
                                     id="UserProfileFormFields_FormLabel_2"
                                     sx={styles.UserProfileFormFields_FormLabel_2}
                                 >
@@ -225,12 +216,10 @@ function GroupLabel(props: {
                             );
                             return (
                                 <Box
-                                    className={kcClsx("kcLabelWrapperClass")}
                                     id="UserProfileFormFields_Box_9"
                                     sx={styles.UserProfileFormFields_Box_9}
                                 >
                                     <FormLabel
-                                        className={kcClsx("kcLabelClass")}
                                         id="UserProfileFormFields_FormLabel_3"
                                         sx={styles.UserProfileFormFields_FormLabel_3}
                                     >
@@ -262,8 +251,7 @@ function FieldErrors(props: {
     }
     return (
         <span
-            id="UserProfileFormFields_span_1"
-            className={kcClsx("kcInputErrorMessageClass")}
+            id={`input-error-${attribute.name}${fieldIndex === undefined ? "" : `-${fieldIndex}`}`}
             aria-live="polite"
         >
             {displayableErrors
@@ -361,30 +349,17 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box
-            className={kcClsx("kcInputGroup")}
-            id="UserProfileFormFields_Box_11"
-            sx={styles.UserProfileFormFields_Box_11}
-        >
+        <Box id="UserProfileFormFields_Box_11" sx={styles.UserProfileFormFields_Box_11}>
             {children}
             <Button
                 type="button"
-                className={kcClsx("kcFormPasswordVisibilityButtonClass")}
                 aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
                 id="UserProfileFormFields_Button_1"
                 sx={styles.UserProfileFormFields_Button_1}
             >
-                <i
-                    id="UserProfileFormFields_i_1"
-                    className={kcClsx(
-                        isPasswordRevealed
-                            ? "kcFormPasswordVisibilityIconHide"
-                            : "kcFormPasswordVisibilityIconShow"
-                    )}
-                    aria-hidden
-                />
+                <i id="UserProfileFormFields_i_1" aria-hidden />
             </Button>
         </Box>
     );
@@ -423,7 +398,6 @@ function InputTag(
                     assert(typeof valueOrValues === "string");
                     return valueOrValues;
                 })()}
-                className={kcClsx("kcInputClass")}
                 aria-invalid={
                     displayableErrors.find(error => error.fieldIndex === fieldIndex) !==
                     undefined
@@ -632,7 +606,6 @@ function InputTagSelects(props: InputFieldByTypeProps) {
             {options.map(option => (
                 <Box
                     key={option}
-                    className={classDiv}
                     id="UserProfileFormFields_Box_12"
                     sx={styles.UserProfileFormFields_Box_12}
                 >
@@ -640,7 +613,6 @@ function InputTagSelects(props: InputFieldByTypeProps) {
                         type={inputType}
                         name={attribute.name}
                         value={option}
-                        className={classInput}
                         aria-invalid={props.displayableErrors.length !== 0}
                         disabled={attribute.readOnly}
                         checked={
@@ -682,7 +654,6 @@ function InputTagSelects(props: InputFieldByTypeProps) {
                     />
                     <FormLabel
                         htmlFor={`${attribute.name}-${option}`}
-                        className={`${classLabel}${attribute.readOnly ? ` ${kcClsx("kcInputClassRadioCheckboxLabelDisabled")}` : ""}`}
                         id="UserProfileFormFields_FormLabel_4"
                         sx={styles.UserProfileFormFields_FormLabel_4}
                     >
@@ -700,9 +671,8 @@ function TextareaTag(props: InputFieldByTypeProps) {
     const value = valueOrValues;
     return (
         <textarea
-            id="UserProfileFormFields_textarea_1"
+            id={attribute.name}
             name={attribute.name}
-            className={kcClsx("kcInputClass")}
             aria-invalid={displayableErrors.length !== 0}
             disabled={attribute.readOnly}
             cols={
@@ -751,9 +721,8 @@ function SelectTag(props: InputFieldByTypeProps) {
     const isMultiple = attribute.annotations.inputType === "multiselect";
     return (
         <select
-            id="UserProfileFormFields_select_1"
+            id={attribute.name}
             name={attribute.name}
-            className={kcClsx("kcInputClass")}
             aria-invalid={displayableErrors.length !== 0}
             disabled={attribute.readOnly}
             multiple={isMultiple}

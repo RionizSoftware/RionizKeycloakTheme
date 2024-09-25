@@ -59,12 +59,6 @@ export default function LoginIdpLinkConfirmOverride(
                 <br id="LoginIdpLinkConfirmOverride_br_2" />
                 <Button
                     type="submit"
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonBlockClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="submitAction"
                     value="confirmOverride"
                     id="LoginIdpLinkConfirmOverride_Button_1"

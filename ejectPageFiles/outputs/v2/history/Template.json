@@ -1,7 +1,8 @@
 [
   {
     "tags": [
-      "Template_div_1\""
+      "Template_div_1\"",
+      "Template_Box_1"
     ],
     "historyStates": [
       {
@@ -27,6 +28,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Template_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -153,7 +172,8 @@
   },
   {
     "tags": [
-      "kc-locale\""
+      "kc-locale\"",
+      "Template_Box_2"
     ],
     "historyStates": [
       {
@@ -179,6 +199,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-locale\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -249,7 +287,8 @@
   },
   {
     "tags": [
-      "kc-current-locale-link\""
+      "kc-current-locale-link\"",
+      "Template_Button_1"
     ],
     "historyStates": [
       {
@@ -277,12 +316,41 @@
           "aria-expanded": "aria-expanded=\"false\"",
           "aria-controls": "aria-controls=\"language-switch1\""
         }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "aria-label": "aria-label={msgStr(\"languages\")}",
+          "aria-haspopup": "aria-haspopup=\"true\"",
+          "aria-expanded": "aria-expanded=\"false\"",
+          "aria-controls": "aria-controls=\"language-switch1\"",
+          "id": "Template_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "aria-label": "aria-label={msgStr(\"languages\")}",
+          "aria-haspopup": "aria-haspopup=\"true\"",
+          "aria-expanded": "aria-expanded=\"false\"",
+          "aria-controls": "aria-controls=\"language-switch1\"",
+          "id": "Template_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "language-switch1\""
+      "language-switch1\"",
+      "Template_List_1"
     ],
     "historyStates": [
       {
@@ -321,12 +389,39 @@
           "aria-activedescendant": "aria-activedescendant=\"\"",
           "id": "id=\"language-switch1\""
         }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "role": "role=\"menu\"",
+          "tabIndex": "tabIndex={-1}",
+          "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
+          "aria-activedescendant": "aria-activedescendant=\"\"",
+          "id": "Template_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "role": "role=\"menu\"",
+          "tabIndex": "tabIndex={-1}",
+          "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
+          "aria-activedescendant": "aria-activedescendant=\"\"",
+          "id": "Template_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_li_1\""
+      "Template_li_1\"",
+      "Template_ListItem_1"
     ],
     "historyStates": [
       {
@@ -359,12 +454,35 @@
           "key": "key={languageTag}",
           "role": "role=\"none\""
         }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={languageTag}",
+          "role": "role=\"none\"",
+          "id": "Template_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={languageTag}",
+          "role": "role=\"none\"",
+          "id": "Template_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "{`language-${i + 1}`}"
+      "{`language-${i + 1}`}",
+      "Template_Link_1"
     ],
     "historyStates": [
       {
@@ -397,12 +515,35 @@
           "id": "id={`language-${i + 1}`}",
           "href": "href={getChangeLocaleUrl(languageTag)}"
         }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "role": "role=\"menuitem\"",
+          "href": "href={getChangeLocaleUrl(languageTag)}",
+          "id": "Template_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "role": "role=\"menuitem\"",
+          "href": "href={getChangeLocaleUrl(languageTag)}",
+          "id": "Template_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-page-title\""
+      "kc-page-title\"",
+      "Template_Typography_1"
     ],
     "historyStates": [
       {
@@ -422,12 +563,35 @@
           "variant": "h1",
           "component": "h1"
         }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "variant": "variant=\"h1\"",
+          "component": "component=\"h1\"",
+          "id": "Template_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "variant": "variant=\"h1\"",
+          "component": "component=\"h1\"",
+          "id": "Template_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-username\""
+      "kc-username\"",
+      "Template_Box_3"
     ],
     "historyStates": [
       {
@@ -454,12 +618,31 @@
         "props": {
           "id": "id=\"kc-username\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-attempted-username\""
+      "kc-attempted-username\"",
+      "Template_FormLabel_1"
     ],
     "historyStates": [
       {
@@ -477,12 +660,31 @@
         "props": {
           "id": "id=\"kc-attempted-username\""
         }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "reset-login\""
+      "reset-login\"",
+      "Template_Link_2"
     ],
     "historyStates": [
       {
@@ -504,12 +706,35 @@
           "href": "href={url.loginRestartFlowUrl}",
           "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}"
         }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={url.loginRestartFlowUrl}",
+          "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}",
+          "id": "Template_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={url.loginRestartFlowUrl}",
+          "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}",
+          "id": "Template_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_9\""
+      "Template_div_9\"",
+      "Template_Box_4"
     ],
     "historyStates": [
       {
@@ -535,6 +760,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Template_div_9\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -589,7 +832,8 @@
   },
   {
     "tags": [
-      "Template_div_10\""
+      "Template_div_10\"",
+      "Template_Box_5"
     ],
     "historyStates": [
       {
@@ -615,6 +859,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Template_div_10\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -749,7 +1011,8 @@
   },
   {
     "tags": [
-      "kc-content\""
+      "kc-content\"",
+      "Template_Box_6"
     ],
     "historyStates": [
       {
@@ -766,6 +1029,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-content\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -795,7 +1076,8 @@
   },
   {
     "tags": [
-      "Template_div_15\""
+      "Template_div_15\"",
+      "Template_Box_7"
     ],
     "historyStates": [
       {
@@ -821,6 +1103,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Template_div_15\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -981,7 +1281,8 @@
   },
   {
     "tags": [
-      "kc-select-try-another-way-form\""
+      "kc-select-try-another-way-form\"",
+      "Template_Box_8"
     ],
     "historyStates": [
       {
@@ -1004,12 +1305,37 @@
           "method": "method=\"post\"",
           "component": "form"
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "Template_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "Template_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_17\""
+      "Template_div_17\"",
+      "Template_Box_9"
     ],
     "historyStates": [
       {
@@ -1036,12 +1362,31 @@
         "props": {
           "id": "id=\"Template_div_17\""
         }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_input_1\""
+      "Template_input_1\"",
+      "Template_TextField_1"
     ],
     "historyStates": [
       {
@@ -1065,12 +1410,37 @@
           "name": "name=\"tryAnotherWay\"",
           "value": "value=\"on\""
         }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\"",
+          "id": "Template_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\"",
+          "id": "Template_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "try-another-way\""
+      "try-another-way\"",
+      "Template_Link_3"
     ],
     "historyStates": [
       {
@@ -1092,12 +1462,35 @@
           "id": "id=\"try-another-way\"",
           "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}"
         }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href=\"#\"",
+          "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}",
+          "id": "Template_Link_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href=\"#\"",
+          "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}",
+          "id": "Template_Link_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-info\""
+      "kc-info\"",
+      "Template_Box_10"
     ],
     "historyStates": [
       {
@@ -1123,6 +1516,24 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-info\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

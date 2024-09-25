@@ -72,10 +72,11 @@ export default function Register(props: RegisterProps) {
             displayRequiredFields
         >
             <Box
-                id="kc-register-form"
                 action={url.registrationAction}
                 method="post"
                 component="form"
+                id="Register_Box_1"
+                sx={styles.Register_Box_1}
             >
                 <UserProfileFormFields
                     id="Register_UserProfileFormFields_1"
@@ -97,26 +98,30 @@ export default function Register(props: RegisterProps) {
                 )}
                 {recaptchaRequired &&
                     (recaptchaVisible || recaptchaAction === undefined) && (
-                        <Box id="Register_div_1">
+                        <Box id="Register_Box_2" sx={styles.Register_Box_2}>
                             <Box
-                                id="Register_div_3"
                                 data-size="compact"
                                 data-sitekey={recaptchaSiteKey}
                                 data-action={recaptchaAction}
+                                id="Register_Box_3"
+                                sx={styles.Register_Box_3}
                             ></Box>
                         </Box>
                     )}
-                <Box id="Register_div_4">
-                    <Link id="Register_a_1" href={url.loginUrl}>
+                <Box id="Register_Box_4" sx={styles.Register_Box_4}>
+                    <Link
+                        href={url.loginUrl}
+                        id="Register_Link_1"
+                        sx={styles.Register_Link_1}
+                    >
                         {msg("backToLogin")}
                     </Link>
 
                     {recaptchaRequired &&
                     !recaptchaVisible &&
                     recaptchaAction !== undefined ? (
-                        <Box id="kc-form-buttons">
+                        <Box id="Register_Box_5" sx={styles.Register_Box_5}>
                             <Button
-                                id="Register_button_1"
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
                                     (
@@ -127,20 +132,23 @@ export default function Register(props: RegisterProps) {
                                 }}
                                 data-action={recaptchaAction}
                                 type="submit"
+                                id="Register_Button_1"
+                                sx={styles.Register_Button_1}
                             >
                                 {msg("doRegister")}
                             </Button>
                         </Box>
                     ) : (
-                        <Box id="kc-form-buttons">
+                        <Box id="Register_Box_6" sx={styles.Register_Box_6}>
                             <TextField
-                                id="Register_input_1"
                                 disabled={
                                     !isFormSubmittable ||
                                     (termsAcceptanceRequired && !areTermsAccepted)
                                 }
                                 type="submit"
                                 value={msgStr("doRegister")}
+                                id="Register_TextField_1"
+                                sx={styles.Register_TextField_1}
                             />
                         </Box>
                     )}
@@ -166,25 +174,30 @@ function TermsAcceptance(props: {
     const { msg } = i18n;
     return (
         <>
-            <Box id="Register_div_9">
+            <Box id="Register_Box_7" sx={styles.Register_Box_7}>
                 {msg("termsTitle")}
                 {msg("termsText")}
             </Box>
-            <Box id="Register_div_12">
+            <Box id="Register_Box_8" sx={styles.Register_Box_8}>
                 <TextField
                     type="checkbox"
-                    id="termsAccepted"
                     name="termsAccepted"
                     checked={areTermsAccepted}
                     onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}
                     aria-invalid={messagesPerField.existsError("termsAccepted")}
+                    id="Register_TextField_2"
+                    sx={styles.Register_TextField_2}
                 />
-                <FormLabel id="Register_label_1" htmlFor="termsAccepted">
+                <FormLabel
+                    htmlFor="termsAccepted"
+                    id="Register_FormLabel_1"
+                    sx={styles.Register_FormLabel_1}
+                >
                     {msg("acceptTerms")}
                 </FormLabel>
 
                 {messagesPerField.existsError("termsAccepted") && (
-                    <Box id="Register_div_14">
+                    <Box id="Register_Box_9" sx={styles.Register_Box_9}>
                         <span
                             id="input-error-terms-accepted"
                             aria-live="polite"

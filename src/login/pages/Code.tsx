@@ -49,7 +49,6 @@ export default function Code(
                             {msg("copyCodeInstruction")}
                         </Typography>
                         <TextField
-                            className={kcClsx("kcTextareaClass")}
                             defaultValue={code.code}
                             id="Code_TextField_1"
                             sx={styles.Code_TextField_1}
