@@ -3,9 +3,8 @@ import type { ClassKey } from "rionizkeycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "rionizkeycloakify/login/DefaultPage";
-import UserProfileFormFields from "rionizkeycloakify/login/UserProfileFormFields";
 import Template from "rionizkeycloakify/login/Template";
-const Login = lazy(() => import("./pages/Login"));
+import UserProfileFormFields from "rionizkeycloakify/login/UserProfileFormFields";
 const doMakeUserConfirmPassword = true;
 export default function KcPage(props: { kcContext: KcContext }) {
     const { kcContext } = props;
@@ -14,14 +13,6 @@ export default function KcPage(props: { kcContext: KcContext }) {
         <Suspense>
             {(() => {
                 switch (kcContext.pageId) {
-                    case "login.ftl":
-                        return (
-                            <Login
-                                {...{ kcContext, i18n, classes }}
-                                Template={Template}
-                                doUseDefaultCss={true}
-                            />
-                        );
                     default:
                         return (
                             <DefaultPage

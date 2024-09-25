@@ -72,38 +72,56 @@ const getVersionFromTerminal = (): string => {
         throw new Error("Version not provided");
     }
 };
-(async (): Promise<void> => {
-    const version = getVersionFromTerminal();
-    const inputsLocation = path.resolve(
-        process.cwd(),
-        "./ejectPageFiles/inputs",
-        `./v${version}`
-    );
-    const pagesLocation = path.resolve(inputsLocation, "./pages");
-    const outputLocation = path.resolve(
-        process.cwd(),
-        "./ejectPageFiles/outputs",
-        `./v${version}`
-    );
-    const pagesOutputLocation = path.resolve(outputLocation, "./transformerOutputs");
-    const stylesLocation = path.resolve(pagesOutputLocation, "./styles");
-    const historyLocation = path.resolve(pagesOutputLocation, "./history");
-    if (!fs.existsSync(pagesOutputLocation))
-        fs.mkdirSync(pagesOutputLocation, { recursive: true });
-    if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation, { recursive: true });
-    if (!fs.existsSync(historyLocation))
-        fs.mkdirSync(historyLocation, { recursive: true });
-    fs.copyFileSync(
-        path.resolve(inputsLocation, "./KcPage.tsx"),
-        path.resolve(outputLocation, "./KcPage.tsx")
-    );
-    try {
-        const files = fs.readdirSync(pagesLocation);
-        for (const file of files) {
-            const fileNameWithNoExtension = file.split(".")[0];
-            const filePath = path.join(pagesLocation, file);
-            let content = fs.readFileSync(filePath, "utf-8");
 
+const recursivelyConvertAll = async (
+    inputLocation: string,
+    outputLocation: string,
+    historyLocation: string,
+    stylesLocation: string,
+    recursiveDepth: number,
+    currentFolder: string,
+    filesToIgnore: string[]
+): Promise<void> => {
+    console.log(
+        "Calling recursive",
+        inputLocation,
+        outputLocation,
+        recursiveDepth,
+        currentFolder
+    );
+    const files = fs.readdirSync(inputLocation);
+    for (const file of files) {
+        const fileNameWithNoExtension = file.split(".")[0];
+        const filePath = path.join(inputLocation, file);
+        if (fs.lstatSync(filePath).isDirectory()) {
+            await recursivelyConvertAll(
+                path.join(inputLocation, file),
+                path.join(outputLocation, file),
+                path.join(historyLocation, file),
+                path.join(stylesLocation, file),
+                recursiveDepth + 1,
+                currentFolder === "" ? `${file}/` : `${currentFolder}/${file}/`,
+                filesToIgnore
+            );
+        }
+
+        if (!file.includes(".tsx")) {
+            continue;
+        }
+
+        if (!fs.existsSync(outputLocation)) {
+            fs.mkdirSync(outputLocation, { recursive: true });
+        }
+        if (!fs.existsSync(historyLocation)) {
+            fs.mkdirSync(historyLocation, { recursive: true });
+        }
+        if (!fs.existsSync(stylesLocation)) {
+            fs.mkdirSync(stylesLocation, { recursive: true });
+        }
+
+        let content = fs.readFileSync(filePath, "utf-8");
+
+        if (!filesToIgnore.includes(file)) {
             const addIdToAll = rionizTsTransformer(
                 addIdToAllTransformer(fileNameWithNoExtension)
             ) as TransformerFactory<SourceFile>;
@@ -213,10 +231,13 @@ const getVersionFromTerminal = (): string => {
             const muiImportAdder = rionizTsTransformer(
                 MuiAddImportTransformer(imports, "@mui/material")
             ) as TransformerFactory<SourceFile>;
+
             const styleImportAdder = rionizTsTransformer(
                 MuiAddImportTransformer(
                     ["styles"],
-                    `./styles/${fileNameWithNoExtension}.ts`
+                    recursiveDepth == 0
+                        ? `./styles/${fileNameWithNoExtension}.ts`
+                        : `${"../".repeat(recursiveDepth)}styles/${currentFolder}${fileNameWithNoExtension}.ts`
                 )
             ) as TransformerFactory<SourceFile>;
             const sxAdder = rionizTsTransformer(
@@ -246,16 +267,51 @@ const getVersionFromTerminal = (): string => {
             content = await transformTemplateToMaterialUiFormat(content, [sxAdder]);
 
             content = await runPrettier(content);
-            fs.writeFileSync(path.resolve(pagesOutputLocation, file), content);
+            fs.writeFileSync(path.resolve(outputLocation, file), content);
 
             //e.g make ./styles/Login.ts
             makeStyleFile(
                 content,
                 path.resolve(stylesLocation, "./", `${fileNameWithNoExtension}.ts`)
             );
-            fs.writeFileSync(path.resolve(pagesOutputLocation, file), content);
+            fs.writeFileSync(path.resolve(outputLocation, file), content);
             TransformerHistory.writeHistory();
+        } else {
+            //If it's in ignore path just use prettier and save it back
+            content = await runPrettier(content);
+            fs.writeFileSync(path.resolve(outputLocation, file), content);
         }
+    }
+};
+(async (): Promise<void> => {
+    const version = getVersionFromTerminal();
+    const filesToIgnore = ["KcPage.tsx"];
+    const inputsLocation = path.resolve(
+        process.cwd(),
+        "./ejectPageFiles/inputs",
+        version === "dev" ? `./${version}` : `./v${version}`
+    );
+    const outputLocation = path.resolve(
+        process.cwd(),
+        "./ejectPageFiles/outputs",
+        version === "dev" ? `./${version}` : `./v${version}`
+    );
+    const stylesLocation = path.resolve(outputLocation, "./styles");
+    const historyLocation = path.resolve(outputLocation, "./history");
+    if (!fs.existsSync(outputLocation)) fs.mkdirSync(outputLocation, { recursive: true });
+    if (!fs.existsSync(stylesLocation)) fs.mkdirSync(stylesLocation, { recursive: true });
+    if (!fs.existsSync(historyLocation))
+        fs.mkdirSync(historyLocation, { recursive: true });
+    try {
+        await recursivelyConvertAll(
+            inputsLocation,
+            outputLocation,
+            historyLocation,
+            stylesLocation,
+            0,
+            "",
+            filesToIgnore
+        );
     } catch (err) {
         console.error("Error reading files:", err);
     }
