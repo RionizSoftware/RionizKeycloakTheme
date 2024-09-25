@@ -42,25 +42,17 @@ export default function WebauthnError(
             headerNode={msg("webauthn-error-title")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-error-credential-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="WebauthnError_Box_1"
-                sx={styles.WebauthnError_Box_1}
             >
                 <TextField
                     type="hidden"
+                    id="executionValue"
                     name="authenticationExecution"
-                    id="WebauthnError_TextField_1"
-                    sx={styles.WebauthnError_TextField_1}
                 />
-                <TextField
-                    type="hidden"
-                    name="isSetRetry"
-                    id="WebauthnError_TextField_2"
-                    sx={styles.WebauthnError_TextField_2}
-                />
+                <TextField type="hidden" id="isSetRetry" name="isSetRetry" />
             </Box>
             <TextField
                 tabIndex={4}
@@ -73,38 +65,22 @@ export default function WebauthnError(
                     document.getElementById("kc-error-credential-form").submit();
                 }}
                 type="button"
-                className={kcClsx(
-                    "kcButtonClass",
-                    "kcButtonPrimaryClass",
-                    "kcButtonBlockClass",
-                    "kcButtonLargeClass"
-                )}
                 name="try-again"
+                id="kc-try-again"
                 value={msgStr("doTryAgain")}
-                id="WebauthnError_TextField_3"
-                sx={styles.WebauthnError_TextField_3}
             />
             {isAppInitiatedAction && (
                 <Box
                     action={url.loginAction}
-                    className={kcClsx("kcFormClass")}
+                    id="kc-webauthn-settings-form"
                     method="post"
                     component="form"
-                    id="WebauthnError_Box_2"
-                    sx={styles.WebauthnError_Box_2}
                 >
                     <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
+                        id="cancelWebAuthnAIA"
                         name="cancel-aia"
                         value="true"
-                        id="WebauthnError_Button_1"
-                        sx={styles.WebauthnError_Button_1}
                     >
                         {msgStr("doCancel")}
                     </Button>

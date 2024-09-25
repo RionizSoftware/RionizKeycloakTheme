@@ -43,123 +43,59 @@ export default function LoginOtp(
             headerNode={msg("doLogIn")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-otp-login-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="LoginOtp_Box_1"
-                sx={styles.LoginOtp_Box_1}
             >
                 {otpLogin.userOtpCredentials.length > 1 && (
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginOtp_Box_2"
-                        sx={styles.LoginOtp_Box_2}
-                    >
-                        <Box
-                            className={kcClsx("kcInputWrapperClass")}
-                            id="LoginOtp_Box_3"
-                            sx={styles.LoginOtp_Box_3}
-                        >
-                            {otpLogin.userOtpCredentials.map((otpCredential, index) => (
-                                <Box
-                                    key={index}
-                                    id="LoginOtp_Box_4"
-                                    sx={styles.LoginOtp_Box_4}
+                    <Box id="LoginOtp_div_1">
+                        {otpLogin.userOtpCredentials.map((otpCredential, index) => (
+                            <Box id="LoginOtp_Fragment_1" key={index}>
+                                <TextField
+                                    id={`kc-otp-credential-${index}`}
+                                    type="radio"
+                                    name="selectedCredentialId"
+                                    value={otpCredential.id}
+                                    defaultChecked={
+                                        otpCredential.id === otpLogin.selectedCredentialId
+                                    }
+                                />
+                                <FormLabel
+                                    id="LoginOtp_label_1"
+                                    htmlFor={`kc-otp-credential-${index}`}
+                                    tabIndex={index}
                                 >
-                                    <TextField
-                                        className={kcClsx("kcLoginOTPListInputClass")}
-                                        type="radio"
-                                        name="selectedCredentialId"
-                                        value={otpCredential.id}
-                                        defaultChecked={
-                                            otpCredential.id ===
-                                            otpLogin.selectedCredentialId
-                                        }
-                                        id="LoginOtp_TextField_1"
-                                        sx={styles.LoginOtp_TextField_1}
-                                    />
-                                    <FormLabel
-                                        htmlFor={`kc-otp-credential-${index}`}
-                                        className={kcClsx("kcLoginOTPListClass")}
-                                        tabIndex={index}
-                                        id="LoginOtp_FormLabel_1"
-                                        sx={styles.LoginOtp_FormLabel_1}
-                                    >
-                                        <span
-                                            id="LoginOtp_span_1"
-                                            className={kcClsx(
-                                                "kcLoginOTPListItemHeaderClass"
-                                            )}
-                                        >
-                                            <span
-                                                id="LoginOtp_span_2"
-                                                className={kcClsx(
-                                                    "kcLoginOTPListItemIconBodyClass"
-                                                )}
-                                            >
-                                                <i
-                                                    id="LoginOtp_i_1"
-                                                    className={kcClsx(
-                                                        "kcLoginOTPListItemIconClass"
-                                                    )}
-                                                    aria-hidden="true"
-                                                ></i>
-                                            </span>
-                                            <span
-                                                id="LoginOtp_span_3"
-                                                className={kcClsx(
-                                                    "kcLoginOTPListItemTitleClass"
-                                                )}
-                                            >
-                                                {otpCredential.userLabel}
-                                            </span>
+                                    <span id="LoginOtp_span_1">
+                                        <i id="LoginOtp_i_1" aria-hidden="true"></i>
+
+                                        <span id="LoginOtp_span_3">
+                                            {otpCredential.userLabel}
                                         </span>
-                                    </FormLabel>
-                                </Box>
-                            ))}
-                        </Box>
+                                    </span>
+                                </FormLabel>
+                            </Box>
+                        ))}
                     </Box>
                 )}
 
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginOtp_Box_5"
-                    sx={styles.LoginOtp_Box_5}
-                >
-                    <Box
-                        className={kcClsx("kcLabelWrapperClass")}
-                        id="LoginOtp_Box_6"
-                        sx={styles.LoginOtp_Box_6}
-                    >
-                        <FormLabel
-                            htmlFor="otp"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginOtp_FormLabel_2"
-                            sx={styles.LoginOtp_FormLabel_2}
-                        >
-                            {msg("loginOtpOneTime")}
-                        </FormLabel>
-                    </Box>
-                    <Box
-                        className={kcClsx("kcInputWrapperClass")}
-                        id="LoginOtp_Box_7"
-                        sx={styles.LoginOtp_Box_7}
-                    >
+                <Box id="LoginOtp_div_3">
+                    <FormLabel id="LoginOtp_label_2" htmlFor="otp">
+                        {msg("loginOtpOneTime")}
+                    </FormLabel>
+
+                    <Box id="LoginOtp_div_5">
                         <TextField
+                            id="otp"
                             name="otp"
                             autoComplete="off"
                             type="text"
-                            className={kcClsx("kcInputClass")}
                             autoFocus
                             aria-invalid={messagesPerField.existsError("totp")}
-                            id="LoginOtp_TextField_2"
-                            sx={styles.LoginOtp_TextField_2}
                         />
                         {messagesPerField.existsError("totp") && (
                             <span
                                 id="input-error-otp-code"
-                                className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
                                     __html: messagesPerField.get("totp")
@@ -169,41 +105,13 @@ export default function LoginOtp(
                     </Box>
                 </Box>
 
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginOtp_Box_8"
-                    sx={styles.LoginOtp_Box_8}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="LoginOtp_Box_9"
-                        sx={styles.LoginOtp_Box_9}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginOtp_Box_10"
-                            sx={styles.LoginOtp_Box_10}
-                        ></Box>
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginOtp_Box_11"
-                        sx={styles.LoginOtp_Box_11}
-                    >
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="login"
-                            type="submit"
-                            value={msgStr("doLogIn")}
-                            id="LoginOtp_TextField_3"
-                            sx={styles.LoginOtp_TextField_3}
-                        />
-                    </Box>
+                <Box id="LoginOtp_div_6">
+                    <TextField
+                        name="login"
+                        id="kc-login"
+                        type="submit"
+                        value={msgStr("doLogIn")}
+                    />
                 </Box>
             </Box>
         </Template>

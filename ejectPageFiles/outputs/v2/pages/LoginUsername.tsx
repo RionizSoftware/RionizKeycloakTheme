@@ -54,14 +54,9 @@ export default function LoginUsername(
                 realm.password && realm.registrationAllowed && !registrationDisabled
             }
             infoNode={
-                <Box id="LoginUsername_Box_1" sx={styles.LoginUsername_Box_1}>
+                <Box id="kc-registration">
                     {msg("noAccount")}
-                    <Link
-                        tabIndex={6}
-                        href={url.registrationUrl}
-                        id="LoginUsername_Link_1"
-                        sx={styles.LoginUsername_Link_1}
-                    >
+                    <Link id="LoginUsername_a_1" tabIndex={6} href={url.registrationUrl}>
                         {msg("doRegister")}
                     </Link>
                 </Box>
@@ -72,66 +67,30 @@ export default function LoginUsername(
                     {realm.password &&
                         social?.providers !== undefined &&
                         social.providers.length !== 0 && (
-                            <Box
-                                className={kcClsx("kcFormSocialAccountSectionClass")}
-                                id="LoginUsername_Box_2"
-                                sx={styles.LoginUsername_Box_2}
-                            >
+                            <Box id="kc-social-providers">
                                 <hr id="LoginUsername_hr_1" />
                                 <Typography
+                                    id="LoginUsername_h2_1"
                                     variant="h2"
                                     component="h2"
-                                    id="LoginUsername_Typography_1"
-                                    sx={styles.LoginUsername_Typography_1}
                                 >
                                     {msg("identity-provider-login-label")}
                                 </Typography>
-                                <List
-                                    className={kcClsx(
-                                        "kcFormSocialAccountListClass",
-                                        social.providers.length > 3 &&
-                                            "kcFormSocialAccountListGridClass"
-                                    )}
-                                    id="LoginUsername_List_1"
-                                    sx={styles.LoginUsername_List_1}
-                                >
+                                <List id="LoginUsername_ul_1">
                                     {social.providers.map((...[p, , providers]) => (
-                                        <ListItem
-                                            key={p.alias}
-                                            id="LoginUsername_ListItem_1"
-                                            sx={styles.LoginUsername_ListItem_1}
-                                        >
+                                        <ListItem id="LoginUsername_li_1" key={p.alias}>
                                             <Link
-                                                className={kcClsx(
-                                                    "kcFormSocialAccountListButtonClass",
-                                                    providers.length > 3 &&
-                                                        "kcFormSocialAccountGridItem"
-                                                )}
+                                                id={`social-${p.alias}`}
                                                 type="button"
                                                 href={p.loginUrl}
-                                                id="LoginUsername_Link_2"
-                                                sx={styles.LoginUsername_Link_2}
                                             >
                                                 {p.iconClasses && (
                                                     <i
                                                         id="LoginUsername_i_1"
-                                                        className={clsx(
-                                                            kcClsx("kcCommonLogoIdP"),
-                                                            p.iconClasses
-                                                        )}
                                                         aria-hidden="true"
                                                     ></i>
                                                 )}
-                                                <span
-                                                    id="LoginUsername_span_2"
-                                                    className={clsx(
-                                                        kcClsx(
-                                                            "kcFormSocialAccountNameClass"
-                                                        ),
-                                                        p.iconClasses &&
-                                                            "kc-social-icon-text"
-                                                    )}
-                                                >
+                                                <span id="LoginUsername_span_2">
                                                     {p.displayName}
                                                 </span>
                                             </Link>
@@ -143,9 +102,10 @@ export default function LoginUsername(
                 </>
             }
         >
-            <Box id="LoginUsername_Box_3" sx={styles.LoginUsername_Box_3}>
+            <Box id="kc-form">
                 {realm.password && (
                     <Box
+                        id="kc-form-login"
                         onSubmit={() => {
                             setIsLoginButtonDisabled(true);
                             return true;
@@ -153,21 +113,10 @@ export default function LoginUsername(
                         action={url.loginAction}
                         method="post"
                         component="form"
-                        id="LoginUsername_Box_4"
-                        sx={styles.LoginUsername_Box_4}
                     >
                         {!usernameHidden && (
-                            <Box
-                                className={kcClsx("kcFormGroupClass")}
-                                id="LoginUsername_Box_5"
-                                sx={styles.LoginUsername_Box_5}
-                            >
-                                <FormLabel
-                                    htmlFor="username"
-                                    className={kcClsx("kcLabelClass")}
-                                    id="LoginUsername_FormLabel_1"
-                                    sx={styles.LoginUsername_FormLabel_1}
-                                >
+                            <Box id="LoginUsername_div_5">
+                                <FormLabel id="LoginUsername_label_1" htmlFor="username">
                                     {!realm.loginWithEmailAllowed
                                         ? msg("username")
                                         : !realm.registrationEmailAsUsername
@@ -176,7 +125,7 @@ export default function LoginUsername(
                                 </FormLabel>
                                 <TextField
                                     tabIndex={2}
-                                    className={kcClsx("kcInputClass")}
+                                    id="username"
                                     name="username"
                                     defaultValue={login.username ?? ""}
                                     type="text"
@@ -185,70 +134,40 @@ export default function LoginUsername(
                                     aria-invalid={messagesPerField.existsError(
                                         "username"
                                     )}
-                                    id="LoginUsername_TextField_1"
-                                    sx={styles.LoginUsername_TextField_1}
                                 />
                                 {messagesPerField.existsError("username") && (
-                                    <span
-                                        id="input-error"
-                                        className={kcClsx("kcInputErrorMessageClass")}
-                                        aria-live="polite"
-                                    >
+                                    <span id="input-error" aria-live="polite">
                                         {messagesPerField.getFirstError("username")}
                                     </span>
                                 )}
                             </Box>
                         )}
 
-                        <Box
-                            className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}
-                            id="LoginUsername_Box_6"
-                            sx={styles.LoginUsername_Box_6}
-                        >
-                            <Box id="LoginUsername_Box_7" sx={styles.LoginUsername_Box_7}>
-                                {realm.rememberMe && !usernameHidden && (
-                                    <Box
-                                        id="LoginUsername_Box_8"
-                                        sx={styles.LoginUsername_Box_8}
-                                    >
-                                        <FormLabel
-                                            id="LoginUsername_FormLabel_2"
-                                            sx={styles.LoginUsername_FormLabel_2}
-                                        >
-                                            <TextField
-                                                tabIndex={3}
-                                                name="rememberMe"
-                                                type="checkbox"
-                                                defaultChecked={!!login.rememberMe}
-                                                id="LoginUsername_TextField_2"
-                                                sx={styles.LoginUsername_TextField_2}
-                                            />{" "}
-                                            {msg("rememberMe")}
-                                        </FormLabel>
-                                    </Box>
-                                )}
-                            </Box>
+                        <Box id="LoginUsername_div_6">
+                            {realm.rememberMe && !usernameHidden && (
+                                <Box id="LoginUsername_div_8">
+                                    <FormLabel id="LoginUsername_label_2">
+                                        <TextField
+                                            tabIndex={3}
+                                            id="rememberMe"
+                                            name="rememberMe"
+                                            type="checkbox"
+                                            defaultChecked={!!login.rememberMe}
+                                        />{" "}
+                                        {msg("rememberMe")}
+                                    </FormLabel>
+                                </Box>
+                            )}
                         </Box>
 
-                        <Box
-                            className={kcClsx("kcFormGroupClass")}
-                            id="LoginUsername_Box_9"
-                            sx={styles.LoginUsername_Box_9}
-                        >
+                        <Box id="kc-form-buttons">
                             <TextField
                                 tabIndex={4}
                                 disabled={isLoginButtonDisabled}
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonBlockClass",
-                                    "kcButtonLargeClass"
-                                )}
                                 name="login"
+                                id="kc-login"
                                 type="submit"
                                 value={msgStr("doLogIn")}
-                                id="LoginUsername_TextField_3"
-                                sx={styles.LoginUsername_TextField_3}
                             />
                         </Box>
                     </Box>

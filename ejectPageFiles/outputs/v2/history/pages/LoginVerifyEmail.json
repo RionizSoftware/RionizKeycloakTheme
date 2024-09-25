@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginVerifyEmail_Template_1"
+      "LoginVerifyEmail_Template_1\""
     ],
     "historyStates": [
       {
@@ -23,8 +23,7 @@
   },
   {
     "tags": [
-      "LoginVerifyEmail_p_1",
-      "LoginVerifyEmail_Typography_1"
+      "LoginVerifyEmail_p_1\""
     ],
     "historyStates": [
       {
@@ -51,30 +50,12 @@
         "props": {
           "id": "id=\"LoginVerifyEmail_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginVerifyEmail_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginVerifyEmail_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginVerifyEmail_br_1"
+      "LoginVerifyEmail_br_1\""
     ],
     "historyStates": [
       {
@@ -89,8 +70,7 @@
   },
   {
     "tags": [
-      "LoginVerifyEmail_a_1",
-      "LoginVerifyEmail_Link_1"
+      "LoginVerifyEmail_a_1\""
     ],
     "historyStates": [
       {
@@ -110,33 +90,12 @@
           "id": "id=\"LoginVerifyEmail_a_1\"",
           "href": "href={url.loginAction}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginAction}",
-          "id": "LoginVerifyEmail_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginAction}",
-          "id": "LoginVerifyEmail_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginVerifyEmail_p_2",
-      "LoginVerifyEmail_Typography_2"
+      "LoginVerifyEmail_p_2\""
     ],
     "historyStates": [
       {
@@ -162,24 +121,6 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginVerifyEmail_p_2\""
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginVerifyEmail_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginVerifyEmail_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

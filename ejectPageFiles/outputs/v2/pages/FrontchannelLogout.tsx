@@ -42,19 +42,12 @@ export default function FrontchannelLogout(
             documentTitle={msgStr("frontchannel-logout.title")}
             headerNode={msg("frontchannel-logout.title")}
         >
-            <Typography
-                id="FrontchannelLogout_Typography_1"
-                sx={styles.FrontchannelLogout_Typography_1}
-            >
+            <Typography id="FrontchannelLogout_p_1">
                 {msg("frontchannel-logout.message")}
             </Typography>
-            <List id="FrontchannelLogout_List_1" sx={styles.FrontchannelLogout_List_1}>
+            <List id="FrontchannelLogout_ul_1">
                 {logout.clients.map(client => (
-                    <ListItem
-                        key={client.name}
-                        id="FrontchannelLogout_ListItem_1"
-                        sx={styles.FrontchannelLogout_ListItem_1}
-                    >
+                    <ListItem id="FrontchannelLogout_li_1" key={client.name}>
                         {client.name}
                         <iframe
                             id="FrontchannelLogout_iframe_1"
@@ -65,11 +58,7 @@ export default function FrontchannelLogout(
                 ))}
             </List>
             {logout.logoutRedirectUri && (
-                <Link
-                    href={logout.logoutRedirectUri}
-                    id="FrontchannelLogout_Link_1"
-                    sx={styles.FrontchannelLogout_Link_1}
-                >
+                <Link id="continue" href={logout.logoutRedirectUri}>
                     {msg("doContinue")}
                 </Link>
             )}

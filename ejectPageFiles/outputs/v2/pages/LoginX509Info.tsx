@@ -41,153 +41,61 @@ export default function LoginX509Info(
             headerNode={msg("doLogIn")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-x509-login-info"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="LoginX509Info_Box_1"
-                sx={styles.LoginX509Info_Box_1}
             >
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginX509Info_Box_2"
-                    sx={styles.LoginX509Info_Box_2}
-                >
-                    <Box
-                        className={kcClsx("kcLabelWrapperClass")}
-                        id="LoginX509Info_Box_3"
-                        sx={styles.LoginX509Info_Box_3}
-                    >
-                        <FormLabel
-                            htmlFor="certificate_subjectDN"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginX509Info_FormLabel_1"
-                            sx={styles.LoginX509Info_FormLabel_1}
-                        >
-                            {msg("clientCertificate")}
-                        </FormLabel>
-                    </Box>
+                <Box id="LoginX509Info_div_1">
+                    <FormLabel id="LoginX509Info_label_1" htmlFor="certificate_subjectDN">
+                        {msg("clientCertificate")}
+                    </FormLabel>
+
                     {x509.formData.subjectDN ? (
-                        <Box
-                            className={kcClsx("kcLabelWrapperClass")}
-                            id="LoginX509Info_Box_4"
-                            sx={styles.LoginX509Info_Box_4}
-                        >
-                            <FormLabel
-                                className={kcClsx("kcLabelClass")}
-                                id="LoginX509Info_FormLabel_2"
-                                sx={styles.LoginX509Info_FormLabel_2}
-                            >
+                        <Box id="LoginX509Info_div_3">
+                            <FormLabel id="certificate_subjectDN">
                                 {x509.formData.subjectDN}
                             </FormLabel>
                         </Box>
                     ) : (
-                        <Box
-                            className={kcClsx("kcLabelWrapperClass")}
-                            id="LoginX509Info_Box_5"
-                            sx={styles.LoginX509Info_Box_5}
-                        >
-                            <FormLabel
-                                className={kcClsx("kcLabelClass")}
-                                id="LoginX509Info_FormLabel_3"
-                                sx={styles.LoginX509Info_FormLabel_3}
-                            >
+                        <Box id="LoginX509Info_div_4">
+                            <FormLabel id="certificate_subjectDN">
                                 {msg("noCertificate")}
                             </FormLabel>
                         </Box>
                     )}
                 </Box>
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginX509Info_Box_6"
-                    sx={styles.LoginX509Info_Box_6}
-                >
+                <Box id="LoginX509Info_div_5">
                     {x509.formData.isUserEnabled && (
                         <>
-                            <Box
-                                className={kcClsx("kcLabelWrapperClass")}
-                                id="LoginX509Info_Box_7"
-                                sx={styles.LoginX509Info_Box_7}
-                            >
-                                <FormLabel
-                                    htmlFor="username"
-                                    className={kcClsx("kcLabelClass")}
-                                    id="LoginX509Info_FormLabel_4"
-                                    sx={styles.LoginX509Info_FormLabel_4}
-                                >
+                            <Box id="LoginX509Info_div_6">
+                                <FormLabel id="LoginX509Info_label_4" htmlFor="username">
                                     {msg("doX509Login")}
                                 </FormLabel>
                             </Box>
-                            <Box
-                                className={kcClsx("kcLabelWrapperClass")}
-                                id="LoginX509Info_Box_8"
-                                sx={styles.LoginX509Info_Box_8}
-                            >
-                                <FormLabel
-                                    className={kcClsx("kcLabelClass")}
-                                    id="LoginX509Info_FormLabel_5"
-                                    sx={styles.LoginX509Info_FormLabel_5}
-                                >
+                            <Box id="LoginX509Info_div_7">
+                                <FormLabel id="username">
                                     {x509.formData.username}
                                 </FormLabel>
                             </Box>
                         </>
                     )}
                 </Box>
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginX509Info_Box_9"
-                    sx={styles.LoginX509Info_Box_9}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="LoginX509Info_Box_10"
-                        sx={styles.LoginX509Info_Box_10}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginX509Info_Box_11"
-                            sx={styles.LoginX509Info_Box_11}
+                <Box id="LoginX509Info_div_8">
+                    <TextField
+                        name="login"
+                        id="kc-login"
+                        type="submit"
+                        value={msgStr("doContinue")}
+                    />
+                    {x509.formData.isUserEnabled && (
+                        <TextField
+                            name="cancel"
+                            id="kc-cancel"
+                            type="submit"
+                            value={msgStr("doIgnore")}
                         />
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginX509Info_Box_12"
-                        sx={styles.LoginX509Info_Box_12}
-                    >
-                        <Box
-                            className={kcClsx("kcFormButtonsWrapperClass")}
-                            id="LoginX509Info_Box_13"
-                            sx={styles.LoginX509Info_Box_13}
-                        >
-                            <TextField
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                name="login"
-                                type="submit"
-                                value={msgStr("doContinue")}
-                                id="LoginX509Info_TextField_1"
-                                sx={styles.LoginX509Info_TextField_1}
-                            />
-                            {x509.formData.isUserEnabled && (
-                                <TextField
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonDefaultClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="cancel"
-                                    type="submit"
-                                    value={msgStr("doIgnore")}
-                                    id="LoginX509Info_TextField_2"
-                                    sx={styles.LoginX509Info_TextField_2}
-                                />
-                            )}
-                        </Box>
-                    </Box>
+                    )}
                 </Box>
             </Box>
         </Template>

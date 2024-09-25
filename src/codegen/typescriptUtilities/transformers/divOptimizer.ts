@@ -49,8 +49,8 @@ export const divOptimizerTransformer: TransformerFunctions = {
                         optimizedChildren.push(...child.children);
                         TransformerHistory.addHistoryState(
                             HistoryOperationType.OptimizedAndRemoved,
-                            getAttributeValue(node, "id"),
-                            getTagName(node),
+                            getAttributeValue(child, "id"),
+                            getTagName(child),
                             child
                         );
                     } else {

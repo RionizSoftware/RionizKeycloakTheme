@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "Code_Template_1"
+      "Code_Template_1\""
     ],
     "historyStates": [
       {
@@ -21,8 +21,7 @@
   },
   {
     "tags": [
-      "kc-code",
-      "Code_Box_1"
+      "kc-code\""
     ],
     "historyStates": [
       {
@@ -40,31 +39,12 @@
         "props": {
           "id": "id=\"kc-code\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Code_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Code_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Code_p_1",
-      "Code_Typography_1"
+      "Code_p_1\""
     ],
     "historyStates": [
       {
@@ -82,31 +62,12 @@
         "props": {
           "id": "id=\"Code_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Code_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Code_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "code",
-      "Code_TextField_1"
+      "code\""
     ],
     "historyStates": [
       {
@@ -122,41 +83,26 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"code\"",
-          "className": "className={kcClsx(\"kcTextareaClass\")}",
           "defaultValue": "defaultValue={code.code}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcTextareaClass\")}",
-          "defaultValue": "defaultValue={code.code}",
-          "id": "Code_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcTextareaClass\")}",
-          "defaultValue": "defaultValue={code.code}",
-          "id": "Code_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"code\"",
+          "defaultValue": "defaultValue={code.code}"
         }
       }
     ]
   },
   {
     "tags": [
-      "error",
-      "Code_Typography_2"
+      "error\""
     ],
     "historyStates": [
       {
@@ -173,24 +119,6 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"error\""
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Code_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Code_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

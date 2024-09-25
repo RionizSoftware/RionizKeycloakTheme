@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_Template_1"
+      "LoginRecoveryAuthnCodeConfig_Template_1\""
     ],
     "historyStates": [
       {
@@ -21,8 +21,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_1",
-      "LoginRecoveryAuthnCodeConfig_Box_1"
+      "LoginRecoveryAuthnCodeConfig_div_1\""
     ],
     "historyStates": [
       {
@@ -38,41 +37,26 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_div_1\"",
-          "className": "className={clsx(\"pf-c-alert\", \"pf-m-warning\", \"pf-m-inline\", kcClsx(\"kcRecoveryCodesWarning\"))}",
           "aria-label": "aria-label=\"Warning alert\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={clsx(\"pf-c-alert\", \"pf-m-warning\", \"pf-m-inline\", kcClsx(\"kcRecoveryCodesWarning\"))}",
-          "aria-label": "aria-label=\"Warning alert\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(\"pf-c-alert\", \"pf-m-warning\", \"pf-m-inline\", kcClsx(\"kcRecoveryCodesWarning\"))}",
-          "aria-label": "aria-label=\"Warning alert\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_1\"",
+          "aria-label": "aria-label=\"Warning alert\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_2",
-      "LoginRecoveryAuthnCodeConfig_Box_2"
+      "LoginRecoveryAuthnCodeConfig_div_2\""
     ],
     "historyStates": [
       {
@@ -99,30 +83,12 @@
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_div_2\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_i_1"
+      "LoginRecoveryAuthnCodeConfig_i_1\""
     ],
     "historyStates": [
       {
@@ -148,7 +114,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_h4_1"
+      "LoginRecoveryAuthnCodeConfig_h4_1\""
     ],
     "historyStates": [
       {
@@ -172,7 +138,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_span_1"
+      "LoginRecoveryAuthnCodeConfig_span_1\""
     ],
     "historyStates": [
       {
@@ -196,8 +162,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_3",
-      "LoginRecoveryAuthnCodeConfig_Box_3"
+      "LoginRecoveryAuthnCodeConfig_div_3\""
     ],
     "historyStates": [
       {
@@ -224,31 +189,12 @@
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_div_3\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_p_1",
-      "LoginRecoveryAuthnCodeConfig_Typography_1"
+      "LoginRecoveryAuthnCodeConfig_p_1\""
     ],
     "historyStates": [
       {
@@ -266,30 +212,12 @@
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_ol_1"
+      "{olRecoveryCodesListId}"
     ],
     "historyStates": [
       {
@@ -297,16 +225,23 @@
         "currentIndex": "8",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_ol_1\"",
+          "id": "id={olRecoveryCodesListId}",
           "className": "className={kcClsx(\"kcRecoveryCodesList\")}"
+        }
+      },
+      {
+        "tag": "ol",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={olRecoveryCodesListId}"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_li_1",
-      "LoginRecoveryAuthnCodeConfig_ListItem_1"
+      "LoginRecoveryAuthnCodeConfig_li_1\""
     ],
     "historyStates": [
       {
@@ -326,32 +261,12 @@
           "id": "id=\"LoginRecoveryAuthnCodeConfig_li_1\"",
           "key": "key={index}"
         }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "key": "key={index}",
-          "id": "LoginRecoveryAuthnCodeConfig_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={index}",
-          "id": "LoginRecoveryAuthnCodeConfig_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_span_2"
+      "LoginRecoveryAuthnCodeConfig_span_2\""
     ],
     "historyStates": [
       {
@@ -366,8 +281,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_4",
-      "LoginRecoveryAuthnCodeConfig_Box_4"
+      "LoginRecoveryAuthnCodeConfig_div_4\""
     ],
     "historyStates": [
       {
@@ -382,38 +296,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\"",
-          "className": "className={kcClsx(\"kcRecoveryCodesActions\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcRecoveryCodesActions\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcRecoveryCodesActions\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\""
         }
       }
     ]
   },
   {
     "tags": [
-      "printRecoveryCodes",
-      "LoginRecoveryAuthnCodeConfig_Button_1"
+      "printRecoveryCodes\""
     ],
     "historyStates": [
       {
@@ -429,40 +329,26 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"printRecoveryCodes\"",
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
           "type": "type=\"button\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"printRecoveryCodes\"",
+          "type": "type=\"button\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_i_2"
+      "LoginRecoveryAuthnCodeConfig_i_2\""
     ],
     "historyStates": [
       {
@@ -488,8 +374,7 @@
   },
   {
     "tags": [
-      "downloadRecoveryCodes",
-      "LoginRecoveryAuthnCodeConfig_Button_2"
+      "downloadRecoveryCodes\""
     ],
     "historyStates": [
       {
@@ -505,40 +390,26 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"downloadRecoveryCodes\"",
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
           "type": "type=\"button\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"downloadRecoveryCodes\"",
+          "type": "type=\"button\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_i_3"
+      "LoginRecoveryAuthnCodeConfig_i_3\""
     ],
     "historyStates": [
       {
@@ -564,8 +435,7 @@
   },
   {
     "tags": [
-      "copyRecoveryCodes",
-      "LoginRecoveryAuthnCodeConfig_Button_3"
+      "copyRecoveryCodes\""
     ],
     "historyStates": [
       {
@@ -581,40 +451,26 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"copyRecoveryCodes\"",
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
           "type": "type=\"button\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
-          "type": "type=\"button\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"copyRecoveryCodes\"",
+          "type": "type=\"button\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_i_4"
+      "LoginRecoveryAuthnCodeConfig_i_4\""
     ],
     "historyStates": [
       {
@@ -640,8 +496,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_5",
-      "LoginRecoveryAuthnCodeConfig_Box_5"
+      "LoginRecoveryAuthnCodeConfig_div_5\""
     ],
     "historyStates": [
       {
@@ -656,38 +511,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\"",
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kcRecoveryCodesConfirmationCheck",
-      "LoginRecoveryAuthnCodeConfig_TextField_1"
+      "kcRecoveryCodesConfirmationCheck\""
     ],
     "historyStates": [
       {
@@ -705,9 +546,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcCheckInputClass\")}",
           "type": "type=\"checkbox\"",
           "id": "id=\"kcRecoveryCodesConfirmationCheck\"",
           "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
@@ -715,37 +555,21 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcCheckInputClass\")}",
           "type": "type=\"checkbox\"",
+          "id": "id=\"kcRecoveryCodesConfirmationCheck\"",
           "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
-          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcCheckInputClass\")}",
-          "type": "type=\"checkbox\"",
-          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
-          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_label_1",
-      "LoginRecoveryAuthnCodeConfig_FormLabel_1"
+      "LoginRecoveryAuthnCodeConfig_label_1\""
     ],
     "historyStates": [
       {
@@ -765,33 +589,12 @@
           "id": "id=\"LoginRecoveryAuthnCodeConfig_label_1\"",
           "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\""
         }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\"",
-          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\"",
-          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-recovery-codes-settings-form",
-      "LoginRecoveryAuthnCodeConfig_Box_6"
+      "kc-recovery-codes-settings-form\""
     ],
     "historyStates": [
       {
@@ -808,47 +611,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "id": "id=\"kc-recovery-codes-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "action": "action={kcContext.url.loginAction}",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "id=\"kc-recovery-codes-settings-form\"",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={kcContext.url.loginAction}",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={kcContext.url.loginAction}",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_input_2",
-      "LoginRecoveryAuthnCodeConfig_TextField_2"
+      "LoginRecoveryAuthnCodeConfig_input_2\""
     ],
     "historyStates": [
       {
@@ -872,37 +657,12 @@
           "name": "name=\"generatedRecoveryAuthnCodes\"",
           "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}"
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedRecoveryAuthnCodes\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedRecoveryAuthnCodes\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_input_3",
-      "LoginRecoveryAuthnCodeConfig_TextField_3"
+      "LoginRecoveryAuthnCodeConfig_input_3\""
     ],
     "historyStates": [
       {
@@ -926,37 +686,12 @@
           "name": "name=\"generatedAt\"",
           "value": "value={recoveryAuthnCodesConfigBean.generatedAt}"
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedAt\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedAt\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "userLabel",
-      "LoginRecoveryAuthnCodeConfig_TextField_4"
+      "userLabel\""
     ],
     "historyStates": [
       {
@@ -980,36 +715,12 @@
           "name": "name=\"userLabel\"",
           "value": "value={msgStr(\"recovery-codes-label-default\")}"
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userLabel\"",
-          "value": "value={msgStr(\"recovery-codes-label-default\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userLabel\"",
-          "value": "value={msgStr(\"recovery-codes-label-default\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1"
+      "LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1\""
     ],
     "historyStates": [
       {
@@ -1026,9 +737,7 @@
   },
   {
     "tags": [
-      "saveRecoveryAuthnCodesBtn",
-      "LoginRecoveryAuthnCodeConfig_TextField_5",
-      "LoginRecoveryAuthnCodeConfig_TextField_6"
+      "saveRecoveryAuthnCodesBtn\""
     ],
     "historyStates": [
       {
@@ -1046,10 +755,20 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
           "id": "id=\"saveRecoveryAuthnCodesBtn\"",
           "value": "value={msgStr(\"recovery-codes-action-complete\")}",
           "disabled": "disabled"
@@ -1061,70 +780,27 @@
         "operation": "TagReplaced",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "id": "id=\"saveRecoveryAuthnCodesBtn\"",
           "value": "value={msgStr(\"recovery-codes-action-complete\")}",
           "disabled": "disabled"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
           "value": "value={msgStr(\"recovery-codes-action-complete\")}",
-          "disabled": "disabled",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
-          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
-          "disabled": "disabled",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
-          "disabled": "disabled",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
-          "disabled": "disabled",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "disabled": "disabled"
         }
       }
     ]
   },
   {
     "tags": [
-      "cancelRecoveryAuthnCodesBtn",
-      "LoginRecoveryAuthnCodeConfig_Button_4"
+      "cancelRecoveryAuthnCodesBtn\""
     ],
     "historyStates": [
       {
@@ -1142,47 +818,30 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "id": "id=\"cancelRecoveryAuthnCodesBtn\"",
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"cancelRecoveryAuthnCodesBtn\"",
           "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "LoginRecoveryAuthnCodeConfig_Button_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value=\"true\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-options",
-      "LoginRecoveryAuthnCodeConfig_Box_7"
+      "kc-form-options\""
     ],
     "historyStates": [
       {
@@ -1197,38 +856,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"kc-form-options\"",
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-options\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_7",
-      "LoginRecoveryAuthnCodeConfig_Box_8"
+      "LoginRecoveryAuthnCodeConfig_div_7\""
     ],
     "historyStates": [
       {
@@ -1243,38 +888,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\"",
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_div_8",
-      "LoginRecoveryAuthnCodeConfig_Box_9"
+      "LoginRecoveryAuthnCodeConfig_div_8\""
     ],
     "historyStates": [
       {
@@ -1297,35 +928,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_div_8\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_label_2",
-      "LoginRecoveryAuthnCodeConfig_FormLabel_2"
+      "LoginRecoveryAuthnCodeConfig_label_2\""
     ],
     "historyStates": [
       {
@@ -1343,31 +955,12 @@
         "props": {
           "id": "id=\"LoginRecoveryAuthnCodeConfig_label_2\""
         }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "logout-sessions",
-      "LoginRecoveryAuthnCodeConfig_TextField_7"
+      "logout-sessions\""
     ],
     "historyStates": [
       {
@@ -1392,32 +985,6 @@
           "name": "name=\"logout-sessions\"",
           "value": "value=\"on\"",
           "defaultChecked": "defaultChecked={true}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"checkbox\"",
-          "name": "name=\"logout-sessions\"",
-          "value": "value=\"on\"",
-          "defaultChecked": "defaultChecked={true}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"checkbox\"",
-          "name": "name=\"logout-sessions\"",
-          "value": "value=\"on\"",
-          "defaultChecked": "defaultChecked={true}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

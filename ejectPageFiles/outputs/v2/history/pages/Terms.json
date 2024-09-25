@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "Terms_Template_1"
+      "Terms_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,8 +22,7 @@
   },
   {
     "tags": [
-      "kc-terms-text",
-      "Terms_Box_1"
+      "kc-terms-text\""
     ],
     "historyStates": [
       {
@@ -41,31 +40,12 @@
         "props": {
           "id": "id=\"kc-terms-text\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Terms_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Terms_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Terms_form_1",
-      "Terms_Box_2"
+      "Terms_form_1\""
     ],
     "historyStates": [
       {
@@ -99,37 +79,12 @@
           "method": "method=\"POST\"",
           "component": "form"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"POST\"",
-          "component": "component=\"form\"",
-          "id": "Terms_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"POST\"",
-          "component": "component=\"form\"",
-          "id": "Terms_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-accept",
-      "Terms_TextField_1"
+      "kc-accept\""
     ],
     "historyStates": [
       {
@@ -147,9 +102,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonClass\", \"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"accept\"",
           "id": "id=\"kc-accept\"",
           "type": "type=\"submit\"",
@@ -157,37 +111,21 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonClass\", \"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"accept\"",
+          "id": "id=\"kc-accept\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doAccept\")}",
-          "id": "Terms_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonClass\", \"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"accept\"",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doAccept\")}",
-          "id": "Terms_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doAccept\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-decline",
-      "Terms_TextField_2"
+      "kc-decline\""
     ],
     "historyStates": [
       {
@@ -205,9 +143,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"cancel\"",
           "id": "id=\"kc-decline\"",
           "type": "type=\"submit\"",
@@ -215,37 +152,21 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"cancel\"",
+          "id": "id=\"kc-decline\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doDecline\")}",
-          "id": "Terms_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"cancel\"",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doDecline\")}",
-          "id": "Terms_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doDecline\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "Terms_div_2",
-      "Terms_Box_3"
+      "Terms_div_2\""
     ],
     "historyStates": [
       {
@@ -268,30 +189,9 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "id": "id=\"Terms_div_2\"",
-          "className": "className=\"clearfix\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className=\"clearfix\"",
-          "id": "Terms_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className=\"clearfix\"",
-          "id": "Terms_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Terms_div_2\""
         }
       }
     ]

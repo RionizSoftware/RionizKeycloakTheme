@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginPageExpired_Template_1"
+      "LoginPageExpired_Template_1\""
     ],
     "historyStates": [
       {
@@ -21,8 +21,7 @@
   },
   {
     "tags": [
-      "instruction1",
-      "LoginPageExpired_Typography_1"
+      "instruction1\""
     ],
     "historyStates": [
       {
@@ -49,31 +48,12 @@
         "props": {
           "id": "id=\"instruction1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginPageExpired_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginPageExpired_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "loginRestartLink",
-      "LoginPageExpired_Link_1"
+      "loginRestartLink\""
     ],
     "historyStates": [
       {
@@ -93,32 +73,12 @@
           "id": "id=\"loginRestartLink\"",
           "href": "href={url.loginRestartFlowUrl}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "id": "LoginPageExpired_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "id": "LoginPageExpired_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginPageExpired_br_1"
+      "LoginPageExpired_br_1\""
     ],
     "historyStates": [
       {
@@ -133,8 +93,7 @@
   },
   {
     "tags": [
-      "loginContinueLink",
-      "LoginPageExpired_Link_2"
+      "loginContinueLink\""
     ],
     "historyStates": [
       {
@@ -153,26 +112,6 @@
         "props": {
           "id": "id=\"loginContinueLink\"",
           "href": "href={url.loginAction}"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginAction}",
-          "id": "LoginPageExpired_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginAction}",
-          "id": "LoginPageExpired_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

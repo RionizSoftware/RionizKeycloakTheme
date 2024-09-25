@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginIdpLinkConfirmOverride_Template_1"
+      "LoginIdpLinkConfirmOverride_Template_1\""
     ],
     "historyStates": [
       {
@@ -21,8 +21,7 @@
   },
   {
     "tags": [
-      "kc-register-form",
-      "LoginIdpLinkConfirmOverride_Box_1"
+      "kc-register-form\""
     ],
     "historyStates": [
       {
@@ -45,37 +44,12 @@
           "method": "method=\"post\"",
           "component": "form"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginIdpLinkConfirmOverride_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginIdpLinkConfirmOverride_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "loginRestartLink",
-      "LoginIdpLinkConfirmOverride_Link_1"
+      "loginRestartLink\""
     ],
     "historyStates": [
       {
@@ -95,32 +69,12 @@
           "id": "id=\"loginRestartLink\"",
           "href": "href={url.loginRestartFlowUrl}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "id": "LoginIdpLinkConfirmOverride_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "id": "LoginIdpLinkConfirmOverride_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginIdpLinkConfirmOverride_br_1"
+      "LoginIdpLinkConfirmOverride_br_1\""
     ],
     "historyStates": [
       {
@@ -135,7 +89,7 @@
   },
   {
     "tags": [
-      "LoginIdpLinkConfirmOverride_br_2"
+      "LoginIdpLinkConfirmOverride_br_2\""
     ],
     "historyStates": [
       {
@@ -150,8 +104,7 @@
   },
   {
     "tags": [
-      "confirmOverride",
-      "LoginIdpLinkConfirmOverride_Button_1"
+      "confirmOverride\""
     ],
     "historyStates": [
       {
@@ -169,39 +122,23 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"submitAction\"",
           "id": "id=\"confirmOverride\"",
           "value": "value=\"confirmOverride\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"submitAction\"",
-          "value": "value=\"confirmOverride\"",
-          "id": "LoginIdpLinkConfirmOverride_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"submitAction\"",
-          "value": "value=\"confirmOverride\"",
-          "id": "LoginIdpLinkConfirmOverride_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"confirmOverride\"",
+          "value": "value=\"confirmOverride\""
         }
       }
     ]

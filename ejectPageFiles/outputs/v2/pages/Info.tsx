@@ -51,9 +51,9 @@ export default function Info(
                 />
             }
         >
-            <Box id="Info_Box_1" sx={styles.Info_Box_1}>
+            <Box id="kc-info-message">
                 <Typography
-                    className="instruction"
+                    id="Info_p_1"
                     dangerouslySetInnerHTML={{
                         __html: (() => {
                             let html = message.summary;
@@ -69,8 +69,6 @@ export default function Info(
                             return html;
                         })()
                     }}
-                    id="Info_Typography_1"
-                    sx={styles.Info_Typography_1}
                 />
                 {(() => {
                     if (skipLink) {
@@ -78,15 +76,8 @@ export default function Info(
                     }
                     if (pageRedirectUri) {
                         return (
-                            <Typography
-                                id="Info_Typography_2"
-                                sx={styles.Info_Typography_2}
-                            >
-                                <Link
-                                    href={pageRedirectUri}
-                                    id="Info_Link_1"
-                                    sx={styles.Info_Link_1}
-                                >
+                            <Typography id="Info_p_2">
+                                <Link id="Info_a_1" href={pageRedirectUri}>
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>
@@ -94,15 +85,8 @@ export default function Info(
                     }
                     if (actionUri) {
                         return (
-                            <Typography
-                                id="Info_Typography_3"
-                                sx={styles.Info_Typography_3}
-                            >
-                                <Link
-                                    href={actionUri}
-                                    id="Info_Link_2"
-                                    sx={styles.Info_Link_2}
-                                >
+                            <Typography id="Info_p_3">
+                                <Link id="Info_a_2" href={actionUri}>
                                     {msg("proceedWithAction")}
                                 </Link>
                             </Typography>
@@ -110,15 +94,8 @@ export default function Info(
                     }
                     if (client.baseUrl) {
                         return (
-                            <Typography
-                                id="Info_Typography_4"
-                                sx={styles.Info_Typography_4}
-                            >
-                                <Link
-                                    href={client.baseUrl}
-                                    id="Info_Link_3"
-                                    sx={styles.Info_Link_3}
-                                >
+                            <Typography id="Info_p_4">
+                                <Link id="Info_a_3" href={client.baseUrl}>
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>

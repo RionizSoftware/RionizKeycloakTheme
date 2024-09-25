@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "WebauthnError_Template_1"
+      "WebauthnError_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,8 +22,7 @@
   },
   {
     "tags": [
-      "kc-error-credential-form",
-      "WebauthnError_Box_1"
+      "kc-error-credential-form\""
     ],
     "historyStates": [
       {
@@ -40,47 +39,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-error-credential-form\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-error-credential-form\"",
-          "className": "className={kcClsx(\"kcFormClass\")}",
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "WebauthnError_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "WebauthnError_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "executionValue",
-      "WebauthnError_TextField_1"
+      "executionValue\""
     ],
     "historyStates": [
       {
@@ -102,35 +83,12 @@
           "id": "id=\"executionValue\"",
           "name": "name=\"authenticationExecution\""
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticationExecution\"",
-          "id": "WebauthnError_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticationExecution\"",
-          "id": "WebauthnError_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "isSetRetry",
-      "WebauthnError_TextField_2"
+      "isSetRetry\""
     ],
     "historyStates": [
       {
@@ -152,35 +110,12 @@
           "id": "id=\"isSetRetry\"",
           "name": "name=\"isSetRetry\""
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"isSetRetry\"",
-          "id": "WebauthnError_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"isSetRetry\"",
-          "id": "WebauthnError_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-try-again",
-      "WebauthnError_TextField_3"
+      "kc-try-again\""
     ],
     "historyStates": [
       {
@@ -200,53 +135,34 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "tabIndex": "tabIndex={4}",
           "onClick": "onClick={() => {\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"isSetRetry\").value = \"retry\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"executionValue\").value = \"${execution}\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"kc-error-credential-form\").submit();\n        }}",
           "type": "type=\"button\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"try-again\"",
           "id": "id=\"kc-try-again\"",
           "value": "value={msgStr(\"doTryAgain\")}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "tabIndex": "tabIndex={4}",
           "onClick": "onClick={() => {\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"isSetRetry\").value = \"retry\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"executionValue\").value = \"${execution}\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"kc-error-credential-form\").submit();\n        }}",
           "type": "type=\"button\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"try-again\"",
-          "value": "value={msgStr(\"doTryAgain\")}",
-          "id": "WebauthnError_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "tabIndex": "tabIndex={4}",
-          "onClick": "onClick={() => {\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"isSetRetry\").value = \"retry\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"executionValue\").value = \"${execution}\";\n            // @ts-expect-error: Trusted Keycloak's code\n            document.getElementById(\"kc-error-credential-form\").submit();\n        }}",
-          "type": "type=\"button\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"try-again\"",
-          "value": "value={msgStr(\"doTryAgain\")}",
-          "id": "WebauthnError_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-try-again\"",
+          "value": "value={msgStr(\"doTryAgain\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-webauthn-settings-form",
-      "WebauthnError_Box_2"
+      "kc-webauthn-settings-form\""
     ],
     "historyStates": [
       {
@@ -263,47 +179,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "action": "action={url.loginAction}",
+          "id": "id=\"kc-webauthn-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "action": "action={url.loginAction}",
-          "className": "className={kcClsx(\"kcFormClass\")}",
           "id": "id=\"kc-webauthn-settings-form\"",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.loginAction}",
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "WebauthnError_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.loginAction}",
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "WebauthnError_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "cancelWebAuthnAIA",
-      "WebauthnError_Button_1"
+      "cancelWebAuthnAIA\""
     ],
     "historyStates": [
       {
@@ -321,39 +219,23 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "id": "id=\"cancelWebAuthnAIA\"",
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\""
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"cancelWebAuthnAIA\"",
           "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "WebauthnError_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"submit\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "WebauthnError_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value=\"true\""
         }
       }
     ]

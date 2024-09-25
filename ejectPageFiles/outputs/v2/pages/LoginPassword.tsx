@@ -45,8 +45,9 @@ export default function LoginPassword(
             headerNode={msg("doLogIn")}
             displayMessage={!messagesPerField.existsError("password")}
         >
-            <Box id="LoginPassword_Box_1" sx={styles.LoginPassword_Box_1}>
+            <Box id="kc-form">
                 <Box
+                    id="kc-form-login"
                     onSubmit={() => {
                         setIsLoginButtonDisabled(true);
                         return true;
@@ -54,21 +55,10 @@ export default function LoginPassword(
                     action={url.loginAction}
                     method="post"
                     component="form"
-                    id="LoginPassword_Box_2"
-                    sx={styles.LoginPassword_Box_2}
                 >
-                    <Box
-                        className={clsx(kcClsx("kcFormGroupClass"), "no-bottom-margin")}
-                        id="LoginPassword_Box_3"
-                        sx={styles.LoginPassword_Box_3}
-                    >
+                    <Box id="LoginPassword_div_3">
                         <hr id="LoginPassword_hr_1" />
-                        <FormLabel
-                            htmlFor="password"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginPassword_FormLabel_1"
-                            sx={styles.LoginPassword_FormLabel_1}
-                        >
+                        <FormLabel id="LoginPassword_label_1" htmlFor="password">
                             {msg("password")}
                         </FormLabel>
 
@@ -80,7 +70,7 @@ export default function LoginPassword(
                         >
                             <TextField
                                 tabIndex={2}
-                                className={kcClsx("kcInputClass")}
+                                id="password"
                                 name="password"
                                 type="password"
                                 autoFocus
@@ -89,15 +79,12 @@ export default function LoginPassword(
                                     "username",
                                     "password"
                                 )}
-                                id="LoginPassword_TextField_1"
-                                sx={styles.LoginPassword_TextField_1}
                             />
                         </PasswordWrapper>
 
                         {messagesPerField.existsError("password") && (
                             <span
                                 id="input-error-password"
-                                className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
                                     __html: messagesPerField.get("password")
@@ -105,49 +92,27 @@ export default function LoginPassword(
                             />
                         )}
                     </Box>
-                    <Box
-                        className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}
-                        id="LoginPassword_Box_4"
-                        sx={styles.LoginPassword_Box_4}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginPassword_Box_5"
-                            sx={styles.LoginPassword_Box_5}
-                        >
-                            {realm.resetPasswordAllowed && (
-                                <span id="LoginPassword_span_2">
-                                    <Link
-                                        tabIndex={5}
-                                        href={url.loginResetCredentialsUrl}
-                                        id="LoginPassword_Link_1"
-                                        sx={styles.LoginPassword_Link_1}
-                                    >
-                                        {msg("doForgotPassword")}
-                                    </Link>
-                                </span>
-                            )}
-                        </Box>
+                    <Box id="LoginPassword_div_4">
+                        {realm.resetPasswordAllowed && (
+                            <span id="LoginPassword_span_2">
+                                <Link
+                                    id="LoginPassword_a_1"
+                                    tabIndex={5}
+                                    href={url.loginResetCredentialsUrl}
+                                >
+                                    {msg("doForgotPassword")}
+                                </Link>
+                            </span>
+                        )}
                     </Box>
-                    <Box
-                        className={kcClsx("kcFormGroupClass")}
-                        id="LoginPassword_Box_6"
-                        sx={styles.LoginPassword_Box_6}
-                    >
+                    <Box id="kc-form-buttons">
                         <TextField
                             tabIndex={4}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
                             name="login"
+                            id="kc-login"
                             type="submit"
                             value={msgStr("doLogIn")}
                             disabled={isLoginButtonDisabled}
-                            id="LoginPassword_TextField_2"
-                            sx={styles.LoginPassword_TextField_2}
                         />
                     </Box>
                 </Box>

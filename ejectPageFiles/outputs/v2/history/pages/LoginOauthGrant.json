@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginOauthGrant_Template_1"
+      "LoginOauthGrant_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,7 +22,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_img_1"
+      "LoginOauthGrant_img_1\""
     ],
     "historyStates": [
       {
@@ -38,8 +38,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_p_1",
-      "LoginOauthGrant_Typography_1"
+      "LoginOauthGrant_p_1\""
     ],
     "historyStates": [
       {
@@ -57,31 +56,12 @@
         "props": {
           "id": "id=\"LoginOauthGrant_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-oauth",
-      "LoginOauthGrant_Box_1"
+      "kc-oauth\""
     ],
     "historyStates": [
       {
@@ -108,30 +88,12 @@
         "props": {
           "id": "id=\"kc-oauth\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_h3_1"
+      "LoginOauthGrant_h3_1\""
     ],
     "historyStates": [
       {
@@ -146,8 +108,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_ul_1",
-      "LoginOauthGrant_List_1"
+      "LoginOauthGrant_ul_1\""
     ],
     "historyStates": [
       {
@@ -165,31 +126,12 @@
         "props": {
           "id": "id=\"LoginOauthGrant_ul_1\""
         }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_li_1",
-      "LoginOauthGrant_ListItem_1"
+      "LoginOauthGrant_li_1\""
     ],
     "historyStates": [
       {
@@ -209,32 +151,12 @@
           "id": "id=\"LoginOauthGrant_li_1\"",
           "key": "key={clientScope.consentScreenText}"
         }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "key": "key={clientScope.consentScreenText}",
-          "id": "LoginOauthGrant_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={clientScope.consentScreenText}",
-          "id": "LoginOauthGrant_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_span_1"
+      "LoginOauthGrant_span_1\""
     ],
     "historyStates": [
       {
@@ -249,7 +171,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_b_1"
+      "LoginOauthGrant_b_1\""
     ],
     "historyStates": [
       {
@@ -264,7 +186,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_h3_2"
+      "LoginOauthGrant_h3_2\""
     ],
     "historyStates": [
       {
@@ -279,8 +201,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_a_1",
-      "LoginOauthGrant_Link_1"
+      "LoginOauthGrant_a_1\""
     ],
     "historyStates": [
       {
@@ -302,35 +223,12 @@
           "href": "href={client.attributes.tosUri}",
           "target": "target=\"_blank\""
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={client.attributes.tosUri}",
-          "target": "target=\"_blank\"",
-          "id": "LoginOauthGrant_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={client.attributes.tosUri}",
-          "target": "target=\"_blank\"",
-          "id": "LoginOauthGrant_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_a_2",
-      "LoginOauthGrant_Link_2"
+      "LoginOauthGrant_a_2\""
     ],
     "historyStates": [
       {
@@ -352,35 +250,12 @@
           "href": "href={client.attributes.policyUri}",
           "target": "target=\"_blank\""
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={client.attributes.policyUri}",
-          "target": "target=\"_blank\"",
-          "id": "LoginOauthGrant_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={client.attributes.policyUri}",
-          "target": "target=\"_blank\"",
-          "id": "LoginOauthGrant_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_form_1",
-      "LoginOauthGrant_Box_2"
+      "LoginOauthGrant_form_1\""
     ],
     "historyStates": [
       {
@@ -414,37 +289,12 @@
           "method": "method=\"POST\"",
           "component": "form"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.oauthAction}",
-          "method": "method=\"POST\"",
-          "component": "component=\"form\"",
-          "id": "LoginOauthGrant_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.oauthAction}",
-          "method": "method=\"POST\"",
-          "component": "component=\"form\"",
-          "id": "LoginOauthGrant_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_input_1",
-      "LoginOauthGrant_TextField_1"
+      "LoginOauthGrant_input_1\""
     ],
     "historyStates": [
       {
@@ -468,37 +318,12 @@
           "name": "name=\"code\"",
           "value": "value={oauth.code}"
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"code\"",
-          "value": "value={oauth.code}",
-          "id": "LoginOauthGrant_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"code\"",
-          "value": "value={oauth.code}",
-          "id": "LoginOauthGrant_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_div_2",
-      "LoginOauthGrant_Box_3"
+      "LoginOauthGrant_div_2\""
     ],
     "historyStates": [
       {
@@ -513,38 +338,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauthGrant_div_2\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOauthGrant_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOauthGrant_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOauthGrant_div_2\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-options",
-      "LoginOauthGrant_Box_4"
+      "kc-form-options\""
     ],
     "historyStates": [
       {
@@ -558,35 +369,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"kc-form-options\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_div_4",
-      "LoginOauthGrant_Box_5"
+      "LoginOauthGrant_div_4\""
     ],
     "historyStates": [
       {
@@ -601,38 +393,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginOauthGrant_div_4\"",
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+          "id": "id=\"LoginOauthGrant_div_4\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginOauthGrant_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginOauthGrant_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOauthGrant_div_4\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons",
-      "LoginOauthGrant_Box_6"
+      "kc-form-buttons\""
     ],
     "historyStates": [
       {
@@ -646,35 +424,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"kc-form-buttons\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_div_6",
-      "LoginOauthGrant_Box_7"
+      "LoginOauthGrant_div_6\""
     ],
     "historyStates": [
       {
@@ -689,38 +448,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginOauthGrant_div_6\"",
-          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}"
+          "id": "id=\"LoginOauthGrant_div_6\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}",
-          "id": "LoginOauthGrant_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}",
-          "id": "LoginOauthGrant_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOauthGrant_div_6\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-login",
-      "LoginOauthGrant_TextField_2"
+      "kc-login\""
     ],
     "historyStates": [
       {
@@ -738,9 +483,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"accept\"",
           "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
@@ -748,37 +492,21 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"accept\"",
+          "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doYes\")}",
-          "id": "LoginOauthGrant_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"accept\"",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doYes\")}",
-          "id": "LoginOauthGrant_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doYes\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-cancel",
-      "LoginOauthGrant_TextField_3"
+      "kc-cancel\""
     ],
     "historyStates": [
       {
@@ -796,9 +524,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"cancel\"",
           "id": "id=\"kc-cancel\"",
           "type": "type=\"submit\"",
@@ -806,37 +533,21 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"cancel\"",
+          "id": "id=\"kc-cancel\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doNo\")}",
-          "id": "LoginOauthGrant_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"cancel\"",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doNo\")}",
-          "id": "LoginOauthGrant_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doNo\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOauthGrant_div_7",
-      "LoginOauthGrant_Box_8"
+      "LoginOauthGrant_div_7\""
     ],
     "historyStates": [
       {
@@ -862,24 +573,6 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOauthGrant_div_7\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginOauthGrant_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginOauthGrant_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

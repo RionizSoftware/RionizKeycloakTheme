@@ -52,16 +52,12 @@ export default function WebauthnAuthenticate(
             classes={classes}
             displayInfo={realm.registrationAllowed && !registrationDisabled}
             infoNode={
-                <Box
-                    id="WebauthnAuthenticate_Box_1"
-                    sx={styles.WebauthnAuthenticate_Box_1}
-                >
+                <Box id="kc-registration">
                     {msg("noAccount")}{" "}
                     <Link
+                        id="WebauthnAuthenticate_a_1"
                         tabIndex={6}
                         href={url.registrationUrl}
-                        id="WebauthnAuthenticate_Link_1"
-                        sx={styles.WebauthnAuthenticate_Link_1}
                     >
                         {msg("doRegister")}
                     </Link>
@@ -69,75 +65,29 @@ export default function WebauthnAuthenticate(
             }
             headerNode={msg("webauthn-login-title")}
         >
-            <Box
-                className={kcClsx("kcFormClass")}
-                id="WebauthnAuthenticate_Box_2"
-                sx={styles.WebauthnAuthenticate_Box_2}
-            >
-                <Box
-                    action={url.loginAction}
-                    method="post"
-                    component="form"
-                    id="WebauthnAuthenticate_Box_3"
-                    sx={styles.WebauthnAuthenticate_Box_3}
-                >
+            <Box id="kc-form-webauthn">
+                <Box id="webauth" action={url.loginAction} method="post" component="form">
+                    <TextField type="hidden" id="clientDataJSON" name="clientDataJSON" />
                     <TextField
                         type="hidden"
-                        name="clientDataJSON"
-                        id="WebauthnAuthenticate_TextField_1"
-                        sx={styles.WebauthnAuthenticate_TextField_1}
-                    />
-                    <TextField
-                        type="hidden"
+                        id="authenticatorData"
                         name="authenticatorData"
-                        id="WebauthnAuthenticate_TextField_2"
-                        sx={styles.WebauthnAuthenticate_TextField_2}
                     />
-                    <TextField
-                        type="hidden"
-                        name="signature"
-                        id="WebauthnAuthenticate_TextField_3"
-                        sx={styles.WebauthnAuthenticate_TextField_3}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="credentialId"
-                        id="WebauthnAuthenticate_TextField_4"
-                        sx={styles.WebauthnAuthenticate_TextField_4}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="userHandle"
-                        id="WebauthnAuthenticate_TextField_5"
-                        sx={styles.WebauthnAuthenticate_TextField_5}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="error"
-                        id="WebauthnAuthenticate_TextField_6"
-                        sx={styles.WebauthnAuthenticate_TextField_6}
-                    />
+                    <TextField type="hidden" id="signature" name="signature" />
+                    <TextField type="hidden" id="credentialId" name="credentialId" />
+                    <TextField type="hidden" id="userHandle" name="userHandle" />
+                    <TextField type="hidden" id="error" name="error" />
                 </Box>
-                <Box
-                    className={clsx(kcClsx("kcFormGroupClass"), "no-bottom-margin")}
-                    id="WebauthnAuthenticate_Box_4"
-                    sx={styles.WebauthnAuthenticate_Box_4}
-                >
+                <Box id="WebauthnAuthenticate_div_3">
                     {authenticators && (
                         <>
-                            <Box
-                                className={kcClsx("kcFormClass")}
-                                component="form"
-                                id="WebauthnAuthenticate_Box_5"
-                                sx={styles.WebauthnAuthenticate_Box_5}
-                            >
+                            <Box id="authn_select" component="form">
                                 {authenticators.authenticators.map(authenticator => (
                                     <TextField
+                                        id="WebauthnAuthenticate_input_7"
                                         type="hidden"
                                         name="authn_use_chk"
                                         value={authenticator.credentialId}
-                                        id="WebauthnAuthenticate_TextField_7"
-                                        sx={styles.WebauthnAuthenticate_TextField_7}
                                     />
                                 ))}
                             </Box>
@@ -145,101 +95,28 @@ export default function WebauthnAuthenticate(
                             {shouldDisplayAuthenticators && (
                                 <>
                                     {authenticators.authenticators.length > 1 && (
-                                        <Typography
-                                            className={kcClsx(
-                                                "kcSelectAuthListItemTitle"
-                                            )}
-                                            id="WebauthnAuthenticate_Typography_1"
-                                            sx={styles.WebauthnAuthenticate_Typography_1}
-                                        >
+                                        <Typography id="WebauthnAuthenticate_p_1">
                                             {msg("webauthn-available-authenticators")}
                                         </Typography>
                                     )}
-                                    <Box
-                                        className={kcClsx("kcFormOptionsClass")}
-                                        id="WebauthnAuthenticate_Box_6"
-                                        sx={styles.WebauthnAuthenticate_Box_6}
-                                    >
+                                    <Box id="WebauthnAuthenticate_div_4">
                                         {authenticators.authenticators.map(
                                             (authenticator, i) => (
                                                 <Box
                                                     key={i}
-                                                    className={kcClsx(
-                                                        "kcSelectAuthListItemClass"
-                                                    )}
-                                                    id="WebauthnAuthenticate_Box_7"
-                                                    sx={styles.WebauthnAuthenticate_Box_7}
+                                                    id={`kc-webauthn-authenticator-item-${i}`}
                                                 >
-                                                    <Box
-                                                        className={kcClsx(
-                                                            "kcSelectAuthListItemIconClass"
-                                                        )}
-                                                        id="WebauthnAuthenticate_Box_8"
-                                                        sx={
-                                                            styles.WebauthnAuthenticate_Box_8
-                                                        }
-                                                    >
-                                                        <i
-                                                            id="WebauthnAuthenticate_i_1"
-                                                            className={clsx(
-                                                                (() => {
-                                                                    const className =
-                                                                        kcClsx(
-                                                                            authenticator
-                                                                                .transports
-                                                                                .iconClass as any
-                                                                        );
-                                                                    if (
-                                                                        className ===
-                                                                        authenticator
-                                                                            .transports
-                                                                            .iconClass
-                                                                    ) {
-                                                                        return kcClsx(
-                                                                            "kcWebAuthnDefaultIcon"
-                                                                        );
-                                                                    }
-                                                                    return className;
-                                                                })(),
-                                                                kcClsx(
-                                                                    "kcSelectAuthListItemIconPropertyClass"
-                                                                )
-                                                            )}
-                                                        />
+                                                    <Box id="WebauthnAuthenticate_div_6">
+                                                        <i id="WebauthnAuthenticate_i_1" />
                                                     </Box>
-                                                    <Box
-                                                        className={kcClsx(
-                                                            "kcSelectAuthListItemArrowIconClass"
-                                                        )}
-                                                        id="WebauthnAuthenticate_Box_9"
-                                                        sx={
-                                                            styles.WebauthnAuthenticate_Box_9
-                                                        }
-                                                    >
-                                                        <Box
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemHeadingClass"
-                                                            )}
-                                                            id="WebauthnAuthenticate_Box_10"
-                                                            sx={
-                                                                styles.WebauthnAuthenticate_Box_10
-                                                            }
-                                                        >
-                                                            {advancedMsg(
-                                                                authenticator.label
-                                                            )}
-                                                        </Box>
+                                                    <Box id="WebauthnAuthenticate_div_7">
+                                                        {advancedMsg(authenticator.label)}
+
                                                         {authenticator.transports
                                                             .displayNameProperties
                                                             ?.length && (
                                                             <Box
-                                                                className={kcClsx(
-                                                                    "kcSelectAuthListItemDescriptionClass"
-                                                                )}
-                                                                id="WebauthnAuthenticate_Box_11"
-                                                                sx={
-                                                                    styles.WebauthnAuthenticate_Box_11
-                                                                }
+                                                                id={`kc-webauthn-authenticator-transport-${i}`}
                                                             >
                                                                 {authenticator.transports.displayNameProperties
                                                                     .map(
@@ -261,12 +138,9 @@ export default function WebauthnAuthenticate(
                                                                             hasNext
                                                                         }) => (
                                                                             <Box
+                                                                                id="WebauthnAuthenticate_Fragment_1"
                                                                                 key={
                                                                                     displayNameProperty
-                                                                                }
-                                                                                id="WebauthnAuthenticate_Box_12"
-                                                                                sx={
-                                                                                    styles.WebauthnAuthenticate_Box_12
                                                                                 }
                                                                             >
                                                                                 {advancedMsg(
@@ -282,33 +156,10 @@ export default function WebauthnAuthenticate(
                                                                     )}
                                                             </Box>
                                                         )}
-                                                        <Box
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemDescriptionClass"
-                                                            )}
-                                                            id="WebauthnAuthenticate_Box_13"
-                                                            sx={
-                                                                styles.WebauthnAuthenticate_Box_13
-                                                            }
-                                                        >
-                                                            <span id="WebauthnAuthenticate_span_3">
-                                                                {msg(
-                                                                    "webauthn-createdAt-label"
-                                                                )}
-                                                            </span>
-                                                            <span id="WebauthnAuthenticate_span_4">
-                                                                {authenticator.createdAt}
-                                                            </span>
-                                                        </Box>
-                                                        <Box
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemFillClass"
-                                                            )}
-                                                            id="WebauthnAuthenticate_Box_14"
-                                                            sx={
-                                                                styles.WebauthnAuthenticate_Box_14
-                                                            }
-                                                        />
+
+                                                        {msg("webauthn-createdAt-label")}
+
+                                                        {authenticator.createdAt}
                                                     </Box>
                                                 </Box>
                                             )
@@ -318,25 +169,13 @@ export default function WebauthnAuthenticate(
                             )}
                         </>
                     )}
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="WebauthnAuthenticate_Box_15"
-                        sx={styles.WebauthnAuthenticate_Box_15}
-                    >
-                        <TextField
-                            type="button"
-                            autoFocus
-                            value={msgStr("webauthn-doAuthenticate")}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            id="WebauthnAuthenticate_TextField_8"
-                            sx={styles.WebauthnAuthenticate_TextField_8}
-                        />
-                    </Box>
+
+                    <TextField
+                        id={authButtonId}
+                        type="button"
+                        autoFocus
+                        value={msgStr("webauthn-doAuthenticate")}
+                    />
                 </Box>
             </Box>
         </Template>

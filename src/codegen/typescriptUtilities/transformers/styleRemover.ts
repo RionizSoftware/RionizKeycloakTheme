@@ -23,6 +23,7 @@ export const styleRemoverTransformer: TransformerFunctions = {
                 node,
                 newNode
             );
+            return newNode;
         }
         return node;
     },

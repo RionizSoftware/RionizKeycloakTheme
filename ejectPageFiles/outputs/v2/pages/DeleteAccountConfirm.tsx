@@ -41,82 +41,52 @@ export default function DeleteAccountConfirm(
             headerNode={msg("deleteAccountConfirm")}
         >
             <Box
+                id="DeleteAccountConfirm_form_1"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="DeleteAccountConfirm_Box_1"
-                sx={styles.DeleteAccountConfirm_Box_1}
             >
                 <Box
+                    id="DeleteAccountConfirm_div_1"
                     style={{ marginTop: "0", marginBottom: "30px" }}
-                    id="DeleteAccountConfirm_Box_2"
-                    sx={styles.DeleteAccountConfirm_Box_2}
                 >
                     <span id="DeleteAccountConfirm_span_1"></span>
                     {msg("irreversibleAction")}
                 </Box>
-                <Typography
-                    id="DeleteAccountConfirm_Typography_1"
-                    sx={styles.DeleteAccountConfirm_Typography_1}
-                >
+                <Typography id="DeleteAccountConfirm_p_1">
                     {msg("deletingImplies")}
                 </Typography>
                 <List
+                    id="DeleteAccountConfirm_ul_1"
                     style={{
                         color: "#72767b",
                         listStyle: "disc",
                         listStylePosition: "inside"
                     }}
-                    id="DeleteAccountConfirm_List_1"
-                    sx={styles.DeleteAccountConfirm_List_1}
                 >
-                    <ListItem
-                        id="DeleteAccountConfirm_ListItem_1"
-                        sx={styles.DeleteAccountConfirm_ListItem_1}
-                    >
+                    <ListItem id="DeleteAccountConfirm_li_1">
                         {msg("loggingOutImmediately")}
                     </ListItem>
-                    <ListItem
-                        id="DeleteAccountConfirm_ListItem_2"
-                        sx={styles.DeleteAccountConfirm_ListItem_2}
-                    >
+                    <ListItem id="DeleteAccountConfirm_li_2">
                         {msg("errasingData")}
                     </ListItem>
                 </List>
-                <Typography
-                    id="DeleteAccountConfirm_Typography_2"
-                    sx={styles.DeleteAccountConfirm_Typography_2}
-                >
+                <Typography id="DeleteAccountConfirm_p_2">
                     {msg("finalDeletionConfirmation")}
                 </Typography>
-                <Box
-                    id="DeleteAccountConfirm_Box_3"
-                    sx={styles.DeleteAccountConfirm_Box_3}
-                >
+                <Box id="kc-form-buttons">
                     <TextField
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonPrimaryClass",
-                            "kcButtonLargeClass"
-                        )}
+                        id="DeleteAccountConfirm_input_1"
                         type="submit"
                         value={msgStr("doConfirmDelete")}
-                        id="DeleteAccountConfirm_TextField_1"
-                        sx={styles.DeleteAccountConfirm_TextField_1}
                     />
                     {triggered_from_aia && (
                         <Button
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
+                            id="DeleteAccountConfirm_button_1"
                             style={{ marginLeft: "calc(100% - 220px)" }}
                             type="submit"
                             name="cancel-aia"
                             value="true"
-                            id="DeleteAccountConfirm_Button_1"
-                            sx={styles.DeleteAccountConfirm_Button_1}
                         >
                             {msgStr("doCancel")}
                         </Button>

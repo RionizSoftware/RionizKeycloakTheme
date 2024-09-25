@@ -57,12 +57,10 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
             headerNode={msg("loginIdpReviewProfileTitle")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-idp-review-profile-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="IdpReviewUserProfile_Box_1"
-                sx={styles.IdpReviewUserProfile_Box_1}
             >
                 <UserProfileFormFields
                     id="IdpReviewUserProfile_UserProfileFormFields_1"
@@ -72,41 +70,13 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                     kcClsx={kcClsx}
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="IdpReviewUserProfile_Box_2"
-                    sx={styles.IdpReviewUserProfile_Box_2}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="IdpReviewUserProfile_Box_3"
-                        sx={styles.IdpReviewUserProfile_Box_3}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="IdpReviewUserProfile_Box_4"
-                            sx={styles.IdpReviewUserProfile_Box_4}
-                        />
-                    </Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="IdpReviewUserProfile_Box_5"
-                        sx={styles.IdpReviewUserProfile_Box_5}
-                    >
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            type="submit"
-                            value={msgStr("doSubmit")}
-                            disabled={!isFomSubmittable}
-                            id="IdpReviewUserProfile_TextField_1"
-                            sx={styles.IdpReviewUserProfile_TextField_1}
-                        />
-                    </Box>
+                <Box id="IdpReviewUserProfile_div_1">
+                    <TextField
+                        id="IdpReviewUserProfile_input_1"
+                        type="submit"
+                        value={msgStr("doSubmit")}
+                        disabled={!isFomSubmittable}
+                    />
                 </Box>
             </Box>
         </Template>

@@ -57,12 +57,10 @@ export default function UpdateEmail(props: UpdateEmailProps) {
             headerNode={msg("updateEmailTitle")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-update-email-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="UpdateEmail_Box_1"
-                sx={styles.UpdateEmail_Box_1}
             >
                 <UserProfileFormFields
                     id="UpdateEmail_UserProfileFormFields_1"
@@ -73,64 +71,29 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
 
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="UpdateEmail_Box_2"
-                    sx={styles.UpdateEmail_Box_2}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="UpdateEmail_Box_3"
-                        sx={styles.UpdateEmail_Box_3}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="UpdateEmail_Box_4"
-                            sx={styles.UpdateEmail_Box_4}
-                        />
-                    </Box>
-
+                <Box id="UpdateEmail_div_1">
                     <LogoutOtherSessions
                         id="UpdateEmail_LogoutOtherSessions_1"
                         kcClsx={kcClsx}
                         i18n={i18n}
                     />
 
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="UpdateEmail_Box_5"
-                        sx={styles.UpdateEmail_Box_5}
-                    >
-                        <TextField
-                            disabled={!isFormSubmittable}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                isAppInitiatedAction && "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+                    <TextField
+                        id="UpdateEmail_input_1"
+                        disabled={!isFormSubmittable}
+                        type="submit"
+                        value={msgStr("doSubmit")}
+                    />
+                    {isAppInitiatedAction && (
+                        <Button
+                            id="UpdateEmail_button_1"
                             type="submit"
-                            value={msgStr("doSubmit")}
-                            id="UpdateEmail_TextField_1"
-                            sx={styles.UpdateEmail_TextField_1}
-                        />
-                        {isAppInitiatedAction && (
-                            <Button
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                name="cancel-aia"
-                                value="true"
-                                id="UpdateEmail_Button_1"
-                                sx={styles.UpdateEmail_Button_1}
-                            >
-                                {msg("doCancel")}
-                            </Button>
-                        )}
-                    </Box>
+                            name="cancel-aia"
+                            value="true"
+                        >
+                            {msg("doCancel")}
+                        </Button>
+                    )}
                 </Box>
             </Box>
         </Template>
@@ -140,33 +103,17 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
-        <Box
-            className={kcClsx("kcFormOptionsClass")}
-            id="UpdateEmail_Box_6"
-            sx={styles.UpdateEmail_Box_6}
-        >
-            <Box
-                className={kcClsx("kcFormOptionsWrapperClass")}
-                id="UpdateEmail_Box_7"
-                sx={styles.UpdateEmail_Box_7}
-            >
-                <Box id="UpdateEmail_Box_8" sx={styles.UpdateEmail_Box_8}>
-                    <FormLabel
-                        id="UpdateEmail_FormLabel_1"
-                        sx={styles.UpdateEmail_FormLabel_1}
-                    >
-                        <TextField
-                            type="checkbox"
-                            name="logout-sessions"
-                            value="on"
-                            defaultChecked={true}
-                            id="UpdateEmail_TextField_2"
-                            sx={styles.UpdateEmail_TextField_2}
-                        />
-                        {msg("logoutOtherSessions")}
-                    </FormLabel>
-                </Box>
-            </Box>
+        <Box id="kc-form-options">
+            <FormLabel id="UpdateEmail_label_1">
+                <TextField
+                    type="checkbox"
+                    id="logout-sessions"
+                    name="logout-sessions"
+                    value="on"
+                    defaultChecked={true}
+                />
+                {msg("logoutOtherSessions")}
+            </FormLabel>
         </Box>
     );
 }

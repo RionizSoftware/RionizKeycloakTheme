@@ -41,90 +41,36 @@ export default function LoginOauth2DeviceVerifyUserCode(
             headerNode={msg("oauth2DeviceVerificationTitle")}
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-user-verify-device-user-code-form"
                 action={url.oauth2DeviceVerificationAction}
                 method="post"
                 component="form"
-                id="LoginOauth2DeviceVerifyUserCode_Box_1"
-                sx={styles.LoginOauth2DeviceVerifyUserCode_Box_1}
             >
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginOauth2DeviceVerifyUserCode_Box_2"
-                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_2}
-                >
-                    <Box
-                        className={kcClsx("kcLabelWrapperClass")}
-                        id="LoginOauth2DeviceVerifyUserCode_Box_3"
-                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_3}
+                <Box id="LoginOauth2DeviceVerifyUserCode_div_1">
+                    <FormLabel
+                        id="LoginOauth2DeviceVerifyUserCode_label_1"
+                        htmlFor="device-user-code"
                     >
-                        <FormLabel
-                            htmlFor="device-user-code"
-                            className={kcClsx("kcLabelClass")}
-                            id="LoginOauth2DeviceVerifyUserCode_FormLabel_1"
-                            sx={styles.LoginOauth2DeviceVerifyUserCode_FormLabel_1}
-                        >
-                            {msg("verifyOAuth2DeviceUserCode")}
-                        </FormLabel>
-                    </Box>
+                        {msg("verifyOAuth2DeviceUserCode")}
+                    </FormLabel>
 
-                    <Box
-                        className={kcClsx("kcInputWrapperClass")}
-                        id="LoginOauth2DeviceVerifyUserCode_Box_4"
-                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_4}
-                    >
+                    <Box id="LoginOauth2DeviceVerifyUserCode_div_3">
                         <TextField
+                            id="device-user-code"
                             name="device_user_code"
                             autoComplete="off"
                             type="text"
-                            className={kcClsx("kcInputClass")}
                             autoFocus
-                            id="LoginOauth2DeviceVerifyUserCode_TextField_1"
-                            sx={styles.LoginOauth2DeviceVerifyUserCode_TextField_1}
                         />
                     </Box>
                 </Box>
 
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="LoginOauth2DeviceVerifyUserCode_Box_5"
-                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_5}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="LoginOauth2DeviceVerifyUserCode_Box_6"
-                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_6}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="LoginOauth2DeviceVerifyUserCode_Box_7"
-                            sx={styles.LoginOauth2DeviceVerifyUserCode_Box_7}
-                        ></Box>
-                    </Box>
-
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
-                        id="LoginOauth2DeviceVerifyUserCode_Box_8"
-                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_8}
-                    >
-                        <Box
-                            className={kcClsx("kcFormButtonsWrapperClass")}
-                            id="LoginOauth2DeviceVerifyUserCode_Box_9"
-                            sx={styles.LoginOauth2DeviceVerifyUserCode_Box_9}
-                        >
-                            <TextField
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                value={msgStr("doSubmit")}
-                                id="LoginOauth2DeviceVerifyUserCode_TextField_2"
-                                sx={styles.LoginOauth2DeviceVerifyUserCode_TextField_2}
-                            />
-                        </Box>
-                    </Box>
+                <Box id="LoginOauth2DeviceVerifyUserCode_div_4">
+                    <TextField
+                        id="LoginOauth2DeviceVerifyUserCode_input_2"
+                        type="submit"
+                        value={msgStr("doSubmit")}
+                    />
                 </Box>
             </Box>
         </Template>

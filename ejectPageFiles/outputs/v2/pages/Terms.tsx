@@ -41,44 +41,26 @@ export default function Terms(
             displayMessage={false}
             headerNode={msg("termsTitle")}
         >
-            <Box id="Terms_Box_1" sx={styles.Terms_Box_1}>
-                {msg("termsText")}
-            </Box>
+            <Box id="kc-terms-text">{msg("termsText")}</Box>
             <Box
+                id="Terms_form_1"
                 action={url.loginAction}
                 method="POST"
                 component="form"
-                id="Terms_Box_2"
-                sx={styles.Terms_Box_2}
             >
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonClass",
-                        "kcButtonClass",
-                        "kcButtonPrimaryClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="accept"
+                    id="kc-accept"
                     type="submit"
                     value={msgStr("doAccept")}
-                    id="Terms_TextField_1"
-                    sx={styles.Terms_TextField_1}
                 />
                 <TextField
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="cancel"
+                    id="kc-decline"
                     type="submit"
                     value={msgStr("doDecline")}
-                    id="Terms_TextField_2"
-                    sx={styles.Terms_TextField_2}
                 />
             </Box>
-            <Box className="clearfix" id="Terms_Box_3" sx={styles.Terms_Box_3} />
         </Template>
     );
 }

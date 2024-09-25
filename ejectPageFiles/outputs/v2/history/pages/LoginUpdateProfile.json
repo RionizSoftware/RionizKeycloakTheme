@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginUpdateProfile_Template_1"
+      "LoginUpdateProfile_Template_1\""
     ],
     "historyStates": [
       {
@@ -23,8 +23,7 @@
   },
   {
     "tags": [
-      "kc-update-profile-form",
-      "LoginUpdateProfile_Box_1"
+      "kc-update-profile-form\""
     ],
     "historyStates": [
       {
@@ -41,46 +40,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-update-profile-form\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-update-profile-form\"",
-          "className": "className={kcClsx(\"kcFormClass\")}",
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginUpdateProfile_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginUpdateProfile_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginUpdateProfile_UserProfileFormFields_1"
+      "LoginUpdateProfile_UserProfileFormFields_1\""
     ],
     "historyStates": [
       {
@@ -100,8 +82,7 @@
   },
   {
     "tags": [
-      "LoginUpdateProfile_div_1",
-      "LoginUpdateProfile_Box_2"
+      "LoginUpdateProfile_div_1\""
     ],
     "historyStates": [
       {
@@ -116,38 +97,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginUpdateProfile_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginUpdateProfile_div_1\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginUpdateProfile_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginUpdateProfile_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginUpdateProfile_div_1\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-options",
-      "LoginUpdateProfile_Box_3"
+      "kc-form-options\""
     ],
     "historyStates": [
       {
@@ -162,38 +129,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-options\"",
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+          "id": "id=\"kc-form-options\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginUpdateProfile_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginUpdateProfile_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-options\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginUpdateProfile_div_3",
-      "LoginUpdateProfile_Box_4"
+      "LoginUpdateProfile_div_3\""
     ],
     "historyStates": [
       {
@@ -208,38 +161,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginUpdateProfile_div_3\"",
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+          "id": "id=\"LoginUpdateProfile_div_3\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginUpdateProfile_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginUpdateProfile_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginUpdateProfile_div_3\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons",
-      "LoginUpdateProfile_Box_5"
+      "kc-form-buttons\""
     ],
     "historyStates": [
       {
@@ -254,38 +193,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-buttons\"",
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}"
+          "id": "id=\"kc-form-buttons\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginUpdateProfile_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginUpdateProfile_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-buttons\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginUpdateProfile_input_1",
-      "LoginUpdateProfile_TextField_1"
+      "LoginUpdateProfile_input_1\""
     ],
     "historyStates": [
       {
@@ -303,47 +228,30 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginUpdateProfile_input_1\"",
           "disabled": "disabled={!isFormSubmittable}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", !isAppInitiatedAction && \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doSubmit\")}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
+          "id": "id=\"LoginUpdateProfile_input_1\"",
           "disabled": "disabled={!isFormSubmittable}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", !isAppInitiatedAction && \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doSubmit\")}",
-          "id": "LoginUpdateProfile_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "disabled": "disabled={!isFormSubmittable}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", !isAppInitiatedAction && \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doSubmit\")}",
-          "id": "LoginUpdateProfile_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doSubmit\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginUpdateProfile_button_1",
-      "LoginUpdateProfile_Button_1"
+      "LoginUpdateProfile_button_1\""
     ],
     "historyStates": [
       {
@@ -362,10 +270,9 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginUpdateProfile_button_1\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\"",
@@ -373,31 +280,15 @@
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"LoginUpdateProfile_button_1\"",
           "type": "type=\"submit\"",
           "name": "name=\"cancel-aia\"",
           "value": "value=\"true\"",
-          "formNoValidate": "formNoValidate",
-          "id": "LoginUpdateProfile_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
-          "type": "type=\"submit\"",
-          "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "formNoValidate": "formNoValidate",
-          "id": "LoginUpdateProfile_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "formNoValidate": "formNoValidate"
         }
       }
     ]

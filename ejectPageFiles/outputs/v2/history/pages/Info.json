@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "Info_Template_1"
+      "Info_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,7 +22,7 @@
   },
   {
     "tags": [
-      "Info_span_1"
+      "Info_span_1\""
     ],
     "historyStates": [
       {
@@ -38,8 +38,7 @@
   },
   {
     "tags": [
-      "kc-info-message",
-      "Info_Box_1"
+      "kc-info-message\""
     ],
     "historyStates": [
       {
@@ -57,31 +56,12 @@
         "props": {
           "id": "id=\"kc-info-message\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Info_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Info_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_p_1",
-      "Info_Typography_1"
+      "Info_p_1\""
     ],
     "historyStates": [
       {
@@ -109,38 +89,14 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Info_p_1\"",
-          "className": "className=\"instruction\"",
           "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className=\"instruction\"",
-          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}",
-          "id": "Info_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className=\"instruction\"",
-          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}",
-          "id": "Info_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "Info_p_2",
-      "Info_Typography_2"
+      "Info_p_2\""
     ],
     "historyStates": [
       {
@@ -158,31 +114,12 @@
         "props": {
           "id": "id=\"Info_p_2\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Info_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Info_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_a_1",
-      "Info_Link_1"
+      "Info_a_1\""
     ],
     "historyStates": [
       {
@@ -202,33 +139,12 @@
           "id": "id=\"Info_a_1\"",
           "href": "href={pageRedirectUri}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={pageRedirectUri}",
-          "id": "Info_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={pageRedirectUri}",
-          "id": "Info_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_p_3",
-      "Info_Typography_3"
+      "Info_p_3\""
     ],
     "historyStates": [
       {
@@ -246,31 +162,12 @@
         "props": {
           "id": "id=\"Info_p_3\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Info_Typography_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Info_Typography_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_a_2",
-      "Info_Link_2"
+      "Info_a_2\""
     ],
     "historyStates": [
       {
@@ -290,33 +187,12 @@
           "id": "id=\"Info_a_2\"",
           "href": "href={actionUri}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={actionUri}",
-          "id": "Info_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={actionUri}",
-          "id": "Info_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_p_4",
-      "Info_Typography_4"
+      "Info_p_4\""
     ],
     "historyStates": [
       {
@@ -334,31 +210,12 @@
         "props": {
           "id": "id=\"Info_p_4\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Info_Typography_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Info_Typography_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Info_a_3",
-      "Info_Link_3"
+      "Info_a_3\""
     ],
     "historyStates": [
       {
@@ -377,26 +234,6 @@
         "props": {
           "id": "id=\"Info_a_3\"",
           "href": "href={client.baseUrl}"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={client.baseUrl}",
-          "id": "Info_Link_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={client.baseUrl}",
-          "id": "Info_Link_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

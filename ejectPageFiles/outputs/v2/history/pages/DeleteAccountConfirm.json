@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "DeleteAccountConfirm_Template_1"
+      "DeleteAccountConfirm_Template_1\""
     ],
     "historyStates": [
       {
@@ -21,8 +21,7 @@
   },
   {
     "tags": [
-      "DeleteAccountConfirm_form_1",
-      "DeleteAccountConfirm_Box_1"
+      "DeleteAccountConfirm_form_1\""
     ],
     "historyStates": [
       {
@@ -56,37 +55,12 @@
           "method": "method=\"post\"",
           "component": "form"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "DeleteAccountConfirm_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "DeleteAccountConfirm_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_div_1",
-      "DeleteAccountConfirm_Box_2"
+      "DeleteAccountConfirm_div_1\""
     ],
     "historyStates": [
       {
@@ -116,32 +90,12 @@
           "id": "id=\"DeleteAccountConfirm_div_1\"",
           "style": "style={{ marginTop: \"0\", marginBottom: \"30px\" }}"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "style": "style={{ marginTop: \"0\", marginBottom: \"30px\" }}",
-          "id": "DeleteAccountConfirm_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "style": "style={{ marginTop: \"0\", marginBottom: \"30px\" }}",
-          "id": "DeleteAccountConfirm_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_span_1"
+      "DeleteAccountConfirm_span_1\""
     ],
     "historyStates": [
       {
@@ -165,8 +119,7 @@
   },
   {
     "tags": [
-      "DeleteAccountConfirm_p_1",
-      "DeleteAccountConfirm_Typography_1"
+      "DeleteAccountConfirm_p_1\""
     ],
     "historyStates": [
       {
@@ -184,31 +137,12 @@
         "props": {
           "id": "id=\"DeleteAccountConfirm_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "DeleteAccountConfirm_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "DeleteAccountConfirm_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_ul_1",
-      "DeleteAccountConfirm_List_1"
+      "DeleteAccountConfirm_ul_1\""
     ],
     "historyStates": [
       {
@@ -228,33 +162,12 @@
           "id": "id=\"DeleteAccountConfirm_ul_1\"",
           "style": "style={{\n            color: \"#72767b\",\n            listStyle: \"disc\",\n            listStylePosition: \"inside\"\n        }}"
         }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "style": "style={{\n            color: \"#72767b\",\n            listStyle: \"disc\",\n            listStylePosition: \"inside\"\n        }}",
-          "id": "DeleteAccountConfirm_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "style": "style={{\n            color: \"#72767b\",\n            listStyle: \"disc\",\n            listStylePosition: \"inside\"\n        }}",
-          "id": "DeleteAccountConfirm_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_li_1",
-      "DeleteAccountConfirm_ListItem_1"
+      "DeleteAccountConfirm_li_1\""
     ],
     "historyStates": [
       {
@@ -272,31 +185,12 @@
         "props": {
           "id": "id=\"DeleteAccountConfirm_li_1\""
         }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "DeleteAccountConfirm_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "DeleteAccountConfirm_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_li_2",
-      "DeleteAccountConfirm_ListItem_2"
+      "DeleteAccountConfirm_li_2\""
     ],
     "historyStates": [
       {
@@ -314,31 +208,12 @@
         "props": {
           "id": "id=\"DeleteAccountConfirm_li_2\""
         }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "DeleteAccountConfirm_ListItem_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "DeleteAccountConfirm_ListItem_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_p_2",
-      "DeleteAccountConfirm_Typography_2"
+      "DeleteAccountConfirm_p_2\""
     ],
     "historyStates": [
       {
@@ -365,31 +240,12 @@
         "props": {
           "id": "id=\"DeleteAccountConfirm_p_2\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "DeleteAccountConfirm_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "DeleteAccountConfirm_Typography_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons",
-      "DeleteAccountConfirm_Box_3"
+      "kc-form-buttons\""
     ],
     "historyStates": [
       {
@@ -407,31 +263,12 @@
         "props": {
           "id": "id=\"kc-form-buttons\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "DeleteAccountConfirm_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "DeleteAccountConfirm_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_input_1",
-      "DeleteAccountConfirm_TextField_1"
+      "DeleteAccountConfirm_input_1\""
     ],
     "historyStates": [
       {
@@ -448,44 +285,28 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"DeleteAccountConfirm_input_1\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doConfirmDelete\")}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"DeleteAccountConfirm_input_1\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doConfirmDelete\")}",
-          "id": "DeleteAccountConfirm_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doConfirmDelete\")}",
-          "id": "DeleteAccountConfirm_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doConfirmDelete\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "DeleteAccountConfirm_button_1",
-      "DeleteAccountConfirm_Button_1"
+      "DeleteAccountConfirm_button_1\""
     ],
     "historyStates": [
       {
@@ -504,10 +325,9 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"DeleteAccountConfirm_button_1\"",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
           "style": "style={{ marginLeft: \"calc(100% - 220px)\" }}",
           "type": "type=\"submit\"",
           "name": "name=\"cancel-aia\"",
@@ -515,31 +335,15 @@
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"DeleteAccountConfirm_button_1\"",
           "style": "style={{ marginLeft: \"calc(100% - 220px)\" }}",
           "type": "type=\"submit\"",
           "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "DeleteAccountConfirm_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
-          "style": "style={{ marginLeft: \"calc(100% - 220px)\" }}",
-          "type": "type=\"submit\"",
-          "name": "name=\"cancel-aia\"",
-          "value": "value=\"true\"",
-          "id": "DeleteAccountConfirm_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value=\"true\""
         }
       }
     ]

@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "Register_Template_1"
+      "Register_Template_1\""
     ],
     "historyStates": [
       {
@@ -23,8 +23,7 @@
   },
   {
     "tags": [
-      "kc-register-form",
-      "Register_Box_1"
+      "kc-register-form\""
     ],
     "historyStates": [
       {
@@ -41,46 +40,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-register-form\"",
+          "action": "action={url.registrationAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-register-form\"",
-          "className": "className={kcClsx(\"kcFormClass\")}",
           "action": "action={url.registrationAction}",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.registrationAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "Register_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.registrationAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "Register_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_UserProfileFormFields_1"
+      "Register_UserProfileFormFields_1\""
     ],
     "historyStates": [
       {
@@ -100,7 +82,7 @@
   },
   {
     "tags": [
-      "Register_TermsAcceptance_1"
+      "Register_TermsAcceptance_1\""
     ],
     "historyStates": [
       {
@@ -120,8 +102,7 @@
   },
   {
     "tags": [
-      "Register_div_1",
-      "Register_Box_2"
+      "Register_div_1\""
     ],
     "historyStates": [
       {
@@ -148,31 +129,12 @@
         "props": {
           "id": "id=\"Register_div_1\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Register_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Register_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_2",
-      "Register_Box_3"
+      "Register_div_2\""
     ],
     "historyStates": [
       {
@@ -187,38 +149,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Register_div_2\"",
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+          "id": "id=\"Register_div_2\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "Register_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "Register_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_2\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_3",
-      "Register_Box_4"
+      "Register_div_3\""
     ],
     "historyStates": [
       {
@@ -254,37 +202,12 @@
           "data-sitekey": "data-sitekey={recaptchaSiteKey}",
           "data-action": "data-action={recaptchaAction}"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "data-size": "data-size=\"compact\"",
-          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
-          "data-action": "data-action={recaptchaAction}",
-          "id": "Register_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "data-size": "data-size=\"compact\"",
-          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
-          "data-action": "data-action={recaptchaAction}",
-          "id": "Register_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_4",
-      "Register_Box_5"
+      "Register_div_4\""
     ],
     "historyStates": [
       {
@@ -299,38 +222,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Register_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Register_div_4\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Register_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Register_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_4\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-options",
-      "Register_Box_6"
+      "kc-form-options\""
     ],
     "historyStates": [
       {
@@ -345,38 +254,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-options\"",
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+          "id": "id=\"kc-form-options\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "Register_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "Register_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-options\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_6",
-      "Register_Box_7"
+      "Register_div_6\""
     ],
     "historyStates": [
       {
@@ -391,37 +286,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Register_div_6\"",
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+          "id": "id=\"Register_div_6\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "Register_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "Register_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_6\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_span_1"
+      "Register_span_1\""
     ],
     "historyStates": [
       {
@@ -431,13 +313,20 @@
         "props": {
           "id": "id=\"Register_span_1\""
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"Register_span_1\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Register_a_1",
-      "Register_Link_1"
+      "Register_a_1\""
     ],
     "historyStates": [
       {
@@ -457,34 +346,12 @@
           "id": "id=\"Register_a_1\"",
           "href": "href={url.loginUrl}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginUrl}",
-          "id": "Register_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginUrl}",
-          "id": "Register_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons",
-      "Register_Box_8",
-      "Register_Box_9"
+      "kc-form-buttons\""
     ],
     "historyStates": [
       {
@@ -499,10 +366,17 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-buttons\"",
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}"
+          "id": "id=\"kc-form-buttons\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-buttons\""
         }
       },
       {
@@ -510,56 +384,22 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"kc-form-buttons\"",
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}"
+          "id": "id=\"kc-form-buttons\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "Register_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "Register_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "Register_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "Register_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-buttons\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_button_1",
-      "Register_Button_1"
+      "Register_button_1\""
     ],
     "historyStates": [
       {
@@ -578,10 +418,9 @@
       {
         "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Register_button_1\"",
-          "className": "className={clsx(kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\"), \"g-recaptcha\")}",
           "data-sitekey": "data-sitekey={recaptchaSiteKey}",
           "data-callback": "data-callback={() => {\n                (document.getElementById(\"kc-register-form\") as HTMLFormElement).submit();\n            }}",
           "data-action": "data-action={recaptchaAction}",
@@ -589,39 +428,22 @@
         }
       },
       {
-        "tag": "Button",
+        "tag": "button",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={clsx(kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\"), \"g-recaptcha\")}",
+          "id": "id=\"Register_button_1\"",
           "data-sitekey": "data-sitekey={recaptchaSiteKey}",
           "data-callback": "data-callback={() => {\n                (document.getElementById(\"kc-register-form\") as HTMLFormElement).submit();\n            }}",
           "data-action": "data-action={recaptchaAction}",
-          "type": "type=\"submit\"",
-          "id": "Register_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\"), \"g-recaptcha\")}",
-          "data-sitekey": "data-sitekey={recaptchaSiteKey}",
-          "data-callback": "data-callback={() => {\n                (document.getElementById(\"kc-register-form\") as HTMLFormElement).submit();\n            }}",
-          "data-action": "data-action={recaptchaAction}",
-          "type": "type=\"submit\"",
-          "id": "Register_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "type": "type=\"submit\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_input_1",
-      "Register_TextField_1"
+      "Register_input_1\""
     ],
     "historyStates": [
       {
@@ -639,47 +461,30 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Register_input_1\"",
           "disabled": "disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
           "value": "value={msgStr(\"doRegister\")}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
+          "id": "id=\"Register_input_1\"",
           "disabled": "disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doRegister\")}",
-          "id": "Register_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "disabled": "disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}",
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doRegister\")}",
-          "id": "Register_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doRegister\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_9",
-      "Register_Box_10"
+      "Register_div_9\""
     ],
     "historyStates": [
       {
@@ -706,31 +511,12 @@
         "props": {
           "id": "id=\"Register_div_9\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Register_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Register_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_10",
-      "Register_Box_11"
+      "Register_div_10\""
     ],
     "historyStates": [
       {
@@ -745,38 +531,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Register_div_10\"",
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+          "id": "id=\"Register_div_10\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "Register_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "Register_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_10\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-registration-terms-text",
-      "Register_Box_12"
+      "kc-registration-terms-text\""
     ],
     "historyStates": [
       {
@@ -790,35 +562,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"kc-registration-terms-text\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Register_Box_12",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Register_Box_12",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_12",
-      "Register_Box_13"
+      "Register_div_12\""
     ],
     "historyStates": [
       {
@@ -845,31 +598,12 @@
         "props": {
           "id": "id=\"Register_div_12\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Register_Box_13",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Register_Box_13",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_13",
-      "Register_Box_14"
+      "Register_div_13\""
     ],
     "historyStates": [
       {
@@ -884,38 +618,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Register_div_13\"",
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+          "id": "id=\"Register_div_13\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "Register_Box_14",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "Register_Box_14",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_13\""
         }
       }
     ]
   },
   {
     "tags": [
-      "termsAccepted",
-      "Register_TextField_2"
+      "termsAccepted\""
     ],
     "historyStates": [
       {
@@ -935,53 +655,34 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "type": "type=\"checkbox\"",
           "id": "id=\"termsAccepted\"",
           "name": "name=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcCheckboxInputClass\")}",
           "checked": "checked={areTermsAccepted}",
           "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}"
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
           "type": "type=\"checkbox\"",
+          "id": "id=\"termsAccepted\"",
           "name": "name=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcCheckboxInputClass\")}",
           "checked": "checked={areTermsAccepted}",
           "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
-          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}",
-          "id": "Register_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"checkbox\"",
-          "name": "name=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcCheckboxInputClass\")}",
-          "checked": "checked={areTermsAccepted}",
-          "onChange": "onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}",
-          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}",
-          "id": "Register_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"termsAccepted\")}"
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_label_1",
-      "Register_FormLabel_1"
+      "Register_label_1\""
     ],
     "historyStates": [
       {
@@ -997,41 +698,26 @@
       {
         "tag": "label",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Register_label_1\"",
+          "htmlFor": "htmlFor=\"termsAccepted\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"Register_label_1\"",
-          "htmlFor": "htmlFor=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "htmlFor": "htmlFor=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}",
-          "id": "Register_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "htmlFor": "htmlFor=\"termsAccepted\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}",
-          "id": "Register_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "htmlFor": "htmlFor=\"termsAccepted\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Register_div_14",
-      "Register_Box_15"
+      "Register_div_14\""
     ],
     "historyStates": [
       {
@@ -1046,37 +732,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Register_div_14\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Register_div_14\"",
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "Register_Box_15",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "Register_Box_15",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Register_div_14\""
         }
       }
     ]
   },
   {
     "tags": [
-      "input-error-terms-accepted"
+      "input-error-terms-accepted\""
     ],
     "historyStates": [
       {
@@ -1086,6 +759,16 @@
         "props": {
           "id": "id=\"input-error-terms-accepted\"",
           "className": "className={kcClsx(\"kcInputErrorMessageClass\")}",
+          "aria-live": "aria-live=\"polite\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: messagesPerField.get(\"termsAccepted\")\n            }}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"input-error-terms-accepted\"",
           "aria-live": "aria-live=\"polite\"",
           "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: messagesPerField.get(\"termsAccepted\")\n            }}"
         }

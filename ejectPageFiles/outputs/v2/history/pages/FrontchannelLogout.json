@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "FrontchannelLogout_Template_1"
+      "FrontchannelLogout_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,8 +22,7 @@
   },
   {
     "tags": [
-      "FrontchannelLogout_p_1",
-      "FrontchannelLogout_Typography_1"
+      "FrontchannelLogout_p_1\""
     ],
     "historyStates": [
       {
@@ -41,31 +40,12 @@
         "props": {
           "id": "id=\"FrontchannelLogout_p_1\""
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "FrontchannelLogout_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "FrontchannelLogout_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "FrontchannelLogout_ul_1",
-      "FrontchannelLogout_List_1"
+      "FrontchannelLogout_ul_1\""
     ],
     "historyStates": [
       {
@@ -83,31 +63,12 @@
         "props": {
           "id": "id=\"FrontchannelLogout_ul_1\""
         }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "FrontchannelLogout_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "FrontchannelLogout_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "FrontchannelLogout_li_1",
-      "FrontchannelLogout_ListItem_1"
+      "FrontchannelLogout_li_1\""
     ],
     "historyStates": [
       {
@@ -127,32 +88,12 @@
           "id": "id=\"FrontchannelLogout_li_1\"",
           "key": "key={client.name}"
         }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "key": "key={client.name}",
-          "id": "FrontchannelLogout_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={client.name}",
-          "id": "FrontchannelLogout_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "FrontchannelLogout_iframe_1"
+      "FrontchannelLogout_iframe_1\""
     ],
     "historyStates": [
       {
@@ -169,8 +110,7 @@
   },
   {
     "tags": [
-      "continue",
-      "FrontchannelLogout_Link_1"
+      "continue\""
     ],
     "historyStates": [
       {
@@ -199,26 +139,6 @@
         "props": {
           "id": "id=\"continue\"",
           "href": "href={logout.logoutRedirectUri}"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={logout.logoutRedirectUri}",
-          "id": "FrontchannelLogout_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={logout.logoutRedirectUri}",
-          "id": "FrontchannelLogout_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

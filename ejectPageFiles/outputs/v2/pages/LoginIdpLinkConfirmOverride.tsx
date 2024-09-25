@@ -41,34 +41,22 @@ export default function LoginIdpLinkConfirmOverride(
             headerNode={msg("confirmOverrideIdpTitle")}
         >
             <Box
+                id="kc-register-form"
                 action={url.loginAction}
                 method="post"
                 component="form"
-                id="LoginIdpLinkConfirmOverride_Box_1"
-                sx={styles.LoginIdpLinkConfirmOverride_Box_1}
             >
                 {msg("pageExpiredMsg1")}{" "}
-                <Link
-                    href={url.loginRestartFlowUrl}
-                    id="LoginIdpLinkConfirmOverride_Link_1"
-                    sx={styles.LoginIdpLinkConfirmOverride_Link_1}
-                >
+                <Link id="loginRestartLink" href={url.loginRestartFlowUrl}>
                     {msg("doClickHere")}
                 </Link>
                 <br id="LoginIdpLinkConfirmOverride_br_1" />
                 <br id="LoginIdpLinkConfirmOverride_br_2" />
                 <Button
                     type="submit"
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonBlockClass",
-                        "kcButtonLargeClass"
-                    )}
                     name="submitAction"
+                    id="confirmOverride"
                     value="confirmOverride"
-                    id="LoginIdpLinkConfirmOverride_Button_1"
-                    sx={styles.LoginIdpLinkConfirmOverride_Button_1}
                 >
                     {msg("confirmOverrideIdpContinue", idpDisplayName)}
                 </Button>

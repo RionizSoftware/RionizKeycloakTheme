@@ -72,12 +72,10 @@ export default function Register(props: RegisterProps) {
             displayRequiredFields
         >
             <Box
-                className={kcClsx("kcFormClass")}
+                id="kc-register-form"
                 action={url.registrationAction}
                 method="post"
                 component="form"
-                id="Register_Box_1"
-                sx={styles.Register_Box_1}
             >
                 <UserProfileFormFields
                     id="Register_UserProfileFormFields_1"
@@ -99,67 +97,26 @@ export default function Register(props: RegisterProps) {
                 )}
                 {recaptchaRequired &&
                     (recaptchaVisible || recaptchaAction === undefined) && (
-                        <Box id="Register_Box_2" sx={styles.Register_Box_2}>
+                        <Box id="Register_div_1">
                             <Box
-                                className={kcClsx("kcInputWrapperClass")}
-                                id="Register_Box_3"
-                                sx={styles.Register_Box_3}
-                            >
-                                <Box
-                                    data-size="compact"
-                                    data-sitekey={recaptchaSiteKey}
-                                    data-action={recaptchaAction}
-                                    id="Register_Box_4"
-                                    sx={styles.Register_Box_4}
-                                ></Box>
-                            </Box>
+                                id="Register_div_3"
+                                data-size="compact"
+                                data-sitekey={recaptchaSiteKey}
+                                data-action={recaptchaAction}
+                            ></Box>
                         </Box>
                     )}
-                <Box
-                    className={kcClsx("kcFormGroupClass")}
-                    id="Register_Box_5"
-                    sx={styles.Register_Box_5}
-                >
-                    <Box
-                        className={kcClsx("kcFormOptionsClass")}
-                        id="Register_Box_6"
-                        sx={styles.Register_Box_6}
-                    >
-                        <Box
-                            className={kcClsx("kcFormOptionsWrapperClass")}
-                            id="Register_Box_7"
-                            sx={styles.Register_Box_7}
-                        >
-                            <span id="Register_span_1">
-                                <Link
-                                    href={url.loginUrl}
-                                    id="Register_Link_1"
-                                    sx={styles.Register_Link_1}
-                                >
-                                    {msg("backToLogin")}
-                                </Link>
-                            </span>
-                        </Box>
-                    </Box>
+                <Box id="Register_div_4">
+                    <Link id="Register_a_1" href={url.loginUrl}>
+                        {msg("backToLogin")}
+                    </Link>
 
                     {recaptchaRequired &&
                     !recaptchaVisible &&
                     recaptchaAction !== undefined ? (
-                        <Box
-                            className={kcClsx("kcFormButtonsClass")}
-                            id="Register_Box_8"
-                            sx={styles.Register_Box_8}
-                        >
+                        <Box id="kc-form-buttons">
                             <Button
-                                className={clsx(
-                                    kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonPrimaryClass",
-                                        "kcButtonBlockClass",
-                                        "kcButtonLargeClass"
-                                    ),
-                                    "g-recaptcha"
-                                )}
+                                id="Register_button_1"
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
                                     (
@@ -170,33 +127,20 @@ export default function Register(props: RegisterProps) {
                                 }}
                                 data-action={recaptchaAction}
                                 type="submit"
-                                id="Register_Button_1"
-                                sx={styles.Register_Button_1}
                             >
                                 {msg("doRegister")}
                             </Button>
                         </Box>
                     ) : (
-                        <Box
-                            className={kcClsx("kcFormButtonsClass")}
-                            id="Register_Box_9"
-                            sx={styles.Register_Box_9}
-                        >
+                        <Box id="kc-form-buttons">
                             <TextField
+                                id="Register_input_1"
                                 disabled={
                                     !isFormSubmittable ||
                                     (termsAcceptanceRequired && !areTermsAccepted)
                                 }
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonBlockClass",
-                                    "kcButtonLargeClass"
-                                )}
                                 type="submit"
                                 value={msgStr("doRegister")}
-                                id="Register_TextField_1"
-                                sx={styles.Register_TextField_1}
                             />
                         </Box>
                     )}
@@ -222,52 +166,27 @@ function TermsAcceptance(props: {
     const { msg } = i18n;
     return (
         <>
-            <Box id="Register_Box_10" sx={styles.Register_Box_10}>
-                <Box
-                    className={kcClsx("kcInputWrapperClass")}
-                    id="Register_Box_11"
-                    sx={styles.Register_Box_11}
-                >
-                    {msg("termsTitle")}
-                    <Box id="Register_Box_12" sx={styles.Register_Box_12}>
-                        {msg("termsText")}
-                    </Box>
-                </Box>
+            <Box id="Register_div_9">
+                {msg("termsTitle")}
+                {msg("termsText")}
             </Box>
-            <Box id="Register_Box_13" sx={styles.Register_Box_13}>
-                <Box
-                    className={kcClsx("kcLabelWrapperClass")}
-                    id="Register_Box_14"
-                    sx={styles.Register_Box_14}
-                >
-                    <TextField
-                        type="checkbox"
-                        name="termsAccepted"
-                        className={kcClsx("kcCheckboxInputClass")}
-                        checked={areTermsAccepted}
-                        onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}
-                        aria-invalid={messagesPerField.existsError("termsAccepted")}
-                        id="Register_TextField_2"
-                        sx={styles.Register_TextField_2}
-                    />
-                    <FormLabel
-                        htmlFor="termsAccepted"
-                        className={kcClsx("kcLabelClass")}
-                        id="Register_FormLabel_1"
-                        sx={styles.Register_FormLabel_1}
-                    >
-                        {msg("acceptTerms")}
-                    </FormLabel>
-                </Box>
+            <Box id="Register_div_12">
+                <TextField
+                    type="checkbox"
+                    id="termsAccepted"
+                    name="termsAccepted"
+                    checked={areTermsAccepted}
+                    onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}
+                    aria-invalid={messagesPerField.existsError("termsAccepted")}
+                />
+                <FormLabel id="Register_label_1" htmlFor="termsAccepted">
+                    {msg("acceptTerms")}
+                </FormLabel>
+
                 {messagesPerField.existsError("termsAccepted") && (
-                    <Box
-                        className={kcClsx("kcLabelWrapperClass")}
-                        id="Register_Box_15"
-                        sx={styles.Register_Box_15}
-                    >
+                    <Box id="Register_div_14">
                         <span
                             id="input-error-terms-accepted"
-                            className={kcClsx("kcInputErrorMessageClass")}
                             aria-live="polite"
                             dangerouslySetInnerHTML={{
                                 __html: messagesPerField.get("termsAccepted")

@@ -22,8 +22,8 @@ export enum HistoryOperationType {
 }
 export type HistoryState = {
     tag: string;
-    currentIndex: string;
     operation: HistoryOperationType;
+    currentIndex: string;
     props: Record<string, string>;
 };
 export type HistoryData = {

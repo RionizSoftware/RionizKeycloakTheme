@@ -1,7 +1,7 @@
 [
   {
     "tags": [
-      "LoginOtp_Template_1"
+      "LoginOtp_Template_1\""
     ],
     "historyStates": [
       {
@@ -22,8 +22,7 @@
   },
   {
     "tags": [
-      "kc-otp-login-form",
-      "LoginOtp_Box_1"
+      "kc-otp-login-form\""
     ],
     "historyStates": [
       {
@@ -40,47 +39,29 @@
       {
         "tag": "form",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-otp-login-form\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-otp-login-form\"",
-          "className": "className={kcClsx(\"kcFormClass\")}",
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "form"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginOtp_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormClass\")}",
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "LoginOtp_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_1",
-      "LoginOtp_Box_2"
+      "LoginOtp_div_1\""
     ],
     "historyStates": [
       {
@@ -95,38 +76,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOtp_div_1\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_1\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_2",
-      "LoginOtp_Box_3"
+      "LoginOtp_div_2\""
     ],
     "historyStates": [
       {
@@ -141,38 +108,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginOtp_div_2\"",
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+          "id": "id=\"LoginOtp_div_2\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "LoginOtp_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "LoginOtp_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_2\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_Fragment_1",
-      "LoginOtp_Box_4"
+      "LoginOtp_Fragment_1\""
     ],
     "historyStates": [
       {
@@ -192,33 +145,12 @@
           "id": "id=\"LoginOtp_Fragment_1\"",
           "key": "key={index}"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "key": "key={index}",
-          "id": "LoginOtp_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={index}",
-          "id": "LoginOtp_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_input_1",
-      "LoginOtp_TextField_1"
+      "{`kc-otp-credential-${index}`}"
     ],
     "historyStates": [
       {
@@ -226,8 +158,20 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOtp_input_1\"",
+          "id": "id={`kc-otp-credential-${index}`}",
           "className": "className={kcClsx(\"kcLoginOTPListInputClass\")}",
+          "type": "type=\"radio\"",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={`kc-otp-credential-${index}`}",
           "type": "type=\"radio\"",
           "name": "name=\"selectedCredentialId\"",
           "value": "value={otpCredential.id}",
@@ -239,48 +183,18 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOtp_input_1\"",
-          "className": "className={kcClsx(\"kcLoginOTPListInputClass\")}",
+          "id": "id={`kc-otp-credential-${index}`}",
           "type": "type=\"radio\"",
           "name": "name=\"selectedCredentialId\"",
           "value": "value={otpCredential.id}",
           "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcLoginOTPListInputClass\")}",
-          "type": "type=\"radio\"",
-          "name": "name=\"selectedCredentialId\"",
-          "value": "value={otpCredential.id}",
-          "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}",
-          "id": "LoginOtp_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLoginOTPListInputClass\")}",
-          "type": "type=\"radio\"",
-          "name": "name=\"selectedCredentialId\"",
-          "value": "value={otpCredential.id}",
-          "defaultChecked": "defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}",
-          "id": "LoginOtp_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_label_1",
-      "LoginOtp_FormLabel_1"
+      "LoginOtp_label_1\""
     ],
     "historyStates": [
       {
@@ -297,43 +211,28 @@
       {
         "tag": "label",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginOtp_label_1\"",
           "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
-          "className": "className={kcClsx(\"kcLoginOTPListClass\")}",
           "tabIndex": "tabIndex={index}"
         }
       },
       {
-        "tag": "FormLabel",
+        "tag": "label",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
+          "id": "id=\"LoginOtp_label_1\"",
           "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
-          "className": "className={kcClsx(\"kcLoginOTPListClass\")}",
-          "tabIndex": "tabIndex={index}",
-          "id": "LoginOtp_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
-          "className": "className={kcClsx(\"kcLoginOTPListClass\")}",
-          "tabIndex": "tabIndex={index}",
-          "id": "LoginOtp_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "tabIndex": "tabIndex={index}"
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_span_1"
+      "LoginOtp_span_1\""
     ],
     "historyStates": [
       {
@@ -344,12 +243,20 @@
           "id": "id=\"LoginOtp_span_1\"",
           "className": "className={kcClsx(\"kcLoginOTPListItemHeaderClass\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_span_1\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_span_2"
+      "LoginOtp_span_2\""
     ],
     "historyStates": [
       {
@@ -360,12 +267,28 @@
           "id": "id=\"LoginOtp_span_2\"",
           "className": "className={kcClsx(\"kcLoginOTPListItemIconBodyClass\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_span_2\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_span_2\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_i_1"
+      "LoginOtp_i_1\""
     ],
     "historyStates": [
       {
@@ -377,12 +300,21 @@
           "className": "className={kcClsx(\"kcLoginOTPListItemIconClass\")}",
           "aria-hidden": "aria-hidden=\"true\""
         }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_i_1\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_span_3"
+      "LoginOtp_span_3\""
     ],
     "historyStates": [
       {
@@ -393,13 +325,20 @@
           "id": "id=\"LoginOtp_span_3\"",
           "className": "className={kcClsx(\"kcLoginOTPListItemTitleClass\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_span_3\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_3",
-      "LoginOtp_Box_5"
+      "LoginOtp_div_3\""
     ],
     "historyStates": [
       {
@@ -414,38 +353,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOtp_div_3\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_3\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_4",
-      "LoginOtp_Box_6"
+      "LoginOtp_div_4\""
     ],
     "historyStates": [
       {
@@ -460,38 +385,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginOtp_div_4\"",
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+          "id": "id=\"LoginOtp_div_4\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "LoginOtp_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
-          "id": "LoginOtp_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_4\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_label_2",
-      "LoginOtp_FormLabel_2"
+      "LoginOtp_label_2\""
     ],
     "historyStates": [
       {
@@ -507,41 +418,26 @@
       {
         "tag": "label",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_label_2\"",
+          "htmlFor": "htmlFor=\"otp\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LoginOtp_label_2\"",
-          "htmlFor": "htmlFor=\"otp\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "htmlFor": "htmlFor=\"otp\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}",
-          "id": "LoginOtp_FormLabel_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "htmlFor": "htmlFor=\"otp\"",
-          "className": "className={kcClsx(\"kcLabelClass\")}",
-          "id": "LoginOtp_FormLabel_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "htmlFor": "htmlFor=\"otp\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_5",
-      "LoginOtp_Box_7"
+      "LoginOtp_div_5\""
     ],
     "historyStates": [
       {
@@ -556,38 +452,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_div_5\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOtp_div_5\"",
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "LoginOtp_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
-          "id": "LoginOtp_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_5\""
         }
       }
     ]
   },
   {
     "tags": [
-      "otp",
-      "LoginOtp_TextField_2"
+      "otp\""
     ],
     "historyStates": [
       {
@@ -607,52 +489,34 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"otp\"",
+          "name": "name=\"otp\"",
+          "autoComplete": "autoComplete=\"off\"",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"otp\"",
           "name": "name=\"otp\"",
           "autoComplete": "autoComplete=\"off\"",
           "type": "type=\"text\"",
-          "className": "className={kcClsx(\"kcInputClass\")}",
           "autoFocus": "autoFocus",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "name": "name=\"otp\"",
-          "autoComplete": "autoComplete=\"off\"",
-          "type": "type=\"text\"",
-          "className": "className={kcClsx(\"kcInputClass\")}",
-          "autoFocus": "autoFocus",
-          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}",
-          "id": "LoginOtp_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "name": "name=\"otp\"",
-          "autoComplete": "autoComplete=\"off\"",
-          "type": "type=\"text\"",
-          "className": "className={kcClsx(\"kcInputClass\")}",
-          "autoFocus": "autoFocus",
-          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"totp\")}",
-          "id": "LoginOtp_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "input-error-otp-code"
+      "input-error-otp-code\""
     ],
     "historyStates": [
       {
@@ -665,13 +529,22 @@
           "aria-live": "aria-live=\"polite\"",
           "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: messagesPerField.get(\"totp\")\n            }}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"input-error-otp-code\"",
+          "aria-live": "aria-live=\"polite\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: messagesPerField.get(\"totp\")\n            }}"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_6",
-      "LoginOtp_Box_8"
+      "LoginOtp_div_6\""
     ],
     "historyStates": [
       {
@@ -686,38 +559,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOtp_div_6\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOtp_div_6\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginOtp_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_6\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-options",
-      "LoginOtp_Box_9"
+      "kc-form-options\""
     ],
     "historyStates": [
       {
@@ -732,38 +591,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-options\"",
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+          "id": "id=\"kc-form-options\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginOtp_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginOtp_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-options\""
         }
       }
     ]
   },
   {
     "tags": [
-      "LoginOtp_div_8",
-      "LoginOtp_Box_10"
+      "LoginOtp_div_8\""
     ],
     "historyStates": [
       {
@@ -778,38 +623,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"LoginOtp_div_8\"",
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+          "id": "id=\"LoginOtp_div_8\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginOtp_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginOtp_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"LoginOtp_div_8\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-form-buttons",
-      "LoginOtp_Box_11"
+      "kc-form-buttons\""
     ],
     "historyStates": [
       {
@@ -824,38 +655,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-form-buttons\"",
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}"
+          "id": "id=\"kc-form-buttons\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginOtp_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginOtp_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-form-buttons\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-login",
-      "LoginOtp_TextField_3"
+      "kc-login\""
     ],
     "historyStates": [
       {
@@ -873,9 +690,8 @@
       {
         "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"login\"",
           "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
@@ -883,29 +699,14 @@
         }
       },
       {
-        "tag": "TextField",
+        "tag": "input",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "name": "name=\"login\"",
+          "id": "id=\"kc-login\"",
           "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doLogIn\")}",
-          "id": "LoginOtp_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
-          "name": "name=\"login\"",
-          "type": "type=\"submit\"",
-          "value": "value={msgStr(\"doLogIn\")}",
-          "id": "LoginOtp_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "value": "value={msgStr(\"doLogIn\")}"
         }
       }
     ]

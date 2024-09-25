@@ -1,8 +1,7 @@
 [
   {
     "tags": [
-      "Template_div_1",
-      "Template_Box_1"
+      "Template_div_1\""
     ],
     "historyStates": [
       {
@@ -17,38 +16,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_1\"",
-          "className": "className={kcClsx(\"kcLoginClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcLoginClass\")}",
-          "id": "Template_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLoginClass\")}",
-          "id": "Template_Box_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_1\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-header",
-      "Template_Box_2"
+      "kc-header\""
     ],
     "historyStates": [
       {
@@ -63,38 +48,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-header\"",
-          "className": "className={kcClsx(\"kcHeaderClass\")}"
+          "id": "id=\"kc-header\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcHeaderClass\")}",
-          "id": "Template_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcHeaderClass\")}",
-          "id": "Template_Box_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-header\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-header-wrapper",
-      "Template_Box_3"
+      "kc-header-wrapper\""
     ],
     "historyStates": [
       {
@@ -109,38 +80,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-header-wrapper\"",
-          "className": "className={kcClsx(\"kcHeaderWrapperClass\")}"
+          "id": "id=\"kc-header-wrapper\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcHeaderWrapperClass\")}",
-          "id": "Template_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcHeaderWrapperClass\")}",
-          "id": "Template_Box_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-header-wrapper\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_4",
-      "Template_Box_4"
+      "Template_div_4\""
     ],
     "historyStates": [
       {
@@ -155,37 +112,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Template_div_4\"",
-          "className": "className={kcClsx(\"kcFormCardClass\")}"
+          "id": "id=\"Template_div_4\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcFormCardClass\")}",
-          "id": "Template_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormCardClass\")}",
-          "id": "Template_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_4\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_header_1"
+      "Template_header_1\""
     ],
     "historyStates": [
       {
@@ -196,13 +140,20 @@
           "id": "id=\"Template_header_1\"",
           "className": "className={kcClsx(\"kcFormHeaderClass\")}"
         }
+      },
+      {
+        "tag": "header",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_header_1\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-locale",
-      "Template_Box_5"
+      "kc-locale\""
     ],
     "historyStates": [
       {
@@ -217,38 +168,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcLocaleMainClass\")}",
           "id": "id=\"kc-locale\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
-          "className": "className={kcClsx(\"kcLocaleMainClass\")}",
-          "id": "Template_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLocaleMainClass\")}",
-          "id": "Template_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-locale\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-locale-wrapper",
-      "Template_Box_6"
+      "kc-locale-wrapper\""
     ],
     "historyStates": [
       {
@@ -263,38 +200,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-locale-wrapper\"",
-          "className": "className={kcClsx(\"kcLocaleWrapperClass\")}"
+          "id": "id=\"kc-locale-wrapper\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcLocaleWrapperClass\")}",
-          "id": "Template_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcLocaleWrapperClass\")}",
-          "id": "Template_Box_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-locale-wrapper\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-locale-dropdown",
-      "Template_Box_7"
+      "kc-locale-dropdown\""
     ],
     "historyStates": [
       {
@@ -309,38 +232,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-locale-dropdown\"",
-          "className": "className={clsx(\"menu-button-links\", kcClsx(\"kcLocaleDropDownClass\"))}"
+          "id": "id=\"kc-locale-dropdown\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={clsx(\"menu-button-links\", kcClsx(\"kcLocaleDropDownClass\"))}",
-          "id": "Template_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(\"menu-button-links\", kcClsx(\"kcLocaleDropDownClass\"))}",
-          "id": "Template_Box_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-locale-dropdown\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-current-locale-link",
-      "Template_Button_1"
+      "kc-current-locale-link\""
     ],
     "historyStates": [
       {
@@ -368,41 +277,12 @@
           "aria-expanded": "aria-expanded=\"false\"",
           "aria-controls": "aria-controls=\"language-switch1\""
         }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "tabIndex": "tabIndex={1}",
-          "aria-label": "aria-label={msgStr(\"languages\")}",
-          "aria-haspopup": "aria-haspopup=\"true\"",
-          "aria-expanded": "aria-expanded=\"false\"",
-          "aria-controls": "aria-controls=\"language-switch1\"",
-          "id": "Template_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Button",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "tabIndex": "tabIndex={1}",
-          "aria-label": "aria-label={msgStr(\"languages\")}",
-          "aria-haspopup": "aria-haspopup=\"true\"",
-          "aria-expanded": "aria-expanded=\"false\"",
-          "aria-controls": "aria-controls=\"language-switch1\"",
-          "id": "Template_Button_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "language-switch1",
-      "Template_List_1"
+      "language-switch1\""
     ],
     "historyStates": [
       {
@@ -421,50 +301,32 @@
       {
         "tag": "ul",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "role": "role=\"menu\"",
+          "tabIndex": "tabIndex={-1}",
+          "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
+          "aria-activedescendant": "aria-activedescendant=\"\"",
+          "id": "id=\"language-switch1\""
+        }
+      },
+      {
+        "tag": "ul",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "role": "role=\"menu\"",
           "tabIndex": "tabIndex={-1}",
           "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
           "aria-activedescendant": "aria-activedescendant=\"\"",
-          "id": "id=\"language-switch1\"",
-          "className": "className={kcClsx(\"kcLocaleListClass\")}"
-        }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "role": "role=\"menu\"",
-          "tabIndex": "tabIndex={-1}",
-          "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
-          "aria-activedescendant": "aria-activedescendant=\"\"",
-          "className": "className={kcClsx(\"kcLocaleListClass\")}",
-          "id": "Template_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "List",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "role": "role=\"menu\"",
-          "tabIndex": "tabIndex={-1}",
-          "aria-labelledby": "aria-labelledby=\"kc-current-locale-link\"",
-          "aria-activedescendant": "aria-activedescendant=\"\"",
-          "className": "className={kcClsx(\"kcLocaleListClass\")}",
-          "id": "Template_List_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"language-switch1\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_li_1",
-      "Template_ListItem_1"
+      "Template_li_1\""
     ],
     "historyStates": [
       {
@@ -481,44 +343,28 @@
       {
         "tag": "li",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Template_li_1\"",
           "key": "key={languageTag}",
-          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
           "role": "role=\"none\""
         }
       },
       {
-        "tag": "ListItem",
+        "tag": "li",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "TagReplaced",
         "props": {
+          "id": "id=\"Template_li_1\"",
           "key": "key={languageTag}",
-          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
-          "role": "role=\"none\"",
-          "id": "Template_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "ListItem",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={languageTag}",
-          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
-          "role": "role=\"none\"",
-          "id": "Template_ListItem_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "role": "role=\"none\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_a_1",
-      "Template_Link_1"
+      "{`language-${i + 1}`}"
     ],
     "historyStates": [
       {
@@ -526,9 +372,19 @@
         "currentIndex": "11",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_a_1\"",
           "role": "role=\"menuitem\"",
+          "id": "id={`language-${i + 1}`}",
           "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "href": "href={getChangeLocaleUrl(languageTag)}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "role": "role=\"menuitem\"",
+          "id": "id={`language-${i + 1}`}",
           "href": "href={getChangeLocaleUrl(languageTag)}"
         }
       },
@@ -537,42 +393,16 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_a_1\"",
           "role": "role=\"menuitem\"",
-          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "id": "id={`language-${i + 1}`}",
           "href": "href={getChangeLocaleUrl(languageTag)}"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "role": "role=\"menuitem\"",
-          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
-          "href": "href={getChangeLocaleUrl(languageTag)}",
-          "id": "Template_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "role": "role=\"menuitem\"",
-          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
-          "href": "href={getChangeLocaleUrl(languageTag)}",
-          "id": "Template_Link_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-page-title",
-      "Template_Typography_1"
+      "kc-page-title\""
     ],
     "historyStates": [
       {
@@ -592,35 +422,12 @@
           "variant": "h1",
           "component": "h1"
         }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "variant": "variant=\"h1\"",
-          "component": "component=\"h1\"",
-          "id": "Template_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Typography",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "variant": "variant=\"h1\"",
-          "component": "component=\"h1\"",
-          "id": "Template_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-username",
-      "Template_Box_8"
+      "kc-username\""
     ],
     "historyStates": [
       {
@@ -635,38 +442,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-username\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"kc-username\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Template_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Template_Box_8",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-username\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-attempted-username",
-      "Template_FormLabel_1"
+      "kc-attempted-username\""
     ],
     "historyStates": [
       {
@@ -684,31 +477,12 @@
         "props": {
           "id": "id=\"kc-attempted-username\""
         }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Template_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "FormLabel",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Template_FormLabel_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "reset-login",
-      "Template_Link_2"
+      "reset-login\""
     ],
     "historyStates": [
       {
@@ -730,35 +504,12 @@
           "href": "href={url.loginRestartFlowUrl}",
           "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}",
-          "id": "Template_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href={url.loginRestartFlowUrl}",
-          "aria-label": "aria-label={msgStr(\"restartLoginTooltip\")}",
-          "id": "Template_Link_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_9",
-      "Template_Box_9"
+      "Template_div_9\""
     ],
     "historyStates": [
       {
@@ -785,30 +536,12 @@
         "props": {
           "id": "id=\"Template_div_9\""
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Template_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Template_Box_9",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Template_i_1"
+      "Template_i_1\""
     ],
     "historyStates": [
       {
@@ -819,12 +552,20 @@
           "id": "id=\"Template_i_1\"",
           "className": "className={kcClsx(\"kcResetFlowIcon\")}"
         }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_i_1\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_1"
+      "Template_span_1\""
     ],
     "historyStates": [
       {
@@ -848,8 +589,7 @@
   },
   {
     "tags": [
-      "Template_div_10",
-      "Template_Box_10"
+      "Template_div_10\""
     ],
     "historyStates": [
       {
@@ -864,38 +604,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_div_10\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_10\"",
-          "className": "className={kcClsx(\"kcContentWrapperClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
-          "id": "Template_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
-          "id": "Template_Box_10",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_10\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_11",
-      "Template_Box_11"
+      "Template_div_11\""
     ],
     "historyStates": [
       {
@@ -910,37 +636,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"Template_div_11\"",
-          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}"
+          "id": "id=\"Template_div_11\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}",
-          "id": "Template_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}",
-          "id": "Template_Box_11",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_11\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_2"
+      "Template_span_2\""
     ],
     "historyStates": [
       {
@@ -965,14 +678,14 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "OptimizeAndRemoved",
         "props": {
-          "id": "id=\"Template_span_3\""
+          "id": "id=\"Template_span_2\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_3"
+      "Template_span_3\""
     ],
     "historyStates": [
       {
@@ -991,13 +704,20 @@
         "props": {
           "id": "id=\"Template_span_3\""
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"Template_span_3\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_12",
-      "Template_Box_12"
+      "Template_div_12\""
     ],
     "historyStates": [
       {
@@ -1020,35 +740,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"Template_div_12\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Template_Box_12",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Template_Box_12",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-content",
-      "Template_Box_13"
+      "kc-content\""
     ],
     "historyStates": [
       {
@@ -1062,42 +763,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"kc-content-wrapper\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"kc-content\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Template_Box_13",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Template_Box_13",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-content-wrapper"
+      "kc-content-wrapper\""
     ],
     "historyStates": [
       {
@@ -1107,13 +782,20 @@
         "props": {
           "id": "id=\"kc-content-wrapper\""
         }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-content-wrapper\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_15",
-      "Template_Box_14"
+      "Template_div_15\""
     ],
     "historyStates": [
       {
@@ -1128,38 +810,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_div_15\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_15\"",
-          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}",
-          "id": "Template_Box_14",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}",
-          "id": "Template_Box_14",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_15\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_16",
-      "Template_Box_15"
+      "Template_div_16\""
     ],
     "historyStates": [
       {
@@ -1182,34 +850,16 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "OptimizeAndRemoved",
         "props": {
           "id": "id=\"Template_div_16\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "Template_Box_15",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "Template_Box_15",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_4"
+      "Template_span_4\""
     ],
     "historyStates": [
       {
@@ -1220,12 +870,20 @@
           "id": "id=\"Template_span_4\"",
           "className": "className={kcClsx(\"kcFeedbackSuccessIcon\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_span_4\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_5"
+      "Template_span_5\""
     ],
     "historyStates": [
       {
@@ -1236,12 +894,20 @@
           "id": "id=\"Template_span_5\"",
           "className": "className={kcClsx(\"kcFeedbackWarningIcon\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_span_5\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_6"
+      "Template_span_6\""
     ],
     "historyStates": [
       {
@@ -1252,12 +918,20 @@
           "id": "id=\"Template_span_6\"",
           "className": "className={kcClsx(\"kcFeedbackErrorIcon\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_span_6\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_7"
+      "Template_span_7\""
     ],
     "historyStates": [
       {
@@ -1268,12 +942,20 @@
           "id": "id=\"Template_span_7\"",
           "className": "className={kcClsx(\"kcFeedbackInfoIcon\")}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_span_7\""
+        }
       }
     ]
   },
   {
     "tags": [
-      "Template_span_8"
+      "Template_span_8\""
     ],
     "historyStates": [
       {
@@ -1285,13 +967,21 @@
           "className": "className={kcClsx(\"kcAlertTitleClass\")}",
           "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: message.summary\n            }}"
         }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_span_8\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: message.summary\n            }}"
+        }
       }
     ]
   },
   {
     "tags": [
-      "kc-select-try-another-way-form",
-      "Template_Box_16"
+      "kc-select-try-another-way-form\""
     ],
     "historyStates": [
       {
@@ -1314,37 +1004,12 @@
           "method": "method=\"post\"",
           "component": "form"
         }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "Template_Box_16",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "action": "action={url.loginAction}",
-          "method": "method=\"post\"",
-          "component": "component=\"form\"",
-          "id": "Template_Box_16",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "Template_div_17",
-      "Template_Box_17"
+      "Template_div_17\""
     ],
     "historyStates": [
       {
@@ -1359,38 +1024,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Template_div_17\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_17\"",
-          "className": "className={kcClsx(\"kcFormGroupClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Template_Box_17",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "Template_Box_17",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"Template_div_17\""
         }
       }
     ]
   },
   {
     "tags": [
-      "Template_input_1",
-      "Template_TextField_1"
+      "Template_input_1\""
     ],
     "historyStates": [
       {
@@ -1414,37 +1065,12 @@
           "name": "name=\"tryAnotherWay\"",
           "value": "value=\"on\""
         }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"tryAnotherWay\"",
-          "value": "value=\"on\"",
-          "id": "Template_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"tryAnotherWay\"",
-          "value": "value=\"on\"",
-          "id": "Template_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "try-another-way",
-      "Template_Link_3"
+      "try-another-way\""
     ],
     "historyStates": [
       {
@@ -1466,35 +1092,12 @@
           "id": "id=\"try-another-way\"",
           "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}"
         }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "href": "href=\"#\"",
-          "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}",
-          "id": "Template_Link_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Link",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "href": "href=\"#\"",
-          "onClick": "onClick={() => {\n                document.forms[\"kc-select-try-another-way-form\" as never].submit();\n                return false;\n            }}",
-          "id": "Template_Link_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "kc-info",
-      "Template_Box_18"
+      "kc-info\""
     ],
     "historyStates": [
       {
@@ -1509,38 +1112,24 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-info\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"kc-info\"",
-          "className": "className={kcClsx(\"kcSignUpClass\")}"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "className": "className={kcClsx(\"kcSignUpClass\")}",
-          "id": "Template_Box_18",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcSignUpClass\")}",
-          "id": "Template_Box_18",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-info\""
         }
       }
     ]
   },
   {
     "tags": [
-      "kc-info-wrapper",
-      "Template_Box_19"
+      "kc-info-wrapper\""
     ],
     "historyStates": [
       {
@@ -1555,30 +1144,17 @@
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
+        "operation": "StyleRemoved",
         "props": {
-          "id": "id=\"kc-info-wrapper\"",
-          "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}"
+          "id": "id=\"kc-info-wrapper\""
         }
       },
       {
-        "tag": "Box",
+        "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
+        "operation": "OptimizeAndRemoved",
         "props": {
-          "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}",
-          "id": "Template_Box_19",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}",
-          "id": "Template_Box_19",
-          "sx": "SX_STYLE_NOT_FETCHED"
+          "id": "id=\"kc-info-wrapper\""
         }
       }
     ]

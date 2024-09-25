@@ -19,14 +19,9 @@ import { styles } from "../styles/pages/Login.ts";
     headerNode={msg("loginAccountTitle")}
     displayInfo={realm.password && realm.registrationAllowed && !registrationDisabled}
     infoNode={
-        <Box id="Login_Box_1" sx={styles.Login_Box_1}>
+        <Box id="kc-registration-container">
             {msg("noAccount")}{" "}
-            <Link
-                tabIndex={8}
-                href={url.registrationUrl}
-                id="Login_Link_1"
-                sx={styles.Login_Link_1}
-            >
+            <Link id="Login_a_1" tabIndex={8} href={url.registrationUrl}>
                 {msg("doRegister")}
             </Link>
         </Box>
@@ -36,62 +31,24 @@ import { styles } from "../styles/pages/Login.ts";
             {realm.password &&
                 social?.providers !== undefined &&
                 social.providers.length !== 0 && (
-                    <Box
-                        className={kcClsx("kcFormSocialAccountSectionClass")}
-                        id="Login_Box_2"
-                        sx={styles.Login_Box_2}
-                    >
+                    <Box id="kc-social-providers">
                         <hr id="Login_hr_1" />
-                        <Typography
-                            variant="h2"
-                            component="h2"
-                            id="Login_Typography_1"
-                            sx={styles.Login_Typography_1}
-                        >
+                        <Typography id="Login_h2_1" variant="h2" component="h2">
                             {msg("identity-provider-login-label")}
                         </Typography>
-                        <List
-                            className={kcClsx(
-                                "kcFormSocialAccountListClass",
-                                social.providers.length > 3 &&
-                                    "kcFormSocialAccountListGridClass"
-                            )}
-                            id="Login_List_1"
-                            sx={styles.Login_List_1}
-                        >
+                        <List id="Login_ul_1">
                             {social.providers.map((...[p, , providers]) => (
-                                <ListItem
-                                    key={p.alias}
-                                    id="Login_ListItem_1"
-                                    sx={styles.Login_ListItem_1}
-                                >
+                                <ListItem id="Login_li_1" key={p.alias}>
                                     <Link
-                                        className={kcClsx(
-                                            "kcFormSocialAccountListButtonClass",
-                                            providers.length > 3 &&
-                                                "kcFormSocialAccountGridItem"
-                                        )}
+                                        id={`social-${p.alias}`}
                                         type="button"
                                         href={p.loginUrl}
-                                        id="Login_Link_2"
-                                        sx={styles.Login_Link_2}
                                     >
                                         {p.iconClasses && (
-                                            <i
-                                                id="Login_i_1"
-                                                className={clsx(
-                                                    kcClsx("kcCommonLogoIdP"),
-                                                    p.iconClasses
-                                                )}
-                                                aria-hidden="true"
-                                            ></i>
+                                            <i id="Login_i_1" aria-hidden="true"></i>
                                         )}
                                         <span
                                             id="Login_span_2"
-                                            className={clsx(
-                                                kcClsx("kcFormSocialAccountNameClass"),
-                                                p.iconClasses && "kc-social-icon-text"
-                                            )}
                                             dangerouslySetInnerHTML={{
                                                 __html: p.displayName
                                             }}
@@ -105,5 +62,5 @@ import { styles } from "../styles/pages/Login.ts";
         </>
     }
 >
-    <Box id="Login_Box_3" sx={styles.Login_Box_3}></Box>
+    <Box id="kc-form"></Box>
 </Template>;

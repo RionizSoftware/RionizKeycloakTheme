@@ -59,12 +59,7 @@ export const getAttributeValue = (
     });
     let value = null;
     if (founded && founded.length > 0) {
-        const regexString = `${attributeName}="([^"]*)"`;
-        const regex = new RegExp(regexString);
-        const matches = founded[0].getText().match(regex);
-        if (matches && matches.length > 1) {
-            value = matches[1];
-        }
+        value = founded[0].getText().replace(`${attributeName}=`, "").replace(`"`, "");
     }
     return value;
 };
