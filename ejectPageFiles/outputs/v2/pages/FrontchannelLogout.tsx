@@ -33,7 +33,15 @@ export default function FrontchannelLogout(
         }
     }, []);
     return (
-        <Template id="FrontchannelLogout_Template_1">
+        <Template
+            id="FrontchannelLogout_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            documentTitle={msgStr("frontchannel-logout.title")}
+            headerNode={msg("frontchannel-logout.title")}
+        >
             <Typography
                 id="FrontchannelLogout_Typography_1"
                 sx={styles.FrontchannelLogout_Typography_1}
@@ -43,11 +51,16 @@ export default function FrontchannelLogout(
             <List id="FrontchannelLogout_List_1" sx={styles.FrontchannelLogout_List_1}>
                 {logout.clients.map(client => (
                     <ListItem
+                        key={client.name}
                         id="FrontchannelLogout_ListItem_1"
                         sx={styles.FrontchannelLogout_ListItem_1}
                     >
                         {client.name}
-                        <iframe id="FrontchannelLogout_iframe_1" />
+                        <iframe
+                            id="FrontchannelLogout_iframe_1"
+                            src={client.frontChannelLogoutUrl}
+                            style={{ display: "none" }}
+                        />
                     </ListItem>
                 ))}
             </List>

@@ -32,7 +32,14 @@ export default function LogoutConfirm(
     const { url, client, logoutConfirm } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template id="LogoutConfirm_Template_1">
+        <Template
+            id="LogoutConfirm_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("logoutConfirmTitle")}
+        >
             <Box id="LogoutConfirm_Box_1" sx={styles.LogoutConfirm_Box_1}>
                 <Typography
                     id="LogoutConfirm_Typography_1"
@@ -41,19 +48,35 @@ export default function LogoutConfirm(
                     {msg("logoutConfirmHeader")}
                 </Typography>
                 <Box
+                    action={url.logoutConfirmAction}
+                    method="POST"
                     component="form"
                     id="LogoutConfirm_Box_2"
                     sx={styles.LogoutConfirm_Box_2}
                 >
                     <TextField
+                        type="hidden"
+                        name="session_code"
+                        value={logoutConfirm.code}
                         id="LogoutConfirm_TextField_1"
                         sx={styles.LogoutConfirm_TextField_1}
                     />
-                    <Box id="LogoutConfirm_Box_3" sx={styles.LogoutConfirm_Box_3}>
+                    <Box
+                        className={kcClsx("kcFormGroupClass")}
+                        id="LogoutConfirm_Box_3"
+                        sx={styles.LogoutConfirm_Box_3}
+                    >
+                        <Box id="LogoutConfirm_Box_4" sx={styles.LogoutConfirm_Box_4}>
+                            <Box
+                                className={kcClsx("kcFormOptionsWrapperClass")}
+                                id="LogoutConfirm_Box_5"
+                                sx={styles.LogoutConfirm_Box_5}
+                            ></Box>
+                        </Box>
                         <Box
                             className={kcClsx("kcFormGroupClass")}
-                            id="LogoutConfirm_Box_4"
-                            sx={styles.LogoutConfirm_Box_4}
+                            id="LogoutConfirm_Box_6"
+                            sx={styles.LogoutConfirm_Box_6}
                         >
                             <TextField
                                 tabIndex={4}
@@ -72,13 +95,14 @@ export default function LogoutConfirm(
                         </Box>
                     </Box>
                 </Box>
-                <Box id="LogoutConfirm_Box_5" sx={styles.LogoutConfirm_Box_5}>
+                <Box id="LogoutConfirm_Box_7" sx={styles.LogoutConfirm_Box_7}>
                     {!logoutConfirm.skipLink && client.baseUrl && (
                         <Typography
                             id="LogoutConfirm_Typography_2"
                             sx={styles.LogoutConfirm_Typography_2}
                         >
                             <Link
+                                href={client.baseUrl}
                                 id="LogoutConfirm_Link_1"
                                 sx={styles.LogoutConfirm_Link_1}
                             >

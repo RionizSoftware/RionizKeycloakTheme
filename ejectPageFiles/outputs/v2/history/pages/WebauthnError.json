@@ -9,7 +9,13 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnError_Template_1\""
+          "id": "id=\"WebauthnError_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage",
+          "headerNode": "headerNode={msg(\"webauthn-error-title\")}"
         }
       }
     ]

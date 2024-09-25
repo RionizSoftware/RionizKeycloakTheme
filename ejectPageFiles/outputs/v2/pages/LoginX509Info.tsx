@@ -32,7 +32,14 @@ export default function LoginX509Info(
     const { url, x509 } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template id="LoginX509Info_Template_1">
+        <Template
+            id="LoginX509Info_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("doLogIn")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}
@@ -41,16 +48,31 @@ export default function LoginX509Info(
                 id="LoginX509Info_Box_1"
                 sx={styles.LoginX509Info_Box_1}
             >
-                <Box id="LoginX509Info_Box_2" sx={styles.LoginX509Info_Box_2}>
-                    <FormLabel
-                        id="LoginX509Info_FormLabel_1"
-                        sx={styles.LoginX509Info_FormLabel_1}
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginX509Info_Box_2"
+                    sx={styles.LoginX509Info_Box_2}
+                >
+                    <Box
+                        className={kcClsx("kcLabelWrapperClass")}
+                        id="LoginX509Info_Box_3"
+                        sx={styles.LoginX509Info_Box_3}
                     >
-                        {msg("clientCertificate")}
-                    </FormLabel>
-
+                        <FormLabel
+                            htmlFor="certificate_subjectDN"
+                            className={kcClsx("kcLabelClass")}
+                            id="LoginX509Info_FormLabel_1"
+                            sx={styles.LoginX509Info_FormLabel_1}
+                        >
+                            {msg("clientCertificate")}
+                        </FormLabel>
+                    </Box>
                     {x509.formData.subjectDN ? (
-                        <Box id="LoginX509Info_Box_3" sx={styles.LoginX509Info_Box_3}>
+                        <Box
+                            className={kcClsx("kcLabelWrapperClass")}
+                            id="LoginX509Info_Box_4"
+                            sx={styles.LoginX509Info_Box_4}
+                        >
                             <FormLabel
                                 className={kcClsx("kcLabelClass")}
                                 id="LoginX509Info_FormLabel_2"
@@ -60,7 +82,11 @@ export default function LoginX509Info(
                             </FormLabel>
                         </Box>
                     ) : (
-                        <Box id="LoginX509Info_Box_4" sx={styles.LoginX509Info_Box_4}>
+                        <Box
+                            className={kcClsx("kcLabelWrapperClass")}
+                            id="LoginX509Info_Box_5"
+                            sx={styles.LoginX509Info_Box_5}
+                        >
                             <FormLabel
                                 className={kcClsx("kcLabelClass")}
                                 id="LoginX509Info_FormLabel_3"
@@ -71,18 +97,32 @@ export default function LoginX509Info(
                         </Box>
                     )}
                 </Box>
-                <Box id="LoginX509Info_Box_5" sx={styles.LoginX509Info_Box_5}>
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginX509Info_Box_6"
+                    sx={styles.LoginX509Info_Box_6}
+                >
                     {x509.formData.isUserEnabled && (
                         <>
-                            <Box id="LoginX509Info_Box_6" sx={styles.LoginX509Info_Box_6}>
+                            <Box
+                                className={kcClsx("kcLabelWrapperClass")}
+                                id="LoginX509Info_Box_7"
+                                sx={styles.LoginX509Info_Box_7}
+                            >
                                 <FormLabel
+                                    htmlFor="username"
+                                    className={kcClsx("kcLabelClass")}
                                     id="LoginX509Info_FormLabel_4"
                                     sx={styles.LoginX509Info_FormLabel_4}
                                 >
                                     {msg("doX509Login")}
                                 </FormLabel>
                             </Box>
-                            <Box id="LoginX509Info_Box_7" sx={styles.LoginX509Info_Box_7}>
+                            <Box
+                                className={kcClsx("kcLabelWrapperClass")}
+                                id="LoginX509Info_Box_8"
+                                sx={styles.LoginX509Info_Box_8}
+                            >
                                 <FormLabel
                                     className={kcClsx("kcLabelClass")}
                                     id="LoginX509Info_FormLabel_5"
@@ -94,18 +134,32 @@ export default function LoginX509Info(
                         </>
                     )}
                 </Box>
-                <Box id="LoginX509Info_Box_8" sx={styles.LoginX509Info_Box_8}>
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginX509Info_Box_9"
+                    sx={styles.LoginX509Info_Box_9}
+                >
                     <Box
                         className={kcClsx("kcFormOptionsClass")}
-                        id="LoginX509Info_Box_9"
-                        sx={styles.LoginX509Info_Box_9}
-                    ></Box>
-                    <Box
-                        className={kcClsx("kcFormButtonsClass")}
                         id="LoginX509Info_Box_10"
                         sx={styles.LoginX509Info_Box_10}
                     >
-                        <Box id="LoginX509Info_Box_11" sx={styles.LoginX509Info_Box_11}>
+                        <Box
+                            className={kcClsx("kcFormOptionsWrapperClass")}
+                            id="LoginX509Info_Box_11"
+                            sx={styles.LoginX509Info_Box_11}
+                        />
+                    </Box>
+                    <Box
+                        className={kcClsx("kcFormButtonsClass")}
+                        id="LoginX509Info_Box_12"
+                        sx={styles.LoginX509Info_Box_12}
+                    >
+                        <Box
+                            className={kcClsx("kcFormButtonsWrapperClass")}
+                            id="LoginX509Info_Box_13"
+                            sx={styles.LoginX509Info_Box_13}
+                        >
                             <TextField
                                 className={kcClsx(
                                     "kcButtonClass",

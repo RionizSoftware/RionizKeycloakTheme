@@ -9,7 +9,12 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_Template_1\""
+          "id": "id=\"SamlPostForm_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"saml.post-form.title\")}"
         }
       }
     ]
@@ -67,7 +72,11 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_form_1\""
+          "id": "id=\"SamlPostForm_form_1\"",
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}"
         }
       },
       {
@@ -76,6 +85,10 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"SamlPostForm_form_1\"",
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}",
           "component": "form"
         }
       },
@@ -84,6 +97,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}",
           "component": "component=\"form\"",
           "id": "SamlPostForm_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
@@ -94,6 +111,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "name": "name=\"saml-post-binding\"",
+          "method": "method=\"post\"",
+          "action": "action={samlPost.url}",
+          "ref": "ref={setHtmlFormElement}",
           "component": "component=\"form\"",
           "id": "SamlPostForm_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
@@ -112,7 +133,10 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_input_1\""
+          "id": "id=\"SamlPostForm_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}"
         }
       },
       {
@@ -120,7 +144,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"SamlPostForm_input_1\""
+          "id": "id=\"SamlPostForm_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}"
         }
       },
       {
@@ -128,6 +155,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}",
           "id": "SamlPostForm_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -137,6 +167,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLRequest\"",
+          "value": "value={samlPost.SAMLRequest}",
           "id": "SamlPostForm_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -154,7 +187,10 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_input_2\""
+          "id": "id=\"SamlPostForm_input_2\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}"
         }
       },
       {
@@ -162,7 +198,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"SamlPostForm_input_2\""
+          "id": "id=\"SamlPostForm_input_2\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}"
         }
       },
       {
@@ -170,6 +209,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}",
           "id": "SamlPostForm_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -179,6 +221,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"SAMLResponse\"",
+          "value": "value={samlPost.SAMLResponse}",
           "id": "SamlPostForm_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -196,7 +241,10 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_input_3\""
+          "id": "id=\"SamlPostForm_input_3\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}"
         }
       },
       {
@@ -204,7 +252,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"SamlPostForm_input_3\""
+          "id": "id=\"SamlPostForm_input_3\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}"
         }
       },
       {
@@ -212,6 +263,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}",
           "id": "SamlPostForm_TextField_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -221,6 +275,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"RelayState\"",
+          "value": "value={samlPost.relayState}",
           "id": "SamlPostForm_TextField_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -295,7 +352,9 @@
         "currentIndex": "8",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"SamlPostForm_input_4\""
+          "id": "id=\"SamlPostForm_input_4\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}"
         }
       },
       {
@@ -303,7 +362,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"SamlPostForm_input_4\""
+          "id": "id=\"SamlPostForm_input_4\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}"
         }
       },
       {
@@ -311,6 +372,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
           "id": "SamlPostForm_TextField_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -320,6 +383,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doContinue\")}",
           "id": "SamlPostForm_TextField_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

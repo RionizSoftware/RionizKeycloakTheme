@@ -32,12 +32,35 @@ export default function LoginOauthGrant(
         classes
     });
     return (
-        <Template id="LoginOauthGrant_Template_1">
+        <Template
+            id="LoginOauthGrant_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            bodyClassName="oauth"
+            headerNode={
+                <>
+                    {client.attributes.logoUri && (
+                        <img id="LoginOauthGrant_img_1" src={client.attributes.logoUri} />
+                    )}
+                    <Typography
+                        id="LoginOauthGrant_Typography_1"
+                        sx={styles.LoginOauthGrant_Typography_1}
+                    >
+                        {client.name
+                            ? msg("oauthGrantTitle", advancedMsgStr(client.name))
+                            : msg("oauthGrantTitle", client.clientId)}
+                    </Typography>
+                </>
+            }
+        >
             <Box id="LoginOauthGrant_Box_1" sx={styles.LoginOauthGrant_Box_1}>
                 <h3 id="LoginOauthGrant_h3_1">{msg("oauthGrantRequest")}</h3>
                 <List id="LoginOauthGrant_List_1" sx={styles.LoginOauthGrant_List_1}>
                     {oauth.clientScopesRequested.map(clientScope => (
                         <ListItem
+                            key={clientScope.consentScreenText}
                             id="LoginOauthGrant_ListItem_1"
                             sx={styles.LoginOauthGrant_ListItem_1}
                         >
@@ -69,6 +92,8 @@ export default function LoginOauthGrant(
                                 <>
                                     {msg("oauthGrantReview")}
                                     <Link
+                                        href={client.attributes.tosUri}
+                                        target="_blank"
                                         id="LoginOauthGrant_Link_1"
                                         sx={styles.LoginOauthGrant_Link_1}
                                     >
@@ -80,6 +105,8 @@ export default function LoginOauthGrant(
                                 <>
                                     {msg("oauthGrantReview")}
                                     <Link
+                                        href={client.attributes.policyUri}
+                                        target="_blank"
                                         id="LoginOauthGrant_Link_2"
                                         sx={styles.LoginOauthGrant_Link_2}
                                     >
@@ -91,42 +118,67 @@ export default function LoginOauthGrant(
                     ))}
 
                 <Box
+                    action={url.oauthAction}
+                    method="POST"
                     component="form"
                     id="LoginOauthGrant_Box_2"
                     sx={styles.LoginOauthGrant_Box_2}
                 >
                     <TextField
+                        type="hidden"
+                        name="code"
+                        value={oauth.code}
                         id="LoginOauthGrant_TextField_1"
                         sx={styles.LoginOauthGrant_TextField_1}
                     />
-                    <Box id="LoginOauthGrant_Box_3" sx={styles.LoginOauthGrant_Box_3}>
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="accept"
-                            type="submit"
-                            value={msgStr("doYes")}
-                            id="LoginOauthGrant_TextField_2"
-                            sx={styles.LoginOauthGrant_TextField_2}
-                        />
-                        <TextField
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="cancel"
-                            type="submit"
-                            value={msgStr("doNo")}
-                            id="LoginOauthGrant_TextField_3"
-                            sx={styles.LoginOauthGrant_TextField_3}
-                        />
+                    <Box
+                        className={kcClsx("kcFormGroupClass")}
+                        id="LoginOauthGrant_Box_3"
+                        sx={styles.LoginOauthGrant_Box_3}
+                    >
+                        <Box id="LoginOauthGrant_Box_4" sx={styles.LoginOauthGrant_Box_4}>
+                            <Box
+                                className={kcClsx("kcFormOptionsWrapperClass")}
+                                id="LoginOauthGrant_Box_5"
+                                sx={styles.LoginOauthGrant_Box_5}
+                            ></Box>
+                        </Box>
+
+                        <Box id="LoginOauthGrant_Box_6" sx={styles.LoginOauthGrant_Box_6}>
+                            <Box
+                                className={kcClsx("kcFormButtonsWrapperClass")}
+                                id="LoginOauthGrant_Box_7"
+                                sx={styles.LoginOauthGrant_Box_7}
+                            >
+                                <TextField
+                                    className={kcClsx(
+                                        "kcButtonClass",
+                                        "kcButtonPrimaryClass",
+                                        "kcButtonLargeClass"
+                                    )}
+                                    name="accept"
+                                    type="submit"
+                                    value={msgStr("doYes")}
+                                    id="LoginOauthGrant_TextField_2"
+                                    sx={styles.LoginOauthGrant_TextField_2}
+                                />
+                                <TextField
+                                    className={kcClsx(
+                                        "kcButtonClass",
+                                        "kcButtonDefaultClass",
+                                        "kcButtonLargeClass"
+                                    )}
+                                    name="cancel"
+                                    type="submit"
+                                    value={msgStr("doNo")}
+                                    id="LoginOauthGrant_TextField_3"
+                                    sx={styles.LoginOauthGrant_TextField_3}
+                                />
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
-                <Box id="LoginOauthGrant_Box_4" sx={styles.LoginOauthGrant_Box_4}></Box>
+                <Box id="LoginOauthGrant_Box_8" sx={styles.LoginOauthGrant_Box_8}></Box>
             </Box>
         </Template>
     );

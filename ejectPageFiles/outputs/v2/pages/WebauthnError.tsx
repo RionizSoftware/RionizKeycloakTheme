@@ -32,7 +32,15 @@ export default function WebauthnError(
         classes
     });
     return (
-        <Template id="WebauthnError_Template_1">
+        <Template
+            id="WebauthnError_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage
+            headerNode={msg("webauthn-error-title")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}

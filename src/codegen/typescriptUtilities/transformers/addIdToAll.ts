@@ -1,6 +1,10 @@
 import ts from "typescript";
 import { TransformerFunctions } from "./types.ts";
-import { createStringAttributeForTag, getAttributeValue } from "./utility.ts";
+import {
+    createStringAttributeForTag,
+    getAttributeValue,
+    removeAttribute
+} from "./utility.ts";
 
 //Id is necessary for history so we add id to all missing components
 export const addIdToAllTransformer = (fileName: string): TransformerFunctions => {
@@ -25,7 +29,12 @@ export const addIdToAllTransformer = (fileName: string): TransformerFunctions =>
             //assign a new id to element
             idAttribute = createStringAttributeForTag("id", tagId);
         }
-        return idAttribute ? ts.factory.createJsxAttributes([idAttribute]) : attributes;
+        return idAttribute
+            ? ts.factory.createJsxAttributes([
+                  idAttribute,
+                  ...removeAttribute(node, "id")
+              ])
+            : attributes;
     };
     return {
         // Handle self-closing JSX elements

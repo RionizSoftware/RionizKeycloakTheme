@@ -20,8 +20,11 @@ export const styles ={
     "Template_Box_12": {},
     "Template_Box_13": {},
     "Template_Box_14": {},
+    "Template_Box_15": {},
+    "Template_Box_16": {},
+    "Template_Box_17": {},
     "Template_TextField_1": {},
     "Template_Link_3": {},
-    "Template_Box_15": {},
-    "Template_Box_16": {}
+    "Template_Box_18": {},
+    "Template_Box_19": {}
 }

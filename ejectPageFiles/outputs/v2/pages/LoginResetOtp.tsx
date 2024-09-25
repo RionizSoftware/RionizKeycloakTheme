@@ -33,7 +33,15 @@ export default function LoginResetOtp(
     const { url, messagesPerField, configuredOtpCredentials } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template id="LoginResetOtp_Template_1">
+        <Template
+            id="LoginResetOtp_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={!messagesPerField.existsError("totp")}
+            headerNode={msg("doLogIn")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}
@@ -42,53 +50,104 @@ export default function LoginResetOtp(
                 id="LoginResetOtp_Box_1"
                 sx={styles.LoginResetOtp_Box_1}
             >
-                <Box id="LoginResetOtp_Box_2" sx={styles.LoginResetOtp_Box_2}>
-                    <Typography
-                        id="LoginResetOtp_Typography_1"
-                        sx={styles.LoginResetOtp_Typography_1}
+                <Box
+                    className={kcClsx("kcInputWrapperClass")}
+                    id="LoginResetOtp_Box_2"
+                    sx={styles.LoginResetOtp_Box_2}
+                >
+                    <Box
+                        className={kcClsx("kcInfoAreaWrapperClass")}
+                        id="LoginResetOtp_Box_3"
+                        sx={styles.LoginResetOtp_Box_3}
                     >
-                        {msg("otp-reset-description")}
-                    </Typography>
-                    {configuredOtpCredentials.userOtpCredentials.map(
-                        (otpCredential, index) => (
-                            <Box id="LoginResetOtp_Box_3" sx={styles.LoginResetOtp_Box_3}>
-                                <TextField
-                                    id="LoginResetOtp_TextField_1"
-                                    sx={styles.LoginResetOtp_TextField_1}
-                                />
-                                <FormLabel
-                                    id="LoginResetOtp_FormLabel_1"
-                                    sx={styles.LoginResetOtp_FormLabel_1}
+                        <Typography
+                            id="LoginResetOtp_Typography_1"
+                            sx={styles.LoginResetOtp_Typography_1}
+                        >
+                            {msg("otp-reset-description")}
+                        </Typography>
+                        {configuredOtpCredentials.userOtpCredentials.map(
+                            (otpCredential, index) => (
+                                <Box
+                                    key={otpCredential.id}
+                                    id="LoginResetOtp_Box_4"
+                                    sx={styles.LoginResetOtp_Box_4}
                                 >
-                                    <span id="LoginResetOtp_span_1">
-                                        <i id="LoginResetOtp_i_1"></i>
-
-                                        <span id="LoginResetOtp_span_3">
-                                            {otpCredential.userLabel}
+                                    <TextField
+                                        className={kcClsx("kcLoginOTPListInputClass")}
+                                        type="radio"
+                                        name="selectedCredentialId"
+                                        value={otpCredential.id}
+                                        defaultChecked={
+                                            otpCredential.id ===
+                                            configuredOtpCredentials.selectedCredentialId
+                                        }
+                                        id="LoginResetOtp_TextField_1"
+                                        sx={styles.LoginResetOtp_TextField_1}
+                                    />
+                                    <FormLabel
+                                        htmlFor={`kc-otp-credential-${index}`}
+                                        className={kcClsx("kcLoginOTPListClass")}
+                                        tabIndex={index}
+                                        id="LoginResetOtp_FormLabel_1"
+                                        sx={styles.LoginResetOtp_FormLabel_1}
+                                    >
+                                        <span
+                                            id="LoginResetOtp_span_1"
+                                            className={kcClsx(
+                                                "kcLoginOTPListItemHeaderClass"
+                                            )}
+                                        >
+                                            <span
+                                                id="LoginResetOtp_span_2"
+                                                className={kcClsx(
+                                                    "kcLoginOTPListItemIconBodyClass"
+                                                )}
+                                            >
+                                                <i
+                                                    id="LoginResetOtp_i_1"
+                                                    className={kcClsx(
+                                                        "kcLoginOTPListItemIconClass"
+                                                    )}
+                                                    aria-hidden="true"
+                                                ></i>
+                                            </span>
+                                            <span
+                                                id="LoginResetOtp_span_3"
+                                                className={kcClsx(
+                                                    "kcLoginOTPListItemTitleClass"
+                                                )}
+                                            >
+                                                {otpCredential.userLabel}
+                                            </span>
                                         </span>
-                                    </span>
-                                </FormLabel>
-                            </Box>
-                        )
-                    )}
-                    <Box id="LoginResetOtp_Box_4" sx={styles.LoginResetOtp_Box_4}>
+                                    </FormLabel>
+                                </Box>
+                            )
+                        )}
                         <Box
-                            className={kcClsx("kcFormButtonsClass")}
+                            className={kcClsx("kcFormGroupClass")}
                             id="LoginResetOtp_Box_5"
                             sx={styles.LoginResetOtp_Box_5}
                         >
-                            <TextField
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonBlockClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                value={msgStr("doSubmit")}
-                                id="LoginResetOtp_TextField_2"
-                                sx={styles.LoginResetOtp_TextField_2}
-                            />
+                            <Box
+                                className={kcClsx("kcFormButtonsClass")}
+                                id="LoginResetOtp_Box_6"
+                                sx={styles.LoginResetOtp_Box_6}
+                            >
+                                <TextField
+                                    className={kcClsx(
+                                        "kcButtonClass",
+                                        "kcButtonPrimaryClass",
+                                        "kcButtonBlockClass",
+                                        "kcButtonLargeClass"
+                                    )}
+                                    type="submit"
+                                    value={msgStr("doSubmit")}
+                                    id="LoginResetOtp_TextField_2"
+                                    sx={styles.LoginResetOtp_TextField_2}
+                                />
+                            </Box>
                         </Box>
                     </Box>
                 </Box>

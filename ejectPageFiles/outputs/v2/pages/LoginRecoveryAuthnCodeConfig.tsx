@@ -36,20 +36,42 @@ export default function LoginRecoveryAuthnCodeConfig(
     const olRecoveryCodesListId = "kc-recovery-codes-list";
     useScript({ olRecoveryCodesListId, i18n });
     return (
-        <Template id="LoginRecoveryAuthnCodeConfig_Template_1">
+        <Template
+            id="LoginRecoveryAuthnCodeConfig_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("recovery-code-config-header")}
+        >
             <Box
+                className={clsx(
+                    "pf-c-alert",
+                    "pf-m-warning",
+                    "pf-m-inline",
+                    kcClsx("kcRecoveryCodesWarning")
+                )}
+                aria-label="Warning alert"
                 id="LoginRecoveryAuthnCodeConfig_Box_1"
                 sx={styles.LoginRecoveryAuthnCodeConfig_Box_1}
             >
-                <i id="LoginRecoveryAuthnCodeConfig_i_1" />
-
+                <Box
+                    id="LoginRecoveryAuthnCodeConfig_Box_2"
+                    sx={styles.LoginRecoveryAuthnCodeConfig_Box_2}
+                >
+                    <i
+                        id="LoginRecoveryAuthnCodeConfig_i_1"
+                        className="pficon-warning-triangle-o"
+                        aria-hidden="true"
+                    />
+                </Box>
                 <h4 id="LoginRecoveryAuthnCodeConfig_h4_1">
                     <span id="LoginRecoveryAuthnCodeConfig_span_1">Warning alert:</span>
                     {msg("recovery-code-config-warning-title")}
                 </h4>
                 <Box
-                    id="LoginRecoveryAuthnCodeConfig_Box_2"
-                    sx={styles.LoginRecoveryAuthnCodeConfig_Box_2}
+                    id="LoginRecoveryAuthnCodeConfig_Box_3"
+                    sx={styles.LoginRecoveryAuthnCodeConfig_Box_3}
                 >
                     <Typography
                         id="LoginRecoveryAuthnCodeConfig_Typography_1"
@@ -60,10 +82,14 @@ export default function LoginRecoveryAuthnCodeConfig(
                 </Box>
             </Box>
 
-            <ol id="LoginRecoveryAuthnCodeConfig_ol_1">
+            <ol
+                id="LoginRecoveryAuthnCodeConfig_ol_1"
+                className={kcClsx("kcRecoveryCodesList")}
+            >
                 {recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesList.map(
                     (code, index) => (
                         <ListItem
+                            key={index}
                             id="LoginRecoveryAuthnCodeConfig_ListItem_1"
                             sx={styles.LoginRecoveryAuthnCodeConfig_ListItem_1}
                         >
@@ -78,8 +104,9 @@ export default function LoginRecoveryAuthnCodeConfig(
 
             {/* actions */}
             <Box
-                id="LoginRecoveryAuthnCodeConfig_Box_3"
-                sx={styles.LoginRecoveryAuthnCodeConfig_Box_3}
+                className={kcClsx("kcRecoveryCodesActions")}
+                id="LoginRecoveryAuthnCodeConfig_Box_4"
+                sx={styles.LoginRecoveryAuthnCodeConfig_Box_4}
             >
                 <Button
                     className={clsx("pf-c-button", "pf-m-link")}
@@ -87,7 +114,11 @@ export default function LoginRecoveryAuthnCodeConfig(
                     id="LoginRecoveryAuthnCodeConfig_Button_1"
                     sx={styles.LoginRecoveryAuthnCodeConfig_Button_1}
                 >
-                    <i id="LoginRecoveryAuthnCodeConfig_i_2" />{" "}
+                    <i
+                        id="LoginRecoveryAuthnCodeConfig_i_2"
+                        className="pficon-print"
+                        aria-hidden="true"
+                    />{" "}
                     {msg("recovery-codes-print")}
                 </Button>
                 <Button
@@ -96,7 +127,11 @@ export default function LoginRecoveryAuthnCodeConfig(
                     id="LoginRecoveryAuthnCodeConfig_Button_2"
                     sx={styles.LoginRecoveryAuthnCodeConfig_Button_2}
                 >
-                    <i id="LoginRecoveryAuthnCodeConfig_i_3" />{" "}
+                    <i
+                        id="LoginRecoveryAuthnCodeConfig_i_3"
+                        className="pficon-save"
+                        aria-hidden="true"
+                    />{" "}
                     {msg("recovery-codes-download")}
                 </Button>
                 <Button
@@ -105,15 +140,20 @@ export default function LoginRecoveryAuthnCodeConfig(
                     id="LoginRecoveryAuthnCodeConfig_Button_3"
                     sx={styles.LoginRecoveryAuthnCodeConfig_Button_3}
                 >
-                    <i id="LoginRecoveryAuthnCodeConfig_i_4" />{" "}
+                    <i
+                        id="LoginRecoveryAuthnCodeConfig_i_4"
+                        className="pficon-blueprint"
+                        aria-hidden="true"
+                    />{" "}
                     {msg("recovery-codes-copy")}
                 </Button>
             </Box>
 
             {/* confirmation checkbox */}
             <Box
-                id="LoginRecoveryAuthnCodeConfig_Box_4"
-                sx={styles.LoginRecoveryAuthnCodeConfig_Box_4}
+                className={kcClsx("kcFormOptionsClass")}
+                id="LoginRecoveryAuthnCodeConfig_Box_5"
+                sx={styles.LoginRecoveryAuthnCodeConfig_Box_5}
             >
                 <TextField
                     className={kcClsx("kcCheckInputClass")}
@@ -128,6 +168,7 @@ export default function LoginRecoveryAuthnCodeConfig(
                     sx={styles.LoginRecoveryAuthnCodeConfig_TextField_1}
                 />
                 <FormLabel
+                    htmlFor="kcRecoveryCodesConfirmationCheck"
                     id="LoginRecoveryAuthnCodeConfig_FormLabel_1"
                     sx={styles.LoginRecoveryAuthnCodeConfig_FormLabel_1}
                 >
@@ -140,14 +181,22 @@ export default function LoginRecoveryAuthnCodeConfig(
                 className={kcClsx("kcFormGroupClass")}
                 method="post"
                 component="form"
-                id="LoginRecoveryAuthnCodeConfig_Box_5"
-                sx={styles.LoginRecoveryAuthnCodeConfig_Box_5}
+                id="LoginRecoveryAuthnCodeConfig_Box_6"
+                sx={styles.LoginRecoveryAuthnCodeConfig_Box_6}
             >
                 <TextField
+                    type="hidden"
+                    name="generatedRecoveryAuthnCodes"
+                    value={
+                        recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString
+                    }
                     id="LoginRecoveryAuthnCodeConfig_TextField_2"
                     sx={styles.LoginRecoveryAuthnCodeConfig_TextField_2}
                 />
                 <TextField
+                    type="hidden"
+                    name="generatedAt"
+                    value={recoveryAuthnCodesConfigBean.generatedAt}
                     id="LoginRecoveryAuthnCodeConfig_TextField_3"
                     sx={styles.LoginRecoveryAuthnCodeConfig_TextField_3}
                 />
@@ -159,7 +208,11 @@ export default function LoginRecoveryAuthnCodeConfig(
                     sx={styles.LoginRecoveryAuthnCodeConfig_TextField_4}
                 />
 
-                <LogoutOtherSessions id="LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1" />
+                <LogoutOtherSessions
+                    id="LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1"
+                    kcClsx={kcClsx}
+                    i18n={i18n}
+                />
 
                 {isAppInitiatedAction ? (
                     <>
@@ -215,27 +268,33 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     return (
         <Box
             className={kcClsx("kcFormOptionsClass")}
-            id="LoginRecoveryAuthnCodeConfig_Box_6"
-            sx={styles.LoginRecoveryAuthnCodeConfig_Box_6}
+            id="LoginRecoveryAuthnCodeConfig_Box_7"
+            sx={styles.LoginRecoveryAuthnCodeConfig_Box_7}
         >
             <Box
-                id="LoginRecoveryAuthnCodeConfig_Box_7"
-                sx={styles.LoginRecoveryAuthnCodeConfig_Box_7}
+                className={kcClsx("kcFormOptionsWrapperClass")}
+                id="LoginRecoveryAuthnCodeConfig_Box_8"
+                sx={styles.LoginRecoveryAuthnCodeConfig_Box_8}
             >
-                <FormLabel
-                    id="LoginRecoveryAuthnCodeConfig_FormLabel_2"
-                    sx={styles.LoginRecoveryAuthnCodeConfig_FormLabel_2}
+                <Box
+                    id="LoginRecoveryAuthnCodeConfig_Box_9"
+                    sx={styles.LoginRecoveryAuthnCodeConfig_Box_9}
                 >
-                    <TextField
-                        type="checkbox"
-                        name="logout-sessions"
-                        value="on"
-                        defaultChecked={true}
-                        id="LoginRecoveryAuthnCodeConfig_TextField_7"
-                        sx={styles.LoginRecoveryAuthnCodeConfig_TextField_7}
-                    />
-                    {msg("logoutOtherSessions")}
-                </FormLabel>
+                    <FormLabel
+                        id="LoginRecoveryAuthnCodeConfig_FormLabel_2"
+                        sx={styles.LoginRecoveryAuthnCodeConfig_FormLabel_2}
+                    >
+                        <TextField
+                            type="checkbox"
+                            name="logout-sessions"
+                            value="on"
+                            defaultChecked={true}
+                            id="LoginRecoveryAuthnCodeConfig_TextField_7"
+                            sx={styles.LoginRecoveryAuthnCodeConfig_TextField_7}
+                        />
+                        {msg("logoutOtherSessions")}
+                    </FormLabel>
+                </Box>
             </Box>
         </Box>
     );

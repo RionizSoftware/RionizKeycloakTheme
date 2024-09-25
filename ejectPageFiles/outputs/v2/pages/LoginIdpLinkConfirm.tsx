@@ -32,7 +32,14 @@ export default function LoginIdpLinkConfirm(
     const { url, idpAlias } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="LoginIdpLinkConfirm_Template_1">
+        <Template
+            id="LoginIdpLinkConfirm_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("confirmLinkIdpTitle")}
+        >
             <Box
                 action={url.loginAction}
                 method="post"
@@ -40,7 +47,11 @@ export default function LoginIdpLinkConfirm(
                 id="LoginIdpLinkConfirm_Box_1"
                 sx={styles.LoginIdpLinkConfirm_Box_1}
             >
-                <Box id="LoginIdpLinkConfirm_Box_2" sx={styles.LoginIdpLinkConfirm_Box_2}>
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginIdpLinkConfirm_Box_2"
+                    sx={styles.LoginIdpLinkConfirm_Box_2}
+                >
                     <Button
                         type="submit"
                         className={kcClsx(

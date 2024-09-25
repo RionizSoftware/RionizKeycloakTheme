@@ -9,7 +9,13 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"FrontchannelLogout_Template_1\""
+          "id": "id=\"FrontchannelLogout_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "documentTitle": "documentTitle={msgStr(\"frontchannel-logout.title\")}",
+          "headerNode": "headerNode={msg(\"frontchannel-logout.title\")}"
         }
       }
     ]
@@ -109,7 +115,8 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"FrontchannelLogout_li_1\""
+          "id": "id=\"FrontchannelLogout_li_1\"",
+          "key": "key={client.name}"
         }
       },
       {
@@ -117,7 +124,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"FrontchannelLogout_li_1\""
+          "id": "id=\"FrontchannelLogout_li_1\"",
+          "key": "key={client.name}"
         }
       },
       {
@@ -125,6 +133,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "key": "key={client.name}",
           "id": "FrontchannelLogout_ListItem_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -134,6 +143,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "key": "key={client.name}",
           "id": "FrontchannelLogout_ListItem_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -150,7 +160,9 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"FrontchannelLogout_iframe_1\""
+          "id": "id=\"FrontchannelLogout_iframe_1\"",
+          "src": "src={client.frontChannelLogoutUrl}",
+          "style": "style={{ display: \"none\" }}"
         }
       }
     ]

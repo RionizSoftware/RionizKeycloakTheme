@@ -9,7 +9,13 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Error_Template_1\""
+          "id": "id=\"Error_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={false}",
+          "headerNode": "headerNode={msg(\"errorTitle\")}"
         }
       }
     ]
@@ -67,7 +73,18 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Error_p_1\""
+          "id": "id=\"Error_p_1\"",
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}"
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Error_p_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}"
         }
       },
       {
@@ -75,7 +92,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Error_p_1\""
+          "id": "id=\"Error_p_1\"",
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}"
         }
       },
       {
@@ -83,6 +102,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}",
           "id": "Error_Typography_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -92,6 +113,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{ __html: message.summary }}",
           "id": "Error_Typography_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

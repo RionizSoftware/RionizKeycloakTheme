@@ -27,9 +27,22 @@ export default function Error(
     const { message, client, skipLink } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="Error_Template_1">
+        <Template
+            id="Error_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={false}
+            headerNode={msg("errorTitle")}
+        >
             <Box id="Error_Box_1" sx={styles.Error_Box_1}>
-                <Typography id="Error_Typography_1" sx={styles.Error_Typography_1} />
+                <Typography
+                    className="instruction"
+                    dangerouslySetInnerHTML={{ __html: message.summary }}
+                    id="Error_Typography_1"
+                    sx={styles.Error_Typography_1}
+                />
                 {!skipLink && client !== undefined && client.baseUrl !== undefined && (
                     <Typography id="Error_Typography_2" sx={styles.Error_Typography_2}>
                         <Link

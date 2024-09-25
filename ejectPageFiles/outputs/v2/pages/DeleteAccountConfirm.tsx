@@ -32,16 +32,27 @@ export default function DeleteAccountConfirm(
     const { url, triggered_from_aia } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template id="DeleteAccountConfirm_Template_1">
+        <Template
+            id="DeleteAccountConfirm_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("deleteAccountConfirm")}
+        >
             <Box
+                action={url.loginAction}
+                method="post"
                 component="form"
                 id="DeleteAccountConfirm_Box_1"
                 sx={styles.DeleteAccountConfirm_Box_1}
             >
                 <Box
+                    style={{ marginTop: "0", marginBottom: "30px" }}
                     id="DeleteAccountConfirm_Box_2"
                     sx={styles.DeleteAccountConfirm_Box_2}
                 >
+                    <span id="DeleteAccountConfirm_span_1"></span>
                     {msg("irreversibleAction")}
                 </Box>
                 <Typography
@@ -51,6 +62,11 @@ export default function DeleteAccountConfirm(
                     {msg("deletingImplies")}
                 </Typography>
                 <List
+                    style={{
+                        color: "#72767b",
+                        listStyle: "disc",
+                        listStylePosition: "inside"
+                    }}
                     id="DeleteAccountConfirm_List_1"
                     sx={styles.DeleteAccountConfirm_List_1}
                 >
@@ -78,11 +94,27 @@ export default function DeleteAccountConfirm(
                     sx={styles.DeleteAccountConfirm_Box_3}
                 >
                     <TextField
+                        className={kcClsx(
+                            "kcButtonClass",
+                            "kcButtonPrimaryClass",
+                            "kcButtonLargeClass"
+                        )}
+                        type="submit"
+                        value={msgStr("doConfirmDelete")}
                         id="DeleteAccountConfirm_TextField_1"
                         sx={styles.DeleteAccountConfirm_TextField_1}
                     />
                     {triggered_from_aia && (
                         <Button
+                            className={kcClsx(
+                                "kcButtonClass",
+                                "kcButtonDefaultClass",
+                                "kcButtonLargeClass"
+                            )}
+                            style={{ marginLeft: "calc(100% - 220px)" }}
+                            type="submit"
+                            name="cancel-aia"
+                            value="true"
                             id="DeleteAccountConfirm_Button_1"
                             sx={styles.DeleteAccountConfirm_Button_1}
                         >

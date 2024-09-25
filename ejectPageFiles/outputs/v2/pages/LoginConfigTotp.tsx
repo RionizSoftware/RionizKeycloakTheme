@@ -32,7 +32,15 @@ export default function LoginConfigTotp(
     const { url, isAppInitiatedAction, totp, mode, messagesPerField } = kcContext;
     const { msg, msgStr, advancedMsg } = i18n;
     return (
-        <Template id="LoginConfigTotp_Template_1">
+        <Template
+            id="LoginConfigTotp_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("loginTotpTitle")}
+            displayMessage={!messagesPerField.existsError("totp", "userLabel")}
+        >
             <>
                 <ol id="kc-totp-settings">
                     <ListItem
@@ -52,6 +60,7 @@ export default function LoginConfigTotp(
                         >
                             {totp.supportedApplications.map(app => (
                                 <ListItem
+                                    key={app}
                                     id="LoginConfigTotp_ListItem_2"
                                     sx={styles.LoginConfigTotp_ListItem_2}
                                 >
@@ -211,15 +220,31 @@ export default function LoginConfigTotp(
                     id="LoginConfigTotp_Box_1"
                     sx={styles.LoginConfigTotp_Box_1}
                 >
-                    <Box id="LoginConfigTotp_Box_2" sx={styles.LoginConfigTotp_Box_2}>
-                        <FormLabel
-                            id="LoginConfigTotp_FormLabel_1"
-                            sx={styles.LoginConfigTotp_FormLabel_1}
+                    <Box
+                        className={kcClsx("kcFormGroupClass")}
+                        id="LoginConfigTotp_Box_2"
+                        sx={styles.LoginConfigTotp_Box_2}
+                    >
+                        <Box
+                            className={kcClsx("kcInputWrapperClass")}
+                            id="LoginConfigTotp_Box_3"
+                            sx={styles.LoginConfigTotp_Box_3}
                         >
-                            {msg("authenticatorCode")}
-                        </FormLabel>{" "}
-                        <span id="LoginConfigTotp_span_2">*</span>
-                        <Box id="LoginConfigTotp_Box_3" sx={styles.LoginConfigTotp_Box_3}>
+                            <FormLabel
+                                htmlFor="totp"
+                                className={kcClsx("kcLabelClass")}
+                                id="LoginConfigTotp_FormLabel_1"
+                                sx={styles.LoginConfigTotp_FormLabel_1}
+                            >
+                                {msg("authenticatorCode")}
+                            </FormLabel>{" "}
+                            <span id="LoginConfigTotp_span_2">*</span>
+                        </Box>
+                        <Box
+                            className={kcClsx("kcInputWrapperClass")}
+                            id="LoginConfigTotp_Box_4"
+                            sx={styles.LoginConfigTotp_Box_4}
+                        >
                             <TextField
                                 type="text"
                                 name="totp"
@@ -258,17 +283,33 @@ export default function LoginConfigTotp(
                         )}
                     </Box>
 
-                    <Box id="LoginConfigTotp_Box_4" sx={styles.LoginConfigTotp_Box_4}>
-                        <FormLabel
-                            id="LoginConfigTotp_FormLabel_2"
-                            sx={styles.LoginConfigTotp_FormLabel_2}
+                    <Box
+                        className={kcClsx("kcFormGroupClass")}
+                        id="LoginConfigTotp_Box_5"
+                        sx={styles.LoginConfigTotp_Box_5}
+                    >
+                        <Box
+                            className={kcClsx("kcInputWrapperClass")}
+                            id="LoginConfigTotp_Box_6"
+                            sx={styles.LoginConfigTotp_Box_6}
                         >
-                            {msg("loginTotpDeviceName")}
-                        </FormLabel>{" "}
-                        {totp.otpCredentials.length >= 1 && (
-                            <span id="LoginConfigTotp_span_4">*</span>
-                        )}
-                        <Box id="LoginConfigTotp_Box_5" sx={styles.LoginConfigTotp_Box_5}>
+                            <FormLabel
+                                htmlFor="userLabel"
+                                className={kcClsx("kcLabelClass")}
+                                id="LoginConfigTotp_FormLabel_2"
+                                sx={styles.LoginConfigTotp_FormLabel_2}
+                            >
+                                {msg("loginTotpDeviceName")}
+                            </FormLabel>{" "}
+                            {totp.otpCredentials.length >= 1 && (
+                                <span id="LoginConfigTotp_span_4">*</span>
+                            )}
+                        </Box>
+                        <Box
+                            className={kcClsx("kcInputWrapperClass")}
+                            id="LoginConfigTotp_Box_7"
+                            sx={styles.LoginConfigTotp_Box_7}
+                        >
                             <TextField
                                 type="text"
                                 name="userLabel"
@@ -291,8 +332,16 @@ export default function LoginConfigTotp(
                         </Box>
                     </Box>
 
-                    <Box id="LoginConfigTotp_Box_6" sx={styles.LoginConfigTotp_Box_6}>
-                        <LogoutOtherSessions id="LoginConfigTotp_LogoutOtherSessions_1" />
+                    <Box
+                        className={kcClsx("kcFormGroupClass")}
+                        id="LoginConfigTotp_Box_8"
+                        sx={styles.LoginConfigTotp_Box_8}
+                    >
+                        <LogoutOtherSessions
+                            id="LoginConfigTotp_LogoutOtherSessions_1"
+                            kcClsx={kcClsx}
+                            i18n={i18n}
+                        />
                     </Box>
 
                     {isAppInitiatedAction ? (
@@ -348,24 +397,30 @@ function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
     return (
         <Box
             className={kcClsx("kcFormOptionsClass")}
-            id="LoginConfigTotp_Box_7"
-            sx={styles.LoginConfigTotp_Box_7}
+            id="LoginConfigTotp_Box_9"
+            sx={styles.LoginConfigTotp_Box_9}
         >
-            <Box id="LoginConfigTotp_Box_8" sx={styles.LoginConfigTotp_Box_8}>
-                <FormLabel
-                    id="LoginConfigTotp_FormLabel_3"
-                    sx={styles.LoginConfigTotp_FormLabel_3}
-                >
-                    <TextField
-                        type="checkbox"
-                        name="logout-sessions"
-                        value="on"
-                        defaultChecked={true}
-                        id="LoginConfigTotp_TextField_7"
-                        sx={styles.LoginConfigTotp_TextField_7}
-                    />
-                    {msg("logoutOtherSessions")}
-                </FormLabel>
+            <Box
+                className={kcClsx("kcFormOptionsWrapperClass")}
+                id="LoginConfigTotp_Box_10"
+                sx={styles.LoginConfigTotp_Box_10}
+            >
+                <Box id="LoginConfigTotp_Box_11" sx={styles.LoginConfigTotp_Box_11}>
+                    <FormLabel
+                        id="LoginConfigTotp_FormLabel_3"
+                        sx={styles.LoginConfigTotp_FormLabel_3}
+                    >
+                        <TextField
+                            type="checkbox"
+                            name="logout-sessions"
+                            value="on"
+                            defaultChecked={true}
+                            id="LoginConfigTotp_TextField_7"
+                            sx={styles.LoginConfigTotp_TextField_7}
+                        />
+                        {msg("logoutOtherSessions")}
+                    </FormLabel>
+                </Box>
             </Box>
         </Box>
     );

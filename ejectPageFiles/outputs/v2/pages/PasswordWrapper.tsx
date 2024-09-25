@@ -31,10 +31,30 @@ export function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="PasswordWrapper_Box_1" sx={styles.PasswordWrapper_Box_1}>
+        <Box
+            className={kcClsx("kcInputGroup")}
+            id="PasswordWrapper_Box_1"
+            sx={styles.PasswordWrapper_Box_1}
+        >
             {children}
-            <Button id="PasswordWrapper_Button_1" sx={styles.PasswordWrapper_Button_1}>
-                <i id="PasswordWrapper_i_1" />
+            <Button
+                type="button"
+                className={kcClsx("kcFormPasswordVisibilityButtonClass")}
+                aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
+                aria-controls={passwordInputId}
+                onClick={toggleIsPasswordRevealed}
+                id="PasswordWrapper_Button_1"
+                sx={styles.PasswordWrapper_Button_1}
+            >
+                <i
+                    id="PasswordWrapper_i_1"
+                    className={kcClsx(
+                        isPasswordRevealed
+                            ? "kcFormPasswordVisibilityIconHide"
+                            : "kcFormPasswordVisibilityIconShow"
+                    )}
+                    aria-hidden
+                />
             </Button>
         </Box>
     );

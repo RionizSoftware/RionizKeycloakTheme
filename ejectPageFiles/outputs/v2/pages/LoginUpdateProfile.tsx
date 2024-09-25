@@ -46,7 +46,16 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
     const { msg, msgStr } = i18n;
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
     return (
-        <Template id="LoginUpdateProfile_Template_1">
+        <Template
+            id="LoginUpdateProfile_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayRequiredFields
+            headerNode={msg("loginProfileTitle")}
+            displayMessage={messagesPerField.exists("global")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}
@@ -55,24 +64,59 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
                 id="LoginUpdateProfile_Box_1"
                 sx={styles.LoginUpdateProfile_Box_1}
             >
-                <UserProfileFormFields id="LoginUpdateProfile_UserProfileFormFields_1" />
-                <Box id="LoginUpdateProfile_Box_2" sx={styles.LoginUpdateProfile_Box_2}>
+                <UserProfileFormFields
+                    id="LoginUpdateProfile_UserProfileFormFields_1"
+                    kcContext={kcContext}
+                    i18n={i18n}
+                    kcClsx={kcClsx}
+                    onIsFormSubmittableValueChange={setIsFormSubmittable}
+                    doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                />
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginUpdateProfile_Box_2"
+                    sx={styles.LoginUpdateProfile_Box_2}
+                >
                     <Box
                         className={kcClsx("kcFormOptionsClass")}
                         id="LoginUpdateProfile_Box_3"
                         sx={styles.LoginUpdateProfile_Box_3}
-                    ></Box>
+                    >
+                        <Box
+                            className={kcClsx("kcFormOptionsWrapperClass")}
+                            id="LoginUpdateProfile_Box_4"
+                            sx={styles.LoginUpdateProfile_Box_4}
+                        />
+                    </Box>
                     <Box
                         className={kcClsx("kcFormButtonsClass")}
-                        id="LoginUpdateProfile_Box_4"
-                        sx={styles.LoginUpdateProfile_Box_4}
+                        id="LoginUpdateProfile_Box_5"
+                        sx={styles.LoginUpdateProfile_Box_5}
                     >
                         <TextField
+                            disabled={!isFormSubmittable}
+                            className={kcClsx(
+                                "kcButtonClass",
+                                "kcButtonPrimaryClass",
+                                !isAppInitiatedAction && "kcButtonBlockClass",
+                                "kcButtonLargeClass"
+                            )}
+                            type="submit"
+                            value={msgStr("doSubmit")}
                             id="LoginUpdateProfile_TextField_1"
                             sx={styles.LoginUpdateProfile_TextField_1}
                         />
                         {isAppInitiatedAction && (
                             <Button
+                                className={kcClsx(
+                                    "kcButtonClass",
+                                    "kcButtonDefaultClass",
+                                    "kcButtonLargeClass"
+                                )}
+                                type="submit"
+                                name="cancel-aia"
+                                value="true"
+                                formNoValidate
                                 id="LoginUpdateProfile_Button_1"
                                 sx={styles.LoginUpdateProfile_Button_1}
                             >

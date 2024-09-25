@@ -32,7 +32,14 @@ export default function LoginIdpLinkConfirmOverride(
     const { url, idpDisplayName } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="LoginIdpLinkConfirmOverride_Template_1">
+        <Template
+            id="LoginIdpLinkConfirmOverride_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("confirmOverrideIdpTitle")}
+        >
             <Box
                 action={url.loginAction}
                 method="post"

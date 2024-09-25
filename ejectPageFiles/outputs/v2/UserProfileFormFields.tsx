@@ -52,47 +52,96 @@ export default function UserProfileFormFields(
             {formFieldStates.map(({ attribute, displayableErrors, valueOrValues }) => {
                 return (
                     <Box
+                        key={attribute.name}
                         id="UserProfileFormFields_Box_1"
                         sx={styles.UserProfileFormFields_Box_1}
                     >
-                        <GroupLabel id="UserProfileFormFields_GroupLabel_1" />
+                        <GroupLabel
+                            id="UserProfileFormFields_GroupLabel_1"
+                            attribute={attribute}
+                            groupNameRef={groupNameRef}
+                            i18n={i18n}
+                            kcClsx={kcClsx}
+                        />
                         {BeforeField !== undefined && (
-                            <BeforeField id="UserProfileFormFields_BeforeField_1" />
+                            <BeforeField
+                                id="UserProfileFormFields_BeforeField_1"
+                                attribute={attribute}
+                                dispatchFormAction={dispatchFormAction}
+                                displayableErrors={displayableErrors}
+                                valueOrValues={valueOrValues}
+                                kcClsx={kcClsx}
+                                i18n={i18n}
+                            />
                         )}
                         <Box
+                            className={kcClsx("kcFormGroupClass")}
+                            style={{
+                                display:
+                                    attribute.name === "password-confirm" &&
+                                    !doMakeUserConfirmPassword
+                                        ? "none"
+                                        : undefined
+                            }}
                             id="UserProfileFormFields_Box_2"
                             sx={styles.UserProfileFormFields_Box_2}
                         >
-                            <FormLabel
-                                id="UserProfileFormFields_FormLabel_1"
-                                sx={styles.UserProfileFormFields_FormLabel_1}
-                            >
-                                {advancedMsg(attribute.displayName ?? "")}
-                            </FormLabel>
-                            {attribute.required && <> *</>}
-
                             <Box
+                                className={kcClsx("kcLabelWrapperClass")}
                                 id="UserProfileFormFields_Box_3"
                                 sx={styles.UserProfileFormFields_Box_3}
+                            >
+                                <FormLabel
+                                    htmlFor={attribute.name}
+                                    className={kcClsx("kcLabelClass")}
+                                    id="UserProfileFormFields_FormLabel_1"
+                                    sx={styles.UserProfileFormFields_FormLabel_1}
+                                >
+                                    {advancedMsg(attribute.displayName ?? "")}
+                                </FormLabel>
+                                {attribute.required && <> *</>}
+                            </Box>
+                            <Box
+                                className={kcClsx("kcInputWrapperClass")}
+                                id="UserProfileFormFields_Box_4"
+                                sx={styles.UserProfileFormFields_Box_4}
                             >
                                 {attribute.annotations.inputHelperTextBefore !==
                                     undefined && (
                                     <Box
-                                        id="UserProfileFormFields_Box_4"
-                                        sx={styles.UserProfileFormFields_Box_4}
+                                        className={kcClsx("kcInputHelperTextBeforeClass")}
+                                        aria-live="polite"
+                                        id="UserProfileFormFields_Box_5"
+                                        sx={styles.UserProfileFormFields_Box_5}
                                     >
                                         {advancedMsg(
                                             attribute.annotations.inputHelperTextBefore
                                         )}
                                     </Box>
                                 )}
-                                <InputFieldByType id="UserProfileFormFields_InputFieldByType_1" />
-                                <FieldErrors id="UserProfileFormFields_FieldErrors_1" />
+                                <InputFieldByType
+                                    id="UserProfileFormFields_InputFieldByType_1"
+                                    attribute={attribute}
+                                    valueOrValues={valueOrValues}
+                                    displayableErrors={displayableErrors}
+                                    dispatchFormAction={dispatchFormAction}
+                                    kcClsx={kcClsx}
+                                    i18n={i18n}
+                                />
+                                <FieldErrors
+                                    id="UserProfileFormFields_FieldErrors_1"
+                                    attribute={attribute}
+                                    displayableErrors={displayableErrors}
+                                    kcClsx={kcClsx}
+                                    fieldIndex={undefined}
+                                />
                                 {attribute.annotations.inputHelperTextAfter !==
                                     undefined && (
                                     <Box
-                                        id="UserProfileFormFields_Box_5"
-                                        sx={styles.UserProfileFormFields_Box_5}
+                                        className={kcClsx("kcInputHelperTextAfterClass")}
+                                        aria-live="polite"
+                                        id="UserProfileFormFields_Box_6"
+                                        sx={styles.UserProfileFormFields_Box_6}
                                     >
                                         {advancedMsg(
                                             attribute.annotations.inputHelperTextAfter
@@ -101,7 +150,15 @@ export default function UserProfileFormFields(
                                 )}
 
                                 {AfterField !== undefined && (
-                                    <AfterField id="UserProfileFormFields_AfterField_1" />
+                                    <AfterField
+                                        id="UserProfileFormFields_AfterField_1"
+                                        attribute={attribute}
+                                        dispatchFormAction={dispatchFormAction}
+                                        displayableErrors={displayableErrors}
+                                        valueOrValues={valueOrValues}
+                                        kcClsx={kcClsx}
+                                        i18n={i18n}
+                                    />
                                 )}
                                 {/* NOTE: Downloading of html5DataAnnotations scripts is done in the useUserProfileForm hook */}
                             </Box>
@@ -128,8 +185,14 @@ function GroupLabel(props: {
             assert(attribute.group !== undefined);
             return (
                 <Box
-                    id="UserProfileFormFields_Box_6"
-                    sx={styles.UserProfileFormFields_Box_6}
+                    className={kcClsx("kcFormGroupClass")}
+                    {...Object.fromEntries(
+                        Object.entries(attribute.group.html5DataAnnotations).map(
+                            ([key, value]) => [`data-${key}`, value]
+                        )
+                    )}
+                    id="UserProfileFormFields_Box_7"
+                    sx={styles.UserProfileFormFields_Box_7}
                 >
                     {(() => {
                         const groupDisplayHeader = attribute.group.displayHeader ?? "";
@@ -139,10 +202,12 @@ function GroupLabel(props: {
                                 : attribute.group.name;
                         return (
                             <Box
-                                id="UserProfileFormFields_Box_7"
-                                sx={styles.UserProfileFormFields_Box_7}
+                                className={kcClsx("kcContentWrapperClass")}
+                                id="UserProfileFormFields_Box_8"
+                                sx={styles.UserProfileFormFields_Box_8}
                             >
                                 <FormLabel
+                                    className={kcClsx("kcFormGroupHeader")}
                                     id="UserProfileFormFields_FormLabel_2"
                                     sx={styles.UserProfileFormFields_FormLabel_2}
                                 >
@@ -160,10 +225,12 @@ function GroupLabel(props: {
                             );
                             return (
                                 <Box
-                                    id="UserProfileFormFields_Box_8"
-                                    sx={styles.UserProfileFormFields_Box_8}
+                                    className={kcClsx("kcLabelWrapperClass")}
+                                    id="UserProfileFormFields_Box_9"
+                                    sx={styles.UserProfileFormFields_Box_9}
                                 >
                                     <FormLabel
+                                        className={kcClsx("kcLabelClass")}
                                         id="UserProfileFormFields_FormLabel_3"
                                         sx={styles.UserProfileFormFields_FormLabel_3}
                                     >
@@ -194,13 +261,18 @@ function FieldErrors(props: {
         return null;
     }
     return (
-        <span id="UserProfileFormFields_span_1">
+        <span
+            id="UserProfileFormFields_span_1"
+            className={kcClsx("kcInputErrorMessageClass")}
+            aria-live="polite"
+        >
             {displayableErrors
                 .filter(error => error.fieldIndex === fieldIndex)
                 .map(({ errorMessage }, i, arr) => (
                     <Box
-                        id="UserProfileFormFields_Box_9"
-                        sx={styles.UserProfileFormFields_Box_9}
+                        key={i}
+                        id="UserProfileFormFields_Box_10"
+                        sx={styles.UserProfileFormFields_Box_10}
                     >
                         {errorMessage}
                         {arr.length - 1 !== i && <br id="UserProfileFormFields_br_1" />}
@@ -221,27 +293,48 @@ function InputFieldByType(props: InputFieldByTypeProps) {
     const { attribute, valueOrValues } = props;
     switch (attribute.annotations.inputType) {
         case "textarea":
-            return <TextareaTag id="UserProfileFormFields_TextareaTag_1" />;
+            return <TextareaTag id="UserProfileFormFields_TextareaTag_1" {...props} />;
         case "select":
         case "multiselect":
-            return <SelectTag id="UserProfileFormFields_SelectTag_1" />;
+            return <SelectTag id="UserProfileFormFields_SelectTag_1" {...props} />;
         case "select-radiobuttons":
         case "multiselect-checkboxes":
-            return <InputTagSelects id="UserProfileFormFields_InputTagSelects_1" />;
+            return (
+                <InputTagSelects
+                    id="UserProfileFormFields_InputTagSelects_1"
+                    {...props}
+                />
+            );
         default: {
             if (valueOrValues instanceof Array) {
                 return (
                     <>
                         {valueOrValues.map((...[, i]) => (
-                            <InputTag id="UserProfileFormFields_InputTag_1" />
+                            <InputTag
+                                id="UserProfileFormFields_InputTag_1"
+                                key={i}
+                                {...props}
+                                fieldIndex={i}
+                            />
                         ))}
                     </>
                 );
             }
-            const inputNode = <InputTag id="UserProfileFormFields_InputTag_2" />;
+            const inputNode = (
+                <InputTag
+                    id="UserProfileFormFields_InputTag_2"
+                    {...props}
+                    fieldIndex={undefined}
+                />
+            );
             if (attribute.name === "password" || attribute.name === "password-confirm") {
                 return (
-                    <PasswordWrapper id="UserProfileFormFields_PasswordWrapper_1">
+                    <PasswordWrapper
+                        id="UserProfileFormFields_PasswordWrapper_1"
+                        kcClsx={props.kcClsx}
+                        i18n={props.i18n}
+                        passwordInputId={attribute.name}
+                    >
                         {inputNode}
                     </PasswordWrapper>
                 );
@@ -268,13 +361,30 @@ function PasswordWrapper(props: {
         passwordInputElement.type = isPasswordRevealed ? "text" : "password";
     }, [isPasswordRevealed]);
     return (
-        <Box id="UserProfileFormFields_Box_10" sx={styles.UserProfileFormFields_Box_10}>
+        <Box
+            className={kcClsx("kcInputGroup")}
+            id="UserProfileFormFields_Box_11"
+            sx={styles.UserProfileFormFields_Box_11}
+        >
             {children}
             <Button
+                type="button"
+                className={kcClsx("kcFormPasswordVisibilityButtonClass")}
+                aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
+                aria-controls={passwordInputId}
+                onClick={toggleIsPasswordRevealed}
                 id="UserProfileFormFields_Button_1"
                 sx={styles.UserProfileFormFields_Button_1}
             >
-                <i id="UserProfileFormFields_i_1" />
+                <i
+                    id="UserProfileFormFields_i_1"
+                    className={kcClsx(
+                        isPasswordRevealed
+                            ? "kcFormPasswordVisibilityIconHide"
+                            : "kcFormPasswordVisibilityIconShow"
+                    )}
+                    aria-hidden
+                />
             </Button>
         </Box>
     );
@@ -297,6 +407,83 @@ function InputTag(
     return (
         <>
             <TextField
+                type={(() => {
+                    const { inputType } = attribute.annotations;
+                    if (inputType?.startsWith("html5-")) {
+                        return inputType.slice(6);
+                    }
+                    return inputType ?? "text";
+                })()}
+                name={attribute.name}
+                value={(() => {
+                    if (fieldIndex !== undefined) {
+                        assert(valueOrValues instanceof Array);
+                        return valueOrValues[fieldIndex];
+                    }
+                    assert(typeof valueOrValues === "string");
+                    return valueOrValues;
+                })()}
+                className={kcClsx("kcInputClass")}
+                aria-invalid={
+                    displayableErrors.find(error => error.fieldIndex === fieldIndex) !==
+                    undefined
+                }
+                disabled={attribute.readOnly}
+                autoComplete={attribute.autocomplete}
+                placeholder={
+                    attribute.annotations.inputTypePlaceholder === undefined
+                        ? undefined
+                        : advancedMsgStr(attribute.annotations.inputTypePlaceholder)
+                }
+                pattern={attribute.annotations.inputTypePattern}
+                size={
+                    attribute.annotations.inputTypeSize === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeSize}`)
+                }
+                maxLength={
+                    attribute.annotations.inputTypeMaxlength === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
+                }
+                minLength={
+                    attribute.annotations.inputTypeMinlength === undefined
+                        ? undefined
+                        : parseInt(`${attribute.annotations.inputTypeMinlength}`)
+                }
+                max={attribute.annotations.inputTypeMax}
+                min={attribute.annotations.inputTypeMin}
+                step={attribute.annotations.inputTypeStep}
+                {...Object.fromEntries(
+                    Object.entries(attribute.html5DataAnnotations ?? {}).map(
+                        ([key, value]) => [`data-${key}`, value]
+                    )
+                )}
+                onChange={event =>
+                    dispatchFormAction({
+                        action: "update",
+                        name: attribute.name,
+                        valueOrValues: (() => {
+                            if (fieldIndex !== undefined) {
+                                assert(valueOrValues instanceof Array);
+                                return valueOrValues.map((value, i) => {
+                                    if (i === fieldIndex) {
+                                        return event.target.value;
+                                    }
+                                    return value;
+                                });
+                            }
+                            return event.target.value;
+                        })()
+                    })
+                }
+                onBlur={() =>
+                    dispatchFormAction({
+                        action: "focus lost",
+                        name: attribute.name,
+                        fieldIndex: fieldIndex
+                    })
+                }
                 id="UserProfileFormFields_TextField_1"
                 sx={styles.UserProfileFormFields_TextField_1}
             />
@@ -308,8 +495,21 @@ function InputTag(
                 const values = valueOrValues;
                 return (
                     <>
-                        <FieldErrors id="UserProfileFormFields_FieldErrors_2" />
-                        <AddRemoveButtonsMultiValuedAttribute id="UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1" />
+                        <FieldErrors
+                            id="UserProfileFormFields_FieldErrors_2"
+                            attribute={attribute}
+                            kcClsx={kcClsx}
+                            displayableErrors={displayableErrors}
+                            fieldIndex={fieldIndex}
+                        />
+                        <AddRemoveButtonsMultiValuedAttribute
+                            id="UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1"
+                            attribute={attribute}
+                            values={values}
+                            fieldIndex={fieldIndex}
+                            dispatchFormAction={dispatchFormAction}
+                            i18n={i18n}
+                        />
                     </>
                 );
             })()}
@@ -343,6 +543,14 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
             {hasRemove && (
                 <>
                     <Button
+                        type="button"
+                        onClick={() =>
+                            dispatchFormAction({
+                                action: "update",
+                                name: attribute.name,
+                                valueOrValues: values.filter((_, i) => i !== fieldIndex)
+                            })
+                        }
                         id="UserProfileFormFields_Button_2"
                         sx={styles.UserProfileFormFields_Button_2}
                     >
@@ -353,6 +561,14 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
             )}
             {hasAdd && (
                 <Button
+                    type="button"
+                    onClick={() =>
+                        dispatchFormAction({
+                            action: "update",
+                            name: attribute.name,
+                            valueOrValues: [...values, ""]
+                        })
+                    }
                     id="UserProfileFormFields_Button_3"
                     sx={styles.UserProfileFormFields_Button_3}
                 >
@@ -415,14 +631,58 @@ function InputTagSelects(props: InputFieldByTypeProps) {
         <>
             {options.map(option => (
                 <Box
-                    id="UserProfileFormFields_Box_11"
-                    sx={styles.UserProfileFormFields_Box_11}
+                    key={option}
+                    className={classDiv}
+                    id="UserProfileFormFields_Box_12"
+                    sx={styles.UserProfileFormFields_Box_12}
                 >
                     <TextField
+                        type={inputType}
+                        name={attribute.name}
+                        value={option}
+                        className={classInput}
+                        aria-invalid={props.displayableErrors.length !== 0}
+                        disabled={attribute.readOnly}
+                        checked={
+                            valueOrValues instanceof Array
+                                ? valueOrValues.includes(option)
+                                : valueOrValues === option
+                        }
+                        onChange={event =>
+                            dispatchFormAction({
+                                action: "update",
+                                name: attribute.name,
+                                valueOrValues: (() => {
+                                    const isChecked = event.target.checked;
+                                    if (valueOrValues instanceof Array) {
+                                        const newValues = [...valueOrValues];
+                                        if (isChecked) {
+                                            newValues.push(option);
+                                        } else {
+                                            newValues.splice(
+                                                newValues.indexOf(option),
+                                                1
+                                            );
+                                        }
+                                        return newValues;
+                                    }
+                                    return event.target.checked ? option : "";
+                                })()
+                            })
+                        }
+                        onBlur={() =>
+                            dispatchFormAction({
+                                action: "focus lost",
+                                name: attribute.name,
+                                fieldIndex: undefined
+                            })
+                        }
                         id="UserProfileFormFields_TextField_2"
                         sx={styles.UserProfileFormFields_TextField_2}
                     />
                     <FormLabel
+                        htmlFor={`${attribute.name}-${option}`}
+                        className={`${classLabel}${attribute.readOnly ? ` ${kcClsx("kcInputClassRadioCheckboxLabelDisabled")}` : ""}`}
                         id="UserProfileFormFields_FormLabel_4"
                         sx={styles.UserProfileFormFields_FormLabel_4}
                     >
@@ -438,7 +698,45 @@ function TextareaTag(props: InputFieldByTypeProps) {
         props;
     assert(typeof valueOrValues === "string");
     const value = valueOrValues;
-    return <textarea id="UserProfileFormFields_textarea_1" />;
+    return (
+        <textarea
+            id="UserProfileFormFields_textarea_1"
+            name={attribute.name}
+            className={kcClsx("kcInputClass")}
+            aria-invalid={displayableErrors.length !== 0}
+            disabled={attribute.readOnly}
+            cols={
+                attribute.annotations.inputTypeCols === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeCols}`)
+            }
+            rows={
+                attribute.annotations.inputTypeRows === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeRows}`)
+            }
+            maxLength={
+                attribute.annotations.inputTypeMaxlength === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
+            }
+            value={value}
+            onChange={event =>
+                dispatchFormAction({
+                    action: "update",
+                    name: attribute.name,
+                    valueOrValues: event.target.value
+                })
+            }
+            onBlur={() =>
+                dispatchFormAction({
+                    action: "focus lost",
+                    name: attribute.name,
+                    fieldIndex: undefined
+                })
+            }
+        />
+    );
 }
 function SelectTag(props: InputFieldByTypeProps) {
     const {
@@ -452,8 +750,44 @@ function SelectTag(props: InputFieldByTypeProps) {
     const { advancedMsgStr } = i18n;
     const isMultiple = attribute.annotations.inputType === "multiselect";
     return (
-        <select id="UserProfileFormFields_select_1">
-            {!isMultiple && <option id="UserProfileFormFields_option_1"></option>}
+        <select
+            id="UserProfileFormFields_select_1"
+            name={attribute.name}
+            className={kcClsx("kcInputClass")}
+            aria-invalid={displayableErrors.length !== 0}
+            disabled={attribute.readOnly}
+            multiple={isMultiple}
+            size={
+                attribute.annotations.inputTypeSize === undefined
+                    ? undefined
+                    : parseInt(`${attribute.annotations.inputTypeSize}`)
+            }
+            value={valueOrValues}
+            onChange={event =>
+                dispatchFormAction({
+                    action: "update",
+                    name: attribute.name,
+                    valueOrValues: (() => {
+                        if (isMultiple) {
+                            return Array.from(event.target.selectedOptions).map(
+                                option => option.value
+                            );
+                        }
+                        return event.target.value;
+                    })()
+                })
+            }
+            onBlur={() =>
+                dispatchFormAction({
+                    action: "focus lost",
+                    name: attribute.name,
+                    fieldIndex: undefined
+                })
+            }
+        >
+            {!isMultiple && (
+                <option id="UserProfileFormFields_option_1" value=""></option>
+            )}
             {(() => {
                 const options = (() => {
                     walk: {
@@ -481,7 +815,11 @@ function SelectTag(props: InputFieldByTypeProps) {
                     return attribute.validators.options?.options ?? [];
                 })();
                 return options.map(option => (
-                    <option id="UserProfileFormFields_option_2">
+                    <option
+                        id="UserProfileFormFields_option_2"
+                        key={option}
+                        value={option}
+                    >
                         {(() => {
                             if (attribute.annotations.inputOptionLabels !== undefined) {
                                 const { inputOptionLabels } = attribute.annotations;

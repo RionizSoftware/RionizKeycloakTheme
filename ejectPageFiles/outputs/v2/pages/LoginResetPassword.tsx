@@ -32,7 +32,21 @@ export default function LoginResetPassword(
     const { url, realm, auth, messagesPerField } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template id="LoginResetPassword_Template_1">
+        <Template
+            id="LoginResetPassword_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayInfo
+            displayMessage={!messagesPerField.existsError("username")}
+            infoNode={
+                realm.duplicateEmailsAllowed
+                    ? msg("emailInstructionUsername")
+                    : msg("emailInstruction")
+            }
+            headerNode={msg("emailForgotTitle")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}
@@ -41,21 +55,33 @@ export default function LoginResetPassword(
                 id="LoginResetPassword_Box_1"
                 sx={styles.LoginResetPassword_Box_1}
             >
-                <Box id="LoginResetPassword_Box_2" sx={styles.LoginResetPassword_Box_2}>
-                    <FormLabel
-                        id="LoginResetPassword_FormLabel_1"
-                        sx={styles.LoginResetPassword_FormLabel_1}
-                    >
-                        {!realm.loginWithEmailAllowed
-                            ? msg("username")
-                            : !realm.registrationEmailAsUsername
-                              ? msg("usernameOrEmail")
-                              : msg("email")}
-                    </FormLabel>
-
+                <Box
+                    className={kcClsx("kcFormGroupClass")}
+                    id="LoginResetPassword_Box_2"
+                    sx={styles.LoginResetPassword_Box_2}
+                >
                     <Box
+                        className={kcClsx("kcLabelWrapperClass")}
                         id="LoginResetPassword_Box_3"
                         sx={styles.LoginResetPassword_Box_3}
+                    >
+                        <FormLabel
+                            htmlFor="username"
+                            className={kcClsx("kcLabelClass")}
+                            id="LoginResetPassword_FormLabel_1"
+                            sx={styles.LoginResetPassword_FormLabel_1}
+                        >
+                            {!realm.loginWithEmailAllowed
+                                ? msg("username")
+                                : !realm.registrationEmailAsUsername
+                                  ? msg("usernameOrEmail")
+                                  : msg("email")}
+                        </FormLabel>
+                    </Box>
+                    <Box
+                        className={kcClsx("kcInputWrapperClass")}
+                        id="LoginResetPassword_Box_4"
+                        sx={styles.LoginResetPassword_Box_4}
                     >
                         <TextField
                             type="text"
@@ -79,31 +105,47 @@ export default function LoginResetPassword(
                         )}
                     </Box>
                 </Box>
-                <Box id="LoginResetPassword_Box_4" sx={styles.LoginResetPassword_Box_4}>
+                <Box
+                    className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}
+                    id="LoginResetPassword_Box_5"
+                    sx={styles.LoginResetPassword_Box_5}
+                >
                     <Box
                         className={kcClsx("kcFormOptionsClass")}
-                        id="LoginResetPassword_Box_5"
-                        sx={styles.LoginResetPassword_Box_5}
+                        id="LoginResetPassword_Box_6"
+                        sx={styles.LoginResetPassword_Box_6}
                     >
                         <Box
-                            id="LoginResetPassword_Box_6"
-                            sx={styles.LoginResetPassword_Box_6}
+                            className={kcClsx("kcFormOptionsWrapperClass")}
+                            id="LoginResetPassword_Box_7"
+                            sx={styles.LoginResetPassword_Box_7}
                         >
-                            <Link
-                                id="LoginResetPassword_Link_1"
-                                sx={styles.LoginResetPassword_Link_1}
-                            >
-                                {msg("backToLogin")}
-                            </Link>
+                            <span id="LoginResetPassword_span_2">
+                                <Link
+                                    href={url.loginUrl}
+                                    id="LoginResetPassword_Link_1"
+                                    sx={styles.LoginResetPassword_Link_1}
+                                >
+                                    {msg("backToLogin")}
+                                </Link>
+                            </span>
                         </Box>
                     </Box>
 
                     <Box
                         className={kcClsx("kcFormButtonsClass")}
-                        id="LoginResetPassword_Box_7"
-                        sx={styles.LoginResetPassword_Box_7}
+                        id="LoginResetPassword_Box_8"
+                        sx={styles.LoginResetPassword_Box_8}
                     >
                         <TextField
+                            className={kcClsx(
+                                "kcButtonClass",
+                                "kcButtonPrimaryClass",
+                                "kcButtonBlockClass",
+                                "kcButtonLargeClass"
+                            )}
+                            type="submit"
+                            value={msgStr("doSubmit")}
                             id="LoginResetPassword_TextField_2"
                             sx={styles.LoginResetPassword_TextField_2}
                         />

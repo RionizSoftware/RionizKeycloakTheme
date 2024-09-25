@@ -9,7 +9,419 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginUsername_Template_1\""
+          "id": "id=\"LoginUsername_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={!messagesPerField.existsError(\"username\")}",
+          "displayInfo": "displayInfo={realm.password && realm.registrationAllowed && !registrationDisabled}",
+          "infoNode": "infoNode={<div id=\"kc-registration\">\n                    <span id=\"LoginUsername_span_1\">\n                        {msg(\"noAccount\")}\n                        <a id=\"LoginUsername_a_1\" tabIndex={6} href={url.registrationUrl}>\n                            {msg(\"doRegister\")}\n                        </a>\n                    </span>\n                </div>}",
+          "headerNode": "headerNode={msg(\"doLogIn\")}",
+          "socialProvidersNode": "socialProvidersNode={<>\n                    {realm.password && social?.providers !== undefined && social.providers.length !== 0 && (<div id=\"kc-social-providers\" className={kcClsx(\"kcFormSocialAccountSectionClass\")}>\n                            <hr id=\"LoginUsername_hr_1\"/>\n                            <h2 id=\"LoginUsername_h2_1\">{msg(\"identity-provider-login-label\")}</h2>\n                            <ul id=\"LoginUsername_ul_1\" className={kcClsx(\"kcFormSocialAccountListClass\", social.providers.length > 3 && \"kcFormSocialAccountListGridClass\")}>\n                                {social.providers.map((...[p, , providers]) => (<li id=\"LoginUsername_li_1\" key={p.alias}>\n                                        <a id=\"LoginUsername_a_2\" className={kcClsx(\"kcFormSocialAccountListButtonClass\", providers.length > 3 && \"kcFormSocialAccountGridItem\")} type=\"button\" href={p.loginUrl}>\n                                            {p.iconClasses && <i id=\"LoginUsername_i_1\" className={clsx(kcClsx(\"kcCommonLogoIdP\"), p.iconClasses)} aria-hidden=\"true\"></i>}\n                                            <span id=\"LoginUsername_span_2\" className={clsx(kcClsx(\"kcFormSocialAccountNameClass\"), p.iconClasses && \"kc-social-icon-text\")}>\n                                                {p.displayName}\n                                            </span>\n                                        </a>\n                                    </li>))}\n                            </ul>\n                        </div>)}\n                </>}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-registration",
+      "LoginUsername_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginUsername_span_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginUsername_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginUsername_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_a_1",
+      "LoginUsername_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "LoginUsername_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "LoginUsername_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-social-providers",
+      "LoginUsername_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-social-providers\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountSectionClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-social-providers\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountSectionClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountSectionClass\")}",
+          "id": "LoginUsername_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountSectionClass\")}",
+          "id": "LoginUsername_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_hr_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "hr",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_hr_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_h2_1",
+      "LoginUsername_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "h2",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_h2_1\""
+        }
+      },
+      {
+        "tag": "h2",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_h2_1\"",
+          "variant": "h2",
+          "component": "h2"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "variant": "variant=\"h2\"",
+          "component": "component=\"h2\"",
+          "id": "LoginUsername_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "variant": "variant=\"h2\"",
+          "component": "component=\"h2\"",
+          "id": "LoginUsername_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_ul_1",
+      "LoginUsername_List_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "ul",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_ul_1\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountListClass\", social.providers.length > 3 && \"kcFormSocialAccountListGridClass\")}"
+        }
+      },
+      {
+        "tag": "ul",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_ul_1\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountListClass\", social.providers.length > 3 && \"kcFormSocialAccountListGridClass\")}"
+        }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountListClass\", social.providers.length > 3 && \"kcFormSocialAccountListGridClass\")}",
+          "id": "LoginUsername_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountListClass\", social.providers.length > 3 && \"kcFormSocialAccountListGridClass\")}",
+          "id": "LoginUsername_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_li_1",
+      "LoginUsername_ListItem_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "li",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_li_1\"",
+          "key": "key={p.alias}"
+        }
+      },
+      {
+        "tag": "li",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_li_1\"",
+          "key": "key={p.alias}"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={p.alias}",
+          "id": "LoginUsername_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={p.alias}",
+          "id": "LoginUsername_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_a_2",
+      "LoginUsername_Link_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_a_2\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountListButtonClass\", providers.length > 3 && \"kcFormSocialAccountGridItem\")}",
+          "type": "type=\"button\"",
+          "href": "href={p.loginUrl}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_a_2\"",
+          "className": "className={kcClsx(\"kcFormSocialAccountListButtonClass\", providers.length > 3 && \"kcFormSocialAccountGridItem\")}",
+          "type": "type=\"button\"",
+          "href": "href={p.loginUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountListButtonClass\", providers.length > 3 && \"kcFormSocialAccountGridItem\")}",
+          "type": "type=\"button\"",
+          "href": "href={p.loginUrl}",
+          "id": "LoginUsername_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormSocialAccountListButtonClass\", providers.length > 3 && \"kcFormSocialAccountGridItem\")}",
+          "type": "type=\"button\"",
+          "href": "href={p.loginUrl}",
+          "id": "LoginUsername_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_i_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_i_1\"",
+          "className": "className={clsx(kcClsx(\"kcCommonLogoIdP\"), p.iconClasses)}",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_span_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_span_2\"",
+          "className": "className={clsx(kcClsx(\"kcFormSocialAccountNameClass\"), p.iconClasses && \"kc-social-icon-text\")}"
         }
       }
     ]
@@ -17,12 +429,12 @@
   {
     "tags": [
       "kc-form",
-      "LoginUsername_Box_1"
+      "LoginUsername_Box_3"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "1",
+        "currentIndex": "12",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form\""
@@ -49,7 +461,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginUsername_Box_1",
+          "id": "LoginUsername_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -58,7 +470,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginUsername_Box_1",
+          "id": "LoginUsername_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -71,7 +483,7 @@
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "2",
+        "currentIndex": "13",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form-wrapper\""
@@ -82,12 +494,12 @@
   {
     "tags": [
       "kc-form-login",
-      "LoginUsername_Box_2"
+      "LoginUsername_Box_4"
     ],
     "historyStates": [
       {
         "tag": "form",
-        "currentIndex": "3",
+        "currentIndex": "14",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form-login\"",
@@ -117,7 +529,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "LoginUsername_Box_2",
+          "id": "LoginUsername_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -130,7 +542,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "LoginUsername_Box_2",
+          "id": "LoginUsername_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -138,16 +550,17 @@
   },
   {
     "tags": [
-      "LoginUsername_div_3",
-      "LoginUsername_Box_3"
+      "LoginUsername_div_5",
+      "LoginUsername_Box_5"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "4",
+        "currentIndex": "15",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginUsername_div_3\""
+          "id": "id=\"LoginUsername_div_5\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -155,7 +568,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginUsername_div_3\""
+          "id": "id=\"LoginUsername_div_5\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -163,7 +577,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginUsername_Box_3",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginUsername_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -172,7 +587,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginUsername_Box_3",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginUsername_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -186,10 +602,12 @@
     "historyStates": [
       {
         "tag": "label",
-        "currentIndex": "5",
+        "currentIndex": "16",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginUsername_label_1\""
+          "id": "id=\"LoginUsername_label_1\"",
+          "htmlFor": "htmlFor=\"username\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -197,7 +615,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginUsername_label_1\""
+          "id": "id=\"LoginUsername_label_1\"",
+          "htmlFor": "htmlFor=\"username\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -205,6 +625,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginUsername_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -214,6 +636,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginUsername_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -228,7 +652,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "6",
+        "currentIndex": "17",
         "operation": "Loaded",
         "props": {
           "tabIndex": "tabIndex={2}",
@@ -301,7 +725,7 @@
     "historyStates": [
       {
         "tag": "span",
-        "currentIndex": "7",
+        "currentIndex": "18",
         "operation": "Loaded",
         "props": {
           "id": "id=\"input-error\"",
@@ -313,81 +737,17 @@
   },
   {
     "tags": [
-      "LoginUsername_div_4",
-      "LoginUsername_Box_4"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "8",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"LoginUsername_div_4\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"kc-form-options\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LoginUsername_div_4\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "LoginUsername_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "LoginUsername_Box_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "kc-form-options"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "9",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"kc-form-options\""
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
       "LoginUsername_div_6",
-      "LoginUsername_Box_5"
+      "LoginUsername_Box_6"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "10",
+        "currentIndex": "19",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginUsername_div_6\""
+          "id": "id=\"LoginUsername_div_6\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\", \"kcFormSettingClass\")}"
         }
       },
       {
@@ -395,7 +755,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginUsername_div_6\""
+          "id": "id=\"LoginUsername_div_6\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\", \"kcFormSettingClass\")}"
         }
       },
       {
@@ -403,7 +764,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginUsername_Box_5",
+          "className": "className={kcClsx(\"kcFormGroupClass\", \"kcFormSettingClass\")}",
+          "id": "LoginUsername_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -412,7 +774,101 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginUsername_Box_5",
+          "className": "className={kcClsx(\"kcFormGroupClass\", \"kcFormSettingClass\")}",
+          "id": "LoginUsername_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-options",
+      "LoginUsername_Box_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginUsername_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginUsername_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginUsername_div_8",
+      "LoginUsername_Box_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginUsername_div_8\"",
+          "className": "className=\"checkbox\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginUsername_div_8\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginUsername_div_8\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginUsername_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginUsername_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -426,7 +882,7 @@
     "historyStates": [
       {
         "tag": "label",
-        "currentIndex": "11",
+        "currentIndex": "22",
         "operation": "Loaded",
         "props": {
           "id": "id=\"LoginUsername_label_2\""
@@ -468,7 +924,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "12",
+        "currentIndex": "23",
         "operation": "Loaded",
         "props": {
           "tabIndex": "tabIndex={3}",
@@ -521,12 +977,12 @@
   {
     "tags": [
       "kc-form-buttons",
-      "LoginUsername_Box_6"
+      "LoginUsername_Box_9"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "13",
+        "currentIndex": "24",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form-buttons\"",
@@ -548,7 +1004,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginUsername_Box_6",
+          "id": "LoginUsername_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -558,7 +1014,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LoginUsername_Box_6",
+          "id": "LoginUsername_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -572,7 +1028,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "14",
+        "currentIndex": "25",
         "operation": "Loaded",
         "props": {
           "tabIndex": "tabIndex={4}",

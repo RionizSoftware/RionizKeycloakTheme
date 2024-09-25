@@ -9,7 +9,12 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_Template_1\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"oauth2DeviceVerificationTitle\")}"
         }
       }
     ]
@@ -82,15 +87,8 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_1\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_2\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -98,7 +96,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_1\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -106,6 +105,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -115,6 +115,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -123,7 +124,8 @@
   },
   {
     "tags": [
-      "LoginOauth2DeviceVerifyUserCode_div_2"
+      "LoginOauth2DeviceVerifyUserCode_div_2",
+      "LoginOauth2DeviceVerifyUserCode_Box_3"
     ],
     "historyStates": [
       {
@@ -131,7 +133,37 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_2\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -147,7 +179,9 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_label_1\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_label_1\"",
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -155,7 +189,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_label_1\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_label_1\"",
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -163,6 +199,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -172,6 +210,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor=\"device-user-code\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -181,7 +221,7 @@
   {
     "tags": [
       "LoginOauth2DeviceVerifyUserCode_div_3",
-      "LoginOauth2DeviceVerifyUserCode_Box_3"
+      "LoginOauth2DeviceVerifyUserCode_Box_4"
     ],
     "historyStates": [
       {
@@ -189,7 +229,8 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_3\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -197,7 +238,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_3\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -205,7 +247,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -214,7 +257,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -285,7 +329,7 @@
   {
     "tags": [
       "LoginOauth2DeviceVerifyUserCode_div_4",
-      "LoginOauth2DeviceVerifyUserCode_Box_4"
+      "LoginOauth2DeviceVerifyUserCode_Box_5"
     ],
     "historyStates": [
       {
@@ -293,7 +337,8 @@
         "currentIndex": "7",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_4\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -301,7 +346,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_4\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -309,7 +355,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -318,7 +365,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -327,7 +375,7 @@
   {
     "tags": [
       "kc-form-options",
-      "LoginOauth2DeviceVerifyUserCode_Box_5"
+      "LoginOauth2DeviceVerifyUserCode_Box_6"
     ],
     "historyStates": [
       {
@@ -354,7 +402,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_5",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -364,7 +412,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_5",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -373,7 +421,7 @@
   {
     "tags": [
       "LoginOauth2DeviceVerifyUserCode_div_6",
-      "LoginOauth2DeviceVerifyUserCode_Box_6"
+      "LoginOauth2DeviceVerifyUserCode_Box_7"
     ],
     "historyStates": [
       {
@@ -381,7 +429,8 @@
         "currentIndex": "9",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_6\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_6\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
         }
       },
       {
@@ -389,7 +438,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_6\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_6\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
         }
       },
       {
@@ -397,7 +447,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_6",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -406,7 +457,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_6",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -415,7 +467,7 @@
   {
     "tags": [
       "kc-form-buttons",
-      "LoginOauth2DeviceVerifyUserCode_Box_7"
+      "LoginOauth2DeviceVerifyUserCode_Box_8"
     ],
     "historyStates": [
       {
@@ -442,7 +494,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_7",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -452,7 +504,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_7",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -461,7 +513,7 @@
   {
     "tags": [
       "LoginOauth2DeviceVerifyUserCode_div_8",
-      "LoginOauth2DeviceVerifyUserCode_Box_8"
+      "LoginOauth2DeviceVerifyUserCode_Box_9"
     ],
     "historyStates": [
       {
@@ -469,7 +521,8 @@
         "currentIndex": "11",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_8\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_8\"",
+          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}"
         }
       },
       {
@@ -477,7 +530,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_8\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_div_8\"",
+          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}"
         }
       },
       {
@@ -485,7 +539,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_8",
+          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -494,7 +549,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginOauth2DeviceVerifyUserCode_Box_8",
+          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}",
+          "id": "LoginOauth2DeviceVerifyUserCode_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -511,7 +567,10 @@
         "currentIndex": "12",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_input_2\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_input_2\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}"
         }
       },
       {
@@ -519,7 +578,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginOauth2DeviceVerifyUserCode_input_2\""
+          "id": "id=\"LoginOauth2DeviceVerifyUserCode_input_2\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}"
         }
       },
       {
@@ -527,6 +589,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -536,6 +601,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
           "id": "LoginOauth2DeviceVerifyUserCode_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

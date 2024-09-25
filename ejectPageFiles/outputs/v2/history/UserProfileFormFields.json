@@ -10,7 +10,8 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_Fragment_1\""
+          "id": "id=\"UserProfileFormFields_Fragment_1\"",
+          "key": "key={attribute.name}"
         }
       },
       {
@@ -18,7 +19,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_Fragment_1\""
+          "id": "id=\"UserProfileFormFields_Fragment_1\"",
+          "key": "key={attribute.name}"
         }
       },
       {
@@ -26,6 +28,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "key": "key={attribute.name}",
           "id": "UserProfileFormFields_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -35,6 +38,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "key": "key={attribute.name}",
           "id": "UserProfileFormFields_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -51,7 +55,11 @@
         "currentIndex": "1",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_GroupLabel_1\""
+          "id": "id=\"UserProfileFormFields_GroupLabel_1\"",
+          "attribute": "attribute={attribute}",
+          "groupNameRef": "groupNameRef={groupNameRef}",
+          "i18n": "i18n={i18n}",
+          "kcClsx": "kcClsx={kcClsx}"
         }
       }
     ]
@@ -66,7 +74,13 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_BeforeField_1\""
+          "id": "id=\"UserProfileFormFields_BeforeField_1\"",
+          "attribute": "attribute={attribute}",
+          "dispatchFormAction": "dispatchFormAction={dispatchFormAction}",
+          "displayableErrors": "displayableErrors={displayableErrors}",
+          "valueOrValues": "valueOrValues={valueOrValues}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
         }
       }
     ]
@@ -82,15 +96,9 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_1\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"UserProfileFormFields_div_2\""
+          "id": "id=\"UserProfileFormFields_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "style": "style={{\n                    display: attribute.name === \"password-confirm\" && !doMakeUserConfirmPassword ? \"none\" : undefined\n                }}"
         }
       },
       {
@@ -98,7 +106,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_1\""
+          "id": "id=\"UserProfileFormFields_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "style": "style={{\n                    display: attribute.name === \"password-confirm\" && !doMakeUserConfirmPassword ? \"none\" : undefined\n                }}"
         }
       },
       {
@@ -106,6 +116,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "style": "style={{\n                    display: attribute.name === \"password-confirm\" && !doMakeUserConfirmPassword ? \"none\" : undefined\n                }}",
           "id": "UserProfileFormFields_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -115,6 +127,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "style": "style={{\n                    display: attribute.name === \"password-confirm\" && !doMakeUserConfirmPassword ? \"none\" : undefined\n                }}",
           "id": "UserProfileFormFields_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -123,7 +137,8 @@
   },
   {
     "tags": [
-      "UserProfileFormFields_div_2"
+      "UserProfileFormFields_div_2",
+      "UserProfileFormFields_Box_3"
     ],
     "historyStates": [
       {
@@ -131,7 +146,37 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_2\""
+          "id": "id=\"UserProfileFormFields_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"UserProfileFormFields_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -147,7 +192,9 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_1\""
+          "id": "id=\"UserProfileFormFields_label_1\"",
+          "htmlFor": "htmlFor={attribute.name}",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -155,7 +202,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_1\""
+          "id": "id=\"UserProfileFormFields_label_1\"",
+          "htmlFor": "htmlFor={attribute.name}",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -163,6 +212,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor={attribute.name}",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "UserProfileFormFields_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -172,6 +223,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor={attribute.name}",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "UserProfileFormFields_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -181,7 +234,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_3",
-      "UserProfileFormFields_Box_3"
+      "UserProfileFormFields_Box_4"
     ],
     "historyStates": [
       {
@@ -189,7 +242,8 @@
         "currentIndex": "6",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_3\""
+          "id": "id=\"UserProfileFormFields_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -197,7 +251,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_3\""
+          "id": "id=\"UserProfileFormFields_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -205,7 +260,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -214,7 +270,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -223,7 +280,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_4",
-      "UserProfileFormFields_Box_4"
+      "UserProfileFormFields_Box_5"
     ],
     "historyStates": [
       {
@@ -231,7 +288,9 @@
         "currentIndex": "7",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_4\""
+          "id": "id=\"UserProfileFormFields_div_4\"",
+          "className": "className={kcClsx(\"kcInputHelperTextBeforeClass\")}",
+          "aria-live": "aria-live=\"polite\""
         }
       },
       {
@@ -239,7 +298,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_4\""
+          "id": "id=\"UserProfileFormFields_div_4\"",
+          "className": "className={kcClsx(\"kcInputHelperTextBeforeClass\")}",
+          "aria-live": "aria-live=\"polite\""
         }
       },
       {
@@ -247,7 +308,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_4",
+          "className": "className={kcClsx(\"kcInputHelperTextBeforeClass\")}",
+          "aria-live": "aria-live=\"polite\"",
+          "id": "UserProfileFormFields_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -256,7 +319,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_4",
+          "className": "className={kcClsx(\"kcInputHelperTextBeforeClass\")}",
+          "aria-live": "aria-live=\"polite\"",
+          "id": "UserProfileFormFields_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -272,7 +337,13 @@
         "currentIndex": "8",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_InputFieldByType_1\""
+          "id": "id=\"UserProfileFormFields_InputFieldByType_1\"",
+          "attribute": "attribute={attribute}",
+          "valueOrValues": "valueOrValues={valueOrValues}",
+          "displayableErrors": "displayableErrors={displayableErrors}",
+          "dispatchFormAction": "dispatchFormAction={dispatchFormAction}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
         }
       }
     ]
@@ -287,7 +358,11 @@
         "currentIndex": "9",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_FieldErrors_1\""
+          "id": "id=\"UserProfileFormFields_FieldErrors_1\"",
+          "attribute": "attribute={attribute}",
+          "displayableErrors": "displayableErrors={displayableErrors}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "fieldIndex": "fieldIndex={undefined}"
         }
       }
     ]
@@ -295,7 +370,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_5",
-      "UserProfileFormFields_Box_5"
+      "UserProfileFormFields_Box_6"
     ],
     "historyStates": [
       {
@@ -303,7 +378,9 @@
         "currentIndex": "10",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_5\""
+          "id": "id=\"UserProfileFormFields_div_5\"",
+          "className": "className={kcClsx(\"kcInputHelperTextAfterClass\")}",
+          "aria-live": "aria-live=\"polite\""
         }
       },
       {
@@ -311,7 +388,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_5\""
+          "id": "id=\"UserProfileFormFields_div_5\"",
+          "className": "className={kcClsx(\"kcInputHelperTextAfterClass\")}",
+          "aria-live": "aria-live=\"polite\""
         }
       },
       {
@@ -319,7 +398,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_5",
+          "className": "className={kcClsx(\"kcInputHelperTextAfterClass\")}",
+          "aria-live": "aria-live=\"polite\"",
+          "id": "UserProfileFormFields_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -328,7 +409,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_5",
+          "className": "className={kcClsx(\"kcInputHelperTextAfterClass\")}",
+          "aria-live": "aria-live=\"polite\"",
+          "id": "UserProfileFormFields_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -344,7 +427,13 @@
         "currentIndex": "11",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_AfterField_1\""
+          "id": "id=\"UserProfileFormFields_AfterField_1\"",
+          "attribute": "attribute={attribute}",
+          "dispatchFormAction": "dispatchFormAction={dispatchFormAction}",
+          "displayableErrors": "displayableErrors={displayableErrors}",
+          "valueOrValues": "valueOrValues={valueOrValues}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
         }
       }
     ]
@@ -352,7 +441,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_6",
-      "UserProfileFormFields_Box_6"
+      "UserProfileFormFields_Box_7"
     ],
     "historyStates": [
       {
@@ -360,7 +449,9 @@
         "currentIndex": "12",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_6\""
+          "id": "id=\"UserProfileFormFields_div_6\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "": ""
         }
       },
       {
@@ -368,7 +459,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_6\""
+          "id": "id=\"UserProfileFormFields_div_6\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "": ""
         }
       },
       {
@@ -376,7 +469,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_6",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "": "",
+          "id": "UserProfileFormFields_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -385,7 +480,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_6",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "": "",
+          "id": "UserProfileFormFields_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -394,7 +491,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_7",
-      "UserProfileFormFields_Box_7"
+      "UserProfileFormFields_Box_8"
     ],
     "historyStates": [
       {
@@ -402,7 +499,8 @@
         "currentIndex": "13",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_7\""
+          "id": "id=\"UserProfileFormFields_div_7\"",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}"
         }
       },
       {
@@ -410,7 +508,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_7\""
+          "id": "id=\"UserProfileFormFields_div_7\"",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}"
         }
       },
       {
@@ -418,7 +517,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_7",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -427,7 +527,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_7",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -444,7 +545,8 @@
         "currentIndex": "14",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_2\""
+          "id": "id=\"UserProfileFormFields_label_2\"",
+          "className": "className={kcClsx(\"kcFormGroupHeader\")}"
         }
       },
       {
@@ -452,7 +554,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_2\""
+          "id": "id=\"UserProfileFormFields_label_2\"",
+          "className": "className={kcClsx(\"kcFormGroupHeader\")}"
         }
       },
       {
@@ -460,6 +563,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupHeader\")}",
           "id": "UserProfileFormFields_FormLabel_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -469,6 +573,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupHeader\")}",
           "id": "UserProfileFormFields_FormLabel_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -478,7 +583,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_8",
-      "UserProfileFormFields_Box_8"
+      "UserProfileFormFields_Box_9"
     ],
     "historyStates": [
       {
@@ -486,7 +591,8 @@
         "currentIndex": "15",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_8\""
+          "id": "id=\"UserProfileFormFields_div_8\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
         }
       },
       {
@@ -494,7 +600,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_8\""
+          "id": "id=\"UserProfileFormFields_div_8\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
         }
       },
       {
@@ -502,7 +609,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_8",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -511,7 +619,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_8",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "UserProfileFormFields_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -528,7 +637,8 @@
         "currentIndex": "16",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_3\""
+          "id": "id=\"UserProfileFormFields_label_3\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -536,7 +646,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_3\""
+          "id": "id=\"UserProfileFormFields_label_3\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -544,6 +655,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "UserProfileFormFields_FormLabel_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -553,6 +665,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "UserProfileFormFields_FormLabel_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -569,7 +682,9 @@
         "currentIndex": "17",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_span_1\""
+          "id": "id=\"UserProfileFormFields_span_1\"",
+          "className": "className={kcClsx(\"kcInputErrorMessageClass\")}",
+          "aria-live": "aria-live=\"polite\""
         }
       }
     ]
@@ -577,7 +692,7 @@
   {
     "tags": [
       "UserProfileFormFields_Fragment_2",
-      "UserProfileFormFields_Box_9"
+      "UserProfileFormFields_Box_10"
     ],
     "historyStates": [
       {
@@ -585,7 +700,8 @@
         "currentIndex": "18",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_Fragment_2\""
+          "id": "id=\"UserProfileFormFields_Fragment_2\"",
+          "key": "key={i}"
         }
       },
       {
@@ -593,7 +709,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_Fragment_2\""
+          "id": "id=\"UserProfileFormFields_Fragment_2\"",
+          "key": "key={i}"
         }
       },
       {
@@ -601,7 +718,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_9",
+          "key": "key={i}",
+          "id": "UserProfileFormFields_Box_10",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -610,7 +728,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_9",
+          "key": "key={i}",
+          "id": "UserProfileFormFields_Box_10",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -641,7 +760,8 @@
         "currentIndex": "20",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_TextareaTag_1\""
+          "id": "id=\"UserProfileFormFields_TextareaTag_1\"",
+          "": ""
         }
       }
     ]
@@ -656,7 +776,8 @@
         "currentIndex": "21",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_SelectTag_1\""
+          "id": "id=\"UserProfileFormFields_SelectTag_1\"",
+          "": ""
         }
       }
     ]
@@ -671,7 +792,8 @@
         "currentIndex": "22",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_InputTagSelects_1\""
+          "id": "id=\"UserProfileFormFields_InputTagSelects_1\"",
+          "": ""
         }
       }
     ]
@@ -686,7 +808,10 @@
         "currentIndex": "23",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_InputTag_1\""
+          "id": "id=\"UserProfileFormFields_InputTag_1\"",
+          "key": "key={i}",
+          "": "",
+          "fieldIndex": "fieldIndex={i}"
         }
       }
     ]
@@ -701,7 +826,9 @@
         "currentIndex": "24",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_InputTag_2\""
+          "id": "id=\"UserProfileFormFields_InputTag_2\"",
+          "": "",
+          "fieldIndex": "fieldIndex={undefined}"
         }
       }
     ]
@@ -716,7 +843,10 @@
         "currentIndex": "25",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_PasswordWrapper_1\""
+          "id": "id=\"UserProfileFormFields_PasswordWrapper_1\"",
+          "kcClsx": "kcClsx={props.kcClsx}",
+          "i18n": "i18n={props.i18n}",
+          "passwordInputId": "passwordInputId={attribute.name}"
         }
       }
     ]
@@ -724,7 +854,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_9",
-      "UserProfileFormFields_Box_10"
+      "UserProfileFormFields_Box_11"
     ],
     "historyStates": [
       {
@@ -732,7 +862,8 @@
         "currentIndex": "26",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_9\""
+          "id": "id=\"UserProfileFormFields_div_9\"",
+          "className": "className={kcClsx(\"kcInputGroup\")}"
         }
       },
       {
@@ -740,7 +871,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_9\""
+          "id": "id=\"UserProfileFormFields_div_9\"",
+          "className": "className={kcClsx(\"kcInputGroup\")}"
         }
       },
       {
@@ -748,7 +880,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_10",
+          "className": "className={kcClsx(\"kcInputGroup\")}",
+          "id": "UserProfileFormFields_Box_11",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -757,7 +890,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_10",
+          "className": "className={kcClsx(\"kcInputGroup\")}",
+          "id": "UserProfileFormFields_Box_11",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -774,7 +908,12 @@
         "currentIndex": "27",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_1\""
+          "id": "id=\"UserProfileFormFields_button_1\"",
+          "type": "type=\"button\"",
+          "className": "className={kcClsx(\"kcFormPasswordVisibilityButtonClass\")}",
+          "aria-label": "aria-label={msgStr(isPasswordRevealed ? \"hidePassword\" : \"showPassword\")}",
+          "aria-controls": "aria-controls={passwordInputId}",
+          "onClick": "onClick={toggleIsPasswordRevealed}"
         }
       },
       {
@@ -782,7 +921,12 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_1\""
+          "id": "id=\"UserProfileFormFields_button_1\"",
+          "type": "type=\"button\"",
+          "className": "className={kcClsx(\"kcFormPasswordVisibilityButtonClass\")}",
+          "aria-label": "aria-label={msgStr(isPasswordRevealed ? \"hidePassword\" : \"showPassword\")}",
+          "aria-controls": "aria-controls={passwordInputId}",
+          "onClick": "onClick={toggleIsPasswordRevealed}"
         }
       },
       {
@@ -790,6 +934,11 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"button\"",
+          "className": "className={kcClsx(\"kcFormPasswordVisibilityButtonClass\")}",
+          "aria-label": "aria-label={msgStr(isPasswordRevealed ? \"hidePassword\" : \"showPassword\")}",
+          "aria-controls": "aria-controls={passwordInputId}",
+          "onClick": "onClick={toggleIsPasswordRevealed}",
           "id": "UserProfileFormFields_Button_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -799,6 +948,11 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"button\"",
+          "className": "className={kcClsx(\"kcFormPasswordVisibilityButtonClass\")}",
+          "aria-label": "aria-label={msgStr(isPasswordRevealed ? \"hidePassword\" : \"showPassword\")}",
+          "aria-controls": "aria-controls={passwordInputId}",
+          "onClick": "onClick={toggleIsPasswordRevealed}",
           "id": "UserProfileFormFields_Button_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -815,7 +969,9 @@
         "currentIndex": "28",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_i_1\""
+          "id": "id=\"UserProfileFormFields_i_1\"",
+          "className": "className={kcClsx(isPasswordRevealed ? \"kcFormPasswordVisibilityIconHide\" : \"kcFormPasswordVisibilityIconShow\")}",
+          "aria-hidden": "aria-hidden"
         }
       }
     ]
@@ -831,7 +987,25 @@
         "currentIndex": "29",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_input_1\""
+          "id": "id=\"UserProfileFormFields_input_1\"",
+          "type": "type={(() => {\n            const { inputType } = attribute.annotations;\n            if (inputType?.startsWith(\"html5-\")) {\n                return inputType.slice(6);\n            }\n            return inputType ?? \"text\";\n        })()}",
+          "name": "name={attribute.name}",
+          "value": "value={(() => {\n            if (fieldIndex !== undefined) {\n                assert(valueOrValues instanceof Array);\n                return valueOrValues[fieldIndex];\n            }\n            assert(typeof valueOrValues === \"string\");\n            return valueOrValues;\n        })()}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}",
+          "disabled": "disabled={attribute.readOnly}",
+          "autoComplete": "autoComplete={attribute.autocomplete}",
+          "placeholder": "placeholder={attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)}",
+          "pattern": "pattern={attribute.annotations.inputTypePattern}",
+          "size": "size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}",
+          "maxLength": "maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}",
+          "minLength": "minLength={attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)}",
+          "max": "max={attribute.annotations.inputTypeMax}",
+          "min": "min={attribute.annotations.inputTypeMin}",
+          "step": "step={attribute.annotations.inputTypeStep}",
+          "": "",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: (() => {\n                if (fieldIndex !== undefined) {\n                    assert(valueOrValues instanceof Array);\n                    return valueOrValues.map((value, i) => {\n                        if (i === fieldIndex) {\n                            return event.target.value;\n                        }\n                        return value;\n                    });\n                }\n                return event.target.value;\n            })()\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: fieldIndex\n        })}"
         }
       },
       {
@@ -839,7 +1013,25 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_input_1\""
+          "id": "id=\"UserProfileFormFields_input_1\"",
+          "type": "type={(() => {\n            const { inputType } = attribute.annotations;\n            if (inputType?.startsWith(\"html5-\")) {\n                return inputType.slice(6);\n            }\n            return inputType ?? \"text\";\n        })()}",
+          "name": "name={attribute.name}",
+          "value": "value={(() => {\n            if (fieldIndex !== undefined) {\n                assert(valueOrValues instanceof Array);\n                return valueOrValues[fieldIndex];\n            }\n            assert(typeof valueOrValues === \"string\");\n            return valueOrValues;\n        })()}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}",
+          "disabled": "disabled={attribute.readOnly}",
+          "autoComplete": "autoComplete={attribute.autocomplete}",
+          "placeholder": "placeholder={attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)}",
+          "pattern": "pattern={attribute.annotations.inputTypePattern}",
+          "size": "size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}",
+          "maxLength": "maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}",
+          "minLength": "minLength={attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)}",
+          "max": "max={attribute.annotations.inputTypeMax}",
+          "min": "min={attribute.annotations.inputTypeMin}",
+          "step": "step={attribute.annotations.inputTypeStep}",
+          "": "",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: (() => {\n                if (fieldIndex !== undefined) {\n                    assert(valueOrValues instanceof Array);\n                    return valueOrValues.map((value, i) => {\n                        if (i === fieldIndex) {\n                            return event.target.value;\n                        }\n                        return value;\n                    });\n                }\n                return event.target.value;\n            })()\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: fieldIndex\n        })}"
         }
       },
       {
@@ -847,6 +1039,24 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type={(() => {\n            const { inputType } = attribute.annotations;\n            if (inputType?.startsWith(\"html5-\")) {\n                return inputType.slice(6);\n            }\n            return inputType ?? \"text\";\n        })()}",
+          "name": "name={attribute.name}",
+          "value": "value={(() => {\n            if (fieldIndex !== undefined) {\n                assert(valueOrValues instanceof Array);\n                return valueOrValues[fieldIndex];\n            }\n            assert(typeof valueOrValues === \"string\");\n            return valueOrValues;\n        })()}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}",
+          "disabled": "disabled={attribute.readOnly}",
+          "autoComplete": "autoComplete={attribute.autocomplete}",
+          "placeholder": "placeholder={attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)}",
+          "pattern": "pattern={attribute.annotations.inputTypePattern}",
+          "size": "size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}",
+          "maxLength": "maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}",
+          "minLength": "minLength={attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)}",
+          "max": "max={attribute.annotations.inputTypeMax}",
+          "min": "min={attribute.annotations.inputTypeMin}",
+          "step": "step={attribute.annotations.inputTypeStep}",
+          "": "",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: (() => {\n                if (fieldIndex !== undefined) {\n                    assert(valueOrValues instanceof Array);\n                    return valueOrValues.map((value, i) => {\n                        if (i === fieldIndex) {\n                            return event.target.value;\n                        }\n                        return value;\n                    });\n                }\n                return event.target.value;\n            })()\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: fieldIndex\n        })}",
           "id": "UserProfileFormFields_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -856,6 +1066,24 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type={(() => {\n            const { inputType } = attribute.annotations;\n            if (inputType?.startsWith(\"html5-\")) {\n                return inputType.slice(6);\n            }\n            return inputType ?? \"text\";\n        })()}",
+          "name": "name={attribute.name}",
+          "value": "value={(() => {\n            if (fieldIndex !== undefined) {\n                assert(valueOrValues instanceof Array);\n                return valueOrValues[fieldIndex];\n            }\n            assert(typeof valueOrValues === \"string\");\n            return valueOrValues;\n        })()}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}",
+          "disabled": "disabled={attribute.readOnly}",
+          "autoComplete": "autoComplete={attribute.autocomplete}",
+          "placeholder": "placeholder={attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)}",
+          "pattern": "pattern={attribute.annotations.inputTypePattern}",
+          "size": "size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}",
+          "maxLength": "maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}",
+          "minLength": "minLength={attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)}",
+          "max": "max={attribute.annotations.inputTypeMax}",
+          "min": "min={attribute.annotations.inputTypeMin}",
+          "step": "step={attribute.annotations.inputTypeStep}",
+          "": "",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: (() => {\n                if (fieldIndex !== undefined) {\n                    assert(valueOrValues instanceof Array);\n                    return valueOrValues.map((value, i) => {\n                        if (i === fieldIndex) {\n                            return event.target.value;\n                        }\n                        return value;\n                    });\n                }\n                return event.target.value;\n            })()\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: fieldIndex\n        })}",
           "id": "UserProfileFormFields_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -872,7 +1100,11 @@
         "currentIndex": "30",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_FieldErrors_2\""
+          "id": "id=\"UserProfileFormFields_FieldErrors_2\"",
+          "attribute": "attribute={attribute}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "displayableErrors": "displayableErrors={displayableErrors}",
+          "fieldIndex": "fieldIndex={fieldIndex}"
         }
       }
     ]
@@ -887,7 +1119,12 @@
         "currentIndex": "31",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1\""
+          "id": "id=\"UserProfileFormFields_AddRemoveButtonsMultiValuedAttribute_1\"",
+          "attribute": "attribute={attribute}",
+          "values": "values={values}",
+          "fieldIndex": "fieldIndex={fieldIndex}",
+          "dispatchFormAction": "dispatchFormAction={dispatchFormAction}",
+          "i18n": "i18n={i18n}"
         }
       }
     ]
@@ -903,7 +1140,20 @@
         "currentIndex": "32",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_2\""
+          "id": "id=\"UserProfileFormFields_button_2\"",
+          "type": "type=\"button\"",
+          "className": "className=\"pf-c-button pf-m-inline pf-m-link\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: values.filter((_, i) => i !== fieldIndex)\n            })}"
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_2\"",
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: values.filter((_, i) => i !== fieldIndex)\n            })}"
         }
       },
       {
@@ -911,7 +1161,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_2\""
+          "id": "id=\"UserProfileFormFields_button_2\"",
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: values.filter((_, i) => i !== fieldIndex)\n            })}"
         }
       },
       {
@@ -919,6 +1171,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: values.filter((_, i) => i !== fieldIndex)\n            })}",
           "id": "UserProfileFormFields_Button_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -928,6 +1182,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: values.filter((_, i) => i !== fieldIndex)\n            })}",
           "id": "UserProfileFormFields_Button_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -945,7 +1201,20 @@
         "currentIndex": "33",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_3\""
+          "id": "id=\"UserProfileFormFields_button_3\"",
+          "type": "type=\"button\"",
+          "className": "className=\"pf-c-button pf-m-inline pf-m-link\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: [...values, \"\"]\n            })}"
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"UserProfileFormFields_button_3\"",
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: [...values, \"\"]\n            })}"
         }
       },
       {
@@ -953,7 +1222,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_button_3\""
+          "id": "id=\"UserProfileFormFields_button_3\"",
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: [...values, \"\"]\n            })}"
         }
       },
       {
@@ -961,6 +1232,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: [...values, \"\"]\n            })}",
           "id": "UserProfileFormFields_Button_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -970,6 +1243,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"button\"",
+          "onClick": "onClick={() => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: [...values, \"\"]\n            })}",
           "id": "UserProfileFormFields_Button_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -979,7 +1254,7 @@
   {
     "tags": [
       "UserProfileFormFields_div_10",
-      "UserProfileFormFields_Box_11"
+      "UserProfileFormFields_Box_12"
     ],
     "historyStates": [
       {
@@ -987,7 +1262,9 @@
         "currentIndex": "34",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_10\""
+          "id": "id=\"UserProfileFormFields_div_10\"",
+          "key": "key={option}",
+          "className": "className={classDiv}"
         }
       },
       {
@@ -995,7 +1272,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_div_10\""
+          "id": "id=\"UserProfileFormFields_div_10\"",
+          "key": "key={option}",
+          "className": "className={classDiv}"
         }
       },
       {
@@ -1003,7 +1282,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "UserProfileFormFields_Box_11",
+          "key": "key={option}",
+          "className": "className={classDiv}",
+          "id": "UserProfileFormFields_Box_12",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1012,7 +1293,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "UserProfileFormFields_Box_11",
+          "key": "key={option}",
+          "className": "className={classDiv}",
+          "id": "UserProfileFormFields_Box_12",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1029,7 +1312,16 @@
         "currentIndex": "35",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_input_2\""
+          "id": "id=\"UserProfileFormFields_input_2\"",
+          "type": "type={inputType}",
+          "name": "name={attribute.name}",
+          "value": "value={option}",
+          "className": "className={classInput}",
+          "aria-invalid": "aria-invalid={props.displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "checked": "checked={valueOrValues instanceof Array ? valueOrValues.includes(option) : valueOrValues === option}",
+          "onChange": "onChange={event => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: (() => {\n                    const isChecked = event.target.checked;\n                    if (valueOrValues instanceof Array) {\n                        const newValues = [...valueOrValues];\n                        if (isChecked) {\n                            newValues.push(option);\n                        }\n                        else {\n                            newValues.splice(newValues.indexOf(option), 1);\n                        }\n                        return newValues;\n                    }\n                    return event.target.checked ? option : \"\";\n                })()\n            })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n                action: \"focus lost\",\n                name: attribute.name,\n                fieldIndex: undefined\n            })}"
         }
       },
       {
@@ -1037,7 +1329,16 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_input_2\""
+          "id": "id=\"UserProfileFormFields_input_2\"",
+          "type": "type={inputType}",
+          "name": "name={attribute.name}",
+          "value": "value={option}",
+          "className": "className={classInput}",
+          "aria-invalid": "aria-invalid={props.displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "checked": "checked={valueOrValues instanceof Array ? valueOrValues.includes(option) : valueOrValues === option}",
+          "onChange": "onChange={event => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: (() => {\n                    const isChecked = event.target.checked;\n                    if (valueOrValues instanceof Array) {\n                        const newValues = [...valueOrValues];\n                        if (isChecked) {\n                            newValues.push(option);\n                        }\n                        else {\n                            newValues.splice(newValues.indexOf(option), 1);\n                        }\n                        return newValues;\n                    }\n                    return event.target.checked ? option : \"\";\n                })()\n            })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n                action: \"focus lost\",\n                name: attribute.name,\n                fieldIndex: undefined\n            })}"
         }
       },
       {
@@ -1045,6 +1346,15 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type={inputType}",
+          "name": "name={attribute.name}",
+          "value": "value={option}",
+          "className": "className={classInput}",
+          "aria-invalid": "aria-invalid={props.displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "checked": "checked={valueOrValues instanceof Array ? valueOrValues.includes(option) : valueOrValues === option}",
+          "onChange": "onChange={event => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: (() => {\n                    const isChecked = event.target.checked;\n                    if (valueOrValues instanceof Array) {\n                        const newValues = [...valueOrValues];\n                        if (isChecked) {\n                            newValues.push(option);\n                        }\n                        else {\n                            newValues.splice(newValues.indexOf(option), 1);\n                        }\n                        return newValues;\n                    }\n                    return event.target.checked ? option : \"\";\n                })()\n            })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n                action: \"focus lost\",\n                name: attribute.name,\n                fieldIndex: undefined\n            })}",
           "id": "UserProfileFormFields_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1054,6 +1364,15 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type={inputType}",
+          "name": "name={attribute.name}",
+          "value": "value={option}",
+          "className": "className={classInput}",
+          "aria-invalid": "aria-invalid={props.displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "checked": "checked={valueOrValues instanceof Array ? valueOrValues.includes(option) : valueOrValues === option}",
+          "onChange": "onChange={event => dispatchFormAction({\n                action: \"update\",\n                name: attribute.name,\n                valueOrValues: (() => {\n                    const isChecked = event.target.checked;\n                    if (valueOrValues instanceof Array) {\n                        const newValues = [...valueOrValues];\n                        if (isChecked) {\n                            newValues.push(option);\n                        }\n                        else {\n                            newValues.splice(newValues.indexOf(option), 1);\n                        }\n                        return newValues;\n                    }\n                    return event.target.checked ? option : \"\";\n                })()\n            })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n                action: \"focus lost\",\n                name: attribute.name,\n                fieldIndex: undefined\n            })}",
           "id": "UserProfileFormFields_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1071,7 +1390,9 @@
         "currentIndex": "36",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_4\""
+          "id": "id=\"UserProfileFormFields_label_4\"",
+          "htmlFor": "htmlFor={`${attribute.name}-${option}`}",
+          "className": "className={`${classLabel}${attribute.readOnly ? ` ${kcClsx(\"kcInputClassRadioCheckboxLabelDisabled\")}` : \"\"}`}"
         }
       },
       {
@@ -1079,7 +1400,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"UserProfileFormFields_label_4\""
+          "id": "id=\"UserProfileFormFields_label_4\"",
+          "htmlFor": "htmlFor={`${attribute.name}-${option}`}",
+          "className": "className={`${classLabel}${attribute.readOnly ? ` ${kcClsx(\"kcInputClassRadioCheckboxLabelDisabled\")}` : \"\"}`}"
         }
       },
       {
@@ -1087,6 +1410,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor={`${attribute.name}-${option}`}",
+          "className": "className={`${classLabel}${attribute.readOnly ? ` ${kcClsx(\"kcInputClassRadioCheckboxLabelDisabled\")}` : \"\"}`}",
           "id": "UserProfileFormFields_FormLabel_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1096,6 +1421,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor={`${attribute.name}-${option}`}",
+          "className": "className={`${classLabel}${attribute.readOnly ? ` ${kcClsx(\"kcInputClassRadioCheckboxLabelDisabled\")}` : \"\"}`}",
           "id": "UserProfileFormFields_FormLabel_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1112,7 +1439,17 @@
         "currentIndex": "37",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_textarea_1\""
+          "id": "id=\"UserProfileFormFields_textarea_1\"",
+          "name": "name={attribute.name}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "cols": "cols={attribute.annotations.inputTypeCols === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeCols}`)}",
+          "rows": "rows={attribute.annotations.inputTypeRows === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeRows}`)}",
+          "maxLength": "maxLength={attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)}",
+          "value": "value={value}",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: event.target.value\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: undefined\n        })}"
         }
       }
     ]
@@ -1127,7 +1464,16 @@
         "currentIndex": "38",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_select_1\""
+          "id": "id=\"UserProfileFormFields_select_1\"",
+          "name": "name={attribute.name}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "aria-invalid": "aria-invalid={displayableErrors.length !== 0}",
+          "disabled": "disabled={attribute.readOnly}",
+          "multiple": "multiple={isMultiple}",
+          "size": "size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}",
+          "value": "value={valueOrValues}",
+          "onChange": "onChange={event => dispatchFormAction({\n            action: \"update\",\n            name: attribute.name,\n            valueOrValues: (() => {\n                if (isMultiple) {\n                    return Array.from(event.target.selectedOptions).map(option => option.value);\n                }\n                return event.target.value;\n            })()\n        })}",
+          "onBlur": "onBlur={() => dispatchFormAction({\n            action: \"focus lost\",\n            name: attribute.name,\n            fieldIndex: undefined\n        })}"
         }
       }
     ]
@@ -1142,7 +1488,8 @@
         "currentIndex": "39",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_option_1\""
+          "id": "id=\"UserProfileFormFields_option_1\"",
+          "value": "value=\"\""
         }
       }
     ]
@@ -1157,7 +1504,9 @@
         "currentIndex": "40",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"UserProfileFormFields_option_2\""
+          "id": "id=\"UserProfileFormFields_option_2\"",
+          "key": "key={option}",
+          "value": "value={option}"
         }
       }
     ]

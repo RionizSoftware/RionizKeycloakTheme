@@ -10,7 +10,8 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_1\""
+          "id": "id=\"Template_div_1\"",
+          "className": "className={kcClsx(\"kcLoginClass\")}"
         }
       },
       {
@@ -18,7 +19,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_1\""
+          "id": "id=\"Template_div_1\"",
+          "className": "className={kcClsx(\"kcLoginClass\")}"
         }
       },
       {
@@ -26,6 +28,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcLoginClass\")}",
           "id": "Template_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -35,6 +38,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcLoginClass\")}",
           "id": "Template_Box_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -144,7 +148,8 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_4\""
+          "id": "id=\"Template_div_4\"",
+          "className": "className={kcClsx(\"kcFormCardClass\")}"
         }
       },
       {
@@ -152,7 +157,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_4\""
+          "id": "id=\"Template_div_4\"",
+          "className": "className={kcClsx(\"kcFormCardClass\")}"
         }
       },
       {
@@ -160,6 +166,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormCardClass\")}",
           "id": "Template_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -169,6 +176,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormCardClass\")}",
           "id": "Template_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -185,7 +193,8 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_header_1\""
+          "id": "id=\"Template_header_1\"",
+          "className": "className={kcClsx(\"kcFormHeaderClass\")}"
         }
       }
     ]
@@ -463,7 +472,10 @@
         "currentIndex": "10",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_li_1\""
+          "id": "id=\"Template_li_1\"",
+          "key": "key={languageTag}",
+          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
+          "role": "role=\"none\""
         }
       },
       {
@@ -471,7 +483,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_li_1\""
+          "id": "id=\"Template_li_1\"",
+          "key": "key={languageTag}",
+          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
+          "role": "role=\"none\""
         }
       },
       {
@@ -479,6 +494,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "key": "key={languageTag}",
+          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
+          "role": "role=\"none\"",
           "id": "Template_ListItem_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -488,6 +506,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "key": "key={languageTag}",
+          "className": "className={kcClsx(\"kcLocaleListItemClass\")}",
+          "role": "role=\"none\"",
           "id": "Template_ListItem_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -505,7 +526,10 @@
         "currentIndex": "11",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_a_1\""
+          "id": "id=\"Template_a_1\"",
+          "role": "role=\"menuitem\"",
+          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "href": "href={getChangeLocaleUrl(languageTag)}"
         }
       },
       {
@@ -513,7 +537,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_a_1\""
+          "id": "id=\"Template_a_1\"",
+          "role": "role=\"menuitem\"",
+          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "href": "href={getChangeLocaleUrl(languageTag)}"
         }
       },
       {
@@ -521,6 +548,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "role": "role=\"menuitem\"",
+          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "href": "href={getChangeLocaleUrl(languageTag)}",
           "id": "Template_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -530,6 +560,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "role": "role=\"menuitem\"",
+          "className": "className={kcClsx(\"kcLocaleItemClass\")}",
+          "href": "href={getChangeLocaleUrl(languageTag)}",
           "id": "Template_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -733,6 +766,15 @@
         "currentIndex": "16",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"Template_div_9\"",
+          "className": "className=\"kc-login-tooltip\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"Template_div_9\""
         }
       },
@@ -774,7 +816,8 @@
         "currentIndex": "17",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_i_1\""
+          "id": "id=\"Template_i_1\"",
+          "className": "className={kcClsx(\"kcResetFlowIcon\")}"
         }
       }
     ]
@@ -788,6 +831,15 @@
         "tag": "span",
         "currentIndex": "18",
         "operation": "Loaded",
+        "props": {
+          "id": "id=\"Template_span_1\"",
+          "className": "className=\"kc-tooltip-text\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Template_span_1\""
         }
@@ -805,31 +857,8 @@
         "currentIndex": "19",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_10\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"Template_div_11\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"Template_span_2\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"Template_div_12\""
+          "id": "id=\"Template_div_10\"",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}"
         }
       },
       {
@@ -837,7 +866,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_10\""
+          "id": "id=\"Template_div_10\"",
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}"
         }
       },
       {
@@ -845,6 +875,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
           "id": "Template_Box_10",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -854,6 +885,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcContentWrapperClass\")}",
           "id": "Template_Box_10",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -862,7 +894,8 @@
   },
   {
     "tags": [
-      "Template_div_11"
+      "Template_div_11",
+      "Template_Box_11"
     ],
     "historyStates": [
       {
@@ -870,7 +903,37 @@
         "currentIndex": "20",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_11\""
+          "id": "id=\"Template_div_11\"",
+          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Template_div_11\"",
+          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}",
+          "id": "Template_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={clsx(kcClsx(\"kcLabelWrapperClass\"), \"subtitle\")}",
+          "id": "Template_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -884,6 +947,15 @@
         "tag": "span",
         "currentIndex": "21",
         "operation": "Loaded",
+        "props": {
+          "id": "id=\"Template_span_2\"",
+          "className": "className=\"subtitle\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Template_span_2\""
         }
@@ -908,6 +980,15 @@
         "currentIndex": "22",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"Template_span_3\"",
+          "className": "className=\"required\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"Template_span_3\""
         }
       }
@@ -915,7 +996,8 @@
   },
   {
     "tags": [
-      "Template_div_12"
+      "Template_div_12",
+      "Template_Box_12"
     ],
     "historyStates": [
       {
@@ -923,7 +1005,42 @@
         "currentIndex": "23",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"Template_div_12\"",
+          "className": "className=\"col-md-10\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"Template_div_12\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Template_div_12\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Template_Box_12",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Template_Box_12",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -931,7 +1048,7 @@
   {
     "tags": [
       "kc-content",
-      "Template_Box_11"
+      "Template_Box_13"
     ],
     "historyStates": [
       {
@@ -963,7 +1080,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "Template_Box_11",
+          "id": "Template_Box_13",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -972,7 +1089,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "Template_Box_11",
+          "id": "Template_Box_13",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -996,7 +1113,7 @@
   {
     "tags": [
       "Template_div_15",
-      "Template_Box_12"
+      "Template_Box_14"
     ],
     "historyStates": [
       {
@@ -1004,13 +1121,60 @@
         "currentIndex": "26",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_15\""
+          "id": "id=\"Template_div_15\"",
+          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}"
         }
       },
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Template_div_15\"",
+          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}",
+          "id": "Template_Box_14",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={clsx(`alert-${message.type}`, kcClsx(\"kcAlertClass\"), `pf-m-${message?.type === \"error\" ? \"danger\" : message.type}`)}",
+          "id": "Template_Box_14",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Template_div_16",
+      "Template_Box_15"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "27",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Template_div_16\"",
+          "className": "className=\"pf-c-alert__icon\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"Template_div_16\""
         }
@@ -1020,7 +1184,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_15\""
+          "id": "id=\"Template_div_16\""
         }
       },
       {
@@ -1028,7 +1192,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "Template_Box_12",
+          "id": "Template_Box_15",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1037,23 +1201,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "Template_Box_12",
+          "id": "Template_Box_15",
           "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "Template_div_16"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "27",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"Template_div_16\""
         }
       }
     ]
@@ -1068,7 +1217,8 @@
         "currentIndex": "28",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_span_4\""
+          "id": "id=\"Template_span_4\"",
+          "className": "className={kcClsx(\"kcFeedbackSuccessIcon\")}"
         }
       }
     ]
@@ -1083,7 +1233,8 @@
         "currentIndex": "29",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_span_5\""
+          "id": "id=\"Template_span_5\"",
+          "className": "className={kcClsx(\"kcFeedbackWarningIcon\")}"
         }
       }
     ]
@@ -1098,7 +1249,8 @@
         "currentIndex": "30",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_span_6\""
+          "id": "id=\"Template_span_6\"",
+          "className": "className={kcClsx(\"kcFeedbackErrorIcon\")}"
         }
       }
     ]
@@ -1113,7 +1265,8 @@
         "currentIndex": "31",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_span_7\""
+          "id": "id=\"Template_span_7\"",
+          "className": "className={kcClsx(\"kcFeedbackInfoIcon\")}"
         }
       }
     ]
@@ -1128,15 +1281,9 @@
         "currentIndex": "32",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_span_8\""
-        }
-      },
-      {
-        "tag": "span",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"Template_span_8\""
+          "id": "id=\"Template_span_8\"",
+          "className": "className={kcClsx(\"kcAlertTitleClass\")}",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: message.summary\n            }}"
         }
       }
     ]
@@ -1144,7 +1291,7 @@
   {
     "tags": [
       "kc-select-try-another-way-form",
-      "Template_Box_13"
+      "Template_Box_16"
     ],
     "historyStates": [
       {
@@ -1176,7 +1323,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "Template_Box_13",
+          "id": "Template_Box_16",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1188,7 +1335,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "Template_Box_13",
+          "id": "Template_Box_16",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1197,7 +1344,7 @@
   {
     "tags": [
       "Template_div_17",
-      "Template_Box_14"
+      "Template_Box_17"
     ],
     "historyStates": [
       {
@@ -1205,7 +1352,8 @@
         "currentIndex": "34",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_div_17\""
+          "id": "id=\"Template_div_17\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1213,7 +1361,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_div_17\""
+          "id": "id=\"Template_div_17\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1221,7 +1370,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "Template_Box_14",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "Template_Box_17",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1230,7 +1380,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "Template_Box_14",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "Template_Box_17",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1247,7 +1398,10 @@
         "currentIndex": "35",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Template_input_1\""
+          "id": "id=\"Template_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\""
         }
       },
       {
@@ -1255,7 +1409,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Template_input_1\""
+          "id": "id=\"Template_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\""
         }
       },
       {
@@ -1263,6 +1420,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\"",
           "id": "Template_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1272,6 +1432,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"tryAnotherWay\"",
+          "value": "value=\"on\"",
           "id": "Template_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1331,7 +1494,7 @@
   {
     "tags": [
       "kc-info",
-      "Template_Box_15"
+      "Template_Box_18"
     ],
     "historyStates": [
       {
@@ -1358,7 +1521,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcSignUpClass\")}",
-          "id": "Template_Box_15",
+          "id": "Template_Box_18",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1368,7 +1531,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcSignUpClass\")}",
-          "id": "Template_Box_15",
+          "id": "Template_Box_18",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1377,7 +1540,7 @@
   {
     "tags": [
       "kc-info-wrapper",
-      "Template_Box_16"
+      "Template_Box_19"
     ],
     "historyStates": [
       {
@@ -1404,7 +1567,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}",
-          "id": "Template_Box_16",
+          "id": "Template_Box_19",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1414,7 +1577,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}",
-          "id": "Template_Box_16",
+          "id": "Template_Box_19",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

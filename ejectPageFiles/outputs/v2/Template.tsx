@@ -60,7 +60,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
     return (
-        <Box id="Template_Box_1" sx={styles.Template_Box_1}>
+        <Box
+            className={kcClsx("kcLoginClass")}
+            id="Template_Box_1"
+            sx={styles.Template_Box_1}
+        >
             <Box
                 className={kcClsx("kcHeaderClass")}
                 id="Template_Box_2"
@@ -75,8 +79,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </Box>
             </Box>
 
-            <Box id="Template_Box_4" sx={styles.Template_Box_4}>
-                <header id="Template_header_1">
+            <Box
+                className={kcClsx("kcFormCardClass")}
+                id="Template_Box_4"
+                sx={styles.Template_Box_4}
+            >
+                <header id="Template_header_1" className={kcClsx("kcFormHeaderClass")}>
                     {realm.internationalizationEnabled &&
                         (assert(locale !== undefined), locale.supported.length > 1) && (
                             <Box
@@ -124,10 +132,22 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                             {locale.supported.map(
                                                 ({ languageTag }, i) => (
                                                     <ListItem
+                                                        key={languageTag}
+                                                        className={kcClsx(
+                                                            "kcLocaleListItemClass"
+                                                        )}
+                                                        role="none"
                                                         id="Template_ListItem_1"
                                                         sx={styles.Template_ListItem_1}
                                                     >
                                                         <Link
+                                                            role="menuitem"
+                                                            className={kcClsx(
+                                                                "kcLocaleItemClass"
+                                                            )}
+                                                            href={getChangeLocaleUrl(
+                                                                languageTag
+                                                            )}
                                                             id="Template_Link_1"
                                                             sx={styles.Template_Link_1}
                                                         >
@@ -178,7 +198,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     sx={styles.Template_Link_2}
                                 >
                                     <Box id="Template_Box_9" sx={styles.Template_Box_9}>
-                                        <i id="Template_i_1"></i>
+                                        <i
+                                            id="Template_i_1"
+                                            className={kcClsx("kcResetFlowIcon")}
+                                        ></i>
                                         <span id="Template_span_1">
                                             {msg("restartLoginTooltip")}
                                         </span>
@@ -188,33 +211,79 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         );
                         if (displayRequiredFields) {
                             return (
-                                <Box id="Template_Box_10" sx={styles.Template_Box_10}>
-                                    *{msg("requiredFields")}
-                                    {node}
+                                <Box
+                                    className={kcClsx("kcContentWrapperClass")}
+                                    id="Template_Box_10"
+                                    sx={styles.Template_Box_10}
+                                >
+                                    <Box
+                                        className={clsx(
+                                            kcClsx("kcLabelWrapperClass"),
+                                            "subtitle"
+                                        )}
+                                        id="Template_Box_11"
+                                        sx={styles.Template_Box_11}
+                                    >
+                                        <span id="Template_span_2">
+                                            *{msg("requiredFields")}
+                                        </span>
+                                    </Box>
+                                    <Box id="Template_Box_12" sx={styles.Template_Box_12}>
+                                        {node}
+                                    </Box>
                                 </Box>
                             );
                         }
                         return node;
                     })()}
                 </header>
-                <Box id="Template_Box_11" sx={styles.Template_Box_11}>
+                <Box id="Template_Box_13" sx={styles.Template_Box_13}>
                     {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                     {displayMessage &&
                         message !== undefined &&
                         (message.type !== "warning" || !isAppInitiatedAction) && (
-                            <Box id="Template_Box_12" sx={styles.Template_Box_12}>
-                                {message.type === "success" && (
-                                    <span id="Template_span_4"></span>
+                            <Box
+                                className={clsx(
+                                    `alert-${message.type}`,
+                                    kcClsx("kcAlertClass"),
+                                    `pf-m-${message?.type === "error" ? "danger" : message.type}`
                                 )}
-                                {message.type === "warning" && (
-                                    <span id="Template_span_5"></span>
-                                )}
-                                {message.type === "error" && (
-                                    <span id="Template_span_6"></span>
-                                )}
-                                {message.type === "info" && (
-                                    <span id="Template_span_7"></span>
-                                )}
+                                id="Template_Box_14"
+                                sx={styles.Template_Box_14}
+                            >
+                                <Box id="Template_Box_15" sx={styles.Template_Box_15}>
+                                    {message.type === "success" && (
+                                        <span
+                                            id="Template_span_4"
+                                            className={kcClsx("kcFeedbackSuccessIcon")}
+                                        ></span>
+                                    )}
+                                    {message.type === "warning" && (
+                                        <span
+                                            id="Template_span_5"
+                                            className={kcClsx("kcFeedbackWarningIcon")}
+                                        ></span>
+                                    )}
+                                    {message.type === "error" && (
+                                        <span
+                                            id="Template_span_6"
+                                            className={kcClsx("kcFeedbackErrorIcon")}
+                                        ></span>
+                                    )}
+                                    {message.type === "info" && (
+                                        <span
+                                            id="Template_span_7"
+                                            className={kcClsx("kcFeedbackInfoIcon")}
+                                        ></span>
+                                    )}
+                                </Box>
+                                <span
+                                    id="Template_span_8"
+                                    className={kcClsx("kcAlertTitleClass")}
+                                    dangerouslySetInnerHTML={{
+                                        __html: message.summary
+                                    }}
+                                />
                             </Box>
                         )}
                     {children}
@@ -223,11 +292,18 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             action={url.loginAction}
                             method="post"
                             component="form"
-                            id="Template_Box_13"
-                            sx={styles.Template_Box_13}
+                            id="Template_Box_16"
+                            sx={styles.Template_Box_16}
                         >
-                            <Box id="Template_Box_14" sx={styles.Template_Box_14}>
+                            <Box
+                                className={kcClsx("kcFormGroupClass")}
+                                id="Template_Box_17"
+                                sx={styles.Template_Box_17}
+                            >
                                 <TextField
+                                    type="hidden"
+                                    name="tryAnotherWay"
+                                    value="on"
                                     id="Template_TextField_1"
                                     sx={styles.Template_TextField_1}
                                 />
@@ -251,13 +327,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     {displayInfo && (
                         <Box
                             className={kcClsx("kcSignUpClass")}
-                            id="Template_Box_15"
-                            sx={styles.Template_Box_15}
+                            id="Template_Box_18"
+                            sx={styles.Template_Box_18}
                         >
                             <Box
                                 className={kcClsx("kcInfoAreaWrapperClass")}
-                                id="Template_Box_16"
-                                sx={styles.Template_Box_16}
+                                id="Template_Box_19"
+                                sx={styles.Template_Box_19}
                             >
                                 {infoNode}
                             </Box>

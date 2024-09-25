@@ -9,7 +9,29 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Info_Template_1\""
+          "id": "id=\"Info_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={false}",
+          "headerNode": "headerNode={<span id=\"Info_span_1\" dangerouslySetInnerHTML={{\n                __html: messageHeader ?? message.summary\n            }}/>}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_span_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: messageHeader ?? message.summary\n            }}"
         }
       }
     ]
@@ -22,7 +44,7 @@
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "1",
+        "currentIndex": "2",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-info-message\""
@@ -64,10 +86,21 @@
     "historyStates": [
       {
         "tag": "p",
-        "currentIndex": "2",
+        "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Info_p_1\""
+          "id": "id=\"Info_p_1\"",
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}"
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Info_p_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}"
         }
       },
       {
@@ -75,7 +108,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Info_p_1\""
+          "id": "id=\"Info_p_1\"",
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}"
         }
       },
       {
@@ -83,6 +118,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}",
           "id": "Info_Typography_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -92,6 +129,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: (() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })()\n        }}",
           "id": "Info_Typography_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -106,7 +145,7 @@
     "historyStates": [
       {
         "tag": "p",
-        "currentIndex": "3",
+        "currentIndex": "4",
         "operation": "Loaded",
         "props": {
           "id": "id=\"Info_p_2\""
@@ -148,10 +187,11 @@
     "historyStates": [
       {
         "tag": "a",
-        "currentIndex": "4",
+        "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Info_a_1\""
+          "id": "id=\"Info_a_1\"",
+          "href": "href={pageRedirectUri}"
         }
       },
       {
@@ -159,7 +199,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Info_a_1\""
+          "id": "id=\"Info_a_1\"",
+          "href": "href={pageRedirectUri}"
         }
       },
       {
@@ -167,6 +208,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={pageRedirectUri}",
           "id": "Info_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -176,6 +218,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={pageRedirectUri}",
           "id": "Info_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -190,7 +233,7 @@
     "historyStates": [
       {
         "tag": "p",
-        "currentIndex": "5",
+        "currentIndex": "6",
         "operation": "Loaded",
         "props": {
           "id": "id=\"Info_p_3\""
@@ -232,10 +275,11 @@
     "historyStates": [
       {
         "tag": "a",
-        "currentIndex": "6",
+        "currentIndex": "7",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Info_a_2\""
+          "id": "id=\"Info_a_2\"",
+          "href": "href={actionUri}"
         }
       },
       {
@@ -243,7 +287,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Info_a_2\""
+          "id": "id=\"Info_a_2\"",
+          "href": "href={actionUri}"
         }
       },
       {
@@ -251,6 +296,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={actionUri}",
           "id": "Info_Link_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -260,6 +306,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={actionUri}",
           "id": "Info_Link_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -274,7 +321,7 @@
     "historyStates": [
       {
         "tag": "p",
-        "currentIndex": "7",
+        "currentIndex": "8",
         "operation": "Loaded",
         "props": {
           "id": "id=\"Info_p_4\""
@@ -316,10 +363,11 @@
     "historyStates": [
       {
         "tag": "a",
-        "currentIndex": "8",
+        "currentIndex": "9",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"Info_a_3\""
+          "id": "id=\"Info_a_3\"",
+          "href": "href={client.baseUrl}"
         }
       },
       {
@@ -327,7 +375,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"Info_a_3\""
+          "id": "id=\"Info_a_3\"",
+          "href": "href={client.baseUrl}"
         }
       },
       {
@@ -335,6 +384,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={client.baseUrl}",
           "id": "Info_Link_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -344,6 +394,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={client.baseUrl}",
           "id": "Info_Link_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

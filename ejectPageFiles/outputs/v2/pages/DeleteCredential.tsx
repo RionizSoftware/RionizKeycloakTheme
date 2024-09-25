@@ -32,11 +32,21 @@ export default function DeleteCredential(
     });
     const { url, credentialLabel } = kcContext;
     return (
-        <Template id="DeleteCredential_Template_1">
+        <Template
+            id="DeleteCredential_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={false}
+            headerNode={msg("deleteCredentialTitle", credentialLabel)}
+        >
             <Box id="DeleteCredential_Box_1" sx={styles.DeleteCredential_Box_1}>
                 {msg("deleteCredentialMessage", credentialLabel)}
             </Box>
             <Box
+                action={url.loginAction}
+                method="POST"
                 component="form"
                 id="DeleteCredential_Box_2"
                 sx={styles.DeleteCredential_Box_2}
@@ -66,6 +76,11 @@ export default function DeleteCredential(
                     sx={styles.DeleteCredential_TextField_2}
                 />
             </Box>
+            <Box
+                className="clearfix"
+                id="DeleteCredential_Box_3"
+                sx={styles.DeleteCredential_Box_3}
+            />
         </Template>
     );
 }

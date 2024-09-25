@@ -27,7 +27,14 @@ export default function LoginPageExpired(
     const { url } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="LoginPageExpired_Template_1">
+        <Template
+            id="LoginPageExpired_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("pageExpiredTitle")}
+        >
             <Typography
                 id="LoginPageExpired_Typography_1"
                 sx={styles.LoginPageExpired_Typography_1}

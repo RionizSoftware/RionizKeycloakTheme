@@ -9,7 +9,14 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginVerifyEmail_Template_1\""
+          "id": "id=\"LoginVerifyEmail_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayInfo": "displayInfo",
+          "headerNode": "headerNode={msg(\"emailVerifyTitle\")}",
+          "infoNode": "infoNode={<p id=\"LoginVerifyEmail_p_1\" className=\"instruction\">\n                    {msg(\"emailVerifyInstruction2\")}\n                    <br id=\"LoginVerifyEmail_br_1\"/>\n                    <a id=\"LoginVerifyEmail_a_1\" href={url.loginAction}>{msg(\"doClickHere\")}</a>\n                    &nbsp;\n                    {msg(\"emailVerifyInstruction3\")}\n                </p>}"
         }
       }
     ]
@@ -24,6 +31,15 @@
         "tag": "p",
         "currentIndex": "1",
         "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_p_1\"",
+          "className": "className=\"instruction\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginVerifyEmail_p_1\""
         }
@@ -51,6 +67,118 @@
         "operation": "SxAdded",
         "props": {
           "id": "LoginVerifyEmail_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginVerifyEmail_br_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "br",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_br_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginVerifyEmail_a_1",
+      "LoginVerifyEmail_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_a_1\"",
+          "href": "href={url.loginAction}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_a_1\"",
+          "href": "href={url.loginAction}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={url.loginAction}",
+          "id": "LoginVerifyEmail_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={url.loginAction}",
+          "id": "LoginVerifyEmail_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginVerifyEmail_p_2",
+      "LoginVerifyEmail_Typography_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_p_2\"",
+          "className": "className=\"instruction\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_p_2\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginVerifyEmail_p_2\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginVerifyEmail_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginVerifyEmail_Typography_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

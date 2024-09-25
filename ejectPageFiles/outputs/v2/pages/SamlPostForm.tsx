@@ -40,28 +40,52 @@ export default function SamlPostForm(
         htmlFormElement.submit();
     }, [htmlFormElement]);
     return (
-        <Template id="SamlPostForm_Template_1">
+        <Template
+            id="SamlPostForm_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("saml.post-form.title")}
+        >
             <Typography
                 id="SamlPostForm_Typography_1"
                 sx={styles.SamlPostForm_Typography_1}
             >
                 {msg("saml.post-form.message")}
             </Typography>
-            <Box component="form" id="SamlPostForm_Box_1" sx={styles.SamlPostForm_Box_1}>
+            <Box
+                name="saml-post-binding"
+                method="post"
+                action={samlPost.url}
+                ref={setHtmlFormElement}
+                component="form"
+                id="SamlPostForm_Box_1"
+                sx={styles.SamlPostForm_Box_1}
+            >
                 {samlPost.SAMLRequest && (
                     <TextField
+                        type="hidden"
+                        name="SAMLRequest"
+                        value={samlPost.SAMLRequest}
                         id="SamlPostForm_TextField_1"
                         sx={styles.SamlPostForm_TextField_1}
                     />
                 )}
                 {samlPost.SAMLResponse && (
                     <TextField
+                        type="hidden"
+                        name="SAMLResponse"
+                        value={samlPost.SAMLResponse}
                         id="SamlPostForm_TextField_2"
                         sx={styles.SamlPostForm_TextField_2}
                     />
                 )}
                 {samlPost.relayState && (
                     <TextField
+                        type="hidden"
+                        name="RelayState"
+                        value={samlPost.relayState}
                         id="SamlPostForm_TextField_3"
                         sx={styles.SamlPostForm_TextField_3}
                     />
@@ -74,6 +98,8 @@ export default function SamlPostForm(
                         {msg("saml.post-form.js-disabled")}
                     </Typography>
                     <TextField
+                        type="submit"
+                        value={msgStr("doContinue")}
                         id="SamlPostForm_TextField_4"
                         sx={styles.SamlPostForm_TextField_4}
                     />

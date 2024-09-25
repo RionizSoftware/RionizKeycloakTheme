@@ -9,7 +9,14 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_Template_1\""
+          "id": "id=\"IdpReviewUserProfile_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={messagesPerField.exists(\"global\")}",
+          "displayRequiredFields": "displayRequiredFields",
+          "headerNode": "headerNode={msg(\"loginIdpReviewProfileTitle\")}"
         }
       }
     ]
@@ -81,7 +88,12 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_UserProfileFormFields_1\""
+          "id": "id=\"IdpReviewUserProfile_UserProfileFormFields_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "onIsFormSubmittableValueChange": "onIsFormSubmittableValueChange={setIsFomSubmittable}",
+          "kcClsx": "kcClsx={kcClsx}",
+          "doMakeUserConfirmPassword": "doMakeUserConfirmPassword={doMakeUserConfirmPassword}"
         }
       }
     ]
@@ -97,7 +109,8 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_div_1\""
+          "id": "id=\"IdpReviewUserProfile_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -105,7 +118,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_div_1\""
+          "id": "id=\"IdpReviewUserProfile_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -113,6 +127,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "IdpReviewUserProfile_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -122,6 +137,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "IdpReviewUserProfile_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -176,7 +192,8 @@
   },
   {
     "tags": [
-      "IdpReviewUserProfile_div_3"
+      "IdpReviewUserProfile_div_3",
+      "IdpReviewUserProfile_Box_4"
     ],
     "historyStates": [
       {
@@ -184,15 +201,37 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_div_3\""
+          "id": "id=\"IdpReviewUserProfile_div_3\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
         }
       },
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
+        "operation": "TagReplaced",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_div_3\""
+          "id": "id=\"IdpReviewUserProfile_div_3\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "IdpReviewUserProfile_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "IdpReviewUserProfile_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -200,7 +239,7 @@
   {
     "tags": [
       "kc-form-buttons",
-      "IdpReviewUserProfile_Box_4"
+      "IdpReviewUserProfile_Box_5"
     ],
     "historyStates": [
       {
@@ -227,7 +266,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "IdpReviewUserProfile_Box_4",
+          "id": "IdpReviewUserProfile_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -237,7 +276,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "IdpReviewUserProfile_Box_4",
+          "id": "IdpReviewUserProfile_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -254,7 +293,11 @@
         "currentIndex": "7",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_input_1\""
+          "id": "id=\"IdpReviewUserProfile_input_1\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}"
         }
       },
       {
@@ -262,7 +305,11 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"IdpReviewUserProfile_input_1\""
+          "id": "id=\"IdpReviewUserProfile_input_1\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}"
         }
       },
       {
@@ -270,6 +317,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}",
           "id": "IdpReviewUserProfile_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -279,6 +330,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "disabled": "disabled={!isFomSubmittable}",
           "id": "IdpReviewUserProfile_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

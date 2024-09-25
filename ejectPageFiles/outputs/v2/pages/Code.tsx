@@ -32,7 +32,16 @@ export default function Code(
     const { code } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="Code_Template_1">
+        <Template
+            id="Code_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={
+                code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)
+            }
+        >
             <Box id="Code_Box_1" sx={styles.Code_Box_1}>
                 {code.success ? (
                     <>

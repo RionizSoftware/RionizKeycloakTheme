@@ -35,9 +35,43 @@ export default function Info(
         client
     } = kcContext;
     return (
-        <Template id="Info_Template_1">
+        <Template
+            id="Info_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={false}
+            headerNode={
+                <span
+                    id="Info_span_1"
+                    dangerouslySetInnerHTML={{
+                        __html: messageHeader ?? message.summary
+                    }}
+                />
+            }
+        >
             <Box id="Info_Box_1" sx={styles.Info_Box_1}>
-                <Typography id="Info_Typography_1" sx={styles.Info_Typography_1} />
+                <Typography
+                    className="instruction"
+                    dangerouslySetInnerHTML={{
+                        __html: (() => {
+                            let html = message.summary;
+                            if (requiredActions) {
+                                html += "<b>";
+                                html += requiredActions
+                                    .map(requiredAction =>
+                                        advancedMsgStr(`requiredAction.${requiredAction}`)
+                                    )
+                                    .join(", ");
+                                html += "</b>";
+                            }
+                            return html;
+                        })()
+                    }}
+                    id="Info_Typography_1"
+                    sx={styles.Info_Typography_1}
+                />
                 {(() => {
                     if (skipLink) {
                         return null;
@@ -48,7 +82,11 @@ export default function Info(
                                 id="Info_Typography_2"
                                 sx={styles.Info_Typography_2}
                             >
-                                <Link id="Info_Link_1" sx={styles.Info_Link_1}>
+                                <Link
+                                    href={pageRedirectUri}
+                                    id="Info_Link_1"
+                                    sx={styles.Info_Link_1}
+                                >
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>
@@ -60,7 +98,11 @@ export default function Info(
                                 id="Info_Typography_3"
                                 sx={styles.Info_Typography_3}
                             >
-                                <Link id="Info_Link_2" sx={styles.Info_Link_2}>
+                                <Link
+                                    href={actionUri}
+                                    id="Info_Link_2"
+                                    sx={styles.Info_Link_2}
+                                >
                                     {msg("proceedWithAction")}
                                 </Link>
                             </Typography>
@@ -72,7 +114,11 @@ export default function Info(
                                 id="Info_Typography_4"
                                 sx={styles.Info_Typography_4}
                             >
-                                <Link id="Info_Link_3" sx={styles.Info_Link_3}>
+                                <Link
+                                    href={client.baseUrl}
+                                    id="Info_Link_3"
+                                    sx={styles.Info_Link_3}
+                                >
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>

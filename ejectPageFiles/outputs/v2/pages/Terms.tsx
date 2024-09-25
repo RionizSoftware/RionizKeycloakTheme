@@ -32,11 +32,25 @@ export default function Terms(
     const { msg, msgStr } = i18n;
     const { url } = kcContext;
     return (
-        <Template id="Terms_Template_1">
+        <Template
+            id="Terms_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={false}
+            headerNode={msg("termsTitle")}
+        >
             <Box id="Terms_Box_1" sx={styles.Terms_Box_1}>
                 {msg("termsText")}
             </Box>
-            <Box component="form" id="Terms_Box_2" sx={styles.Terms_Box_2}>
+            <Box
+                action={url.loginAction}
+                method="POST"
+                component="form"
+                id="Terms_Box_2"
+                sx={styles.Terms_Box_2}
+            >
                 <TextField
                     className={kcClsx(
                         "kcButtonClass",
@@ -64,6 +78,7 @@ export default function Terms(
                     sx={styles.Terms_TextField_2}
                 />
             </Box>
+            <Box className="clearfix" id="Terms_Box_3" sx={styles.Terms_Box_3} />
         </Template>
     );
 }

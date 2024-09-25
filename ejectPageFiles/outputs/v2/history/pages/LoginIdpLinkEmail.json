@@ -9,7 +9,12 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginIdpLinkEmail_Template_1\""
+          "id": "id=\"LoginIdpLinkEmail_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"emailLinkIdpTitle\", idpAlias)}"
         }
       }
     ]
@@ -127,7 +132,8 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginIdpLinkEmail_a_1\""
+          "id": "id=\"LoginIdpLinkEmail_a_1\"",
+          "href": "href={url.loginAction}"
         }
       },
       {
@@ -135,7 +141,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginIdpLinkEmail_a_1\""
+          "id": "id=\"LoginIdpLinkEmail_a_1\"",
+          "href": "href={url.loginAction}"
         }
       },
       {
@@ -143,6 +150,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={url.loginAction}",
           "id": "LoginIdpLinkEmail_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -152,6 +160,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={url.loginAction}",
           "id": "LoginIdpLinkEmail_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -220,7 +229,8 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginIdpLinkEmail_a_2\""
+          "id": "id=\"LoginIdpLinkEmail_a_2\"",
+          "href": "href={url.loginAction}"
         }
       },
       {
@@ -228,7 +238,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginIdpLinkEmail_a_2\""
+          "id": "id=\"LoginIdpLinkEmail_a_2\"",
+          "href": "href={url.loginAction}"
         }
       },
       {
@@ -236,6 +247,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={url.loginAction}",
           "id": "LoginIdpLinkEmail_Link_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -245,6 +257,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={url.loginAction}",
           "id": "LoginIdpLinkEmail_Link_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

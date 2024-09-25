@@ -12,6 +12,7 @@ export const styles ={
     "WebauthnRegister_Button_1": {},
     "WebauthnRegister_Box_4": {},
     "WebauthnRegister_Box_5": {},
+    "WebauthnRegister_Box_6": {},
     "WebauthnRegister_FormLabel_1": {},
     "WebauthnRegister_TextField_8": {}
 }

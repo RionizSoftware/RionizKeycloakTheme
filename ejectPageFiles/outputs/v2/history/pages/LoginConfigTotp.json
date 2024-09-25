@@ -9,7 +9,13 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_Template_1\""
+          "id": "id=\"LoginConfigTotp_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"loginTotpTitle\")}",
+          "displayMessage": "displayMessage={!messagesPerField.existsError(\"totp\", \"userLabel\")}"
         }
       }
     ]
@@ -166,7 +172,8 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_li_2\""
+          "id": "id=\"LoginConfigTotp_li_2\"",
+          "key": "key={app}"
         }
       },
       {
@@ -174,7 +181,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_li_2\""
+          "id": "id=\"LoginConfigTotp_li_2\"",
+          "key": "key={app}"
         }
       },
       {
@@ -182,6 +190,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "key": "key={app}",
           "id": "LoginConfigTotp_ListItem_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -191,6 +200,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "key": "key={app}",
           "id": "LoginConfigTotp_ListItem_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1202,15 +1212,8 @@
         "currentIndex": "31",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_1\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"LoginConfigTotp_div_2\""
+          "id": "id=\"LoginConfigTotp_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1218,7 +1221,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_1\""
+          "id": "id=\"LoginConfigTotp_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1226,6 +1230,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginConfigTotp_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1235,6 +1240,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginConfigTotp_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1243,7 +1249,8 @@
   },
   {
     "tags": [
-      "LoginConfigTotp_div_2"
+      "LoginConfigTotp_div_2",
+      "LoginConfigTotp_Box_3"
     ],
     "historyStates": [
       {
@@ -1251,7 +1258,37 @@
         "currentIndex": "32",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_2\""
+          "id": "id=\"LoginConfigTotp_div_2\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginConfigTotp_div_2\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -1267,7 +1304,9 @@
         "currentIndex": "33",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_label_1\""
+          "id": "id=\"LoginConfigTotp_label_1\"",
+          "htmlFor": "htmlFor=\"totp\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -1275,7 +1314,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_label_1\""
+          "id": "id=\"LoginConfigTotp_label_1\"",
+          "htmlFor": "htmlFor=\"totp\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -1283,6 +1324,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor=\"totp\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginConfigTotp_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1292,6 +1335,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor=\"totp\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginConfigTotp_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1308,6 +1353,15 @@
         "currentIndex": "34",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"LoginConfigTotp_span_2\"",
+          "className": "className=\"required\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"LoginConfigTotp_span_2\""
         }
       }
@@ -1316,7 +1370,7 @@
   {
     "tags": [
       "LoginConfigTotp_div_3",
-      "LoginConfigTotp_Box_3"
+      "LoginConfigTotp_Box_4"
     ],
     "historyStates": [
       {
@@ -1324,7 +1378,8 @@
         "currentIndex": "35",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_3\""
+          "id": "id=\"LoginConfigTotp_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -1332,7 +1387,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_3\""
+          "id": "id=\"LoginConfigTotp_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -1340,7 +1396,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginConfigTotp_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1349,7 +1406,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginConfigTotp_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1542,7 +1600,7 @@
   {
     "tags": [
       "LoginConfigTotp_div_4",
-      "LoginConfigTotp_Box_4"
+      "LoginConfigTotp_Box_5"
     ],
     "historyStates": [
       {
@@ -1550,15 +1608,8 @@
         "currentIndex": "40",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_4\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"LoginConfigTotp_div_5\""
+          "id": "id=\"LoginConfigTotp_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1566,7 +1617,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_4\""
+          "id": "id=\"LoginConfigTotp_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1574,7 +1626,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginConfigTotp_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginConfigTotp_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1583,7 +1636,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginConfigTotp_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginConfigTotp_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1591,7 +1645,8 @@
   },
   {
     "tags": [
-      "LoginConfigTotp_div_5"
+      "LoginConfigTotp_div_5",
+      "LoginConfigTotp_Box_6"
     ],
     "historyStates": [
       {
@@ -1599,7 +1654,37 @@
         "currentIndex": "41",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_5\""
+          "id": "id=\"LoginConfigTotp_div_5\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginConfigTotp_div_5\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -1615,7 +1700,9 @@
         "currentIndex": "42",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_label_2\""
+          "id": "id=\"LoginConfigTotp_label_2\"",
+          "htmlFor": "htmlFor=\"userLabel\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -1623,7 +1710,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_label_2\""
+          "id": "id=\"LoginConfigTotp_label_2\"",
+          "htmlFor": "htmlFor=\"userLabel\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -1631,6 +1720,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor=\"userLabel\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginConfigTotp_FormLabel_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1640,6 +1731,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor=\"userLabel\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginConfigTotp_FormLabel_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1656,6 +1749,15 @@
         "currentIndex": "43",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"LoginConfigTotp_span_4\"",
+          "className": "className=\"required\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"LoginConfigTotp_span_4\""
         }
       }
@@ -1664,7 +1766,7 @@
   {
     "tags": [
       "LoginConfigTotp_div_6",
-      "LoginConfigTotp_Box_5"
+      "LoginConfigTotp_Box_7"
     ],
     "historyStates": [
       {
@@ -1672,7 +1774,8 @@
         "currentIndex": "44",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_6\""
+          "id": "id=\"LoginConfigTotp_div_6\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -1680,7 +1783,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_6\""
+          "id": "id=\"LoginConfigTotp_div_6\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -1688,7 +1792,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginConfigTotp_Box_5",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1697,7 +1802,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginConfigTotp_Box_5",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1786,7 +1892,7 @@
   {
     "tags": [
       "LoginConfigTotp_div_7",
-      "LoginConfigTotp_Box_6"
+      "LoginConfigTotp_Box_8"
     ],
     "historyStates": [
       {
@@ -1794,7 +1900,8 @@
         "currentIndex": "47",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_7\""
+          "id": "id=\"LoginConfigTotp_div_7\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1802,7 +1909,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_7\""
+          "id": "id=\"LoginConfigTotp_div_7\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -1810,7 +1918,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginConfigTotp_Box_6",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginConfigTotp_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1819,7 +1928,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginConfigTotp_Box_6",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginConfigTotp_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1835,7 +1945,9 @@
         "currentIndex": "48",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_LogoutOtherSessions_1\""
+          "id": "id=\"LoginConfigTotp_LogoutOtherSessions_1\"",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
         }
       }
     ]
@@ -1991,7 +2103,7 @@
   {
     "tags": [
       "kc-form-options",
-      "LoginConfigTotp_Box_7"
+      "LoginConfigTotp_Box_9"
     ],
     "historyStates": [
       {
@@ -2018,7 +2130,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginConfigTotp_Box_7",
+          "id": "LoginConfigTotp_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -2028,7 +2140,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsClass\")}",
-          "id": "LoginConfigTotp_Box_7",
+          "id": "LoginConfigTotp_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -2037,7 +2149,7 @@
   {
     "tags": [
       "LoginConfigTotp_div_9",
-      "LoginConfigTotp_Box_8"
+      "LoginConfigTotp_Box_10"
     ],
     "historyStates": [
       {
@@ -2045,13 +2157,60 @@
         "currentIndex": "53",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_9\""
+          "id": "id=\"LoginConfigTotp_div_9\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
         }
       },
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginConfigTotp_div_9\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginConfigTotp_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginConfigTotp_div_10",
+      "LoginConfigTotp_Box_11"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "54",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginConfigTotp_div_10\"",
+          "className": "className=\"checkbox\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
         "props": {
           "id": "id=\"LoginConfigTotp_div_10\""
         }
@@ -2061,7 +2220,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginConfigTotp_div_9\""
+          "id": "id=\"LoginConfigTotp_div_10\""
         }
       },
       {
@@ -2069,7 +2228,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginConfigTotp_Box_8",
+          "id": "LoginConfigTotp_Box_11",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -2078,23 +2237,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginConfigTotp_Box_8",
+          "id": "LoginConfigTotp_Box_11",
           "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "LoginConfigTotp_div_10"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "54",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"LoginConfigTotp_div_10\""
         }
       }
     ]

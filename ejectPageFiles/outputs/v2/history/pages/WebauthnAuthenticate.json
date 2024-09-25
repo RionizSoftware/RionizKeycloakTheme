@@ -9,7 +9,129 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_Template_1\""
+          "id": "id=\"WebauthnAuthenticate_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayInfo": "displayInfo={realm.registrationAllowed && !registrationDisabled}",
+          "infoNode": "infoNode={<div id=\"kc-registration\">\n                    <span id=\"WebauthnAuthenticate_span_1\">\n                        {msg(\"noAccount\")}{\" \"}\n                        <a id=\"WebauthnAuthenticate_a_1\" tabIndex={6} href={url.registrationUrl}>\n                            {msg(\"doRegister\")}\n                        </a>\n                    </span>\n                </div>}",
+          "headerNode": "headerNode={msg(\"webauthn-login-title\")}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-registration",
+      "WebauthnAuthenticate_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_span_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "WebauthnAuthenticate_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "WebauthnAuthenticate_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_a_1",
+      "WebauthnAuthenticate_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "WebauthnAuthenticate_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "WebauthnAuthenticate_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -17,12 +139,12 @@
   {
     "tags": [
       "kc-form-webauthn",
-      "WebauthnAuthenticate_Box_1"
+      "WebauthnAuthenticate_Box_2"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "1",
+        "currentIndex": "4",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form-webauthn\"",
@@ -44,7 +166,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormClass\")}",
-          "id": "WebauthnAuthenticate_Box_1",
+          "id": "WebauthnAuthenticate_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -54,7 +176,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormClass\")}",
-          "id": "WebauthnAuthenticate_Box_1",
+          "id": "WebauthnAuthenticate_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -63,12 +185,12 @@
   {
     "tags": [
       "webauth",
-      "WebauthnAuthenticate_Box_2"
+      "WebauthnAuthenticate_Box_3"
     ],
     "historyStates": [
       {
         "tag": "form",
-        "currentIndex": "2",
+        "currentIndex": "5",
         "operation": "Loaded",
         "props": {
           "id": "id=\"webauth\"",
@@ -95,7 +217,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "WebauthnAuthenticate_Box_2",
+          "id": "WebauthnAuthenticate_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -107,7 +229,7 @@
           "action": "action={url.loginAction}",
           "method": "method=\"post\"",
           "component": "component=\"form\"",
-          "id": "WebauthnAuthenticate_Box_2",
+          "id": "WebauthnAuthenticate_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -121,7 +243,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "3",
+        "currentIndex": "6",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -171,7 +293,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "4",
+        "currentIndex": "7",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -221,7 +343,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "5",
+        "currentIndex": "8",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -271,7 +393,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "6",
+        "currentIndex": "9",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -321,7 +443,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "7",
+        "currentIndex": "10",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -371,7 +493,7 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "8",
+        "currentIndex": "11",
         "operation": "Loaded",
         "props": {
           "type": "type=\"hidden\"",
@@ -415,16 +537,17 @@
   },
   {
     "tags": [
-      "WebauthnAuthenticate_div_2",
-      "WebauthnAuthenticate_Box_3"
+      "WebauthnAuthenticate_div_3",
+      "WebauthnAuthenticate_Box_4"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "9",
+        "currentIndex": "12",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_2\""
+          "id": "id=\"WebauthnAuthenticate_div_3\"",
+          "className": "className={clsx(kcClsx(\"kcFormGroupClass\"), \"no-bottom-margin\")}"
         }
       },
       {
@@ -432,7 +555,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_2\""
+          "id": "id=\"WebauthnAuthenticate_div_3\"",
+          "className": "className={clsx(kcClsx(\"kcFormGroupClass\"), \"no-bottom-margin\")}"
         }
       },
       {
@@ -440,7 +564,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "WebauthnAuthenticate_Box_3",
+          "className": "className={clsx(kcClsx(\"kcFormGroupClass\"), \"no-bottom-margin\")}",
+          "id": "WebauthnAuthenticate_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -449,7 +574,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "WebauthnAuthenticate_Box_3",
+          "className": "className={clsx(kcClsx(\"kcFormGroupClass\"), \"no-bottom-margin\")}",
+          "id": "WebauthnAuthenticate_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -458,12 +584,12 @@
   {
     "tags": [
       "authn_select",
-      "WebauthnAuthenticate_Box_4"
+      "WebauthnAuthenticate_Box_5"
     ],
     "historyStates": [
       {
         "tag": "form",
-        "currentIndex": "10",
+        "currentIndex": "13",
         "operation": "Loaded",
         "props": {
           "id": "id=\"authn_select\"",
@@ -487,7 +613,7 @@
         "props": {
           "className": "className={kcClsx(\"kcFormClass\")}",
           "component": "component=\"form\"",
-          "id": "WebauthnAuthenticate_Box_4",
+          "id": "WebauthnAuthenticate_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -498,7 +624,7 @@
         "props": {
           "className": "className={kcClsx(\"kcFormClass\")}",
           "component": "component=\"form\"",
-          "id": "WebauthnAuthenticate_Box_4",
+          "id": "WebauthnAuthenticate_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -512,10 +638,13 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "11",
+        "currentIndex": "14",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_input_7\""
+          "id": "id=\"WebauthnAuthenticate_input_7\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "value": "value={authenticator.credentialId}"
         }
       },
       {
@@ -523,7 +652,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_input_7\""
+          "id": "id=\"WebauthnAuthenticate_input_7\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "value": "value={authenticator.credentialId}"
         }
       },
       {
@@ -531,6 +663,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "value": "value={authenticator.credentialId}",
           "id": "WebauthnAuthenticate_TextField_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -540,6 +675,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "value": "value={authenticator.credentialId}",
           "id": "WebauthnAuthenticate_TextField_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -554,10 +692,11 @@
     "historyStates": [
       {
         "tag": "p",
-        "currentIndex": "12",
+        "currentIndex": "15",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_p_1\""
+          "id": "id=\"WebauthnAuthenticate_p_1\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemTitle\")}"
         }
       },
       {
@@ -565,7 +704,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_p_1\""
+          "id": "id=\"WebauthnAuthenticate_p_1\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemTitle\")}"
         }
       },
       {
@@ -573,6 +713,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemTitle\")}",
           "id": "WebauthnAuthenticate_Typography_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -582,49 +723,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemTitle\")}",
           "id": "WebauthnAuthenticate_Typography_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_div_3",
-      "WebauthnAuthenticate_Box_5"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "13",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_3\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_3\""
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "id": "WebauthnAuthenticate_Box_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "Box",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "id": "WebauthnAuthenticate_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -638,34 +738,11 @@
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "14",
+        "currentIndex": "16",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_4\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_5\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_6\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_9\""
+          "id": "id=\"WebauthnAuthenticate_div_4\"",
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
         }
       },
       {
@@ -673,7 +750,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_4\""
+          "id": "id=\"WebauthnAuthenticate_div_4\"",
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
         }
       },
       {
@@ -681,6 +759,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
           "id": "WebauthnAuthenticate_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -690,6 +769,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}",
           "id": "WebauthnAuthenticate_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -698,15 +778,96 @@
   },
   {
     "tags": [
-      "WebauthnAuthenticate_div_5"
+      "WebauthnAuthenticate_div_5",
+      "WebauthnAuthenticate_Box_7"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "15",
+        "currentIndex": "17",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_5\""
+          "id": "id=\"WebauthnAuthenticate_div_5\"",
+          "key": "key={i}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_5\"",
+          "key": "key={i}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={i}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemClass\")}",
+          "id": "WebauthnAuthenticate_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={i}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemClass\")}",
+          "id": "WebauthnAuthenticate_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_6",
+      "WebauthnAuthenticate_Box_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_6\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemIconClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_6\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemIconClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemIconClass\")}",
+          "id": "WebauthnAuthenticate_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemIconClass\")}",
+          "id": "WebauthnAuthenticate_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -718,64 +879,28 @@
     "historyStates": [
       {
         "tag": "i",
-        "currentIndex": "16",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_i_1\""
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_div_6"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "17",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_6\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_7\""
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_div_7"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "18",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_7\""
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_div_8",
-      "WebauthnAuthenticate_Box_7"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
         "currentIndex": "19",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_8\""
+          "id": "id=\"WebauthnAuthenticate_i_1\"",
+          "className": "className={clsx((() => {\n                        const className = kcClsx(authenticator.transports.iconClass as any);\n                        if (className === authenticator.transports.iconClass) {\n                            return kcClsx(\"kcWebAuthnDefaultIcon\");\n                        }\n                        return className;\n                    })(), kcClsx(\"kcSelectAuthListItemIconPropertyClass\"))}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_7",
+      "WebauthnAuthenticate_Box_9"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_7\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemArrowIconClass\")}"
         }
       },
       {
@@ -783,7 +908,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_8\""
+          "id": "id=\"WebauthnAuthenticate_div_7\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemArrowIconClass\")}"
         }
       },
       {
@@ -791,7 +917,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "WebauthnAuthenticate_Box_7",
+          "className": "className={kcClsx(\"kcSelectAuthListItemArrowIconClass\")}",
+          "id": "WebauthnAuthenticate_Box_9",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -800,7 +927,100 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "WebauthnAuthenticate_Box_7",
+          "className": "className={kcClsx(\"kcSelectAuthListItemArrowIconClass\")}",
+          "id": "WebauthnAuthenticate_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_8",
+      "WebauthnAuthenticate_Box_10"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_8\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemHeadingClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_8\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemHeadingClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemHeadingClass\")}",
+          "id": "WebauthnAuthenticate_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemHeadingClass\")}",
+          "id": "WebauthnAuthenticate_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_9",
+      "WebauthnAuthenticate_Box_11"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "22",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_9\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_9\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}",
+          "id": "WebauthnAuthenticate_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}",
+          "id": "WebauthnAuthenticate_Box_11",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -809,15 +1029,16 @@
   {
     "tags": [
       "WebauthnAuthenticate_Fragment_1",
-      "WebauthnAuthenticate_Box_8"
+      "WebauthnAuthenticate_Box_12"
     ],
     "historyStates": [
       {
         "tag": "Fragment",
-        "currentIndex": "20",
+        "currentIndex": "23",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_Fragment_1\""
+          "id": "id=\"WebauthnAuthenticate_Fragment_1\"",
+          "key": "key={displayNameProperty}"
         }
       },
       {
@@ -825,7 +1046,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_Fragment_1\""
+          "id": "id=\"WebauthnAuthenticate_Fragment_1\"",
+          "key": "key={displayNameProperty}"
         }
       },
       {
@@ -833,7 +1055,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "WebauthnAuthenticate_Box_8",
+          "key": "key={displayNameProperty}",
+          "id": "WebauthnAuthenticate_Box_12",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -842,54 +1065,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "WebauthnAuthenticate_Box_8",
+          "key": "key={displayNameProperty}",
+          "id": "WebauthnAuthenticate_Box_12",
           "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_span_1"
-    ],
-    "historyStates": [
-      {
-        "tag": "span",
-        "currentIndex": "21",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_span_1\""
-        }
-      }
-    ]
-  },
-  {
-    "tags": [
-      "WebauthnAuthenticate_div_9"
-    ],
-    "historyStates": [
-      {
-        "tag": "div",
-        "currentIndex": "22",
-        "operation": "Loaded",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_div_9\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_span_2\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_span_3\""
         }
       }
     ]
@@ -901,10 +1079,56 @@
     "historyStates": [
       {
         "tag": "span",
-        "currentIndex": "23",
+        "currentIndex": "24",
         "operation": "Loaded",
         "props": {
           "id": "id=\"WebauthnAuthenticate_span_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_10",
+      "WebauthnAuthenticate_Box_13"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "25",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_10\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_div_10\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}",
+          "id": "WebauthnAuthenticate_Box_13",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}",
+          "id": "WebauthnAuthenticate_Box_13",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -916,7 +1140,7 @@
     "historyStates": [
       {
         "tag": "span",
-        "currentIndex": "24",
+        "currentIndex": "26",
         "operation": "Loaded",
         "props": {
           "id": "id=\"WebauthnAuthenticate_span_3\""
@@ -926,23 +1150,61 @@
   },
   {
     "tags": [
-      "WebauthnAuthenticate_div_10"
+      "WebauthnAuthenticate_span_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "27",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnAuthenticate_span_4\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnAuthenticate_div_11",
+      "WebauthnAuthenticate_Box_14"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "25",
+        "currentIndex": "28",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_10\""
+          "id": "id=\"WebauthnAuthenticate_div_11\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemFillClass\")}"
         }
       },
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
+        "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_div_10\""
+          "id": "id=\"WebauthnAuthenticate_div_11\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemFillClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemFillClass\")}",
+          "id": "WebauthnAuthenticate_Box_14",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcSelectAuthListItemFillClass\")}",
+          "id": "WebauthnAuthenticate_Box_14",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -950,12 +1212,12 @@
   {
     "tags": [
       "kc-form-buttons",
-      "WebauthnAuthenticate_Box_9"
+      "WebauthnAuthenticate_Box_15"
     ],
     "historyStates": [
       {
         "tag": "div",
-        "currentIndex": "26",
+        "currentIndex": "29",
         "operation": "Loaded",
         "props": {
           "id": "id=\"kc-form-buttons\"",
@@ -977,7 +1239,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "WebauthnAuthenticate_Box_9",
+          "id": "WebauthnAuthenticate_Box_15",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -987,7 +1249,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "WebauthnAuthenticate_Box_9",
+          "id": "WebauthnAuthenticate_Box_15",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1001,10 +1263,14 @@
     "historyStates": [
       {
         "tag": "input",
-        "currentIndex": "27",
+        "currentIndex": "30",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_input_8\""
+          "id": "id=\"WebauthnAuthenticate_input_8\"",
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}"
         }
       },
       {
@@ -1012,7 +1278,11 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"WebauthnAuthenticate_input_8\""
+          "id": "id=\"WebauthnAuthenticate_input_8\"",
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}"
         }
       },
       {
@@ -1020,6 +1290,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "id": "WebauthnAuthenticate_TextField_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -1029,6 +1303,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
           "id": "WebauthnAuthenticate_TextField_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

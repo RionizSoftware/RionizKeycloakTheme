@@ -27,10 +27,36 @@ export default function LoginVerifyEmail(
     const { msg } = i18n;
     const { url, user } = kcContext;
     return (
-        <Template id="LoginVerifyEmail_Template_1">
+        <Template
+            id="LoginVerifyEmail_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayInfo
+            headerNode={msg("emailVerifyTitle")}
+            infoNode={
+                <Typography
+                    id="LoginVerifyEmail_Typography_1"
+                    sx={styles.LoginVerifyEmail_Typography_1}
+                >
+                    {msg("emailVerifyInstruction2")}
+                    <br id="LoginVerifyEmail_br_1" />
+                    <Link
+                        href={url.loginAction}
+                        id="LoginVerifyEmail_Link_1"
+                        sx={styles.LoginVerifyEmail_Link_1}
+                    >
+                        {msg("doClickHere")}
+                    </Link>
+                    &nbsp;
+                    {msg("emailVerifyInstruction3")}
+                </Typography>
+            }
+        >
             <Typography
-                id="LoginVerifyEmail_Typography_1"
-                sx={styles.LoginVerifyEmail_Typography_1}
+                id="LoginVerifyEmail_Typography_2"
+                sx={styles.LoginVerifyEmail_Typography_2}
             >
                 {msg("emailVerifyInstruction1", user?.email ?? "")}
             </Typography>

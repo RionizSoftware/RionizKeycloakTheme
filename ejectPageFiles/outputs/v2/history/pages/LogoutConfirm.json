@@ -9,7 +9,12 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_Template_1\""
+          "id": "id=\"LogoutConfirm_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"logoutConfirmTitle\")}"
         }
       }
     ]
@@ -76,6 +81,15 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
+          "id": "id=\"LogoutConfirm_p_1\"",
+          "className": "className=\"instruction\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
           "id": "id=\"LogoutConfirm_p_1\""
         }
       },
@@ -118,7 +132,20 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_form_1\""
+          "id": "id=\"LogoutConfirm_form_1\"",
+          "className": "className=\"form-actions\"",
+          "action": "action={url.logoutConfirmAction}",
+          "method": "method=\"POST\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LogoutConfirm_form_1\"",
+          "action": "action={url.logoutConfirmAction}",
+          "method": "method=\"POST\""
         }
       },
       {
@@ -127,6 +154,8 @@
         "operation": "TagReplaced",
         "props": {
           "id": "id=\"LogoutConfirm_form_1\"",
+          "action": "action={url.logoutConfirmAction}",
+          "method": "method=\"POST\"",
           "component": "form"
         }
       },
@@ -135,6 +164,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "action": "action={url.logoutConfirmAction}",
+          "method": "method=\"POST\"",
           "component": "component=\"form\"",
           "id": "LogoutConfirm_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
@@ -145,6 +176,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "action": "action={url.logoutConfirmAction}",
+          "method": "method=\"POST\"",
           "component": "component=\"form\"",
           "id": "LogoutConfirm_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
@@ -163,7 +196,10 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_input_1\""
+          "id": "id=\"LogoutConfirm_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"session_code\"",
+          "value": "value={logoutConfirm.code}"
         }
       },
       {
@@ -171,7 +207,10 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LogoutConfirm_input_1\""
+          "id": "id=\"LogoutConfirm_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"session_code\"",
+          "value": "value={logoutConfirm.code}"
         }
       },
       {
@@ -179,6 +218,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"session_code\"",
+          "value": "value={logoutConfirm.code}",
           "id": "LogoutConfirm_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -188,6 +230,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"session_code\"",
+          "value": "value={logoutConfirm.code}",
           "id": "LogoutConfirm_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -205,23 +250,8 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_div_2\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"kc-form-options\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"LogoutConfirm_div_4\""
+          "id": "id=\"LogoutConfirm_div_2\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -229,7 +259,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LogoutConfirm_div_2\""
+          "id": "id=\"LogoutConfirm_div_2\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -237,6 +268,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LogoutConfirm_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -246,6 +278,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LogoutConfirm_Box_3",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -254,7 +287,8 @@
   },
   {
     "tags": [
-      "kc-form-options"
+      "kc-form-options",
+      "LogoutConfirm_Box_4"
     ],
     "historyStates": [
       {
@@ -264,12 +298,39 @@
         "props": {
           "id": "id=\"kc-form-options\""
         }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LogoutConfirm_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LogoutConfirm_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
       }
     ]
   },
   {
     "tags": [
-      "LogoutConfirm_div_4"
+      "LogoutConfirm_div_4",
+      "LogoutConfirm_Box_5"
     ],
     "historyStates": [
       {
@@ -277,7 +338,37 @@
         "currentIndex": "7",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_div_4\""
+          "id": "id=\"LogoutConfirm_div_4\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LogoutConfirm_div_4\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LogoutConfirm_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LogoutConfirm_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -285,7 +376,7 @@
   {
     "tags": [
       "kc-form-buttons",
-      "LogoutConfirm_Box_4"
+      "LogoutConfirm_Box_6"
     ],
     "historyStates": [
       {
@@ -312,7 +403,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LogoutConfirm_Box_4",
+          "id": "LogoutConfirm_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -322,7 +413,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormGroupClass\")}",
-          "id": "LogoutConfirm_Box_4",
+          "id": "LogoutConfirm_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -393,7 +484,7 @@
   {
     "tags": [
       "kc-info-message",
-      "LogoutConfirm_Box_5"
+      "LogoutConfirm_Box_7"
     ],
     "historyStates": [
       {
@@ -417,7 +508,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LogoutConfirm_Box_5",
+          "id": "LogoutConfirm_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -426,7 +517,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LogoutConfirm_Box_5",
+          "id": "LogoutConfirm_Box_7",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -485,7 +576,8 @@
         "currentIndex": "12",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LogoutConfirm_a_1\""
+          "id": "id=\"LogoutConfirm_a_1\"",
+          "href": "href={client.baseUrl}"
         }
       },
       {
@@ -493,7 +585,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LogoutConfirm_a_1\""
+          "id": "id=\"LogoutConfirm_a_1\"",
+          "href": "href={client.baseUrl}"
         }
       },
       {
@@ -501,6 +594,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "href": "href={client.baseUrl}",
           "id": "LogoutConfirm_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -510,6 +604,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "href": "href={client.baseUrl}",
           "id": "LogoutConfirm_Link_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

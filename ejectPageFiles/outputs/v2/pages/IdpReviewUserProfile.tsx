@@ -46,7 +46,16 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
     const { url, messagesPerField } = kcContext;
     const [isFomSubmittable, setIsFomSubmittable] = useState(false);
     return (
-        <Template id="IdpReviewUserProfile_Template_1">
+        <Template
+            id="IdpReviewUserProfile_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            displayMessage={messagesPerField.exists("global")}
+            displayRequiredFields
+            headerNode={msg("loginIdpReviewProfileTitle")}
+        >
             <Box
                 className={kcClsx("kcFormClass")}
                 action={url.loginAction}
@@ -55,8 +64,16 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                 id="IdpReviewUserProfile_Box_1"
                 sx={styles.IdpReviewUserProfile_Box_1}
             >
-                <UserProfileFormFields id="IdpReviewUserProfile_UserProfileFormFields_1" />
+                <UserProfileFormFields
+                    id="IdpReviewUserProfile_UserProfileFormFields_1"
+                    kcContext={kcContext}
+                    i18n={i18n}
+                    onIsFormSubmittableValueChange={setIsFomSubmittable}
+                    kcClsx={kcClsx}
+                    doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                />
                 <Box
+                    className={kcClsx("kcFormGroupClass")}
                     id="IdpReviewUserProfile_Box_2"
                     sx={styles.IdpReviewUserProfile_Box_2}
                 >
@@ -64,13 +81,28 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
                         className={kcClsx("kcFormOptionsClass")}
                         id="IdpReviewUserProfile_Box_3"
                         sx={styles.IdpReviewUserProfile_Box_3}
-                    ></Box>
+                    >
+                        <Box
+                            className={kcClsx("kcFormOptionsWrapperClass")}
+                            id="IdpReviewUserProfile_Box_4"
+                            sx={styles.IdpReviewUserProfile_Box_4}
+                        />
+                    </Box>
                     <Box
                         className={kcClsx("kcFormButtonsClass")}
-                        id="IdpReviewUserProfile_Box_4"
-                        sx={styles.IdpReviewUserProfile_Box_4}
+                        id="IdpReviewUserProfile_Box_5"
+                        sx={styles.IdpReviewUserProfile_Box_5}
                     >
                         <TextField
+                            className={kcClsx(
+                                "kcButtonClass",
+                                "kcButtonPrimaryClass",
+                                "kcButtonBlockClass",
+                                "kcButtonLargeClass"
+                            )}
+                            type="submit"
+                            value={msgStr("doSubmit")}
+                            disabled={!isFomSubmittable}
                             id="IdpReviewUserProfile_TextField_1"
                             sx={styles.IdpReviewUserProfile_TextField_1}
                         />

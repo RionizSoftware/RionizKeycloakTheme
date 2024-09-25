@@ -9,7 +9,12 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginIdpLinkConfirm_Template_1\""
+          "id": "id=\"LoginIdpLinkConfirm_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"confirmLinkIdpTitle\")}"
         }
       }
     ]
@@ -78,7 +83,8 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginIdpLinkConfirm_div_1\""
+          "id": "id=\"LoginIdpLinkConfirm_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -86,7 +92,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginIdpLinkConfirm_div_1\""
+          "id": "id=\"LoginIdpLinkConfirm_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -94,6 +101,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginIdpLinkConfirm_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -103,6 +111,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginIdpLinkConfirm_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }

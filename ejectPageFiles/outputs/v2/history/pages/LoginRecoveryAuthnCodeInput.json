@@ -9,7 +9,13 @@
         "currentIndex": "0",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_Template_1\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"auth-recovery-code-header\")}",
+          "displayMessage": "displayMessage={!messagesPerField.existsError(\"recoveryCodeInput\")}"
         }
       }
     ]
@@ -82,15 +88,8 @@
         "currentIndex": "2",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_1\""
-        }
-      },
-      {
-        "tag": "div",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
-        "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_2\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -98,7 +97,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_1\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -106,6 +106,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginRecoveryAuthnCodeInput_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -115,6 +116,7 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
           "id": "LoginRecoveryAuthnCodeInput_Box_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -123,7 +125,8 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_div_2"
+      "LoginRecoveryAuthnCodeInput_div_2",
+      "LoginRecoveryAuthnCodeInput_Box_3"
     ],
     "historyStates": [
       {
@@ -131,7 +134,37 @@
         "currentIndex": "3",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_2\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_2\"",
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcLabelWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -147,7 +180,9 @@
         "currentIndex": "4",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_label_1\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_label_1\"",
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -155,7 +190,9 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_label_1\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_label_1\"",
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
         }
       },
       {
@@ -163,6 +200,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginRecoveryAuthnCodeInput_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -172,6 +211,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
+          "htmlFor": "htmlFor=\"recoveryCodeInput\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}",
           "id": "LoginRecoveryAuthnCodeInput_FormLabel_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
@@ -181,7 +222,7 @@
   {
     "tags": [
       "LoginRecoveryAuthnCodeInput_div_3",
-      "LoginRecoveryAuthnCodeInput_Box_3"
+      "LoginRecoveryAuthnCodeInput_Box_4"
     ],
     "historyStates": [
       {
@@ -189,7 +230,8 @@
         "currentIndex": "5",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_3\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -197,7 +239,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_3\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_3\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
         }
       },
       {
@@ -205,7 +248,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -214,7 +258,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginRecoveryAuthnCodeInput_Box_3",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_4",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -311,7 +356,7 @@
   {
     "tags": [
       "LoginRecoveryAuthnCodeInput_div_4",
-      "LoginRecoveryAuthnCodeInput_Box_4"
+      "LoginRecoveryAuthnCodeInput_Box_5"
     ],
     "historyStates": [
       {
@@ -319,7 +364,8 @@
         "currentIndex": "8",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_4\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -327,7 +373,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_4\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_4\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
         }
       },
       {
@@ -335,7 +382,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "IdChanged",
         "props": {
-          "id": "LoginRecoveryAuthnCodeInput_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -344,7 +392,8 @@
         "currentIndex": "NOT_CHANGED",
         "operation": "SxAdded",
         "props": {
-          "id": "LoginRecoveryAuthnCodeInput_Box_4",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_5",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -353,7 +402,7 @@
   {
     "tags": [
       "kc-form-options",
-      "LoginRecoveryAuthnCodeInput_Box_5"
+      "LoginRecoveryAuthnCodeInput_Box_6"
     ],
     "historyStates": [
       {
@@ -380,7 +429,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginRecoveryAuthnCodeInput_Box_5",
+          "id": "LoginRecoveryAuthnCodeInput_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -390,7 +439,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
-          "id": "LoginRecoveryAuthnCodeInput_Box_5",
+          "id": "LoginRecoveryAuthnCodeInput_Box_6",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -398,7 +447,8 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeInput_div_6"
+      "LoginRecoveryAuthnCodeInput_div_6",
+      "LoginRecoveryAuthnCodeInput_Box_7"
     ],
     "historyStates": [
       {
@@ -406,15 +456,37 @@
         "currentIndex": "10",
         "operation": "Loaded",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_6\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_6\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
         }
       },
       {
         "tag": "div",
         "currentIndex": "NOT_CHANGED",
-        "operation": "OptimizeAndRemoved",
+        "operation": "TagReplaced",
         "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeInput_div_6\""
+          "id": "id=\"LoginRecoveryAuthnCodeInput_div_6\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}",
+          "id": "LoginRecoveryAuthnCodeInput_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -422,7 +494,7 @@
   {
     "tags": [
       "kc-form-buttons",
-      "LoginRecoveryAuthnCodeInput_Box_6"
+      "LoginRecoveryAuthnCodeInput_Box_8"
     ],
     "historyStates": [
       {
@@ -449,7 +521,7 @@
         "operation": "IdChanged",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginRecoveryAuthnCodeInput_Box_6",
+          "id": "LoginRecoveryAuthnCodeInput_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -459,7 +531,7 @@
         "operation": "SxAdded",
         "props": {
           "className": "className={kcClsx(\"kcFormButtonsClass\")}",
-          "id": "LoginRecoveryAuthnCodeInput_Box_6",
+          "id": "LoginRecoveryAuthnCodeInput_Box_8",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

@@ -27,7 +27,14 @@ export default function LoginIdpLinkEmail(
     const { url, realm, brokerContext, idpAlias } = kcContext;
     const { msg } = i18n;
     return (
-        <Template id="LoginIdpLinkEmail_Template_1">
+        <Template
+            id="LoginIdpLinkEmail_Template_1"
+            kcContext={kcContext}
+            i18n={i18n}
+            doUseDefaultCss={doUseDefaultCss}
+            classes={classes}
+            headerNode={msg("emailLinkIdpTitle", idpAlias)}
+        >
             <Typography
                 id="LoginIdpLinkEmail_Typography_1"
                 sx={styles.LoginIdpLinkEmail_Typography_1}
@@ -44,7 +51,11 @@ export default function LoginIdpLinkEmail(
                 sx={styles.LoginIdpLinkEmail_Typography_2}
             >
                 {msg("emailLinkIdp2")}{" "}
-                <Link id="LoginIdpLinkEmail_Link_1" sx={styles.LoginIdpLinkEmail_Link_1}>
+                <Link
+                    href={url.loginAction}
+                    id="LoginIdpLinkEmail_Link_1"
+                    sx={styles.LoginIdpLinkEmail_Link_1}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 {msg("emailLinkIdp3")}
@@ -54,7 +65,11 @@ export default function LoginIdpLinkEmail(
                 sx={styles.LoginIdpLinkEmail_Typography_3}
             >
                 {msg("emailLinkIdp4")}{" "}
-                <Link id="LoginIdpLinkEmail_Link_2" sx={styles.LoginIdpLinkEmail_Link_2}>
+                <Link
+                    href={url.loginAction}
+                    id="LoginIdpLinkEmail_Link_2"
+                    sx={styles.LoginIdpLinkEmail_Link_2}
+                >
                     {msg("doClickHere")}
                 </Link>{" "}
                 {msg("emailLinkIdp5")}
