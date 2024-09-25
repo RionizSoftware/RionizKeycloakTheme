@@ -82,13 +82,6 @@ const recursivelyConvertAll = async (
     currentFolder: string,
     filesToIgnore: string[]
 ): Promise<void> => {
-    console.log(
-        "Calling recursive",
-        inputLocation,
-        outputLocation,
-        recursiveDepth,
-        currentFolder
-    );
     const files = fs.readdirSync(inputLocation);
     for (const file of files) {
         const fileNameWithNoExtension = file.split(".")[0];
