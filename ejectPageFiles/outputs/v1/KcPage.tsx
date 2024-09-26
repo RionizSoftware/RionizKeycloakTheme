@@ -1,8 +1,8 @@
-import { Suspense } from "react";
-import type { ClassKey } from "keycloakify/login";
+import { lazy, Suspense } from "react";
+import type { ClassKey } from "rionizkeycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
-import DefaultPage from "keycloakify/login/DefaultPage";
+import DefaultPage from "rionizkeycloakify/login/DefaultPage";
 import Template from "./Template";
 import UserProfileFormFields from "./UserProfileFormFields";
 const LoginIdpLinkConfirmOverride = lazy(
@@ -362,7 +362,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                 i18n={i18n}
                                 classes={classes}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />

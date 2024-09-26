@@ -1,9 +1,9 @@
 import { useState } from "react";
-import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
-import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
-import { clsx } from "keycloakify/tools/clsx";
-import type { UserProfileFormFieldsProps } from "keycloakify/login/UserProfileFormFieldsProps";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import type { LazyOrNot } from "rionizkeycloakify/tools/LazyOrNot";
+import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserProfileFormFieldsProps";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

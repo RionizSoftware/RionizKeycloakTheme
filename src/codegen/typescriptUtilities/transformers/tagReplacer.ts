@@ -3,57 +3,89 @@ import { HistoryOperationType, TransformerFunctions } from "./types.ts";
 import { createStringAttributeForTag, getAttributeValue } from "./utility.ts";
 import { TransformerHistory } from "../TransformerHistory.ts";
 
-export type TagReplacerExtraAttributeInput =
-    | { name: string; value: string }[]
-    | undefined;
 export type TagReplacerInputType = {
     elementToReplace: string;
+    elementToReplaceProperties?: Record<string, string>;
     replacement: string;
-    extraAttribute?: TagReplacerExtraAttributeInput;
+    extraAttribute?: Record<string, string | boolean>;
 };
 export const tagReplacerTransformer = (
     replacements: TagReplacerInputType[]
 ): TransformerFunctions => {
     const createAttributes = (
-        extraAttribute: TagReplacerExtraAttributeInput
+        extraAttribute: Record<string, string | boolean>
     ): ts.JsxAttribute[] => {
         const attributes: ts.JsxAttribute[] = [];
         if (!extraAttribute) return [];
-        for (const attribute of extraAttribute) {
-            attributes.push(createStringAttributeForTag(attribute.name, attribute.value));
+        for (const attributeKey in extraAttribute) {
+            if (Object.prototype.hasOwnProperty.call(extraAttribute, attributeKey)) {
+                attributes.push(
+                    createStringAttributeForTag(
+                        attributeKey,
+                        extraAttribute[attributeKey]
+                    )
+                );
+            }
         }
         return attributes;
+    };
+    const getReplacementIfTagExistInReplacementInputs = (
+        node: ts.JsxSelfClosingElement | ts.JsxElement
+    ): TagReplacerInputType | null => {
+        const tagName = ts.isJsxSelfClosingElement(node)
+            ? node.tagName.getText()
+            : node.openingElement.tagName.getText();
+        for (const replacementInput of replacements) {
+            const { elementToReplace, elementToReplaceProperties } = replacementInput;
+            if (tagName === elementToReplace) {
+                let hasAttrToCheck = false;
+                for (const attrKeyToCheck in elementToReplaceProperties) {
+                    hasAttrToCheck = true;
+                    if (
+                        Object.prototype.hasOwnProperty.call(
+                            elementToReplaceProperties,
+                            attrKeyToCheck
+                        )
+                    ) {
+                        const attrValueToCheck =
+                            elementToReplaceProperties[attrKeyToCheck];
+                        const attrValue = getAttributeValue(node, attrKeyToCheck);
+                        if (attrValue === attrValueToCheck) {
+                            return replacementInput;
+                        }
+                    }
+                }
+                if (!hasAttrToCheck) return replacementInput;
+            }
+        }
+        return null;
     };
     return {
         // Handle self-closing JSX elements
         handleSelfClosingElement: (node: ts.JsxSelfClosingElement): ts.Node => {
-            const tagName = node.tagName.getText();
-            for (const {
-                elementToReplace,
-                replacement,
-                extraAttribute
-            } of replacements) {
-                if (tagName === elementToReplace) {
-                    const newNode = ts.factory.updateJsxSelfClosingElement(
-                        node,
-                        ts.factory.createIdentifier(replacement),
-                        node.typeArguments,
-                        extraAttribute
-                            ? ts.factory.createJsxAttributes([
-                                  ...node.attributes.properties,
-                                  ...createAttributes(extraAttribute)
-                              ])
-                            : node.attributes
-                    );
-                    TransformerHistory.addHistoryState(
-                        HistoryOperationType.TagReplaced,
-                        getAttributeValue(node, "id"),
-                        tagName,
-                        node,
-                        newNode
-                    );
-                    return newNode;
-                }
+            const replacementInput = getReplacementIfTagExistInReplacementInputs(node);
+            if (replacementInput) {
+                const { replacement, extraAttribute } = replacementInput;
+                const newNode = ts.factory.updateJsxSelfClosingElement(
+                    node,
+                    ts.factory.createIdentifier(replacement),
+                    node.typeArguments,
+                    extraAttribute
+                        ? ts.factory.createJsxAttributes([
+                              ...node.attributes.properties,
+                              ...createAttributes(extraAttribute)
+                          ])
+                        : node.attributes
+                );
+
+                TransformerHistory.addHistoryState(
+                    HistoryOperationType.TagReplaced,
+                    getAttributeValue(node, "id"),
+                    node.tagName.getText(),
+                    node,
+                    newNode
+                );
+                return newNode;
             }
             return node;
         },
@@ -63,45 +95,44 @@ export const tagReplacerTransformer = (
             const openingElement = node.openingElement;
             const closingElement = node.closingElement;
             const openingElementTag = openingElement.tagName.getText();
-            for (const {
-                elementToReplace,
-                replacement,
-                extraAttribute
-            } of replacements) {
-                if (openingElementTag === elementToReplace) {
-                    // Create new opening and closing tags with Box
-                    const newOpeningElement = ts.factory.updateJsxOpeningElement(
-                        openingElement,
-                        ts.factory.createIdentifier(replacement),
-                        node.openingElement.typeArguments,
-                        extraAttribute
-                            ? ts.factory.createJsxAttributes([
-                                  ...openingElement.attributes.properties,
-                                  ...createAttributes(extraAttribute)
-                              ])
-                            : openingElement.attributes
-                    );
 
-                    const newClosingElement = ts.factory.updateJsxClosingElement(
-                        closingElement,
-                        ts.factory.createIdentifier(replacement)
-                    );
+            const replacementInput = getReplacementIfTagExistInReplacementInputs(node);
 
-                    const newNode = ts.factory.updateJsxElement(
-                        node,
-                        newOpeningElement,
-                        node.children,
-                        newClosingElement
-                    );
-                    TransformerHistory.addHistoryState(
-                        HistoryOperationType.TagReplaced,
-                        getAttributeValue(node, "id"),
-                        openingElementTag,
-                        node,
-                        newNode
-                    );
-                    return newNode;
-                }
+            if (replacementInput) {
+                const { replacement, extraAttribute } = replacementInput;
+
+                // Create new opening and closing tags with Box
+                const newOpeningElement = ts.factory.updateJsxOpeningElement(
+                    openingElement,
+                    ts.factory.createIdentifier(replacement),
+                    node.openingElement.typeArguments,
+                    extraAttribute
+                        ? ts.factory.createJsxAttributes([
+                              ...openingElement.attributes.properties,
+                              ...createAttributes(extraAttribute)
+                          ])
+                        : openingElement.attributes
+                );
+
+                const newClosingElement = ts.factory.updateJsxClosingElement(
+                    closingElement,
+                    ts.factory.createIdentifier(replacement)
+                );
+
+                const newNode = ts.factory.updateJsxElement(
+                    node,
+                    newOpeningElement,
+                    node.children,
+                    newClosingElement
+                );
+                TransformerHistory.addHistoryState(
+                    HistoryOperationType.TagReplaced,
+                    getAttributeValue(node, "id"),
+                    openingElementTag,
+                    node,
+                    newNode
+                );
+                return newNode;
             }
             return node;
         }

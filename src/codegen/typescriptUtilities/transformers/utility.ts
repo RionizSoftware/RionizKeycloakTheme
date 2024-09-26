@@ -1,11 +1,24 @@
-import ts from "typescript";
+import ts, { JsxAttribute } from "typescript";
 
 //Create attribute for a tag e.g. <tag name="value" />
-export const createStringAttributeForTag = (name: string, value: string) => {
-    return ts.factory.createJsxAttribute(
-        ts.factory.createIdentifier(name),
-        ts.factory.createStringLiteral(value)
-    );
+export const createStringAttributeForTag = (
+    name: string,
+    value: string | boolean
+): JsxAttribute => {
+    if (typeof value === "string") {
+        return ts.factory.createJsxAttribute(
+            ts.factory.createIdentifier(name),
+            ts.factory.createStringLiteral(value)
+        );
+    } else {
+        return ts.factory.createJsxAttribute(
+            ts.factory.createIdentifier(name),
+            ts.factory.createJsxExpression(
+                undefined,
+                value ? ts.factory.createTrue() : ts.factory.createFalse()
+            )
+        );
+    }
 };
 //Create sx attribute for a tag e.g. <tag sx={styles.value} />
 export const createSxForTag = (value: string) => {
@@ -59,7 +72,10 @@ export const getAttributeValue = (
     });
     let value = null;
     if (founded && founded.length > 0) {
-        value = founded[0].getText().replace(`${attributeName}=`, "").replace(`"`, "");
+        value = founded[0]
+            .getText()
+            .replace(`${attributeName}=`, "")
+            .replace(/^"|"$/g, ""); //replace " at beginning or end of string "id"->id
     }
     return value;
 };

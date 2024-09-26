@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import { clsx } from "keycloakify/tools/clsx";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
-import { getKcClsx } from "keycloakify/login/lib/kcClsx";
-import { useScript } from "keycloakify/login/pages/LoginPasskeysConditionalAuthenticate.useScript";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
+import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { useScript } from "rionizkeycloakify/login/pages/LoginPasskeysConditionalAuthenticate.useScript";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

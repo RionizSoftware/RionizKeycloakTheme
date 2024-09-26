@@ -1,7 +1,7 @@
-import { clsx } from "keycloakify/tools/clsx";
-import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
-import { useScript } from "keycloakify/login/pages/LoginRecoveryAuthnCodeConfig.useScript";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { useScript } from "rionizkeycloakify/login/pages/LoginRecoveryAuthnCodeConfig.useScript";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

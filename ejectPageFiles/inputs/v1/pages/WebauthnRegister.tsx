@@ -1,6 +1,6 @@
-import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
-import { useScript } from "keycloakify/login/pages/WebauthnRegister.useScript";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { useScript } from "rionizkeycloakify/login/pages/WebauthnRegister.useScript";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

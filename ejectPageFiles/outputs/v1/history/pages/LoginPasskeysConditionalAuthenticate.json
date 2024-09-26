@@ -1,0 +1,1641 @@
+[
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"passkey-login-title\")}",
+          "infoNode": "infoNode={realm.registrationAllowed &&\n            !registrationDisabled && (<div id=\"kc-registration\">\n                        <span id=\"LoginPasskeysConditionalAuthenticate_span_1\">\n                            ${msg(\"noAccount\")}{\" \"}\n                            <a id=\"LoginPasskeysConditionalAuthenticate_a_1\" tabIndex={6} href={url.registrationUrl}>\n                                {msg(\"doRegister\")}\n                            </a>\n                        </span>\n                    </div>)}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-registration",
+      "LoginPasskeysConditionalAuthenticate_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-registration\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_span_1\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_a_1",
+      "LoginPasskeysConditionalAuthenticate_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_a_1\"",
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "LoginPasskeysConditionalAuthenticate_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={6}",
+          "href": "href={url.registrationUrl}",
+          "id": "LoginPasskeysConditionalAuthenticate_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "webauth",
+      "LoginPasskeysConditionalAuthenticate_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"webauth\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"webauth\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "clientDataJSON",
+      "LoginPasskeysConditionalAuthenticate_TextField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"clientDataJSON\"",
+          "name": "name=\"clientDataJSON\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"clientDataJSON\"",
+          "name": "name=\"clientDataJSON\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"clientDataJSON\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"clientDataJSON\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "authenticatorData",
+      "LoginPasskeysConditionalAuthenticate_TextField_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"authenticatorData\"",
+          "name": "name=\"authenticatorData\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"authenticatorData\"",
+          "name": "name=\"authenticatorData\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticatorData\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticatorData\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "signature",
+      "LoginPasskeysConditionalAuthenticate_TextField_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"signature\"",
+          "name": "name=\"signature\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"signature\"",
+          "name": "name=\"signature\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"signature\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"signature\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "credentialId",
+      "LoginPasskeysConditionalAuthenticate_TextField_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"credentialId\"",
+          "name": "name=\"credentialId\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"credentialId\"",
+          "name": "name=\"credentialId\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"credentialId\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"credentialId\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "userHandle",
+      "LoginPasskeysConditionalAuthenticate_TextField_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"userHandle\"",
+          "name": "name=\"userHandle\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"userHandle\"",
+          "name": "name=\"userHandle\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"userHandle\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"userHandle\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "error",
+      "LoginPasskeysConditionalAuthenticate_TextField_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"error\"",
+          "name": "name=\"error\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"error\"",
+          "name": "name=\"error\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"error\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"error\"",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_2",
+      "LoginPasskeysConditionalAuthenticate_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_2\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "no-bottom-margin": "no-bottom-margin=\"true\"",
+          "style": "style={{ marginBottom: 0 }}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_2\"",
+          "no-bottom-margin": "no-bottom-margin=\"true\"",
+          "style": "style={{ marginBottom: 0 }}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_2\"",
+          "no-bottom-margin": "no-bottom-margin=\"true\"",
+          "style": "style={{ marginBottom: 0 }}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "no-bottom-margin": "no-bottom-margin=\"true\"",
+          "style": "style={{ marginBottom: 0 }}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "no-bottom-margin": "no-bottom-margin=\"true\"",
+          "style": "style={{ marginBottom: 0 }}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "authn_select",
+      "LoginPasskeysConditionalAuthenticate_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"authn_select\"",
+          "className": "className={kcClsx(\"kcFormClass\")}"
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"authn_select\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"authn_select\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_input_7",
+      "LoginPasskeysConditionalAuthenticate_TextField_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_input_7\"",
+          "key": "key={i}",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "readOnly": "readOnly",
+          "value": "value={authenticator.credentialId}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_input_7\"",
+          "key": "key={i}",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "readOnly": "readOnly",
+          "value": "value={authenticator.credentialId}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={i}",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "readOnly": "readOnly",
+          "value": "value={authenticator.credentialId}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={i}",
+          "type": "type=\"hidden\"",
+          "name": "name=\"authn_use_chk\"",
+          "readOnly": "readOnly",
+          "value": "value={authenticator.credentialId}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_p_1",
+      "LoginPasskeysConditionalAuthenticate_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_p_1\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemTitle\")}"
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_p_1\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_p_1\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_3",
+      "LoginPasskeysConditionalAuthenticate_Box_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "15",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_3\"",
+          "className": "className={kcClsx(\"kcFormClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-webauthn-authenticator-item-${i}`}",
+      "LoginPasskeysConditionalAuthenticate_Box_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "16",
+        "operation": "Loaded",
+        "props": {
+          "key": "key={i}",
+          "id": "id={`kc-webauthn-authenticator-item-${i}`}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "key": "key={i}",
+          "id": "id={`kc-webauthn-authenticator-item-${i}`}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "key": "key={i}",
+          "id": "id={`kc-webauthn-authenticator-item-${i}`}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={i}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={i}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_i_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "17",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_i_1\"",
+          "className": "className={clsx((() => {\n                        const className = kcClsx(authenticator.transports.iconClass as any);\n                        if (className === authenticator.transports.iconClass) {\n                            return kcClsx(\"kcWebAuthnDefaultIcon\");\n                        }\n                        return className;\n                    })(), kcClsx(\"kcSelectAuthListItemIconPropertyClass\"))}"
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_i_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_5",
+      "LoginPasskeysConditionalAuthenticate_Box_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_5\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemBodyClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_5\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_5\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-webauthn-authenticator-label-${i}`}"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "19",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-label-${i}`}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemHeadingClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-label-${i}`}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-label-${i}`}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-webauthn-authenticator-transport-${i}`}",
+      "LoginPasskeysConditionalAuthenticate_Box_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-transport-${i}`}",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-transport-${i}`}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-transport-${i}`}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_Fragment_1",
+      "LoginPasskeysConditionalAuthenticate_Box_9"
+    ],
+    "historyStates": [
+      {
+        "tag": "Fragment",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_Fragment_1\"",
+          "key": "key={i}"
+        }
+      },
+      {
+        "tag": "Fragment",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_Fragment_1\"",
+          "key": "key={i}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={i}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={i}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_span_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "22",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_span_2\"",
+          "key": "key={i}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_span_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "23",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_span_3\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "24",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_8\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemDescriptionClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_8\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_8\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-webauthn-authenticator-createdlabel-${i}`}"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "25",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-createdlabel-${i}`}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-createdlabel-${i}`}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-webauthn-authenticator-created-${i}`}"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "26",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-created-${i}`}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id={`kc-webauthn-authenticator-created-${i}`}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_9"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "27",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_9\"",
+          "className": "className={kcClsx(\"kcSelectAuthListItemFillClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_9\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_9\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form",
+      "LoginPasskeysConditionalAuthenticate_Box_10"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "28",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_10",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-wrapper"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "29",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-wrapper\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-form-wrapper\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-passkey",
+      "LoginPasskeysConditionalAuthenticate_Box_11"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "30",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-passkey\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "style": "style={{ display: \"none\" }}",
+          "onSubmit": "onSubmit={event => {\n                    try {\n                        // @ts-expect-error\n                        event.target.login.disabled = true;\n                    }\n                    catch { }\n                    return true;\n                }}"
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-passkey\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "style": "style={{ display: \"none\" }}",
+          "onSubmit": "onSubmit={event => {\n                    try {\n                        // @ts-expect-error\n                        event.target.login.disabled = true;\n                    }\n                    catch { }\n                    return true;\n                }}",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "style": "style={{ display: \"none\" }}",
+          "onSubmit": "onSubmit={event => {\n                    try {\n                        // @ts-expect-error\n                        event.target.login.disabled = true;\n                    }\n                    catch { }\n                    return true;\n                }}",
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "style": "style={{ display: \"none\" }}",
+          "onSubmit": "onSubmit={event => {\n                    try {\n                        // @ts-expect-error\n                        event.target.login.disabled = true;\n                    }\n                    catch { }\n                    return true;\n                }}",
+          "component": "component=\"form\"",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_11",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_div_12",
+      "LoginPasskeysConditionalAuthenticate_Box_12"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "31",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_12\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_12\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_div_12\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_12",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginPasskeysConditionalAuthenticate_Box_12",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginPasskeysConditionalAuthenticate_label_1",
+      "LoginPasskeysConditionalAuthenticate_FormLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "32",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_label_1\"",
+          "htmlFor": "htmlFor=\"username\"",
+          "className": "className={kcClsx(\"kcLabelClass\")}"
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_label_1\"",
+          "htmlFor": "htmlFor=\"username\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginPasskeysConditionalAuthenticate_label_1\"",
+          "htmlFor": "htmlFor=\"username\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "id": "LoginPasskeysConditionalAuthenticate_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"username\"",
+          "id": "LoginPasskeysConditionalAuthenticate_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "username",
+      "LoginPasskeysConditionalAuthenticate_TextField_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "33",
+        "operation": "Loaded",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "id": "id=\"username\"",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"username\")}",
+          "className": "className={kcClsx(\"kcInputClass\")}",
+          "name": "name=\"username\"",
+          "defaultValue": "defaultValue={login.username ?? \"\"}",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "autoComplete": "autoComplete=\"off\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "id": "id=\"username\"",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"username\")}",
+          "name": "name=\"username\"",
+          "defaultValue": "defaultValue={login.username ?? \"\"}",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "autoComplete": "autoComplete=\"off\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "id": "id=\"username\"",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"username\")}",
+          "name": "name=\"username\"",
+          "defaultValue": "defaultValue={login.username ?? \"\"}",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "autoComplete": "autoComplete=\"off\"",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"username\")}",
+          "name": "name=\"username\"",
+          "defaultValue": "defaultValue={login.username ?? \"\"}",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "autoComplete": "autoComplete=\"off\"",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "tabIndex": "tabIndex={1}",
+          "aria-invalid": "aria-invalid={messagesPerField.existsError(\"username\")}",
+          "name": "name=\"username\"",
+          "defaultValue": "defaultValue={login.username ?? \"\"}",
+          "type": "type=\"text\"",
+          "autoFocus": "autoFocus",
+          "autoComplete": "autoComplete=\"off\"",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_8",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "input-error-username"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "34",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"input-error-username\"",
+          "className": "className={kcClsx(\"kcInputErrorMessageClass\")}",
+          "aria-live": "aria-live=\"polite\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"input-error-username\"",
+          "aria-live": "aria-live=\"polite\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-passkey-button",
+      "LoginPasskeysConditionalAuthenticate_Box_13"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "35",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-passkey-button\"",
+          "className": "className={kcClsx(\"kcFormButtonsClass\")}",
+          "style": "style={{ display: \"none\" }}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-passkey-button\"",
+          "style": "style={{ display: \"none\" }}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-passkey-button\"",
+          "style": "style={{ display: \"none\" }}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "style": "style={{ display: \"none\" }}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_13",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "style": "style={{ display: \"none\" }}",
+          "id": "LoginPasskeysConditionalAuthenticate_Box_13",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{authButtonId}",
+      "LoginPasskeysConditionalAuthenticate_TextField_9"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "36",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={authButtonId}",
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"passkey-doAuthenticate\")}",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={authButtonId}",
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"passkey-doAuthenticate\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id={authButtonId}",
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"passkey-doAuthenticate\")}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"passkey-doAuthenticate\")}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"button\"",
+          "autoFocus": "autoFocus",
+          "value": "value={msgStr(\"passkey-doAuthenticate\")}",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_9",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,895 @@
+[
+  {
+    "tags": [
+      "WebauthnRegister_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={<>\n                    <span id=\"WebauthnRegister_span_1\" className={kcClsx(\"kcWebAuthnKeyIcon\")}/>\n                    {msg(\"webauthn-registration-title\")}\n                </>}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_span_1\"",
+          "className": "className={kcClsx(\"kcWebAuthnKeyIcon\")}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_span_1\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "register",
+      "WebauthnRegister_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"register\"",
+          "className": "className={kcClsx(\"kcFormClass\")}",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"register\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"register\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnRegister_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnRegister_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_div_1",
+      "WebauthnRegister_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_1\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "WebauthnRegister_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "WebauthnRegister_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "clientDataJSON",
+      "WebauthnRegister_TextField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"clientDataJSON\"",
+          "name": "name=\"clientDataJSON\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"clientDataJSON\"",
+          "name": "name=\"clientDataJSON\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"clientDataJSON\"",
+          "id": "WebauthnRegister_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"clientDataJSON\"",
+          "id": "WebauthnRegister_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "attestationObject",
+      "WebauthnRegister_TextField_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"attestationObject\"",
+          "name": "name=\"attestationObject\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"attestationObject\"",
+          "name": "name=\"attestationObject\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"attestationObject\"",
+          "id": "WebauthnRegister_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"attestationObject\"",
+          "id": "WebauthnRegister_TextField_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "publicKeyCredentialId",
+      "WebauthnRegister_TextField_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"publicKeyCredentialId\"",
+          "name": "name=\"publicKeyCredentialId\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"publicKeyCredentialId\"",
+          "name": "name=\"publicKeyCredentialId\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"publicKeyCredentialId\"",
+          "id": "WebauthnRegister_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"publicKeyCredentialId\"",
+          "id": "WebauthnRegister_TextField_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "authenticatorLabel",
+      "WebauthnRegister_TextField_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"authenticatorLabel\"",
+          "name": "name=\"authenticatorLabel\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"authenticatorLabel\"",
+          "name": "name=\"authenticatorLabel\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticatorLabel\"",
+          "id": "WebauthnRegister_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"authenticatorLabel\"",
+          "id": "WebauthnRegister_TextField_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "transports",
+      "WebauthnRegister_TextField_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"transports\"",
+          "name": "name=\"transports\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"transports\"",
+          "name": "name=\"transports\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"transports\"",
+          "id": "WebauthnRegister_TextField_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"transports\"",
+          "id": "WebauthnRegister_TextField_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "error",
+      "WebauthnRegister_TextField_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"error\"",
+          "name": "name=\"error\""
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"error\"",
+          "name": "name=\"error\""
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"error\"",
+          "id": "WebauthnRegister_TextField_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"error\"",
+          "id": "WebauthnRegister_TextField_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_LogoutOtherSessions_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "LogoutOtherSessions",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_LogoutOtherSessions_1\"",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{authButtonId}",
+      "WebauthnRegister_Button_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"submit\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "id": "id={authButtonId}",
+          "value": "value={msgStr(\"doRegisterSecurityKey\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id={authButtonId}",
+          "value": "value={msgStr(\"doRegisterSecurityKey\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id={authButtonId}",
+          "value": "value={msgStr(\"doRegisterSecurityKey\")}",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doRegisterSecurityKey\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "WebauthnRegister_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doRegisterSecurityKey\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "WebauthnRegister_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-webauthn-settings-form",
+      "WebauthnRegister_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "className": "className={kcClsx(\"kcFormClass\")}",
+          "id": "id=\"kc-webauthn-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "action": "action={url.loginAction}",
+          "id": "id=\"kc-webauthn-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "action": "action={url.loginAction}",
+          "id": "id=\"kc-webauthn-settings-form\"",
+          "method": "method=\"post\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnRegister_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "WebauthnRegister_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "cancelWebAuthnAIA",
+      "WebauthnRegister_Button_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"submit\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"cancelWebAuthnAIA\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"cancelWebAuthnAIA\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"cancelWebAuthnAIA\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "WebauthnRegister_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "WebauthnRegister_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-options",
+      "WebauthnRegister_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-options\"",
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "WebauthnRegister_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "WebauthnRegister_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_div_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "15",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_3\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_3\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_div_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "16",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_4\"",
+          "className": "className=\"checkbox\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"WebauthnRegister_div_4\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "WebauthnRegister_label_1",
+      "WebauthnRegister_FormLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "17",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"WebauthnRegister_label_1\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"WebauthnRegister_label_1\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "WebauthnRegister_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "WebauthnRegister_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "logout-sessions",
+      "WebauthnRegister_Checkbox_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "id": "id=\"logout-sessions\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "id": "id=\"logout-sessions\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}",
+          "id": "WebauthnRegister_Checkbox_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}",
+          "id": "WebauthnRegister_Checkbox_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

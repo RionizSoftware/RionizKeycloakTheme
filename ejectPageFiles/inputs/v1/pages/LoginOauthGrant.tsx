@@ -1,5 +1,5 @@
-import { getKcClsx } from "keycloakify/login/lib/kcClsx";
-import { PageProps } from "keycloakify/login/pages/PageProps";
+import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

@@ -143,6 +143,40 @@ const recursivelyConvertAll = async (
                     },
                     {
                         elementToReplace: "input",
+                        elementToReplaceProperties: { type: "radio" },
+                        replacement: "Radio"
+                    },
+                    {
+                        elementToReplace: "input",
+                        elementToReplaceProperties: { type: "submit" },
+                        replacement: "Button",
+                        extraAttribute: {
+                            fullWidth: true
+                        }
+                    },
+                    {
+                        elementToReplace: "input",
+                        elementToReplaceProperties: { type: "checkbox" },
+                        replacement: "Checkbox"
+                    },
+                    {
+                        elementToReplace: "input",
+                        elementToReplaceProperties: { type: "password" },
+                        replacement: "TextField",
+                        extraAttribute: {
+                            fullWidth: true
+                        }
+                    },
+                    {
+                        elementToReplace: "input",
+                        elementToReplaceProperties: { type: "text" },
+                        replacement: "TextField",
+                        extraAttribute: {
+                            fullWidth: true
+                        }
+                    },
+                    {
+                        elementToReplace: "input",
                         replacement: "TextField",
                         extraAttribute: undefined
                     },
@@ -174,40 +208,25 @@ const recursivelyConvertAll = async (
                     {
                         elementToReplace: "form",
                         replacement: "Box",
-                        extraAttribute: [
-                            {
-                                name: "component",
-                                value: "form"
-                            }
-                        ]
+                        extraAttribute: {
+                            component: "form"
+                        }
                     },
                     {
                         elementToReplace: "h2",
                         replacement: "Typography",
-                        extraAttribute: [
-                            {
-                                name: "variant",
-                                value: "h2"
-                            },
-                            {
-                                name: "component",
-                                value: "h2"
-                            }
-                        ]
+                        extraAttribute: {
+                            variant: "h2",
+                            component: "h2"
+                        }
                     },
                     {
                         elementToReplace: "h1",
                         replacement: "Typography",
-                        extraAttribute: [
-                            {
-                                name: "variant",
-                                value: "h1"
-                            },
-                            {
-                                name: "component",
-                                value: "h1"
-                            }
-                        ]
+                        extraAttribute: {
+                            variant: "h1",
+                            component: "h1"
+                        }
                     }
                 ])
             ) as TransformerFactory<SourceFile>;
@@ -219,7 +238,9 @@ const recursivelyConvertAll = async (
                 "FormLabel",
                 "Typography",
                 "List",
-                "ListItem"
+                "ListItem",
+                "Checkbox",
+                "Radio"
             ];
             const muiImportAdder = rionizTsTransformer(
                 MuiAddImportTransformer(imports, "@mui/material")

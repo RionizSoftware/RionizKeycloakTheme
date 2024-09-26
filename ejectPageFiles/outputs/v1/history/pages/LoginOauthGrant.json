@@ -1,0 +1,848 @@
+[
+  {
+    "tags": [
+      "LoginOauthGrant_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "bodyClassName": "bodyClassName=\"oauth\"",
+          "headerNode": "headerNode={<>\n                    {client.attributes.logoUri && <img id=\"LoginOauthGrant_img_1\" src={client.attributes.logoUri}/>}\n                    <p id=\"LoginOauthGrant_p_1\">{client.name ? msg(\"oauthGrantTitle\", advancedMsgStr(client.name)) : msg(\"oauthGrantTitle\", client.clientId)}</p>\n                </>}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_img_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "img",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_img_1\"",
+          "src": "src={client.attributes.logoUri}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_p_1",
+      "LoginOauthGrant_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_p_1\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_p_1\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauthGrant_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauthGrant_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-oauth",
+      "LoginOauthGrant_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-oauth\"",
+          "className": "className=\"content-area\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-oauth\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-oauth\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauthGrant_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauthGrant_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_h3_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "h3",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_h3_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_ul_1",
+      "LoginOauthGrant_List_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "ul",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_ul_1\""
+        }
+      },
+      {
+        "tag": "ul",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_ul_1\""
+        }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauthGrant_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "List",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauthGrant_List_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_li_1",
+      "LoginOauthGrant_ListItem_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "li",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_li_1\"",
+          "key": "key={clientScope.consentScreenText}"
+        }
+      },
+      {
+        "tag": "li",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_li_1\"",
+          "key": "key={clientScope.consentScreenText}"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={clientScope.consentScreenText}",
+          "id": "LoginOauthGrant_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={clientScope.consentScreenText}",
+          "id": "LoginOauthGrant_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_b_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "b",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_b_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_h3_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "h3",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_h3_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_a_1",
+      "LoginOauthGrant_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_a_1\"",
+          "href": "href={client.attributes.tosUri}",
+          "target": "target=\"_blank\""
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_a_1\"",
+          "href": "href={client.attributes.tosUri}",
+          "target": "target=\"_blank\""
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={client.attributes.tosUri}",
+          "target": "target=\"_blank\"",
+          "id": "LoginOauthGrant_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={client.attributes.tosUri}",
+          "target": "target=\"_blank\"",
+          "id": "LoginOauthGrant_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_a_2",
+      "LoginOauthGrant_Link_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_a_2\"",
+          "href": "href={client.attributes.policyUri}",
+          "target": "target=\"_blank\""
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_a_2\"",
+          "href": "href={client.attributes.policyUri}",
+          "target": "target=\"_blank\""
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={client.attributes.policyUri}",
+          "target": "target=\"_blank\"",
+          "id": "LoginOauthGrant_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={client.attributes.policyUri}",
+          "target": "target=\"_blank\"",
+          "id": "LoginOauthGrant_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_form_1",
+      "LoginOauthGrant_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_form_1\"",
+          "className": "className=\"form-actions\"",
+          "action": "action={url.oauthAction}",
+          "method": "method=\"POST\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_form_1\"",
+          "action": "action={url.oauthAction}",
+          "method": "method=\"POST\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_form_1\"",
+          "action": "action={url.oauthAction}",
+          "method": "method=\"POST\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.oauthAction}",
+          "method": "method=\"POST\"",
+          "component": "component=\"form\"",
+          "id": "LoginOauthGrant_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.oauthAction}",
+          "method": "method=\"POST\"",
+          "component": "component=\"form\"",
+          "id": "LoginOauthGrant_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_input_1",
+      "LoginOauthGrant_TextField_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"code\"",
+          "value": "value={oauth.code}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_input_1\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"code\"",
+          "value": "value={oauth.code}"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"code\"",
+          "value": "value={oauth.code}",
+          "id": "LoginOauthGrant_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "TextField",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "name": "name=\"code\"",
+          "value": "value={oauth.code}",
+          "id": "LoginOauthGrant_TextField_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_div_2",
+      "LoginOauthGrant_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_2\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_2\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauthGrant_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauthGrant_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-options"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "15",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_div_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "16",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_4\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_4\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-buttons"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "17",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-buttons\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-form-buttons\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_div_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_6\"",
+          "className": "className={kcClsx(\"kcFormButtonsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_6\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_6\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-login",
+      "LoginOauthGrant_Button_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "19",
+        "operation": "Loaded",
+        "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"accept\"",
+          "id": "id=\"kc-login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doYes\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "name": "name=\"accept\"",
+          "id": "id=\"kc-login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doYes\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "name": "name=\"accept\"",
+          "id": "id=\"kc-login\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doYes\")}",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"accept\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doYes\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginOauthGrant_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"accept\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doYes\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginOauthGrant_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-cancel",
+      "LoginOauthGrant_Button_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
+          "name": "name=\"cancel\"",
+          "id": "id=\"kc-cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doNo\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "name": "name=\"cancel\"",
+          "id": "id=\"kc-cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doNo\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "name": "name=\"cancel\"",
+          "id": "id=\"kc-cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doNo\")}",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doNo\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginOauthGrant_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"cancel\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doNo\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginOauthGrant_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginOauthGrant_div_7",
+      "LoginOauthGrant_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_7\"",
+          "className": "className=\"clearfix\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_7\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginOauthGrant_div_7\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginOauthGrant_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginOauthGrant_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]
