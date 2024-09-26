@@ -242,8 +242,7 @@
   },
   {
     "tags": [
-      "clientDataJSON",
-      "WebauthnAuthenticate_TextField_1"
+      "clientDataJSON"
     ],
     "historyStates": [
       {
@@ -255,45 +254,12 @@
           "id": "id=\"clientDataJSON\"",
           "name": "name=\"clientDataJSON\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"clientDataJSON\"",
-          "name": "name=\"clientDataJSON\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"clientDataJSON\"",
-          "id": "WebauthnAuthenticate_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"clientDataJSON\"",
-          "id": "WebauthnAuthenticate_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "authenticatorData",
-      "WebauthnAuthenticate_TextField_2"
+      "authenticatorData"
     ],
     "historyStates": [
       {
@@ -305,45 +271,12 @@
           "id": "id=\"authenticatorData\"",
           "name": "name=\"authenticatorData\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"authenticatorData\"",
-          "name": "name=\"authenticatorData\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticatorData\"",
-          "id": "WebauthnAuthenticate_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticatorData\"",
-          "id": "WebauthnAuthenticate_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "signature",
-      "WebauthnAuthenticate_TextField_3"
+      "signature"
     ],
     "historyStates": [
       {
@@ -355,45 +288,12 @@
           "id": "id=\"signature\"",
           "name": "name=\"signature\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"signature\"",
-          "name": "name=\"signature\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"signature\"",
-          "id": "WebauthnAuthenticate_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"signature\"",
-          "id": "WebauthnAuthenticate_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "credentialId",
-      "WebauthnAuthenticate_TextField_4"
+      "credentialId"
     ],
     "historyStates": [
       {
@@ -405,45 +305,12 @@
           "id": "id=\"credentialId\"",
           "name": "name=\"credentialId\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"credentialId\"",
-          "name": "name=\"credentialId\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "id": "WebauthnAuthenticate_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "id": "WebauthnAuthenticate_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "userHandle",
-      "WebauthnAuthenticate_TextField_5"
+      "userHandle"
     ],
     "historyStates": [
       {
@@ -455,45 +322,12 @@
           "id": "id=\"userHandle\"",
           "name": "name=\"userHandle\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"userHandle\"",
-          "name": "name=\"userHandle\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userHandle\"",
-          "id": "WebauthnAuthenticate_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userHandle\"",
-          "id": "WebauthnAuthenticate_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "error",
-      "WebauthnAuthenticate_TextField_6"
+      "error"
     ],
     "historyStates": [
       {
@@ -504,38 +338,6 @@
           "type": "type=\"hidden\"",
           "id": "id=\"error\"",
           "name": "name=\"error\""
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"error\"",
-          "name": "name=\"error\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"error\"",
-          "id": "WebauthnAuthenticate_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"error\"",
-          "id": "WebauthnAuthenticate_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -647,8 +449,7 @@
   },
   {
     "tags": [
-      "WebauthnAuthenticate_input_7",
-      "WebauthnAuthenticate_TextField_7"
+      "WebauthnAuthenticate_input_7"
     ],
     "historyStates": [
       {
@@ -660,41 +461,6 @@
           "type": "type=\"hidden\"",
           "name": "name=\"authn_use_chk\"",
           "value": "value={authenticator.credentialId}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"WebauthnAuthenticate_input_7\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "value": "value={authenticator.credentialId}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "value": "value={authenticator.credentialId}",
-          "id": "WebauthnAuthenticate_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "value": "value={authenticator.credentialId}",
-          "id": "WebauthnAuthenticate_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -1272,7 +1038,7 @@
   {
     "tags": [
       "{authButtonId}",
-      "WebauthnAuthenticate_TextField_8"
+      "WebauthnAuthenticate_TextField_1"
     ],
     "historyStates": [
       {
@@ -1317,7 +1083,7 @@
           "type": "type=\"button\"",
           "autoFocus": "autoFocus",
           "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
-          "id": "WebauthnAuthenticate_TextField_8",
+          "id": "WebauthnAuthenticate_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1329,7 +1095,7 @@
           "type": "type=\"button\"",
           "autoFocus": "autoFocus",
           "value": "value={msgStr(\"webauthn-doAuthenticate\")}",
-          "id": "WebauthnAuthenticate_TextField_8",
+          "id": "WebauthnAuthenticate_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

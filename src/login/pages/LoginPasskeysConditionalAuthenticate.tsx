@@ -82,42 +82,12 @@ export default function LoginPasskeysConditionalAuthenticate(
                 id="LoginPasskeysConditionalAuthenticate_Box_2"
                 sx={styles.LoginPasskeysConditionalAuthenticate_Box_2}
             >
-                <TextField
-                    type="hidden"
-                    name="clientDataJSON"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_1"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_1}
-                />
-                <TextField
-                    type="hidden"
-                    name="authenticatorData"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_2"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_2}
-                />
-                <TextField
-                    type="hidden"
-                    name="signature"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_3"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_3}
-                />
-                <TextField
-                    type="hidden"
-                    name="credentialId"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_4"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_4}
-                />
-                <TextField
-                    type="hidden"
-                    name="userHandle"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_5"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_5}
-                />
-                <TextField
-                    type="hidden"
-                    name="error"
-                    id="LoginPasskeysConditionalAuthenticate_TextField_6"
-                    sx={styles.LoginPasskeysConditionalAuthenticate_TextField_6}
-                />
+                <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
+                <input type="hidden" id="authenticatorData" name="authenticatorData" />
+                <input type="hidden" id="signature" name="signature" />
+                <input type="hidden" id="credentialId" name="credentialId" />
+                <input type="hidden" id="userHandle" name="userHandle" />
+                <input type="hidden" id="error" name="error" />
             </Box>
 
             <Box
@@ -135,16 +105,13 @@ export default function LoginPasskeysConditionalAuthenticate(
                                 sx={styles.LoginPasskeysConditionalAuthenticate_Box_4}
                             >
                                 {authenticators.authenticators.map((authenticator, i) => (
-                                    <TextField
+                                    <input
+                                        id="LoginPasskeysConditionalAuthenticate_input_7"
                                         key={i}
                                         type="hidden"
                                         name="authn_use_chk"
                                         readOnly
                                         value={authenticator.credentialId}
-                                        id="LoginPasskeysConditionalAuthenticate_TextField_7"
-                                        sx={
-                                            styles.LoginPasskeysConditionalAuthenticate_TextField_7
-                                        }
                                     />
                                 ))}
                             </Box>
@@ -294,9 +261,9 @@ export default function LoginPasskeysConditionalAuthenticate(
                                                     autoFocus
                                                     autoComplete="off"
                                                     fullWidth={true}
-                                                    id="LoginPasskeysConditionalAuthenticate_TextField_8"
+                                                    id="LoginPasskeysConditionalAuthenticate_TextField_1"
                                                     sx={
-                                                        styles.LoginPasskeysConditionalAuthenticate_TextField_8
+                                                        styles.LoginPasskeysConditionalAuthenticate_TextField_1
                                                     }
                                                 />
                                                 {messagesPerField.existsError(
@@ -324,9 +291,9 @@ export default function LoginPasskeysConditionalAuthenticate(
                                         type="button"
                                         autoFocus
                                         value={msgStr("passkey-doAuthenticate")}
-                                        id="LoginPasskeysConditionalAuthenticate_TextField_9"
+                                        id="LoginPasskeysConditionalAuthenticate_TextField_2"
                                         sx={
-                                            styles.LoginPasskeysConditionalAuthenticate_TextField_9
+                                            styles.LoginPasskeysConditionalAuthenticate_TextField_2
                                         }
                                     />
                                 </Box>

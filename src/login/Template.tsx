@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { assert } from "rionizkeycloakify/tools/assert";
 import { clsx } from "rionizkeycloakify/tools/clsx";
 import type { TemplateProps } from "rionizkeycloakify/login/TemplateProps";
@@ -7,19 +7,9 @@ import { useSetClassName } from "rionizkeycloakify/tools/useSetClassName";
 import { useStylesAndScripts } from "rionizkeycloakify/login/Template.useStylesAndScripts";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio, Menu, MenuItem } from "@mui/material";
 import { styles } from "./styles/Template.ts";
+
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
@@ -37,17 +27,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         children
     } = props;
     const { kcClsx } = getKcClsx({ doUseDefaultCss, classes });
-    const {
-        msg,
-        msgStr,
-        getChangeLocaleUrl,
-        labelBySupportedLanguageTag,
-        currentLanguageTag
-    } = i18n;
+    const { msg, msgStr, getChangeLocaleUrl, labelBySupportedLanguageTag, currentLanguageTag } = i18n;
     const { realm, locale, auth, url, message, isAppInitiatedAction } = kcContext;
     useEffect(() => {
-        document.title =
-            documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
+        document.title = documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
     }, []);
     useSetClassName({
         qualifiedName: "html",
@@ -58,6 +41,22 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         className: bodyClassName ?? kcClsx("kcBodyClass")
     });
     const { isReadyToRender } = useStylesAndScripts({ kcContext, doUseDefaultCss });
+
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleMenuOpen = (event: { currentTarget: SetStateAction<null> }) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+
+    const handleLocaleChange = languageTag => {
+        setAnchorEl(null);
+        // Handle your locale change logic here
+    };
+
     if (!isReadyToRender) {
         return null;
     }
@@ -66,68 +65,44 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             {msg("loginTitleHtml", realm.displayNameHtml)}
 
             <header id="Template_header_1">
-                {realm.internationalizationEnabled &&
-                    (assert(locale !== undefined), locale.supported.length > 1) && (
-                        <Box id="Template_Box_2" sx={styles.Template_Box_2}>
-                            <Button
-                                tabIndex={1}
-                                aria-label={msgStr("languages")}
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                aria-controls="language-switch1"
-                                id="Template_Button_1"
-                                sx={styles.Template_Button_1}
-                            >
-                                {labelBySupportedLanguageTag[currentLanguageTag]}
-                            </Button>
-                            <List
-                                role="menu"
-                                tabIndex={-1}
-                                aria-labelledby="kc-current-locale-link"
-                                aria-activedescendant=""
-                                id="Template_List_1"
-                                sx={styles.Template_List_1}
-                            >
-                                {locale.supported.map(({ languageTag }, i) => (
-                                    <ListItem
-                                        key={languageTag}
-                                        role="none"
-                                        id="Template_ListItem_1"
-                                        sx={styles.Template_ListItem_1}
-                                    >
-                                        <Link
-                                            role="menuitem"
-                                            href={getChangeLocaleUrl(languageTag)}
-                                            id="Template_Link_1"
-                                            sx={styles.Template_Link_1}
-                                        >
-                                            {labelBySupportedLanguageTag[languageTag]}
-                                        </Link>
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </Box>
-                    )}
-                {(() => {
-                    const node = !(
-                        auth !== undefined &&
-                        auth.showUsername &&
-                        !auth.showResetCredentials
-                    ) ? (
-                        <Typography
-                            variant="h1"
-                            component="h1"
-                            id="Template_Typography_1"
-                            sx={styles.Template_Typography_1}
+                {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
+                    <Box id="Template_Box_2" sx={styles.Template_Box_2}>
+                        <Button id="kc-current-locale-link" onClick={handleMenuOpen}>
+                            {labelBySupportedLanguageTag[currentLanguageTag]}
+                        </Button>
+                        <Menu
+                            id="Template_Button_1"
+                            aria-label={msgStr("languages")}
+                            aria-controls="language-switch1"
+                            tabIndex={1}
+                            sx={styles.Template_Button_1}
+                            anchorEl={anchorEl} // Handle menu anchor position
+                            open={Boolean(anchorEl)}
+                            onClose={handleMenuClose} // Close the menu on selection or click outside
                         >
+                            {locale.supported.map(({ languageTag }, i) => (
+                                <MenuItem
+                                    key={languageTag}
+                                    id="Template_ListItem_1"
+                                    sx={styles.Template_ListItem_1}
+                                    onClick={() => handleLocaleChange(languageTag)} // Handle locale change
+                                >
+                                    <Link role="menuitem" href={getChangeLocaleUrl(languageTag)} id="Template_Link_1" sx={styles.Template_Link_1}>
+                                        {labelBySupportedLanguageTag[languageTag]}
+                                    </Link>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                )}
+                {(() => {
+                    const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
+                        <Typography variant="h1" component="h1" id="Template_Typography_1" sx={styles.Template_Typography_1}>
                             {headerNode}
                         </Typography>
                     ) : (
                         <Box id="Template_Box_3" sx={styles.Template_Box_3}>
-                            <FormLabel
-                                id="Template_FormLabel_1"
-                                sx={styles.Template_FormLabel_1}
-                            >
+                            <FormLabel id="Template_FormLabel_1" sx={styles.Template_FormLabel_1}>
                                 {auth.attemptedUsername}
                             </FormLabel>
                             <Link
@@ -138,9 +113,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             >
                                 <Box id="Template_Box_4" sx={styles.Template_Box_4}>
                                     <i id="Template_i_1"></i>
-                                    <span id="Template_span_1">
-                                        {msg("restartLoginTooltip")}
-                                    </span>
+                                    <span id="Template_span_1">{msg("restartLoginTooltip")}</span>
                                 </Box>
                             </Link>
                         </Box>
@@ -158,54 +131,30 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             </header>
             <Box id="Template_Box_6" sx={styles.Template_Box_6}>
                 {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
-                {displayMessage &&
-                    message !== undefined &&
-                    (message.type !== "warning" || !isAppInitiatedAction) && (
-                        <Box id="Template_Box_7" sx={styles.Template_Box_7}>
-                            {message.type === "success" && (
-                                <span id="Template_span_4"></span>
-                            )}
-                            {message.type === "warning" && (
-                                <span id="Template_span_5"></span>
-                            )}
-                            {message.type === "error" && (
-                                <span id="Template_span_6"></span>
-                            )}
-                            {message.type === "info" && (
-                                <span id="Template_span_7"></span>
-                            )}
+                {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
+                    <Box id="Template_Box_7" sx={styles.Template_Box_7}>
+                        {message.type === "success" && <span id="Template_span_4"></span>}
+                        {message.type === "warning" && <span id="Template_span_5"></span>}
+                        {message.type === "error" && <span id="Template_span_6"></span>}
+                        {message.type === "info" && <span id="Template_span_7"></span>}
 
-                            <span
-                                id="Template_span_8"
-                                dangerouslySetInnerHTML={{
-                                    __html: message.summary
-                                }}
-                            />
-                        </Box>
-                    )}
+                        <span
+                            id="Template_span_8"
+                            dangerouslySetInnerHTML={{
+                                __html: message.summary
+                            }}
+                        />
+                    </Box>
+                )}
                 {children}
                 {auth !== undefined && auth.showTryAnotherWayLink && (
-                    <Box
-                        action={url.loginAction}
-                        method="post"
-                        component="form"
-                        id="Template_Box_8"
-                        sx={styles.Template_Box_8}
-                    >
+                    <Box action={url.loginAction} method="post" component="form" id="Template_Box_8" sx={styles.Template_Box_8}>
                         <Box id="Template_Box_9" sx={styles.Template_Box_9}>
-                            <TextField
-                                type="hidden"
-                                name="tryAnotherWay"
-                                value="on"
-                                id="Template_TextField_1"
-                                sx={styles.Template_TextField_1}
-                            />
+                            <input id="Template_input_1" type="hidden" name="tryAnotherWay" value="on" />{" "}
                             <Link
                                 href="#"
                                 onClick={() => {
-                                    document.forms[
-                                        "kc-select-try-another-way-form" as never
-                                    ].submit();
+                                    document.forms["kc-select-try-another-way-form" as never].submit();
                                     return false;
                                 }}
                                 id="Template_Link_3"

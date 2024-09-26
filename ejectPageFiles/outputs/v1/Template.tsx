@@ -193,12 +193,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         sx={styles.Template_Box_8}
                     >
                         <Box id="Template_Box_9" sx={styles.Template_Box_9}>
-                            <TextField
+                            <input
+                                id="Template_input_1"
                                 type="hidden"
                                 name="tryAnotherWay"
                                 value="on"
-                                id="Template_TextField_1"
-                                sx={styles.Template_TextField_1}
                             />
                             <Link
                                 href="#"

@@ -1420,8 +1420,7 @@
   },
   {
     "tags": [
-      "id-hidden-input",
-      "Login_TextField_3"
+      "id-hidden-input"
     ],
     "historyStates": [
       {
@@ -1433,41 +1432,6 @@
           "id": "id=\"id-hidden-input\"",
           "name": "name=\"credentialId\"",
           "value": "value={auth.selectedCredential}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"id-hidden-input\"",
-          "name": "name=\"credentialId\"",
-          "value": "value={auth.selectedCredential}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "value": "value={auth.selectedCredential}",
-          "id": "Login_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "value": "value={auth.selectedCredential}",
-          "id": "Login_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

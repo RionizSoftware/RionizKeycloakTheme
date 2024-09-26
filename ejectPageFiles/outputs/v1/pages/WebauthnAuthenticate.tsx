@@ -79,42 +79,16 @@ export default function WebauthnAuthenticate(
                     id="WebauthnAuthenticate_Box_3"
                     sx={styles.WebauthnAuthenticate_Box_3}
                 >
-                    <TextField
+                    <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
+                    <input
                         type="hidden"
-                        name="clientDataJSON"
-                        id="WebauthnAuthenticate_TextField_1"
-                        sx={styles.WebauthnAuthenticate_TextField_1}
-                    />
-                    <TextField
-                        type="hidden"
+                        id="authenticatorData"
                         name="authenticatorData"
-                        id="WebauthnAuthenticate_TextField_2"
-                        sx={styles.WebauthnAuthenticate_TextField_2}
                     />
-                    <TextField
-                        type="hidden"
-                        name="signature"
-                        id="WebauthnAuthenticate_TextField_3"
-                        sx={styles.WebauthnAuthenticate_TextField_3}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="credentialId"
-                        id="WebauthnAuthenticate_TextField_4"
-                        sx={styles.WebauthnAuthenticate_TextField_4}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="userHandle"
-                        id="WebauthnAuthenticate_TextField_5"
-                        sx={styles.WebauthnAuthenticate_TextField_5}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="error"
-                        id="WebauthnAuthenticate_TextField_6"
-                        sx={styles.WebauthnAuthenticate_TextField_6}
-                    />
+                    <input type="hidden" id="signature" name="signature" />
+                    <input type="hidden" id="credentialId" name="credentialId" />
+                    <input type="hidden" id="userHandle" name="userHandle" />
+                    <input type="hidden" id="error" name="error" />
                 </Box>
                 <Box
                     id="WebauthnAuthenticate_Box_4"
@@ -128,12 +102,11 @@ export default function WebauthnAuthenticate(
                                 sx={styles.WebauthnAuthenticate_Box_5}
                             >
                                 {authenticators.authenticators.map(authenticator => (
-                                    <TextField
+                                    <input
+                                        id="WebauthnAuthenticate_input_7"
                                         type="hidden"
                                         name="authn_use_chk"
                                         value={authenticator.credentialId}
-                                        id="WebauthnAuthenticate_TextField_7"
-                                        sx={styles.WebauthnAuthenticate_TextField_7}
                                     />
                                 ))}
                             </Box>
@@ -243,8 +216,8 @@ export default function WebauthnAuthenticate(
                         type="button"
                         autoFocus
                         value={msgStr("webauthn-doAuthenticate")}
-                        id="WebauthnAuthenticate_TextField_8"
-                        sx={styles.WebauthnAuthenticate_TextField_8}
+                        id="WebauthnAuthenticate_TextField_1"
+                        sx={styles.WebauthnAuthenticate_TextField_1}
                     />
                 </Box>
             </Box>

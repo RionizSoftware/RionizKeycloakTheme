@@ -20,6 +20,5 @@ export const styles ={
     "Login_Checkbox_1": {},
     "Login_Link_3": {},
     "Login_Box_9": {},
-    "Login_TextField_3": {},
     "Login_Button_1": {}
 }

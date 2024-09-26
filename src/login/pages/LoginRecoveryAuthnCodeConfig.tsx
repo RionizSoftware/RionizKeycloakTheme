@@ -154,28 +154,25 @@ export default function LoginRecoveryAuthnCodeConfig(
                 id="LoginRecoveryAuthnCodeConfig_Box_6"
                 sx={styles.LoginRecoveryAuthnCodeConfig_Box_6}
             >
-                <TextField
+                <input
+                    id="LoginRecoveryAuthnCodeConfig_input_2"
                     type="hidden"
                     name="generatedRecoveryAuthnCodes"
                     value={
                         recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString
                     }
-                    id="LoginRecoveryAuthnCodeConfig_TextField_1"
-                    sx={styles.LoginRecoveryAuthnCodeConfig_TextField_1}
                 />
-                <TextField
+                <input
+                    id="LoginRecoveryAuthnCodeConfig_input_3"
                     type="hidden"
                     name="generatedAt"
                     value={recoveryAuthnCodesConfigBean.generatedAt}
-                    id="LoginRecoveryAuthnCodeConfig_TextField_2"
-                    sx={styles.LoginRecoveryAuthnCodeConfig_TextField_2}
                 />
-                <TextField
+                <input
                     type="hidden"
+                    id="userLabel"
                     name="userLabel"
                     value={msgStr("recovery-codes-label-default")}
-                    id="LoginRecoveryAuthnCodeConfig_TextField_3"
-                    sx={styles.LoginRecoveryAuthnCodeConfig_TextField_3}
                 />
 
                 <LogoutOtherSessions

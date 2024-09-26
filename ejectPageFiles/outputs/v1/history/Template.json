@@ -1385,8 +1385,7 @@
   },
   {
     "tags": [
-      "Template_input_1",
-      "Template_TextField_1"
+      "Template_input_1"
     ],
     "historyStates": [
       {
@@ -1398,41 +1397,6 @@
           "type": "type=\"hidden\"",
           "name": "name=\"tryAnotherWay\"",
           "value": "value=\"on\""
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"Template_input_1\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"tryAnotherWay\"",
-          "value": "value=\"on\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"tryAnotherWay\"",
-          "value": "value=\"on\"",
-          "id": "Template_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"tryAnotherWay\"",
-          "value": "value=\"on\"",
-          "id": "Template_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

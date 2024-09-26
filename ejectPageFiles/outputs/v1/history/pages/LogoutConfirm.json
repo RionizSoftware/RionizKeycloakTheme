@@ -187,8 +187,7 @@
   },
   {
     "tags": [
-      "LogoutConfirm_input_1",
-      "LogoutConfirm_TextField_1"
+      "LogoutConfirm_input_1"
     ],
     "historyStates": [
       {
@@ -200,41 +199,6 @@
           "type": "type=\"hidden\"",
           "name": "name=\"session_code\"",
           "value": "value={logoutConfirm.code}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LogoutConfirm_input_1\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"session_code\"",
-          "value": "value={logoutConfirm.code}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"session_code\"",
-          "value": "value={logoutConfirm.code}",
-          "id": "LogoutConfirm_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"session_code\"",
-          "value": "value={logoutConfirm.code}",
-          "id": "LogoutConfirm_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

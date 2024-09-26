@@ -1526,8 +1526,7 @@
   },
   {
     "tags": [
-      "totpSecret",
-      "LoginConfigTotp_TextField_2"
+      "totpSecret"
     ],
     "historyStates": [
       {
@@ -1540,48 +1539,12 @@
           "name": "name=\"totpSecret\"",
           "value": "value={totp.totpSecret}"
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"totpSecret\"",
-          "name": "name=\"totpSecret\"",
-          "value": "value={totp.totpSecret}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"totpSecret\"",
-          "value": "value={totp.totpSecret}",
-          "id": "LoginConfigTotp_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"totpSecret\"",
-          "value": "value={totp.totpSecret}",
-          "id": "LoginConfigTotp_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "mode",
-      "LoginConfigTotp_TextField_3"
+      "mode"
     ],
     "historyStates": [
       {
@@ -1592,38 +1555,6 @@
           "type": "type=\"hidden\"",
           "id": "id=\"mode\"",
           "value": "value={mode}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"mode\"",
-          "value": "value={mode}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "value": "value={mode}",
-          "id": "LoginConfigTotp_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "value": "value={mode}",
-          "id": "LoginConfigTotp_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -1845,7 +1776,7 @@
   {
     "tags": [
       "userLabel",
-      "LoginConfigTotp_TextField_4"
+      "LoginConfigTotp_TextField_2"
     ],
     "historyStates": [
       {
@@ -1896,7 +1827,7 @@
           "autoComplete": "autoComplete=\"off\"",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"userLabel\")}",
           "fullWidth": "fullWidth={true}",
-          "id": "LoginConfigTotp_TextField_4",
+          "id": "LoginConfigTotp_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1910,7 +1841,7 @@
           "autoComplete": "autoComplete=\"off\"",
           "aria-invalid": "aria-invalid={messagesPerField.existsError(\"userLabel\")}",
           "fullWidth": "fullWidth={true}",
-          "id": "LoginConfigTotp_TextField_4",
+          "id": "LoginConfigTotp_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

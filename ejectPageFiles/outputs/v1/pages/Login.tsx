@@ -254,12 +254,11 @@ export default function Login(
                         </Box>
 
                         <Box id="Login_Box_9" sx={styles.Login_Box_9}>
-                            <TextField
+                            <input
                                 type="hidden"
+                                id="id-hidden-input"
                                 name="credentialId"
                                 value={auth.selectedCredential}
-                                id="Login_TextField_3"
-                                sx={styles.Login_TextField_3}
                             />
                             <Button
                                 tabIndex={7}

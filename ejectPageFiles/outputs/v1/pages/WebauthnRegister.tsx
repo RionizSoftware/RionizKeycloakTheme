@@ -54,42 +54,24 @@ export default function WebauthnRegister(
                 sx={styles.WebauthnRegister_Box_1}
             >
                 <Box id="WebauthnRegister_Box_2" sx={styles.WebauthnRegister_Box_2}>
-                    <TextField
+                    <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
+                    <input
                         type="hidden"
-                        name="clientDataJSON"
-                        id="WebauthnRegister_TextField_1"
-                        sx={styles.WebauthnRegister_TextField_1}
-                    />
-                    <TextField
-                        type="hidden"
+                        id="attestationObject"
                         name="attestationObject"
-                        id="WebauthnRegister_TextField_2"
-                        sx={styles.WebauthnRegister_TextField_2}
                     />
-                    <TextField
+                    <input
                         type="hidden"
+                        id="publicKeyCredentialId"
                         name="publicKeyCredentialId"
-                        id="WebauthnRegister_TextField_3"
-                        sx={styles.WebauthnRegister_TextField_3}
                     />
-                    <TextField
+                    <input
                         type="hidden"
+                        id="authenticatorLabel"
                         name="authenticatorLabel"
-                        id="WebauthnRegister_TextField_4"
-                        sx={styles.WebauthnRegister_TextField_4}
                     />
-                    <TextField
-                        type="hidden"
-                        name="transports"
-                        id="WebauthnRegister_TextField_5"
-                        sx={styles.WebauthnRegister_TextField_5}
-                    />
-                    <TextField
-                        type="hidden"
-                        name="error"
-                        id="WebauthnRegister_TextField_6"
-                        sx={styles.WebauthnRegister_TextField_6}
-                    />
+                    <input type="hidden" id="transports" name="transports" />
+                    <input type="hidden" id="error" name="error" />
                     <LogoutOtherSessions
                         id="WebauthnRegister_LogoutOtherSessions_1"
                         kcClsx={kcClsx}

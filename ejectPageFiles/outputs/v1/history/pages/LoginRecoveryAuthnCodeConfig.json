@@ -904,8 +904,7 @@
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_input_2",
-      "LoginRecoveryAuthnCodeConfig_TextField_1"
+      "LoginRecoveryAuthnCodeConfig_input_2"
     ],
     "historyStates": [
       {
@@ -918,48 +917,12 @@
           "name": "name=\"generatedRecoveryAuthnCodes\"",
           "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}"
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_input_2\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedRecoveryAuthnCodes\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedRecoveryAuthnCodes\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedRecoveryAuthnCodes\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "LoginRecoveryAuthnCodeConfig_input_3",
-      "LoginRecoveryAuthnCodeConfig_TextField_2"
+      "LoginRecoveryAuthnCodeConfig_input_3"
     ],
     "historyStates": [
       {
@@ -972,48 +935,12 @@
           "name": "name=\"generatedAt\"",
           "value": "value={recoveryAuthnCodesConfigBean.generatedAt}"
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LoginRecoveryAuthnCodeConfig_input_3\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedAt\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedAt\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"generatedAt\"",
-          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "userLabel",
-      "LoginRecoveryAuthnCodeConfig_TextField_3"
+      "userLabel"
     ],
     "historyStates": [
       {
@@ -1025,41 +952,6 @@
           "id": "id=\"userLabel\"",
           "name": "name=\"userLabel\"",
           "value": "value={msgStr(\"recovery-codes-label-default\")}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"userLabel\"",
-          "name": "name=\"userLabel\"",
-          "value": "value={msgStr(\"recovery-codes-label-default\")}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userLabel\"",
-          "value": "value={msgStr(\"recovery-codes-label-default\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userLabel\"",
-          "value": "value={msgStr(\"recovery-codes-label-default\")}",
-          "id": "LoginRecoveryAuthnCodeConfig_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]

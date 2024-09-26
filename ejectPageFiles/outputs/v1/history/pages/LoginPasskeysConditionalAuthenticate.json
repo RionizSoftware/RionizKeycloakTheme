@@ -190,8 +190,7 @@
   },
   {
     "tags": [
-      "clientDataJSON",
-      "LoginPasskeysConditionalAuthenticate_TextField_1"
+      "clientDataJSON"
     ],
     "historyStates": [
       {
@@ -203,45 +202,12 @@
           "id": "id=\"clientDataJSON\"",
           "name": "name=\"clientDataJSON\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"clientDataJSON\"",
-          "name": "name=\"clientDataJSON\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"clientDataJSON\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"clientDataJSON\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "authenticatorData",
-      "LoginPasskeysConditionalAuthenticate_TextField_2"
+      "authenticatorData"
     ],
     "historyStates": [
       {
@@ -253,45 +219,12 @@
           "id": "id=\"authenticatorData\"",
           "name": "name=\"authenticatorData\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"authenticatorData\"",
-          "name": "name=\"authenticatorData\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticatorData\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"authenticatorData\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "signature",
-      "LoginPasskeysConditionalAuthenticate_TextField_3"
+      "signature"
     ],
     "historyStates": [
       {
@@ -303,45 +236,12 @@
           "id": "id=\"signature\"",
           "name": "name=\"signature\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"signature\"",
-          "name": "name=\"signature\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"signature\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"signature\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_3",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "credentialId",
-      "LoginPasskeysConditionalAuthenticate_TextField_4"
+      "credentialId"
     ],
     "historyStates": [
       {
@@ -353,45 +253,12 @@
           "id": "id=\"credentialId\"",
           "name": "name=\"credentialId\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"credentialId\"",
-          "name": "name=\"credentialId\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"credentialId\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_4",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "userHandle",
-      "LoginPasskeysConditionalAuthenticate_TextField_5"
+      "userHandle"
     ],
     "historyStates": [
       {
@@ -403,45 +270,12 @@
           "id": "id=\"userHandle\"",
           "name": "name=\"userHandle\""
         }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"userHandle\"",
-          "name": "name=\"userHandle\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userHandle\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"userHandle\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_5",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
       }
     ]
   },
   {
     "tags": [
-      "error",
-      "LoginPasskeysConditionalAuthenticate_TextField_6"
+      "error"
     ],
     "historyStates": [
       {
@@ -452,38 +286,6 @@
           "type": "type=\"hidden\"",
           "id": "id=\"error\"",
           "name": "name=\"error\""
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "type": "type=\"hidden\"",
-          "id": "id=\"error\"",
-          "name": "name=\"error\""
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"error\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"error\"",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_6",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -605,8 +407,7 @@
   },
   {
     "tags": [
-      "LoginPasskeysConditionalAuthenticate_input_7",
-      "LoginPasskeysConditionalAuthenticate_TextField_7"
+      "LoginPasskeysConditionalAuthenticate_input_7"
     ],
     "historyStates": [
       {
@@ -620,47 +421,6 @@
           "name": "name=\"authn_use_chk\"",
           "readOnly": "readOnly",
           "value": "value={authenticator.credentialId}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LoginPasskeysConditionalAuthenticate_input_7\"",
-          "key": "key={i}",
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "readOnly": "readOnly",
-          "value": "value={authenticator.credentialId}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "key": "key={i}",
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "readOnly": "readOnly",
-          "value": "value={authenticator.credentialId}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "key": "key={i}",
-          "type": "type=\"hidden\"",
-          "name": "name=\"authn_use_chk\"",
-          "readOnly": "readOnly",
-          "value": "value={authenticator.credentialId}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_7",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
@@ -1404,7 +1164,7 @@
   {
     "tags": [
       "username",
-      "LoginPasskeysConditionalAuthenticate_TextField_8"
+      "LoginPasskeysConditionalAuthenticate_TextField_1"
     ],
     "historyStates": [
       {
@@ -1467,7 +1227,7 @@
           "autoFocus": "autoFocus",
           "autoComplete": "autoComplete=\"off\"",
           "fullWidth": "fullWidth={true}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_8",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1484,7 +1244,7 @@
           "autoFocus": "autoFocus",
           "autoComplete": "autoComplete=\"off\"",
           "fullWidth": "fullWidth={true}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_8",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_1",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
@@ -1575,7 +1335,7 @@
   {
     "tags": [
       "{authButtonId}",
-      "LoginPasskeysConditionalAuthenticate_TextField_9"
+      "LoginPasskeysConditionalAuthenticate_TextField_2"
     ],
     "historyStates": [
       {
@@ -1620,7 +1380,7 @@
           "type": "type=\"button\"",
           "autoFocus": "autoFocus",
           "value": "value={msgStr(\"passkey-doAuthenticate\")}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_9",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       },
@@ -1632,7 +1392,7 @@
           "type": "type=\"button\"",
           "autoFocus": "autoFocus",
           "value": "value={msgStr(\"passkey-doAuthenticate\")}",
-          "id": "LoginPasskeysConditionalAuthenticate_TextField_9",
+          "id": "LoginPasskeysConditionalAuthenticate_TextField_2",
           "sx": "SX_STYLE_NOT_FETCHED"
         }
       }

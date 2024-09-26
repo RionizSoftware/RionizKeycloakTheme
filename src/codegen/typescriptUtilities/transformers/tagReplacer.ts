@@ -37,6 +37,7 @@ export const tagReplacerTransformer = (
             : node.openingElement.tagName.getText();
         for (const replacementInput of replacements) {
             const { elementToReplace, elementToReplaceProperties } = replacementInput;
+            ///Check tag name for replace is correct
             if (tagName === elementToReplace) {
                 let hasAttrToCheck = false;
                 for (const attrKeyToCheck in elementToReplaceProperties) {
@@ -47,15 +48,26 @@ export const tagReplacerTransformer = (
                             attrKeyToCheck
                         )
                     ) {
+                        // check if it has attributes passed in e.g type="submit"
                         const attrValueToCheck =
                             elementToReplaceProperties[attrKeyToCheck];
                         const attrValue = getAttributeValue(node, attrKeyToCheck);
                         if (attrValue === attrValueToCheck) {
-                            return replacementInput;
+                            //Check if it doesn't have hidden attribute
+                            const hiddenValue = getAttributeValue(node, "type");
+                            if (hiddenValue !== "hidden") {
+                                return replacementInput;
+                            }
                         }
                     }
                 }
-                if (!hasAttrToCheck) return replacementInput;
+                //If there is no attribute passed to check return element
+                if (!hasAttrToCheck) {
+                    const hiddenValue = getAttributeValue(node, "type");
+                    if (hiddenValue !== "hidden") {
+                        return replacementInput;
+                    }
+                }
             }
         }
         return null;

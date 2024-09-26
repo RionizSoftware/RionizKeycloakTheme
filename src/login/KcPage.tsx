@@ -64,7 +64,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginIdpLinkConfirmOverride
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-passkeys-conditional-authenticate.ftl":
@@ -72,7 +72,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginPasskeysConditionalAuthenticate
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "webauthn-error.ftl":
@@ -80,7 +80,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <WebauthnError
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-x509-info.ftl":
@@ -88,7 +88,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginX509Info
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-reset-otp.ftl":
@@ -96,7 +96,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginResetOtp
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-recovery-authn-code-input.ftl":
@@ -104,7 +104,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginRecoveryAuthnCodeInput
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-recovery-authn-code-config.ftl":
@@ -112,7 +112,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginRecoveryAuthnCodeConfig
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "frontchannel-logout.ftl":
@@ -120,7 +120,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <FrontchannelLogout
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "delete-account-confirm.ftl":
@@ -128,7 +128,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <DeleteAccountConfirm
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "code.ftl":
@@ -136,7 +136,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Code
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "delete-credential.ftl":
@@ -144,7 +144,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <DeleteCredential
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "saml-post-form.ftl":
@@ -152,7 +152,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <SamlPostForm
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "select-authenticator.ftl":
@@ -160,7 +160,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <SelectAuthenticator
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "update-email.ftl":
@@ -168,7 +168,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <UpdateEmail
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />
@@ -178,7 +178,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <IdpReviewUserProfile
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />
@@ -188,7 +188,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LogoutConfirm
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-config-totp.ftl":
@@ -196,7 +196,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginConfigTotp
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-page-expired.ftl":
@@ -204,7 +204,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginPageExpired
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-idp-link-email.ftl":
@@ -212,7 +212,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginIdpLinkEmail
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-idp-link-confirm.ftl":
@@ -220,7 +220,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginIdpLinkConfirm
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-update-password.ftl":
@@ -228,7 +228,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginUpdatePassword
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-update-profile.ftl":
@@ -236,7 +236,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginUpdateProfile
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />
@@ -246,7 +246,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginOtp
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-oauth-grant.ftl":
@@ -254,7 +254,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginOauthGrant
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-oauth2-device-verify-user-code.ftl":
@@ -262,7 +262,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginOauth2DeviceVerifyUserCode
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "terms.ftl":
@@ -270,7 +270,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Terms
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-verify-email.ftl":
@@ -278,7 +278,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginVerifyEmail
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-reset-password.ftl":
@@ -286,7 +286,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginResetPassword
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "error.ftl":
@@ -294,7 +294,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Error
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "info.ftl":
@@ -302,7 +302,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Info
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "register.ftl":
@@ -310,7 +310,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Register
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />
@@ -320,7 +320,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <WebauthnRegister
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "webauthn-authenticate.ftl":
@@ -328,7 +328,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <WebauthnAuthenticate
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-password.ftl":
@@ -336,7 +336,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginPassword
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login-username.ftl":
@@ -344,7 +344,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <LoginUsername
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     case "login.ftl":
@@ -352,7 +352,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             <Login
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                             />
                         );
                     default:

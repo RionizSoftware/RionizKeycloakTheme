@@ -50,18 +50,8 @@ export default function WebauthnError(
                 id="WebauthnError_Box_1"
                 sx={styles.WebauthnError_Box_1}
             >
-                <TextField
-                    type="hidden"
-                    name="authenticationExecution"
-                    id="WebauthnError_TextField_1"
-                    sx={styles.WebauthnError_TextField_1}
-                />
-                <TextField
-                    type="hidden"
-                    name="isSetRetry"
-                    id="WebauthnError_TextField_2"
-                    sx={styles.WebauthnError_TextField_2}
-                />
+                <input type="hidden" id="executionValue" name="authenticationExecution" />
+                <input type="hidden" id="isSetRetry" name="isSetRetry" />
             </Box>
             <TextField
                 tabIndex={4}
@@ -76,8 +66,8 @@ export default function WebauthnError(
                 type="button"
                 name="try-again"
                 value={msgStr("doTryAgain")}
-                id="WebauthnError_TextField_3"
-                sx={styles.WebauthnError_TextField_3}
+                id="WebauthnError_TextField_1"
+                sx={styles.WebauthnError_TextField_1}
             />
             {isAppInitiatedAction && (
                 <Box

@@ -126,12 +126,11 @@ export default function LoginOauthGrant(
                     id="LoginOauthGrant_Box_2"
                     sx={styles.LoginOauthGrant_Box_2}
                 >
-                    <TextField
+                    <input
+                        id="LoginOauthGrant_input_1"
                         type="hidden"
                         name="code"
                         value={oauth.code}
-                        id="LoginOauthGrant_TextField_1"
-                        sx={styles.LoginOauthGrant_TextField_1}
                     />
                     <Box id="LoginOauthGrant_Box_3" sx={styles.LoginOauthGrant_Box_3}>
                         <Button

@@ -56,12 +56,11 @@ export default function LogoutConfirm(
                     id="LogoutConfirm_Box_2"
                     sx={styles.LogoutConfirm_Box_2}
                 >
-                    <TextField
+                    <input
+                        id="LogoutConfirm_input_1"
                         type="hidden"
                         name="session_code"
                         value={logoutConfirm.code}
-                        id="LogoutConfirm_TextField_1"
-                        sx={styles.LogoutConfirm_TextField_1}
                     />
                     <Box id="LogoutConfirm_Box_3" sx={styles.LogoutConfirm_Box_3}>
                         <Button

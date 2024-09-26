@@ -251,21 +251,13 @@ export default function LoginConfigTotp(
                                 />
                             )}
                         </Box>
-                        <TextField
+                        <input
                             type="hidden"
+                            id="totpSecret"
                             name="totpSecret"
                             value={totp.totpSecret}
-                            id="LoginConfigTotp_TextField_2"
-                            sx={styles.LoginConfigTotp_TextField_2}
                         />
-                        {mode && (
-                            <TextField
-                                type="hidden"
-                                value={mode}
-                                id="LoginConfigTotp_TextField_3"
-                                sx={styles.LoginConfigTotp_TextField_3}
-                            />
-                        )}
+                        {mode && <input type="hidden" id="mode" value={mode} />}
                     </Box>
 
                     <Box id="LoginConfigTotp_Box_4" sx={styles.LoginConfigTotp_Box_4}>
@@ -286,8 +278,8 @@ export default function LoginConfigTotp(
                                 autoComplete="off"
                                 aria-invalid={messagesPerField.existsError("userLabel")}
                                 fullWidth={true}
-                                id="LoginConfigTotp_TextField_4"
-                                sx={styles.LoginConfigTotp_TextField_4}
+                                id="LoginConfigTotp_TextField_2"
+                                sx={styles.LoginConfigTotp_TextField_2}
                             />
                             {messagesPerField.existsError("userLabel") && (
                                 <span

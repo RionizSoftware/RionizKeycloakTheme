@@ -66,30 +66,27 @@ export default function SamlPostForm(
                 sx={styles.SamlPostForm_Box_1}
             >
                 {samlPost.SAMLRequest && (
-                    <TextField
+                    <input
+                        id="SamlPostForm_input_1"
                         type="hidden"
                         name="SAMLRequest"
                         value={samlPost.SAMLRequest}
-                        id="SamlPostForm_TextField_1"
-                        sx={styles.SamlPostForm_TextField_1}
                     />
                 )}
                 {samlPost.SAMLResponse && (
-                    <TextField
+                    <input
+                        id="SamlPostForm_input_2"
                         type="hidden"
                         name="SAMLResponse"
                         value={samlPost.SAMLResponse}
-                        id="SamlPostForm_TextField_2"
-                        sx={styles.SamlPostForm_TextField_2}
                     />
                 )}
                 {samlPost.relayState && (
-                    <TextField
+                    <input
+                        id="SamlPostForm_input_3"
                         type="hidden"
                         name="RelayState"
                         value={samlPost.relayState}
-                        id="SamlPostForm_TextField_3"
-                        sx={styles.SamlPostForm_TextField_3}
                     />
                 )}
                 <noscript id="SamlPostForm_noscript_1">

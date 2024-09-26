@@ -443,8 +443,7 @@
   },
   {
     "tags": [
-      "LoginOauthGrant_input_1",
-      "LoginOauthGrant_TextField_1"
+      "LoginOauthGrant_input_1"
     ],
     "historyStates": [
       {
@@ -456,41 +455,6 @@
           "type": "type=\"hidden\"",
           "name": "name=\"code\"",
           "value": "value={oauth.code}"
-        }
-      },
-      {
-        "tag": "input",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "TagReplaced",
-        "props": {
-          "id": "id=\"LoginOauthGrant_input_1\"",
-          "type": "type=\"hidden\"",
-          "name": "name=\"code\"",
-          "value": "value={oauth.code}"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "IdChanged",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"code\"",
-          "value": "value={oauth.code}",
-          "id": "LoginOauthGrant_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
-        }
-      },
-      {
-        "tag": "TextField",
-        "currentIndex": "NOT_CHANGED",
-        "operation": "SxAdded",
-        "props": {
-          "type": "type=\"hidden\"",
-          "name": "name=\"code\"",
-          "value": "value={oauth.code}",
-          "id": "LoginOauthGrant_TextField_1",
-          "sx": "SX_STYLE_NOT_FETCHED"
         }
       }
     ]
