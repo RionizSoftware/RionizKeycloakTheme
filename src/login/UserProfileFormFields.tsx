@@ -1,4 +1,4 @@
-import { useEffect, useReducer, Fragment } from "react";
+import { useEffect, Fragment } from "react";
 import { assert } from "rionizkeycloakify/tools/assert";
 import type { KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import {
@@ -11,9 +11,9 @@ import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserPro
 import type { Attribute } from "rionizkeycloakify/login/KcContext";
 import type { KcContext } from "./KcContext";
 import type { I18n } from "./i18n";
+import { PasswordWrapper } from "./pages/PasswordWrapper";
 import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "./styles/UserProfileFormFields.ts";
-import { PasswordWrapper } from "./pages/PasswordWrapper.tsx";
 export default function UserProfileFormFields(props: UserProfileFormFieldsProps<KcContext, I18n>) {
     const { kcContext, i18n, kcClsx, onIsFormSubmittableValueChange, doMakeUserConfirmPassword, BeforeField, AfterField } = props;
     const { advancedMsg } = i18n;
@@ -43,6 +43,7 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
                         />
                         {BeforeField !== undefined && (
                             <BeforeField
+                                id="UserProfileFormFields_BeforeField_1"
                                 attribute={attribute}
                                 dispatchFormAction={dispatchFormAction}
                                 displayableErrors={displayableErrors}
@@ -98,6 +99,7 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
 
                                 {AfterField !== undefined && (
                                     <AfterField
+                                        id="UserProfileFormFields_AfterField_1"
                                         attribute={attribute}
                                         dispatchFormAction={dispatchFormAction}
                                         displayableErrors={displayableErrors}
@@ -116,13 +118,13 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
     );
 }
 function GroupLabel(props: {
+    id?: string;
     attribute: Attribute;
     groupNameRef: {
         current: string;
     };
     i18n: I18n;
     kcClsx: KcClsx;
-    id: string;
 }) {
     const { attribute, groupNameRef, i18n, kcClsx } = props;
     const { advancedMsg } = i18n;
@@ -168,7 +170,7 @@ function GroupLabel(props: {
     return null;
 }
 function FieldErrors(props: {
-    id: string;
+    id?: string;
     attribute: Attribute;
     displayableErrors: FormFieldError[];
     fieldIndex: number | undefined;
@@ -193,7 +195,7 @@ function FieldErrors(props: {
     );
 }
 type InputFieldByTypeProps = {
-    id: string;
+    id?: string;
     attribute: Attribute;
     valueOrValues: string | string[];
     displayableErrors: FormFieldError[];
@@ -239,10 +241,8 @@ function InputFieldByType(props: InputFieldByTypeProps) {
         }
     }
 }
-
 function InputTag(
     props: InputFieldByTypeProps & {
-        id: string;
         fieldIndex: number | undefined;
     }
 ) {
@@ -342,7 +342,7 @@ function InputTag(
     );
 }
 function AddRemoveButtonsMultiValuedAttribute(props: {
-    id: string;
+    id?: string;
     attribute: Attribute;
     values: string[];
     fieldIndex: number;
@@ -377,8 +377,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                                 valueOrValues: values.filter((_, i) => i !== fieldIndex)
                             })
                         }
-                        id="UserProfileFormFields_Button_2"
-                        sx={styles.UserProfileFormFields_Button_2}
+                        id="UserProfileFormFields_Button_1"
+                        sx={styles.UserProfileFormFields_Button_1}
                     >
                         {msg("remove")}
                     </Button>
@@ -395,8 +395,8 @@ function AddRemoveButtonsMultiValuedAttribute(props: {
                             valueOrValues: [...values, ""]
                         })
                     }
-                    id="UserProfileFormFields_Button_3"
-                    sx={styles.UserProfileFormFields_Button_3}
+                    id="UserProfileFormFields_Button_2"
+                    sx={styles.UserProfileFormFields_Button_2}
                 >
                     {msg("addValue")}
                 </Button>
@@ -454,7 +454,7 @@ function InputTagSelects(props: InputFieldByTypeProps) {
     return (
         <>
             {options.map(option => (
-                <Box key={option} id="UserProfileFormFields_Box_12" sx={styles.UserProfileFormFields_Box_12}>
+                <Box key={option} id="UserProfileFormFields_Box_11" sx={styles.UserProfileFormFields_Box_11}>
                     <input
                         type={inputType}
                         name={attribute.name}

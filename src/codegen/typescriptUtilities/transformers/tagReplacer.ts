@@ -1,13 +1,18 @@
 import ts from "typescript";
 import { HistoryOperationType, TransformerFunctions } from "./types.ts";
-import { createStringAttributeForTag, getAttributeValue } from "./utility.ts";
+import {
+    createStringAttributeForTag,
+    getAttributeValue,
+    removeAttributes
+} from "./utility.ts";
 import { TransformerHistory } from "../TransformerHistory.ts";
 
 export type TagReplacerInputType = {
-    elementToReplace: string;
-    elementToReplaceProperties?: Record<string, string>;
-    replacement: string;
-    extraAttribute?: Record<string, string | boolean>;
+    elementToReplace: string; //Tag to find
+    elementToReplaceProperties?: Record<string, string>; //Tag we find should also have these attributes
+    replacement: string; //Tag to replace with
+    extraAttribute?: Record<string, string | boolean>; //Add this attributes after find it
+    removeAttributes?: string[]; //remove this attribute after we find it
 };
 export const tagReplacerTransformer = (
     replacements: TagReplacerInputType[]
@@ -78,16 +83,20 @@ export const tagReplacerTransformer = (
             const replacementInput = getReplacementIfTagExistInReplacementInputs(node);
             if (replacementInput) {
                 const { replacement, extraAttribute } = replacementInput;
+                const attributes = removeAttributes(
+                    node,
+                    replacementInput.removeAttributes || []
+                );
                 const newNode = ts.factory.updateJsxSelfClosingElement(
                     node,
                     ts.factory.createIdentifier(replacement),
                     node.typeArguments,
                     extraAttribute
                         ? ts.factory.createJsxAttributes([
-                              ...node.attributes.properties,
+                              ...attributes,
                               ...createAttributes(extraAttribute)
                           ])
-                        : node.attributes
+                        : ts.factory.createJsxAttributes([...attributes])
                 );
 
                 TransformerHistory.addHistoryState(
@@ -113,6 +122,11 @@ export const tagReplacerTransformer = (
             if (replacementInput) {
                 const { replacement, extraAttribute } = replacementInput;
 
+                const attributes = removeAttributes(
+                    node,
+                    replacementInput.removeAttributes || []
+                );
+
                 // Create new opening and closing tags with Box
                 const newOpeningElement = ts.factory.updateJsxOpeningElement(
                     openingElement,
@@ -120,10 +134,10 @@ export const tagReplacerTransformer = (
                     node.openingElement.typeArguments,
                     extraAttribute
                         ? ts.factory.createJsxAttributes([
-                              ...openingElement.attributes.properties,
+                              ...attributes,
                               ...createAttributes(extraAttribute)
                           ])
-                        : openingElement.attributes
+                        : ts.factory.createJsxAttributes([...attributes])
                 );
 
                 const newClosingElement = ts.factory.updateJsxClosingElement(

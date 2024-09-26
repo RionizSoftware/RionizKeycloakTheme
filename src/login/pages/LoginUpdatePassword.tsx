@@ -1,4 +1,5 @@
 import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -25,6 +26,7 @@ export default function LoginUpdatePassword(
     const { url, messagesPerField, isAppInitiatedAction } = kcContext;
     return (
         <Template
+            id="LoginUpdatePassword_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -57,7 +59,7 @@ export default function LoginUpdatePassword(
                                 id="input-error-password"
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
-                                    __html: messagesPerField.get("password")
+                                    __html: kcSanitize(messagesPerField.get("password"))
                                 }}
                             />
                         )}
@@ -88,7 +90,7 @@ export default function LoginUpdatePassword(
                                 id="input-error-password-confirm"
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
-                                    __html: messagesPerField.get("password-confirm")
+                                    __html: kcSanitize(messagesPerField.get("password-confirm"))
                                 }}
                             />
                         )}
@@ -120,7 +122,7 @@ export default function LoginUpdatePassword(
         </Template>
     );
 }
-function LogoutOtherSessions(props: { id: string; kcClsx: KcClsx; i18n: I18n }) {
+function LogoutOtherSessions(props: { id?: string; kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (

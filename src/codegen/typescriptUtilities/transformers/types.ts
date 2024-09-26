@@ -18,7 +18,8 @@ export enum HistoryOperationType {
     TagReplaced = "TagReplaced",
     OptimizedAndRemoved = "OptimizeAndRemoved",
     SxAdded = "SxAdded",
-    StyleRemoved = "StyleRemoved"
+    StyleRemoved = "StyleRemoved",
+    AttributeAdded = "StyleRemoved"
 }
 export type HistoryState = {
     tag: string;

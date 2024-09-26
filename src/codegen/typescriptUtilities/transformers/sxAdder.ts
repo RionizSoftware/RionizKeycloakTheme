@@ -4,7 +4,7 @@ import {
     createStringAttributeForTag,
     createSxForTag,
     getTagName,
-    removeAttribute
+    removeAttributes
 } from "./utility.ts";
 import { TransformerHistory } from "../TransformerHistory.ts";
 
@@ -43,7 +43,7 @@ export const sxAdderTransformer = (
         const newAttributes =
             sxAttribute && idAttribute
                 ? ts.factory.createJsxAttributes([
-                      ...removeAttribute(node, "id"),
+                      ...removeAttributes(node, ["id"]),
                       idAttribute,
                       sxAttribute
                   ])

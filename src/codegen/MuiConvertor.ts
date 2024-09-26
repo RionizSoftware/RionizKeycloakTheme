@@ -44,7 +44,7 @@ const runPrettier = async (content: string): Promise<string> => {
 
 const makeStyleFile = (content: string, outputLocation: string) => {
     // Regular expression to find all sx={...} matches.
-    const regex = /sx=\{styles\.([a-zA-Z0-9_]+)\}/g;
+    const regex = /sx=\{\s*styles\.([a-zA-Z0-9_]+)\s*}/g;
 
     let match;
     const styles: { [key: string]: object } = {};
@@ -144,7 +144,8 @@ const recursivelyConvertAll = async (
                     {
                         elementToReplace: "input",
                         elementToReplaceProperties: { type: "radio" },
-                        replacement: "Radio"
+                        replacement: "Radio",
+                        removeAttributes: ["type"]
                     },
                     {
                         elementToReplace: "input",
@@ -157,7 +158,8 @@ const recursivelyConvertAll = async (
                     {
                         elementToReplace: "input",
                         elementToReplaceProperties: { type: "checkbox" },
-                        replacement: "Checkbox"
+                        replacement: "Checkbox",
+                        removeAttributes: ["type"]
                     },
                     {
                         elementToReplace: "input",

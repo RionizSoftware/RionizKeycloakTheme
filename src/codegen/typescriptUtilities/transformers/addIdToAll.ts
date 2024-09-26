@@ -3,7 +3,7 @@ import { TransformerFunctions } from "./types.ts";
 import {
     createStringAttributeForTag,
     getAttributeValue,
-    removeAttribute
+    removeAttributes
 } from "./utility.ts";
 
 //Id is necessary for history so we add id to all missing components
@@ -32,7 +32,7 @@ export const addIdToAllTransformer = (fileName: string): TransformerFunctions =>
         return idAttribute
             ? ts.factory.createJsxAttributes([
                   idAttribute,
-                  ...removeAttribute(node, "id")
+                  ...removeAttributes(node, ["id"])
               ])
             : attributes;
     };

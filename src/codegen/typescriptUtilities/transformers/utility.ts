@@ -34,9 +34,9 @@ export const createSxForTag = (value: string) => {
     );
 };
 
-export const removeAttribute = (
+export const removeAttributes = (
     node: ts.JsxElement | ts.JsxSelfClosingElement,
-    attributeName: string
+    attributeNames: string[]
 ): ts.JsxAttribute[] => {
     const attributeProperties = ts.isJsxElement(node)
         ? node.openingElement.attributes.properties
@@ -44,7 +44,7 @@ export const removeAttribute = (
 
     return attributeProperties.filter(attr => {
         if (ts.isJsxAttribute(attr)) {
-            return attr.name.getText() !== attributeName;
+            return !attributeNames.includes(attr.name.getText());
         }
         return true;
     }) as ts.JsxAttribute[];

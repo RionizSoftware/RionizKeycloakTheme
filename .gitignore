@@ -1,3 +1,44 @@
+# WebStorm settings
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# Typescript cache and transpiled files
+*.tsbuildinfo
+*.d.ts
+tsconfig.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage directory for test reports
+coverage/
+
+# IDE temp and lock files
+*.iml
+
+
+
+
 # Logs
 logs
 *.log
@@ -42,16 +83,3 @@ jspm_packages
 !.yarn/sdks
 !.yarn/versions
 
-
-# Optional REPL history
-.node_repl_history
-
-.vscode
-
-.DS_Store
-
-/dist
-
-/dist_keycloak
-/build
-/storybook-static

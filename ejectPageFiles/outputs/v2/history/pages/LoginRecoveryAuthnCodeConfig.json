@@ -1,0 +1,1370 @@
+[
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "headerNode": "headerNode={msg(\"recovery-code-config-header\")}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_1",
+      "LoginRecoveryAuthnCodeConfig_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_1\"",
+          "className": "className={clsx(\"pf-c-alert\", \"pf-m-warning\", \"pf-m-inline\", kcClsx(\"kcRecoveryCodesWarning\"))}",
+          "aria-label": "aria-label=\"Warning alert\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_1\"",
+          "aria-label": "aria-label=\"Warning alert\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_1\"",
+          "aria-label": "aria-label=\"Warning alert\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "aria-label": "aria-label=\"Warning alert\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "aria-label": "aria-label=\"Warning alert\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_2",
+      "LoginRecoveryAuthnCodeConfig_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_2\"",
+          "className": "className=\"pf-c-alert__icon\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_2\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_i_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_1\"",
+          "className": "className=\"pficon-warning-triangle-o\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_1\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_h4_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "h4",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_h4_1\"",
+          "className": "className=\"pf-c-alert__title\""
+        }
+      },
+      {
+        "tag": "h4",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_h4_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_span_1\"",
+          "className": "className=\"pf-screen-reader\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_3",
+      "LoginRecoveryAuthnCodeConfig_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_3\"",
+          "className": "className=\"pf-c-alert__description\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_p_1",
+      "LoginRecoveryAuthnCodeConfig_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_p_1\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_p_1\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{olRecoveryCodesListId}"
+    ],
+    "historyStates": [
+      {
+        "tag": "ol",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={olRecoveryCodesListId}",
+          "className": "className={kcClsx(\"kcRecoveryCodesList\")}"
+        }
+      },
+      {
+        "tag": "ol",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={olRecoveryCodesListId}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_li_1",
+      "LoginRecoveryAuthnCodeConfig_ListItem_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "li",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_li_1\"",
+          "key": "key={index}"
+        }
+      },
+      {
+        "tag": "li",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_li_1\"",
+          "key": "key={index}"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={index}",
+          "id": "LoginRecoveryAuthnCodeConfig_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "ListItem",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={index}",
+          "id": "LoginRecoveryAuthnCodeConfig_ListItem_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_span_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_span_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_4",
+      "LoginRecoveryAuthnCodeConfig_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\"",
+          "className": "className={kcClsx(\"kcRecoveryCodesActions\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_4\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "printRecoveryCodes",
+      "LoginRecoveryAuthnCodeConfig_Button_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"printRecoveryCodes\"",
+          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"printRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"printRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_i_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_2\"",
+          "className": "className=\"pficon-print\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_2\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "downloadRecoveryCodes",
+      "LoginRecoveryAuthnCodeConfig_Button_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"downloadRecoveryCodes\"",
+          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"downloadRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"downloadRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_i_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "15",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_3\"",
+          "className": "className=\"pficon-save\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_3\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "copyRecoveryCodes",
+      "LoginRecoveryAuthnCodeConfig_Button_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "16",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"copyRecoveryCodes\"",
+          "className": "className={clsx(\"pf-c-button\", \"pf-m-link\")}",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"copyRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"copyRecoveryCodes\"",
+          "type": "type=\"button\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"button\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_i_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "17",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_4\"",
+          "className": "className=\"pficon-blueprint\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_i_4\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_5",
+      "LoginRecoveryAuthnCodeConfig_Box_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "18",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\"",
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_5\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kcRecoveryCodesConfirmationCheck",
+      "LoginRecoveryAuthnCodeConfig_Checkbox_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "19",
+        "operation": "Loaded",
+        "props": {
+          "className": "className={kcClsx(\"kcCheckInputClass\")}",
+          "type": "type=\"checkbox\"",
+          "id": "id=\"kcRecoveryCodesConfirmationCheck\"",
+          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "id": "id=\"kcRecoveryCodesConfirmationCheck\"",
+          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kcRecoveryCodesConfirmationCheck\"",
+          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}",
+          "id": "LoginRecoveryAuthnCodeConfig_Checkbox_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"kcRecoveryCodesConfirmationCheck\"",
+          "onChange": "onChange={function () {\n            //@ts-expect-error: This is code from the original theme, we trust it.\n            document.getElementById(\"saveRecoveryAuthnCodesBtn\").disabled = !this.checked;\n        }}",
+          "id": "LoginRecoveryAuthnCodeConfig_Checkbox_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_label_1",
+      "LoginRecoveryAuthnCodeConfig_FormLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "20",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_label_1\"",
+          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_label_1\"",
+          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\"",
+          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor=\"kcRecoveryCodesConfirmationCheck\"",
+          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-recovery-codes-settings-form",
+      "LoginRecoveryAuthnCodeConfig_Box_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "21",
+        "operation": "Loaded",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}",
+          "id": "id=\"kc-recovery-codes-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "id": "id=\"kc-recovery-codes-settings-form\"",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "id": "id=\"kc-recovery-codes-settings-form\"",
+          "method": "method=\"post\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={kcContext.url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Box_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_input_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "22",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_input_2\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"generatedRecoveryAuthnCodes\"",
+          "value": "value={recoveryAuthnCodesConfigBean.generatedRecoveryAuthnCodesAsString}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_input_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "23",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_input_3\"",
+          "type": "type=\"hidden\"",
+          "name": "name=\"generatedAt\"",
+          "value": "value={recoveryAuthnCodesConfigBean.generatedAt}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "userLabel"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "24",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"hidden\"",
+          "id": "id=\"userLabel\"",
+          "name": "name=\"userLabel\"",
+          "value": "value={msgStr(\"recovery-codes-label-default\")}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "LogoutOtherSessions",
+        "currentIndex": "25",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_LogoutOtherSessions_1\"",
+          "kcClsx": "kcClsx={kcClsx}",
+          "i18n": "i18n={i18n}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "saveRecoveryAuthnCodesBtn",
+      "LoginRecoveryAuthnCodeConfig_Button_4",
+      "LoginRecoveryAuthnCodeConfig_Button_6"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "28",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"submit\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"saveRecoveryAuthnCodesBtn\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"recovery-codes-action-complete\")}",
+          "disabled": "disabled",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_6",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "cancelRecoveryAuthnCodesBtn",
+      "LoginRecoveryAuthnCodeConfig_Button_5"
+    ],
+    "historyStates": [
+      {
+        "tag": "button",
+        "currentIndex": "27",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"submit\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonDefaultClass\", \"kcButtonLargeClass\")}",
+          "id": "id=\"cancelRecoveryAuthnCodesBtn\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"cancelRecoveryAuthnCodesBtn\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "type": "type=\"submit\"",
+          "id": "id=\"cancelRecoveryAuthnCodesBtn\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\""
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "name": "name=\"cancel-aia\"",
+          "value": "value=\"true\"",
+          "id": "LoginRecoveryAuthnCodeConfig_Button_5",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-options",
+      "LoginRecoveryAuthnCodeConfig_Box_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "29",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-options\"",
+          "className": "className={kcClsx(\"kcFormOptionsClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-form-options\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_Box_7",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_7"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "30",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\"",
+          "className": "className={kcClsx(\"kcFormOptionsWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_7\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_div_8"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "31",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_8\"",
+          "className": "className=\"checkbox\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_8\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_div_8\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginRecoveryAuthnCodeConfig_label_2",
+      "LoginRecoveryAuthnCodeConfig_FormLabel_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "32",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_label_2\""
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginRecoveryAuthnCodeConfig_label_2\""
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginRecoveryAuthnCodeConfig_FormLabel_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "logout-sessions",
+      "LoginRecoveryAuthnCodeConfig_Checkbox_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "33",
+        "operation": "Loaded",
+        "props": {
+          "type": "type=\"checkbox\"",
+          "id": "id=\"logout-sessions\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"logout-sessions\"",
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Checkbox_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Checkbox",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"logout-sessions\"",
+          "value": "value=\"on\"",
+          "defaultChecked": "defaultChecked={true}",
+          "id": "LoginRecoveryAuthnCodeConfig_Checkbox_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

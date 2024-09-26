@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import { clsx } from "rionizkeycloakify/tools/clsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
@@ -28,6 +29,7 @@ export default function Login(
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
     return (
         <Template
+            id="Login_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -59,7 +61,7 @@ export default function Login(
                                             <span
                                                 id="Login_span_2"
                                                 dangerouslySetInnerHTML={{
-                                                    __html: p.displayName
+                                                    __html: kcSanitize(p.displayName)
                                                 }}
                                             ></span>
                                         </Link>
@@ -86,13 +88,13 @@ export default function Login(
                     >
                         {!usernameHidden && (
                             <Box id="Login_Box_5" sx={styles.Login_Box_5}>
-                                {/*<FormLabel htmlFor="username" id="Login_FormLabel_1" sx={styles.Login_FormLabel_1}>*/}
-                                {/*    {!realm.loginWithEmailAllowed*/}
-                                {/*        ? msg("username")*/}
-                                {/*        : !realm.registrationEmailAsUsername*/}
-                                {/*          ? msg("usernameOrEmail")*/}
-                                {/*          : msg("email")}*/}
-                                {/*</FormLabel>*/}
+                                <FormLabel htmlFor="username" id="Login_FormLabel_1" sx={styles.Login_FormLabel_1}>
+                                    {!realm.loginWithEmailAllowed
+                                        ? msg("username")
+                                        : !realm.registrationEmailAsUsername
+                                          ? msg("usernameOrEmail")
+                                          : msg("email")}
+                                </FormLabel>
                                 <TextField
                                     tabIndex={2}
                                     name="username"
@@ -104,21 +106,13 @@ export default function Login(
                                     fullWidth={true}
                                     id="Login_TextField_1"
                                     sx={styles.Login_TextField_1}
-                                    //Add
-                                    label={
-                                        !realm.loginWithEmailAllowed
-                                            ? msg("username")
-                                            : !realm.registrationEmailAsUsername
-                                              ? msg("usernameOrEmail")
-                                              : msg("email")
-                                    }
                                 />
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
                                         id="input-error"
                                         aria-live="polite"
                                         dangerouslySetInnerHTML={{
-                                            __html: messagesPerField.getFirstError("username", "password")
+                                            __html: kcSanitize(messagesPerField.getFirstError("username", "password"))
                                         }}
                                     />
                                 )}
@@ -126,10 +120,10 @@ export default function Login(
                         )}
 
                         <Box id="Login_Box_6" sx={styles.Login_Box_6}>
-                            {/*<FormLabel htmlFor="password" id="Login_FormLabel_2" sx={styles.Login_FormLabel_2}>*/}
-                            {/*    {msg("password")}*/}
-                            {/*</FormLabel>*/}
-                            <PasswordWrapper id="Login_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="Login_TextField_2">
+                            <FormLabel htmlFor="password" id="Login_FormLabel_2" sx={styles.Login_FormLabel_2}>
+                                {msg("password")}
+                            </FormLabel>
+                            <PasswordWrapper id="Login_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
                                 <TextField
                                     tabIndex={3}
                                     name="password"
@@ -139,8 +133,6 @@ export default function Login(
                                     fullWidth={true}
                                     id="Login_TextField_2"
                                     sx={styles.Login_TextField_2}
-                                    //Add
-                                    label={msg("password")}
                                 />
                             </PasswordWrapper>
                             {usernameHidden && messagesPerField.existsError("username", "password") && (
@@ -148,7 +140,7 @@ export default function Login(
                                     id="input-error"
                                     aria-live="polite"
                                     dangerouslySetInnerHTML={{
-                                        __html: messagesPerField.getFirstError("username", "password")
+                                        __html: kcSanitize(messagesPerField.getFirstError("username", "password"))
                                     }}
                                 />
                             )}
@@ -186,13 +178,11 @@ export default function Login(
                                 disabled={isLoginButtonDisabled}
                                 name="login"
                                 type="submit"
-                                // value={msgStr("doLogIn")}
+                                value={msgStr("doLogIn")}
                                 fullWidth={true}
                                 id="Login_Button_1"
                                 sx={styles.Login_Button_1}
-                            >
-                                {msgStr("doLogIn")}
-                            </Button>
+                            />
                         </Box>
                     </Box>
                 )}

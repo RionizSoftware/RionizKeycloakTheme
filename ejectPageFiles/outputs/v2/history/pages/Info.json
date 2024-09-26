@@ -1,0 +1,401 @@
+[
+  {
+    "tags": [
+      "Info_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={false}",
+          "headerNode": "headerNode={<span id=\"Info_span_1\" dangerouslySetInnerHTML={{\n                __html: kcSanitize(messageHeader ?? message.summary)\n            }}/>}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_span_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n                __html: kcSanitize(messageHeader ?? message.summary)\n            }}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-info-message",
+      "Info_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-info-message\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-info-message\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Info_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Info_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_p_1",
+      "Info_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_p_1\"",
+          "className": "className=\"instruction\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: kcSanitize((() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })())\n        }}"
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"Info_p_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: kcSanitize((() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })())\n        }}"
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_p_1\"",
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: kcSanitize((() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })())\n        }}"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: kcSanitize((() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })())\n        }}",
+          "id": "Info_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "dangerouslySetInnerHTML": "dangerouslySetInnerHTML={{\n            __html: kcSanitize((() => {\n                let html = message.summary;\n                if (requiredActions) {\n                    html += \"<b>\";\n                    html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(\", \");\n                    html += \"</b>\";\n                }\n                return html;\n            })())\n        }}",
+          "id": "Info_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_p_2",
+      "Info_Typography_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_p_2\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_p_2\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Info_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Info_Typography_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_a_1",
+      "Info_Link_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_a_1\"",
+          "href": "href={pageRedirectUri}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_a_1\"",
+          "href": "href={pageRedirectUri}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={pageRedirectUri}",
+          "id": "Info_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={pageRedirectUri}",
+          "id": "Info_Link_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_p_3",
+      "Info_Typography_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_p_3\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_p_3\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Info_Typography_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Info_Typography_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_a_2",
+      "Info_Link_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_a_2\"",
+          "href": "href={actionUri}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_a_2\"",
+          "href": "href={actionUri}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={actionUri}",
+          "id": "Info_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={actionUri}",
+          "id": "Info_Link_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_p_4",
+      "Info_Typography_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_p_4\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_p_4\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "Info_Typography_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "Info_Typography_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "Info_a_3",
+      "Info_Link_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "a",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"Info_a_3\"",
+          "href": "href={client.baseUrl}"
+        }
+      },
+      {
+        "tag": "a",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"Info_a_3\"",
+          "href": "href={client.baseUrl}"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "href": "href={client.baseUrl}",
+          "id": "Info_Link_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Link",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "href": "href={client.baseUrl}",
+          "id": "Info_Link_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

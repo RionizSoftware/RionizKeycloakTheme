@@ -1,0 +1,640 @@
+[
+  {
+    "tags": [
+      "LoginResetOtp_Template_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "Template",
+        "currentIndex": "0",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_Template_1\"",
+          "kcContext": "kcContext={kcContext}",
+          "i18n": "i18n={i18n}",
+          "doUseDefaultCss": "doUseDefaultCss={doUseDefaultCss}",
+          "classes": "classes={classes}",
+          "displayMessage": "displayMessage={!messagesPerField.existsError(\"totp\")}",
+          "headerNode": "headerNode={msg(\"doLogIn\")}"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-otp-reset-form",
+      "LoginResetOtp_Box_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "form",
+        "currentIndex": "1",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-otp-reset-form\"",
+          "className": "className={kcClsx(\"kcFormClass\")}",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-otp-reset-form\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\""
+        }
+      },
+      {
+        "tag": "form",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-otp-reset-form\"",
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "form"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginResetOtp_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "action": "action={url.loginAction}",
+          "method": "method=\"post\"",
+          "component": "component=\"form\"",
+          "id": "LoginResetOtp_Box_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_div_1",
+      "LoginResetOtp_Box_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "2",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_1\"",
+          "className": "className={kcClsx(\"kcInputWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_1\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_1\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginResetOtp_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginResetOtp_Box_2",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_div_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "3",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_2\"",
+          "className": "className={kcClsx(\"kcInfoAreaWrapperClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_2\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-otp-reset-form-description",
+      "LoginResetOtp_Typography_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "p",
+        "currentIndex": "4",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-otp-reset-form-description\""
+        }
+      },
+      {
+        "tag": "p",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-otp-reset-form-description\""
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginResetOtp_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Typography",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginResetOtp_Typography_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_Fragment_1",
+      "LoginResetOtp_Box_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "Fragment",
+        "currentIndex": "5",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_Fragment_1\"",
+          "key": "key={otpCredential.id}"
+        }
+      },
+      {
+        "tag": "Fragment",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginResetOtp_Fragment_1\"",
+          "key": "key={otpCredential.id}"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "key": "key={otpCredential.id}",
+          "id": "LoginResetOtp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "key": "key={otpCredential.id}",
+          "id": "LoginResetOtp_Box_3",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "{`kc-otp-credential-${index}`}",
+      "LoginResetOtp_Radio_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "6",
+        "operation": "Loaded",
+        "props": {
+          "id": "id={`kc-otp-credential-${index}`}",
+          "className": "className={kcClsx(\"kcLoginOTPListInputClass\")}",
+          "type": "type=\"radio\"",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === configuredOtpCredentials.selectedCredentialId}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id={`kc-otp-credential-${index}`}",
+          "type": "type=\"radio\"",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === configuredOtpCredentials.selectedCredentialId}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id={`kc-otp-credential-${index}`}",
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === configuredOtpCredentials.selectedCredentialId}"
+        }
+      },
+      {
+        "tag": "Radio",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === configuredOtpCredentials.selectedCredentialId}",
+          "id": "LoginResetOtp_Radio_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Radio",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "name": "name=\"selectedCredentialId\"",
+          "value": "value={otpCredential.id}",
+          "defaultChecked": "defaultChecked={otpCredential.id === configuredOtpCredentials.selectedCredentialId}",
+          "id": "LoginResetOtp_Radio_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_label_1",
+      "LoginResetOtp_FormLabel_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "label",
+        "currentIndex": "7",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_label_1\"",
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "className": "className={kcClsx(\"kcLoginOTPListClass\")}",
+          "tabIndex": "tabIndex={index}"
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_label_1\"",
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}"
+        }
+      },
+      {
+        "tag": "label",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginResetOtp_label_1\"",
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}",
+          "id": "LoginResetOtp_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "FormLabel",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "htmlFor": "htmlFor={`kc-otp-credential-${index}`}",
+          "tabIndex": "tabIndex={index}",
+          "id": "LoginResetOtp_FormLabel_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_span_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "8",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_1\"",
+          "className": "className={kcClsx(\"kcLoginOTPListItemHeaderClass\")}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_1\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_span_2"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "9",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_2\"",
+          "className": "className={kcClsx(\"kcLoginOTPListItemIconBodyClass\")}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_2\""
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_2\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_i_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "i",
+        "currentIndex": "10",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_i_1\"",
+          "className": "className={kcClsx(\"kcLoginOTPListItemIconClass\")}",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      },
+      {
+        "tag": "i",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_i_1\"",
+          "aria-hidden": "aria-hidden=\"true\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_span_3"
+    ],
+    "historyStates": [
+      {
+        "tag": "span",
+        "currentIndex": "11",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_3\"",
+          "className": "className={kcClsx(\"kcLoginOTPListItemTitleClass\")}"
+        }
+      },
+      {
+        "tag": "span",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_span_3\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "LoginResetOtp_div_3",
+      "LoginResetOtp_Box_4"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "12",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_3\"",
+          "className": "className={kcClsx(\"kcFormGroupClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_3\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"LoginResetOtp_div_3\""
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "id": "LoginResetOtp_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Box",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "id": "LoginResetOtp_Box_4",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-form-buttons"
+    ],
+    "historyStates": [
+      {
+        "tag": "div",
+        "currentIndex": "13",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-form-buttons\"",
+          "className": "className={kcClsx(\"kcFormButtonsClass\")}"
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-form-buttons\""
+        }
+      },
+      {
+        "tag": "div",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "OptimizeAndRemoved",
+        "props": {
+          "id": "id=\"kc-form-buttons\""
+        }
+      }
+    ]
+  },
+  {
+    "tags": [
+      "kc-otp-reset-form-submit",
+      "LoginResetOtp_Button_1"
+    ],
+    "historyStates": [
+      {
+        "tag": "input",
+        "currentIndex": "14",
+        "operation": "Loaded",
+        "props": {
+          "id": "id=\"kc-otp-reset-form-submit\"",
+          "className": "className={kcClsx(\"kcButtonClass\", \"kcButtonPrimaryClass\", \"kcButtonBlockClass\", \"kcButtonLargeClass\")}",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "StyleRemoved",
+        "props": {
+          "id": "id=\"kc-otp-reset-form-submit\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}"
+        }
+      },
+      {
+        "tag": "input",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "TagReplaced",
+        "props": {
+          "id": "id=\"kc-otp-reset-form-submit\"",
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "fullWidth": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "IdChanged",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginResetOtp_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      },
+      {
+        "tag": "Button",
+        "currentIndex": "NOT_CHANGED",
+        "operation": "SxAdded",
+        "props": {
+          "type": "type=\"submit\"",
+          "value": "value={msgStr(\"doSubmit\")}",
+          "fullWidth": "fullWidth={true}",
+          "id": "LoginResetOtp_Button_1",
+          "sx": "SX_STYLE_NOT_FETCHED"
+        }
+      }
+    ]
+  }
+]

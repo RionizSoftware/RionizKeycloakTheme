@@ -5,6 +5,7 @@ import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import { PasswordWrapper } from "./PasswordWrapper";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginPassword.ts";
 export default function LoginPassword(
@@ -28,6 +29,7 @@ export default function LoginPassword(
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
     return (
         <Template
+            id="LoginPassword_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -72,7 +74,7 @@ export default function LoginPassword(
                                 id="input-error-password"
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
-                                    __html: messagesPerField.get("password")
+                                    __html: kcSanitize(messagesPerField.get("password"))
                                 }}
                             />
                         )}
