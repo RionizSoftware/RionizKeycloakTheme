@@ -44,7 +44,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const handleMenuOpen = (event: { currentTarget: SetStateAction<null> }) => {
+    const handleMenuOpen = event => {
         setAnchorEl(event.currentTarget);
     };
 
@@ -67,8 +67,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             <header id="Template_header_1">
                 {realm.internationalizationEnabled && (assert(locale !== undefined), locale.supported.length > 1) && (
                     <Box id="Template_Box_2" sx={styles.Template_Box_2}>
-                        <Button id="kc-current-locale-link" onClick={handleMenuOpen}>
-                            {labelBySupportedLanguageTag[currentLanguageTag]}
+                        <Button variant="text" id="kc-current-locale-link" onClick={handleMenuOpen}>
+                            {"Language"}
                         </Button>
                         <Menu
                             id="Template_Button_1"

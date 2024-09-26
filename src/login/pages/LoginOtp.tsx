@@ -3,18 +3,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginOtp.ts";
 export default function LoginOtp(
     props: PageProps<
@@ -36,7 +25,6 @@ export default function LoginOtp(
     const { msg, msgStr } = i18n;
     return (
         <Template
-            id="LoginOtp_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -44,28 +32,15 @@ export default function LoginOtp(
             displayMessage={!messagesPerField.existsError("totp")}
             headerNode={msg("doLogIn")}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="LoginOtp_Box_1"
-                sx={styles.LoginOtp_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="LoginOtp_Box_1" sx={styles.LoginOtp_Box_1}>
                 {otpLogin.userOtpCredentials.length > 1 && (
                     <Box id="LoginOtp_Box_2" sx={styles.LoginOtp_Box_2}>
                         {otpLogin.userOtpCredentials.map((otpCredential, index) => (
-                            <Box
-                                key={index}
-                                id="LoginOtp_Box_3"
-                                sx={styles.LoginOtp_Box_3}
-                            >
+                            <Box key={index} id="LoginOtp_Box_3" sx={styles.LoginOtp_Box_3}>
                                 <Radio
-                                    type="radio"
                                     name="selectedCredentialId"
                                     value={otpCredential.id}
-                                    defaultChecked={
-                                        otpCredential.id === otpLogin.selectedCredentialId
-                                    }
+                                    defaultChecked={otpCredential.id === otpLogin.selectedCredentialId}
                                     id="LoginOtp_Radio_1"
                                     sx={styles.LoginOtp_Radio_1}
                                 />
@@ -78,9 +53,7 @@ export default function LoginOtp(
                                     <span id="LoginOtp_span_1">
                                         <i id="LoginOtp_i_1" aria-hidden="true"></i>
 
-                                        <span id="LoginOtp_span_3">
-                                            {otpCredential.userLabel}
-                                        </span>
+                                        <span id="LoginOtp_span_3">{otpCredential.userLabel}</span>
                                     </span>
                                 </FormLabel>
                             </Box>
@@ -89,11 +62,7 @@ export default function LoginOtp(
                 )}
 
                 <Box id="LoginOtp_Box_4" sx={styles.LoginOtp_Box_4}>
-                    <FormLabel
-                        htmlFor="otp"
-                        id="LoginOtp_FormLabel_2"
-                        sx={styles.LoginOtp_FormLabel_2}
-                    >
+                    <FormLabel htmlFor="otp" id="LoginOtp_FormLabel_2" sx={styles.LoginOtp_FormLabel_2}>
                         {msg("loginOtpOneTime")}
                     </FormLabel>
 

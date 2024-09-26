@@ -1,18 +1,7 @@
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginPageExpired.ts";
 export default function LoginPageExpired(
     props: PageProps<
@@ -29,33 +18,15 @@ export default function LoginPageExpired(
     const { url } = kcContext;
     const { msg } = i18n;
     return (
-        <Template
-            id="LoginPageExpired_Template_1"
-            kcContext={kcContext}
-            i18n={i18n}
-            doUseDefaultCss={doUseDefaultCss}
-            classes={classes}
-            headerNode={msg("pageExpiredTitle")}
-        >
-            <Typography
-                id="LoginPageExpired_Typography_1"
-                sx={styles.LoginPageExpired_Typography_1}
-            >
+        <Template kcContext={kcContext} i18n={i18n} doUseDefaultCss={doUseDefaultCss} classes={classes} headerNode={msg("pageExpiredTitle")}>
+            <Typography id="LoginPageExpired_Typography_1" sx={styles.LoginPageExpired_Typography_1}>
                 {msg("pageExpiredMsg1")}
-                <Link
-                    href={url.loginRestartFlowUrl}
-                    id="LoginPageExpired_Link_1"
-                    sx={styles.LoginPageExpired_Link_1}
-                >
+                <Link href={url.loginRestartFlowUrl} id="LoginPageExpired_Link_1" sx={styles.LoginPageExpired_Link_1}>
                     {msg("doClickHere")}
                 </Link>{" "}
                 .<br id="LoginPageExpired_br_1" />
                 {msg("pageExpiredMsg2")}{" "}
-                <Link
-                    href={url.loginAction}
-                    id="LoginPageExpired_Link_2"
-                    sx={styles.LoginPageExpired_Link_2}
-                >
+                <Link href={url.loginAction} id="LoginPageExpired_Link_2" sx={styles.LoginPageExpired_Link_2}>
                     {msg("doClickHere")}
                 </Link>{" "}
                 .

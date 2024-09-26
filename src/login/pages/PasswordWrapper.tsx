@@ -7,7 +7,7 @@ import { styles } from "../styles/pages/PasswordWrapper.ts";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 //Add Changed completely
-export function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
+export function PasswordWrapper(props: { id: string; kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
     const { kcClsx, i18n, passwordInputId, children } = props;
     const { msgStr } = i18n;
     const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer((isPasswordRevealed: boolean) => !isPasswordRevealed, false);

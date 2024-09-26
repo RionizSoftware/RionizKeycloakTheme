@@ -3,18 +3,7 @@ import { useScript } from "rionizkeycloakify/login/pages/WebauthnRegister.useScr
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/WebauthnRegister.ts";
 export default function WebauthnRegister(
     props: PageProps<
@@ -39,44 +28,21 @@ export default function WebauthnRegister(
     });
     return (
         <Template
-            id="WebauthnRegister_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
             headerNode={<>{msg("webauthn-registration-title")}</>}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="WebauthnRegister_Box_1"
-                sx={styles.WebauthnRegister_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="WebauthnRegister_Box_1" sx={styles.WebauthnRegister_Box_1}>
                 <Box id="WebauthnRegister_Box_2" sx={styles.WebauthnRegister_Box_2}>
                     <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
-                    <input
-                        type="hidden"
-                        id="attestationObject"
-                        name="attestationObject"
-                    />
-                    <input
-                        type="hidden"
-                        id="publicKeyCredentialId"
-                        name="publicKeyCredentialId"
-                    />
-                    <input
-                        type="hidden"
-                        id="authenticatorLabel"
-                        name="authenticatorLabel"
-                    />
+                    <input type="hidden" id="attestationObject" name="attestationObject" />
+                    <input type="hidden" id="publicKeyCredentialId" name="publicKeyCredentialId" />
+                    <input type="hidden" id="authenticatorLabel" name="authenticatorLabel" />
                     <input type="hidden" id="transports" name="transports" />
                     <input type="hidden" id="error" name="error" />
-                    <LogoutOtherSessions
-                        id="WebauthnRegister_LogoutOtherSessions_1"
-                        kcClsx={kcClsx}
-                        i18n={i18n}
-                    />
+                    <LogoutOtherSessions id="WebauthnRegister_LogoutOtherSessions_1" kcClsx={kcClsx} i18n={i18n} />
                 </Box>
             </Box>
             <Button
@@ -88,20 +54,8 @@ export default function WebauthnRegister(
             />
 
             {!isSetRetry && isAppInitiatedAction && (
-                <Box
-                    action={url.loginAction}
-                    method="post"
-                    component="form"
-                    id="WebauthnRegister_Box_3"
-                    sx={styles.WebauthnRegister_Box_3}
-                >
-                    <Button
-                        type="submit"
-                        name="cancel-aia"
-                        value="true"
-                        id="WebauthnRegister_Button_2"
-                        sx={styles.WebauthnRegister_Button_2}
-                    >
+                <Box action={url.loginAction} method="post" component="form" id="WebauthnRegister_Box_3" sx={styles.WebauthnRegister_Box_3}>
+                    <Button type="submit" name="cancel-aia" value="true" id="WebauthnRegister_Button_2" sx={styles.WebauthnRegister_Button_2}>
                         {msg("doCancel")}
                     </Button>
                 </Box>
@@ -109,17 +63,13 @@ export default function WebauthnRegister(
         </Template>
     );
 }
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
+function LogoutOtherSessions(props: { id: string; kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
         <Box id="WebauthnRegister_Box_4" sx={styles.WebauthnRegister_Box_4}>
-            <FormLabel
-                id="WebauthnRegister_FormLabel_1"
-                sx={styles.WebauthnRegister_FormLabel_1}
-            >
+            <FormLabel id="WebauthnRegister_FormLabel_1" sx={styles.WebauthnRegister_FormLabel_1}>
                 <Checkbox
-                    type="checkbox"
                     name="logout-sessions"
                     value="on"
                     defaultChecked={true}

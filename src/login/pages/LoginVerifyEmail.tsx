@@ -1,18 +1,7 @@
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginVerifyEmail.ts";
 export default function LoginVerifyEmail(
     props: PageProps<
@@ -30,7 +19,6 @@ export default function LoginVerifyEmail(
     const { url, user } = kcContext;
     return (
         <Template
-            id="LoginVerifyEmail_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -38,17 +26,10 @@ export default function LoginVerifyEmail(
             displayInfo
             headerNode={msg("emailVerifyTitle")}
             infoNode={
-                <Typography
-                    id="LoginVerifyEmail_Typography_1"
-                    sx={styles.LoginVerifyEmail_Typography_1}
-                >
+                <Typography id="LoginVerifyEmail_Typography_1" sx={styles.LoginVerifyEmail_Typography_1}>
                     {msg("emailVerifyInstruction2")}
                     <br id="LoginVerifyEmail_br_1" />
-                    <Link
-                        href={url.loginAction}
-                        id="LoginVerifyEmail_Link_1"
-                        sx={styles.LoginVerifyEmail_Link_1}
-                    >
+                    <Link href={url.loginAction} id="LoginVerifyEmail_Link_1" sx={styles.LoginVerifyEmail_Link_1}>
                         {msg("doClickHere")}
                     </Link>
                     &nbsp;
@@ -56,10 +37,7 @@ export default function LoginVerifyEmail(
                 </Typography>
             }
         >
-            <Typography
-                id="LoginVerifyEmail_Typography_2"
-                sx={styles.LoginVerifyEmail_Typography_2}
-            >
+            <Typography id="LoginVerifyEmail_Typography_2" sx={styles.LoginVerifyEmail_Typography_2}>
                 {msg("emailVerifyInstruction1", user?.email ?? "")}
             </Typography>
         </Template>

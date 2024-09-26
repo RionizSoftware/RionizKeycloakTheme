@@ -2,18 +2,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginOauth2DeviceVerifyUserCode.ts";
 export default function LoginOauth2DeviceVerifyUserCode(
     props: PageProps<
@@ -35,7 +24,6 @@ export default function LoginOauth2DeviceVerifyUserCode(
     });
     return (
         <Template
-            id="LoginOauth2DeviceVerifyUserCode_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -49,10 +37,7 @@ export default function LoginOauth2DeviceVerifyUserCode(
                 id="LoginOauth2DeviceVerifyUserCode_Box_1"
                 sx={styles.LoginOauth2DeviceVerifyUserCode_Box_1}
             >
-                <Box
-                    id="LoginOauth2DeviceVerifyUserCode_Box_2"
-                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_2}
-                >
+                <Box id="LoginOauth2DeviceVerifyUserCode_Box_2" sx={styles.LoginOauth2DeviceVerifyUserCode_Box_2}>
                     <FormLabel
                         htmlFor="device-user-code"
                         id="LoginOauth2DeviceVerifyUserCode_FormLabel_1"
@@ -61,10 +46,7 @@ export default function LoginOauth2DeviceVerifyUserCode(
                         {msg("verifyOAuth2DeviceUserCode")}
                     </FormLabel>
 
-                    <Box
-                        id="LoginOauth2DeviceVerifyUserCode_Box_3"
-                        sx={styles.LoginOauth2DeviceVerifyUserCode_Box_3}
-                    >
+                    <Box id="LoginOauth2DeviceVerifyUserCode_Box_3" sx={styles.LoginOauth2DeviceVerifyUserCode_Box_3}>
                         <TextField
                             name="device_user_code"
                             autoComplete="off"
@@ -77,10 +59,7 @@ export default function LoginOauth2DeviceVerifyUserCode(
                     </Box>
                 </Box>
 
-                <Box
-                    id="LoginOauth2DeviceVerifyUserCode_Box_4"
-                    sx={styles.LoginOauth2DeviceVerifyUserCode_Box_4}
-                >
+                <Box id="LoginOauth2DeviceVerifyUserCode_Box_4" sx={styles.LoginOauth2DeviceVerifyUserCode_Box_4}>
                     <Button
                         type="submit"
                         value={msgStr("doSubmit")}

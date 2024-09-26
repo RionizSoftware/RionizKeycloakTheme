@@ -2,18 +2,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginOauthGrant.ts";
 export default function LoginOauthGrant(
     props: PageProps<
@@ -35,7 +24,6 @@ export default function LoginOauthGrant(
     });
     return (
         <Template
-            id="LoginOauthGrant_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -43,16 +31,9 @@ export default function LoginOauthGrant(
             bodyClassName="oauth"
             headerNode={
                 <>
-                    {client.attributes.logoUri && (
-                        <img id="LoginOauthGrant_img_1" src={client.attributes.logoUri} />
-                    )}
-                    <Typography
-                        id="LoginOauthGrant_Typography_1"
-                        sx={styles.LoginOauthGrant_Typography_1}
-                    >
-                        {client.name
-                            ? msg("oauthGrantTitle", advancedMsgStr(client.name))
-                            : msg("oauthGrantTitle", client.clientId)}
+                    {client.attributes.logoUri && <img id="LoginOauthGrant_img_1" src={client.attributes.logoUri} />}
+                    <Typography id="LoginOauthGrant_Typography_1" sx={styles.LoginOauthGrant_Typography_1}>
+                        {client.name ? msg("oauthGrantTitle", advancedMsgStr(client.name)) : msg("oauthGrantTitle", client.clientId)}
                     </Typography>
                 </>
             }
@@ -61,19 +42,12 @@ export default function LoginOauthGrant(
                 <h3 id="LoginOauthGrant_h3_1">{msg("oauthGrantRequest")}</h3>
                 <List id="LoginOauthGrant_List_1" sx={styles.LoginOauthGrant_List_1}>
                     {oauth.clientScopesRequested.map(clientScope => (
-                        <ListItem
-                            key={clientScope.consentScreenText}
-                            id="LoginOauthGrant_ListItem_1"
-                            sx={styles.LoginOauthGrant_ListItem_1}
-                        >
+                        <ListItem key={clientScope.consentScreenText} id="LoginOauthGrant_ListItem_1" sx={styles.LoginOauthGrant_ListItem_1}>
                             <span id="LoginOauthGrant_span_1">
                                 {advancedMsg(clientScope.consentScreenText)}
                                 {clientScope.dynamicScopeParameter && (
                                     <>
-                                        :{" "}
-                                        <b id="LoginOauthGrant_b_1">
-                                            {clientScope.dynamicScopeParameter}
-                                        </b>
+                                        : <b id="LoginOauthGrant_b_1">{clientScope.dynamicScopeParameter}</b>
                                     </>
                                 )}
                             </span>
@@ -84,12 +58,7 @@ export default function LoginOauthGrant(
                 {client.attributes.policyUri ||
                     (client.attributes.tosUri && (
                         <h3 id="LoginOauthGrant_h3_2">
-                            {client.name
-                                ? msg(
-                                      "oauthGrantInformation",
-                                      advancedMsgStr(client.name)
-                                  )
-                                : msg("oauthGrantInformation", client.clientId)}
+                            {client.name ? msg("oauthGrantInformation", advancedMsgStr(client.name)) : msg("oauthGrantInformation", client.clientId)}
                             {client.attributes.tosUri && (
                                 <>
                                     {msg("oauthGrantReview")}
@@ -119,19 +88,8 @@ export default function LoginOauthGrant(
                         </h3>
                     ))}
 
-                <Box
-                    action={url.oauthAction}
-                    method="POST"
-                    component="form"
-                    id="LoginOauthGrant_Box_2"
-                    sx={styles.LoginOauthGrant_Box_2}
-                >
-                    <input
-                        id="LoginOauthGrant_input_1"
-                        type="hidden"
-                        name="code"
-                        value={oauth.code}
-                    />
+                <Box action={url.oauthAction} method="POST" component="form" id="LoginOauthGrant_Box_2" sx={styles.LoginOauthGrant_Box_2}>
+                    <input id="LoginOauthGrant_input_1" type="hidden" name="code" value={oauth.code} />
                     <Box id="LoginOauthGrant_Box_3" sx={styles.LoginOauthGrant_Box_3}>
                         <Button
                             name="accept"

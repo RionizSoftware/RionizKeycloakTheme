@@ -5,18 +5,7 @@ import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserPro
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginUpdateProfile.ts";
 type LoginUpdateProfileProps = PageProps<
     Extract<
@@ -31,15 +20,7 @@ type LoginUpdateProfileProps = PageProps<
     doMakeUserConfirmPassword: boolean;
 };
 export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
-    const {
-        kcContext,
-        i18n,
-        doUseDefaultCss,
-        Template,
-        classes,
-        UserProfileFormFields,
-        doMakeUserConfirmPassword
-    } = props;
+    const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
         classes
@@ -49,7 +30,6 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
     return (
         <Template
-            id="LoginUpdateProfile_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -58,15 +38,8 @@ export default function LoginUpdateProfile(props: LoginUpdateProfileProps) {
             headerNode={msg("loginProfileTitle")}
             displayMessage={messagesPerField.exists("global")}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="LoginUpdateProfile_Box_1"
-                sx={styles.LoginUpdateProfile_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="LoginUpdateProfile_Box_1" sx={styles.LoginUpdateProfile_Box_1}>
                 <UserProfileFormFields
-                    id="LoginUpdateProfile_UserProfileFormFields_1"
                     kcContext={kcContext}
                     i18n={i18n}
                     kcClsx={kcClsx}

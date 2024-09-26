@@ -2,18 +2,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/SelectAuthenticator.ts";
 export default function SelectAuthenticator(
     props: PageProps<
@@ -32,7 +21,6 @@ export default function SelectAuthenticator(
     const { msg, advancedMsg } = i18n;
     return (
         <Template
-            id="SelectAuthenticator_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -40,13 +28,7 @@ export default function SelectAuthenticator(
             displayInfo={false}
             headerNode={msg("loginChooseAuthenticator")}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="SelectAuthenticator_Box_1"
-                sx={styles.SelectAuthenticator_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="SelectAuthenticator_Box_1" sx={styles.SelectAuthenticator_Box_1}>
                 <Box id="SelectAuthenticator_Box_2" sx={styles.SelectAuthenticator_Box_2}>
                     {auth.authenticationSelections.map((authenticationSelection, i) => (
                         <Button
@@ -57,24 +39,15 @@ export default function SelectAuthenticator(
                             id="SelectAuthenticator_Button_1"
                             sx={styles.SelectAuthenticator_Button_1}
                         >
-                            <Box
-                                id="SelectAuthenticator_Box_3"
-                                sx={styles.SelectAuthenticator_Box_3}
-                            >
+                            <Box id="SelectAuthenticator_Box_3" sx={styles.SelectAuthenticator_Box_3}>
                                 <i id="SelectAuthenticator_i_1" />
                             </Box>
-                            <Box
-                                id="SelectAuthenticator_Box_4"
-                                sx={styles.SelectAuthenticator_Box_4}
-                            >
+                            <Box id="SelectAuthenticator_Box_4" sx={styles.SelectAuthenticator_Box_4}>
                                 {advancedMsg(authenticationSelection.displayName)}
                                 {advancedMsg(authenticationSelection.helpText)}
                             </Box>
 
-                            <Box
-                                id="SelectAuthenticator_Box_5"
-                                sx={styles.SelectAuthenticator_Box_5}
-                            >
+                            <Box id="SelectAuthenticator_Box_5" sx={styles.SelectAuthenticator_Box_5}>
                                 <i id="SelectAuthenticator_i_2" />
                             </Box>
                         </Button>

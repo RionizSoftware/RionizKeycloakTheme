@@ -5,18 +5,7 @@ import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserProfileFormFieldsProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/IdpReviewUserProfile.ts";
 type IdpReviewUserProfileProps = PageProps<
     Extract<
@@ -31,15 +20,7 @@ type IdpReviewUserProfileProps = PageProps<
     doMakeUserConfirmPassword: boolean;
 };
 export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
-    const {
-        kcContext,
-        i18n,
-        doUseDefaultCss,
-        Template,
-        classes,
-        UserProfileFormFields,
-        doMakeUserConfirmPassword
-    } = props;
+    const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
         classes
@@ -49,7 +30,6 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
     const [isFomSubmittable, setIsFomSubmittable] = useState(false);
     return (
         <Template
-            id="IdpReviewUserProfile_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -58,25 +38,15 @@ export default function IdpReviewUserProfile(props: IdpReviewUserProfileProps) {
             displayRequiredFields
             headerNode={msg("loginIdpReviewProfileTitle")}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="IdpReviewUserProfile_Box_1"
-                sx={styles.IdpReviewUserProfile_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="IdpReviewUserProfile_Box_1" sx={styles.IdpReviewUserProfile_Box_1}>
                 <UserProfileFormFields
-                    id="IdpReviewUserProfile_UserProfileFormFields_1"
                     kcContext={kcContext}
                     i18n={i18n}
                     onIsFormSubmittableValueChange={setIsFomSubmittable}
                     kcClsx={kcClsx}
                     doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                 />
-                <Box
-                    id="IdpReviewUserProfile_Box_2"
-                    sx={styles.IdpReviewUserProfile_Box_2}
-                >
+                <Box id="IdpReviewUserProfile_Box_2" sx={styles.IdpReviewUserProfile_Box_2}>
                     <Button
                         type="submit"
                         value={msgStr("doSubmit")}

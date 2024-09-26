@@ -6,18 +6,7 @@ import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserPro
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/Register.ts";
 type RegisterProps = PageProps<
     Extract<
@@ -32,56 +21,28 @@ type RegisterProps = PageProps<
     doMakeUserConfirmPassword: boolean;
 };
 export default function Register(props: RegisterProps) {
-    const {
-        kcContext,
-        i18n,
-        doUseDefaultCss,
-        Template,
-        classes,
-        UserProfileFormFields,
-        doMakeUserConfirmPassword
-    } = props;
+    const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
         classes
     });
-    const {
-        messageHeader,
-        url,
-        messagesPerField,
-        recaptchaRequired,
-        recaptchaVisible,
-        recaptchaSiteKey,
-        recaptchaAction,
-        termsAcceptanceRequired
-    } = kcContext;
+    const { messageHeader, url, messagesPerField, recaptchaRequired, recaptchaVisible, recaptchaSiteKey, recaptchaAction, termsAcceptanceRequired } =
+        kcContext;
     const { msg, msgStr, advancedMsg } = i18n;
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
     const [areTermsAccepted, setAreTermsAccepted] = useState(false);
     return (
         <Template
-            id="Register_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
-            headerNode={
-                messageHeader !== undefined
-                    ? advancedMsg(messageHeader)
-                    : msg("registerTitle")
-            }
+            headerNode={messageHeader !== undefined ? advancedMsg(messageHeader) : msg("registerTitle")}
             displayMessage={messagesPerField.exists("global")}
             displayRequiredFields
         >
-            <Box
-                action={url.registrationAction}
-                method="post"
-                component="form"
-                id="Register_Box_1"
-                sx={styles.Register_Box_1}
-            >
+            <Box action={url.registrationAction} method="post" component="form" id="Register_Box_1" sx={styles.Register_Box_1}>
                 <UserProfileFormFields
-                    id="Register_UserProfileFormFields_1"
                     kcContext={kcContext}
                     i18n={i18n}
                     kcClsx={kcClsx}
@@ -98,39 +59,28 @@ export default function Register(props: RegisterProps) {
                         onAreTermsAcceptedValueChange={setAreTermsAccepted}
                     />
                 )}
-                {recaptchaRequired &&
-                    (recaptchaVisible || recaptchaAction === undefined) && (
-                        <Box id="Register_Box_2" sx={styles.Register_Box_2}>
-                            <Box
-                                data-size="compact"
-                                data-sitekey={recaptchaSiteKey}
-                                data-action={recaptchaAction}
-                                id="Register_Box_3"
-                                sx={styles.Register_Box_3}
-                            ></Box>
-                        </Box>
-                    )}
+                {recaptchaRequired && (recaptchaVisible || recaptchaAction === undefined) && (
+                    <Box id="Register_Box_2" sx={styles.Register_Box_2}>
+                        <Box
+                            data-size="compact"
+                            data-sitekey={recaptchaSiteKey}
+                            data-action={recaptchaAction}
+                            id="Register_Box_3"
+                            sx={styles.Register_Box_3}
+                        ></Box>
+                    </Box>
+                )}
                 <Box id="Register_Box_4" sx={styles.Register_Box_4}>
-                    <Link
-                        href={url.loginUrl}
-                        id="Register_Link_1"
-                        sx={styles.Register_Link_1}
-                    >
+                    <Link href={url.loginUrl} id="Register_Link_1" sx={styles.Register_Link_1}>
                         {msg("backToLogin")}
                     </Link>
 
-                    {recaptchaRequired &&
-                    !recaptchaVisible &&
-                    recaptchaAction !== undefined ? (
+                    {recaptchaRequired && !recaptchaVisible && recaptchaAction !== undefined ? (
                         <Box id="Register_Box_5" sx={styles.Register_Box_5}>
                             <Button
                                 data-sitekey={recaptchaSiteKey}
                                 data-callback={() => {
-                                    (
-                                        document.getElementById(
-                                            "kc-register-form"
-                                        ) as HTMLFormElement
-                                    ).submit();
+                                    (document.getElementById("kc-register-form") as HTMLFormElement).submit();
                                 }}
                                 data-action={recaptchaAction}
                                 type="submit"
@@ -143,10 +93,7 @@ export default function Register(props: RegisterProps) {
                     ) : (
                         <Box id="Register_Box_6" sx={styles.Register_Box_6}>
                             <Button
-                                disabled={
-                                    !isFormSubmittable ||
-                                    (termsAcceptanceRequired && !areTermsAccepted)
-                                }
+                                disabled={!isFormSubmittable || (termsAcceptanceRequired && !areTermsAccepted)}
                                 type="submit"
                                 value={msgStr("doRegister")}
                                 fullWidth={true}
@@ -166,14 +113,9 @@ function TermsAcceptance(props: {
     messagesPerField: Pick<KcContext["messagesPerField"], "existsError" | "get">;
     areTermsAccepted: boolean;
     onAreTermsAcceptedValueChange: (areTermsAccepted: boolean) => void;
+    id: string;
 }) {
-    const {
-        i18n,
-        kcClsx,
-        messagesPerField,
-        areTermsAccepted,
-        onAreTermsAcceptedValueChange
-    } = props;
+    const { i18n, kcClsx, messagesPerField, areTermsAccepted, onAreTermsAcceptedValueChange } = props;
     const { msg } = i18n;
     return (
         <>
@@ -183,7 +125,6 @@ function TermsAcceptance(props: {
             </Box>
             <Box id="Register_Box_8" sx={styles.Register_Box_8}>
                 <Checkbox
-                    type="checkbox"
                     name="termsAccepted"
                     checked={areTermsAccepted}
                     onChange={e => onAreTermsAcceptedValueChange(e.target.checked)}
@@ -191,11 +132,7 @@ function TermsAcceptance(props: {
                     id="Register_Checkbox_1"
                     sx={styles.Register_Checkbox_1}
                 />
-                <FormLabel
-                    htmlFor="termsAccepted"
-                    id="Register_FormLabel_1"
-                    sx={styles.Register_FormLabel_1}
-                >
+                <FormLabel htmlFor="termsAccepted" id="Register_FormLabel_1" sx={styles.Register_FormLabel_1}>
                     {msg("acceptTerms")}
                 </FormLabel>
 

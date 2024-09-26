@@ -1,18 +1,7 @@
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/Info.ts";
 export default function Info(
     props: PageProps<
@@ -27,18 +16,9 @@ export default function Info(
 ) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
     const { advancedMsgStr, msg } = i18n;
-    const {
-        messageHeader,
-        message,
-        requiredActions,
-        skipLink,
-        pageRedirectUri,
-        actionUri,
-        client
-    } = kcContext;
+    const { messageHeader, message, requiredActions, skipLink, pageRedirectUri, actionUri, client } = kcContext;
     return (
         <Template
-            id="Info_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -60,11 +40,7 @@ export default function Info(
                             let html = message.summary;
                             if (requiredActions) {
                                 html += "<b>";
-                                html += requiredActions
-                                    .map(requiredAction =>
-                                        advancedMsgStr(`requiredAction.${requiredAction}`)
-                                    )
-                                    .join(", ");
+                                html += requiredActions.map(requiredAction => advancedMsgStr(`requiredAction.${requiredAction}`)).join(", ");
                                 html += "</b>";
                             }
                             return html;
@@ -79,15 +55,8 @@ export default function Info(
                     }
                     if (pageRedirectUri) {
                         return (
-                            <Typography
-                                id="Info_Typography_2"
-                                sx={styles.Info_Typography_2}
-                            >
-                                <Link
-                                    href={pageRedirectUri}
-                                    id="Info_Link_1"
-                                    sx={styles.Info_Link_1}
-                                >
+                            <Typography id="Info_Typography_2" sx={styles.Info_Typography_2}>
+                                <Link href={pageRedirectUri} id="Info_Link_1" sx={styles.Info_Link_1}>
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>
@@ -95,15 +64,8 @@ export default function Info(
                     }
                     if (actionUri) {
                         return (
-                            <Typography
-                                id="Info_Typography_3"
-                                sx={styles.Info_Typography_3}
-                            >
-                                <Link
-                                    href={actionUri}
-                                    id="Info_Link_2"
-                                    sx={styles.Info_Link_2}
-                                >
+                            <Typography id="Info_Typography_3" sx={styles.Info_Typography_3}>
+                                <Link href={actionUri} id="Info_Link_2" sx={styles.Info_Link_2}>
                                     {msg("proceedWithAction")}
                                 </Link>
                             </Typography>
@@ -111,15 +73,8 @@ export default function Info(
                     }
                     if (client.baseUrl) {
                         return (
-                            <Typography
-                                id="Info_Typography_4"
-                                sx={styles.Info_Typography_4}
-                            >
-                                <Link
-                                    href={client.baseUrl}
-                                    id="Info_Link_3"
-                                    sx={styles.Info_Link_3}
-                                >
+                            <Typography id="Info_Typography_4" sx={styles.Info_Typography_4}>
+                                <Link href={client.baseUrl} id="Info_Link_3" sx={styles.Info_Link_3}>
                                     {msg("backToApplication")}
                                 </Link>
                             </Typography>

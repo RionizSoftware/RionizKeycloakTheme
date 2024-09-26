@@ -2,18 +2,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/Code.ts";
 export default function Code(
     props: PageProps<
@@ -35,14 +24,11 @@ export default function Code(
     const { msg } = i18n;
     return (
         <Template
-            id="Code_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
             classes={classes}
-            headerNode={
-                code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)
-            }
+            headerNode={code.success ? msg("codeSuccessTitle") : msg("codeErrorTitle", code.error)}
         >
             <Box id="Code_Box_1" sx={styles.Code_Box_1}>
                 {code.success ? (
@@ -50,11 +36,7 @@ export default function Code(
                         <Typography id="Code_Typography_1" sx={styles.Code_Typography_1}>
                             {msg("copyCodeInstruction")}
                         </Typography>
-                        <TextField
-                            defaultValue={code.code}
-                            id="Code_TextField_1"
-                            sx={styles.Code_TextField_1}
-                        />
+                        <TextField defaultValue={code.code} id="Code_TextField_1" sx={styles.Code_TextField_1} />
                     </>
                 ) : (
                     <Typography id="Code_Typography_2" sx={styles.Code_Typography_2}>

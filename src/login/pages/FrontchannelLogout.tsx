@@ -2,18 +2,7 @@ import { useEffect } from "react";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/FrontchannelLogout.ts";
 export default function FrontchannelLogout(
     props: PageProps<
@@ -36,7 +25,6 @@ export default function FrontchannelLogout(
     }, []);
     return (
         <Template
-            id="FrontchannelLogout_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -44,34 +32,19 @@ export default function FrontchannelLogout(
             documentTitle={msgStr("frontchannel-logout.title")}
             headerNode={msg("frontchannel-logout.title")}
         >
-            <Typography
-                id="FrontchannelLogout_Typography_1"
-                sx={styles.FrontchannelLogout_Typography_1}
-            >
+            <Typography id="FrontchannelLogout_Typography_1" sx={styles.FrontchannelLogout_Typography_1}>
                 {msg("frontchannel-logout.message")}
             </Typography>
             <List id="FrontchannelLogout_List_1" sx={styles.FrontchannelLogout_List_1}>
                 {logout.clients.map(client => (
-                    <ListItem
-                        key={client.name}
-                        id="FrontchannelLogout_ListItem_1"
-                        sx={styles.FrontchannelLogout_ListItem_1}
-                    >
+                    <ListItem key={client.name} id="FrontchannelLogout_ListItem_1" sx={styles.FrontchannelLogout_ListItem_1}>
                         {client.name}
-                        <iframe
-                            id="FrontchannelLogout_iframe_1"
-                            src={client.frontChannelLogoutUrl}
-                            style={{ display: "none" }}
-                        />
+                        <iframe id="FrontchannelLogout_iframe_1" src={client.frontChannelLogoutUrl} style={{ display: "none" }} />
                     </ListItem>
                 ))}
             </List>
             {logout.logoutRedirectUri && (
-                <Link
-                    href={logout.logoutRedirectUri}
-                    id="FrontchannelLogout_Link_1"
-                    sx={styles.FrontchannelLogout_Link_1}
-                >
+                <Link href={logout.logoutRedirectUri} id="FrontchannelLogout_Link_1" sx={styles.FrontchannelLogout_Link_1}>
                     {msg("doContinue")}
                 </Link>
             )}

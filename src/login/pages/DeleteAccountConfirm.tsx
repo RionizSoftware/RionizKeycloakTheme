@@ -2,18 +2,7 @@ import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/DeleteAccountConfirm.ts";
 export default function DeleteAccountConfirm(
     props: PageProps<
@@ -34,33 +23,13 @@ export default function DeleteAccountConfirm(
     const { url, triggered_from_aia } = kcContext;
     const { msg, msgStr } = i18n;
     return (
-        <Template
-            id="DeleteAccountConfirm_Template_1"
-            kcContext={kcContext}
-            i18n={i18n}
-            doUseDefaultCss={doUseDefaultCss}
-            classes={classes}
-            headerNode={msg("deleteAccountConfirm")}
-        >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="DeleteAccountConfirm_Box_1"
-                sx={styles.DeleteAccountConfirm_Box_1}
-            >
-                <Box
-                    style={{ marginTop: "0", marginBottom: "30px" }}
-                    id="DeleteAccountConfirm_Box_2"
-                    sx={styles.DeleteAccountConfirm_Box_2}
-                >
+        <Template kcContext={kcContext} i18n={i18n} doUseDefaultCss={doUseDefaultCss} classes={classes} headerNode={msg("deleteAccountConfirm")}>
+            <Box action={url.loginAction} method="post" component="form" id="DeleteAccountConfirm_Box_1" sx={styles.DeleteAccountConfirm_Box_1}>
+                <Box style={{ marginTop: "0", marginBottom: "30px" }} id="DeleteAccountConfirm_Box_2" sx={styles.DeleteAccountConfirm_Box_2}>
                     <span id="DeleteAccountConfirm_span_1"></span>
                     {msg("irreversibleAction")}
                 </Box>
-                <Typography
-                    id="DeleteAccountConfirm_Typography_1"
-                    sx={styles.DeleteAccountConfirm_Typography_1}
-                >
+                <Typography id="DeleteAccountConfirm_Typography_1" sx={styles.DeleteAccountConfirm_Typography_1}>
                     {msg("deletingImplies")}
                 </Typography>
                 <List
@@ -72,29 +41,17 @@ export default function DeleteAccountConfirm(
                     id="DeleteAccountConfirm_List_1"
                     sx={styles.DeleteAccountConfirm_List_1}
                 >
-                    <ListItem
-                        id="DeleteAccountConfirm_ListItem_1"
-                        sx={styles.DeleteAccountConfirm_ListItem_1}
-                    >
+                    <ListItem id="DeleteAccountConfirm_ListItem_1" sx={styles.DeleteAccountConfirm_ListItem_1}>
                         {msg("loggingOutImmediately")}
                     </ListItem>
-                    <ListItem
-                        id="DeleteAccountConfirm_ListItem_2"
-                        sx={styles.DeleteAccountConfirm_ListItem_2}
-                    >
+                    <ListItem id="DeleteAccountConfirm_ListItem_2" sx={styles.DeleteAccountConfirm_ListItem_2}>
                         {msg("errasingData")}
                     </ListItem>
                 </List>
-                <Typography
-                    id="DeleteAccountConfirm_Typography_2"
-                    sx={styles.DeleteAccountConfirm_Typography_2}
-                >
+                <Typography id="DeleteAccountConfirm_Typography_2" sx={styles.DeleteAccountConfirm_Typography_2}>
                     {msg("finalDeletionConfirmation")}
                 </Typography>
-                <Box
-                    id="DeleteAccountConfirm_Box_3"
-                    sx={styles.DeleteAccountConfirm_Box_3}
-                >
+                <Box id="DeleteAccountConfirm_Box_3" sx={styles.DeleteAccountConfirm_Box_3}>
                     <Button
                         type="submit"
                         value={msgStr("doConfirmDelete")}

@@ -5,18 +5,7 @@ import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import { PasswordWrapper } from "./PasswordWrapper";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/LoginPassword.ts";
 export default function LoginPassword(
     props: PageProps<
@@ -39,7 +28,6 @@ export default function LoginPassword(
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
     return (
         <Template
-            id="LoginPassword_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -61,30 +49,18 @@ export default function LoginPassword(
                 >
                     <Box id="LoginPassword_Box_3" sx={styles.LoginPassword_Box_3}>
                         <hr id="LoginPassword_hr_1" />
-                        <FormLabel
-                            htmlFor="password"
-                            id="LoginPassword_FormLabel_1"
-                            sx={styles.LoginPassword_FormLabel_1}
-                        >
+                        <FormLabel htmlFor="password" id="LoginPassword_FormLabel_1" sx={styles.LoginPassword_FormLabel_1}>
                             {msg("password")}
                         </FormLabel>
 
-                        <PasswordWrapper
-                            id="LoginPassword_PasswordWrapper_1"
-                            kcClsx={kcClsx}
-                            i18n={i18n}
-                            passwordInputId="password"
-                        >
+                        <PasswordWrapper id="LoginPassword_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
                             <TextField
                                 tabIndex={2}
                                 name="password"
                                 type="password"
                                 autoFocus
                                 autoComplete="on"
-                                aria-invalid={messagesPerField.existsError(
-                                    "username",
-                                    "password"
-                                )}
+                                aria-invalid={messagesPerField.existsError("username", "password")}
                                 fullWidth={true}
                                 id="LoginPassword_TextField_1"
                                 sx={styles.LoginPassword_TextField_1}
@@ -104,12 +80,7 @@ export default function LoginPassword(
                     <Box id="LoginPassword_Box_4" sx={styles.LoginPassword_Box_4}>
                         {realm.resetPasswordAllowed && (
                             <span id="LoginPassword_span_2">
-                                <Link
-                                    tabIndex={5}
-                                    href={url.loginResetCredentialsUrl}
-                                    id="LoginPassword_Link_1"
-                                    sx={styles.LoginPassword_Link_1}
-                                >
+                                <Link tabIndex={5} href={url.loginResetCredentialsUrl} id="LoginPassword_Link_1" sx={styles.LoginPassword_Link_1}>
                                     {msg("doForgotPassword")}
                                 </Link>
                             </span>

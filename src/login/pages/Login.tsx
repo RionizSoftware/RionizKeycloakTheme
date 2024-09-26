@@ -28,7 +28,6 @@ export default function Login(
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
     return (
         <Template
-            id="Login_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -162,7 +161,6 @@ export default function Login(
                                         <Checkbox
                                             tabIndex={5}
                                             name="rememberMe"
-                                            type="checkbox"
                                             defaultChecked={!!login.rememberMe}
                                             id="Login_Checkbox_1"
                                             sx={styles.Login_Checkbox_1}

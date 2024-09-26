@@ -5,18 +5,7 @@ import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserPro
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/UpdateEmail.ts";
 type UpdateEmailProps = PageProps<
     Extract<
@@ -31,15 +20,7 @@ type UpdateEmailProps = PageProps<
     doMakeUserConfirmPassword: boolean;
 };
 export default function UpdateEmail(props: UpdateEmailProps) {
-    const {
-        kcContext,
-        i18n,
-        doUseDefaultCss,
-        Template,
-        classes,
-        UserProfileFormFields,
-        doMakeUserConfirmPassword
-    } = props;
+    const { kcContext, i18n, doUseDefaultCss, Template, classes, UserProfileFormFields, doMakeUserConfirmPassword } = props;
     const { kcClsx } = getKcClsx({
         doUseDefaultCss,
         classes
@@ -49,7 +30,6 @@ export default function UpdateEmail(props: UpdateEmailProps) {
     const { url, messagesPerField, isAppInitiatedAction } = kcContext;
     return (
         <Template
-            id="UpdateEmail_Template_1"
             kcContext={kcContext}
             i18n={i18n}
             doUseDefaultCss={doUseDefaultCss}
@@ -58,15 +38,8 @@ export default function UpdateEmail(props: UpdateEmailProps) {
             displayRequiredFields
             headerNode={msg("updateEmailTitle")}
         >
-            <Box
-                action={url.loginAction}
-                method="post"
-                component="form"
-                id="UpdateEmail_Box_1"
-                sx={styles.UpdateEmail_Box_1}
-            >
+            <Box action={url.loginAction} method="post" component="form" id="UpdateEmail_Box_1" sx={styles.UpdateEmail_Box_1}>
                 <UserProfileFormFields
-                    id="UpdateEmail_UserProfileFormFields_1"
                     kcContext={kcContext}
                     i18n={i18n}
                     kcClsx={kcClsx}
@@ -75,11 +48,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                 />
 
                 <Box id="UpdateEmail_Box_2" sx={styles.UpdateEmail_Box_2}>
-                    <LogoutOtherSessions
-                        id="UpdateEmail_LogoutOtherSessions_1"
-                        kcClsx={kcClsx}
-                        i18n={i18n}
-                    />
+                    <LogoutOtherSessions id="UpdateEmail_LogoutOtherSessions_1" kcClsx={kcClsx} i18n={i18n} />
 
                     <Button
                         disabled={!isFormSubmittable}
@@ -90,13 +59,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
                         sx={styles.UpdateEmail_Button_1}
                     />
                     {isAppInitiatedAction && (
-                        <Button
-                            type="submit"
-                            name="cancel-aia"
-                            value="true"
-                            id="UpdateEmail_Button_2"
-                            sx={styles.UpdateEmail_Button_2}
-                        >
+                        <Button type="submit" name="cancel-aia" value="true" id="UpdateEmail_Button_2" sx={styles.UpdateEmail_Button_2}>
                             {msg("doCancel")}
                         </Button>
                     )}
@@ -105,20 +68,13 @@ export default function UpdateEmail(props: UpdateEmailProps) {
         </Template>
     );
 }
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
+function LogoutOtherSessions(props: { id: string; kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
     const { msg } = i18n;
     return (
         <Box id="UpdateEmail_Box_3" sx={styles.UpdateEmail_Box_3}>
             <FormLabel id="UpdateEmail_FormLabel_1" sx={styles.UpdateEmail_FormLabel_1}>
-                <Checkbox
-                    type="checkbox"
-                    name="logout-sessions"
-                    value="on"
-                    defaultChecked={true}
-                    id="UpdateEmail_Checkbox_1"
-                    sx={styles.UpdateEmail_Checkbox_1}
-                />
+                <Checkbox name="logout-sessions" value="on" defaultChecked={true} id="UpdateEmail_Checkbox_1" sx={styles.UpdateEmail_Checkbox_1} />
                 {msg("logoutOtherSessions")}
             </FormLabel>
         </Box>

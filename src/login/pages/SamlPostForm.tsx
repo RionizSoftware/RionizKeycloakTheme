@@ -2,18 +2,7 @@ import { useEffect, useState } from "react";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import {
-    Box,
-    Button,
-    Link,
-    TextField,
-    FormLabel,
-    Typography,
-    List,
-    ListItem,
-    Checkbox,
-    Radio
-} from "@mui/material";
+import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/SamlPostForm.ts";
 export default function SamlPostForm(
     props: PageProps<
@@ -42,18 +31,8 @@ export default function SamlPostForm(
         htmlFormElement.submit();
     }, [htmlFormElement]);
     return (
-        <Template
-            id="SamlPostForm_Template_1"
-            kcContext={kcContext}
-            i18n={i18n}
-            doUseDefaultCss={doUseDefaultCss}
-            classes={classes}
-            headerNode={msg("saml.post-form.title")}
-        >
-            <Typography
-                id="SamlPostForm_Typography_1"
-                sx={styles.SamlPostForm_Typography_1}
-            >
+        <Template kcContext={kcContext} i18n={i18n} doUseDefaultCss={doUseDefaultCss} classes={classes} headerNode={msg("saml.post-form.title")}>
+            <Typography id="SamlPostForm_Typography_1" sx={styles.SamlPostForm_Typography_1}>
                 {msg("saml.post-form.message")}
             </Typography>
             <Box
@@ -65,35 +44,11 @@ export default function SamlPostForm(
                 id="SamlPostForm_Box_1"
                 sx={styles.SamlPostForm_Box_1}
             >
-                {samlPost.SAMLRequest && (
-                    <input
-                        id="SamlPostForm_input_1"
-                        type="hidden"
-                        name="SAMLRequest"
-                        value={samlPost.SAMLRequest}
-                    />
-                )}
-                {samlPost.SAMLResponse && (
-                    <input
-                        id="SamlPostForm_input_2"
-                        type="hidden"
-                        name="SAMLResponse"
-                        value={samlPost.SAMLResponse}
-                    />
-                )}
-                {samlPost.relayState && (
-                    <input
-                        id="SamlPostForm_input_3"
-                        type="hidden"
-                        name="RelayState"
-                        value={samlPost.relayState}
-                    />
-                )}
+                {samlPost.SAMLRequest && <input id="SamlPostForm_input_1" type="hidden" name="SAMLRequest" value={samlPost.SAMLRequest} />}
+                {samlPost.SAMLResponse && <input id="SamlPostForm_input_2" type="hidden" name="SAMLResponse" value={samlPost.SAMLResponse} />}
+                {samlPost.relayState && <input id="SamlPostForm_input_3" type="hidden" name="RelayState" value={samlPost.relayState} />}
                 <noscript id="SamlPostForm_noscript_1">
-                    <Typography
-                        id="SamlPostForm_Typography_2"
-                        sx={styles.SamlPostForm_Typography_2}
-                    >
+                    <Typography id="SamlPostForm_Typography_2" sx={styles.SamlPostForm_Typography_2}>
                         {msg("saml.post-form.js-disabled")}
                     </Typography>
                     <Button
