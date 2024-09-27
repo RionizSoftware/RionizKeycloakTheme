@@ -4,11 +4,11 @@ export const styles = {
     LoginResetPassword_FormLabel_1: {},
     LoginResetPassword_Box_3: {},
     LoginResetPassword_TextField_1: {},
-    LoginResetPassword_Box_4: { mt: "10px" },
+    LoginResetPassword_Box_4: { mt: "15px" },
     LoginResetPassword_Link_1: {},
     LoginResetPassword_Box_5: {},
     LoginResetPassword_Button_1: {
-        mt: "15px",
+        mt: "20px",
         backgroundColor: "primary.main",
         color: "white", // Ensure text is visible on the background
         "&:hover": {

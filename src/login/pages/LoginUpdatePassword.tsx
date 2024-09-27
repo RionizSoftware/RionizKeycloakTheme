@@ -36,9 +36,9 @@ export default function LoginUpdatePassword(
         >
             <Box action={url.loginAction} method="post" component="form" id="LoginUpdatePassword_Box_1" sx={styles.LoginUpdatePassword_Box_1}>
                 <Box id="LoginUpdatePassword_Box_2" sx={styles.LoginUpdatePassword_Box_2}>
-                    <FormLabel htmlFor="password-new" id="LoginUpdatePassword_FormLabel_1" sx={styles.LoginUpdatePassword_FormLabel_1}>
-                        {msg("passwordNew")}
-                    </FormLabel>
+                    {/*<FormLabel htmlFor="password-new" id="LoginUpdatePassword_FormLabel_1" sx={styles.LoginUpdatePassword_FormLabel_1}>*/}
+                    {/*    {msg("passwordNew")}*/}
+                    {/*</FormLabel>*/}
 
                     <Box id="LoginUpdatePassword_Box_3" sx={styles.LoginUpdatePassword_Box_3}>
                         <PasswordWrapper
@@ -55,6 +55,7 @@ export default function LoginUpdatePassword(
                                 aria-invalid={messagesPerField.existsError("password", "password-confirm")}
                                 fullWidth={true}
                                 id="LoginUpdatePassword_TextField_1"
+                                label={msg("passwordNew")}
                                 sx={styles.LoginUpdatePassword_TextField_1}
                             />
                         </PasswordWrapper>
@@ -72,12 +73,17 @@ export default function LoginUpdatePassword(
                 </Box>
 
                 <Box id="LoginUpdatePassword_Box_4" sx={styles.LoginUpdatePassword_Box_4}>
-                    <FormLabel htmlFor="password-confirm" id="LoginUpdatePassword_FormLabel_2" sx={styles.LoginUpdatePassword_FormLabel_2}>
-                        {msg("passwordConfirm")}
-                    </FormLabel>
+                    {/*<FormLabel htmlFor="password-confirm" id="LoginUpdatePassword_FormLabel_2" sx={styles.LoginUpdatePassword_FormLabel_2}>*/}
+                    {/*    {msg("passwordConfirm")}*/}
+                    {/*</FormLabel>*/}
 
                     <Box id="LoginUpdatePassword_Box_5" sx={styles.LoginUpdatePassword_Box_5}>
-                        <PasswordWrapper id="LoginUpdatePassword_PasswordWrapper_2" kcClsx={kcClsx} i18n={i18n} passwordInputId="password-confirm">
+                        <PasswordWrapper
+                            id="LoginUpdatePassword_PasswordWrapper_2"
+                            kcClsx={kcClsx}
+                            i18n={i18n}
+                            passwordInputId="LoginUpdatePassword_TextField_2"
+                        >
                             <TextField
                                 type="password"
                                 name="password-confirm"
@@ -86,6 +92,7 @@ export default function LoginUpdatePassword(
                                 aria-invalid={messagesPerField.existsError("password", "password-confirm")}
                                 fullWidth={true}
                                 id="LoginUpdatePassword_TextField_2"
+                                label={msg("passwordConfirm")}
                                 sx={styles.LoginUpdatePassword_TextField_2}
                             />
                         </PasswordWrapper>

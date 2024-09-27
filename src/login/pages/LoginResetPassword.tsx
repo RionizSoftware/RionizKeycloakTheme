@@ -37,10 +37,6 @@ export default function LoginResetPassword(
         >
             <Box action={url.loginAction} method="post" component="form" id="LoginResetPassword_Box_1" sx={styles.LoginResetPassword_Box_1}>
                 <Box id="LoginResetPassword_Box_2" sx={styles.LoginResetPassword_Box_2}>
-                    <FormLabel htmlFor="username" id="LoginResetPassword_FormLabel_1" sx={styles.LoginResetPassword_FormLabel_1}>
-                        {!realm.loginWithEmailAllowed ? msg("username") : !realm.registrationEmailAsUsername ? msg("usernameOrEmail") : msg("email")}
-                    </FormLabel>
-
                     <Box id="LoginResetPassword_Box_3" sx={styles.LoginResetPassword_Box_3}>
                         <TextField
                             type="text"
@@ -50,6 +46,13 @@ export default function LoginResetPassword(
                             aria-invalid={messagesPerField.existsError("username")}
                             fullWidth={true}
                             id="LoginResetPassword_TextField_1"
+                            label={
+                                !realm.loginWithEmailAllowed
+                                    ? msg("username")
+                                    : !realm.registrationEmailAsUsername
+                                      ? msg("usernameOrEmail")
+                                      : msg("email")
+                            }
                             sx={styles.LoginResetPassword_TextField_1}
                         />
                         {messagesPerField.existsError("username") && (

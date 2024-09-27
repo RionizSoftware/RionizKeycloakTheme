@@ -6,9 +6,9 @@ export const styles = {
     LoginUpdatePassword_TextField_1: {},
     LoginUpdatePassword_Box_4: {},
     LoginUpdatePassword_FormLabel_2: {},
-    LoginUpdatePassword_Box_5: {},
+    LoginUpdatePassword_Box_5: { mt: "15px" },
     LoginUpdatePassword_TextField_2: {},
-    LoginUpdatePassword_Box_6: {},
+    LoginUpdatePassword_Box_6: { mt: "15px" },
     LoginUpdatePassword_Button_1: {
         mt: "15px",
         backgroundColor: "primary.main",
