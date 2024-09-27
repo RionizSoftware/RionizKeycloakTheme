@@ -264,7 +264,7 @@ function InputTag(
         <>
             <TextField
                 sx={styles.UserProfileFormFields_TextField_1}
-                label={attribute.name}
+                label={attribute.displayName}
                 type={type}
                 name={attribute.name}
                 value={(() => {
