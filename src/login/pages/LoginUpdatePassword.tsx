@@ -110,7 +110,9 @@ export default function LoginUpdatePassword(
                         fullWidth={true}
                         id="LoginUpdatePassword_Button_1"
                         sx={styles.LoginUpdatePassword_Button_1}
-                    />
+                    >
+                        {msgStr("doSubmit")}
+                    </Button>
                     {isAppInitiatedAction && (
                         <Button
                             type="submit"

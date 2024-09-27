@@ -61,7 +61,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
     return (
         <Box id="Template_Box_1" sx={styles.Template_Box_1}>
-            <Typography sx={styles.Template_Typography_Added_1}>{realm.displayNameHtml}</Typography>
+            <Typography sx={styles.Template_Typography_Added_1}>{realm.name}</Typography>
 
             <header id="Template_header_1">
                 {enabledLanguages.length > 1 && (
