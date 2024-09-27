@@ -59,16 +59,16 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
                             id="UserProfileFormFields_Box_2"
                             sx={styles.UserProfileFormFields_Box_2}
                         >
-                            <Box id="UserProfileFormFields_Box_3" sx={styles.UserProfileFormFields_Box_3}>
-                                <FormLabel
-                                    htmlFor={attribute.name}
-                                    id="UserProfileFormFields_FormLabel_1"
-                                    sx={styles.UserProfileFormFields_FormLabel_1}
-                                >
-                                    {advancedMsg(attribute.displayName ?? "")}
-                                </FormLabel>
-                                {attribute.required && <> *</>}
-                            </Box>
+                            {/*<Box id="UserProfileFormFields_Box_3" sx={styles.UserProfileFormFields_Box_3}>*/}
+                            {/*    <FormLabel*/}
+                            {/*        htmlFor={attribute.name}*/}
+                            {/*        id="UserProfileFormFields_FormLabel_1"*/}
+                            {/*        sx={styles.UserProfileFormFields_FormLabel_1}*/}
+                            {/*    >*/}
+                            {/*        {advancedMsg(attribute.displayName ?? "")}*/}
+                            {/*    </FormLabel>*/}
+                            {/*    {attribute.required && <> *</>}*/}
+                            {/*</Box>*/}
                             <Box id="UserProfileFormFields_Box_4" sx={styles.UserProfileFormFields_Box_4}>
                                 {attribute.annotations.inputHelperTextBefore !== undefined && (
                                     <Box aria-live="polite" id="UserProfileFormFields_Box_5" sx={styles.UserProfileFormFields_Box_5}>
@@ -226,7 +226,6 @@ function InputFieldByType(props: InputFieldByTypeProps) {
             }
             const inputNode = <InputTag id={attribute.name} {...props} fieldIndex={undefined} />;
             if (attribute.name === "password" || attribute.name === "password-confirm") {
-                console.log("HEREs");
                 return (
                     <PasswordWrapper
                         id="UserProfileFormFields_PasswordWrapper_1"
@@ -264,6 +263,7 @@ function InputTag(
     return (
         <>
             <TextField
+                sx={styles.UserProfileFormFields_TextField_1}
                 label={attribute.name}
                 type={type}
                 name={attribute.name}
