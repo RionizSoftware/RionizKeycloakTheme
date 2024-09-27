@@ -88,13 +88,6 @@ export default function Login(
                     >
                         {!usernameHidden && (
                             <Box id="Login_Box_5" sx={styles.Login_Box_5}>
-                                <FormLabel htmlFor="username" id="Login_FormLabel_1" sx={styles.Login_FormLabel_1}>
-                                    {!realm.loginWithEmailAllowed
-                                        ? msg("username")
-                                        : !realm.registrationEmailAsUsername
-                                          ? msg("usernameOrEmail")
-                                          : msg("email")}
-                                </FormLabel>
                                 <TextField
                                     tabIndex={2}
                                     name="username"
@@ -106,6 +99,14 @@ export default function Login(
                                     fullWidth={true}
                                     id="Login_TextField_1"
                                     sx={styles.Login_TextField_1}
+                                    //added
+                                    label={
+                                        !realm.loginWithEmailAllowed
+                                            ? msg("username")
+                                            : !realm.registrationEmailAsUsername
+                                              ? msg("usernameOrEmail")
+                                              : msg("email")
+                                    }
                                 />
                                 {messagesPerField.existsError("username", "password") && (
                                     <span
@@ -120,10 +121,7 @@ export default function Login(
                         )}
 
                         <Box id="Login_Box_6" sx={styles.Login_Box_6}>
-                            <FormLabel htmlFor="password" id="Login_FormLabel_2" sx={styles.Login_FormLabel_2}>
-                                {msg("password")}
-                            </FormLabel>
-                            <PasswordWrapper id="Login_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
+                            <PasswordWrapper id="Login_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="Login_TextField_2">
                                 <TextField
                                     tabIndex={3}
                                     name="password"
@@ -131,6 +129,7 @@ export default function Login(
                                     autoComplete="current-password"
                                     aria-invalid={messagesPerField.existsError("username", "password")}
                                     fullWidth={true}
+                                    label={msg("password")}
                                     id="Login_TextField_2"
                                     sx={styles.Login_TextField_2}
                                 />
@@ -178,11 +177,12 @@ export default function Login(
                                 disabled={isLoginButtonDisabled}
                                 name="login"
                                 type="submit"
-                                value={msgStr("doLogIn")}
                                 fullWidth={true}
                                 id="Login_Button_1"
                                 sx={styles.Login_Button_1}
-                            />
+                            >
+                                {msgStr("doLogIn")}
+                            </Button>
                         </Box>
                     </Box>
                 )}
