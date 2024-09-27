@@ -1,0 +1,27 @@
+name: Send submodule updates to parent repo
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  repository: RionizSoftware/RionizDeployer
+                  token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
+                  submodules: recursive
+            - name: Pull & update submodules recursively
+              run: |
+                  git config --global user.name "RionizSoftware" 
+                  git config --global user.email "rioniz.company@gmail.com"
+                  git submodule update --init --recursive
+                  git submodule update --recursive --remote
+            - name: Commit
+              run: |
+                  git add --all
+                  git commit -m "RionizKeycloakTheme : ${{ github.event.head_commit.message }}" || echo "No changes to commit"
+                  git push
