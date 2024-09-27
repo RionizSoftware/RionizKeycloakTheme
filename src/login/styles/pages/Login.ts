@@ -1,8 +1,9 @@
 export const styles = {
+    Login_Add_Identity_Typography: { fontSize: "1.2rem" },
     Login_Box_1: {},
     Login_Link_1: {},
     Login_Box_2: {},
-    Login_Typography_1: {},
+    Login_Typography_1: { fontSize: "1.3rem", fontWeight: "900" },
     Login_List_1: {},
     Login_ListItem_1: {},
     Login_Link_2: {},

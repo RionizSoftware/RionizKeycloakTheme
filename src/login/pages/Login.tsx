@@ -8,6 +8,7 @@ import type { I18n } from "../i18n";
 import { PasswordWrapper } from "./PasswordWrapper";
 import { Box, Button, Link, TextField, FormLabel, Typography, List, ListItem, Checkbox, Radio } from "@mui/material";
 import { styles } from "../styles/pages/Login.ts";
+import { FacebookLoginButton, GoogleLoginButton, InstagramLoginButton, LinkedInLoginButton, TwitterLoginButton } from "react-social-login-buttons";
 export default function Login(
     props: PageProps<
         Extract<
@@ -54,19 +55,77 @@ export default function Login(
                                 {msg("identity-provider-login-label")}
                             </Typography>
                             <List id="Login_List_1" sx={styles.Login_List_1}>
-                                {social.providers.map((...[p, , providers]) => (
-                                    <ListItem key={p.alias} id="Login_ListItem_1" sx={styles.Login_ListItem_1}>
-                                        <Link type="button" href={p.loginUrl} id="Login_Link_2" sx={styles.Login_Link_2}>
-                                            {p.iconClasses && <i id="Login_i_1" aria-hidden="true"></i>}
-                                            <span
-                                                id="Login_span_2"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: kcSanitize(p.displayName)
-                                                }}
-                                            ></span>
-                                        </Link>
-                                    </ListItem>
-                                ))}
+                                {social.providers.map((...[p, , providers]) => {
+                                    const id = "Login_ListItem_" + p.providerId;
+                                    switch (p.providerId) {
+                                        case "google":
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <GoogleLoginButton
+                                                        onClick={() => {
+                                                            window.location.href = p.loginUrl;
+                                                        }}
+                                                    >
+                                                        <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                    </GoogleLoginButton>
+                                                </ListItem>
+                                            );
+                                        case "instagram":
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <InstagramLoginButton
+                                                        onClick={() => {
+                                                            window.location.href = p.loginUrl;
+                                                        }}
+                                                    >
+                                                        <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                    </InstagramLoginButton>
+                                                </ListItem>
+                                            );
+                                        case "twitter":
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <TwitterLoginButton
+                                                        onClick={() => {
+                                                            window.location.href = p.loginUrl;
+                                                        }}
+                                                    >
+                                                        <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                    </TwitterLoginButton>
+                                                </ListItem>
+                                            );
+                                        case "facebook":
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <FacebookLoginButton
+                                                        onClick={() => {
+                                                            window.location.href = p.loginUrl;
+                                                        }}
+                                                    >
+                                                        <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                    </FacebookLoginButton>
+                                                </ListItem>
+                                            );
+                                        case "linkedin":
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <LinkedInLoginButton
+                                                        onClick={() => {
+                                                            window.location.href = p.loginUrl;
+                                                        }}
+                                                    >
+                                                        <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                    </LinkedInLoginButton>
+                                                </ListItem>
+                                            );
+                                        default:
+                                            return (
+                                                <ListItem key={p.alias} id={id} sx={styles.Login_ListItem_1}>
+                                                    <Typography sx={styles.Login_Add_Identity_Typography}>{kcSanitize(p.displayName)}</Typography>
+                                                </ListItem>
+                                            );
+                                    }
+                                })}
                             </List>
                         </Box>
                     )}
