@@ -22,7 +22,7 @@ export const styles = {
     Login_Box_9: {},
     Login_Button_1: {
         mt: "15px",
-        backgroundColor: "primary.main", // or any color code, e.g., '#1976d2'
+        backgroundColor: "primary.main",
         color: "white", // Ensure text is visible on the background
         "&:hover": {
             backgroundColor: "primary.dark" // Optional hover effect

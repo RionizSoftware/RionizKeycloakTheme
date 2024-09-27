@@ -41,7 +41,12 @@ export default function LoginUpdatePassword(
                     </FormLabel>
 
                     <Box id="LoginUpdatePassword_Box_3" sx={styles.LoginUpdatePassword_Box_3}>
-                        <PasswordWrapper id="LoginUpdatePassword_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="password-new">
+                        <PasswordWrapper
+                            id="LoginUpdatePassword_PasswordWrapper_1"
+                            kcClsx={kcClsx}
+                            i18n={i18n}
+                            passwordInputId="LoginUpdatePassword_TextField_1"
+                        >
                             <TextField
                                 type="password"
                                 name="password-new"

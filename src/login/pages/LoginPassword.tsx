@@ -55,7 +55,7 @@ export default function LoginPassword(
                             {msg("password")}
                         </FormLabel>
 
-                        <PasswordWrapper id="LoginPassword_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
+                        <PasswordWrapper id="LoginPassword_PasswordWrapper_1" kcClsx={kcClsx} i18n={i18n} passwordInputId="LoginPassword_TextField_1">
                             <TextField
                                 tabIndex={2}
                                 name="password"

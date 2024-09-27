@@ -224,8 +224,9 @@ function InputFieldByType(props: InputFieldByTypeProps) {
                     </>
                 );
             }
-            const inputNode = <InputTag id="UserProfileFormFields_InputTag_2" {...props} fieldIndex={undefined} />;
+            const inputNode = <InputTag id={attribute.name} {...props} fieldIndex={undefined} />;
             if (attribute.name === "password" || attribute.name === "password-confirm") {
+                console.log("HEREs");
                 return (
                     <PasswordWrapper
                         id="UserProfileFormFields_PasswordWrapper_1"
@@ -248,16 +249,23 @@ function InputTag(
 ) {
     const { attribute, fieldIndex, kcClsx, dispatchFormAction, valueOrValues, i18n, displayableErrors } = props;
     const { advancedMsgStr } = i18n;
+    const { inputType } = attribute.annotations;
+
+    let type = "text";
+
+    if (inputType?.startsWith("html5-")) {
+        type = inputType.slice(6);
+    }
+    type = inputType ?? "text";
+    if (attribute.name === "password" || attribute.name === "password-confirm") {
+        type = "password";
+    }
+
     return (
         <>
-            <input
-                type={(() => {
-                    const { inputType } = attribute.annotations;
-                    if (inputType?.startsWith("html5-")) {
-                        return inputType.slice(6);
-                    }
-                    return inputType ?? "text";
-                })()}
+            <TextField
+                label={attribute.name}
+                type={type}
                 name={attribute.name}
                 value={(() => {
                     if (fieldIndex !== undefined) {
@@ -273,17 +281,6 @@ function InputTag(
                 placeholder={
                     attribute.annotations.inputTypePlaceholder === undefined ? undefined : advancedMsgStr(attribute.annotations.inputTypePlaceholder)
                 }
-                pattern={attribute.annotations.inputTypePattern}
-                size={attribute.annotations.inputTypeSize === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeSize}`)}
-                maxLength={
-                    attribute.annotations.inputTypeMaxlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMaxlength}`)
-                }
-                minLength={
-                    attribute.annotations.inputTypeMinlength === undefined ? undefined : parseInt(`${attribute.annotations.inputTypeMinlength}`)
-                }
-                max={attribute.annotations.inputTypeMax}
-                min={attribute.annotations.inputTypeMin}
-                step={attribute.annotations.inputTypeStep}
                 {...Object.fromEntries(Object.entries(attribute.html5DataAnnotations ?? {}).map(([key, value]) => [`data-${key}`, value]))}
                 onChange={event =>
                     dispatchFormAction({
@@ -310,7 +307,8 @@ function InputTag(
                         fieldIndex: fieldIndex
                     })
                 }
-                id="UserProfileFormFields_TextField_1"
+                fullWidth={true}
+                id={attribute.name}
             />
             {(() => {
                 if (fieldIndex === undefined) {
