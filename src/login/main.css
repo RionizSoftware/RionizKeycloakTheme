@@ -66,7 +66,7 @@
 .kcBodyClass {
   margin: 0;
   display: block;
-  background: linear-gradient(160deg, #11182a 0%, #0b0e11 55%, #0d1f2e 100%);
+  background: var(--kc-bg, linear-gradient(160deg, #11182a 0%, #0b0e11 55%, #0d1f2e 100%));
   min-height: 100vh;
 }
 
@@ -91,7 +91,7 @@
   max-width: var(--kc-max-card-width);
   width: 100%;
   margin: 0 auto;
-  padding: var(--kc-space-8) var(--kc-space-4);
+  padding: var(--kc-space-5) var(--kc-space-4);
   box-sizing: border-box;
   background-color: var(--kc-header-background);
   color: var(--kc-primary);
@@ -359,8 +359,8 @@ a:hover {
     box-sizing: border-box; /* ensure padding doesn't overflow width */
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    font-size: 2rem;
-    padding: var(--kc-space-8) var(--kc-space-4);
+    font-size: 1.8rem;
+    padding: var(--kc-space-5) var(--kc-space-4);
   }
 
   /* Card fills width and remaining height; scroll internally if needed */

@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useLayoutEffect, useMemo, useState } from "react";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
@@ -8,7 +8,9 @@ import "./main.css";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import stylisRTLPlugin from "stylis-plugin-rtl";
+import { ThemeModeContext, type ThemeMode } from "./themeContext";
 
+const cacheLtr = createCache({ key: "muiltr" });
 const cacheRtl = createCache({
     key: "muirtl",
     stylisPlugins: [stylisRTLPlugin]
@@ -66,18 +68,59 @@ const LoginOauthGrant = lazy(() => import("./pages/LoginOauthGrant"));
 
 const doMakeUserConfirmPassword = true;
 
+type Mode = "dark" | "light";
+
 function getCssVar(name: string, fallback: string) {
     return getComputedStyle(document.documentElement).getPropertyValue(name) || fallback;
 }
 
-const theme = createTheme({
-    direction: "rtl",
-    palette: {
-        mode: "dark",
-        primary: {
-            main: getCssVar("--kc-primary", "#00e5ff").trim(),
-        },
+const CSS_VARS: Record<Mode, Record<string, string>> = {
+    dark: {
+        "--kc-primary": "#00e5ff",
+        "--kc-background": "#11182a",
+        "--kc-box-background": "#0b0e11",
+        "--kc-header-background": "#0b0e11",
+        "--kc-list-background": "#1e2536",
+        "--kc-page-title-color": "#e8ecf5",
+        "--kc-page-content-color": "#e8ecf5",
+        "--kc-inactive": "#9aa5b8",
+        "--kc-hover": "#ffffff",
+        "--kc-disabled": "#6b6b6b",
+        "--kc-disabled-border": "#3f3f3f",
+        "--kc-bg": "linear-gradient(160deg, #11182a 0%, #0b0e11 55%, #0d1f2e 100%)"
     },
+    light: {
+        "--kc-primary": "#008ca8",
+        "--kc-background": "#f5f5f5",
+        "--kc-box-background": "#ffffff",
+        "--kc-header-background": "#ffffff",
+        "--kc-list-background": "#f7f9fc",
+        "--kc-page-title-color": "#1f2937",
+        "--kc-page-content-color": "#1f2937",
+        "--kc-inactive": "#5b6472",
+        "--kc-hover": "#000000",
+        "--kc-disabled": "#a0a6b0",
+        "--kc-disabled-border": "#cbd2dc",
+        "--kc-bg": "linear-gradient(160deg, #eef1f6 0%, #ffffff 55%, #e8f2f7 100%)"
+    }
+};
+
+function applyCssVars(mode: Mode) {
+    const vars = CSS_VARS[mode];
+    for (const [key, value] of Object.entries(vars)) {
+        document.documentElement.style.setProperty(key, value);
+    }
+}
+
+function buildTheme(mode: Mode, isRtl: boolean) {
+    return createTheme({
+        direction: isRtl ? "rtl" : "ltr",
+        palette: {
+            mode,
+            primary: {
+                main: getCssVar("--kc-primary", "#00e5ff").trim(),
+            },
+        },
     components: {
         MuiButton: {
             styleOverrides: {
@@ -283,14 +326,55 @@ const theme = createTheme({
         },
     },
 });
+}
 
 export default function KcPage(props: { kcContext: KcContext }) {
     const { kcContext } = props;
 
     const { i18n } = useI18n({ kcContext });
 
+    const [mode, setMode] = useState<ThemeMode>(() => {
+        try {
+            return localStorage.getItem("kc-theme") === "light" ? "light" : "dark";
+        } catch {
+            return "dark";
+        }
+    });
+
+    const isRtl = useMemo(() => {
+        const locale = kcContext.locale;
+        if (locale && typeof locale === "object" && "rtl" in (locale as object)) {
+            return (locale as { rtl?: boolean }).rtl === true;
+        }
+        const tag = (locale as { currentLanguageTag?: string } | undefined)?.currentLanguageTag ?? "";
+        return ["fa", "ar", "he", "ur"].some((l) => tag.toLowerCase().startsWith(l));
+    }, [kcContext]);
+
+    applyCssVars(mode);
+    useLayoutEffect(() => {
+        applyCssVars(mode);
+    }, [mode]);
+
+    const theme = useMemo(() => buildTheme(mode, isRtl), [mode, isRtl]);
+
+    const toggle = useMemo(
+        () => () => {
+            setMode((prev) => {
+                const next: ThemeMode = prev === "dark" ? "light" : "dark";
+                try {
+                    localStorage.setItem("kc-theme", next);
+                } catch {
+                    // ignore
+                }
+                return next;
+            });
+        },
+        []
+    );
+
     return (
-        <CacheProvider value={cacheRtl}>
+        <ThemeModeContext.Provider value={{ mode, toggle }}>
+        <CacheProvider value={isRtl ? cacheRtl : cacheLtr}>
         <ThemeProvider theme={theme}>
         <Suspense>
             {(() => {
@@ -609,6 +693,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
         </Suspense>
         </ThemeProvider>
         </CacheProvider>
+        </ThemeModeContext.Provider>
     );
 }
 

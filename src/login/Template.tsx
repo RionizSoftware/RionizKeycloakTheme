@@ -7,9 +7,12 @@ import { useSetClassName } from "keycloakify/tools/useSetClassName";
 import { useInitialize } from "keycloakify/login/Template.useInitialize";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import { Alert } from "@mui/material";
+import { Alert, IconButton } from "@mui/material";
 import { LocaleMenu } from "./helper-components/LocaleMenu.tsx";
 import LinearProgress from "@mui/material/LinearProgress";
+import DarkMode from "@mui/icons-material/DarkMode";
+import LightMode from "@mui/icons-material/LightMode";
+import { useThemeMode } from "./themeContext";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -33,6 +36,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     const { msg, msgStr, currentLanguage, enabledLanguages } = i18n;
 
     const { realm, auth, url, message, isAppInitiatedAction } = kcContext;
+
+    const { mode, toggle } = useThemeMode();
 
     useEffect(() => {
         document.title = documentTitle ?? msgStr("loginTitle", realm.displayName);
@@ -77,6 +82,18 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         <div className={kcClsx("kcLoginClass")}>
             <div id="kc-header" className={kcClsx("kcHeaderClass")}>
                 <div id="kc-header-wrapper" className={kcClsx("kcHeaderWrapperClass")} style={{ position: "relative" }}>
+                    <IconButton
+                        onClick={toggle}
+                        aria-label={mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+                        sx={{
+                            position: "absolute",
+                            top: 10,
+                            insetInlineEnd: 10,
+                            color: "var(--kc-primary)"
+                        }}
+                    >
+                        {mode === "dark" ? <LightMode /> : <DarkMode />}
+                    </IconButton>
                     {msg("loginTitleHtml", realm.displayNameHtml)}
                     <LinearProgress
                         id="jk-loading"
