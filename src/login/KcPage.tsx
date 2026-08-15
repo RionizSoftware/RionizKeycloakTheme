@@ -5,6 +5,14 @@ import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
 import Template from "./Template";
 import "./main.css";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import stylisRTLPlugin from "stylis-plugin-rtl";
+
+const cacheRtl = createCache({
+    key: "muirtl",
+    stylisPlugins: [stylisRTLPlugin]
+});
 
 import DeleteAccountConfirm from "./pages/DeleteAccountConfirm.tsx";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -63,9 +71,11 @@ function getCssVar(name: string, fallback: string) {
 }
 
 const theme = createTheme({
+    direction: "rtl",
     palette: {
+        mode: "dark",
         primary: {
-            main: getCssVar("--kc-primary", "#2e88e1").trim(),
+            main: getCssVar("--kc-primary", "#00e5ff").trim(),
         },
     },
     components: {
@@ -280,6 +290,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
     const { i18n } = useI18n({ kcContext });
 
     return (
+        <CacheProvider value={cacheRtl}>
         <ThemeProvider theme={theme}>
         <Suspense>
             {(() => {
@@ -597,6 +608,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
             })()}
         </Suspense>
         </ThemeProvider>
+        </CacheProvider>
     );
 }
 

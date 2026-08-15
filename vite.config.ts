@@ -7,6 +7,7 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
+            themeName: "rioniz_kc_theme",
             accountThemeImplementation: "none"
         })
     ]

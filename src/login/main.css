@@ -1,9 +1,9 @@
 :root {
   /* Primary color hook (used optionally by your CSS); change here or via MUI theme */
-  --kc-primary: #219b00;
+  --kc-primary: #00e5ff;
   --kc-disbaled: #6b6b6b;
   --kc-disbaled-1: #3f3f3f;
-  --kc-inactive: #8e918f;
+  --kc-inactive: #9aa5b8;
   --kc-hover: #ffffff;
   --kc-space-05: 0.125rem;
   --kc-space-1: 0.25rem;
@@ -15,31 +15,38 @@
   --kc-space-7: 2.5rem;
   --kc-space-8: 3rem;
   --kc-max-card-width: 35rem; /* ~448px, close to Keycloak default */
-  --kc-header-background: #000000; /* Black header background */
-  --kc-page-title-color: #e3e3e3;
-  --kc-page-content-color: #e3e3e3;
-  --kc-box-background: #181818;
-  --kc-list-background: #202020;
+  --kc-header-background: #0b0e11; /* Navy header background */
+  --kc-page-title-color: #e8ecf5;
+  --kc-page-content-color: #e8ecf5;
+  --kc-box-background: #0b0e11;
+  --kc-list-background: #1e2536;
 }
 
 /* Load fonts from assets */
 @font-face {
-  font-family: 'RobotoCustom';
-  src: url('./assets/fonts/roboto/Roboto_SemiCondensed-Regular.woff2') format('woff2');
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'RobotoCustom';
-  src: url('./assets/fonts/roboto/Roboto_SemiCondensed-Bold.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'RalewayCustom';
-  src: url('./assets/fonts/raleway/Raleway-SemiBold.woff2') format('woff2');
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -47,7 +54,7 @@
 
 /* Set default font */
 .kcHtmlClass, .kcBodyClass, body, html {
-  font-family: 'RobotoCustom', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Vazirmatn', 'IRANSans', Tahoma, Arial, sans-serif;
 }
 
 /* Base document classes applied via Template (kcClsx) */
@@ -59,6 +66,8 @@
 .kcBodyClass {
   margin: 0;
   display: block;
+  background: linear-gradient(160deg, #11182a 0%, #0b0e11 55%, #0d1f2e 100%);
+  min-height: 100vh;
 }
 
 /* Overall login page container */
@@ -87,11 +96,13 @@
   background-color: var(--kc-header-background);
   color: var(--kc-primary);
   text-align: center;
-  font-family: 'RalewayCustom', 'RobotoCustom', Arial, sans-serif;
+  font-family: 'Vazirmatn', 'IRANSans', Tahoma, Arial, sans-serif;
   font-weight: 700;
-  font-size: 3rem;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  font-size: 2.2rem;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
 }
 
 /* Card (main form wrapper) */
@@ -103,9 +114,12 @@
   box-sizing: border-box;
   display: block;
   position: relative;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 14px 14px;
     background-color: var(--kc-box-background);
     color: var(--kc-page-content-color);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: none;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* Form header */
